@@ -8,13 +8,16 @@ export default function HomePage() {
                style={{
                     height: '100vh',
                     minHeight: 660,
-                    backgroundColor: '#1D3668',
-                    color: '#FFFFFF'
+                    // backgroundColor: '#1D3668',
+                    // color: '#FFFFFF'
                }}
           >
 
                <div className='page-nav'>
-                    <div className='title-container vertical-center-container' style={{ backgroundColor: '#D7DCDB' }}>
+                    <div
+                         className='title-container vertical-center-container'
+                         style={{ backgroundColor: '#E9E8E9' }}
+                    >
                          <div className='vertical-center'>
                               <div className='title'>
                                    <h1>
@@ -32,13 +35,13 @@ export default function HomePage() {
                >
                     <div className='home-page-body'>
                          <div className='home-page-body-left'>
-                              <div className='content-container-left-accent' style={{ backgroundColor: '#FFFFFF' }}>
+                              <div className='content-container-left-accent'>
                                    <div className='vertical-center-container content-left-accent'>
-                                        <div className='vertical-center accent-title' style={{ color: '#c93838' }}>
+                                        <div className='vertical-center accent-title'>
                                              <div className='first'>
                                                   FRONT END
                                              </div>
-                                             <div className='second' style={{ color: '#D2D844', fontFamily: "'Audiowide', sans-serif" }}>
+                                             <div className='second' style={{ fontFamily: "'Audiowide', sans-serif" }}>
                                                   DEVELOPER
                                              </div>
                                         </div>
@@ -65,10 +68,10 @@ export default function HomePage() {
                                         <hr />
                                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
                                         <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
-                                       
+
                                    </div>
                               </div>
-                              
+
                          </div>
                     </div>
                </div>

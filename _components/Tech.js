@@ -8,7 +8,7 @@ export default function HomePage() {
                style={{
                     height: '100vh',
                     minHeight: 660,
-                    backgroundColor: '#D7DCDB',
+                    backgroundColor: '#E9E8E9',
                }}
           > 
 
@@ -69,7 +69,7 @@ export default function HomePage() {
                                         TECHNOLOGIES
                                    </div>
                                    <div className='second' style={{ color: '#D2D844' , fontFamily: "'Audiowide', sans-serif"}}>
-                                        DEVELOPER
+                                        STACK
                                    </div>
                               </div>
                          </div>
