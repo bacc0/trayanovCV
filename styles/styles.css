@@ -7,6 +7,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0.7px;
   word-spacing: 3px;
+  font-weight: 100;
   margin-top: 0px;
 }
 
@@ -76,26 +77,26 @@ body .vertical-center-container-right {
 }
 
 body .vertical-center-container-right .vertical-center-right {
-  margin: 0 0 0 15px;
+  margin: 0 0 0 18px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
-body .pages-wrapper .home-page {
-  height: 100vh;
+body .pages-wrapper .page {
+  height: 90vh;
   background-color: #ffffff;
 }
 
-body .pages-wrapper .home-page .home-page-nav {
+body .pages-wrapper .page .page-nav {
   width: 100vw;
   height: 120px;
-  padding-bottom: 30px;
+  padding-bottom: 36px;
 }
 
-body .pages-wrapper .home-page .home-page-nav .title-container {
-  width: 450px;
+body .pages-wrapper .page .page-nav .title-container {
+  width: 476px;
   height: 100%;
   margin: 0 auto;
   display: -webkit-box;
@@ -110,27 +111,27 @@ body .pages-wrapper .home-page .home-page-nav .title-container {
   background-color: #E9E8E9;
 }
 
-body .pages-wrapper .home-page .home-page-nav .title-container .title {
+body .pages-wrapper .page .page-nav .title-container .title {
   width: 156px;
 }
 
-body .pages-wrapper .home-page .home-page-body {
+body .pages-wrapper .page .home-page-body {
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body .pages-wrapper .home-page .home-page-body .home-page-body-left {
+body .pages-wrapper .page .home-page-body .home-page-body-left {
   width: 50%;
 }
 
-body .pages-wrapper .home-page .home-page-body .home-page-body-left .content-container-left-accent {
+body .pages-wrapper .page .home-page-body .home-page-body-left .content-container-left-accent {
   background-color: #D2D844;
   width: calc(100% - $distance-middle-half);
   height: 120px;
-  margin-right: 15px;
-  margin-bottom: 30px;
+  margin-right: 18px;
+  margin-bottom: 36px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,15 +140,15 @@ body .pages-wrapper .home-page .home-page-body .home-page-body-left .content-con
           justify-content: flex-end;
 }
 
-body .pages-wrapper .home-page .home-page-body .home-page-body-left .content-container-left-accent .content-left-accent {
-  width: 210px;
+body .pages-wrapper .page .home-page-body .home-page-body-left .content-container-left-accent .content-left-accent {
+  width: 220px;
   height: 100%;
 }
 
-body .pages-wrapper .home-page .home-page-body .home-page-body-left .content-container-left {
+body .pages-wrapper .page .home-page-body .home-page-body-left .content-container-left {
   width: calc(100% - $distance-middle-half);
   min-height: 100px;
-  margin-right: 15px;
+  margin-right: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,37 +157,37 @@ body .pages-wrapper .home-page .home-page-body .home-page-body-left .content-con
           justify-content: flex-end;
 }
 
-body .pages-wrapper .home-page .home-page-body .home-page-body-left .content-container-left .content-left {
-  width: 210px;
+body .pages-wrapper .page .home-page-body .home-page-body-left .content-container-left .content-left {
+  width: 220px;
   min-height: 100px;
 }
 
-body .pages-wrapper .home-page .home-page-body .home-page-body-right {
+body .pages-wrapper .page .home-page-body .home-page-body-right {
   width: 50%;
 }
 
-body .pages-wrapper .home-page .home-page-body .home-page-body-right .content-container-right-accent {
+body .pages-wrapper .page .home-page-body .home-page-body-right .content-container-right-accent {
   background-color: #D2D844;
   width: calc(100% - $distance-middle-half);
   height: 120px;
-  margin-left: 15px;
-  margin-bottom: 30px;
+  margin-left: 18px;
+  margin-bottom: 36px;
 }
 
-body .pages-wrapper .home-page .home-page-body .home-page-body-right .content-container-right-accent .content-right-accent {
-  width: 210px;
+body .pages-wrapper .page .home-page-body .home-page-body-right .content-container-right-accent .content-right-accent {
+  width: 220px;
   height: 100%;
 }
 
-body .pages-wrapper .home-page .home-page-body .home-page-body-right .content-container-right {
+body .pages-wrapper .page .home-page-body .home-page-body-right .content-container-right {
   width: calc(100% - $distance-middle-half);
   min-height: 100px;
-  margin-left: 15px;
-  margin-bottom: 30px;
+  margin-left: 18px;
+  margin-bottom: 36px;
 }
 
-body .pages-wrapper .home-page .home-page-body .home-page-body-right .content-container-right .content-right {
-  width: 210px;
+body .pages-wrapper .page .home-page-body .home-page-body-right .content-container-right .content-right {
+  width: 220px;
   min-height: 100px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -3,13 +3,17 @@ export default function HomePage() {
 
 
      return (
-          <div className='home-page'
-               // style={{ backgroundColor: '#0FA1C4', color: 'black' 
+          <div
+               className='page'
                style={{
-                    backgroundColor: '#1D3668', color: '#FFFFFF'
-               }}>
+                    height: '100vh',
+                    minHeight: 660,
+                    backgroundColor: '#1D3668',
+                    color: '#FFFFFF'
+               }}
+          >
 
-               <div className='home-page-nav'>
+               <div className='page-nav'>
                     <div className='title-container vertical-center-container' style={{ backgroundColor: '#D7DCDB' }}>
                          <div className='vertical-center'>
                               <div className='title'>
@@ -34,7 +38,7 @@ export default function HomePage() {
                                              <div className='first'>
                                                   FRONT END
                                              </div>
-                                             <div className='second' style={{ color: '#D2D844' }}>
+                                             <div className='second' style={{ color: '#D2D844', fontFamily: "'Audiowide', sans-serif" }}>
                                                   DEVELOPER
                                              </div>
                                         </div>

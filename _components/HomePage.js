@@ -3,14 +3,14 @@ export default function HomePage() {
 
 
      return (
-          <div className='home-page'>
+          <div className='page' style={{ height: '100vh' , minHeight: 660}}>
 
-               <div className='home-page-nav'>
+               <div className='page-nav'>
                     <div className='title-container vertical-center-container'>
                          <div className='vertical-center' >
                               <div className='title'>
-                                   <h1>
-                                        <div className='second'>
+                                   <h1 >
+                                        <div className='second'style={{ fontFamily:  "'Audiowide', sans-serif"}}>
                                              HELLO I'M 
                                         </div>
                                         VESELIN
@@ -26,9 +26,9 @@ export default function HomePage() {
                          <div className='home-page-body-left'>
                               <div className='content-container-left-accent'>
                                    <div className='vertical-center-container content-left-accent'>
-                                        <div className='vertical-center accent-title'>
+                                        <div className='vertical-center accent-title' >
                                              <div className='first'>FRONT END </div>
-                                             <div className='second'>DEVELOPER</div>
+                                             <div className='second' style={{ fontFamily: "'Audiowide', sans-serif"}}>DEVELOPER</div>
                                         </div>
                                    </div>
                               </div>

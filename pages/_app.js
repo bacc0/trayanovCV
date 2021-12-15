@@ -17,9 +17,18 @@ function MyApp({ Component, pageProps }) {
                <Head>
                     <title>Veselin Trayanov</title>
                     <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-{/* 
-                    <link rel='shortcut icon' href={`/extras/vt.svg`} type="image/x-icon" />
-                    <link rel='apple-touch-icon' href={`/extras/vt.svg`} type="image/x-icon" /> */}
+                    <link
+						rel="stylesheet"
+						
+
+						// href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Raleway" rel="stylesheet"
+
+						// href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"
+						href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet"
+
+                              // href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet"
+
+					/>
                </Head>
                <Component {...pageProps} />
           </Fragment>

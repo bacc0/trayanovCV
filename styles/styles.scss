@@ -1,7 +1,7 @@
-$distance-middle-half: 15px;
+$distance-middle-half: 18px;
 $distance-middle-full: $distance-middle-half * 2;
 
-$element-width: 210px;
+$element-width: 220px;
 $title-width: ($element-width + $distance-middle-half) * 2;
 
 $accent-height: 120px;
@@ -12,9 +12,10 @@ body {
      color: #555555;
      font-size: 12px;
      line-height: 20px;
-     font-family: 'Maven Pro', sans-serif;
+     font-family: Arial, Helvetica, sans-serif;
      letter-spacing: 0.7px;
      word-spacing: 3px;
+     font-weight: 100;
 
      // background-color: #22e300;
      margin-top: 0px;
@@ -40,8 +41,7 @@ body {
           line-height: 24px;
           letter-spacing: 6px;
           font-weight: 300;
-          font-family: 'Bebas Neue', cursive;
-margin-top: -8px;
+          margin-top: -8px;
 
           .second {
                font-size: 14px;
@@ -59,6 +59,7 @@ margin-top: -8px;
                position: relative;
                top: 7px;
           }
+
           .second {
                color: #FFFFFF;
                font-size: 12px;
@@ -67,7 +68,7 @@ margin-top: -8px;
                bottom: 7px;
           }
      }
-    
+
 
      .vertical-center-container {
           position: relative;
@@ -96,11 +97,13 @@ margin-top: -8px;
      .pages-wrapper {
           // margin: -17px 0;
 
-          .home-page {
-               height: 100vh;
+          .page {
+               height: 90vh;
+          // min-height: 900px;
+
                background-color: #ffffff;
 
-               .home-page-nav {
+               .page-nav {
                     // border: 0.3px solid #ff5f5f22;
                     width: 100vw;
                     height: $accent-height;
@@ -160,7 +163,7 @@ margin-top: -8px;
                               margin-right: $distance-middle-half;
                               display: flex;
                               justify-content: flex-end;
-                              
+
 
                               .content-left {
                                    // border: 0.3px solid #a6a6a622;
