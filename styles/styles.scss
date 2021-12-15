@@ -1,0 +1,191 @@
+$distance-middle-half: 15px;
+$distance-middle-full: $distance-middle-half * 2;
+
+$element-width: 210px;
+$title-width: ($element-width + $distance-middle-half) * 2;
+
+$accent-height: 120px;
+
+body {
+     margin: 0;
+     padding: 0;
+     color: #555555;
+     font-size: 12px;
+     line-height: 20px;
+     font-family: Arial, Helvetica, sans-serif;
+     letter-spacing: 0.7px;
+     word-spacing: 3px;
+
+     // background-color: #22e300;
+     margin-top: 0px;
+
+     hr {
+          width: 80%;
+          margin-left: 0;
+          margin-right: auto;
+          background-color: #0CA1C5;
+          height: 1px;
+          border: 0 none;
+          margin: -6px 0 11px
+     }
+
+     h3 {
+          color: #0CA1C5;
+          margin-top: -2px
+     }
+
+     h1 {
+          color: #1D3668;
+          font-size: 30px;
+          line-height: 30px;
+          letter-spacing: 4px;
+          font-weight: 300;
+     }
+
+     .accent-title {
+          color: #FFFFFF;
+          font-size: 30px;
+          line-height: 40px;
+          letter-spacing: 4px;
+     }
+
+     .vertical-center-container {
+          position: relative;
+
+          .vertical-center {
+               margin: 0;
+               position: absolute;
+               top: 50%;
+               -ms-transform: translateY(-50%);
+               transform: translateY(-50%);
+          }
+     }
+
+     .vertical-center-container-right {
+          position: relative;
+
+          .vertical-center-right {
+               margin: 0 0 0 $distance-middle-half;
+               position: absolute;
+               top: 50%;
+               -ms-transform: translateY(-50%);
+               transform: translateY(-50%);
+          }
+     }
+
+     .pages-wrapper {
+          // margin: -17px 0;
+
+          .home-page {
+               height: 100vh;
+               background-color: #ffffff;
+
+               .home-page-nav {
+                    // border: 0.3px solid #ff5f5f22;
+                    width: 100vw;
+                    height: $accent-height;
+                    padding-bottom: $distance-middle-full;
+
+                    .title-container {
+                         // border: 0.3px solid #ffa75f;
+                         width: $title-width;
+                         height: 100%;
+                         margin: 0 auto;
+                         display: flex;
+                         align-items: flex-end;
+                         justify-content: center;
+                         background-color: #E9E8E9;
+
+                         .title {
+                              // // border: 0.3px solid #00c13a;
+                              // background-color: #c3c2c222;
+                              width: 200px;
+                         }
+                    }
+               }
+
+               .home-page-body {
+                    // border: 0.3px solid #5f7aff22;
+                    width: 100vw;
+                    // height: 70vh;
+                    display: flex;
+
+                    .home-page-body-left {
+                         // border: 0.3px solid #01478d21;
+                         width: 50%;
+                         // height: 100%;
+
+                         .content-container-left-accent {
+                              // border: 0.3px solid #018d0f22;
+                              background-color: #D2D844;
+                              width: calc(100% - $distance-middle-half);
+                              height: $accent-height;
+                              margin-right: $distance-middle-half;
+                              margin-bottom: $distance-middle-full;
+                              display: flex;
+                              justify-content: flex-end;
+
+                              .content-left-accent {
+                                   // border: 0.3px solid #b7b7b722;
+                                   // background-color: #f4350033;
+                                   width: $element-width;
+                                   height: 100%;
+                              }
+                         }
+
+                         .content-container-left {
+                              // border: 0.3px solid #018d0f22;
+                              width: calc(100% - $distance-middle-half);
+                              min-height: 100px;
+                              margin-right: $distance-middle-half;
+                              display: flex;
+                              justify-content: flex-end;
+
+                              .content-left {
+                                   // border: 0.3px solid #a6a6a622;
+                                   //background-color: #5f7aff33;
+                                   width: $element-width;
+                                   min-height: 100px
+                              }
+                         }
+                    }
+
+                    .home-page-body-right {
+                         // border: 0.3px solid #973d3829;
+                         width: 50%;
+                         // height: 100%;
+
+                         .content-container-right-accent {
+                              // border: 0.3px solid #018d0f22;
+                              background-color: #D2D844;
+                              width: calc(100% - $distance-middle-half);
+                              height: $accent-height;
+                              margin-left: $distance-middle-half;
+                              margin-bottom: $distance-middle-full;
+
+                              .content-right-accent {
+                                   // border: 0.3px solid #b7b7b722;
+                                   width: $element-width;
+                                   height: 100%;
+                              }
+                         }
+
+                         .content-container-right {
+                              // border: 0.3px solid #018d0f22;
+                              width: calc(100% - $distance-middle-half);
+                              min-height: 100px;
+                              margin-left: $distance-middle-half;
+                              margin-bottom: $distance-middle-full;
+
+                              .content-right {
+                                   // border: 0.3px solid #16018d22;
+                                   //background-color: #5f7aff33;
+                                   width: $element-width;
+                                   min-height: 100px
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
