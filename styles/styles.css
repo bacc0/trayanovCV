@@ -97,7 +97,7 @@ body .pages-wrapper .page .page-nav {
 }
 
 body .pages-wrapper .page .page-nav .title-container {
-  width: 498px;
+  width: 510px;
   height: 100%;
   margin: 0 auto;
   display: -webkit-box;
@@ -142,7 +142,7 @@ body .pages-wrapper .page .home-page-body .home-page-body-left .content-containe
 }
 
 body .pages-wrapper .page .home-page-body .home-page-body-left .content-container-left-accent .content-left-accent {
-  width: 230px;
+  width: 236px;
   height: 100%;
 }
 
@@ -159,7 +159,7 @@ body .pages-wrapper .page .home-page-body .home-page-body-left .content-containe
 }
 
 body .pages-wrapper .page .home-page-body .home-page-body-left .content-container-left .content-left {
-  width: 230px;
+  width: 236px;
   min-height: 100px;
 }
 
@@ -176,7 +176,7 @@ body .pages-wrapper .page .home-page-body .home-page-body-right .content-contain
 }
 
 body .pages-wrapper .page .home-page-body .home-page-body-right .content-container-right-accent .content-right-accent {
-  width: 230px;
+  width: 236px;
   height: 100%;
 }
 
@@ -188,7 +188,7 @@ body .pages-wrapper .page .home-page-body .home-page-body-right .content-contain
 }
 
 body .pages-wrapper .page .home-page-body .home-page-body-right .content-container-right .content-right {
-  width: 230px;
+  width: 236px;
   min-height: 100px;
 }
 /*# sourceMappingURL=styles.css.map */
