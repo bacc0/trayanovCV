@@ -1,3 +1,4 @@
+import Title from './Title'
 
 export default function HomePage({ W_screenSize }) {
 
@@ -12,16 +13,25 @@ export default function HomePage({ W_screenSize }) {
                     <div className='title-container vertical-center-container'>
                          <div className='vertical-center' >
                               <div className='title'>
-                                   <h1 >
+                                   <Title
+                                        logo_W_H={230}
+                                        primeLettersColor={'#FFFFFF'}
+                                        secLettersColor={'#B8B8B8'}
+                                        thirdLettersColor={'#0CA1C5'}
+                                        backgroundColor={'#D2D845'}
+                                   />
+                                   {/* <h1 >
                                         <div className='second' style={{ fontFamily: "'Audiowide', sans-serif" }}>
                                              HELLO I'M
                                         </div>
                                         VESELIN
-                                   </h1>
+                                   </h1> */}
                               </div>
                          </div>
                     </div>
                </div>
+
+
                <div
                // style={{ display: 'flex', 'align-items': 'center', height: '75vh'}}
                >
@@ -132,18 +142,18 @@ export default function HomePage({ W_screenSize }) {
                               style={{ backgroundColor: '#0FA1C4' }}
                          >
                               <div className='vertical-center-right'>
-                              <div className='right-accent accent-title'>
+                                   <div className='right-accent accent-title'>
 
-                                   <div className='first' style={{ color: '#FFFFFF' }}>
-                                        TECHNOLOGIES
+                                        <div className='first' style={{ color: '#FFFFFF' }}>
+                                             TECHNOLOGIES
+                                        </div>
+                                        <div
+                                             className='second'
+                                             style={{ color: '#D2D844', fontFamily: "'Audiowide', sans-serif" }}
+                                        >
+                                             STACK
+                                        </div>
                                    </div>
-                                   <div
-                                        className='second'
-                                        style={{ color: '#D2D844', fontFamily: "'Audiowide', sans-serif" }}
-                                   >
-                                        STACK
-                                   </div>
-                              </div>
                               </div>
                          </div>
 
