@@ -34,8 +34,8 @@ export default function Home() {
      return (
           <section className='pages-wrapper'>
              < HomePage W_screenSize={W_screenSize}/>
-             {W_screenSize}--
-             {H_screenSize}
+             {/* {W_screenSize}--
+             {H_screenSize} */}
              {/* < Tech/>
              < About/> */}
 

@@ -2,7 +2,7 @@ $distance-middle-half: 19px;
 $distance-middle-full: $distance-middle-half * 2;
 
 $element-width: 236px;
-$element-width-mobile: 280px;
+$element-width-mobile: 260px;
 
 
 $title-width: ($element-width + $distance-middle-half) * 2;
@@ -168,7 +168,7 @@ body {
                                         ////  background-color: #f4350033;
                                         width: $element-width;
                                         height: 100%;
-                                        margin-left: calc((100vw - 280px) / 2);
+                                        margin-left: calc((100vw - 260px) / 2);
                                    }
                               }
 
@@ -213,7 +213,7 @@ body {
                                         // border: 0.3px solid #ff0000;
                                         width: $element-width;
                                         height: 100%;
-                                        margin-left: calc((100vw - 280px) / 2 - 38px);
+                                        margin-left: calc((100vw - 260px) / 2 - 38px);
                                         // margin-left: 150px;
                                    }
                               }
