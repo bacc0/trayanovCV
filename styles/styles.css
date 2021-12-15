@@ -169,7 +169,7 @@ body .pages-wrapper .page .page-nav .title-container .title {
   body .pages-wrapper .page .page-body .page-body-right .container-right-accent .right-accent {
     width: 236px;
     height: 100%;
-    margin-left: calc((100vw - 280px) / 2 - 19px);
+    margin-left: calc((100vw - 280px) / 2 - 38px);
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right {
     width: 100%;
