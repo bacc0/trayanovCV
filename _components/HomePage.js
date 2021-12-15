@@ -85,7 +85,7 @@ export default function HomePage() {
                                                   Within this role I was responsible for creating a
                                                   web builder application.
                                              </p>
-                                             <p>Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation.</p>
+                                             
 
                                         </p>
                                    </div>
