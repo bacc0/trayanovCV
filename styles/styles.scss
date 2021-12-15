@@ -1,7 +1,7 @@
-$distance-middle-half: 18px;
+$distance-middle-half: 19px;
 $distance-middle-full: $distance-middle-half * 2;
 
-$element-width: 220px;
+$element-width: 230px;
 $title-width: ($element-width + $distance-middle-half) * 2;
 
 $accent-height: 120px;
@@ -10,8 +10,8 @@ body {
      margin: 0;
      padding: 0;
      color: #555555;
-     font-size: 12px;
-     line-height: 21px;
+     font-size: 11px;
+     line-height: 17px;
      font-family: Arial, Helvetica, sans-serif;
      letter-spacing: 0.7px;
      word-spacing: 3px;
