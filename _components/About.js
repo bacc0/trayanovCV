@@ -8,8 +8,7 @@ export default function HomePage() {
                style={{
                     height: '100vh',
                     minHeight: 660,
-                    // backgroundColor: '#1D3668',
-                    // color: '#FFFFFF'
+                    
                }}
           >
 
