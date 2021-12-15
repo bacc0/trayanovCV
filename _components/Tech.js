@@ -4,9 +4,11 @@ export default function HomePage() {
           <div
                className='page'
                style={{
-                    height: '100vh',
-                    minHeight: 660,
+                    height: '100vh', 
+                    minHeight: 540 ,
+
                     backgroundColor: '#E9E8E9',
+                    backgroundColor: '#FFFFFF',
                }}
           > 
                <div className='page-nav'>
@@ -81,6 +83,7 @@ export default function HomePage() {
                          </div>
                     </div>
                </div>
+               
           </div>
      )
 }

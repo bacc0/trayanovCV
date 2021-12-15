@@ -8,8 +8,8 @@ export default function Home() {
      return (
           <section className='pages-wrapper'>
              < HomePage/>
-             < Tech/>
-             < About/>
+             {/* < Tech/>
+             < About/> */}
 
            
           </section>

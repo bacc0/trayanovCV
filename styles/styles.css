@@ -92,8 +92,7 @@ body .pages-wrapper .page {
 
 body .pages-wrapper .page .page-nav {
   width: 100vw;
-  height: 120px;
-  padding-bottom: 38px;
+  height: 194.4px;
 }
 
 body .pages-wrapper .page .page-nav .title-container {
@@ -110,6 +109,7 @@ body .pages-wrapper .page .page-nav .title-container {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #E9E8E9;
+  background-color: transparent;
 }
 
 body .pages-wrapper .page .page-nav .title-container .title {

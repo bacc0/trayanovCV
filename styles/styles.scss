@@ -5,6 +5,7 @@ $element-width: 236px;
 $title-width: ($element-width + $distance-middle-half) * 2;
 
 $accent-height: 120px;
+$naw-height: $accent-height * 1.62;
 
 body {
      margin: 0;
@@ -107,8 +108,8 @@ body {
                .page-nav {
                     // border: 0.3px solid #ff5f5f22;
                     width: 100vw;
-                    height: $accent-height;
-                    padding-bottom: $distance-middle-full;
+                    height: $naw-height;
+                    // padding-bottom: $distance-middle-full;
 
                     .title-container {
                          // border: 0.3px solid #ffa75f;
@@ -119,6 +120,7 @@ body {
                          align-items: flex-end;
                          justify-content: center;
                          background-color: #E9E8E9;
+                         background-color: transparent;
 
                          .title {
                               // // border: 0.3px solid #00c13a;

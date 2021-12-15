@@ -6,16 +6,16 @@ export default function HomePage() {
           <div
                className='page'
                style={{
-                    height: '100vh',
-                    minHeight: 660,
-                    
+                    height: '100vh', 
+                    minHeight: 540 ,
                }}
           >
 
                <div className='page-nav'>
                     <div
                          className='title-container vertical-center-container'
-                         style={{ backgroundColor: '#E9E8E9' }}
+                         
+                         style={{ backgroundColor: '#E9E8E9', backgroundColor: 'transparent'  }}
                     >
                          <div className='vertical-center'>
                               <div className='title'>
