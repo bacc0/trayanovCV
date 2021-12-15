@@ -116,6 +116,9 @@ body .pages-wrapper .page .page-nav .title-container .title {
   body .pages-wrapper .page .page-body {
     width: 100vw;
     font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.78px;
+    word-spacing: 3px;
   }
   body .pages-wrapper .page .page-body .page-body-left {
     width: 100%;
