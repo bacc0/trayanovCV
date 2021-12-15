@@ -1,12 +1,12 @@
 
-export default function HomePage() {
+export default function HomePage({ W_screenSize }) {
+
+
+
 
 
      return (
-          <div className='page' style={{
-               // height: '100vh', 
-               //      minHeight: 540 ,
-          }}>
+          <div className='page'>
 
                <div className='page-nav'>
                     <div className='title-container vertical-center-container'>
@@ -25,19 +25,21 @@ export default function HomePage() {
                <div
                // style={{ display: 'flex', 'align-items': 'center', height: '75vh'}}
                >
-                    <div className='home-page-body'>
-                         <div className='home-page-body-left'>
-                              <div className='content-container-left-accent'>
-                                   <div className='vertical-center-container content-left-accent'>
+                    <div className='page-body'>
+                         <div className='page-body-left'>
+                              <div className='container-left-accent'>
+                                   <div className='vertical-center-container left-accent'>
                                         <div className='vertical-center accent-title' >
-                                             <div className='first'>EXPERIENCE</div>
+                                             <div className='first'>
+                                                  EXPERIENCE
+                                             </div>
                                              <div className='second' style={{ fontFamily: "'Audiowide', sans-serif" }}>
                                                   WORK
                                              </div>
                                         </div>
                                    </div>
                               </div>
-                              <div className='content-container-left'>
+                              <div className='container-content-left'>
                                    <div className='content-left'>
                                         <h3>React Developer - Groundbits Ltd</h3>
                                         <hr />
@@ -56,9 +58,9 @@ export default function HomePage() {
 
 
 
-                         <div className='home-page-body-right'>
+                         <div className='page-body-right'>
 
-                              <div className='content-container-right'>
+                              <div className='container-content-right'>
                                    <div className='content-right'>
                                         <h3>React Developer - Amdocs via Appgr8 </h3>
                                         <hr />
@@ -71,7 +73,7 @@ export default function HomePage() {
                                         </p>
                                    </div>
                               </div>
-                              <div className='content-container-right'>
+                              <div className='container-content-right'>
                                    <div className='content-right'>
                                         <h3>React Developer - Groundbits Ltd</h3>
                                         <hr />
@@ -96,9 +98,10 @@ export default function HomePage() {
 
 
 
-               <div className='home-page-body'>
-                    <div className='home-page-body-left'>
-                         <div className='content-container-left'>
+               <div className='page-body'>
+
+                    <div className='page-body-left '>
+                         <div className='container-content-left'>
                               <div className='content-left'>
                                    <h3 style={{ color: '#1D3668' }}>
                                         Technologies
@@ -121,26 +124,32 @@ export default function HomePage() {
                               </div>
                          </div>
                     </div>
-                    <div className='home-page-body-right' >
+
+                    <div className='page-body-right' >
 
                          <div
-                              className='content-container-right-accent vertical-center-container-right'
+                              className='container-right-accent vertical-center-container-right'
                               style={{ backgroundColor: '#0FA1C4' }}
                          >
-                              <div className='vertical-center-right accent-title'>
+                              <div className='vertical-center-right'>
+                              <div className='right-accent accent-title'>
 
                                    <div className='first' style={{ color: '#FFFFFF' }}>
                                         TECHNOLOGIES
                                    </div>
-                                   <div className='second' style={{ color: '#D2D844', fontFamily: "'Audiowide', sans-serif" }}>
+                                   <div
+                                        className='second'
+                                        style={{ color: '#D2D844', fontFamily: "'Audiowide', sans-serif" }}
+                                   >
                                         STACK
                                    </div>
                               </div>
+                              </div>
                          </div>
 
-                         <div className='content-container-right'>
+                         <div className='container-content-right'>
                               <div className='content-right'>
-                                   <hr style={{ backgroundColor: '#1D3668' }} />
+                                   {/* <hr style={{ backgroundColor: '#1D3668' }} /> */}
                                    <p>Typescript,</p>
                                    <p>NodeJS,</p>
                                    <p>Express,</p>
@@ -159,10 +168,10 @@ export default function HomePage() {
                {/* About */}
 
                <div>
-                    <div className='home-page-body'>
-                         <div className='home-page-body-left'>
-                              <div className='content-container-left-accent'>
-                                   <div className='vertical-center-container content-left-accent'>
+                    <div className='page-body'>
+                         <div className='page-body-left'>
+                              <div className='container-left-accent'>
+                                   <div className='vertical-center-container left-accent'>
                                         <div className='vertical-center accent-title'>
                                              <div className='first'>
                                                   FRONT END
@@ -173,7 +182,7 @@ export default function HomePage() {
                                         </div>
                                    </div>
                               </div>
-                              <div className='content-container-left'>
+                              <div className='container-content-left'>
                                    <div className='content-left'>
                                         <h3>Hello</h3>
                                         <hr />
@@ -189,15 +198,15 @@ export default function HomePage() {
                                         </p>
 
 
-                                        
+
                                    </div>
                               </div>
                          </div>
 
 
 
-                         <div className='home-page-body-right'>
-                              <div className='content-container-right'>
+                         <div className='page-body-right'>
+                              <div className='container-content-right'>
                                    <div className='content-right'>
                                         {/* <h3>Hello</h3> */}
                                         <hr style={{ marginTop: 1 }} />
