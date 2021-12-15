@@ -9,7 +9,12 @@ export default function HomePage() {
                     <div className='title-container vertical-center-container'>
                          <div className='vertical-center' >
                               <div className='title'>
-                                   <h1>HELLO I'M VESELIN</h1>
+                                   <h1>
+                                        <div className='second'>
+                                             HELLO I'M 
+                                        </div>
+                                        VESELIN
+                                   </h1>
                               </div>
                          </div>
                     </div>
@@ -22,7 +27,8 @@ export default function HomePage() {
                               <div className='content-container-left-accent'>
                                    <div className='vertical-center-container content-left-accent'>
                                         <div className='vertical-center accent-title'>
-                                             FRONT END DEVELOPER
+                                             <div className='first'>FRONT END </div>
+                                             <div className='second'>DEVELOPER</div>
                                         </div>
                                    </div>
                               </div>

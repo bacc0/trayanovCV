@@ -6,10 +6,15 @@ export default function HomePage() {
           <div className='home-page' style={{ backgroundColor: '#D7DCDB' }}>
 
                <div className='home-page-nav'>
-                    <div className='title-container vertical-center-container'style={{ backgroundColor: '#FFFFFF'}}>
+                    <div className='title-container vertical-center-container' style={{ backgroundColor: '#FFFFFF' }}>
                          <div className='vertical-center' >
                               <div className='title'>
-                                   <h1>HELLO I'M VESELIN</h1>
+                                   <h1>
+                                        <div className='second'>
+                                             HELLO I'M
+                                        </div>
+                                        VESELIN
+                                   </h1>
                               </div>
                          </div>
                     </div>
@@ -47,12 +52,18 @@ export default function HomePage() {
 
                     <div className='home-page-body-right' >
 
-                         <div 
-                              className='content-container-right-accent vertical-center-container-right' 
+                         <div
+                              className='content-container-right-accent vertical-center-container-right'
                               style={{ backgroundColor: '#0FA1C4' }}
                          >
                               <div className='vertical-center-right accent-title'>
-                                   TECHNOLOGIES
+
+                                   <div className='first' style={{ color: '#FFFFFF' }}>
+                                        TECHNOLOGIES
+                                   </div>
+                                   <div className='second' style={{ color: '#D2D844' }}>
+                                        DEVELOPER
+                                   </div>
                               </div>
                          </div>
 

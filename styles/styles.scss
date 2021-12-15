@@ -12,7 +12,7 @@ body {
      color: #555555;
      font-size: 12px;
      line-height: 20px;
-     font-family: Arial, Helvetica, sans-serif;
+     font-family: 'Maven Pro', sans-serif;
      letter-spacing: 0.7px;
      word-spacing: 3px;
 
@@ -37,17 +37,37 @@ body {
      h1 {
           color: #1D3668;
           font-size: 30px;
-          line-height: 30px;
-          letter-spacing: 4px;
+          line-height: 24px;
+          letter-spacing: 6px;
           font-weight: 300;
+          font-family: 'Bebas Neue', cursive;
+margin-top: -8px;
+
+          .second {
+               font-size: 14px;
+               letter-spacing: 3px;
+          }
      }
 
      .accent-title {
-          color: #FFFFFF;
-          font-size: 30px;
+          color: #c93838;
+          font-size: 22px;
           line-height: 40px;
           letter-spacing: 4px;
+
+          .first {
+               position: relative;
+               top: 7px;
+          }
+          .second {
+               color: #FFFFFF;
+               font-size: 12px;
+               font-weight: 700;
+               position: relative;
+               bottom: 7px;
+          }
      }
+    
 
      .vertical-center-container {
           position: relative;
@@ -99,7 +119,7 @@ body {
                          .title {
                               // // border: 0.3px solid #00c13a;
                               // background-color: #c3c2c222;
-                              width: 200px;
+                              width: 156px;
                          }
                     }
                }
@@ -140,12 +160,13 @@ body {
                               margin-right: $distance-middle-half;
                               display: flex;
                               justify-content: flex-end;
+                              
 
                               .content-left {
                                    // border: 0.3px solid #a6a6a622;
                                    //background-color: #5f7aff33;
                                    width: $element-width;
-                                   min-height: 100px
+                                   min-height: 100px;
                               }
                          }
                     }

@@ -28,16 +28,35 @@ body h3 {
 body h1 {
   color: #1D3668;
   font-size: 30px;
-  line-height: 30px;
-  letter-spacing: 4px;
+  line-height: 24px;
+  letter-spacing: 6px;
   font-weight: 300;
+  margin-top: -8px;
+}
+
+body h1 .second {
+  font-size: 14px;
+  letter-spacing: 3px;
 }
 
 body .accent-title {
-  color: #FFFFFF;
-  font-size: 30px;
+  color: #c93838;
+  font-size: 22px;
   line-height: 40px;
   letter-spacing: 4px;
+}
+
+body .accent-title .first {
+  position: relative;
+  top: 7px;
+}
+
+body .accent-title .second {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  position: relative;
+  bottom: 7px;
 }
 
 body .vertical-center-container {
@@ -92,7 +111,7 @@ body .pages-wrapper .home-page .home-page-nav .title-container {
 }
 
 body .pages-wrapper .home-page .home-page-nav .title-container .title {
-  width: 200px;
+  width: 156px;
 }
 
 body .pages-wrapper .home-page .home-page-body {

@@ -3,29 +3,40 @@ export default function HomePage() {
 
 
      return (
-          <div className='home-page' 
-          // style={{ backgroundColor: '#0FA1C4', color: 'black' 
-          style={{ backgroundColor: '#1D3668', color: '#FFFFFF' 
-          }}>
+          <div className='home-page'
+               // style={{ backgroundColor: '#0FA1C4', color: 'black' 
+               style={{
+                    backgroundColor: '#1D3668', color: '#FFFFFF'
+               }}>
 
                <div className='home-page-nav'>
-                    <div className='title-container vertical-center-container' style={{ backgroundColor: '#D7DCDB'}}>
+                    <div className='title-container vertical-center-container' style={{ backgroundColor: '#D7DCDB' }}>
                          <div className='vertical-center'>
                               <div className='title'>
-                                   <h1>HELLO I'M VESELIN</h1>
+                                   <h1>
+                                        <div className='second' >
+                                             HELLO I'M
+                                        </div>
+                                        VESELIN
+                                   </h1>
                               </div>
                          </div>
                     </div>
                </div>
-               <div  
+               <div
                // style={{ display: 'flex', 'align-items': 'center', height: '75vh'}}
                >
                     <div className='home-page-body'>
                          <div className='home-page-body-left'>
-                              <div className='content-container-left-accent' style={{ backgroundColor: '#FFFFFF'}}>
+                              <div className='content-container-left-accent' style={{ backgroundColor: '#FFFFFF' }}>
                                    <div className='vertical-center-container content-left-accent'>
-                                        <div className='vertical-center accent-title'style={{ color: '#D2D844'}}>
-                                             FRONT END DEVELOPER
+                                        <div className='vertical-center accent-title' style={{ color: '#c93838' }}>
+                                             <div className='first'>
+                                                  FRONT END
+                                             </div>
+                                             <div className='second' style={{ color: '#D2D844' }}>
+                                                  DEVELOPER
+                                             </div>
                                         </div>
                                    </div>
                               </div>
