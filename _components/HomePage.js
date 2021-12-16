@@ -127,7 +127,7 @@ export default function HomePage({ W_screenSize }) {
                                         <p>
                                              Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation.
                                         </p>
-
+<br/>
                                         <p>
                                              <strong>Ricard Rosson </strong>
                                              <div>ricard@iacos.net</div>
@@ -324,7 +324,7 @@ export default function HomePage({ W_screenSize }) {
                                    <div
                                         className='content-left'
                                         // style={{ marginTop: min_width_600px ? 0 : 16 }}
-                                        style={{ margin: `7px 0 ${min_width_600px ? 36 : -7}px` }}
+                                        style={{ margin: `${min_width_600px ? 0 : -20}px 0 ${min_width_600px ? 36 : -7}px` }}
                                    >
                                         <motion.div
                                              initial={{ scale: 1, x: -100, opacity: 0 }}
@@ -370,7 +370,7 @@ export default function HomePage({ W_screenSize }) {
 
                          <div
                               className='page-body-right'
-                              style={{ marginTop: min_width_600px ? -10 : -50 }}
+                              style={{ marginTop: min_width_600px ? -19 : -50 }}
                          >
                               <div className='container-content-right'>
                                    <div className='content-right'>
