@@ -82,7 +82,9 @@ body .vertical-center-container-right .vertical-center-right {
 
 body .pages-wrapper .page .page-nav {
   width: 100vw;
-  height: 250px;
+  height: 200px;
+  margin-bottom: 38px;
+  border-bottom: 1px solid #EDF0F2;
 }
 
 body .pages-wrapper .page .page-nav .title-container {
@@ -139,7 +141,7 @@ body .pages-wrapper .page .page-nav .title-container {
             justify-content: center;
   }
   body .pages-wrapper .page .page-body .page-body-left .container-content-left .content-left {
-    width: 260px;
+    width: 240px;
     padding-bottom: 39px;
   }
   body .pages-wrapper .page .page-body .page-body-right {
@@ -169,7 +171,7 @@ body .pages-wrapper .page .page-nav .title-container {
             justify-content: center;
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right .content-right {
-    width: 260px;
+    width: 240px;
     min-height: 100px;
     padding-bottom: 39px;
   }

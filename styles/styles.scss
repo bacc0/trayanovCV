@@ -2,14 +2,14 @@ $distance-middle-half: 19px;
 $distance-middle-full: $distance-middle-half * 2;
 
 $element-width: 236px;
-$element-width-mobile: 260px;
+$element-width-mobile: 240px;
 
 
 $title-width: ($element-width + $distance-middle-half) * 2;
 
 $accent-height: 120px;
-// $naw-height: $accent-height * 1.62;
-$naw-height: 250px;
+// $nav-height: $accent-height * 1.62;
+$nav-height: 200px;
 
 body {
      margin: 0;
@@ -101,7 +101,10 @@ body {
 
                .page-nav {
                     width: 100vw;
-                    height: $naw-height;
+                    height: $nav-height;
+                    margin-bottom: $distance-middle-full;
+                    // background-color: #EDF0F2;
+                    border-bottom: 1px solid #EDF0F2;
 
                     .title-container {
                          height: 100%;
