@@ -1,10 +1,12 @@
 import { useEffect, useState, Fragment } from 'react'
-import { useViewportScroll } from 'framer-motion'
+
 import HomePage from '../_components/HomePage'
-import Tech from '../_components/Tech'
-import About from '../_components/About'
+
+import { useViewportScroll } from 'framer-motion'
+import { detect } from 'detect-browser'
 
 
+var temp = 0
 export default function Home() {
 
      var tempWindowWidth = 0
@@ -16,6 +18,8 @@ export default function Home() {
      const [H_screenSize, set_H_screenSize] = useState(tempWindowHeight)
      const [theme, setTheme] = useState('light')
      const { scrollYProgress } = useViewportScroll(0)
+     const [Y_position, set_Y_position] = useState(0)
+     const [currentBrowser, setCurrentBrowser] = useState(0)
 
      // ---------------------------------    Detect window Size
      if (typeof window !== 'undefined') {
@@ -33,15 +37,70 @@ export default function Home() {
           scrollableElement.addEventListener('wheel', checkScrollDirection)
           function checkScrollDirection(event) {
 
-               if (checkScrollDirectionIsUp(event)) setScrollDirection('down')
-               else setScrollDirection('up')
+               if (checkScrollDirectionIsUp(event)) {
+                    setScrollDirection('down')
+               }
+               else {
+                    setScrollDirection('up')
+               }
           }
           function checkScrollDirectionIsUp(event) {
 
                if (event.wheelDelta) return event.wheelDelta > 0
                return event.deltaY < 0
           }
+
+
      }, [])
+     // ---------------------------------    Mobile Detect window scrolling Directions (UP DOWN)
+
+     let oldValue = 0
+     let newValue = 0
+
+     useEffect(() => {
+          window.addEventListener('scroll', (e) => {
+               newValue = window.pageYOffset;
+               if (oldValue < newValue) {
+                   
+
+                   
+                         setScrollDirection('up')
+                       
+              
+               } else if (oldValue > newValue) {
+
+                  
+                         setScrollDirection('down')
+                  
+               }
+               oldValue = newValue;
+          });
+
+        
+     }, [])
+
+     useEffect(() => {
+          if (Y_position === 0) {
+               console.log(0)
+               setScrollDirection('down')
+          }
+     }, [Y_position])
+
+     //-------------------
+
+     useEffect(() => {
+
+          scrollYProgress.onChange((v) => set_Y_position(v))
+     }, [scrollYProgress])
+
+
+     // ---------------------------------    Detect Browser Name
+     const browser = detect()
+     
+
+     if (browser.name === 'firefox') {
+          setCurrentBrowser(browser.name)
+     }
 
 
 
@@ -55,14 +114,13 @@ export default function Home() {
 
      return (
           <section className='pages-wrapper'>
+
                < HomePage
                     W_screenSize={W_screenSize} theme={theme}
-                    setTheme={setTheme} scrollDirection={scrollDirection} />
-               {/* {W_screenSize}--
-             {H_screenSize} */}
-               {/* < Tech/>
-             < About/> */}
-
+                    setTheme={setTheme} scrollDirection={scrollDirection}
+                    Y_position={Y_position}
+                    currentBrowser={currentBrowser}
+               />
 
           </section>
      )

@@ -1,20 +1,18 @@
 import { useState, useEffect } from 'react'
-import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
+
 import { motion, AnimatePresence } from 'framer-motion'
-import MenuItem from '@mui/material/MenuItem'
 
-import { Stack, IconButton } from '@mui/material'
-
+import { Stack, IconButton, Typography, Toolbar, AppBar, Box } from '@mui/material'
 
 import LightModeIcon from '@mui/icons-material/LightMode'
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound'
-import ProgressLineSVG from './ProgressLineSVG'
-export default function MenuAppBar({ theme, setTheme, hrColor, hrColorMain, AppBackgroundColor, scrollDirection }) {
-     const [anchorEl, setAnchorEl] = useState(null)
 
+export default function MenuAppBar({
+     theme, setTheme, hrColor, hrColorMain,
+     AppBackgroundColor, scrollDirection, Y_position,
+     thirdLettersColor, currentBrowser
+}) {
+     
      const [heightAppBar, setHeightAppBarl] = useState(0)
 
      useEffect(() => {
@@ -29,6 +27,7 @@ export default function MenuAppBar({ theme, setTheme, hrColor, hrColorMain, AppB
      }
 
      const AppBarStyle = {
+          // backgroundColor: currentBrowser === 'firefox' ? 'red' : 'transparent',
           backgroundColor: 'transparent',
           '-webkit-backdrop-filter': `blur(10px)`,
           ' backdrop-filter': `blur(10px)`,
@@ -36,86 +35,73 @@ export default function MenuAppBar({ theme, setTheme, hrColor, hrColorMain, AppB
           boxShadow: '0 0 0',
           borderBottom: `1px solid ${hrColor}99`,
           fontSize: 10,
-          // display: scrollDirection === 'up' ? 'none' : 'block',
           height: scrollDirection === 'up' ? 0 : 65,
-
           transition: `height 800ms ease`
-
      }
+     const ToolbarContainer = {
+          borderBottom: `1px solid blck`,
+          position: 'relative',
+          top: scrollDirection === 'up' ? -65 : 0,
+          transition: `top 600ms ease`
+     }
+     const underAppBAr = {
+          height: heightAppBar,
+          'background-color': AppBackgroundColor,
+          transition: `background-color 350ms ease, height 800ms ease`,
+     }
+     const progressLineStyle = {
+          position: 'fixed',
+          top: 0,
+          zIndex: 1100,
+          width: `${(Y_position * 100).toFixed(0)}%`,
+          height: 0.75,
+          marginTop: 0,
+          backgroundColor: thirdLettersColor,
+          transition: `width 150ms ease`
+     }
+
 
      return (
           <Box  >
-               <div style={{}}>
+               <div>
                     <motion.div
                          initial={{ opacity: 0, pathLength: 0, y: -65 }}
                          animate={{ opacity: 1, pathLength: 1, y: 0 }}
                          transition={{ delay: 1.8, duration: 1, ease: 'easeInOut' }}
-
-                         exit={{ opacity: 0, y: -6 }}
+                    // exit={{ opacity: 0, y: -6 }}
                     >
-                         <AppBar position='fixed' color='transparent'
-                              style={AppBarStyle}
-                         >
-
-                              <AnimatePresence >
-                              {
-                              scrollDirection === 'down'  &&( 
-                                   <motion.div
-                                   transition={{ delay: 0, duration: 0.5, ease: 'easeInOut' }}
-                                   exit={{ y: -65 }}>
+                         <AppBar style={AppBarStyle} position='fixed'>
                               <motion.div
-                                   initial={{ opacity: 0, pathLength: 0, y: -65 }}
-                                   animate={{ opacity: 1, pathLength: 1, y: 0 }}
-                                   transition={{ delay: 1.9, duration: 1, ease: 'easeInOut' }}
-                                   exit={{ y: -65 }}
-                                   style={{
-                                        borderBottom: `1px solid blck`,
-
-                                        // position: 'relative',
-                                        // top: scrollDirection === 'up' ? -65 : 0,
-
-                                        // transition: `height 800ms ease`
-
-                                   }}>
+                                   initial={{ opacity: 0, y: -65 }}
+                                   animate={{ opacity: 1, y: 0 }}
+                                   transition={{ delay: 2, duration: 1, ease: 'easeInOut' }}
+                                   style={ToolbarContainer}>
                                    <Toolbar >
                                         <Typography style={{ fontSize: 12 }} sx={{ flexGrow: 1 }}>
                                              Veselin Trayanov
                                         </Typography>
-
-                                        <Stack direction='row' spacing={1}
-
+                                        <Stack
+                                             direction='row'
+                                             spacing={1}
                                              onClick={() => handleThemeChange()}
                                         >
                                              <IconButton aria-label='fingerprint' style={{ color: hrColorMain }}>
                                                   {
                                                        theme === 'light'
-                                                            ? <LightModeIcon />
-                                                            : <NightlightRoundIcon />
+                                                            ? <NightlightRoundIcon />
+                                                            : <LightModeIcon />
                                                   }
                                              </IconButton>
-
                                         </Stack>
-
-
-
-
                                    </Toolbar>
                               </motion.div>
-                              </motion.div>
-                              )}
-                              </AnimatePresence>
-                         
+                         </AppBar>
 
+                         <div style={underAppBAr} />
+                         <hr style={progressLineStyle} />
+                    </motion.div>
+               </div>
 
-                    </AppBar>
-                    <div style={{
-                         height: heightAppBar,
-                         backgroundColor: AppBackgroundColor,
-                         transition: `background-color 350ms ease`,
-                         transition: `height 800ms ease`
-                    }} />
-               </motion.div>
-          </div>
           </Box >
      )
 }
