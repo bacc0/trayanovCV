@@ -80,8 +80,8 @@ body .vertical-center-container-right .vertical-center-right {
 }
 
 body .pages-wrapper .page {
-  -webkit-transition: background-color 500ms ease;
-  transition: background-color 500ms ease;
+  -webkit-transition: background-color 350ms ease;
+  transition: background-color 350ms ease;
 }
 
 body .pages-wrapper .page .page-nav {
