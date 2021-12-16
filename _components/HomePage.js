@@ -11,11 +11,16 @@ export default function HomePage({ W_screenSize }) {
      const strokeWidth = min_width_600px ? 1.6 : 2.2
      const primeLettersColor = '#FFFFFF'
      const secLettersColor = '#BBC5CD'
-     const thirdLettersColor = '#1F628F'
-     const thirdLogoColor = '#F25D67'
-     const hrColor = '#F25D67'
-     const backgroundColor = '#1F628F'
-     const backgroundColor2 = '#BBC5CD'
+     const thirdLettersColor = '#3770FE'
+     const thirdLogoColor = '#3770FE'
+     const hrColor = '#BBC5CD'
+
+     const backgroundColor = '#13478B'
+     const backgroundColor_second = '#0E366B'
+
+     const backgroundColor2 = '#3770FE'
+     const backgroundColor_second2 = '#1764E1'
+
 
 
      return (
@@ -59,7 +64,10 @@ export default function HomePage({ W_screenSize }) {
                                    initial={{ scale: 1, x: -100, opacity: 0 }}
                                    animate={{ scale: 1, x: 0, opacity: 1 }}
                                    transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }} className='container-left-accent'
-                                   style={{ backgroundColor: backgroundColor }}
+                                   style={{ 
+                                        background: 
+                                        `linear-gradient(90deg, ${backgroundColor_second} 0%, ${backgroundColor} 100%)` 
+                                   }}
                               >
                                    <div className='vertical-center-container left-accent' >
                                         <div className='vertical-center accent-title' >
@@ -191,7 +199,9 @@ export default function HomePage({ W_screenSize }) {
                          <Hidden smDown >
                               <div
                                    className='container-right-accent vertical-center-container-right'
-                                   style={{ backgroundColor: backgroundColor2 }}
+                                   style={{  background: 
+                                        `linear-gradient(90deg, ${backgroundColor2} 0%, ${backgroundColor_second2} 100%)` 
+                                    }}
                               >
                                    <div className='vertical-center-right'>
                                         <div className='right-accent accent-title'>
@@ -241,7 +251,9 @@ export default function HomePage({ W_screenSize }) {
                          <div className='page-body-left'>
                               <div
                                    className='container-left-accent'
-                                   style={{ backgroundColor: backgroundColor }}
+                                   style={{ background:
+                                        `linear-gradient(90deg, ${backgroundColor_second} 0%, ${backgroundColor} 100%)` 
+                                    }}
                               >
                                    <div className='vertical-center-container left-accent'>
                                         <div className='vertical-center accent-title'>
