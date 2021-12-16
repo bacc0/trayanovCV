@@ -96,7 +96,6 @@ export default function MenuAppBar({
                                    </Toolbar>
                               </motion.div>
                          </AppBar>
-
                          <div style={underAppBAr} />
                          <hr style={progressLineStyle} />
                     </motion.div>
