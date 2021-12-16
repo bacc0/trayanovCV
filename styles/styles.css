@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  color: #555555;
+  color: #717d97;
   font-size: 11px;
   line-height: 17px;
   font-family: Arial, Helvetica, sans-serif;
@@ -15,19 +15,16 @@ body hr {
   width: 100%;
   margin-left: 0;
   margin-right: auto;
-  background-color: #0CA1C5;
   height: 1px;
   border: 0 none;
 }
 
 body h3 {
-  color: #0CA1C5;
   margin-top: -2px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 body h1 {
-  color: #1D3668;
   font-size: 30px;
   line-height: 24px;
   letter-spacing: 6px;
@@ -41,7 +38,6 @@ body h1 .second {
 }
 
 body .accent-title {
-  color: #c93838;
   font-size: 22px;
   line-height: 40px;
   letter-spacing: 4px;
@@ -53,7 +49,6 @@ body .accent-title .first {
 }
 
 body .accent-title .second {
-  color: #FFFFFF;
   font-size: 12px;
   font-weight: 700;
   position: relative;
@@ -121,7 +116,6 @@ body .pages-wrapper .page .page-nav .title-container {
   }
   body .pages-wrapper .page .page-body .page-body-left .container-left-accent {
     background-color: #D2D844;
-    width: calc(100% - $distance-middle-half);
     height: 120px;
     margin-right: 19px;
     margin-bottom: 38px;
@@ -159,7 +153,6 @@ body .pages-wrapper .page .page-nav .title-container {
   }
   body .pages-wrapper .page .page-body .page-body-right .container-right-accent {
     background-color: #D2D844;
-    width: calc(100% - $distance-middle-half);
     height: 120px;
     margin-left: 19px;
     margin-bottom: 38px;
@@ -194,18 +187,12 @@ body .pages-wrapper .page .page-nav .title-container {
     display: -ms-flexbox;
     display: flex;
   }
-  body .pages-wrapper .page .page-body .order-1 {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
   body .pages-wrapper .page .page-body .page-body-left {
     width: 50%;
     min-width: 300px;
   }
   body .pages-wrapper .page .page-body .page-body-left .container-left-accent {
     background-color: #D2D844;
-    width: calc(100% - $distance-middle-half);
     height: 120px;
     margin-right: 19px;
     margin-bottom: 38px;
@@ -221,7 +208,6 @@ body .pages-wrapper .page .page-nav .title-container {
     height: 100%;
   }
   body .pages-wrapper .page .page-body .page-body-left .container-content-left {
-    width: calc(100% - $distance-middle-half);
     min-height: 100px;
     margin-right: 19px;
     display: -webkit-box;
@@ -241,7 +227,6 @@ body .pages-wrapper .page .page-nav .title-container {
   }
   body .pages-wrapper .page .page-body .page-body-right .container-right-accent {
     background-color: #D2D844;
-    width: calc(100% - $distance-middle-half);
     height: 120px;
     margin-left: 19px;
     margin-bottom: 38px;
@@ -251,7 +236,6 @@ body .pages-wrapper .page .page-nav .title-container {
     height: 100%;
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right {
-    width: calc(100% - $distance-middle-half);
     min-height: 100px;
     margin-left: 19px;
     margin-bottom: 38px;

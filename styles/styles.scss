@@ -13,7 +13,7 @@ $naw-height: $accent-height * 1.62;
 body {
      margin: 0;
      padding: 0;
-     color: #555555;
+     color: #717d97;
      font-size: 11px;
      line-height: 17px;
      font-family: Arial, Helvetica, sans-serif;
@@ -28,19 +28,16 @@ body {
           width: 100%;
           margin-left: 0;
           margin-right: auto;
-          background-color: #0CA1C5;
           height: 1px;
           border: 0 none;
      }
 
      h3 {
-          color: #0CA1C5;
           margin-top: -2px;
-          font-size: 12px;
+          font-size: 15px;
      }
 
      h1 {
-          color: #1D3668;
           font-size: 30px;
           line-height: 24px;
           letter-spacing: 6px;
@@ -54,7 +51,6 @@ body {
      }
 
      .accent-title {
-          color: #c93838;
           font-size: 22px;
           line-height: 40px;
           letter-spacing: 4px;
@@ -65,14 +61,12 @@ body {
           }
 
           .second {
-               color: #FFFFFF;
                font-size: 12px;
                font-weight: 700;
                position: relative;
                bottom: 7px;
           }
      }
-
 
      .vertical-center-container {
           position: relative;
@@ -99,66 +93,38 @@ body {
      }
 
      .pages-wrapper {
-          // margin: -17px 0;
 
           .page {
                height: 90vh;
-               // min-height: 900px;
-
-               //  background-color: #ffffff;
 
                .page-nav {
-                    //  border: 0.3px solid #ff5f5f22;
                     width: 100vw;
                     height: $naw-height;
-                    // padding-bottom: $distance-middle-full;
 
                     .title-container {
-                         //  border: 0.3px solid #ffa75f;
-                         // width: $title-width;
                          height: 100%;
                          margin: 0 auto;
                          display: flex;
                          align-items: flex-end;
                          justify-content: center;
-                         //  background-color: #E9E8E9;
-                         //  background-color: transparent;
-
-                         .title {
-                              //    border: 0.3px solid #00c13a;
-                              ////  background-color: #c3c2c222;
-                              // width: 156px;
-                         }
                     }
                }
 
-
-
-
                @media only screen and (max-width: 600px) {
                     .page-body {
-                         //  border: 2px solid #5f7aff;
-                         //  background: #ff5f7a22;
                          width: 100vw;
-
                          font-size: 13px;
                          line-height: 22px;
                          letter-spacing: 0.78px;
                          word-spacing: 3px;
 
-
-
                          .page-body-left {
-                              //  border: 0.3px solid #01478d;
                               width: 100%;
-                              // height: 100%;
                               min-width: 300px;
 
-
                               .container-left-accent {
-                                   //  border: 0.3px solid #018d0f22;
                                    background-color: #D2D844;
-                                   width: calc(100% - $distance-middle-half);
+                                   // width: calc(100% - $distance-middle-half);
                                    height: $accent-height;
                                    margin-right: $distance-middle-half;
                                    margin-bottom: $distance-middle-full;
@@ -166,8 +132,6 @@ body {
                                    justify-content: flex-start;
 
                                    .left-accent {
-                                        //  border: 0.3px solid #b7b7b722;
-                                        ////  background-color: #f4350033;
                                         width: $element-width;
                                         height: 100%;
                                         margin-left: calc((100vw - 260px) / 2);
@@ -175,8 +139,6 @@ body {
                               }
 
                               .container-content-left {
-                                   //  border: 0.3px solid #018d0f22;
-
                                    width: 100%;
                                    min-height: 100px;
                                    margin-right: 0;
@@ -184,44 +146,32 @@ body {
                                    justify-content: center;
 
                                    .content-left {
-                                        //  border: 0.3px solid #a6a6a622;
-                                        //background-color: #5f7aff33;
                                         width: $element-width-mobile;
                                         min-height: 100px;
-                                        // background-color:  #ff000044;
                                         padding-bottom: 39px;
-
-
                                    }
                               }
                          }
 
                          .page-body-right {
-                              //  border: 0.3px solid #01478d;
                               width: 100%;
-                              // height: 100%;
                               min-width: 300px;
 
                               .container-right-accent {
-                                   //  border: 0.3px solid #018d0f22;
                                    background-color: #D2D844;
-                                   width: calc(100% - $distance-middle-half);
+                                   // width: calc(100% - $distance-middle-half);
                                    height: $accent-height;
                                    margin-left: $distance-middle-half;
                                    margin-bottom: $distance-middle-full;
 
-
                                    .right-accent {
-                                        // border: 0.3px solid #ff0000;
                                         width: $element-width;
                                         height: 100%;
                                         margin-left: calc((100vw - 260px) / 2 - 38px);
-                                        // margin-left: 150px;
                                    }
                               }
 
                               .container-content-right {
-                                   //  border: 0.3px solid #018d0f22;
                                    width: 100%;
                                    min-height: 100px;
                                    margin-right: 0;
@@ -229,8 +179,6 @@ body {
                                    justify-content: center;
 
                                    .content-right {
-                                        //  border: 0.3px solid #a6a6a622;
-                                        //background-color: #5f7aff33;
                                         width: $element-width-mobile;
                                         min-height: 100px;
                                         padding-bottom: 39px;
@@ -242,32 +190,18 @@ body {
 
                @media only screen and (min-width: 601px) {
                     .page-body {
-                         //  border: 2px solid #5f7aff;
-                         //  background: #5fff9c22;
                          width: 100vw;
-                         // min-width: 410px;
-                         // height: 70vh;
                          display: flex;
 
-                         .order-1 {
-                              order: 0
-                         }
-
-                         // .order-2 {
-                         //      order: 2
-                         // }
 
 
                          .page-body-left {
-                              //  border: 0.3px solid #01478d;
                               width: 50%;
-                              // height: 100%;
                               min-width: 300px;
 
                               .container-left-accent {
-                                   //  border: 0.3px solid #018d0f22;
                                    background-color: #D2D844;
-                                   width: calc(100% - $distance-middle-half);
+                                   // width: calc(100% - $distance-middle-half);
                                    height: $accent-height;
                                    margin-right: $distance-middle-half;
                                    margin-bottom: $distance-middle-full;
@@ -275,16 +209,13 @@ body {
                                    justify-content: flex-end;
 
                                    .left-accent {
-                                        //  border: 0.3px solid #b7b7b722;
-                                        ////  background-color: #f4350033;
                                         width: $element-width;
                                         height: 100%;
                                    }
                               }
 
                               .container-content-left {
-                                   //  border: 0.3px solid #018d0f22;
-                                   width: calc(100% - $distance-middle-half);
+                                   // width: calc(100% - $distance-middle-half);
                                    min-height: 100px;
                                    margin-right: $distance-middle-half;
                                    display: flex;
@@ -292,8 +223,6 @@ body {
 
 
                                    .content-left {
-                                        //  border: 0.3px solid #a6a6a622;
-                                        //background-color: #5f7aff33;
                                         width: $element-width;
                                         min-height: 100px;
                                    }
@@ -301,37 +230,28 @@ body {
                          }
 
                          .page-body-right {
-                              //  border: 0.3px solid #973d38;
-                              //  background-color: #973d3811;
                               width: 50%;
                               min-width: 300px;
-                              // height: 100%;
 
                               .container-right-accent {
-                                   //  border: 0.3px solid #018d0f22;
                                    background-color: #D2D844;
-                                   width: calc(100% - $distance-middle-half);
                                    height: $accent-height;
                                    margin-left: $distance-middle-half;
                                    margin-bottom: $distance-middle-full;
 
                                    .right-accent {
-                                        //  border: 0.3px solid #b7b7b722;
                                         width: $element-width;
                                         height: 100%;
                                    }
                               }
 
                               .container-content-right {
-                                   //  border: 0.3px solid #018d0f22;
-                                   width: calc(100% - $distance-middle-half);
+                                   // width: calc(100% - $distance-middle-half);
                                    min-height: 100px;
                                    margin-left: $distance-middle-half;
                                    margin-bottom: $distance-middle-full;
 
                                    .content-right {
-                                        //  border: 0.3px solid #16018d22;
-                                        //background-color: #5f7aff33;
                                         width: $element-width;
                                         min-height: 100px
                                    }
@@ -339,9 +259,6 @@ body {
                          }
                     }
                }
-
-
-
           }
      }
 }

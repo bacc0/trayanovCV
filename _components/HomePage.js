@@ -13,7 +13,7 @@ export default function HomePage({ W_screenSize }) {
      const secLettersColor = '#BBC5CD'
      const thirdLettersColor = '#3770FE'
      const thirdLogoColor = '#3770FE'
-     const hrColor = '#BBC5CD'
+     const hrColor = '#EDF0F2'
 
      const backgroundColor = '#13478B'
      const backgroundColor_second = '#0E366B'
