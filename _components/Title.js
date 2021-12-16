@@ -292,7 +292,7 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
 
                          <motion.path
                               initial={{ opacity: 1, y: 0, scale: 1, x: 0, y: 0 }}
-                              animate={{ opacity: 0, y: 0 , scale: 0, x: 35, y: 15 }}
+                              animate={{ opacity: 0, y: 0 , scale: 0, x: 25, y: 15 }}
                               transition={{ delay: 0.45, duration: 0.5 }}
 
                               d="M175.383,78.782 L175.383,47.605 L199.548,47.605 L199.548,50.116 L178.814,50.116 L178.814,61.375 L197.53,61.375 L197.53,63.886 L178.814,63.886 L178.814,76.271 L200.052,76.271 L200.052,78.782 z"
