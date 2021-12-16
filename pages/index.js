@@ -22,6 +22,7 @@ export default function Home() {
 
      const [W_screenSize, set_W_screenSize] = useState(tempWindowWidth)
      const [H_screenSize, set_H_screenSize] = useState(tempWindowHeight)
+     const [theme, setTheme] = useState('light')
 
      if (typeof window !== 'undefined') {
           window.addEventListener('resize', () => {
@@ -33,7 +34,7 @@ export default function Home() {
 
      return (
           <section className='pages-wrapper'>
-             < HomePage W_screenSize={W_screenSize}/>
+             < HomePage W_screenSize={W_screenSize} theme={theme} setTheme={setTheme} />
              {/* {W_screenSize}--
              {H_screenSize} */}
              {/* < Tech/>

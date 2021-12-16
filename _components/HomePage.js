@@ -1,37 +1,55 @@
-import { Hidden, useMediaQuery } from '@mui/material'
+import { Hidden, useMediaQuery, Stack, IconButton } from '@mui/material'
+
+
+import LightModeIcon from '@mui/icons-material/LightMode'
+import NightlightRoundIcon from '@mui/icons-material/NightlightRound'
+
 import { motion } from 'framer-motion'
 import Title from './Title'
 import { Typewriter } from 'react-simple-typewriter'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-export default function HomePage({ W_screenSize }) {
+export default function HomePage({ W_screenSize, theme, setTheme }) {
 
      const [onAnimationEnd, setOnAnimationEnd] = useState(false)
+     const [primeLettersColor, setPrimeLettersColor] = useState('#FFFFFF')
+     const [secLettersColor, setSecLettersColor] = useState('#BBC5CD')
+     const [thirdLettersColor, setThirdLettersColor] = useState('#3770FE')
+     const [thirdLogoColor, setThirdLogoColor] = useState('#3770FE')
+     const [hrColor, setHrColor] = useState('#EDF0F2')
+     const [hrColorMain, setHrColorMain] = useState('#13478B')
+     const [backgroundColor, setBackgroundColor] = useState('#13478B')
+     const [AppBackgroundColor, setAppBackgroundColor] = useState('#FFFFFF')
+     const [bodyColor, setBodyColor] = useState('#717d97')
 
      const min_width_600px = useMediaQuery('(min-width:600px)')
      const logo_W_H = 230
      const strokeWidth = min_width_600px ? 1.6 : 2.2
-     const primeLettersColor = '#FFFFFF'
-     const secLettersColor = '#BBC5CD'
-     const thirdLettersColor = '#3770FE'
-     const thirdLogoColor = '#3770FE'
-     const hrColor = '#EDF0F2'
-     const hrColorMain = '#13478B'
 
-     const backgroundColor = '#13478B'
-     const backgroundColor_second = '#0E366B'
+     useEffect(() => {
+          setPrimeLettersColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
+          setSecLettersColor(theme === 'light' ? '#BBC5CD' : '#BBC5CD')
+          setThirdLettersColor(theme === 'light' ? '#3770FE' : '#B9E981')
+          setThirdLogoColor(theme === 'light' ? '#3770FE' : '#FF00D6')
+          setHrColor(theme === 'light' ? '#EDF0F2' : '#95217D')
+          setHrColorMain(theme === 'light' ? '#13478B' : '#FFFFFF')
+          setBackgroundColor(theme === 'light' ? '#13478B' : '#FFFFFF')
+          setAppBackgroundColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
+          setBodyColor(theme === 'light' ? '#717d97' : '#A7ACFF')
+     }, [theme]);
 
-     const backgroundColor2 = '#3770FE'
-     const backgroundColor_second2 = '#1764E1'
+
+
+
 
      const typeWriter = (sentence) => {
           return (
-               
+
                onAnimationEnd && (
                     <motion.div
-                    initial={{opacity: 0 }}
-                    animate={{opacity: 1 }}
-                    transition={{ duration: 1.3}}
+                         initial={{ opacity: 0 }}
+                         animate={{ opacity: 1 }}
+                         transition={{ duration: 1.3 }}
                     >
                          <Typewriter
                               words={[sentence]}
@@ -50,10 +68,25 @@ export default function HomePage({ W_screenSize }) {
 
 
      return (
-          <div className='page'>
+          <div className='page' style={{ backgroundColor: AppBackgroundColor, color: bodyColor }}>
                <div className='page-nav'>
                     <div className='title-container vertical-center-container'>
 
+                         <Stack direction="row" spacing={1}
+                              style={{
+                                   position: 'fixed',
+                                   top: 10,
+                                   right: 10
+                              }}
+                              onClick={() => {
+                                   setTheme(theme === 'light' ? 'dark' : 'light')
+                              }}
+                         >
+                              <IconButton aria-label="fingerprint" style={{ color: hrColorMain }}>
+                                   {theme === 'light' ? <LightModeIcon /> : <NightlightRoundIcon />}
+                              </IconButton>
+
+                         </Stack>
                          <div className='vertical-center' >
                               <motion.div
                                    initial={{ scale: 1, y: -200, opacity: 0 }}
@@ -141,7 +174,7 @@ export default function HomePage({ W_screenSize }) {
                                    >
 
 
-                                        <h3 style={{ color: thirdLettersColor, minHeight: 30}}>
+                                        <h3 style={{ color: thirdLettersColor, minHeight: 30 }}>
                                              {typeWriter('React Developer - Groundbits Ltd')}
                                         </h3>
                                         <hr style={{ backgroundColor: hrColor }} />
@@ -171,11 +204,11 @@ export default function HomePage({ W_screenSize }) {
 
                               <div className='container-content-right'>
                                    <div className='content-right'>
-                                        <h3 style={{ color: thirdLettersColor, minHeight: 30}}>
+                                        <h3 style={{ color: thirdLettersColor, minHeight: 30 }}>
                                              {typeWriter(' React Developer - Amdocs via Appgr8')}
-                                            
+
                                         </h3>
-                                        <hr style={{ backgroundColor: hrColor}} />
+                                        <hr style={{ backgroundColor: hrColor }} />
                                         <p>Attention to Detail.</p>
                                         <strong>July 2021 - Nov 2021 </strong>
                                         <p>Building a new components for the application.</p>
@@ -189,7 +222,7 @@ export default function HomePage({ W_screenSize }) {
                               <div className='container-content-right'>
                                    <div className='content-right'>
                                         <h3 style={{ color: thirdLettersColor, minHeight: 30 }}>
-                                            {typeWriter(' React Developer - Groundbits Ltd')}
+                                             {typeWriter(' React Developer - Groundbits Ltd')}
                                         </h3>
                                         <hr style={{ backgroundColor: hrColor }} />
                                         <p>Attention to Detail.</p>
@@ -373,7 +406,7 @@ export default function HomePage({ W_screenSize }) {
                                    <div className='content-left'
                                         style={{ marginTop: min_width_600px ? 0 : 16 }}>
                                         <h3 style={{ color: thirdLettersColor }}>
-                                        Skills
+                                             Skills
                                         </h3>
                                         <hr style={{ backgroundColor: hrColor }} />
 
