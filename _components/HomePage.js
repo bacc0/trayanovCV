@@ -3,12 +3,18 @@ import { motion } from 'framer-motion'
 export default function HomePage({ W_screenSize }) {
 
 
-
-
+     const logo_W_H = 230
+     const strokeWidth = 1
+     const primeLettersColor = '#FFFFFF'
+     const secLettersColor = '#CCD8E2'
+     const thirdLettersColor = '#1F628F'
+     const thirdLogoColor = '#ED1A1A'
+     const hrColor = '#ED1A1A'
+     const backgroundColor = '#1F628F'
+     const backgroundColor2 = '#CCD8E2'
 
      return (
           <div className='page'>
-
                <div className='page-nav'>
                     <div className='title-container vertical-center-container'>
                          <div className='vertical-center' >
@@ -19,11 +25,12 @@ export default function HomePage({ W_screenSize }) {
                                    className='title'
                               >
                                    <Title
-                                        logo_W_H={230}
-                                        primeLettersColor={'#FFFFFF'}
-                                        secLettersColor={'#B8B8B8'}
-                                        thirdLettersColor={'#0CA1C5'}
-                                        backgroundColor={'#D2D845'}
+                                        logo_W_H={logo_W_H}
+                                        primeLettersColor={primeLettersColor}
+                                        secLettersColor={secLettersColor}
+                                        thirdLogoColor={thirdLogoColor}
+                                        backgroundColor={backgroundColor}
+                                        strokeWidth={strokeWidth}
                                    />
                                    {/* <h1 >
                                         <div className='second' style={{ fontFamily: "'Audiowide', sans-serif" }}>
@@ -38,33 +45,39 @@ export default function HomePage({ W_screenSize }) {
 
 
                <div
-               // style={{ display: 'flex', 'align-items': 'center', height: '75vh'}}
                >
                     <div className='page-body'>
                          <div className='page-body-left'>
                               <motion.div
-                                   initial={{ scale: 1, x: -100 , opacity: 0}}
-                                   animate={{ scale: 1, x: 0 , opacity: 1}}
+                                   initial={{ scale: 1, x: -100, opacity: 0 }}
+                                   animate={{ scale: 1, x: 0, opacity: 1 }}
                                    transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }} className='container-left-accent'
+                                   style={{ backgroundColor: backgroundColor }}
                               >
-                                   <div className='vertical-center-container left-accent'>
+                                   <div className='vertical-center-container left-accent' >
                                         <div className='vertical-center accent-title' >
-                                             <div className='first'>
+                                             <div className='first' style={{ color: primeLettersColor }}>
                                                   EXPERIENCE
                                              </div>
-                                             <div className='second' style={{ fontFamily: "'Audiowide', sans-serif" }}>
+                                             <div className='second'
+                                                  style={{ fontFamily: "'Audiowide', sans-serif", color: secLettersColor }}
+
+                                             >
                                                   WORK
                                              </div>
                                         </div>
                                    </div>
                               </motion.div>
                               <motion.div
-                                   initial={{ scale: 1, y: 100 , opacity: 0}}
-                                   animate={{ scale: 1, y: 0 , opacity: 1}}
-                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}  className='container-content-left'>
+                                   initial={{ scale: 1, y: 100, opacity: 0 }}
+                                   animate={{ scale: 1, y: 0, opacity: 1 }}
+                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }} className='container-content-left'>
                                    <div className='content-left'>
-                                        <h3>React Developer - Groundbits Ltd</h3>
-                                        <hr />
+                                        <h3 style={{ color: thirdLettersColor }}>
+                                             React Developer - Groundbits Ltd
+                                        </h3>
+                                        <hr style={{ backgroundColor: hrColor }} />
+                                        <p>Attention to Detail.</p>
                                         <strong>Dec 2021 – Present </strong>
                                         <p>
                                              Developing a Website Builder.
@@ -81,14 +94,17 @@ export default function HomePage({ W_screenSize }) {
 
 
                          <motion.div
-                                   initial={{ scale: 1, x: 100 , opacity: 0}}
-                                   animate={{ scale: 1, x: 0 , opacity: 1}}
-                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}   className='page-body-right'>
+                              initial={{ scale: 1, x: 100, opacity: 0 }}
+                              animate={{ scale: 1, x: 0, opacity: 1 }}
+                              transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }} className='page-body-right'>
 
                               <div className='container-content-right'>
                                    <div className='content-right'>
-                                        <h3>React Developer - Amdocs via Appgr8 </h3>
-                                        <hr />
+                                        <h3 style={{ color: thirdLettersColor }}>
+                                             React Developer - Amdocs via Appgr8
+                                        </h3>
+                                        <hr style={{ backgroundColor: hrColor }} />
+                                        <p>Attention to Detail.</p>
                                         <strong>July 2021 - Nov 2021 </strong>
                                         <p>Building a new components for the application.</p>
                                         <p>Using  MATERIAL UI, TYPESCRIPT, SOURCETREE, BITBUKET ect.</p>
@@ -100,8 +116,11 @@ export default function HomePage({ W_screenSize }) {
                               </div>
                               <div className='container-content-right'>
                                    <div className='content-right'>
-                                        <h3>React Developer - Groundbits Ltd</h3>
-                                        <hr />
+                                        <h3 style={{ color: thirdLettersColor }}>
+                                             React Developer - Groundbits Ltd
+                                        </h3>
+                                        <hr style={{ backgroundColor: hrColor }} />
+                                        <p>Attention to Detail.</p>
                                         <strong>Jan 2020 – Jan 2021 </strong>
                                         <p>
                                              <p>
@@ -128,10 +147,10 @@ export default function HomePage({ W_screenSize }) {
                     <div className='page-body-left '>
                          <div className='container-content-left'>
                               <div className='content-left'>
-                                   <h3 style={{ color: '#1D3668' }}>
+                                   <h3 style={{ color: backgroundColor2 }}>
                                         Technologies
                                    </h3>
-                                   <hr style={{ backgroundColor: '#1D3668' }} />
+                                   <hr style={{ backgroundColor: hrColor }} />
                                    <p>ReactJS,</p>
                                    <p>Hooks,</p>
                                    <p>NextJS,</p>
@@ -154,17 +173,17 @@ export default function HomePage({ W_screenSize }) {
 
                          <div
                               className='container-right-accent vertical-center-container-right'
-                              style={{ backgroundColor: '#0FA1C4' }}
+                              style={{ backgroundColor: backgroundColor2 }}
                          >
                               <div className='vertical-center-right'>
                                    <div className='right-accent accent-title'>
 
-                                        <div className='first' style={{ color: '#FFFFFF' }}>
+                                        <div className='first' style={{ color: primeLettersColor }}>
                                              TECHNOLOGIES
                                         </div>
                                         <div
                                              className='second'
-                                             style={{ color: '#D2D844', fontFamily: "'Audiowide', sans-serif" }}
+                                             style={{ color: backgroundColor, fontFamily: "'Audiowide', sans-serif" }}
                                         >
                                              STACK
                                         </div>
@@ -174,7 +193,7 @@ export default function HomePage({ W_screenSize }) {
 
                          <div className='container-content-right'>
                               <div className='content-right'>
-                                   {/* <hr style={{ backgroundColor: '#1D3668' }} /> */}
+                                   {/* <hr style={{ backgroundColor: hrColor }} /> */}
                                    <p>Typescript,</p>
                                    <p>NodeJS,</p>
                                    <p>Express,</p>
@@ -195,22 +214,35 @@ export default function HomePage({ W_screenSize }) {
                <div>
                     <div className='page-body'>
                          <div className='page-body-left'>
-                              <div className='container-left-accent'>
+                              <div
+                                   className='container-left-accent'
+                                   style={{ backgroundColor: backgroundColor }}
+                              >
                                    <div className='vertical-center-container left-accent'>
                                         <div className='vertical-center accent-title'>
-                                             <div className='first'>
+                                             <div className='first' style={{ color: primeLettersColor }}>
                                                   FRONT END
                                              </div>
-                                             <div className='second' style={{ fontFamily: "'Audiowide', sans-serif" }}>
+                                             <div
+                                                  className='second'
+                                                  style={{
+                                                       fontFamily: "'Audiowide', sans-serif",
+                                                       color:  secLettersColor
+                                                  }}
+                                             >
                                                   DEVELOPER
                                              </div>
                                         </div>
                                    </div>
                               </div>
+
+
                               <div className='container-content-left'>
                                    <div className='content-left'>
-                                        <h3>Hello</h3>
-                                        <hr />
+                                        <h3 style={{ color: thirdLettersColor }}>
+                                             Hello
+                                        </h3>
+                                        <hr style={{ backgroundColor: hrColor }} />
 
                                         <p>I’m very positive.</p>
                                         <p>I’m very focus in my work.</p>
@@ -233,9 +265,8 @@ export default function HomePage({ W_screenSize }) {
                          <div className='page-body-right'>
                               <div className='container-content-right'>
                                    <div className='content-right'>
-                                        {/* <h3>Hello</h3> */}
-                                        <hr style={{ marginTop: 1 }} />
-                                        <p>Attention to Detail.</p>
+                                        {/* <h3 style={{ color: thirdLettersColor}} >Hello</h3> */}
+                                        <hr style={{ marginTop: 1, backgroundColor: hrColor }} />
                                         <p>Creativity, Flexibility, Responsibility.</p>
                                         <p>Experience working with dynamic content.</p>
                                         <p>Developing with ReactJS single page JavaScript Applications.</p>
