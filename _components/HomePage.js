@@ -1,5 +1,5 @@
 import Title from './Title'
-
+import { motion } from 'framer-motion'
 export default function HomePage({ W_screenSize }) {
 
 
@@ -12,7 +12,12 @@ export default function HomePage({ W_screenSize }) {
                <div className='page-nav'>
                     <div className='title-container vertical-center-container'>
                          <div className='vertical-center' >
-                              <div className='title'>
+                              <motion.div
+                                   initial={{ scale: 1, y: -200, opacity: 0 }}
+                                   animate={{ scale: 1, y: 0, opacity: 1 }}
+                                   transition={{ type: 'spring', duration: 0.9, delay: 0 }}
+                                   className='title'
+                              >
                                    <Title
                                         logo_W_H={230}
                                         primeLettersColor={'#FFFFFF'}
@@ -26,7 +31,7 @@ export default function HomePage({ W_screenSize }) {
                                         </div>
                                         VESELIN
                                    </h1> */}
-                              </div>
+                              </motion.div>
                          </div>
                     </div>
                </div>
@@ -37,7 +42,11 @@ export default function HomePage({ W_screenSize }) {
                >
                     <div className='page-body'>
                          <div className='page-body-left'>
-                              <div className='container-left-accent'>
+                              <motion.div
+                                   initial={{ scale: 1, x: -100 , opacity: 0}}
+                                   animate={{ scale: 1, x: 0 , opacity: 1}}
+                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }} className='container-left-accent'
+                              >
                                    <div className='vertical-center-container left-accent'>
                                         <div className='vertical-center accent-title' >
                                              <div className='first'>
@@ -48,8 +57,11 @@ export default function HomePage({ W_screenSize }) {
                                              </div>
                                         </div>
                                    </div>
-                              </div>
-                              <div className='container-content-left'>
+                              </motion.div>
+                              <motion.div
+                                   initial={{ scale: 1, y: 100 , opacity: 0}}
+                                   animate={{ scale: 1, y: 0 , opacity: 1}}
+                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}  className='container-content-left'>
                                    <div className='content-left'>
                                         <h3>React Developer - Groundbits Ltd</h3>
                                         <hr />
@@ -63,12 +75,15 @@ export default function HomePage({ W_screenSize }) {
                                         <br />
                                         <p><strong>Ricard Rosson </strong>ricard@iacos.net</p>
                                    </div>
-                              </div>
+                              </motion.div>
                          </div>
 
 
 
-                         <div className='page-body-right'>
+                         <motion.div
+                                   initial={{ scale: 1, x: 100 , opacity: 0}}
+                                   animate={{ scale: 1, x: 0 , opacity: 1}}
+                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}   className='page-body-right'>
 
                               <div className='container-content-right'>
                                    <div className='content-right'>
@@ -98,7 +113,7 @@ export default function HomePage({ W_screenSize }) {
                                         </p>
                                    </div>
                               </div>
-                         </div>
+                         </motion.div>
                     </div>
                </div>
 
