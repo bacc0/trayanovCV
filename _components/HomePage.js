@@ -141,7 +141,7 @@ export default function HomePage({ W_screenSize }) {
                                    >
 
 
-                                        <h3 style={{ color: thirdLettersColor, minHeight: 28}}>
+                                        <h3 style={{ color: thirdLettersColor, minHeight: 30}}>
                                              {typeWriter('React Developer - Groundbits Ltd')}
                                         </h3>
                                         <hr style={{ backgroundColor: hrColor }} />
@@ -171,7 +171,7 @@ export default function HomePage({ W_screenSize }) {
 
                               <div className='container-content-right'>
                                    <div className='content-right'>
-                                        <h3 style={{ color: thirdLettersColor, minHeight: 28}}>
+                                        <h3 style={{ color: thirdLettersColor, minHeight: 30}}>
                                              {typeWriter(' React Developer - Amdocs via Appgr8')}
                                             
                                         </h3>
@@ -188,7 +188,7 @@ export default function HomePage({ W_screenSize }) {
                               </div>
                               <div className='container-content-right'>
                                    <div className='content-right'>
-                                        <h3 style={{ color: thirdLettersColor, minHeight: 28 }}>
+                                        <h3 style={{ color: thirdLettersColor, minHeight: 30 }}>
                                             {typeWriter(' React Developer - Groundbits Ltd')}
                                         </h3>
                                         <hr style={{ backgroundColor: hrColor }} />
