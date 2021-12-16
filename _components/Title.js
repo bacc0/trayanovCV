@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 
 
-export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, backgroundColor, strokeWidth }) => {
+export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, backgroundColor, strokeWidth, setOnAnimationEnd }) => {
 
     
 
@@ -135,6 +135,11 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
                               initial={{ opacity: 0, pathLength: 0 }}
                               animate={{ opacity: 1, pathLength: 1 }}
                               transition={{ delay: 1.8, duration: 1, ease: 'easeInOut' }}
+
+                              onAnimationComplete={definition => {
+                                   setOnAnimationEnd(true)
+                              }}
+
                               d="M127.32,38.347 L371.07,38.347 L371.07,86.847 L127.32,86.847 L127.32,38.347 z"
                               fill={backgroundColor}
 

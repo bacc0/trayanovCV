@@ -1,10 +1,12 @@
 import { Hidden, useMediaQuery } from '@mui/material'
 import { motion } from 'framer-motion'
 import Title from './Title'
-
+import { Typewriter } from 'react-simple-typewriter'
+import { useState } from 'react'
 
 export default function HomePage({ W_screenSize }) {
 
+     const [onAnimationEnd, setOnAnimationEnd] = useState(false)
 
      const min_width_600px = useMediaQuery('(min-width:600px)')
      const logo_W_H = 230
@@ -21,6 +23,29 @@ export default function HomePage({ W_screenSize }) {
 
      const backgroundColor2 = '#3770FE'
      const backgroundColor_second2 = '#1764E1'
+
+     const typeWriter = (sentence) => {
+          return (
+               
+               onAnimationEnd && (
+                    <motion.div
+                    initial={{opacity: 0 }}
+                    animate={{opacity: 1 }}
+                    transition={{ duration: 1.3}}
+                    >
+                         <Typewriter
+                              words={[sentence]}
+                              loop={1}
+                              cursor
+                              cursorStyle=''
+                              typeSpeed={75}
+                              deleteSpeed={50}
+                              delaySpeed={2000}
+                         />
+                    </motion.div>
+               )
+          )
+     }
 
 
 
@@ -43,6 +68,7 @@ export default function HomePage({ W_screenSize }) {
                                         thirdLogoColor={thirdLogoColor}
                                         backgroundColor={backgroundColor}
                                         strokeWidth={strokeWidth}
+                                        setOnAnimationEnd={setOnAnimationEnd}
                                    />
                                    {/* <h1 >
                                         <div className='second' style={{ fontFamily: "'Audiowide', sans-serif" }}>
@@ -115,8 +141,8 @@ export default function HomePage({ W_screenSize }) {
                                    >
 
 
-                                        <h3 style={{ color: thirdLettersColor }}>
-                                             React Developer - Groundbits Ltd
+                                        <h3 style={{ color: thirdLettersColor, minHeight: 28}}>
+                                             {typeWriter('React Developer - Groundbits Ltd')}
                                         </h3>
                                         <hr style={{ backgroundColor: hrColor }} />
                                         <p>Attention to Detail.</p>
@@ -127,7 +153,7 @@ export default function HomePage({ W_screenSize }) {
                                         <p>
                                              Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation.
                                         </p>
-<br/>
+                                        <br />
                                         <p>
                                              <strong>Ricard Rosson </strong>
                                              <div>ricard@iacos.net</div>
@@ -145,10 +171,11 @@ export default function HomePage({ W_screenSize }) {
 
                               <div className='container-content-right'>
                                    <div className='content-right'>
-                                        <h3 style={{ color: thirdLettersColor }}>
-                                             React Developer - Amdocs via Appgr8
+                                        <h3 style={{ color: thirdLettersColor, minHeight: 28}}>
+                                             {typeWriter(' React Developer - Amdocs via Appgr8')}
+                                            
                                         </h3>
-                                        <hr style={{ backgroundColor: hrColor }} />
+                                        <hr style={{ backgroundColor: hrColor}} />
                                         <p>Attention to Detail.</p>
                                         <strong>July 2021 - Nov 2021 </strong>
                                         <p>Building a new components for the application.</p>
@@ -161,8 +188,8 @@ export default function HomePage({ W_screenSize }) {
                               </div>
                               <div className='container-content-right'>
                                    <div className='content-right'>
-                                        <h3 style={{ color: thirdLettersColor }}>
-                                             React Developer - Groundbits Ltd
+                                        <h3 style={{ color: thirdLettersColor, minHeight: 28 }}>
+                                            {typeWriter(' React Developer - Groundbits Ltd')}
                                         </h3>
                                         <hr style={{ backgroundColor: hrColor }} />
                                         <p>Attention to Detail.</p>
@@ -193,20 +220,20 @@ export default function HomePage({ W_screenSize }) {
                     <div className='page-body-left '>
                          <div className='container-content-left'>
                               <div className='content-left'>
-<Hidden smUp >
-                                   <motion.div
-                                        initial={{ scale: 1, x: 100, opacity: 0 }}
-                                        animate={{ scale: 1, x: 0, opacity: 1 }}
-                                        transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
-                                        style={{ margin: `18px 0 50px` }}
+                                   <Hidden smUp >
+                                        <motion.div
+                                             initial={{ scale: 1, x: 100, opacity: 0 }}
+                                             animate={{ scale: 1, x: 0, opacity: 1 }}
+                                             transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
+                                             style={{ margin: `18px 0 50px` }}
 
-                                   >
-                                        <h3 style={{ color: backgroundColor, fontSize: 35 }}>
-                                             Technologies
-                                        </h3>
-                                        <hr style={{ backgroundColor: hrColorMain }} />
-                                   </motion.div>
-</Hidden>
+                                        >
+                                             <h3 style={{ color: backgroundColor, fontSize: 35 }}>
+                                                  Technologies
+                                             </h3>
+                                             <hr style={{ backgroundColor: hrColorMain }} />
+                                        </motion.div>
+                                   </Hidden>
                                    <p>ReactJS,</p>
                                    <p>Hooks,</p>
                                    <p>NextJS,</p>
@@ -263,17 +290,17 @@ export default function HomePage({ W_screenSize }) {
                               >
                                    <Hidden smDown >
                                         <motion.div
-                                        initial={{ scale: 1, x: 100, opacity: 0 }}
-                                        animate={{ scale: 1, x: 0, opacity: 1 }}
-                                        transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
-                                        style={{ margin: `18px 0  36px` }}
+                                             initial={{ scale: 1, x: 100, opacity: 0 }}
+                                             animate={{ scale: 1, x: 0, opacity: 1 }}
+                                             transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
+                                             style={{ margin: `18px 0  36px` }}
 
-                                   >
-                                        <h3 style={{ color: backgroundColor, fontSize: 35 }}>
-                                             Technologies
-                                        </h3>
-                                        <hr style={{ backgroundColor: hrColorMain }} />
-                                   </motion.div>
+                                        >
+                                             <h3 style={{ color: backgroundColor, fontSize: 35 }}>
+                                                  Technologies
+                                             </h3>
+                                             <hr style={{ backgroundColor: hrColorMain }} />
+                                        </motion.div>
                                    </Hidden>
                                    {/* <hr style={{ backgroundColor: hrColor }} /> */}
                                    <p>Typescript,</p>
