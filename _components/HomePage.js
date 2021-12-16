@@ -6,12 +6,12 @@ export default function HomePage({ W_screenSize }) {
      const logo_W_H = 230
      const strokeWidth = 1
      const primeLettersColor = '#FFFFFF'
-     const secLettersColor = '#CCD8E2'
+     const secLettersColor = '#BBC5CD'
      const thirdLettersColor = '#1F628F'
      const thirdLogoColor = '#ED1A1A'
      const hrColor = '#ED1A1A'
      const backgroundColor = '#1F628F'
-     const backgroundColor2 = '#CCD8E2'
+     const backgroundColor2 = '#BBC5CD'
 
      return (
           <div className='page'>
