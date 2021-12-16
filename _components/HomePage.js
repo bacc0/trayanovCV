@@ -69,7 +69,7 @@ export default function HomePage({ W_screenSize, theme, setTheme }) {
 
      return (
           <div className='page' style={{ backgroundColor: AppBackgroundColor, color: bodyColor }}>
-               <div className='page-nav'>
+               <div className='page-nav' style={{ borderBottom: `1px solid ${hrColor}`}}>
                     <div className='title-container vertical-center-container'>
 
                          <Stack direction="row" spacing={1}
