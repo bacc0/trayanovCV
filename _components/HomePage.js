@@ -1,22 +1,28 @@
-import Title from './Title'
+import { Hidden, useMediaQuery } from '@mui/material'
 import { motion } from 'framer-motion'
+import Title from './Title'
+
+
 export default function HomePage({ W_screenSize }) {
 
 
+     const min_width_600px = useMediaQuery('(min-width:600px)')
      const logo_W_H = 230
-     const strokeWidth = 1
+     const strokeWidth = min_width_600px ? 1.6 : 2.2
      const primeLettersColor = '#FFFFFF'
      const secLettersColor = '#BBC5CD'
      const thirdLettersColor = '#1F628F'
-     const thirdLogoColor = '#ED1A1A'
-     const hrColor = '#ED1A1A'
+     const thirdLogoColor = '#F25D67'
+     const hrColor = '#F25D67'
      const backgroundColor = '#1F628F'
      const backgroundColor2 = '#BBC5CD'
+
 
      return (
           <div className='page'>
                <div className='page-nav'>
                     <div className='title-container vertical-center-container'>
+
                          <div className='vertical-center' >
                               <motion.div
                                    initial={{ scale: 1, y: -200, opacity: 0 }}
@@ -40,6 +46,7 @@ export default function HomePage({ W_screenSize }) {
                                    </h1> */}
                               </motion.div>
                          </div>
+
                     </div>
                </div>
 
@@ -72,7 +79,10 @@ export default function HomePage({ W_screenSize }) {
                                    initial={{ scale: 1, y: 100, opacity: 0 }}
                                    animate={{ scale: 1, y: 0, opacity: 1 }}
                                    transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }} className='container-content-left'>
-                                   <div className='content-left'>
+                                   <div
+                                        className='content-left'
+                                        style={{ marginTop: min_width_600px ? 0 : 16 }}
+                                   >
                                         <h3 style={{ color: thirdLettersColor }}>
                                              React Developer - Groundbits Ltd
                                         </h3>
@@ -85,8 +95,11 @@ export default function HomePage({ W_screenSize }) {
                                         <p>
                                              Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation.
                                         </p>
-                                        <br />
-                                        <p><strong>Ricard Rosson </strong>ricard@iacos.net</p>
+
+                                        <p>
+                                             <strong>Ricard Rosson </strong>
+                                             <div>ricard@iacos.net</div>
+                                        </p>
                                    </div>
                               </motion.div>
                          </div>
@@ -138,7 +151,7 @@ export default function HomePage({ W_screenSize }) {
 
 
                {/* Tech */}
-               <div style={{ height: 80 }} />
+               <div style={{ height: 34 }} />
 
 
 
@@ -147,7 +160,11 @@ export default function HomePage({ W_screenSize }) {
                     <div className='page-body-left '>
                          <div className='container-content-left'>
                               <div className='content-left'>
-                                   <h3 style={{ color: backgroundColor2 }}>
+                                   <h3 style={{
+                                        color: thirdLettersColor,
+                                        fontSize: min_width_600px ? 12 : 35
+                                   }}
+                                   >
                                         Technologies
                                    </h3>
                                    <hr style={{ backgroundColor: hrColor }} />
@@ -171,28 +188,36 @@ export default function HomePage({ W_screenSize }) {
 
                     <div className='page-body-right' >
 
-                         <div
-                              className='container-right-accent vertical-center-container-right'
-                              style={{ backgroundColor: backgroundColor2 }}
-                         >
-                              <div className='vertical-center-right'>
-                                   <div className='right-accent accent-title'>
+                         <Hidden smDown >
+                              <div
+                                   className='container-right-accent vertical-center-container-right'
+                                   style={{ backgroundColor: backgroundColor2 }}
+                              >
+                                   <div className='vertical-center-right'>
+                                        <div className='right-accent accent-title'>
 
-                                        <div className='first' style={{ color: primeLettersColor }}>
-                                             TECHNOLOGIES
-                                        </div>
-                                        <div
-                                             className='second'
-                                             style={{ color: backgroundColor, fontFamily: "'Audiowide', sans-serif" }}
-                                        >
-                                             STACK
+                                             <div className='first' style={{ color: primeLettersColor }}>
+                                                  TECHNOLOGIES
+                                             </div>
+                                             <div
+                                                  className='second'
+                                                  style={{ color: backgroundColor, fontFamily: "'Audiowide', sans-serif" }}
+                                             >
+                                                  STACK
+                                             </div>
                                         </div>
                                    </div>
                               </div>
-                         </div>
+                         </Hidden>
 
                          <div className='container-content-right'>
-                              <div className='content-right'>
+                              <div
+                                   className='content-right'
+                                   style={{
+                                        marginTop: min_width_600px ? 0 : -45,
+                                        marginBottom: min_width_600px ? 0 : -8
+                                   }}
+                              >
                                    {/* <hr style={{ backgroundColor: hrColor }} /> */}
                                    <p>Typescript,</p>
                                    <p>NodeJS,</p>
@@ -207,7 +232,7 @@ export default function HomePage({ W_screenSize }) {
                     </div>
                </div>
 
-               <div style={{ height: 78 }} />
+               <div style={{ height: 46 }} />
 
                {/* About */}
 
@@ -227,7 +252,7 @@ export default function HomePage({ W_screenSize }) {
                                                   className='second'
                                                   style={{
                                                        fontFamily: "'Audiowide', sans-serif",
-                                                       color:  secLettersColor
+                                                       color: secLettersColor
                                                   }}
                                              >
                                                   DEVELOPER
@@ -237,8 +262,10 @@ export default function HomePage({ W_screenSize }) {
                               </div>
 
 
-                              <div className='container-content-left'>
-                                   <div className='content-left'>
+                              <div
+                                   className='container-content-left'>
+                                   <div className='content-left'
+                                        style={{ marginTop: min_width_600px ? 0 : 16 }}>
                                         <h3 style={{ color: thirdLettersColor }}>
                                              Hello
                                         </h3>
@@ -262,11 +289,16 @@ export default function HomePage({ W_screenSize }) {
 
 
 
-                         <div className='page-body-right'>
+                         <div
+                              className='page-body-right'
+                              style={{ marginTop: min_width_600px ? 0 : -50 }}
+                         >
                               <div className='container-content-right'>
                                    <div className='content-right'>
                                         {/* <h3 style={{ color: thirdLettersColor}} >Hello</h3> */}
-                                        <hr style={{ marginTop: 1, backgroundColor: hrColor }} />
+                                        <Hidden smDown >
+                                             <hr style={{ marginTop: 1, backgroundColor: hrColor }} />
+                                        </Hidden>
                                         <p>Creativity, Flexibility, Responsibility.</p>
                                         <p>Experience working with dynamic content.</p>
                                         <p>Developing with ReactJS single page JavaScript Applications.</p>
@@ -281,7 +313,9 @@ export default function HomePage({ W_screenSize }) {
                          </div>
                     </div>
                </div>
-               <div style={{ height: 138 }} />
+               <div style={{ height: min_width_600px ? 62 : 34 }}
+               />
+
           </div>
      )
 }
