@@ -360,7 +360,7 @@ export default function HomePage({ W_screenSize }) {
 
                                         >
                                              <h3 style={{ color: backgroundColor, fontSize: 35 }}>
-                                                  Front end
+                                                  About me
                                              </h3>
                                              <hr style={{ backgroundColor: hrColorMain }} />
                                         </motion.div>
@@ -373,7 +373,7 @@ export default function HomePage({ W_screenSize }) {
                                    <div className='content-left'
                                         style={{ marginTop: min_width_600px ? 0 : 16 }}>
                                         <h3 style={{ color: thirdLettersColor }}>
-                                             Hello
+                                        Skills
                                         </h3>
                                         <hr style={{ backgroundColor: hrColor }} />
 
