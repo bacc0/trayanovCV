@@ -5,11 +5,13 @@ import LightModeIcon from '@mui/icons-material/LightMode'
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound'
 
 import { motion } from 'framer-motion'
-import Title from './Title'
-import { Typewriter } from 'react-simple-typewriter'
-import { useState, useEffect } from 'react'
+import MenuAppBar from './MenuAppBar'
+import TitleSVG from './TitleSVG'
 
-export default function HomePage({ W_screenSize, theme, setTheme }) {
+import { Typewriter } from 'react-simple-typewriter'
+import { useState, useEffect, Fragment } from 'react'
+
+export default function HomePage({ W_screenSize, theme, setTheme, scrollDirection}) {
 
      const [onAnimationEnd, setOnAnimationEnd] = useState(false)
      const [primeLettersColor, setPrimeLettersColor] = useState('#FFFFFF')
@@ -68,25 +70,21 @@ export default function HomePage({ W_screenSize, theme, setTheme }) {
 
 
      return (
+          <Fragment>
+               <MenuAppBar  
+               setTheme={setTheme}
+               hrColorMain={hrColorMain}
+               hrColor={hrColor}
+               theme={theme}
+               AppBackgroundColor={AppBackgroundColor}
+               scrollDirection={scrollDirection}
+               
+               />
           <div className='page' style={{ backgroundColor: AppBackgroundColor, color: bodyColor }}>
                <div className='page-nav' style={{ borderBottom: `1px solid ${hrColor}`}}>
                     <div className='title-container vertical-center-container'>
 
-                         <Stack direction="row" spacing={1}
-                              style={{
-                                   position: 'fixed',
-                                   top: 6,
-                                   right: 6
-                              }}
-                              onClick={() => {
-                                   setTheme(theme === 'light' ? 'dark' : 'light')
-                              }}
-                         >
-                              <IconButton aria-label="fingerprint" style={{ color: hrColorMain }}>
-                                   {theme === 'light' ? <LightModeIcon /> : <NightlightRoundIcon />}
-                              </IconButton>
-
-                         </Stack>
+                        
                          <div className='vertical-center' >
                               <motion.div
                                    initial={{ scale: 1, y: -200, opacity: 0 }}
@@ -94,7 +92,7 @@ export default function HomePage({ W_screenSize, theme, setTheme }) {
                                    transition={{ type: 'spring', duration: 0.9, delay: 0 }}
                                    className='title'
                               >
-                                   <Title
+                                   <TitleSVG
                                         logo_W_H={logo_W_H}
                                         primeLettersColor={primeLettersColor}
                                         secLettersColor={secLettersColor}
@@ -116,8 +114,7 @@ export default function HomePage({ W_screenSize, theme, setTheme }) {
                </div>
 
 
-               <div
-               >
+               <div>
                     <div className='page-body'>
                          <div className='page-body-left'>
                               {/* <motion.div
@@ -456,6 +453,7 @@ export default function HomePage({ W_screenSize, theme, setTheme }) {
                />
 
           </div>
+          </Fragment>
      )
 }
 
