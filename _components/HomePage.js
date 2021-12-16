@@ -14,6 +14,7 @@ export default function HomePage({ W_screenSize }) {
      const thirdLettersColor = '#3770FE'
      const thirdLogoColor = '#3770FE'
      const hrColor = '#EDF0F2'
+     const hrColorMain = '#13478B'
 
      const backgroundColor = '#13478B'
      const backgroundColor_second = '#0E366B'
@@ -60,7 +61,7 @@ export default function HomePage({ W_screenSize }) {
                >
                     <div className='page-body'>
                          <div className='page-body-left'>
-                              <motion.div
+                              {/* <motion.div
                                    initial={{ scale: 1, x: -100, opacity: 0 }}
                                    animate={{ scale: 1, x: 0, opacity: 1 }}
                                    transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }} className='container-left-accent'
@@ -82,7 +83,28 @@ export default function HomePage({ W_screenSize }) {
                                              </div>
                                         </div>
                                    </div>
-                              </motion.div>
+                              </motion.div> */}
+
+                              <div className='container-content-left' >
+                                   <div
+                                        className='content-left'
+                                        // style={{ marginTop: min_width_600px ? 0 : 16 }}
+                                        style={{ margin: `5px 0 ${min_width_600px ? 36 : -7}px` }}
+                                   >
+                                        <motion.div
+                                             initial={{ scale: 1, x: -100, opacity: 0 }}
+                                             animate={{ scale: 1, x: 0, opacity: 1 }}
+                                             transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
+
+                                        >
+                                             <h3 style={{ color: backgroundColor, fontSize: 35 }}>
+                                                  Experience
+                                             </h3>
+                                             <hr style={{ backgroundColor: hrColorMain }} />
+                                        </motion.div>
+                                   </div>
+                              </div>
+
                               <motion.div
                                    initial={{ scale: 1, y: 100, opacity: 0 }}
                                    animate={{ scale: 1, y: 0, opacity: 1 }}
@@ -91,6 +113,8 @@ export default function HomePage({ W_screenSize }) {
                                         className='content-left'
                                         style={{ marginTop: min_width_600px ? 0 : 16 }}
                                    >
+
+
                                         <h3 style={{ color: thirdLettersColor }}>
                                              React Developer - Groundbits Ltd
                                         </h3>
@@ -158,8 +182,9 @@ export default function HomePage({ W_screenSize }) {
                </div>
 
 
-               {/* Tech */}
-               <div style={{ height: 34 }} />
+
+
+
 
 
 
@@ -168,14 +193,20 @@ export default function HomePage({ W_screenSize }) {
                     <div className='page-body-left '>
                          <div className='container-content-left'>
                               <div className='content-left'>
-                                   <h3 style={{
-                                        color: thirdLettersColor,
-                                        fontSize: min_width_600px ? 12 : 35
-                                   }}
+<Hidden smUp >
+                                   <motion.div
+                                        initial={{ scale: 1, x: 100, opacity: 0 }}
+                                        animate={{ scale: 1, x: 0, opacity: 1 }}
+                                        transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
+                                        style={{ margin: `18px 0 50px` }}
+
                                    >
-                                        Technologies
-                                   </h3>
-                                   <hr style={{ backgroundColor: hrColor }} />
+                                        <h3 style={{ color: backgroundColor, fontSize: 35 }}>
+                                             Technologies
+                                        </h3>
+                                        <hr style={{ backgroundColor: hrColorMain }} />
+                                   </motion.div>
+</Hidden>
                                    <p>ReactJS,</p>
                                    <p>Hooks,</p>
                                    <p>NextJS,</p>
@@ -196,12 +227,13 @@ export default function HomePage({ W_screenSize }) {
 
                     <div className='page-body-right' >
 
-                         <Hidden smDown >
+                         {/* <Hidden smDown >
                               <div
                                    className='container-right-accent vertical-center-container-right'
-                                   style={{  background: 
-                                        `linear-gradient(90deg, ${backgroundColor2} 0%, ${backgroundColor_second2} 100%)` 
-                                    }}
+                                   style={{
+                                        background:
+                                             `linear-gradient(90deg, ${backgroundColor2} 0%, ${backgroundColor_second2} 100%)`
+                                   }}
                               >
                                    <div className='vertical-center-right'>
                                         <div className='right-accent accent-title'>
@@ -218,9 +250,10 @@ export default function HomePage({ W_screenSize }) {
                                         </div>
                                    </div>
                               </div>
-                         </Hidden>
+                         </Hidden> */}
 
                          <div className='container-content-right'>
+
                               <div
                                    className='content-right'
                                    style={{
@@ -228,6 +261,20 @@ export default function HomePage({ W_screenSize }) {
                                         marginBottom: min_width_600px ? 0 : -8
                                    }}
                               >
+                                   <Hidden smDown >
+                                        <motion.div
+                                        initial={{ scale: 1, x: 100, opacity: 0 }}
+                                        animate={{ scale: 1, x: 0, opacity: 1 }}
+                                        transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
+                                        style={{ margin: `18px 0  36px` }}
+
+                                   >
+                                        <h3 style={{ color: backgroundColor, fontSize: 35 }}>
+                                             Technologies
+                                        </h3>
+                                        <hr style={{ backgroundColor: hrColorMain }} />
+                                   </motion.div>
+                                   </Hidden>
                                    {/* <hr style={{ backgroundColor: hrColor }} /> */}
                                    <p>Typescript,</p>
                                    <p>NodeJS,</p>
@@ -249,11 +296,12 @@ export default function HomePage({ W_screenSize }) {
                <div>
                     <div className='page-body'>
                          <div className='page-body-left'>
-                              <div
+                              {/* <div
                                    className='container-left-accent'
-                                   style={{ background:
-                                        `linear-gradient(90deg, ${backgroundColor_second} 0%, ${backgroundColor} 100%)` 
-                                    }}
+                                   style={{
+                                        background:
+                                             `linear-gradient(90deg, ${backgroundColor_second} 0%, ${backgroundColor} 100%)`
+                                   }}
                               >
                                    <div className='vertical-center-container left-accent'>
                                         <div className='vertical-center accent-title'>
@@ -270,6 +318,25 @@ export default function HomePage({ W_screenSize }) {
                                                   DEVELOPER
                                              </div>
                                         </div>
+                                   </div>
+                              </div> */}
+                              <div className='container-content-left' >
+                                   <div
+                                        className='content-left'
+                                        // style={{ marginTop: min_width_600px ? 0 : 16 }}
+                                        style={{ margin: `7px 0 ${min_width_600px ? 36 : -7}px` }}
+                                   >
+                                        <motion.div
+                                             initial={{ scale: 1, x: -100, opacity: 0 }}
+                                             animate={{ scale: 1, x: 0, opacity: 1 }}
+                                             transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
+
+                                        >
+                                             <h3 style={{ color: backgroundColor, fontSize: 35 }}>
+                                                  Front end
+                                             </h3>
+                                             <hr style={{ backgroundColor: hrColorMain }} />
+                                        </motion.div>
                                    </div>
                               </div>
 
@@ -303,14 +370,14 @@ export default function HomePage({ W_screenSize }) {
 
                          <div
                               className='page-body-right'
-                              style={{ marginTop: min_width_600px ? 0 : -50 }}
+                              style={{ marginTop: min_width_600px ? -10 : -50 }}
                          >
                               <div className='container-content-right'>
                                    <div className='content-right'>
                                         {/* <h3 style={{ color: thirdLettersColor}} >Hello</h3> */}
-                                        <Hidden smDown >
+                                        {/* <Hidden smDown >
                                              <hr style={{ marginTop: 1, backgroundColor: hrColor }} />
-                                        </Hidden>
+                                        </Hidden> */}
                                         <p>Creativity, Flexibility, Responsibility.</p>
                                         <p>Experience working with dynamic content.</p>
                                         <p>Developing with ReactJS single page JavaScript Applications.</p>
