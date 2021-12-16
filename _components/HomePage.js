@@ -35,7 +35,7 @@ export default function HomePage({ W_screenSize, theme, setTheme }) {
           setHrColorMain(theme === 'light' ? '#13478B' : '#FFFFFF')
           setBackgroundColor(theme === 'light' ? '#13478B' : '#FFFFFF')
           setAppBackgroundColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
-          setBodyColor(theme === 'light' ? '#717d97' : '#A7ACFF')
+          setBodyColor(theme === 'light' ? '#717d97' : '#C4C8FF')
      }, [theme]);
 
 
@@ -75,8 +75,8 @@ export default function HomePage({ W_screenSize, theme, setTheme }) {
                          <Stack direction="row" spacing={1}
                               style={{
                                    position: 'fixed',
-                                   top: 10,
-                                   right: 10
+                                   top: 6,
+                                   right: 6
                               }}
                               onClick={() => {
                                    setTheme(theme === 'light' ? 'dark' : 'light')
