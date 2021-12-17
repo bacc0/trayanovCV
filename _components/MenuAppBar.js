@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 
 import { motion, AnimatePresence } from 'framer-motion'
 
-import { Stack, IconButton, Typography, Toolbar, AppBar, Box } from '@mui/material'
-
+import { Stack, IconButton, Typography, Toolbar, AppBar, Box, Hidden } from '@mui/material'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound'
 
@@ -16,7 +15,8 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 export default function MenuAppBar({
      theme, setTheme, hrColor, hrColorMain,
      AppBackgroundColor, scrollDirection, Y_position,
-     thirdLettersColor, currentBrowser, animationTransition
+     thirdLettersColor, currentBrowser, animationTransition,
+     min_width_600px, secLettersColor
 }) {
 
      const [heightAppBar, setHeightAppBarl] = useState(0)
@@ -66,6 +66,16 @@ export default function MenuAppBar({
           backgroundColor: thirdLettersColor,
           transition: `width 150ms ease`
      }
+     const titleStyle = {
+          fontSize: 12,
+          fontWeight: '100',
+          color: secLettersColor
+     }
+     const iconsStackStyle = {
+          display: min_width_600px ? 'block' : 'flex',
+          justifyContent: 'space-between',
+          width: min_width_600px ? 'auto' : '100%'
+     }
      const iconsStyle = {
           color: hrColorMain,
           transition: `color ${animationTransition} ease`,
@@ -87,14 +97,21 @@ export default function MenuAppBar({
                                    animate={{ opacity: 1, y: 0 }}
                                    transition={{ delay: 2, duration: 1, ease: 'easeInOut' }}
                                    style={ToolbarContainer}>
-                                   <Toolbar >
-                                        <Typography style={{ fontSize: 12 }} sx={{ flexGrow: 1 }}>
-                                             Veselin Trayanov
-                                        </Typography>
+                                   <Toolbar style={{
+                                        maxWidth: min_width_600px ? 730 : 360,
+                                        margin: '0 auto'
+                                   }}>
+                                        <Hidden smDown>
+                                             <Typography style={titleStyle}
+                                                  sx={{ flexGrow: 1 }}>
+                                                  Veselin Trayanov
+                                             </Typography>
+                                        </Hidden>
                                         <Stack
                                              direction='row'
                                              spacing={1}
                                              onClick={() => handleThemeChange()}
+                                             style={iconsStackStyle}
                                         >
 
                                              <IconButton aria-label='GitHub Icon' style={iconsStyle}>
@@ -118,10 +135,9 @@ export default function MenuAppBar({
                                              </IconButton>
 
                                              <IconButton aria-label='theme icon' style={iconsStyle}>
-                                                  {
-                                                       theme === 'light'
-                                                            ? <NightlightRoundIcon />
-                                                            : <LightModeIcon />
+                                                  {theme === 'light'
+                                                       ? <NightlightRoundIcon />
+                                                       : <LightModeIcon />
                                                   }
                                              </IconButton>
                                         </Stack>

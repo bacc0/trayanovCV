@@ -83,11 +83,13 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                     setTheme={setTheme}
                     hrColorMain={hrColorMain}
                     hrColor={hrColor}
+                    secLettersColor={secLettersColor}
                     theme={theme}
                     AppBackgroundColor={AppBackgroundColor}
                     scrollDirection={scrollDirection}
                     Y_position={Y_position}
                     thirdLettersColor={thirdLettersColor}
+                    min_width_600px={min_width_600px}
 
                />
                <div
