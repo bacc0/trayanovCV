@@ -7,12 +7,18 @@ import { Stack, IconButton, Typography, Toolbar, AppBar, Box } from '@mui/materi
 import LightModeIcon from '@mui/icons-material/LightMode'
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound'
 
+import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
+import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp'
+import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import GitHubIcon from '@mui/icons-material/GitHub'
+
 export default function MenuAppBar({
      theme, setTheme, hrColor, hrColorMain,
      AppBackgroundColor, scrollDirection, Y_position,
-     thirdLettersColor, currentBrowser,  animationTransition
+     thirdLettersColor, currentBrowser, animationTransition
 }) {
-     
+
      const [heightAppBar, setHeightAppBarl] = useState(0)
 
      useEffect(() => {
@@ -28,7 +34,7 @@ export default function MenuAppBar({
 
      const AppBarStyle = {
           // backgroundColor: currentBrowser === 'firefox' ? 'red' : 'transparent',
-          backgroundColor: 'transparent',
+          backgroundColor: `${AppBackgroundColor}77`,
           '-webkit-backdrop-filter': `blur(10px)`,
           ' backdrop-filter': `blur(10px)`,
           color: hrColorMain,
@@ -60,6 +66,10 @@ export default function MenuAppBar({
           backgroundColor: thirdLettersColor,
           transition: `width 150ms ease`
      }
+     const iconsStyle = {
+          color: hrColorMain,
+          transition: `color ${animationTransition} ease`,
+     }
 
 
      return (
@@ -86,12 +96,28 @@ export default function MenuAppBar({
                                              spacing={1}
                                              onClick={() => handleThemeChange()}
                                         >
-                                             <IconButton aria-label='fingerprint' 
-                                             style={{ 
-                                                  color: hrColorMain, 
-                                                  transition: `color ${animationTransition} ease`
-                                              }}
-                                             >
+
+                                             <IconButton aria-label='GitHub Icon' style={iconsStyle}>
+                                                  <GitHubIcon />
+                                             </IconButton>
+
+                                             <IconButton aria-label='Phone Icon' style={iconsStyle}>
+                                                  <PhoneEnabledSharpIcon />
+                                             </IconButton>
+
+                                             <IconButton aria-label='Local Icon' style={iconsStyle}>
+                                                  <LocalPostOfficeSharpIcon />
+                                             </IconButton>
+
+                                             <IconButton aria-label='LinkedIn Icon' style={iconsStyle}>
+                                                  <LinkedInIcon />
+                                             </IconButton>
+
+                                             <IconButton aria-label='Location Icon' style={iconsStyle}>
+                                                  <LocationOnSharpIcon />
+                                             </IconButton>
+
+                                             <IconButton aria-label='theme icon' style={iconsStyle}>
                                                   {
                                                        theme === 'light'
                                                             ? <NightlightRoundIcon />
@@ -99,6 +125,8 @@ export default function MenuAppBar({
                                                   }
                                              </IconButton>
                                         </Stack>
+
+
                                    </Toolbar>
                               </motion.div>
                          </AppBar>
