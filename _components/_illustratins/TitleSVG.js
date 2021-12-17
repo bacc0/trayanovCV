@@ -1,5 +1,6 @@
 import { Fragment, useState } from 'react'
 import { motion } from 'framer-motion'
+import Script from 'next/script'
 
 
 
@@ -9,6 +10,38 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
 
      return (
           <Fragment>
+               <motion.div
+               initial={{ opacity: 0.8, scale: 0.16}}
+               animate={{ opacity: 1, scale: 0.16 }}
+               transition={{ delay: 2, duration: 1.5  }} >
+                <div id="colibri_hype_container"
+                                   class="HYPE_document"
+                                   style={{
+                                        // backgroundColor:'red',
+                                        position: "relative",
+                                        top: 340,
+                                        right: 860,
+                                        margin: 'auto',
+                                        position: 'relative',
+                                        width: '600px',
+                                        height: '400px',
+                                        overflow: 'hidden'
+                                   }} />
+               </motion.div>
+                              <Script
+                                   // type="text/javascript"
+                                   // charset="utf-8"
+                                   src="colibri.hyperesources/colibri_hype_generated_script.js?23464"
+                                   strategy="afterInteractive"
+                              >
+                              </Script>
+
+                              <motion.div
+                               initial={{  y: -200 }}
+                               animate={{  y: -158  }}
+                               transition={{  }} 
+                              
+                              >
                <svg
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +50,7 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
                     viewBox="0, 0, 372, 202"
 
                >
-                    <style jsx>
+                    {/* <style jsx>
                          {`
                               .links { 
                                    color: #08437Aee;
@@ -35,7 +68,7 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
                                    border-bottom: 0.5px solid #00335D;
                               }
                          `}
-                    </style>
+                    </style> */}
 
 
 
@@ -44,7 +77,8 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
                     <motion.g i
                          initial={{ opacity: 0, scale: 1.4 }}
                          animate={{ opacity: 1, scale: 1 }}
-                         transition={{ delay: 2, duration: 0.3, ease: 'easeInOut' }} id="Text-Second">
+                         transition={{ delay: 2, duration: 0.3, ease: 'easeInOut' }} 
+                         id="Text-Second">
                          <g>
                               <path
                                    d="M230.927,32.347 L211.498,32.347 L211.498,30.512 L230.927,30.512 z"
@@ -303,6 +337,7 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
 
 
                </svg>
+               </motion.div>
           </Fragment>
      )
 }

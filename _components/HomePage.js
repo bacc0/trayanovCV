@@ -1,5 +1,6 @@
 import { Hidden, useMediaQuery, Stack, IconButton } from '@mui/material'
 
+import Script from 'next/script'
 
 
 
@@ -33,7 +34,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const logo_W_H = 230
      const strokeWidth = min_width_600px ? 1.6 : 2.2
 
-     const animationTransition = '350ms' 
+     const animationTransition = '350ms'
 
      useEffect(() => {
           setPrimeLettersColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
@@ -74,7 +75,8 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           )
      }
 
-
+     const img2 = `/13.svg`
+     const img3 = `/colibri.png`
 
      return (
           <Fragment>
@@ -95,7 +97,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                <div
                     className='page'
                     style={{
-                         backgroundColor: AppBackgroundColor, 
+                         backgroundColor: AppBackgroundColor,
                          color: bodyColor,
                          transition: `background-color ${animationTransition} ease, 
                                                  color ${animationTransition} ease`
@@ -110,6 +112,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                                         transition={{ type: 'spring', duration: 0.9, delay: 0 }}
                                         className='title'
                                    >
+
                                         <TitleSVG
                                              logo_W_H={logo_W_H}
                                              primeLettersColor={primeLettersColor}
@@ -122,6 +125,86 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                                         />
                                    </motion.div>
                               </div>
+                              {/* <div>
+                                   <div style={{
+                                        height: '29vh',
+                                        width: '29vw',
+                                        'min- height': '320px',
+                                        'background-size': 'center',
+
+                                        position: 'fixed',
+                                        top: '10px',
+                                        'background-repeat': 'no-repeat',
+                                        backgroundImage:`url('/11.svg')`
+                                   }}
+                                   >
+
+                                   </div>
+
+                                   <div
+                                     
+                                   >
+                                   <img  style={{ 
+                                        position: 'absolute',
+                                        top: '-40px',
+                                        left: 511, 
+                                        transform: 'skewX(-60deg)',
+                                        opacity: 0.9, 
+                                        animation: 'transform 1s infinite'
+                                   }}
+
+
+                                        src={img2}
+                                        alt="Logo"
+                                        width={170}
+                                        height={250}
+                                   />
+                                   <img  style={{ 
+                                        position: 'absolute',
+                                        top: '-50px',
+                                        left: 431, 
+                                        opacity: 1
+                                   }}
+                                        src={img3}
+                                        alt="Logo"
+                                        width={370}
+                                        height={220}
+                                   />
+                                   </div>
+                              </div> */}
+
+                              {/* <div id="colibri_hype_container"
+                                   class="HYPE_document"
+                                   style={{
+                                        // backgroundColor:'red',
+                                        position: "absolute",
+                                        margin: 'auto',
+                                        position: 'relative',
+                                        width: '600px',
+                                        height: '400px',
+                                        overflow: 'hidden'
+                                   }}>
+
+                                   </div> */}
+                              {/* <div id="colibri_hype_container"
+                                   class="HYPE_document"
+                                   style={{
+                                        // backgroundColor:'red',
+                                        position: "absolute",
+                                        top: 0,
+                                        margin: 'auto',
+                                        position: 'relative',
+                                        width: '600px',
+                                        height: '400px',
+                                        overflow: 'hidden'
+                                   }} />
+                              <Script
+                                   // type="text/javascript"
+                                   // charset="utf-8"
+                                   src="colibri.hyperesources/colibri_hype_generated_script.js?23464"
+                                   strategy="afterInteractive"
+                              >
+                              </Script> */}
 
                          </div>
                     </div>
@@ -136,7 +219,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                          hrColor={hrColor}
                          animationTransition={animationTransition}
                     />
- {/* AboutMe */}
+                    {/* AboutMe */}
                     <Technologies
                          min_width_600px={min_width_600px}
                          backgroundColor={backgroundColor}
@@ -149,7 +232,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
 
                     <div style={{ height: 46 }} />
 
-      {/* AboutMe */}
+                    {/* AboutMe */}
 
                     <AboutMe
                          min_width_600px={min_width_600px}
@@ -163,7 +246,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
 
                     <div style={{ height: min_width_600px ? 62 : 34 }} />
                </div>
-          </Fragment>
+          </Fragment >
      )
 }
 

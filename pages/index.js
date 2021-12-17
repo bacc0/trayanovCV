@@ -19,7 +19,8 @@ export default function Home() {
      const [theme, setTheme] = useState('light')
      const { scrollYProgress } = useViewportScroll(0)
      const [Y_position, set_Y_position] = useState(0)
-     const [currentBrowser, setCurrentBrowser] = useState(0)
+     // const [currentBrowser, setCurrentBrowser] = useState(0)
+     let currentBrowser = ''
 
      // ---------------------------------    Detect window Size
      if (typeof window !== 'undefined') {
@@ -99,7 +100,7 @@ export default function Home() {
      
 
      if (browser.name === 'firefox') {
-          setCurrentBrowser(browser.name)
+          currentBrowser = 'firefox'
      }
 
 
@@ -121,6 +122,7 @@ export default function Home() {
                     Y_position={Y_position}
                     currentBrowser={currentBrowser}
                />
+               
 
           </section>
      )
