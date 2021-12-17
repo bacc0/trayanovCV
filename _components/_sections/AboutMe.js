@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 
 export default function AboutMe({
-     min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, hrColor
+     min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, hrColor, animationTransition
 }) {
 
      return (
@@ -23,10 +23,18 @@ export default function AboutMe({
                                         transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
 
                                    >
-                                        <h3 style={{ color: backgroundColor, fontSize: 35 }}>
+                                        <h3 style={{
+                                             color: backgroundColor, fontSize: 35,
+                                             transition: `color ${animationTransition} ease`
+                                        }}
+                                        >
                                              About me
                                         </h3>
-                                        <hr style={{ backgroundColor: hrColorMain }} />
+                                        <hr style={{ 
+                                             'background-color': hrColorMain,
+                                        transition: `background-color ${animationTransition} ease`
+                                    }} 
+                                    />
                                    </motion.div>
                               </div>
                          </div>
@@ -36,10 +44,18 @@ export default function AboutMe({
                               className='container-content-left'>
                               <div className='content-left'
                                    style={{ marginTop: min_width_600px ? 0 : 16 }}>
-                                   <h3 style={{ color: thirdLettersColor }}>
+                                   <h3 style={{
+                                        color: thirdLettersColor,
+                                        transition: `color ${animationTransition} ease`
+                                   }}
+                                   >
                                         Skills
                                    </h3>
-                                   <hr style={{ backgroundColor: hrColor }} />
+                                   <hr style={{ 
+                                        'background-color': hrColor,
+                                        transition: `background-color ${animationTransition} ease`
+                                    }} /
+                                    >
 
                                    <p>I’m very positive.</p>
                                    <p>I’m very focus in my work.</p>

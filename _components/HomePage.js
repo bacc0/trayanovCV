@@ -33,6 +33,8 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const logo_W_H = 230
      const strokeWidth = min_width_600px ? 1.6 : 2.2
 
+     const animationTransition = '350ms' 
+
      useEffect(() => {
           setPrimeLettersColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
           setSecLettersColor(theme === 'light' ? '#BBC5CD' : '#BBC5CD')
@@ -88,11 +90,17 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                     thirdLettersColor={thirdLettersColor}
 
                />
-               <div className='page' style={{ backgroundColor: AppBackgroundColor, color: bodyColor }}>
+               <div
+                    className='page'
+                    style={{
+                         backgroundColor: AppBackgroundColor, 
+                         color: bodyColor,
+                         transition: `background-color ${animationTransition} ease, 
+                                                 color ${animationTransition} ease`
+                    }}
+               >
                     <div className='page-nav' style={{ borderBottom: `1px solid ${hrColor}` }}>
                          <div className='title-container vertical-center-container'>
-
-
                               <div className='vertical-center' >
                                    <motion.div
                                         initial={{ scale: 1, y: -200, opacity: 0 }}
@@ -108,9 +116,8 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                                              backgroundColor={backgroundColor}
                                              strokeWidth={strokeWidth}
                                              setOnAnimationEnd={setOnAnimationEnd}
+                                             animationTransition={animationTransition}
                                         />
-
-
                                    </motion.div>
                               </div>
 
@@ -125,44 +132,34 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                          thirdLettersColor={thirdLettersColor}
                          typeWriter={typeWriter}
                          hrColor={hrColor}
-
+                         animationTransition={animationTransition}
                     />
-
-                    <Technologies 
+ {/* AboutMe */}
+                    <Technologies
                          min_width_600px={min_width_600px}
                          backgroundColor={backgroundColor}
                          hrColorMain={hrColorMain}
                          thirdLettersColor={thirdLettersColor}
                          typeWriter={typeWriter}
                          hrColor={hrColor}
+                         animationTransition={animationTransition}
                     />
 
+                    <div style={{ height: 46 }} />
 
+      {/* AboutMe */}
 
-
-
-
-
-
-
-     <div style={{ height: 46 }} />
-
-                    {/* About */}
-
-                
-
-                    <AboutMe 
+                    <AboutMe
                          min_width_600px={min_width_600px}
                          backgroundColor={backgroundColor}
                          hrColorMain={hrColorMain}
                          thirdLettersColor={thirdLettersColor}
                          typeWriter={typeWriter}
                          hrColor={hrColor}
+                         animationTransition={animationTransition}
                     />
 
-                    <div style={{ height: min_width_600px ? 62 : 34 }}
-                    />
-
+                    <div style={{ height: min_width_600px ? 62 : 34 }} />
                </div>
           </Fragment>
      )

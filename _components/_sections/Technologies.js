@@ -3,88 +3,100 @@ import { motion } from 'framer-motion'
 import { Hidden } from '@mui/material'
 
 
-export default function Technologies({ 
-     min_width_600px, backgroundColor, hrColorMain
+export default function Technologies({
+     min_width_600px, backgroundColor, hrColorMain, animationTransition
 }) {
 
      return (
 
-               
+
           <div className='page-body'>
 
-          <div className='page-body-left '>
-               <div className='container-content-left'>
-                    <div className='content-left'>
-                         <Hidden smUp >
-                              <motion.div
-                                   initial={{ scale: 1, x: 100, opacity: 0 }}
-                                   animate={{ scale: 1, x: 0, opacity: 1 }}
-                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
-                                   style={{ margin: `18px 0 50px` }}
+               <div className='page-body-left '>
+                    <div className='container-content-left'>
+                         <div className='content-left'>
+                              <Hidden smUp >
+                                   <motion.div
+                                        initial={{ scale: 1, x: 100, opacity: 0 }}
+                                        animate={{ scale: 1, x: 0, opacity: 1 }}
+                                        transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
+                                        style={{ margin: `18px 0 50px` }}
 
-                              >
-                                   <h3 style={{ color: backgroundColor, fontSize: 35 }}>
-                                        Technologies
-                                   </h3>
-                                   <hr style={{ backgroundColor: hrColorMain }} />
-                              </motion.div>
-                         </Hidden>
-                         <p>ReactJS,</p>
-                         <p>Hooks,</p>
-                         <p>NextJS,</p>
-                         <p>Javascript,</p>
-                         <p>Material UI,</p>
-                         <p>CSS,</p>
-                         <p>SASS,</p>
-                         <p>HTML</p>
-                         <p>Framer Motion, </p>
-                         <p>SVG Animations,</p>
-                         <p>Adobe Illustrator, </p>
-                         <p>Autodesk Graphic (iDraw), </p>
-                         <p>GIMP,</p>
-                         <p>Adobe Photoshop,</p>
+                                   >
+                                        <h3 style={{
+                                             color: backgroundColor, fontSize: 35,
+                                             transition: `color ${animationTransition} ease`
+                                        }}
+                                        >
+                                             Technologies
+                                        </h3>
+                                        <hr style={{ 'background-color': hrColorMain, transition: `background-color ${animationTransition} ease` }} />
+                                   </motion.div>
+                              </Hidden>
+                              <p>ReactJS,</p>
+                              <p>Hooks,</p>
+                              <p>NextJS,</p>
+                              <p>Javascript,</p>
+                              <p>Material UI,</p>
+                              <p>CSS,</p>
+                              <p>SASS,</p>
+                              <p>HTML</p>
+                              <p>Framer Motion, </p>
+                              <p>SVG Animations,</p>
+                              <p>Adobe Illustrator, </p>
+                              <p>Autodesk Graphic (iDraw), </p>
+                              <p>GIMP,</p>
+                              <p>Adobe Photoshop,</p>
+                         </div>
+                    </div>
+               </div>
+
+               <div className='page-body-right' >
+
+
+
+                    <div className='container-content-right'>
+
+                         <div
+                              className='content-right'
+                              style={{
+                                   marginTop: min_width_600px ? 0 : -45,
+                                   marginBottom: min_width_600px ? 0 : -8
+                              }}
+                         >
+                              <Hidden smDown >
+                                   <motion.div
+                                        initial={{ scale: 1, x: 100, opacity: 0 }}
+                                        animate={{ scale: 1, x: 0, opacity: 1 }}
+                                        transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
+                                        style={{ margin: `18px 0  36px` }}
+
+                                   >
+                                        <h3 style={{
+                                             color: backgroundColor, fontSize: 35,
+                                             transition: `color ${animationTransition} ease`
+                                        }}
+                                        >
+                                             Technologies
+                                        </h3>
+                                        <hr style={{ 
+                                             'background-color': hrColorMain, 
+                                             transition: `background-color ${animationTransition} ease` 
+                                        }} 
+                                             />
+                                   </motion.div>
+                              </Hidden>
+                              <p>Typescript,</p>
+                              <p>NodeJS,</p>
+                              <p>Express,</p>
+                              <p>Git, Github, Bitbucket,</p>
+                              <p>Sourcetree,</p>
+                              <p>Jira,</p>
+                              <p>Jenkins,</p>
+                              <p>Storybook</p>
+                         </div>
                     </div>
                </div>
           </div>
-
-          <div className='page-body-right' >
-
-
-
-               <div className='container-content-right'>
-
-                    <div
-                         className='content-right'
-                         style={{
-                              marginTop: min_width_600px ? 0 : -45,
-                              marginBottom: min_width_600px ? 0 : -8
-                         }}
-                    >
-                         <Hidden smDown >
-                              <motion.div
-                                   initial={{ scale: 1, x: 100, opacity: 0 }}
-                                   animate={{ scale: 1, x: 0, opacity: 1 }}
-                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
-                                   style={{ margin: `18px 0  36px` }}
-
-                              >
-                                   <h3 style={{ color: backgroundColor, fontSize: 35 }}>
-                                        Technologies
-                                   </h3>
-                                   <hr style={{ backgroundColor: hrColorMain }} />
-                              </motion.div>
-                         </Hidden>
-                         <p>Typescript,</p>
-                         <p>NodeJS,</p>
-                         <p>Express,</p>
-                         <p>Git, Github, Bitbucket,</p>
-                         <p>Sourcetree,</p>
-                         <p>Jira,</p>
-                         <p>Jenkins,</p>
-                         <p>Storybook</p>
-                    </div>
-               </div>
-          </div>
-     </div>
      )
 }

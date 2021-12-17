@@ -10,7 +10,7 @@ import NightlightRoundIcon from '@mui/icons-material/NightlightRound'
 export default function MenuAppBar({
      theme, setTheme, hrColor, hrColorMain,
      AppBackgroundColor, scrollDirection, Y_position,
-     thirdLettersColor, currentBrowser
+     thirdLettersColor, currentBrowser,  animationTransition
 }) {
      
      const [heightAppBar, setHeightAppBarl] = useState(0)
@@ -47,7 +47,8 @@ export default function MenuAppBar({
      const underAppBAr = {
           height: heightAppBar,
           'background-color': AppBackgroundColor,
-          transition: `background-color 350ms ease, height 800ms ease`,
+          transition: `background-color 350ms ease, 
+          height 800ms ease`,
      }
      const progressLineStyle = {
           position: 'fixed',
@@ -85,7 +86,12 @@ export default function MenuAppBar({
                                              spacing={1}
                                              onClick={() => handleThemeChange()}
                                         >
-                                             <IconButton aria-label='fingerprint' style={{ color: hrColorMain }}>
+                                             <IconButton aria-label='fingerprint' 
+                                             style={{ 
+                                                  color: hrColorMain, 
+                                                  transition: `color ${animationTransition} ease`
+                                              }}
+                                             >
                                                   {
                                                        theme === 'light'
                                                             ? <NightlightRoundIcon />
