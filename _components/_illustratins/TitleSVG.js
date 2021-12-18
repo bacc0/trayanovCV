@@ -6,7 +6,9 @@ import Script from 'next/script'
 
 export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, backgroundColor, strokeWidth, setOnAnimationEnd }) => {
 
-
+var sasa = () => {
+     return alert('yes')
+}
 
      return (
           <Fragment>

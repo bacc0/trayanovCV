@@ -39,12 +39,12 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           setPrimeLettersColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
           setSecLettersColor(theme === 'light' ? '#98A2A9' : '#BBC5CD')
           setThirdLettersColor(theme === 'light' ? '#8E75FF' : '#B9E981')
-          setThirdLogoColor(theme === 'light' ? '#8E75FF' : '#FF00D6')
+          setThirdLogoColor(theme === 'light' ? '#8E75FF' : '#F731DD')
           setHrColor(theme === 'light' ? '#EDF0F2' : '#95217D')
           setHrColorMain(theme === 'light' ? '#1E1B84' : '#FFFFFF')
           setBackgroundColor(theme === 'light' ? '#1E1B84' : '#FFFFFF')
           setAppBackgroundColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
-          setBodyColor(theme === 'light' ? '#344B7F' : '#5e709d')
+          setBodyColor(theme === 'light' ? '#344B7F' : '#8899C6')
      }, [theme]);
 
 
