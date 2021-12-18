@@ -11,9 +11,9 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
      return (
           <Fragment>
                <motion.div
-                    initial={{ opacity: 0.8, scale: 0.16 }}
-                    animate={{ opacity: 1, scale: 0.16 }}
-                    transition={{ delay: 2, duration: 1.5 }}
+                    // initial={{ opacity: 0.8, scale: 0.16 }}
+                    // animate={{ opacity: 1, scale: 0.16 }}
+                    // transition={{ delay: 2, duration: 1.5 }}
                >
 
                     {/* ---------------------   how use Tumult HYPE 4 (https://tumult.com/hype/) ---------------     */}
@@ -26,12 +26,12 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
                          style={{
                               // backgroundColor:'red',
                               position: "relative",
-                              top: 340,
-                              right: 500,
+                              top: 60,
+                              right: 100,
                               margin: 'auto',
                               position: 'relative',
-                              width: '600px',
-                              height: '400px',
+                              width: '81px',
+                              height: '68px',
                               overflow: 'hidden'
                          }} />
                </motion.div>
@@ -45,8 +45,8 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
                {/* ---------------------                end                 --------------------------------     */}
 
                <motion.div
-                    initial={{ y: -200 , x: 62}}
-                    animate={{ y: -158, x: 62 }}
+                    initial={{ y: -20 , x: -2}}
+                    animate={{ y: -40, x: -2 }}
                     transition={{}}
 
                >
