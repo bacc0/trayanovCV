@@ -23,13 +23,13 @@ export default function Technologies({
                                         style={{ margin: `18px 0 50px` }}
 
                                    >
-                                        <h3 style={{
-                                             color: backgroundColor, fontSize: 35,
+                                        <h2 style={{
+                                             color: backgroundColor, fontSize: 35, letterSpacing:2.5 ,
                                              transition: `color ${animationTransition} ease`
                                         }}
                                         >
-                                             Technologies
-                                        </h3>
+                                             Tech stack
+                                        </h2>
                                         <hr style={{ 'background-color': hrColorMain, transition: `background-color ${animationTransition} ease` }} />
                                    </motion.div>
                               </Hidden>
@@ -80,13 +80,13 @@ export default function Technologies({
                                         style={{ margin: `18px 0  36px` }}
 
                                    >
-                                        <h3 style={{
-                                             color: backgroundColor, fontSize: 35,
+                                        <h2 style={{
+                                             color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
                                              transition: `color ${animationTransition} ease`
                                         }}
                                         >
-                                             Technologies
-                                        </h3>
+                                             Tech stack
+                                        </h2>
                                         <hr style={{ 
                                              'background-color': hrColorMain, 
                                              transition: `background-color ${animationTransition} ease` 

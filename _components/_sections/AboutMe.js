@@ -23,13 +23,13 @@ export default function AboutMe({
                                         transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
 
                                    >
-                                        <h3 style={{
-                                             color: backgroundColor, fontSize: 35,
+                                        <h2 style={{
+                                             color: backgroundColor, fontSize: 35, letterSpacing:  2.5,
                                              transition: `color ${animationTransition} ease`
                                         }}
                                         >
                                              About me
-                                        </h3>
+                                        </h2>
                                         <hr style={{ 
                                              'background-color': hrColorMain,
                                         transition: `background-color ${animationTransition} ease`

@@ -22,13 +22,13 @@ export default function Experience({
                                    transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
 
                               >
-                                   <h3 style={{
-                                        color: backgroundColor, fontSize: 35,
+                                   <h2 style={{
+                                        color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
                                         transition: `color ${animationTransition} ease`
                                    }}
                                    >
                                         Experience
-                                   </h3>
+                                   </h2>
                                    <hr style={{ 'background-color': hrColorMain, transition: `background-color ${animationTransition} ease` }} />
                               </motion.div>
                          </div>
@@ -45,7 +45,7 @@ export default function Experience({
 
 
                               <h3 style={{
-                                   color: thirdLettersColor, minHeight: 30,
+                                   color: thirdLettersColor, minHeight: 30, letterSpacing:1.3,
                                    transition: `color ${animationTransition} ease`
                               }}
                               >
@@ -82,7 +82,7 @@ export default function Experience({
                     <div className='container-content-right'>
                          <div className='content-right'>
                               <h3 style={{
-                                   color: thirdLettersColor, minHeight: 30,
+                                   color: thirdLettersColor, minHeight: 30, letterSpacing: 1.3,
                                    transition: `color ${animationTransition} ease`
                               }}
                               >
@@ -107,7 +107,7 @@ export default function Experience({
                     <div className='container-content-right'>
                          <div className='content-right'>
                               <h3 style={{
-                                   color: thirdLettersColor, minHeight: 30,
+                                   color: thirdLettersColor, minHeight: 30, letterSpacing: 1.3,
                                    transition: `color ${animationTransition} ease`
                               }}
                               >
