@@ -75,6 +75,7 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
                                    color: #00335D;
                                    border-bottom: 0.5px solid #00335D;
                               }
+                              
                          `}
                     </style> */}
 
