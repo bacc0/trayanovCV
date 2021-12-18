@@ -33,6 +33,13 @@ export default function Technologies({
                                         <hr style={{ 'background-color': hrColorMain, transition: `background-color ${animationTransition} ease` }} />
                                    </motion.div>
                               </Hidden>
+  <motion.div
+                                        initial={{ scale: 1, x: -100, opacity: 0 }}
+                                        animate={{ scale: 1, x: 0, opacity: 1 }}
+                                        transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
+                                      
+
+                                   >
                               <p>ReactJS,</p>
                               <p>Hooks,</p>
                               <p>NextJS,</p>
@@ -47,6 +54,7 @@ export default function Technologies({
                               <p>Autodesk Graphic (iDraw), </p>
                               <p>GIMP,</p>
                               <p>Adobe Photoshop,</p>
+                               </motion.div>
                          </div>
                     </div>
                </div>
@@ -86,6 +94,13 @@ export default function Technologies({
                                              />
                                    </motion.div>
                               </Hidden>
+  <motion.div
+                                        initial={{ scale: 1, x: 100, opacity: 0 }}
+                                        animate={{ scale: 1, x: 0, opacity: 1 }}
+                                        transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
+                              
+
+                                   >
                               <p>Typescript,</p>
                               <p>NodeJS,</p>
                               <p>Express,</p>
@@ -94,6 +109,7 @@ export default function Technologies({
                               <p>Jira,</p>
                               <p>Jenkins,</p>
                               <p>Storybook</p>
+                               </motion.div>
                          </div>
                     </div>
                </div>

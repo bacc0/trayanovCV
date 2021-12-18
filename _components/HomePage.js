@@ -31,7 +31,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
 
      const min_width_600px = useMediaQuery('(min-width:600px)')
      const logo_W_H = 230
-     const strokeWidth = min_width_600px ? 1.6 : 2.2
+     const strokeWidth = min_width_600px ? 1.5 : 1.5
 
      const animationTransition = '350ms'
 

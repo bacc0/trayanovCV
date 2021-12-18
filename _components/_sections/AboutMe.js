@@ -38,11 +38,16 @@ export default function AboutMe({
                                    </motion.div>
                               </div>
                          </div>
-
+          
 
                          <div
                               className='container-content-left'>
-                              <div className='content-left'
+                              <motion.div 
+                                 initial={{ scale: 1, y: 100, opacity: 0 }}
+                                 animate={{ scale: 1, y: 0, opacity: 1 }}
+                                 transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
+                              
+                              className='content-left'
                                    style={{ marginTop: min_width_600px ? 0 : 16 }}>
                                    <h3 style={{
                                         color: thirdLettersColor,
@@ -69,13 +74,16 @@ export default function AboutMe({
 
 
 
-                              </div>
+                              </motion.div>
                          </div>
                     </div>
 
 
 
-                    <div
+                    <motion.div 
+                                 initial={{ scale: 1, x: 100, opacity: 0 }}
+                                 animate={{ scale: 1, x: 0, opacity: 1 }}
+                                 transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
                          className='page-body-right'
                          style={{ marginTop: min_width_600px ? -19 : -50 }}
                     >
@@ -93,7 +101,7 @@ export default function AboutMe({
                                    <p>Skilled at writing well-designed, efficient code using current best practices in Web development.</p>
                               </div>
                          </div>
-                    </div>
+                    </motion.div>
                </div>
           </div>
 
