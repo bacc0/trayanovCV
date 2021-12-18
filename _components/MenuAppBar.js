@@ -114,8 +114,8 @@ export default function MenuAppBar({
                                              style={iconsStackStyle}
                                         >
 
-                                             <IconButton aria-label='GitHub Icon' style={iconsStyle}>
-                                                  <GitHubIcon />
+                                             <IconButton aria-label='LinkedIn Icon' style={iconsStyle}>
+                                                  <LinkedInIcon />
                                              </IconButton>
 
                                              <IconButton aria-label='Phone Icon' style={iconsStyle}>
@@ -126,12 +126,12 @@ export default function MenuAppBar({
                                                   <LocalPostOfficeSharpIcon />
                                              </IconButton>
 
-                                             <IconButton aria-label='LinkedIn Icon' style={iconsStyle}>
-                                                  <LinkedInIcon />
-                                             </IconButton>
-
                                              <IconButton aria-label='Location Icon' style={iconsStyle}>
                                                   <LocationOnSharpIcon />
+                                             </IconButton>
+
+                                             <IconButton aria-label='GitHub Icon' style={iconsStyle}>
+                                                  <GitHubIcon />
                                              </IconButton>
 
                                              <IconButton aria-label='theme icon' style={iconsStyle}>
