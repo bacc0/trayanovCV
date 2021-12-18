@@ -1,6 +1,5 @@
 import { Hidden, useMediaQuery, Stack, IconButton } from '@mui/material'
 
-import Script from 'next/script'
 
 
 
@@ -75,9 +74,6 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           )
      }
 
-     const img2 = `/13.svg`
-     const img3 = `/colibri.png`
-
      return (
           <Fragment>
                <MenuAppBar
@@ -125,87 +121,6 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                                         />
                                    </motion.div>
                               </div>
-                              {/* <div>
-                                   <div style={{
-                                        height: '29vh',
-                                        width: '29vw',
-                                        'min- height': '320px',
-                                        'background-size': 'center',
-
-                                        position: 'fixed',
-                                        top: '10px',
-                                        'background-repeat': 'no-repeat',
-                                        backgroundImage:`url('/11.svg')`
-                                   }}
-                                   >
-
-                                   </div>
-
-                                   <div
-                                     
-                                   >
-                                   <img  style={{ 
-                                        position: 'absolute',
-                                        top: '-40px',
-                                        left: 511, 
-                                        transform: 'skewX(-60deg)',
-                                        opacity: 0.9, 
-                                        animation: 'transform 1s infinite'
-                                   }}
-
-
-                                        src={img2}
-                                        alt="Logo"
-                                        width={170}
-                                        height={250}
-                                   />
-                                   <img  style={{ 
-                                        position: 'absolute',
-                                        top: '-50px',
-                                        left: 431, 
-                                        opacity: 1
-                                   }}
-                                        src={img3}
-                                        alt="Logo"
-                                        width={370}
-                                        height={220}
-                                   />
-                                   </div>
-                              </div> */}
-
-                              {/* <div id="colibri_hype_container"
-                                   class="HYPE_document"
-                                   style={{
-                                        // backgroundColor:'red',
-                                        position: "absolute",
-                                        margin: 'auto',
-                                        position: 'relative',
-                                        width: '600px',
-                                        height: '400px',
-                                        overflow: 'hidden'
-                                   }}>
-
-                                   </div> */}
-                              {/* <div id="colibri_hype_container"
-                                   class="HYPE_document"
-                                   style={{
-                                        // backgroundColor:'red',
-                                        position: "absolute",
-                                        top: 0,
-                                        margin: 'auto',
-                                        position: 'relative',
-                                        width: '600px',
-                                        height: '400px',
-                                        overflow: 'hidden'
-                                   }} />
-                              <Script
-                                   // type="text/javascript"
-                                   // charset="utf-8"
-                                   src="colibri.hyperesources/colibri_hype_generated_script.js?23464"
-                                   strategy="afterInteractive"
-                              >
-                              </Script> */}
-
                          </div>
                     </div>
 

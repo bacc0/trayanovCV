@@ -45,8 +45,8 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
                {/* ---------------------                end                 --------------------------------     */}
 
                <motion.div
-                    initial={{ y: -20 , x: -2}}
-                    animate={{ y: -40, x: -2 }}
+                    initial={{ y: -32 , x: -2}}
+                    animate={{ y: -32, x: -2 }}
                     transition={{}}
 
                >
