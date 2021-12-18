@@ -41,8 +41,8 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           setThirdLettersColor(theme === 'light' ? '#3770FE' : '#B9E981')
           setThirdLogoColor(theme === 'light' ? '#3770FE' : '#FF00D6')
           setHrColor(theme === 'light' ? '#EDF0F2' : '#95217D')
-          setHrColorMain(theme === 'light' ? '#13478B' : '#FFFFFF')
-          setBackgroundColor(theme === 'light' ? '#13478B' : '#FFFFFF')
+          setHrColorMain(theme === 'light' ? '#3B6BAB' : '#FFFFFF')
+          setBackgroundColor(theme === 'light' ? '#3B6BAB' : '#FFFFFF')
           setAppBackgroundColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
           setBodyColor(theme === 'light' ? '#717d97' : '#C4C8FF')
      }, [theme]);

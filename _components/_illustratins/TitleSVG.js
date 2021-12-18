@@ -309,7 +309,7 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
                                         d="M335.615,83.347 L335.615,42.847 L337.749,42.847 L362.973,65.365 L362.973,42.847 L367.57,42.847 L367.57,83.347 L365.49,83.347 L340.211,60.829 L340.211,83.347 z"
 
                                         fill-opacity="0"
-                                        stroke={'backgroundColor'}
+                                        stroke={backgroundColor}
                                         strokeWidth={strokeWidth}
                                    />
                               </g>
