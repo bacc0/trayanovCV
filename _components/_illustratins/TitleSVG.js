@@ -6,9 +6,6 @@ import Script from 'next/script'
 
 export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, backgroundColor, strokeWidth, setOnAnimationEnd }) => {
 
-var sasa = () => {
-     return alert('yes')
-}
 
      return (
           <Fragment>
@@ -50,8 +47,8 @@ var sasa = () => {
 
 
                <motion.div
-                    initial={{ y: -32 , x: -2}}
-                    animate={{ y: -32, x: -1 }}
+                    initial={{ y: -25, x: -2}}
+                    animate={{ y: -25, x: -2 }}
                     transition={{}}
 
                >
