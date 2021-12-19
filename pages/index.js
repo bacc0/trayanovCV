@@ -112,6 +112,11 @@ export default function Home() {
                set_H_screenSize(window.innerHeight)
           })
      }
+     // ---------------------------------    scroll to the top on reload
+
+     useEffect(() => {
+          window.scrollTo(0, 0)
+        }, [])
 
      return (
           <section className='pages-wrapper'>
