@@ -67,29 +67,7 @@ export default function _CombineSections({
           }
      }
 
-     // const animationHandler = (sign) => (
-     //      <motion.div exit={{ opacity: 0, y: -6 }} >
-     //           <motion.div
-     //                initial={{ scale: 0.9, y: `20vh` }}
-     //                animate={{ scale: 1, y: `0vh` }}
-     //                transition={{ type: 'spring', ease: 'anticipate', duration: 0.6, delay: 0 }}
 
-     //                style={{
-     //                     fontSize: 27,
-     //                     padding: '14px 40px',
-     //                     backgroundColor: '#FFFFFF88',
-     //                     textAlign: 'center',
-     //                     borderRadius: 6,
-     //                     '-webkit-backdrop-filter': 'blur(10px)',
-     //                     'backdrop-filter': 'blur(10px)',
-     //                     marginBottom: 20
-     //                }}
-     //           >
-     //                {sign}
-     //           </motion.div>
-     //      </motion.div>
-
-     // )
 
      const animation = ( is_Ref_Visible, delay , html ) => {
 
@@ -98,9 +76,9 @@ export default function _CombineSections({
                     {is_Ref_Visible == 1 && (
                          <motion.div exit={{ opacity: 0, y: -10 }}>
                               <motion.div
-                                   initial={{ scale: 1, y: 50, opacity: 0 }}
+                                   initial={{ scale: 1, y: 40, opacity: 0 }}
                                    animate={{ scale: 1, y: 0, opacity: 1 }}
-                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: delay}}
+                                   transition={{ type: 'spring', ease: 'anticipate', duration: 1, delay: delay}}
                               >
                               { html }
                               </motion.div>
@@ -126,7 +104,7 @@ export default function _CombineSections({
 
                     Ref_0={Ref_0}
                     isRef_0_Visible={isRef_0_Visible}
-                    
+
                     Ref_05={Ref_05}
                     isRef_05_Visible={isRef_05_Visible}
 

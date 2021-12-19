@@ -46,6 +46,7 @@ export default function Experience({
                               </motion.div>
                          </div>
                     </div>
+                    
 
                     <div className='container-content-left' ref={Ref_0} >
                          <div
@@ -114,18 +115,10 @@ export default function Experience({
                     className='page-body-right'>
 
 
-                    <div
-                         // initial={{ scale: 1, x: 100, opacity: 0 }}
-                         // animate={{ scale: 1, x: 0, opacity: 1 }}
-                         // transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
-
-                         className='container-content-right'
-                    >
-
+                    <div className='container-content-right'>
                          <div className='content-right' ref={Ref_05}>
-
                               {animation(isRef_05_Visible, 0,
-                                   <div >
+                                   <>
                                         <h3
                                              style={{
                                                   color: thirdLettersColor, minHeight: 30, letterSpacing: 1.3,
@@ -143,8 +136,7 @@ export default function Experience({
                                                   transition: `background-color ${animationTransition} ease`
                                              }}
                                         />
-                                   </div>,
-
+                                   </>
                               )}
 
                               {animation(isRef_05_Visible, 0.1, <strong> July 2021 - Nov 2021 </strong>)}
@@ -177,24 +169,15 @@ export default function Experience({
                                         .
                                    </p>
                               )}
-
-
-
-
-
                          </div>
                     </div>
-
-
-
-
 
 
                     <div className='container-content-right'>
                          <div className='content-right' ref={Ref_1}>
 
                               {animation(isRef_1_Visible, 0,
-                                   <div >
+                                   <>
                                         <h3 style={{
                                              color: thirdLettersColor, minHeight: 30, letterSpacing: 1.3,
                                              transition: `color ${animationTransition} ease`
@@ -211,7 +194,7 @@ export default function Experience({
                                              transition: `background-color ${animationTransition} ease`
                                         }}
                                         />
-                                   </div>
+                                   </>
                               )}
                               {handleAnimationEnd()}
 
