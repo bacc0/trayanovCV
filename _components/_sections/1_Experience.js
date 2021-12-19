@@ -54,7 +54,7 @@ export default function Experience({
                               style={{ marginTop: min_width_600px ? 0 : 16 }}
                          >
 
-                              {animation(isRef_0_Visible, 0.1,
+                              {animation(isRef_0_Visible, 0.14,
                                    <h3 style={{
                                         color: thirdLettersColor, minHeight: 30, letterSpacing: 1.3,
                                         transition: `color ${animationTransition} ease`
@@ -67,7 +67,7 @@ export default function Experience({
                                    </h3>
                               )}
 
-                              {animation(isRef_0_Visible, 0.14,
+                              {animation(isRef_0_Visible, 0.18,
                                    <hr
                                         style={{
                                              'background-color': hrColor,
@@ -75,13 +75,13 @@ export default function Experience({
                                         }}
                                    />
                               )}
-                              {animation(isRef_0_Visible, 0.18,
+                              {animation(isRef_0_Visible, 0.22,
                                    <strong>Dec 2021 – Present </strong>
                               )}
-                              {animation(isRef_0_Visible, 0.22,
+                              {animation(isRef_0_Visible, 0.26,
                                    <p>Developing a Website Builder.</p>
                               )}
-                              {animation(isRef_0_Visible, 0.26,
+                              {animation(isRef_0_Visible, 0.30,
                                    <p>
                                         Using
                                         <span className='font-weight-300'> REACT </span>
@@ -99,7 +99,7 @@ export default function Experience({
                                    </p>
                               )}
                               <br />
-                              {animation(isRef_0_Visible, 0.3,
+                              {animation(isRef_0_Visible, 0.34,
                                    <p>
                                         <strong>Ricard Rosson </strong>
                                         <div>ricard@iacos.net</div>
@@ -139,12 +139,12 @@ export default function Experience({
                                    </>
                               )}
 
-                              {animation(isRef_05_Visible, 0.1, <strong> July 2021 - Nov 2021 </strong>)}
+                              {animation(isRef_05_Visible, 0.14, <strong> July 2021 - Nov 2021 </strong>)}
 
-                              {animation(isRef_05_Visible, 0.14,
+                              {animation(isRef_05_Visible, 0.18,
                                    <p>Building a new components for the application.</p>
                               )}
-                              {animation(isRef_05_Visible, 0.18,
+                              {animation(isRef_05_Visible, 0.22,
                                    <p>
                                         Using
                                         <span className='font-weight-300'> MATERIAL UI</span>
@@ -157,7 +157,7 @@ export default function Experience({
                                         ect.
                                    </p>
                               )}
-                              {animation(isRef_05_Visible, 0.22,
+                              {animation(isRef_05_Visible, 0.26,
                                    <p>
                                         For the software development the company used
                                         <span className='font-weight-300'> AGILE </span>
