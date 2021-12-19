@@ -1,16 +1,8 @@
-import { Hidden, useMediaQuery, Stack, IconButton } from '@mui/material'
-
-
-
-
+import { useMediaQuery } from '@mui/material'
 import { motion } from 'framer-motion'
-import MenuAppBar from './MenuAppBar'
-import TitleSVG from './_illustratins/TitleSVG'
-
-import Experience from './_sections/1_Experience'
-import Technologies from './_sections/2_Technologies'
-import AboutMe from './_sections/3_AboutMe'
 import CombineSections from './_sections/_CombineSections'
+import TitleSVG from './_illustratins/TitleSVG'
+import MenuAppBar from './MenuAppBar'
 
 
 
@@ -47,9 +39,6 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           setAppBackgroundColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
           setBodyColor(theme === 'light' ? '#344B7F' : '#8899C6')
      }, [theme]);
-
-
-
 
 
      const typeWriter = (sentence) => {
@@ -89,7 +78,6 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                     Y_position={Y_position}
                     thirdLettersColor={thirdLettersColor}
                     min_width_600px={min_width_600px}
-
                />
                <div
                     className='page'
@@ -129,7 +117,6 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                          </div>
                     </div>
 
-
                     <CombineSections
                          min_width_600px={min_width_600px}
                          backgroundColor={backgroundColor}
@@ -139,43 +126,6 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                          hrColor={hrColor}
                          animationTransition={animationTransition}
                     />
-
-
-                    {/* <Experience
-                         min_width_600px={min_width_600px}
-                         backgroundColor={backgroundColor}
-                         hrColorMain={hrColorMain}
-                         thirdLettersColor={thirdLettersColor}
-                         typeWriter={typeWriter}
-                         hrColor={hrColor}
-                         animationTransition={animationTransition}
-                    />
-             
-             
-                    <Technologies
-                         min_width_600px={min_width_600px}
-                         backgroundColor={backgroundColor}
-                         hrColorMain={hrColorMain}
-                         thirdLettersColor={thirdLettersColor}
-                         typeWriter={typeWriter}
-                         hrColor={hrColor}
-                         animationTransition={animationTransition}
-                    />
-
-                    <div style={{ height: 46 }} />
-
-
-                    <AboutMe
-                         min_width_600px={min_width_600px}
-                         backgroundColor={backgroundColor}
-                         hrColorMain={hrColorMain}
-                         thirdLettersColor={thirdLettersColor}
-                         typeWriter={typeWriter}
-                         hrColor={hrColor}
-                         animationTransition={animationTransition}
-                    />
-
-                    <div style={{ height: min_width_600px ? 62 : 34 }} /> */}
                </div>
           </Fragment >
      )

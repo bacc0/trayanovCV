@@ -57,16 +57,16 @@ export default function MenuAppBar({
           transition: `background-color 350ms ease, 
           height 800ms ease`,
      }
-     const progressLineStyle = {
-          position: 'fixed',
-          top: 0,
-          zIndex: 1100,
-          width: `${(Y_position * 100).toFixed(0)}%`,
-          height: 0.75,
-          marginTop: 0,
-          backgroundColor: thirdLettersColor,
-          transition: `width 150ms ease`
-     }
+     // const progressLineStyle = {
+     //      position: 'fixed',
+     //      top: 0,
+     //      zIndex: 1100,
+     //      width: `${(Y_position * 100).toFixed(0)}%`,
+     //      height: 0.75,
+     //      marginTop: 0,
+     //      backgroundColor: thirdLettersColor,
+     //      transition: `width 150ms ease`
+     // }
      const titleStyle = {
           fontSize: 12,
           fontWeight: '100',
@@ -148,7 +148,7 @@ export default function MenuAppBar({
                               </motion.div>
                          </AppBar>
                          <div style={underAppBAr} />
-                         <hr style={progressLineStyle} />
+                         {/* <hr style={progressLineStyle} /> */}
                     </motion.div>
                </div>
 
