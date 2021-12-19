@@ -7,9 +7,9 @@ import { motion } from 'framer-motion'
 import MenuAppBar from './MenuAppBar'
 import TitleSVG from './_illustratins/TitleSVG'
 
-import Experience from './_sections/Experience'
-import Technologies from './_sections/Technologies'
-import AboutMe from './_sections/AboutMe'
+import Experience   from './_sections/1_Experience'
+import Technologies from './_sections/2_Technologies'
+import AboutMe      from './_sections/3_AboutMe'
 
 
 
@@ -20,7 +20,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
 
      const [onAnimationEnd, setOnAnimationEnd] = useState(false)
      const [primeLettersColor, setPrimeLettersColor] = useState('#FFFFFF')
-     const [secLettersColor, setSecLettersColor] = useState('#BBC5CD')
+     const [secLettersColor, setSecLettersColor] = useState('#9BACB5')
      const [thirdLettersColor, setThirdLettersColor] = useState('#3770FE')
      const [thirdLogoColor, setThirdLogoColor] = useState('#3770FE')
      const [hrColor, setHrColor] = useState('#EDF0F2')
@@ -31,13 +31,13 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
 
      const min_width_600px = useMediaQuery('(min-width:600px)')
      const logo_W_H = 230
-     const strokeWidth = min_width_600px ? 1.5 : 1.5
+     const strokeWidth = min_width_600px ? 1.2 : 1.5
 
      const animationTransition = '350ms'
 
      useEffect(() => {
           setPrimeLettersColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
-          setSecLettersColor(theme === 'light' ? '#98A2A9' : '#BBC5CD')
+          setSecLettersColor(theme === 'light' ? '#9BACB5' : '#BBC5CD')
           setThirdLettersColor(theme === 'light' ? '#8E75FF' : '#B9E981')
           setThirdLogoColor(theme === 'light' ? '#8E75FF' : '#F731DD')
           setHrColor(theme === 'light' ? '#EDF0F2' : '#95217D')
@@ -99,7 +99,11 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                                                  color ${animationTransition} ease`
                     }}
                >
-                    <div className='page-nav' style={{ borderBottom: `1px solid ${hrColor}` }}>
+                    <div className='page-nav'
+                         style={{
+                              borderBottom: `1px solid ${hrColor}`,
+                              // background: `linear-gradient(0deg, #00000001 0%, transparent`
+                         }}>
                          <div className='title-container vertical-center-container'>
                               <div className='vertical-center' >
                                    <motion.div

@@ -59,11 +59,11 @@ export default function AboutMe({
                                    <hr style={{ 
                                         'background-color': hrColor,
                                         transition: `background-color ${animationTransition} ease`
-                                    }} /
-                                    >
+                                    }} 
+                                    />
 
-                                   <p>I’m very positive.</p>
-                                   <p>I’m very focus in my work.</p>
+                              
+                                   <p>I’m very focusin my work.</p>
                                    <p>
                                         I’m very good on planning and organising my work, so my tasks will always be done on time in
                                         necessary standard.
@@ -71,8 +71,7 @@ export default function AboutMe({
                                    <p>
                                         I’m happy working on my own, but I have also like to work as part of the team.
                                    </p>
-
-
+                                   <p>I'm very positive creative, flexible and responsible.</p>
 
                               </motion.div>
                          </div>
@@ -90,13 +89,12 @@ export default function AboutMe({
                          <div className='container-content-right'>
                               <div className='content-right'>
 
-                                   <p>Creativity, Flexibility, Responsibility.</p>
+                                   
                                    <p>Experience working with dynamic content.</p>
                                    <p>Developing with ReactJS single page JavaScript Applications.</p>
                                    <p>Problem Solving Skills.</p>
 
-                                   <p>Good understanding working with</p>
-                                   <p>APIs (RESTful services).</p>
+                                   <p>Good understanding working with APIs (RESTful services).</p>
                                    <p>Web developer able to build a Web presence from the ground up, from concept, navigation, working with data and programming to UX.</p>
                                    <p>Skilled at writing well-designed, efficient code using current best practices in Web development.</p>
                               </div>

@@ -39,6 +39,10 @@ body h1 {
   margin-top: -8px;
 }
 
+body .font-weight-300 {
+  font-weight: 300;
+}
+
 body .accent-title {
   font-size: 22px;
   line-height: 40px;
@@ -97,11 +101,14 @@ body .pages-wrapper .page .page-nav .title-container {
 @media only screen and (max-width: 600px) {
   body .pages-wrapper .page .page-body {
     width: 100vw;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 30px;
     letter-spacing: 0.78px;
     word-spacing: 3px;
     font-weight: 300;
+  }
+  body .pages-wrapper .page .page-body .font-weight-300 {
+    font-weight: 400;
   }
   body .pages-wrapper .page .page-body .page-body-left {
     width: 100%;

@@ -12,6 +12,7 @@ var sasa = () => {
 
      return (
           <Fragment>
+
                <motion.div
                     initial={{ opacity: 0.8, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 0.9 }}
@@ -46,12 +47,16 @@ var sasa = () => {
                </Script>
                {/* ---------------------                end                 --------------------------------     */}
 
+
+
                <motion.div
                     initial={{ y: -32 , x: -2}}
                     animate={{ y: -32, x: -1 }}
                     transition={{}}
 
                >
+
+
                     <svg
                          version='1.1'
                          xmlns='http://www.w3.org/2000/svg'
@@ -190,9 +195,10 @@ var sasa = () => {
 
                                    d='M127.32,38.347 L371.07,38.347 L371.07,86.847 L127.32,86.847 L127.32,38.347 z'
                                    fill={backgroundColor}
-
+                                   fill={'#848F9600'}
                               />
                          </g>
+
 
 
                          <g id='Text-Main'>

@@ -40,20 +40,20 @@ export default function Technologies({
                                       
 
                                    >
-                              <p>ReactJS,</p>
-                              <p>Hooks,</p>
-                              <p>NextJS,</p>
-                              <p>Javascript,</p>
-                              <p>Material UI,</p>
-                              <p>CSS,</p>
-                              <p>SASS,</p>
+                              <p>ReactJS</p>
+                              <p>Hook</p>
+                              <p>NextJS</p>
+                              <p>Javascript</p>
+                              <p>Material UI</p>
+                              <p>CSS</p>
+                              <p>SASS</p>
                               <p>HTML</p>
-                              <p>Framer Motion, </p>
-                              <p>SVG Animations,</p>
-                              <p>Adobe Illustrator, </p>
-                              <p>Autodesk Graphic (iDraw), </p>
-                              <p>GIMP,</p>
-                              <p>Adobe Photoshop,</p>
+                              <p>Framer Motion </p>
+                              <p>SVG Animations</p>
+                              <p>Adobe Illustrator</p>
+                              <p>Autodesk Graphic (iDraw) </p>
+                              <p>GIMP</p>
+                              <p>Adobe Photoshop</p>
                                </motion.div>
                          </div>
                     </div>
@@ -101,13 +101,13 @@ export default function Technologies({
                               
 
                                    >
-                              <p>Typescript,</p>
-                              <p>NodeJS,</p>
-                              <p>Express,</p>
-                              <p>Git, Github, Bitbucket,</p>
+                              <p>Typescript</p>
+                              <p>NodeJS</p>
+                              <p>Express</p>
+                              <p>Git Github Bitbucket</p>
                               <p>Sourcetree,</p>
-                              <p>Jira,</p>
-                              <p>Jenkins,</p>
+                              <p>Jira</p>
+                              <p>Jenkins</p>
                               <p>Storybook</p>
                                </motion.div>
                          </div>

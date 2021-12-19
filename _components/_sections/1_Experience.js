@@ -45,15 +45,15 @@ export default function Experience({
 
 
                               <h3 style={{
-                                   color: thirdLettersColor, minHeight: 30, letterSpacing:1.3,
+                                   color: thirdLettersColor, minHeight: 30, letterSpacing: 1.3,
                                    transition: `color ${animationTransition} ease`
                               }}
                               >
                                    {typeWriter('React Developer - Groundbits Ltd')}
                               </h3>
-                              <hr style={{ 
-                                   'background-color': hrColor, 
-                              transition: `background-color ${animationTransition} ease` 
+                              <hr style={{
+                                   'background-color': hrColor,
+                                   transition: `background-color ${animationTransition} ease`
                               }} />
                               <p>Attention to Detail.</p>
                               <strong>Dec 2021 – Present </strong>
@@ -61,7 +61,19 @@ export default function Experience({
                                    Developing a Website Builder.
                               </p>
                               <p>
-                                   Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation.
+                                   Using
+                                   <span className='font-weight-300'> REACT </span>
+                                   with
+                                   <span className='font-weight-300'> NEXTJS</span>
+                                   , for styling
+                                   <span className='font-weight-300'> MATERIAL UI (MUI)</span>
+                                   ,
+                                   <span className='font-weight-300'> STRAPI </span>
+                                   for contains management system (CMS), for animation
+                                   <span className='font-weight-300'> FRAMER MOTION </span>
+                                   and directly
+                                   <span className='font-weight-300'> SVG’s </span>
+                                   manipulation.
                               </p>
                               <br />
                               <p>
@@ -89,18 +101,32 @@ export default function Experience({
                                    {typeWriter(' React Developer - Amdocs via Appgr8')}
 
                               </h3>
-                              <hr style={{ 
-                                   'background-color': hrColor, 
-                              transition: `background-color ${animationTransition} ease`
-                               }} 
-                               />
+                              <hr style={{
+                                   'background-color': hrColor,
+                                   transition: `background-color ${animationTransition} ease`
+                              }}
+                              />
                               <p>Attention to Detail.</p>
                               <strong>July 2021 - Nov 2021 </strong>
                               <p>Building a new components for the application.</p>
-                              <p>Using  MATERIAL UI, TYPESCRIPT, SOURCETREE, BITBUKET ect.</p>
+                              <p>Using
+                                   <span className='font-weight-300'> MATERIAL UI</span>
+                                   ,
+                                   <span className='font-weight-300'> TYPESCRIPT</span>
+                                   ,
+                                   <span className='font-weight-300'> SOURCETREE</span>
+                                   ,
+                                   <span className='font-weight-300'> BITBUKET </span>
+                                   ect.</p>
                               <p>
-                                   For the software development the company used AGILE with the SCRUM framework
-                                   and JIRA.
+                                   For the software development the company used
+                                   <span className='font-weight-300'> AGILE </span>
+                                   with the
+                                   <span className='font-weight-300'> SCRUM </span>
+                                   framework
+                                   and
+                                   <span className='font-weight-300'> JIRA</span>
+                                   .
                               </p>
                          </div>
                     </div>
@@ -113,11 +139,11 @@ export default function Experience({
                               >
                                    {typeWriter(' React Developer - Groundbits Ltd')}
                               </h3>
-                              <hr style={{ 
-                                   'background-color': hrColor, 
+                              <hr style={{
+                                   'background-color': hrColor,
                                    transition: `background-color ${animationTransition} ease`
-                                    }} 
-                                    />
+                              }}
+                              />
                               <p>Attention to Detail.</p>
                               <strong>Jan 2020 – Jan 2021 </strong>
                               <p>
@@ -125,7 +151,19 @@ export default function Experience({
                                         Creating a web builder application.
                                    </p>
                                    <p>
-                                        Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation.
+                                        Using
+                                        <span className='font-weight-300'> REACT </span>
+                                        with
+                                        <span className='font-weight-300'> NEXTJS</span>
+                                        , for styling
+                                        <span className='font-weight-300'> MATERIAL UI (MUI)</span>
+                                        ,
+                                        <span className='font-weight-300'> STRAPI </span>
+                                        for contains management system (CMS), for animation
+                                        <span className='font-weight-300'> FRAMER MOTION </span>
+                                        and directly
+                                        <span className='font-weight-300'> SVG’s </span>
+                                        manipulation.
                                    </p>
                               </p>
                          </div>
