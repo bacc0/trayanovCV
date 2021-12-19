@@ -92,6 +92,7 @@ export default function AboutMe({
                                    
                                    <p>Experience working with dynamic content.</p>
                                    <p>Developing with ReactJS single page JavaScript Applications.</p>
+                                   <p>Attention to Detail.</p>
                                    <p>Problem Solving Skills.</p>
 
                                    <p>Good understanding working with APIs (RESTful services).</p>
