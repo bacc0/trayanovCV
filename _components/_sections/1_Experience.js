@@ -12,11 +12,12 @@ export default function Experience({
 
      const [onAnimationEnd, setOnAnimationEnd] = useState(true)
 
-     const handleAnimationEnd = () => {
+     useEffect(() => {
           setTimeout(() => {
                setOnAnimationEnd(false)
-          }, 6000);
-     }
+          }, 6000)
+     }, [])
+
 
      return (
 
@@ -25,35 +26,34 @@ export default function Experience({
 
                     <div className='container-content-left' >
                          <div
+                              ref={Ref_0}
                               className='content-left'
-                              // style={{ marginTop: min_width_600px ? 0 : 16 }}
                               style={{ margin: `5px 0 ${min_width_600px ? 36 : -7}px` }}
                          >
-                              <motion.div
-                                   initial={{ scale: 1, x: -100, opacity: 0 }}
-                                   animate={{ scale: 1, x: 0, opacity: 1 }}
-                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: 0 }}
-
-                              >
-                                   <h2 style={{
+                                   {animation(isRef_0_Visible, 0.1,
+                                        <>
+                                         <h2 style={{
                                         color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
                                         transition: `color ${animationTransition} ease`
                                    }}
                                    >
                                         Experience
                                    </h2>
-                                   <hr style={{ 'background-color': hrColorMain, transition: `background-color ${animationTransition} ease` }} />
-                              </motion.div>
+                                   <hr style={{ 'background-color': hrColorMain, transition: `background-color ${animationTransition} ease` }} 
+                                   />
+                                        </>
+                                   )}
+                                  
                          </div>
                     </div>
-                    
 
-                    <div className='container-content-left' ref={Ref_0} >
+
+                    <div className='container-content-left'  >
                          <div
                               className='content-left'
                               style={{ marginTop: min_width_600px ? 0 : 16 }}
                          >
-                              
+
                               {animation(isRef_0_Visible, 0.1,
                                    <h3 style={{
                                         color: thirdLettersColor, minHeight: 30, letterSpacing: 1.3,
@@ -61,8 +61,8 @@ export default function Experience({
                                    }}
                                    >
                                         {onAnimationEnd
-                                             ?    typeWriter('React Developer - Groundbits Ltd')
-                                             :   'React Developer - Groundbits Ltd'
+                                             ? typeWriter('React Developer - Groundbits Ltd')
+                                             : 'React Developer - Groundbits Ltd'
                                         }
                                    </h3>
                               )}
@@ -117,7 +117,7 @@ export default function Experience({
 
                     <div className='container-content-right'>
                          <div className='content-right' ref={Ref_05}>
-                              {animation(isRef_05_Visible, 0,
+                              {animation(isRef_05_Visible, 0.1,
                                    <>
                                         <h3
                                              style={{
@@ -196,9 +196,6 @@ export default function Experience({
                                         />
                                    </>
                               )}
-                              {handleAnimationEnd()}
-
-
 
                               {animation(isRef_1_Visible, 0.1, <strong>Jan 2020 – Jan 2021 </strong>)}
                               {animation(isRef_1_Visible, 0.14,
