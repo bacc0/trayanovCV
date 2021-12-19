@@ -76,9 +76,9 @@ export default function _CombineSections({
                     {is_Ref_Visible == 1 && (
                          <motion.div exit={{ opacity: 0, y: -10 }}>
                               <motion.div
-                                   initial={{ scale: 1, y: 40, opacity: 0 }}
+                                   initial={{ scale: 0.99, y: 50, opacity: 0 }}
                                    animate={{ scale: 1, y: 0, opacity: 1 }}
-                                   transition={{ type: 'spring', ease: 'anticipate', duration: 1, delay: delay}}
+                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: delay}}
                               >
                               { html }
                               </motion.div>
