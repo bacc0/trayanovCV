@@ -1,5 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect, Fragment } from 'react'
+import { Example } from "./exam/Example";
+
 
 export default function Experience({
      min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition,
@@ -12,6 +14,11 @@ export default function Experience({
 
      const [onAnimationEnd, setOnAnimationEnd] = useState(true)
 
+     // const [vis, setVis] = useState(false)
+
+    
+
+
      useEffect(() => {
           setTimeout(() => {
                setOnAnimationEnd(false)
@@ -22,6 +29,13 @@ export default function Experience({
      return (
 
           <div className='page-body'>
+
+
+<div style={{ position: 'absolute' , top:143, right:  40}}>
+{/* {vis && (<Example/>)} */}
+{<Example/>}
+{/* <button onClick={() => vis ? setVis(false): setVis(true)}> vis </button> */}
+</div>
                <div className='page-body-left'>
 
                     <div className='container-content-left' >

@@ -8,6 +8,7 @@ import AboutMe from './3_AboutMe'
 export default function _CombineSections({
      min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition
 }) {
+     
 
      const [isRef_0_Visible, setIsRef_0_Visible] = useState(true)
      const [isRef_05_Visible, setIsRef_05_Visible] = useState(true)
@@ -52,8 +53,8 @@ export default function _CombineSections({
                setIsRef_1_Visible(false)
           }
 
-          if ((window.pageYOffset + window.innerHeight - 44 >= Ref_2.current.offsetTop) ||
-               (window.pageYOffset + window.innerHeight - 44 >= Ref_2b.current.offsetTop)) {
+          if (( window.pageYOffset + window.innerHeight - 44 >= Ref_2.current.offsetTop  ) ||
+              ( window.pageYOffset + window.innerHeight - 44 >= Ref_2b.current.offsetTop )) {
 
                setIsRef_2_Visible(true)
           } else {
@@ -74,7 +75,7 @@ export default function _CombineSections({
           return (
                <AnimatePresence>
                     {is_Ref_Visible == 1 && (
-                         <motion.div exit={{ opacity: 0, y: -10 }}>
+                         <motion.div exit={{ opacity: 0.3 , y: -10 }}>
                               <motion.div
                                    initial={{ scale: 0.99, y: 50, opacity: 0 }}
                                    animate={{ scale: 1, y: 0, opacity: 1 }}
