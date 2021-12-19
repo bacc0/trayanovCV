@@ -55,7 +55,7 @@ export default function Experience({
                                    'background-color': hrColor,
                                    transition: `background-color ${animationTransition} ease`
                               }} />
-                              
+
                               <strong>Dec 2021 – Present </strong>
                               <p>
                                    Developing a Website Builder.
@@ -106,7 +106,7 @@ export default function Experience({
                                    transition: `background-color ${animationTransition} ease`
                               }}
                               />
-                              
+
                               <strong>July 2021 - Nov 2021 </strong>
                               <p>Building a new components for the application.</p>
                               <p>Using
@@ -144,7 +144,7 @@ export default function Experience({
                                    transition: `background-color ${animationTransition} ease`
                               }}
                               />
-                              
+
                               <strong>Jan 2020 – Jan 2021 </strong>
                               <p>
                                    <p>

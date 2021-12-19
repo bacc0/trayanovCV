@@ -7,9 +7,10 @@ import { motion } from 'framer-motion'
 import MenuAppBar from './MenuAppBar'
 import TitleSVG from './_illustratins/TitleSVG'
 
-import Experience   from './_sections/1_Experience'
+import Experience from './_sections/1_Experience'
 import Technologies from './_sections/2_Technologies'
-import AboutMe      from './_sections/3_AboutMe'
+import AboutMe from './_sections/3_AboutMe'
+import CombineSections from './_sections/_CombineSections'
 
 
 
@@ -129,7 +130,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                     </div>
 
 
-                    <Experience
+                    <CombineSections
                          min_width_600px={min_width_600px}
                          backgroundColor={backgroundColor}
                          hrColorMain={hrColorMain}
@@ -138,7 +139,19 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                          hrColor={hrColor}
                          animationTransition={animationTransition}
                     />
-                    {/* AboutMe */}
+
+
+                    {/* <Experience
+                         min_width_600px={min_width_600px}
+                         backgroundColor={backgroundColor}
+                         hrColorMain={hrColorMain}
+                         thirdLettersColor={thirdLettersColor}
+                         typeWriter={typeWriter}
+                         hrColor={hrColor}
+                         animationTransition={animationTransition}
+                    />
+             
+             
                     <Technologies
                          min_width_600px={min_width_600px}
                          backgroundColor={backgroundColor}
@@ -151,7 +164,6 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
 
                     <div style={{ height: 46 }} />
 
-                    {/* AboutMe */}
 
                     <AboutMe
                          min_width_600px={min_width_600px}
@@ -163,7 +175,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                          animationTransition={animationTransition}
                     />
 
-                    <div style={{ height: min_width_600px ? 62 : 34 }} />
+                    <div style={{ height: min_width_600px ? 62 : 34 }} /> */}
                </div>
           </Fragment >
      )
