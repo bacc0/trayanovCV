@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import Experience from './1_Experience'
 import Technologies from './2_Technologies'
@@ -8,8 +9,8 @@ export default function _CombineSections({
      min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition
 }) {
 
-     const [aaa2, setAaa2] = useState(false)
-     const [aaa3, setAaa3] = useState(false)
+     const [isRef_2_Visible, setIsRef_2_Visible] = useState(false)
+     const [isRef_3_Visible, setIsRef_3_Visible] = useState(false)
 
      const Ref_2 = useRef()
      const Ref_2b = useRef()
@@ -33,18 +34,18 @@ export default function _CombineSections({
           //      setAaa(false)
           // }
 
-          if ( (window.pageYOffset + window.innerHeight - 44 >= Ref_2.current.offsetTop) || 
-               (window.pageYOffset + window.innerHeight - 44 >= Ref_2b.current.offsetTop) ) {
-               
-                    setAaa2(true)
+          if ((window.pageYOffset + window.innerHeight - 44 >= Ref_2.current.offsetTop) ||
+               (window.pageYOffset + window.innerHeight - 44 >= Ref_2b.current.offsetTop)) {
+
+               setIsRef_2_Visible(true)
           } else {
-               setAaa2(false)
+               setIsRef_2_Visible(false)
           }
 
           if (window.pageYOffset + window.innerHeight - 44 >= Ref_3.current.offsetTop) {
-               setAaa3(true)
+               setIsRef_3_Visible(true)
           } else {
-               setAaa3(false)
+               setIsRef_3_Visible(false)
           }
      }
 
@@ -69,8 +70,27 @@ export default function _CombineSections({
      //                {sign}
      //           </motion.div>
      //      </motion.div>
-          
+
      // )
+
+     const animation = ( is_Ref_Visible, delay , html) => {
+
+          return (
+               <AnimatePresence>
+                    {is_Ref_Visible == 1 && (
+                         <motion.div exit={{ opacity: 0, y: -10 }}>
+                              <motion.div
+                                   initial={{ scale: 1, y: 50, opacity: 0 }}
+                                   animate={{ scale: 1, y: 0, opacity: 1 }}
+                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: delay}}
+                              >
+                              { html }
+                              </motion.div>
+                         </motion.div>
+                    )}
+               </AnimatePresence >
+          )
+     }
 
 
      return (
@@ -86,7 +106,7 @@ export default function _CombineSections({
                     hrColor={hrColor}
                     animationTransition={animationTransition}
                />
-        
+
                <Technologies
                     min_width_600px={min_width_600px}
                     backgroundColor={backgroundColor}
@@ -98,7 +118,8 @@ export default function _CombineSections({
 
                     Ref_2={Ref_2}
                     Ref_2b={Ref_2b}
-                    aaa2={aaa2}
+                    isRef_2_Visible={isRef_2_Visible}
+                    animation={animation}
                />
 
                <div style={{ height: 46 }} />
@@ -113,7 +134,8 @@ export default function _CombineSections({
                     animationTransition={animationTransition}
 
                     Ref_3={Ref_3}
-                    aaa3={aaa3}
+                    isRef_3_Visible={isRef_3_Visible}
+                    animation={animation}
                />
 
                <div style={{ height: min_width_600px ? 62 : 34 }} />
