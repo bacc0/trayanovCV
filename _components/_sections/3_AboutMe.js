@@ -18,7 +18,7 @@ export default function AboutMe({
 
                                    <div ref={Ref_3} >
 
-                                        { animation(isRef_3_Visible, 0,
+                                        { animation(isRef_3_Visible, 0.02,
                                              <div style={{ marginTop: 6 }}>
                                                   <h2 style={{
                                                        color: backgroundColor, fontSize: 35, letterSpacing: 2.5,

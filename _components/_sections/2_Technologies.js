@@ -20,7 +20,7 @@ export default function Technologies({
                               <div ref={Ref_2b} >
 
                                    <Hidden smUp >
-                                        {    animation( isRef_2_Visible, 0, 
+                                        {    animation( isRef_2_Visible, 0.02, 
                                                   <div style={{ margin: `24px 0 52px` }}>
                                                        <h2 style={{
                                                             color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
@@ -73,7 +73,7 @@ export default function Technologies({
                               <div ref={Ref_2} >
                               <Hidden smDown >
 
-                                   {    animation( isRef_2_Visible, 0, 
+                                   {    animation( isRef_2_Visible, 0.02, 
                                              <div style={{ margin: `20px 0 38px` }}>
                                                   <h2 style={{
                                                        color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
