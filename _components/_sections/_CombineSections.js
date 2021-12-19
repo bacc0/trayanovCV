@@ -9,9 +9,15 @@ export default function _CombineSections({
      min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition
 }) {
 
-     const [isRef_2_Visible, setIsRef_2_Visible] = useState(false)
-     const [isRef_3_Visible, setIsRef_3_Visible] = useState(false)
+     const [isRef_0_Visible, setIsRef_0_Visible] = useState(true)
+     const [isRef_05_Visible, setIsRef_05_Visible] = useState(true)
+     const [isRef_1_Visible, setIsRef_1_Visible] = useState(true)
+     const [isRef_2_Visible, setIsRef_2_Visible] = useState(true)
+     const [isRef_3_Visible, setIsRef_3_Visible] = useState(true)
 
+     const Ref_0 = useRef()
+     const Ref_05 = useRef()
+     const Ref_1 = useRef()
      const Ref_2 = useRef()
      const Ref_2b = useRef()
 
@@ -27,12 +33,24 @@ export default function _CombineSections({
 
      const scrollHandler = () => {
 
+          if (window.pageYOffset + window.innerHeight - 44 >= Ref_0.current.offsetTop) {
+               setIsRef_0_Visible(true)
+          } else {
+               setIsRef_0_Visible(false)
+          }
 
-          // if (window.pageYOffset + window.innerHeight - 100 >= Ref_1.current.offsetTop) {
-          //      setAaa(true)
-          // } else {
-          //      setAaa(false)
-          // }
+          if (window.pageYOffset + window.innerHeight - 44 >= Ref_05.current.offsetTop) {
+               setIsRef_05_Visible(true)
+          } else {
+               setIsRef_05_Visible(false)
+          }
+
+
+          if (window.pageYOffset + window.innerHeight - 44 >= Ref_1.current.offsetTop) {
+               setIsRef_1_Visible(true)
+          } else {
+               setIsRef_1_Visible(false)
+          }
 
           if ((window.pageYOffset + window.innerHeight - 44 >= Ref_2.current.offsetTop) ||
                (window.pageYOffset + window.innerHeight - 44 >= Ref_2b.current.offsetTop)) {
@@ -73,7 +91,7 @@ export default function _CombineSections({
 
      // )
 
-     const animation = ( is_Ref_Visible, delay , html) => {
+     const animation = ( is_Ref_Visible, delay , html ) => {
 
           return (
                <AnimatePresence>
@@ -105,6 +123,16 @@ export default function _CombineSections({
                     typeWriter={typeWriter}
                     hrColor={hrColor}
                     animationTransition={animationTransition}
+
+                    Ref_0={Ref_0}
+                    isRef_0_Visible={isRef_0_Visible}
+                    
+                    Ref_05={Ref_05}
+                    isRef_05_Visible={isRef_05_Visible}
+
+                    Ref_1={Ref_1}
+                    isRef_1_Visible={isRef_1_Visible}
+                    animation={animation}
                />
 
                <Technologies
