@@ -14,9 +14,9 @@ var sasa = () => {
           <Fragment>
 
                <motion.div
-                    initial={{ opacity: 0.8, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 0.9 }}
-                    transition={{ delay: 0, duration: 3 }}
+                    transition={{ delay: 0.4, duration: 1.2 }}
                >
 
                     {/* ---------------------   how use Tumult HYPE 4 (https://tumult.com/hype/) ---------------     */}
