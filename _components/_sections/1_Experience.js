@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect, Fragment } from 'react'
-import { Example } from "./exam/Example";
+// import { Example } from "./helpers/AnimationText";
+import { Example } from "./helpers/AnimationText";
 
 
 export default function Experience({
@@ -14,11 +15,6 @@ export default function Experience({
 
      const [onAnimationEnd, setOnAnimationEnd] = useState(true)
 
-     // const [vis, setVis] = useState(false)
-
-    
-
-
      useEffect(() => {
           setTimeout(() => {
                setOnAnimationEnd(false)
@@ -26,16 +22,108 @@ export default function Experience({
      }, [])
 
 
+
+     // const experienceGroundbits = [
+     //      <>
+     //           <h3
+     //                style={{
+     //                     color: thirdLettersColor, minHeight: 36, letterSpacing: 1.3,
+     //                     transition: `color ${animationTransition} ease`
+     //                }}
+     //           >
+     //                {onAnimationEnd
+     //                     ? typeWriter('React Developer - Groundbits Ltd')
+     //                     : 'React Developer - Groundbits Ltd'
+     //                }
+     //           </h3>
+     //           <hr
+     //                style={{
+     //                     'background-color': hrColor,
+     //                     transition: `background-color ${animationTransition} ease`
+     //                }}
+     //           />
+     //      </>
+     //      ,
+     //      <strong> Dec 2021 – Present </strong>
+     //      ,
+     //      <p>Developing a Website Builder.</p>
+     //      ,
+     //      <p>
+     //           Using
+     //           <span className='font-weight-300'> REACT </span>
+     //           with
+     //           <span className='font-weight-300'> NEXTJS</span>
+     //           , for styling
+     //           <span className='font-weight-300'> MATERIAL UI (MUI)</span>
+     //           ,
+     //           <span className='font-weight-300'> STRAPI </span>
+     //           for contains management system (CMS), for animation
+     //           <span className='font-weight-300'> FRAMER MOTION </span>
+     //           and directly
+     //           <span className='font-weight-300'> SVG’s </span>
+     //           manipulation.
+     //      </p>
+
+     // ]
+
+
+
+
+     // const experienceAmdocs = [
+     //      <>
+     //           <h3
+     //                style={{
+     //                     color: thirdLettersColor, minHeight: 36, letterSpacing: 1.3,
+     //                     transition: `color ${animationTransition} ease`
+     //                }}
+     //           >
+     //                {onAnimationEnd
+     //                     ? typeWriter(' React Developer - Amdocs via Appgr8')
+     //                     : ' React Developer - Amdocs via Appgr8'
+     //                }
+     //           </h3>
+     //           <hr
+     //                style={{
+     //                     'background-color': hrColor,
+     //                     transition: `background-color ${animationTransition} ease`
+     //                }}
+     //           />
+     //      </>
+     //      ,
+     //      <strong> July 2021 - Nov 2021 </strong>
+     //      ,
+     //      <p>Building a new components for the application.</p>
+     //      ,
+     //      <p>
+     //           Using
+     //           <span className='font-weight-300'> MATERIAL UI</span>
+     //           ,
+     //           <span className='font-weight-300'> TYPESCRIPT</span>
+     //           ,
+     //           <span className='font-weight-300'> SOURCETREE</span>
+     //           ,
+     //           <span className='font-weight-300'> BITBUKET </span>
+     //           ect.
+     //      </p>
+     //      ,
+     //      <p>
+     //           For the software development the company used
+     //           <span className='font-weight-300'> AGILE </span>
+     //           with the
+     //           <span className='font-weight-300'> SCRUM </span>
+     //           framework
+     //           and
+     //           <span className='font-weight-300'> JIRA</span>
+     //           .
+     //      </p>
+     // ]
+
+
+
+
      return (
 
           <div className='page-body'>
-
-
-<div style={{ position: 'absolute' , top:143, right:  40}}>
-{/* {vis && (<Example/>)} */}
-{<Example/>}
-{/* <button onClick={() => vis ? setVis(false): setVis(true)}> vis </button> */}
-</div>
                <div className='page-body-left'>
 
                     <div className='container-content-left' >
@@ -44,33 +132,40 @@ export default function Experience({
                               className='content-left'
                               style={{ margin: `5px 0 ${min_width_600px ? 36 : -7}px` }}
                          >
-                                   {animation(isRef_0_Visible, 0.1,
-                                        <>
-                                         <h2 style={{
-                                        color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
-                                        transition: `color ${animationTransition} ease`
-                                   }}
-                                   >
-                                        Experience
-                                   </h2>
-                                   <hr style={{ 'background-color': hrColorMain, transition: `background-color ${animationTransition} ease` }} 
-                                   />
-                                        </>
-                                   )}
-                                  
+                              {animation(isRef_0_Visible, 0.1,
+                                   <>
+                                        <h2 style={{
+                                             color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
+                                             transition: `color ${animationTransition} ease`
+                                        }}
+                                        >
+                                             Experience
+                                        </h2>
+                                        <hr style={{ 'background-color': hrColorMain, transition: `background-color ${animationTransition} ease` }}
+                                        />
+                                   </>
+                              )}
+
                          </div>
                     </div>
-
 
                     <div className='container-content-left'  >
                          <div
                               className='content-left'
                               style={{ marginTop: min_width_600px ? 0 : 16 }}
                          >
+                              {/* {isRef_0_Visible && <Example text={experienceGroundbits} />}
+                              <>
+                                   <br />
+                                   <p>
+                                        <strong>Ricard Rosson </strong>
+                                        <div>ricard@iacos.net</div>
+                                   </p>
+                              </> */}
 
                               {animation(isRef_0_Visible, 0.14,
                                    <h3 style={{
-                                        color: thirdLettersColor, minHeight: 30, letterSpacing: 1.3,
+                                        color: thirdLettersColor, minHeight: 36, letterSpacing: 1.3,
                                         transition: `color ${animationTransition} ease`
                                    }}
                                    >
@@ -131,11 +226,12 @@ export default function Experience({
 
                     <div className='container-content-right'>
                          <div className='content-right' ref={Ref_05}>
+                              {/* {isRef_05_Visible && <Example text={experienceAmdocs} />} */}
                               {animation(isRef_05_Visible, 0.1,
                                    <>
                                         <h3
                                              style={{
-                                                  color: thirdLettersColor, minHeight: 30, letterSpacing: 1.3,
+                                                  color: thirdLettersColor, minHeight: 36, letterSpacing: 1.3,
                                                   transition: `color ${animationTransition} ease`
                                              }}
                                         >
@@ -189,11 +285,11 @@ export default function Experience({
 
                     <div className='container-content-right'>
                          <div className='content-right' ref={Ref_1}>
-
+                              {/* {isRef_1_Visible && <Example text={experienceGroundbits} />} */}
                               {animation(isRef_1_Visible, 0,
                                    <>
                                         <h3 style={{
-                                             color: thirdLettersColor, minHeight: 30, letterSpacing: 1.3,
+                                             color: thirdLettersColor, minHeight: 36, letterSpacing: 1.3,
                                              transition: `color ${animationTransition} ease`
                                         }}
                                         >
