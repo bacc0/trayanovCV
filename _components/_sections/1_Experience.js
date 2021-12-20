@@ -214,6 +214,22 @@ export default function Experience({
                                         <div>ricard@iacos.net</div>
                                    </p>
                               )}
+
+                              <div
+                                   style={{
+
+                                        height: 90,
+                                        width: 130,
+                                        marginBottom: 50,
+                                        opacity: 0.9,
+
+                                        backgroundImage: `url('computers.svg')`,
+                                        backgroundRepeat: 'repeat',
+                                        // backgroundPosition: 'center',
+                                        backgroundSize: '100%',
+                                        backgroundRepeat: 'no-repeat'
+                                   }}
+                              ></div>
                          </div>
                     </div>
                </div>
