@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect, Fragment } from 'react'
 // import { Example } from "./helpers/AnimationText";
 import { Example } from "./helpers/AnimationText";
-
+import Image from 'next/image'
 
 export default function Experience({
      min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition,
@@ -215,7 +215,14 @@ export default function Experience({
                                    </p>
                               )}
 
-                              <div
+                              <Image
+                                   src="/computers.svg"
+                                   alt="Picture of the author"
+                                   width={140}
+                                   height={110}
+                              />
+
+                              {/* <div
                                    style={{
 
                                         height: 90,
@@ -229,7 +236,7 @@ export default function Experience({
                                         backgroundSize: '100%',
                                         backgroundRepeat: 'no-repeat'
                                    }}
-                              ></div>
+                              /> */}
                          </div>
                     </div>
                </div>

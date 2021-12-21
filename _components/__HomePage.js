@@ -21,6 +21,8 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const [backgroundColor, setBackgroundColor] = useState('#13478B')
      const [AppBackgroundColor, setAppBackgroundColor] = useState('#FFFFFF')
      const [bodyColor, setBodyColor] = useState('#717d97')
+     const [footerColor, setFooterColor] = useState('#717d97')
+     const [footerTextColor, setFooterTextColor] = useState('#FFFFFF')
 
      const min_width_600px = useMediaQuery('(min-width:600px)')
      const logo_W_H = 230
@@ -34,10 +36,12 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           setThirdLettersColor(theme === 'light' ? '#8E75FF' : '#B9E981')
           setThirdLogoColor(theme === 'light' ? '#8E75FF' : '#F731DD')
           setHrColor(theme === 'light' ? '#EDF0F2' : '#95217D')
-          setHrColorMain(theme === 'light' ? '#1E1B84' : '#FFFFFF')
-          setBackgroundColor(theme === 'light' ? '#1E1B84' : '#FFFFFF')
+          setHrColorMain(theme === 'light' ? '#1A1F2C' : '#FFFFFF')
+          setBackgroundColor(theme === 'light' ? '#1A1F2C' : '#FFFFFF')
           setAppBackgroundColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
           setBodyColor(theme === 'light' ? '#344B7F' : '#8899C6')
+          setFooterColor(theme === 'light' ? '#1A1F2C' : '#222839')
+          setFooterTextColor(theme === 'light' ? '#FFFFFF' : '#FFFFFF')
      }, [theme]);
 
 
@@ -125,6 +129,8 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                          typeWriter={typeWriter}
                          hrColor={hrColor}
                          animationTransition={animationTransition}
+                         footerColor={footerColor}
+                         footerTextColor={footerTextColor}
                     />
                </div>
           </Fragment >

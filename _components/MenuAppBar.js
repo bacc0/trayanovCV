@@ -43,7 +43,7 @@ export default function MenuAppBar({
           fontSize: 10,
           height: scrollDirection === 'up' ? 0 : 65,
           transition: `height 800ms ease`,
-       
+
      }
      const ToolbarContainer = {
           borderBottom: `1px solid blck`,
@@ -111,31 +111,48 @@ export default function MenuAppBar({
                                         <Stack
                                              direction='row'
                                              spacing={1}
-                                             onClick={() => handleThemeChange()}
+
                                              style={iconsStackStyle}
                                         >
 
-                                             <IconButton aria-label='LinkedIn Icon' style={iconsStyle}>
+                                             <IconButton
+                                                  href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'} aria-label='LinkedIn Icon' style={iconsStyle}
+                                             >
                                                   <LinkedInIcon />
                                              </IconButton>
 
-                                             <IconButton aria-label='Phone Icon' style={iconsStyle}>
+                                             <IconButton
+                                                  href={`tel: 00447590010066`}
+                                                  aria-label='Phone Icon' style={iconsStyle}
+                                             >
                                                   <PhoneEnabledSharpIcon />
                                              </IconButton>
 
-                                             <IconButton aria-label='Local Icon' style={iconsStyle}>
+                                             <IconButton
+                                                  href={`mailto: bacco23@gmail.com`}
+                                                  aria-label='Local Icon' style={iconsStyle}
+                                             >
                                                   <LocalPostOfficeSharpIcon />
                                              </IconButton>
 
-                                             <IconButton aria-label='Location Icon' style={iconsStyle}>
+                                             <IconButton
+                                                  href={'https://www.google.com/maps/@51.4764334,-0.1572618,16.21z'}
+                                                  aria-label='Location Icon' style={iconsStyle}
+                                             >
                                                   <LocationOnSharpIcon />
                                              </IconButton>
 
-                                             <IconButton aria-label='GitHub Icon' style={iconsStyle}>
+                                             <IconButton
+                                                  href={'https://github.com/bacc0'}
+                                                  aria-label='GitHub Icon' style={iconsStyle}
+                                             >
                                                   <GitHubIcon />
                                              </IconButton>
 
-                                             <IconButton aria-label='theme icon' style={iconsStyle}>
+                                             <IconButton
+                                                  onClick={() => handleThemeChange()}
+                                                  aria-label='theme icon' style={iconsStyle}
+                                             >
                                                   {theme === 'light'
                                                        ? <NightlightRoundIcon />
                                                        : <LightModeIcon />

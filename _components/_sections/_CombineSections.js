@@ -4,9 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Experience from './1_Experience'
 import Technologies from './2_Technologies'
 import AboutMe from './3_AboutMe'
+import Footer from './4_Footer'
+
 
 export default function _CombineSections({
-     min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition
+     min_width_600px, footerColor,footerTextColor,  backgroundColor, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition
 }) {
      
 
@@ -94,6 +96,8 @@ export default function _CombineSections({
 
           <div >
 
+              
+
                <Experience
                     min_width_600px={min_width_600px}
                     backgroundColor={backgroundColor}
@@ -146,6 +150,21 @@ export default function _CombineSections({
                />
 
                <div style={{ height: min_width_600px ? 62 : 34 }} />
+
+               <Footer  
+               min_width_600px={min_width_600px}
+                    backgroundColor={backgroundColor}
+                    hrColorMain={hrColorMain}
+                    thirdLettersColor={thirdLettersColor}
+                    typeWriter={typeWriter}
+                    hrColor={hrColor}
+                    animationTransition={animationTransition}
+                    footerColor={footerColor}
+                    footerTextColor={footerTextColor}
+                    // Ref_3={Ref_3}
+                    // isRef_3_Visible={isRef_3_Visible}
+                    // animation={animation}
+               />
           </div>
      )
 }
