@@ -55,7 +55,7 @@ export default function AboutMe({
                                                   <h3
                                                        style={{
                                                             color: thirdLettersColor,
-                                                            transition: `color ${animationTransition} ease`
+                                                            transition: `color ${animationTransition} ease`,
                                                        }}
                                                   >
                                                        Skills

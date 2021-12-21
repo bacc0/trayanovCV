@@ -165,7 +165,8 @@ export default function Experience({
 
                               {animation(isRef_0_Visible, 0.14,
                                    <h3 style={{
-                                        color: thirdLettersColor, minHeight: 36, letterSpacing: 1.3,
+                                        color: thirdLettersColor, letterSpacing: 1.3,
+                                        minHeight: min_width_600px ? 40 : 70,
                                         transition: `color ${animationTransition} ease`
                                    }}
                                    >
@@ -254,7 +255,8 @@ export default function Experience({
                                    <>
                                         <h3
                                              style={{
-                                                  color: thirdLettersColor, minHeight: 36, letterSpacing: 1.3,
+                                                  color: thirdLettersColor, letterSpacing: 1.3,
+                                                  minHeight: min_width_600px ? 40 : 70,
                                                   transition: `color ${animationTransition} ease`
                                              }}
                                         >
@@ -312,7 +314,8 @@ export default function Experience({
                               {animation(isRef_1_Visible, 0,
                                    <>
                                         <h3 style={{
-                                             color: thirdLettersColor, minHeight: 36, letterSpacing: 1.3,
+                                             color: thirdLettersColor, letterSpacing: 1.3,
+                                             minHeight: min_width_600px ? 40 : 70,
                                              transition: `color ${animationTransition} ease`
                                         }}
                                         >
