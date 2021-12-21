@@ -214,14 +214,14 @@ export default function Experience({
                                         <div>ricard@iacos.net</div>
                                    </p>
                               )}
-
-                              <Image
-                                   src="/computers.svg"
-                                   alt="Picture of the author"
-                                   width={140}
-                                   height={110}
-                              />
-
+                              {animation(isRef_0_Visible, 0.38,
+                                   <Image
+                                        src="/computers.svg"
+                                        alt="Picture of the author"
+                                        width={140}
+                                        height={110}
+                                   />
+                              )}
                               {/* <div
                                    style={{
 
