@@ -6,7 +6,7 @@ $margin-footer-desktop : 65px;
 
 $element-width: 240px;
 
-$element-width-mobile: 80vw;
+$element-width-mobile: 80%;
 
 
 $title-width: ($element-width + $distance-middle-half) * 2;
@@ -101,7 +101,7 @@ body {
                transition: background-color 350ms ease;
 
                .page-nav {
-                    width: 100vw;
+                    width: 100%;
                     height: $nav-height;
                     margin-bottom: $distance-middle-full;
 
@@ -116,7 +116,7 @@ body {
 
                @media only screen and (max-width: 600px) {
                     .page-body {
-                         width: 100vw;
+                         width: 100%;
                          font-size: 17px;
                          line-height: 30px;
                          letter-spacing: 0.78px;
@@ -180,7 +180,7 @@ body {
 
                @media only screen and (min-width: 601px) {
                     .page-body {
-                         width: 100vw;
+                         width: 100%;
                          display: flex;
 
 
