@@ -6,7 +6,7 @@ export default function Technologies({
      theme, min_width_600px, backgroundColor, backgroundColor_2, hrColorMain, animationTransition,
      Ref_2, Ref_2b,
      isRef_2_Visible,
-     animation
+     animation, Y_position
 }) {
 
      const styleContainer = {
@@ -118,6 +118,7 @@ export default function Technologies({
                                         width={140}
                                         height={110}
                                         threshold={0.5}
+                                        Y_position={Y_position}
                                    />
                               )}
                          </div>

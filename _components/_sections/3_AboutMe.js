@@ -1,3 +1,4 @@
+import AnimationImage from './helpers/AnimationImage'
 
 export default function AboutMe({
      min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, hrColor, animationTransition,
@@ -6,15 +7,15 @@ export default function AboutMe({
 }) {
 
      const styleContainer = {
-          paddingTop:  min_width_600px ? 96 : 130,
-          paddingBottom: min_width_600px ? 70: 57, 
+          paddingTop: min_width_600px ? 96 : 130,
+          paddingBottom: min_width_600px ? 70 : 57,
           // minHeight :min_width_600px ? 300 : 300
      }
 
      return (
           <div>
-               <div className='page-body'  
-               style={styleContainer}
+               <div className='page-body'
+                    style={styleContainer}
                >
                     <div className='page-body-left'>
 
@@ -26,7 +27,7 @@ export default function AboutMe({
 
                                    <div ref={Ref_3} >
 
-                                        { animation(isRef_3_Visible, 0.02,
+                                        {animation(isRef_3_Visible, 0.02,
                                              <div style={{ marginTop: 6 }}>
                                                   <h2 style={{
                                                        color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
@@ -95,6 +96,9 @@ export default function AboutMe({
                                                   I'm very positive creative, flexible and responsible.
                                              </p>
                                         )}
+                                        {animation(isRef_3_Visible,  0.36,
+                                             <p>Experience working with dynamic content.</p>
+                                        )}
 
                                    </div>
                               )}
@@ -110,39 +114,46 @@ export default function AboutMe({
                               <div className='container-content-right'>
                                    <div className='content-right'>
 
-                                        {animation(isRef_3_Visible, min_width_600px ? 0.14 : 0.36,
+                                        {/* {animation(isRef_3_Visible, min_width_600px ? 0.14 : 0.36,
                                              <p>Experience working with dynamic content.</p>
-                                        )}
+                                        )} */}
 
-                                        {animation(isRef_3_Visible, min_width_600px ? 0.18 : 0.4,
+                                        {animation(isRef_3_Visible, min_width_600px ? 0.14 : 0.36,
                                              <p>Developing with ReactJS single page JavaScript Applications.</p>
                                         )}
 
-                                        {animation(isRef_3_Visible, min_width_600px ? 0.22 : 0.44,
+                                        {animation(isRef_3_Visible, min_width_600px ? 0.18 : 0.4,
                                              <p>Attention to Detail.</p>
                                         )}
 
-                                        {animation(isRef_3_Visible, min_width_600px ? 0.26 : 0.48,
+                                        {animation(isRef_3_Visible, min_width_600px ? 0.22 : 0.44,
                                              <p>Problem Solving Skills.</p>
                                         )}
 
-                                        {animation(isRef_3_Visible, min_width_600px ? 0.3 : 0.52,
+                                        {animation(isRef_3_Visible, min_width_600px ? 0.26 : 0.48,
                                              <p>Good understanding working with APIs (RESTful services).
 
                                              </p>)}
 
-                                        {animation(isRef_3_Visible, min_width_600px ? 0.34 : 0.56,
+                                        {animation(isRef_3_Visible, min_width_600px ? 0.3 : 0.52,
                                              <p>
                                                   Web developer able to build a Web presence from the ground up, from concept, navigation, working with data and programming to UX.
                                              </p>
                                         )}
 
-                                        {animation(isRef_3_Visible, min_width_600px ? 0.38 : 0.6,
+                                        {animation(isRef_3_Visible, min_width_600px ? 0.34 : 0.56,
                                              <p>
                                                   Skilled at writing well-designed, efficient code using current best practices in Web development.
                                              </p>
                                         )}
-
+                                        {animation(isRef_3_Visible, min_width_600px ? 0.38 : 0.6,
+                                             <AnimationImage
+                                                  image={'/about_me.svg'}
+                                                  width={140}
+                                                  height={110}
+                                                  threshold={0.5}
+                                             />
+                                        )}
                                    </div>
                               </div>
                          </div>

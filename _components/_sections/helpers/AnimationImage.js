@@ -5,10 +5,28 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 export default function AnimationImage({ image, width, height, threshold = 0.5 }) {
 
-     const { observe, inView } = useInView({ threshold: threshold })
+     const { observe, inView } = useInView({
+          threshold: threshold,
+
+          //           onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
+          //             // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
+
+          //             unobserve(); // To stop observing the current target element
+          //             observe(); // To re-start observing the current target element
+          //           },
+          // onEnter: ({ scrollDirection, entry, observe, unobserve }) => {
+          //   // Triggered when the target enters the viewport
+          // },
+          //                          onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
+          //                            // Triggered when the target leaves the viewport
+          // console.log(scrollDirection)
+
+          //                          },
+          //           // More useful options...
+     })
 
      return (
-          <div ref={observe} style={{height: height}}>
+          <div ref={observe} style={{ height: height }}>
                <AnimatePresence>
                     {inView && (
                          <motion.div
