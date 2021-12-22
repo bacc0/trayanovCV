@@ -16,15 +16,16 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const color_3 = '#757575'
      const color_4 = '#383838'
      const color_5 = '#000000'
-     const color_6 = '#8E75FF'
+     const color_6 = '#A673FF'
      const color_7 = '#AC99FF'
 
-     // const color_1 = '#AC99FF'
-     // const color_5 = '#1E2738'
-     // const color_3 = '#5C79AE'
-     // const color_4 = '#3E5276'
+     // const color_1 = '#FFFFFF'
+     // const color_2 = '#CCCCCA'
+     // const color_3 = '#697C82'
+     // const color_4 = '#1E3138'
+     // const color_5 = '#111D1F'
      // const color_6 = '#8E75FF'
-     // const color_2 = '#799FE4'
+     // const color_7 = '#AC99FF'
 
 
      const [onAnimationEnd, setOnAnimationEnd] = useState(false)
@@ -50,7 +51,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      useEffect(() => {
           setPrimeLettersColor(theme === 'light' ? color_1 : color_5)
           setSecLettersColor(theme === 'light' ? color_3 : color_2)
-          setThirdLettersColor(theme === 'light' ? color_4 : color_6)
+          setThirdLettersColor(theme === 'light' ? color_6 : color_6)
           setThirdLogoColor(theme === 'light' ? color_6 : color_7)
           setHrColor(theme === 'light' ? color_2 : color_3)
           setHrColorMain(theme === 'light' ? color_5 : color_1)
@@ -61,7 +62,6 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           setFooterColor(theme === 'light' ? color_4 : color_3)
           setFooterTextColor(theme === 'light' ? color_1 : color_1)
      }, [theme]);
-
 
      const typeWriter = (sentence) => {
           return (
@@ -115,13 +115,24 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                               borderBottom: `1px solid ${hrColor}`,
                               // background: `linear-gradient(0deg, #00000001 0%, transparent`
                          }}>
-                         <div className='title-container vertical-center-container'>
+                         <div className='title-container vertical-center-container'
+                              style={{
+                                   width: '90vw',
+
+                                   'background-image': min_width_600px ? `url('FRONT_END.svg')` : null,
+                                   backgroundPosition: `center ${Number(6 + (Y_position * -40)).toFixed(1)}vh`,
+                                   backgroundSize: min_width_600px ? 536 : '80vw',
+                                   backgroundRepeat: 'no-repeat',
+                                   transition: `background-image 1000ms ease`
+                              }}
+                              >
                               <div className='vertical-center' >
                                    <motion.div
-                                        initial={{ scale: 1, y: -200,x: 10, opacity: 0 }}
-                                        animate={{ scale: 1, y: 0,x: 10, opacity: 1 }}
+                                        initial={{ scale: 1, y: -200, x: 10, opacity: 0 }}
+                                        animate={{ scale: 1, y: 0, x: 10, opacity: 1 }}
                                         transition={{ type: 'spring', duration: 0.9, delay: 0 }}
                                         className='title'
+                                        style={{ position: 'relative', margin: Number(1 + (Y_position * -40)).toFixed(1) }}
                                    >
 
                                         <TitleSVG
