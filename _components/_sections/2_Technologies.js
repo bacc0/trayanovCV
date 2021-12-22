@@ -1,8 +1,7 @@
-import { motion, AnimatePresence } from 'framer-motion'
-
 import { Hidden } from '@mui/material'
-import { useState } from 'react'
-import Image from 'next/image'
+import AnimationImage from './helpers/AnimationImage'
+
+
 export default function Technologies({
      theme, min_width_600px, backgroundColor, backgroundColor_2, hrColorMain, animationTransition,
      Ref_2, Ref_2b,
@@ -112,20 +111,17 @@ export default function Technologies({
                               {animation(isRef_2_Visible, min_width_600px ? 0.42 : 0.84, <p>Jira</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.46 : 0.88, <p>Jenkins</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.5 : 0.92, <p>Storybook</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.54 : 0.96,
-                         <div style={{marginTop: 15}}>
-                              <Image 
-                                   src="/TECH2.svg"
-                                   alt="Picture of the author"
-                                   width={140}
-                                   height={110}
-                              />
-                              </div>
-                         )}
-                         </div>
-                         
-                    </div>
 
+                              {animation(isRef_2_Visible, min_width_600px ? 0.54 : 0.96,
+                                   <AnimationImage
+                                        image={'/TECH2.svg'}
+                                        width={140}
+                                        height={110}
+                                        threshold={0.5}
+                                   />
+                              )}
+                         </div>
+                    </div>
                </div>
           </div>
      )

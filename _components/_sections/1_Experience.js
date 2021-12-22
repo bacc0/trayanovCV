@@ -1,8 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect, Fragment } from 'react'
-// import { Example } from "./helpers/AnimationText";
-import { Example } from "./helpers/AnimationText";
-import Image from 'next/image'
+import { Example } from './helpers/AnimationText';
+import AnimationImage from './helpers/AnimationImage'
 
 export default function Experience({
      min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition,
@@ -120,7 +119,7 @@ export default function Experience({
 
      const styleContainer = {
           paddingTop: min_width_600px ? 98 : 109,
-          paddingBottom: min_width_600px ? 62 :58,
+          paddingBottom: min_width_600px ? 62 : 58,
           minHeight: min_width_600px ? 300 : 300
      }
 
@@ -218,12 +217,13 @@ export default function Experience({
                                         <div>ricard@iacos.net</div>
                                    </p>
                               )}
+
                               {animation(isRef_0_Visible, 0.38,
-                                   <Image
-                                        src="/computers.svg"
-                                        alt="Picture of the author"
+                                   <AnimationImage
+                                        image={'/computers.svg'}
                                         width={140}
                                         height={110}
+                                        threshold={0.5}
                                    />
                               )}
                               {/* <div

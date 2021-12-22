@@ -32,7 +32,7 @@ export default function _CombineSections({
                //           // More useful options...
                        }
           )
-     // console.log(inView)
+     console.log(inView)
 
 
      const [isRef_0_Visible, setIsRef_0_Visible] = useState(true)

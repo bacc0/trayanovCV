@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // import { useDimensions } from "./use-dimensions";
 
 
-export const Example = ({ text }) => {
+export const AnimationText = ({ text }) => {
 
      const menuItem = (index) => {
           return (
