@@ -17,7 +17,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const color_4 = '#383838'
      const color_5 = '#000000'
      const color_6 = '#A673FF'
-     const color_7 = '#AC99FF'
+     const color_7 = '#C4A6DE'
 
      // const color_1 = '#FFFFFF'
      // const color_2 = '#CCCCCA'
@@ -60,7 +60,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           setBackgroundColor_2(theme === 'light' ? color_2 : color_4)
           setAppBackgroundColor(theme === 'light' ? color_1 : color_4)
           setBodyColor(theme === 'light' ? color_5 : color_1)
-          setFooterColor(theme === 'light' ? color_4 : color_3)
+          setFooterColor(theme === 'light' ? color_3 : color_3)
           setFooterTextColor(theme === 'light' ? color_1 : color_1)
           setBackgroundNav( theme === 'light' ? `url('FRONT_END.svg')` : `url('FRONT_END_DARK.svg')`)
      }, [theme]);
