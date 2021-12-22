@@ -6,11 +6,34 @@ import Technologies from './2_Technologies'
 import AboutMe from './3_AboutMe'
 import Footer from './4_Footer'
 
+import useInView from 'react-cool-inview'
 
 export default function _CombineSections({
-     theme, min_width_600px, footerColor,footerTextColor,  backgroundColor, backgroundColor_2, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition
+     theme, min_width_600px, footerColor, footerTextColor, backgroundColor, backgroundColor_2, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition
 }) {
-     
+
+     const { observe, unobserve, inView, scrollDirection, entry } =
+          useInView(
+               // {
+               //           threshold: 0.25, // Default is 0
+               //           onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
+               //             // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
+
+               //             unobserve(); // To stop observing the current target element
+               //             observe(); // To re-start observing the current target element
+               //           },
+               //           onEnter: ({ scrollDirection, entry, observe, unobserve }) => {
+               //             // Triggered when the target enters the viewport
+
+               //           },
+               //           onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
+               //             // Triggered when the target leaves the viewport
+               //           },
+               //           // More useful options...
+               //         }
+          )
+     console.log(inView)
+
 
      const [isRef_0_Visible, setIsRef_0_Visible] = useState(true)
      const [isRef_05_Visible, setIsRef_05_Visible] = useState(true)
@@ -55,8 +78,8 @@ export default function _CombineSections({
                setIsRef_1_Visible(false)
           }
 
-          if (( window.pageYOffset + window.innerHeight - 44 >= Ref_2.current.offsetTop  ) ||
-              ( window.pageYOffset + window.innerHeight - 44 >= Ref_2b.current.offsetTop )) {
+          if ((window.pageYOffset + window.innerHeight - 44 >= Ref_2.current.offsetTop) ||
+               (window.pageYOffset + window.innerHeight - 44 >= Ref_2b.current.offsetTop)) {
 
                setIsRef_2_Visible(true)
           } else {
@@ -72,18 +95,18 @@ export default function _CombineSections({
 
 
 
-     const animation = ( is_Ref_Visible, delay , html ) => {
+     const animation = (is_Ref_Visible, delay, html) => {
 
           return (
                <AnimatePresence>
                     {is_Ref_Visible == 1 && (
-                         <motion.div exit={{ opacity: 0.3 , y: -10 }}>
+                         <motion.div exit={{ opacity: 0.3, y: -10 }}>
                               <motion.div
                                    initial={{ scale: 0.99, y: 50, opacity: 0 }}
                                    animate={{ scale: 1, y: 0, opacity: 1 }}
-                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: delay}}
+                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: delay }}
                               >
-                              { html }
+                                   {html}
                               </motion.div>
                          </motion.div>
                     )}
@@ -96,7 +119,7 @@ export default function _CombineSections({
 
           <div >
 
-              
+
 
                <Experience
                     min_width_600px={min_width_600px}
@@ -140,7 +163,7 @@ export default function _CombineSections({
                <AboutMe
                     min_width_600px={min_width_600px}
                     backgroundColor={backgroundColor}
-                    
+
                     hrColorMain={hrColorMain}
                     thirdLettersColor={thirdLettersColor}
                     typeWriter={typeWriter}
@@ -154,20 +177,31 @@ export default function _CombineSections({
 
                {/* <div style={{ height: min_width_600px ? 62 : 34 }} /> */}
 
-               <Footer  
-               min_width_600px={min_width_600px}
-                    backgroundColor={backgroundColor}
-                    hrColorMain={hrColorMain}
-                    thirdLettersColor={thirdLettersColor}
-                    typeWriter={typeWriter}
-                    hrColor={hrColor}
-                    animationTransition={animationTransition}
-                    footerColor={footerColor}
-                    footerTextColor={footerTextColor}
-                    // Ref_3={Ref_3}
-                    // isRef_3_Visible={isRef_3_Visible}
-                    // animation={animation}
-               />
+
+               <div style={{ height: 250 }}
+
+                    ref={observe}>
+
+                    {inView && (
+                         <motion.div
+                         initial={{ opacity: 0.9 }}
+                         animate={{ opacity: 1}}
+                         transition={{ duration: 0.1 }}
+                         >
+                              <Footer
+                                   min_width_600px={min_width_600px}
+                                   backgroundColor={backgroundColor}
+                                   hrColorMain={hrColorMain}
+                                   thirdLettersColor={thirdLettersColor}
+                                   typeWriter={typeWriter}
+                                   hrColor={hrColor}
+                                   animationTransition={animationTransition}
+                                   footerColor={footerColor}
+                                   footerTextColor={footerTextColor}
+                              />
+                         </motion.div>
+                    )}
+               </div>
           </div>
      )
 }
