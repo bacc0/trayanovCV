@@ -11,18 +11,35 @@ import { useState, useEffect, Fragment } from 'react'
 
 export default function HomePage({ currentBrowser, theme, setTheme, scrollDirection, Y_position }) {
 
+     const color_1 = '#FFFFFF'
+     const color_2 = '#F2F2F2'
+     const color_3 = '#757575'
+     const color_4 = '#383838'
+     const color_5 = '#000000'
+     const color_6 = '#8E75FF'
+     const color_7 = '#AC99FF'
+
+     // const color_1 = '#AC99FF'
+     // const color_5 = '#1E2738'
+     // const color_3 = '#5C79AE'
+     // const color_4 = '#3E5276'
+     // const color_6 = '#8E75FF'
+     // const color_2 = '#799FE4'
+
+
      const [onAnimationEnd, setOnAnimationEnd] = useState(false)
-     const [primeLettersColor, setPrimeLettersColor] = useState('#FFFFFF')
+     const [primeLettersColor, setPrimeLettersColor] = useState(color_1)
      const [secLettersColor, setSecLettersColor] = useState('#9BACB5')
      const [thirdLettersColor, setThirdLettersColor] = useState('#3770FE')
      const [thirdLogoColor, setThirdLogoColor] = useState('#3770FE')
      const [hrColor, setHrColor] = useState('#EDF0F2')
      const [hrColorMain, setHrColorMain] = useState('#13478B')
      const [backgroundColor, setBackgroundColor] = useState('#13478B')
-     const [AppBackgroundColor, setAppBackgroundColor] = useState('#FFFFFF')
+     const [backgroundColor_2, setBackgroundColor_2] = useState('#13478B')
+     const [AppBackgroundColor, setAppBackgroundColor] = useState(color_1)
      const [bodyColor, setBodyColor] = useState('#717d97')
      const [footerColor, setFooterColor] = useState('#717d97')
-     const [footerTextColor, setFooterTextColor] = useState('#FFFFFF')
+     const [footerTextColor, setFooterTextColor] = useState(color_1)
 
      const min_width_600px = useMediaQuery('(min-width:600px)')
      const logo_W_H = 230
@@ -31,17 +48,18 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const animationTransition = '350ms'
 
      useEffect(() => {
-          setPrimeLettersColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
-          setSecLettersColor(theme === 'light' ? '#9BACB5' : '#BBC5CD')
-          setThirdLettersColor(theme === 'light' ? '#8E75FF' : '#B9E981')
-          setThirdLogoColor(theme === 'light' ? '#8E75FF' : '#F731DD')
-          setHrColor(theme === 'light' ? '#EDF0F2' : '#95217D')
-          setHrColorMain(theme === 'light' ? '#1A1F2C' : '#FFFFFF')
-          setBackgroundColor(theme === 'light' ? '#1A1F2C' : '#FFFFFF')
-          setAppBackgroundColor(theme === 'light' ? '#FFFFFF' : '#1A1F2C')
-          setBodyColor(theme === 'light' ? '#344B7F' : '#8899C6')
-          setFooterColor(theme === 'light' ? '#1A1F2C' : '#222839')
-          setFooterTextColor(theme === 'light' ? '#FFFFFF' : '#FFFFFF')
+          setPrimeLettersColor(theme === 'light' ? color_1 : color_5)
+          setSecLettersColor(theme === 'light' ? color_3 : color_2)
+          setThirdLettersColor(theme === 'light' ? color_4 : color_6)
+          setThirdLogoColor(theme === 'light' ? color_6 : color_7)
+          setHrColor(theme === 'light' ? color_2 : color_3)
+          setHrColorMain(theme === 'light' ? color_5 : color_1)
+          setBackgroundColor(theme === 'light' ? color_5 : color_1)
+          setBackgroundColor_2(theme === 'light' ? color_2 : color_4)
+          setAppBackgroundColor(theme === 'light' ? color_1 : color_4)
+          setBodyColor(theme === 'light' ? color_5 : color_1)
+          setFooterColor(theme === 'light' ? color_4 : color_3)
+          setFooterTextColor(theme === 'light' ? color_1 : color_1)
      }, [theme]);
 
 
@@ -122,8 +140,10 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                     </div>
 
                     <CombineSections
+                         theme={theme}
                          min_width_600px={min_width_600px}
                          backgroundColor={backgroundColor}
+                         backgroundColor_2={backgroundColor_2}
                          hrColorMain={hrColorMain}
                          thirdLettersColor={thirdLettersColor}
                          typeWriter={typeWriter}

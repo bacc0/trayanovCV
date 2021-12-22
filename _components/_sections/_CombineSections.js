@@ -8,7 +8,7 @@ import Footer from './4_Footer'
 
 
 export default function _CombineSections({
-     min_width_600px, footerColor,footerTextColor,  backgroundColor, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition
+     theme, min_width_600px, footerColor,footerTextColor,  backgroundColor, backgroundColor_2, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition
 }) {
      
 
@@ -119,8 +119,10 @@ export default function _CombineSections({
                />
 
                <Technologies
+                    theme={theme}
                     min_width_600px={min_width_600px}
                     backgroundColor={backgroundColor}
+                    backgroundColor_2={backgroundColor_2}
                     hrColorMain={hrColorMain}
                     thirdLettersColor={thirdLettersColor}
                     typeWriter={typeWriter}
@@ -133,11 +135,12 @@ export default function _CombineSections({
                     animation={animation}
                />
 
-               <div style={{ height: 46 }} />
+               {/* <div style={{ height: 46 }} /> */}
 
                <AboutMe
                     min_width_600px={min_width_600px}
                     backgroundColor={backgroundColor}
+                    
                     hrColorMain={hrColorMain}
                     thirdLettersColor={thirdLettersColor}
                     typeWriter={typeWriter}
@@ -149,7 +152,7 @@ export default function _CombineSections({
                     animation={animation}
                />
 
-               <div style={{ height: min_width_600px ? 62 : 34 }} />
+               {/* <div style={{ height: min_width_600px ? 62 : 34 }} /> */}
 
                <Footer  
                min_width_600px={min_width_600px}

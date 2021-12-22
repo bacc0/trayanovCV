@@ -5,9 +5,17 @@ export default function AboutMe({
      isRef_3_Visible, animation
 }) {
 
+     const styleContainer = {
+          paddingTop:  min_width_600px ? 96 : 130,
+          paddingBottom: min_width_600px ? 70: 57, 
+          minHeight :min_width_600px ? 300 : 300
+     }
+
      return (
           <div>
-               <div className='page-body'>
+               <div className='page-body'  
+               style={styleContainer}
+               >
                     <div className='page-body-left'>
 
                          <div className='container-content-left' >

@@ -69,6 +69,7 @@ export default function MenuAppBar({
      // }
      const titleStyle = {
           fontSize: 12,
+          letterSpacing: 1.2,
           fontWeight: '100',
           color: secLettersColor
      }

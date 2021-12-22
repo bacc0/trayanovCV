@@ -118,12 +118,15 @@ export default function Experience({
      //      </p>
      // ]
 
-
+     const styleContainer = {
+          paddingTop: min_width_600px ? 98 : 109,
+          paddingBottom: min_width_600px ? 62 :58,
+          minHeight: min_width_600px ? 300 : 300
+     }
 
 
      return (
-
-          <div className='page-body'>
+          <div className='page-body' style={styleContainer}>
                <div className='page-body-left'>
 
                     <div className='container-content-left' >
