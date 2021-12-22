@@ -14,8 +14,8 @@ export default function _CombineSections({
 
      const { observe, unobserve, inView, scrollDirection, entry } =
           useInView(
-               // {
-               //           threshold: 0.25, // Default is 0
+               {
+                         threshold: 0.05, // Default is 0
                //           onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
                //             // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
 
@@ -26,13 +26,13 @@ export default function _CombineSections({
                //             // Triggered when the target enters the viewport
 
                //           },
-               //           onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
-               //             // Triggered when the target leaves the viewport
-               //           },
+                         // onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
+                         //   // Triggered when the target leaves the viewport
+                         // },
                //           // More useful options...
-               //         }
+                       }
           )
-     console.log(inView)
+     // console.log(inView)
 
 
      const [isRef_0_Visible, setIsRef_0_Visible] = useState(true)
@@ -179,15 +179,15 @@ export default function _CombineSections({
 
 
                <div
-                    style={{ height: 250 }}
+                    style={{ height: 230 }}
                     ref={observe}
                >
 
                     {inView && (
                          <motion.div
-                              initial={{ opacity: 0.9 }}
-                              animate={{ opacity: 1 }}
-                              transition={{ duration: 0.1 }}
+                              initial={{ opacity: 0.8, y: 0 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.2 }}
                          >
                               <Footer
                                    min_width_600px={min_width_600px}
