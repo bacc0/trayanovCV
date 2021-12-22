@@ -14,7 +14,7 @@ export default function Technologies({
           backgroundColor: backgroundColor_2,
           paddingTop: min_width_600px ? 93 : 92,
           paddingBottom: min_width_600px ? 54 : 74,
-          minHeight: min_width_600px ? 300 : 300,
+          // minHeight: min_width_600px ? 300 : 300,
           borderTop: `${theme === 'light' ? 0 : 1}px solid ${hrColorMain + 11}`,
           borderBottom: `${theme === 'light' ? 0 : 1}px solid ${hrColorMain + 11}`,
           transition: `background-color ${animationTransition} ease, 

@@ -178,15 +178,16 @@ export default function _CombineSections({
                {/* <div style={{ height: min_width_600px ? 62 : 34 }} /> */}
 
 
-               <div style={{ height: 250 }}
-
-                    ref={observe}>
+               <div
+                    style={{ height: 250 }}
+                    ref={observe}
+               >
 
                     {inView && (
                          <motion.div
-                         initial={{ opacity: 0.9 }}
-                         animate={{ opacity: 1}}
-                         transition={{ duration: 0.1 }}
+                              initial={{ opacity: 0.9 }}
+                              animate={{ opacity: 1 }}
+                              transition={{ duration: 0.1 }}
                          >
                               <Footer
                                    min_width_600px={min_width_600px}
