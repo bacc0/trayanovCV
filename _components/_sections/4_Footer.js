@@ -22,7 +22,7 @@ export default function Footer({
                               href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'}
                          >
                               <div >
-                                   <LinkedInIcon />
+                                   <LinkedInIcon  fontSize='small'/>
                               </div>
                               <div
                                    className='footer-icon-text'
@@ -36,7 +36,7 @@ export default function Footer({
                               href={`mailto: bacco23@gmail.com`}
                          >
                               <div >
-                                   <LocalPostOfficeSharpIcon />
+                                   <LocalPostOfficeSharpIcon  fontSize='small'/>
                               </div>
                               <div
                                    className='footer-icon-text'
@@ -50,7 +50,7 @@ export default function Footer({
                               href={`tel: 00447590010066`}
                          >
                               <div >
-                                   <PhoneEnabledSharpIcon />
+                                   <PhoneEnabledSharpIcon   fontSize='small'/>
                               </div>
                               <div
                                    className='footer-icon-text'
@@ -66,7 +66,7 @@ export default function Footer({
                               href={'https://github.com/bacc0'}
                          >
                               <div >
-                                   <GitHubIcon />
+                                   <GitHubIcon   fontSize='small'/>
                               </div>
                               <div
                                    className='footer-icon-text'
@@ -80,7 +80,7 @@ export default function Footer({
                               href={'https://www.google.com/maps/@51.4764334,-0.1572618,16.21z'}
                          >
                               <div >
-                                   <LocationOnSharpIcon />
+                                   <LocationOnSharpIcon   fontSize='small'/>
                               </div>
                               <div >
                                    <div

@@ -2,6 +2,7 @@ import { useMediaQuery } from '@mui/material'
 import { motion } from 'framer-motion'
 import CombineSections from './_sections/_CombineSections'
 import TitleSVG from './_illustratins/TitleSVG'
+import Shadow from './_illustratins/Shadow'
 import MenuAppBar from './MenuAppBar'
 
 
@@ -60,9 +61,9 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           setBackgroundColor_2(theme === 'light' ? color_2 : color_4)
           setAppBackgroundColor(theme === 'light' ? color_1 : color_4)
           setBodyColor(theme === 'light' ? color_5 : color_1)
-          setFooterColor(theme === 'light' ? color_3 : color_3)
+          setFooterColor(theme === 'light' ? color_4 : color_4)
           setFooterTextColor(theme === 'light' ? color_1 : color_1)
-          setBackgroundNav( theme === 'light' ? `url('FRONT_END.svg')` : `url('FRONT_END_DARK.svg')`)
+          setBackgroundNav(theme === 'light' ? `url('FRONT_END.svg')` : `url('FRONT_END_DARK.svg')`)
      }, [theme]);
 
      const typeWriter = (sentence) => {
@@ -86,6 +87,14 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                     </motion.div>
                )
           )
+     }
+
+     const styleBackgroundTitle = {
+          width: '90vw',
+          'background-image': min_width_600px ? backgroundNav : null,
+          backgroundPosition: `center ${Number(6 + (Y_position * -30)).toFixed(1)}vh`,
+          backgroundSize: 536,
+          backgroundRepeat: 'no-repeat',
      }
 
      return (
@@ -113,30 +122,42 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                     }}
                >
                     <div className='page-nav'
-                         style={{
-                              borderBottom: `1px solid ${hrColor}`,
-                              // background: `linear-gradient(0deg, #00000001 0%, transparent`
-                         }}>
+                         style={{borderBottom: `1px solid ${hrColor}`}}>
                          <div className='title-container vertical-center-container'
-                              style={{
-                                   width: '90vw',
-
-                                   'background-image': min_width_600px ? backgroundNav : null,
-                                   backgroundPosition: `center ${Number(6 + (Y_position * -30)).toFixed(1)}vh`,
-                                   backgroundSize:  536,
-                                   backgroundRepeat: 'no-repeat',
-                                   // transition: `background-image 50ms ease` 
-                              }}
-                              >
+                              style={styleBackgroundTitle}
+                         >
                               <div className='vertical-center' >
+                                   {/* <motion.div
+                                        initial={{ scale: 1, y: 0, x: 10, opacity: 0 }}
+                                        animate={{ scale: 1, y: 0, x: 10, opacity: 1 }}
+                                        transition={{ type: 'spring', duration: 2, delay: 5.7}}
+                                        className='title'
+                                        style={{ 
+                                             position: 'relative',
+                                             top: `${Number(20 + (Y_position * 4)).toFixed(1)}vh`,
+                                             left: -4,
+                                             filter: 'blur(0.2px)',
+                                         
+                                        }}
+                                   >
+                                        <Shadow
+                                             logo_W_H={logo_W_H}
+                                             primeLettersColor={primeLettersColor}
+                                             secLettersColor={secLettersColor}
+                                             thirdLogoColor={thirdLogoColor}
+                                             backgroundColor={backgroundColor}
+                                             strokeWidth={strokeWidth}
+                                             setOnAnimationEnd={setOnAnimationEnd}
+                                             animationTransition={animationTransition}
+                                        />
+                                   </motion.div> */}
+
                                    <motion.div
                                         initial={{ scale: 1, y: -200, x: 10, opacity: 0 }}
                                         animate={{ scale: 1, y: 0, x: 10, opacity: 1 }}
                                         transition={{ type: 'spring', duration: 0.9, delay: 0 }}
                                         className='title'
-                                        style={{ position: 'relative', margin: Number(1 + (Y_position * -40)).toFixed(1) }}
                                    >
-
                                         <TitleSVG
                                              logo_W_H={logo_W_H}
                                              primeLettersColor={primeLettersColor}
