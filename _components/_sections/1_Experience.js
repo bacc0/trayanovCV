@@ -4,12 +4,9 @@ import { Example } from './helpers/AnimationText';
 import AnimationImage from './helpers/AnimationImage'
 
 export default function Experience({
-     min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition,
-     Ref_0, isRef_0_Visible,
-     Ref_05, isRef_05_Visible,
-     Ref_1, isRef_1_Visible,
-     animation,
-
+     min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, 
+     typeWriter, hrColor, animationTransition, Ref_0, isRef_0_Visible,
+     Ref_05, isRef_05_Visible, Ref_1, isRef_1_Visible, animation,
 }) {
 
      const [onAnimationEnd, setOnAnimationEnd] = useState(true)
@@ -119,7 +116,7 @@ export default function Experience({
 
      const styleContainer = {
           paddingTop: min_width_600px ? 98 : 109,
-          paddingBottom: min_width_600px ? 56 : 58,
+          paddingBottom: min_width_600px ? 62 : 58,
           minHeight: min_width_600px ? 300 : 300
      }
 
@@ -220,7 +217,7 @@ export default function Experience({
 
                               {animation(isRef_0_Visible, 0.38,
                                    <AnimationImage
-                                        image={'/computers.svg'}
+                                        imageURL={'/computers.svg'}
                                         width={140}
                                         height={110}
                                         threshold={0.5}

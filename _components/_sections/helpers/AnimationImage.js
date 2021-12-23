@@ -3,13 +3,11 @@ import Image from 'next/image'
 import useInView from 'react-cool-inview'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export default function AnimationImage({ image, width, height, threshold = 0.5 }) {
+export default function AnimationImage({ imageURL, width, height, threshold = 0.5 }) {
 
      const { observe, inView } = useInView({
           threshold: threshold,
-          unobserveOnEnter: true,
-     
-
+          // unobserveOnEnter: true,
 
           //           onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
           //             // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
@@ -20,16 +18,16 @@ export default function AnimationImage({ image, width, height, threshold = 0.5 }
           // onEnter: ({ scrollDirection, entry, observe, unobserve }) => {
           //   // Triggered when the target enters the viewport
           // },
-                                   onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
+                                   // onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
                                      // Triggered when the target leaves the viewport
           // console.log(scrollDirection)
           // unobserve()
-                                   },
+                                   // },
           //           // More useful options...
      })
 
      return (
-          <div ref={observe} style={{ height: height }}>
+          <div ref={observe} style={{ height, width }}>
                <AnimatePresence>
                     {inView && (
                          <motion.div
@@ -39,8 +37,8 @@ export default function AnimationImage({ image, width, height, threshold = 0.5 }
                               exit={{ opacity: 0 }}
                          >
                               <Image
-                                   src={image}
-                                   alt={image}
+                                   src={imageURL}
+                                   alt={imageURL}
                                    width={width}
                                    height={height}
                               />

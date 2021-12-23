@@ -1,9 +1,9 @@
 import AnimationImage from './helpers/AnimationImage'
 
 export default function AboutMe({
-     min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, hrColor, animationTransition,
-     Ref_3,
-     isRef_3_Visible, animation
+     min_width_600px, backgroundColor, hrColorMain, 
+     thirdLettersColor, hrColor, animationTransition,
+     Ref_3, isRef_3_Visible, animation
 }) {
 
      const styleContainer = {
@@ -148,7 +148,7 @@ export default function AboutMe({
                                         )}
                                         {animation(isRef_3_Visible, min_width_600px ? 0.38 : 0.6,
                                              <AnimationImage
-                                                  image={'/about_me.svg'}
+                                                  imageURL={'/about_me.svg'}
                                                   width={140}
                                                   height={110}
                                                   threshold={0.5}

@@ -3,10 +3,9 @@ import AnimationImage from './helpers/AnimationImage'
 
 
 export default function Technologies({
-     theme, min_width_600px, backgroundColor, backgroundColor_2, hrColorMain, animationTransition,
-     Ref_2, Ref_2b,
-     isRef_2_Visible,
-     animation, Y_position
+     theme, min_width_600px, backgroundColor, backgroundColor_2, 
+     hrColorMain, animationTransition, Ref_2, Ref_2b,
+     isRef_2_Visible, animation, Y_position
 }) {
 
      const styleContainer = {
@@ -47,17 +46,17 @@ export default function Technologies({
                                    </Hidden>
                               </div>
 
-                              {animation(isRef_2_Visible, 0.1, <p>ReactJS</p>)}
+                              {animation(isRef_2_Visible, 0.1,  <p>ReactJS</p>)}
                               {animation(isRef_2_Visible, 0.14, <p>Hook</p>)}
                               {animation(isRef_2_Visible, 0.18, <p>NextJS</p>)}
                               {animation(isRef_2_Visible, 0.22, <p>Javascript</p>)}
                               {animation(isRef_2_Visible, 0.26, <p>Material</p>)}
-                              {animation(isRef_2_Visible, 0.3, <p>CSS</p>)}
+                              {animation(isRef_2_Visible, 0.3,  <p>CSS</p>)}
                               {animation(isRef_2_Visible, 0.34, <p>SASS</p>)}
                               {animation(isRef_2_Visible, 0.38, <p>HTML</p>)}
                               {animation(isRef_2_Visible, 0.42, <p>Framer Motion</p>)}
                               {animation(isRef_2_Visible, 0.46, <p>SVG Animations</p>)}
-                              {animation(isRef_2_Visible, 0.5, <p>Adobe Illustrator</p>)}
+                              {animation(isRef_2_Visible, 0.5,  <p>Adobe Illustrator</p>)}
                               {animation(isRef_2_Visible, 0.54, <p>Autodesk Graphic</p>)}
                               {animation(isRef_2_Visible, 0.58, <p>GIMP</p>)}
                               {animation(isRef_2_Visible, 0.62, <p>Adobe Photoshop</p>)}
@@ -104,17 +103,17 @@ export default function Technologies({
                               </div>
 
                               {animation(isRef_2_Visible, min_width_600px ? 0.22 : 0.66, <p>Typescript</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.26 : 0.7, <p>NodeJS</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.3 : 0.74, <p>Express</p>)}
+                              {animation(isRef_2_Visible, min_width_600px ? 0.26 : 0.7,  <p>NodeJS</p>)}
+                              {animation(isRef_2_Visible, min_width_600px ? 0.3 : 0.74,  <p>Express</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.34 : 0.78, <p>Git Github Bitbucket</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.38 : 0.82, <p>Sourcetree</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.42 : 0.84, <p>Jira</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.46 : 0.88, <p>Jenkins</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.5 : 0.92, <p>Storybook</p>)}
+                              {animation(isRef_2_Visible, min_width_600px ? 0.5 : 0.92,  <p>Storybook</p>)}
 
                               {animation(isRef_2_Visible, min_width_600px ? 0.54 : 0.96,
                                    <AnimationImage
-                                        image={'/TECH2.svg'}
+                                        imageURL={'/TECH2.svg'}
                                         width={140}
                                         height={110}
                                         threshold={0.5}

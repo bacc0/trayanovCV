@@ -190,13 +190,6 @@ export default function _CombineSections({
                               transition={{ duration: 0.2 }}
                          >
                               <Footer
-                                   min_width_600px={min_width_600px}
-                                   backgroundColor={backgroundColor}
-                                   hrColorMain={hrColorMain}
-                                   thirdLettersColor={thirdLettersColor}
-                                   typeWriter={typeWriter}
-                                   hrColor={hrColor}
-                                   animationTransition={animationTransition}
                                    footerColor={footerColor}
                                    footerTextColor={footerTextColor}
                               />

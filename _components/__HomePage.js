@@ -42,7 +42,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const [bodyColor, setBodyColor] = useState('#717d97')
      const [footerColor, setFooterColor] = useState('#717d97')
      const [footerTextColor, setFooterTextColor] = useState(color_1)
-     const [backgroundNav, setBackgroundNav] = useState(`url('FRONT_END.svg')`)
+     const [backgroundNav, setBackgroundNav] = useState(`url('FRONT_END_2.svg')`) //FRONT_END
 
      const min_width_600px = useMediaQuery('(min-width:600px)')
      const logo_W_H = 230
@@ -63,7 +63,9 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           setBodyColor(theme === 'light' ? color_5 : color_1)
           setFooterColor(theme === 'light' ? color_4 : color_4)
           setFooterTextColor(theme === 'light' ? color_1 : color_1)
-          setBackgroundNav(theme === 'light' ? `url('FRONT_END.svg')` : `url('FRONT_END_DARK.svg')`)
+          setBackgroundNav(theme === 'light' 
+          ? `url('FRONT_END_2.svg'), url( 'backFrontEnd.svg' )` 
+          : `url('FRONT_END_2_DARK.svg'), url( 'backFrontEnd.svg' )`)
      }, [theme]);
 
      const typeWriter = (sentence) => {
@@ -92,9 +94,11 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const styleBackgroundTitle = {
           width: '90vw',
           'background-image': min_width_600px ? backgroundNav : null,
-          backgroundPosition: `center ${Number(6 + (Y_position * -30)).toFixed(1)}vh`,
+          backgroundPosition: `center ${Number(0 + (Y_position * -30)).toFixed(1)}vh,
+                               center ${Number(7 + (Y_position * -230)).toFixed(1)}vh`,
           backgroundSize: 536,
           backgroundRepeat: 'no-repeat',
+     
      }
 
      return (

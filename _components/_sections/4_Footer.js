@@ -6,10 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 
 
 
-export default function Footer({
-     min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, hrColor, animationTransition, footerColor, footerTextColor
-
-}) {
+export default function Footer({ footerColor, footerTextColor }) {
 
      return (
           <div className="container-footer" style={{ backgroundColor: footerColor }}>
