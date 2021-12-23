@@ -64,8 +64,8 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           setFooterColor(theme === 'light' ? color_4 : color_4)
           setFooterTextColor(theme === 'light' ? color_1 : color_1)
           setBackgroundNav(theme === 'light' 
-          ? `url('FRONT_END_2.svg'), url( 'backFrontEnd.svg' )` 
-          : `url('FRONT_END_2_DARK.svg'), url( 'backFrontEnd.svg' )`)
+          ? `url('FRONT_END_2.svg'), url( 'backFrontEnd.svg' ), url( 'FRONT_END_2_COLOR.svg' )` 
+          : `url('FRONT_END_2_DARK.svg'), url( 'backFrontEnd.svg' ), url( 'FRONT_END_2_COLOR.svg'`)
      }, [theme]);
 
      const typeWriter = (sentence) => {
@@ -90,14 +90,16 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                )
           )
      }
+     // ${Number(0 + (Y_position * -30)).toFixed(1)}vh
 
      const styleBackgroundTitle = {
-          width: '90vw',
+          backgroundColor: AppBackgroundColor,
+          width: '100%',
           'background-image': min_width_600px ? backgroundNav : null,
-          backgroundPosition: `center ${Number(0 + (Y_position * -30)).toFixed(1)}vh,
-                               center ${Number(7 + (Y_position * -230)).toFixed(1)}vh`,
+          backgroundPosition: `center -8px, center ${Number(20 + (Y_position * -1800)).toFixed(1)}px`,
           backgroundSize: 536,
           backgroundRepeat: 'no-repeat',
+          borderBottom: `1px solid ${hrColor}`
      
      }
 
@@ -122,7 +124,8 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                          backgroundColor: AppBackgroundColor,
                          color: bodyColor,
                          transition: `background-color ${animationTransition} ease, 
-                                                 color ${animationTransition} ease`
+                                                 color ${animationTransition} ease`,
+                                                
                     }}
                >
                     <div className='page-nav'
