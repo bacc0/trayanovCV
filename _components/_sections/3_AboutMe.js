@@ -8,7 +8,7 @@ export default function AboutMe({
 
      const styleContainer = {
           paddingTop: min_width_600px ? 96 : 130,
-          paddingBottom: min_width_600px ? 70 : 57,
+          paddingBottom: min_width_600px ? 50 : 62,
           // minHeight :min_width_600px ? 300 : 300
      }
 
