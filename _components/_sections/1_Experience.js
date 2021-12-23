@@ -4,16 +4,16 @@ import { Example } from './helpers/AnimationText';
 import AnimationImage from './helpers/AnimationImage'
 
 export default function Experience({
-     min_width_600px, backgroundColor, hrColorMain, thirdLettersColor, 
+     min_width_600px, backgroundColor, hrColorMain, thirdLettersColor,
      typeWriter, hrColor, animationTransition, Ref_0, isRef_0_Visible,
-     Ref_05, isRef_05_Visible, Ref_1, isRef_1_Visible, animation,
+     Ref_05, isRef_05_Visible, Ref_1, isRef_1_Visible, animation, theme
 }) {
 
-     const [onAnimationEnd, setOnAnimationEnd] = useState(true)
+     const [onAnimationStart, setOnAnimationStart] = useState(true)
 
      useEffect(() => {
           setTimeout(() => {
-               setOnAnimationEnd(false)
+               setOnAnimationStart(false)
           }, 6000)
      }, [])
 
@@ -27,7 +27,7 @@ export default function Experience({
      //                     transition: `color ${animationTransition} ease`
      //                }}
      //           >
-     //                {onAnimationEnd
+     //                {onAnimationStart
      //                     ? typeWriter('React Developer - Groundbits Ltd')
      //                     : 'React Developer - Groundbits Ltd'
      //                }
@@ -73,7 +73,7 @@ export default function Experience({
      //                     transition: `color ${animationTransition} ease`
      //                }}
      //           >
-     //                {onAnimationEnd
+     //                {onAnimationStart
      //                     ? typeWriter(' React Developer - Amdocs via Appgr8')
      //                     : ' React Developer - Amdocs via Appgr8'
      //                }
@@ -133,10 +133,22 @@ export default function Experience({
                          >
                               {animation(isRef_0_Visible, 0.1,
                                    <>
-                                        <h2 style={{
-                                             color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
-                                             transition: `color ${animationTransition} ease`
-                                        }}
+                                        <h2
+                                             style={{
+
+                                                  color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
+                                                  transition: `color ${animationTransition} ease`,
+
+                                                  // background: `linear-gradient(to bottom, #B67BD833, #FF99FB77, #B67BD877), url('h2_background.svg')`,
+                                                  // backgroundAttachment: 'fixed',
+                                                  // '-webkit-text-fill-color': 'transparent',
+                                                  // '-webkit-background-clip': 'text',
+          
+                                                  // fontSize: 35,
+                                                  // lineHeight : 1
+                                                 
+                                                
+                                             }}
                                         >
                                              Experience
                                         </h2>
@@ -166,10 +178,13 @@ export default function Experience({
                                    <h3 style={{
                                         color: thirdLettersColor, letterSpacing: 1.3,
                                         minHeight: min_width_600px ? 40 : 70,
-                                        transition: `color ${animationTransition} ease`
+                                        transition: `color ${animationTransition} ease`,
+
+
+                                      
                                    }}
                                    >
-                                        {onAnimationEnd
+                                        {onAnimationStart
                                              ? typeWriter('React Developer - Groundbits Ltd')
                                              : 'React Developer - Groundbits Ltd'
                                         }
@@ -217,7 +232,7 @@ export default function Experience({
 
                               {animation(isRef_0_Visible, 0.38,
                                    <AnimationImage
-                                        imageURL={'/computers.svg'}
+                                        imageURL={ theme === 'light'? '/computers.svg' : '/computers_DARK.svg'}
                                         width={140}
                                         height={110}
                                         threshold={0.5}
@@ -260,7 +275,7 @@ export default function Experience({
                                                   transition: `color ${animationTransition} ease`
                                              }}
                                         >
-                                             {onAnimationEnd
+                                             {onAnimationStart
                                                   ? typeWriter(' React Developer - Amdocs via Appgr8')
                                                   : ' React Developer - Amdocs via Appgr8'
                                              }
@@ -319,7 +334,7 @@ export default function Experience({
                                              transition: `color ${animationTransition} ease`
                                         }}
                                         >
-                                             {onAnimationEnd
+                                             {onAnimationStart
                                                   ? typeWriter('React Developer - Groundbits Ltd')
                                                   : 'React Developer - Groundbits Ltd'
                                              }

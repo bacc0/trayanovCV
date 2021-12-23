@@ -17,11 +17,17 @@ $nav-height: 200px;
 
 
 body {
+
+     svg {
+          // https://css-tricks.com/how-to-do-knockout-text/
+     }
+
      margin: 0;
      padding: 0;
      font-size: 14px;
      line-height: 22px;
-     font-family: 'Poppins', sans-serif;
+     font-family: 'Poppins',
+     sans-serif;
      letter-spacing: 0.7px;
      word-spacing: 3px;
      font-weight: 200;
@@ -41,6 +47,7 @@ body {
           font-size: 16px;
           font-weight: 600;
 
+       
 
      }
 
@@ -144,7 +151,7 @@ body {
                                         width: $element-width-mobile;
 
                                         padding-bottom: 39px;
-                                        
+
                                    }
                               }
                          }
@@ -152,6 +159,7 @@ body {
                          .page-body-right {
                               width: 100%;
                               min-width: 300px;
+
                               // margin-top: 10px;
                               // background-color: #D2D844;
                               .container-right-accent {
@@ -244,6 +252,7 @@ body {
 
      .container-footer {
           border: 1px solid #444444;
+
           .footer {
                // border: 1px solid #444444;
                width: $element-width + $element-width + $distance-middle-full;
@@ -298,6 +307,7 @@ body {
 
           .footer-items-container {
                padding: 00;
+
                .footer-icon {
                     position: relative;
                     top: 2px;
@@ -321,5 +331,5 @@ body {
 
 
 
-    
+
 }

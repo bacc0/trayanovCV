@@ -122,6 +122,7 @@ export default function _CombineSections({
 
 
                <Experience
+               theme={theme}
                     min_width_600px={min_width_600px}
                     backgroundColor={backgroundColor}
                     hrColorMain={hrColorMain}
@@ -161,6 +162,7 @@ export default function _CombineSections({
                {/* <div style={{ height: 46 }} /> */}
 
                <AboutMe
+               theme={theme}
                     min_width_600px={min_width_600px}
                     backgroundColor={backgroundColor}
 

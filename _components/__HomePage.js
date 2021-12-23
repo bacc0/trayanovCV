@@ -17,8 +17,8 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const color_3 = '#757575'
      const color_4 = '#383838'
      const color_5 = '#000000'
-     const color_6 = '#A673FF'
-     const color_7 = '#C4A6DE'
+     const color_6 = '#8D30FE'
+     const color_7 = '#8D30FE'
 
      // const color_1 = '#FFFFFF'
      // const color_2 = '#CCCCCA'
@@ -26,7 +26,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      // const color_4 = '#1E3138'
      // const color_5 = '#111D1F'
      // const color_6 = '#8E75FF'
-     // const color_7 = '#AC99FF'
+     // const color_7 = '#8D30FE'
 
 
      const [onAnimationEnd, setOnAnimationEnd] = useState(false)
@@ -48,7 +48,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const logo_W_H = 230
      const strokeWidth = min_width_600px ? 1.2 : 1.5
 
-     const animationTransition = '350ms'
+     const animationTransition = '0ms'
 
      useEffect(() => {
           setPrimeLettersColor(theme === 'light' ? color_1 : color_5)
@@ -63,9 +63,9 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           setBodyColor(theme === 'light' ? color_5 : color_1)
           setFooterColor(theme === 'light' ? color_4 : color_4)
           setFooterTextColor(theme === 'light' ? color_1 : color_1)
-          setBackgroundNav(theme === 'light' 
-          ? `url('FRONT_END_2.svg'), url( 'backFrontEnd.svg' ), url( 'FRONT_END_2_COLOR.svg' )` 
-          : `url('FRONT_END_2_DARK.svg'), url( 'backFrontEnd.svg' ), url( 'FRONT_END_2_COLOR.svg'`)
+          setBackgroundNav(theme === 'light'
+               ? `url('FRONT_END_2.svg'), url( 'backFrontEnd.svg' ), url( 'FRONT_END_2_COLOR.svg' )`
+               : `url('FRONT_END_2_DARK.svg'), url( 'backFrontEnd.svg' ), url( 'FRONT_END_2_COLOR.svg'`)
      }, [theme]);
 
      const typeWriter = (sentence) => {
@@ -100,7 +100,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           backgroundSize: 536,
           backgroundRepeat: 'no-repeat',
           borderBottom: `1px solid ${hrColor}`
-     
+
      }
 
      return (
@@ -125,11 +125,11 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                          color: bodyColor,
                          transition: `background-color ${animationTransition} ease, 
                                                  color ${animationTransition} ease`,
-                                                
+
                     }}
                >
                     <div className='page-nav'
-                         style={{borderBottom: `1px solid ${hrColor}`}}>
+                         style={{ borderBottom: `1px solid ${hrColor}` }}>
                          <div className='title-container vertical-center-container'
                               style={styleBackgroundTitle}
                          >

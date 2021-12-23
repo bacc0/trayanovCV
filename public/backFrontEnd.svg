@@ -3,15 +3,15 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="612" height="696" viewBox="0, 0, 612, 696">
   <defs>
     <linearGradient id="Gradient_1" gradientUnits="userSpaceOnUse" x1="89.626" y1="102.22" x2="522.374" y2="595.78">
-      <stop offset="0" stop-color="#A376FF" stop-opacity="0"/>
-      <stop offset="0.051" stop-color="#F3BAF6" stop-opacity="0.684"/>
+      <stop offset="0" stop-color="#EB8BE8" stop-opacity="0.53"/>
+      <stop offset="0.051" stop-color="#EB8BE8" stop-opacity="0.739"/>
       <stop offset="0.113" stop-color="#D0A3EC" stop-opacity="0.51"/>
       <stop offset="0.152" stop-color="#C28EE5"/>
       <stop offset="0.206" stop-color="#FBFAFC" stop-opacity="0.679"/>
-      <stop offset="0.264" stop-color="#DD9DE4" stop-opacity="0.52"/>
+      <stop offset="0.264" stop-color="#EB8BE8" stop-opacity="0.894"/>
       <stop offset="0.439" stop-color="#9878DE"/>
       <stop offset="0.498" stop-color="#FFFFFF" stop-opacity="0.683"/>
-      <stop offset="0.543" stop-color="#E7B5ED" stop-opacity="0.664"/>
+      <stop offset="0.543" stop-color="#EB8BE8" stop-opacity="0.85"/>
       <stop offset="0.734" stop-color="#AD7BF1" stop-opacity="0.41"/>
       <stop offset="0.901" stop-color="#7659E0" stop-opacity="0.888"/>
       <stop offset="1" stop-color="#D9A6E5" stop-opacity="0.444"/>
@@ -23,5 +23,4 @@
   <g id="Layer_2" opacity="0.651">
     <path d="M0,0 L612,0 L612,698 L0,698 L0,0 z" fill="url(#Gradient_1)"/>
   </g>
-  <g id="Layer_3"/>
 </svg>

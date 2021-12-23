@@ -98,13 +98,13 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
 
 
 
-                         <motion.g i
+                         <motion.g
                               initial={{ opacity: 0, scale: 1.4 }}
                               animate={{ opacity: 1, scale: 1 }}
                               transition={{ delay: 2, duration: 0.3, ease: 'easeInOut' }}
                               id='Text-Second'>
                               <g>
-                                   <path
+                                   <path 
                                         d='M230.927,32.347 L211.498,32.347 L211.498,30.512 L230.927,30.512 z'
                                         fill={IM_Dev}
                                    />
