@@ -139,15 +139,13 @@ export default function Experience({
                                                   color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
                                                   transition: `color ${animationTransition} ease`,
 
-                                                  // background: `linear-gradient(to bottom, #B67BD833, #FF99FB77, #B67BD877), url('h2_background.svg')`,
-                                                  // backgroundAttachment: 'fixed',
-                                                  // '-webkit-text-fill-color': 'transparent',
-                                                  // '-webkit-background-clip': 'text',
+                                                  background: `linear-gradient(to bottom, #B67BD833, #FF99FB77, #B67BD877), url('h2_background.svg')`,
+                                                  backgroundAttachment: 'fixed',
+                                                  '-webkit-text-fill-color': 'transparent',
+                                                  '-webkit-background-clip': 'text',
           
-                                                  // fontSize: 35,
-                                                  // lineHeight : 1
-                                                 
-                                                
+                                                  fontSize: 35,
+                                                  lineHeight : 1
                                              }}
                                         >
                                              Experience
