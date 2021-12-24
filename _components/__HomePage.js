@@ -15,7 +15,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const color_2 = '#FAFAFA' // F2F2F2
      const color_3 = '#757575'
      const color_4 = '#383838' //#040F1B
-     const color_5 = '#000000'
+     const color_5 = '#1d1d1f'
      const color_6 = '#8D30FE'
      const color_7 = '#8D30FE'
 
