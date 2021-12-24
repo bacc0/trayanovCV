@@ -17,7 +17,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const color_4 = '#383838' //#040F1B
      const color_5 = '#1d1d1f'
      const color_6 = '#8D30FE'
-     const color_7 = '#8D30FE'
+     const color_7 = '#CF68FE'
 
 
      const [onAnimationEnd, setOnAnimationEnd] = useState(false)
@@ -25,6 +25,8 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      const [secLettersColor, setSecLettersColor] = useState('#9BACB5')
      const [thirdLettersColor, setThirdLettersColor] = useState('#3770FE')
      const [thirdLogoColor, setThirdLogoColor] = useState('#3770FE')
+     const [strongText, setStrongText] = useState('#757575')
+
      const [hrColor, setHrColor] = useState('#EDF0F2')
      const [hrColorMain, setHrColorMain] = useState('#13478B')
      const [backgroundColor, setBackgroundColor] = useState('#13478B')
@@ -44,13 +46,16 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
      useEffect(() => {
           setPrimeLettersColor(theme === 'light' ? color_1 : color_5)
           setSecLettersColor(theme === 'light' ? color_3 : color_2)
-          setThirdLettersColor(theme === 'light' ? color_6 : color_6)
+          setThirdLettersColor(theme === 'light' ? color_6 : color_7)
           setThirdLogoColor(theme === 'light' ? color_6 : color_7)
+          setStrongText(theme === 'light' ? color_3 : color_2)
+          
           setHrColor(theme === 'light' ? color_2 : color_3)
           setHrColorMain(theme === 'light' ? color_5 : color_1)
           setBackgroundColor(theme === 'light' ? color_5 : color_1)
           setBackgroundColor_2(theme === 'light' ? color_2 : color_4)
           setAppBackgroundColor(theme === 'light' ? color_1 : color_4)
+          
           setBodyColor(theme === 'light' ? color_5 : color_1)
           setFooterColor(theme === 'light' ? color_4 : color_4)
           setFooterTextColor(theme === 'light' ? color_1 : color_1)
@@ -144,6 +149,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                          min_width_600px={min_width_600px}
                          backgroundColor={backgroundColor}
                          backgroundColor_2={backgroundColor_2}
+                         strongText={strongText}
                          hrColorMain={hrColorMain}
                          thirdLettersColor={thirdLettersColor}
                          typeWriter={typeWriter}

@@ -9,7 +9,7 @@ import Footer from './4_Footer'
 import useInView from 'react-cool-inview'
 
 export default function _CombineSections({
-     theme, min_width_600px, footerColor, footerTextColor, backgroundColor, backgroundColor_2, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition
+     theme, min_width_600px, footerColor, footerTextColor, backgroundColor, backgroundColor_2, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition, strongText
 }) {
 
      const { observe, unobserve, inView, scrollDirection, entry } =
@@ -127,6 +127,7 @@ export default function _CombineSections({
                     hrColorMain={hrColorMain}
                     thirdLettersColor={thirdLettersColor}
                     typeWriter={typeWriter}
+                    strongText={strongText}
                     hrColor={hrColor}
                     animationTransition={animationTransition}
 

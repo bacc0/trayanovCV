@@ -148,7 +148,7 @@ export default function AboutMe({
                                         )}
                                         {animation(isRef_3_Visible, min_width_600px ? 0.38 : 0.6,
                                              <AnimationImage
-                                                  imageURL={ theme === 'light' ? '/about_me.svg' : '/about_me_DARK.svg' }
+                                                  imageURL={ '/about_me1.svg' }
                                                   width={140}
                                                   height={110}
                                                   threshold={0.5}

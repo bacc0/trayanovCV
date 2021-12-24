@@ -113,7 +113,7 @@ export default function Technologies({
 
                               {animation(isRef_2_Visible, min_width_600px ? 0.54 : 0.96,
                                    <AnimationImage
-                                        imageURL={ theme === 'light' ? '/TECH2.svg' : '/TECH2_DARK.svg'}
+                                        imageURL={ '/tech1.svg'}
                                         width={140}
                                         height={110}
                                         threshold={0.5}
