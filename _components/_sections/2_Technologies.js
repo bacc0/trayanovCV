@@ -16,7 +16,9 @@ export default function Technologies({
           borderTop: `${theme === 'light' ? 0 : 1}px solid ${hrColorMain + 11}`,
           borderBottom: `${theme === 'light' ? 0 : 1}px solid ${hrColorMain + 11}`,
           transition: `background-color ${animationTransition} ease, 
-          color ${animationTransition} ease`
+          color ${animationTransition} ease`,
+
+          // background: `radial-gradient(at 50% top, #4A0A6A, #4A0A6A, #040F1B, #040F1B, #040F1B)`,
      }
 
      return (
@@ -41,8 +43,7 @@ export default function Technologies({
                                                        style={{ 'background-color': hrColorMain, transition: `background-color ${animationTransition} ease` }}
                                                   />
                                              </div>
-                                        )
-                                        }
+                                        )}
                                    </Hidden>
                               </div>
 
@@ -96,8 +97,7 @@ export default function Technologies({
                                                   }}
                                                   />
                                              </div>
-                                        )
-                                        }
+                                        )}
 
                                    </Hidden>
                               </div>

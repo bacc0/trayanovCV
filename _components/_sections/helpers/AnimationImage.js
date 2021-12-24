@@ -35,6 +35,8 @@ export default function AnimationImage({ imageURL, width, height, threshold = 0.
                               animate={{ opacity: 1, pathLength: 1, y: 0 }}
                               transition={{ delay: 0, duration: 0.5, ease: 'linear' }}
                               exit={{ opacity: 0 }}
+
+
                          >
                               <Image
                                    src={imageURL}

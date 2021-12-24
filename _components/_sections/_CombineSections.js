@@ -33,8 +33,7 @@ export default function _CombineSections({
                        }
           )
      console.log(inView)
-
-
+   
      const [isRef_0_Visible, setIsRef_0_Visible] = useState(true)
      const [isRef_05_Visible, setIsRef_05_Visible] = useState(true)
      const [isRef_1_Visible, setIsRef_1_Visible] = useState(true)
@@ -117,7 +116,7 @@ export default function _CombineSections({
 
      return (
 
-          <div >
+          <div>
 
 
 

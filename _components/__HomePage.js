@@ -1,10 +1,9 @@
 import { useMediaQuery } from '@mui/material'
 import { motion } from 'framer-motion'
 import CombineSections from './_sections/_CombineSections'
-import TitleSVG from './_illustratins/TitleSVG'
-import Shadow from './_illustratins/Shadow'
-import MenuAppBar from './MenuAppBar'
 
+import MenuAppBar from './MenuAppBar'
+import PageNav from './PageNav'
 
 
 import { Typewriter } from 'react-simple-typewriter'
@@ -13,20 +12,12 @@ import { useState, useEffect, Fragment } from 'react'
 export default function HomePage({ currentBrowser, theme, setTheme, scrollDirection, Y_position }) {
 
      const color_1 = '#FFFFFF'
-     const color_2 = '#F2F2F2'
+     const color_2 = '#FAFAFA' // F2F2F2
      const color_3 = '#757575'
-     const color_4 = '#383838'
+     const color_4 = '#383838' //#040F1B
      const color_5 = '#000000'
      const color_6 = '#8D30FE'
      const color_7 = '#8D30FE'
-
-     // const color_1 = '#FFFFFF'
-     // const color_2 = '#CCCCCA'
-     // const color_3 = '#697C82'
-     // const color_4 = '#1E3138'
-     // const color_5 = '#111D1F'
-     // const color_6 = '#8E75FF'
-     // const color_7 = '#8D30FE'
 
 
      const [onAnimationEnd, setOnAnimationEnd] = useState(false)
@@ -70,7 +61,6 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
 
      const typeWriter = (sentence) => {
           return (
-
                onAnimationEnd && (
                     <motion.div
                          initial={{ opacity: 0 }}
@@ -90,7 +80,6 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                )
           )
      }
-     // ${Number(0 + (Y_position * -30)).toFixed(1)}vh
 
      const styleBackgroundTitle = {
           backgroundColor: AppBackgroundColor,
@@ -100,12 +89,13 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
           backgroundSize: 536,
           backgroundRepeat: 'no-repeat',
           borderBottom: `1px solid ${hrColor}`
-
      }
 
+     
      return (
           <Fragment>
                <MenuAppBar
+                    backgroundNav={backgroundNav}
                     currentBrowser={currentBrowser}
                     setTheme={setTheme}
                     hrColorMain={hrColorMain}
@@ -122,61 +112,30 @@ export default function HomePage({ currentBrowser, theme, setTheme, scrollDirect
                     className='page'
                     style={{
                          backgroundColor: AppBackgroundColor,
+                         // background: `radial-gradient(circle closest-side, #7026A5, #040F1B)`,
                          color: bodyColor,
                          transition: `background-color ${animationTransition} ease, 
                                                  color ${animationTransition} ease`,
-
                     }}
                >
+
                     <div className='page-nav'
                          style={{ borderBottom: `1px solid ${hrColor}` }}>
-                         <div className='title-container vertical-center-container'
+                         <div 
+                              className='title-container vertical-center-container'
                               style={styleBackgroundTitle}
                          >
-                              <div className='vertical-center' >
-                                   {/* <motion.div
-                                        initial={{ scale: 1, y: 0, x: 10, opacity: 0 }}
-                                        animate={{ scale: 1, y: 0, x: 10, opacity: 1 }}
-                                        transition={{ type: 'spring', duration: 2, delay: 5.7}}
-                                        className='title'
-                                        style={{ 
-                                             position: 'relative',
-                                             top: `${Number(20 + (Y_position * 4)).toFixed(1)}vh`,
-                                             left: -4,
-                                             filter: 'blur(0.2px)',
-                                         
-                                        }}
-                                   >
-                                        <Shadow
-                                             logo_W_H={logo_W_H}
-                                             primeLettersColor={primeLettersColor}
-                                             secLettersColor={secLettersColor}
-                                             thirdLogoColor={thirdLogoColor}
-                                             backgroundColor={backgroundColor}
-                                             strokeWidth={strokeWidth}
-                                             setOnAnimationEnd={setOnAnimationEnd}
-                                             animationTransition={animationTransition}
-                                        />
-                                   </motion.div> */}
-
-                                   <motion.div
-                                        initial={{ scale: 1, y: -200, x: 10, opacity: 0 }}
-                                        animate={{ scale: 1, y: 0, x: 10, opacity: 1 }}
-                                        transition={{ type: 'spring', duration: 0.9, delay: 0 }}
-                                        className='title'
-                                   >
-                                        <TitleSVG
-                                             logo_W_H={logo_W_H}
-                                             primeLettersColor={primeLettersColor}
-                                             secLettersColor={secLettersColor}
-                                             thirdLogoColor={thirdLogoColor}
-                                             backgroundColor={backgroundColor}
-                                             strokeWidth={strokeWidth}
-                                             setOnAnimationEnd={setOnAnimationEnd}
-                                             animationTransition={animationTransition}
-                                        />
-                                   </motion.div>
-                              </div>
+                              <PageNav
+                                   logo_W_H={logo_W_H}
+                                   primeLettersColor={primeLettersColor}
+                                   thirdLogoColor={thirdLogoColor}
+                                   backgroundColor={backgroundColor}
+                                   strokeWidth={strokeWidth}
+                                   setOnAnimationEnd={setOnAnimationEnd}
+                                   backgroundNav={backgroundNav}
+                                   animationTransition={animationTransition}
+                                   secLettersColor={secLettersColor}
+                              />
                          </div>
                     </div>
 
