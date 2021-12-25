@@ -137,7 +137,7 @@ export default function Experience({
 
                               {animationText(isRef_0_Visible, 0.38,
                                    <AnimationImage
-                                        imageURL={'/work1.svg'}
+                                        imageURL={'/work.svg'}
                                         width={140}
                                         height={110}
                                         threshold={0.5}

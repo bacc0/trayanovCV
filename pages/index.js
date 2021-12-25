@@ -118,43 +118,43 @@ export default function Home() {
      const color_7 = '#CF68FE'
 
      const [state, setState] = useState({
-                    hrColor: color_2,
-                    bodyColor: color_5,
-                    strongText: color_3,
-                    footerColor: color_4,
-                    hrColorMain: color_5,
-                    thirdLogoColor: color_6,
-                    backgroundColor: color_5,
-                    footerTextColor: color_1,
-                    secLettersColor: color_3,
-                    primeLettersColor: color_1,
-                    thirdLettersColor: color_6,
-                    backgroundColor_2: color_2,
-                    AppBackgroundColor: color_1,
-                    backgroundNav: `url('FRONT_END_2.svg'), url( 'backFrontEnd.svg' ), url( 'FRONT_END_2_COLOR.svg' )`,
+          hrColor: color_2,
+          bodyColor: color_5,
+          strongText: color_3,
+          footerColor: color_4,
+          hrColorMain: color_5,
+          thirdLogoColor: color_6,
+          backgroundColor: color_5,
+          footerTextColor: color_1,
+          secLettersColor: color_3,
+          primeLettersColor: color_1,
+          thirdLettersColor: color_6,
+          backgroundColor_2: color_2,
+          AppBackgroundColor: color_1,
+          backgroundNav: `url('background_3_light.svg'), url( 'background_2.svg' ), url( 'background_1.svg' )`,
      })
 
      useEffect(() => {
 
           setState({
                ...state,
-                    hrColor: theme === 'light' ? color_2 : color_3,
-                    bodyColor: theme === 'light' ? color_5 : color_1,
-                    strongText: theme === 'light' ? color_3 : color_2,
-                    hrColorMain: theme === 'light' ? color_5 : color_1,
-                    footerColor: theme === 'light' ? color_4 : color_4,
-                    thirdLogoColor: theme === 'light' ? color_6 : color_7,
-                    secLettersColor: theme === 'light' ? color_3 : color_2,
-                    backgroundColor: theme === 'light' ? color_5 : color_1,
-                    footerTextColor: theme === 'light' ? color_1 : color_1,
-                    thirdLettersColor: theme === 'light' ? color_6 : color_7,
-                    primeLettersColor: theme === 'light' ? color_1 : color_5,
-                    backgroundColor_2: theme === 'light' ? color_2 : color_4,
-                    AppBackgroundColor: theme === 'light' ? color_1 : color_4,
-                    backgroundNav: theme === 'light'
-                         ? `url('FRONT_END_2.svg'), url( 'backFrontEnd.svg' ), url( 'FRONT_END_2_COLOR.svg' )`
-                         : `url('FRONT_END_2_DARK.svg'), url( 'backFrontEnd.svg' ), url( 'FRONT_END_2_COLOR.svg'`,
-               }
+               hrColor: theme === 'light' ? color_2 : color_3,
+               bodyColor: theme === 'light' ? color_5 : color_1,
+               strongText: theme === 'light' ? color_3 : color_2,
+               hrColorMain: theme === 'light' ? color_5 : color_1,
+               footerColor: theme === 'light' ? color_4 : color_4,
+               thirdLogoColor: theme === 'light' ? color_6 : color_7,
+               secLettersColor: theme === 'light' ? color_3 : color_2,
+               backgroundColor: theme === 'light' ? color_5 : color_1,
+               footerTextColor: theme === 'light' ? color_1 : color_1,
+               thirdLettersColor: theme === 'light' ? color_6 : color_7,
+               primeLettersColor: theme === 'light' ? color_1 : color_5,
+               backgroundColor_2: theme === 'light' ? color_2 : color_4,
+               AppBackgroundColor: theme === 'light' ? color_1 : color_4,
+               backgroundNav: theme === 'light'
+                    ? `url('background_3_light.svg'), url( 'background_2.svg' ), url( 'background_1.svg' )`
+                    : `url('background_3_dark.svg'), url( 'background_2.svg' ), url( 'background_1.svg'`,
+          }
           )
      }, [theme]);
 
@@ -164,7 +164,7 @@ export default function Home() {
                < HomePage
                     theme={theme}
                     state={state}
-                    setTheme={setTheme} 
+                    setTheme={setTheme}
                     Y_position={Y_position}
                     W_screenSize={W_screenSize}
                     scrollDirection={scrollDirection}
