@@ -12,12 +12,12 @@ import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
-export default function MenuAppBar({
-     theme, setTheme, hrColor, hrColorMain,
-     AppBackgroundColor, scrollDirection, Y_position,
-     thirdLettersColor, currentBrowser, animationTransition,
-     min_width_600px, secLettersColor
-}) {
+export default function MenuAppBar({ state, theme, setTheme }) {
+
+     const {
+          hrColor, hrColorMain,
+          AppBackgroundColor, scrollDirection,
+          animationTransition, min_width_600px, secLettersColor } = state
 
      const [heightAppBar, setHeightAppBarl] = useState(0)
 

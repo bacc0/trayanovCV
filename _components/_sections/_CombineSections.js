@@ -5,35 +5,40 @@ import Experience from './1_Experience'
 import Technologies from './2_Technologies'
 import AboutMe from './3_AboutMe'
 import Footer from './4_Footer'
+import { Typewriter } from 'react-simple-typewriter'
 
 import useInView from 'react-cool-inview'
 
 export default function _CombineSections({
-     theme, min_width_600px, footerColor, footerTextColor, backgroundColor, backgroundColor_2, hrColorMain, thirdLettersColor, typeWriter, hrColor, animationTransition, strongText
+     state, theme, min_width_600px, animationTransition, onAnimationEnd
 }) {
+
+     const { footerColor, footerTextColor } = state
 
      const { observe, unobserve, inView, scrollDirection, entry } =
           useInView(
                {
-                         threshold: 0.05, // Default is 0
-               //           onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
-               //             // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
+                    threshold: 0.05, // Default is 0
+                    //           onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
+                    //             // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
 
-               //             unobserve(); // To stop observing the current target element
-               //             observe(); // To re-start observing the current target element
-               //           },
-               //           onEnter: ({ scrollDirection, entry, observe, unobserve }) => {
-               //             // Triggered when the target enters the viewport
+                    //             unobserve(); // To stop observing the current target element
+                    //             observe(); // To re-start observing the current target element
+                    //           },
+                    //           onEnter: ({ scrollDirection, entry, observe, unobserve }) => {
+                    //             // Triggered when the target enters the viewport
 
-               //           },
-                         // onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
-                         //   // Triggered when the target leaves the viewport
-                         // },
-               //           // More useful options...
-                       }
+                    //           },
+                    // onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
+                    //   // Triggered when the target leaves the viewport
+                    // },
+                    //           // More useful options...
+               }
           )
-     console.log(inView)
-   
+     // console.log(inView)
+
+    
+
      const [isRef_0_Visible, setIsRef_0_Visible] = useState(true)
      const [isRef_05_Visible, setIsRef_05_Visible] = useState(true)
      const [isRef_1_Visible, setIsRef_1_Visible] = useState(true)
@@ -45,8 +50,29 @@ export default function _CombineSections({
      const Ref_1 = useRef()
      const Ref_2 = useRef()
      const Ref_2b = useRef()
-
      const Ref_3 = useRef();
+
+     const typeWriter = (sentence) => {
+          return (
+               onAnimationEnd && (
+                    <motion.div
+                         initial={{ opacity: 0 }}
+                         animate={{ opacity: 1 }}
+                         transition={{ duration: 1.3 }}
+                    >
+                         <Typewriter
+                              words={[sentence]}
+                              loop={1}
+                              cursor
+                              cursorStyle=''
+                              typeSpeed={75}
+                              deleteSpeed={50}
+                              delaySpeed={2000}
+                         />
+                    </motion.div>
+               )
+          )
+     }
 
      useEffect(() => {
 
@@ -117,19 +143,10 @@ export default function _CombineSections({
      return (
 
           <div>
-
-
-
                <Experience
-               theme={theme}
+                    state={state}
                     min_width_600px={min_width_600px}
-                    backgroundColor={backgroundColor}
-                    hrColorMain={hrColorMain}
-                    thirdLettersColor={thirdLettersColor}
                     typeWriter={typeWriter}
-                    strongText={strongText}
-                    hrColor={hrColor}
-                    animationTransition={animationTransition}
                     Ref_0={Ref_0}
                     isRef_0_Visible={isRef_0_Visible}
                     Ref_05={Ref_05}
@@ -137,38 +154,49 @@ export default function _CombineSections({
                     Ref_1={Ref_1}
                     isRef_1_Visible={isRef_1_Visible}
                     animation={animation}
+               // theme={theme}
+               // strongText={strongText}
+               // backgroundColor={backgroundColor}
+               // hrColorMain={hrColorMain}
+               // thirdLettersColor={thirdLettersColor}
+               // hrColor={hrColor}
+               // animationTransition={animationTransition}
                />
 
                <Technologies
+                    // state={state}
                     theme={theme}
                     min_width_600px={min_width_600px}
-                    backgroundColor={backgroundColor}
-                    backgroundColor_2={backgroundColor_2}
-                    hrColorMain={hrColorMain}
-                    thirdLettersColor={thirdLettersColor}
-                    typeWriter={typeWriter}
-                    hrColor={hrColor}
-                    animationTransition={animationTransition}
                     Ref_2={Ref_2}
                     Ref_2b={Ref_2b}
                     isRef_2_Visible={isRef_2_Visible}
                     animation={animation}
+
+               // backgroundColor={backgroundColor}
+               // backgroundColor_2={backgroundColor_2}
+               // hrColorMain={hrColorMain}
+               // hrColor={hrColor}
+               // thirdLettersColor={thirdLettersColor}
+
+               // typeWriter={typeWriter}
+               // animationTransition={animationTransition}
                />
 
                {/* <div style={{ height: 46 }} /> */}
-
                <AboutMe
-               theme={theme}
-                    min_width_600px={min_width_600px}
-                    backgroundColor={backgroundColor}
-                    hrColorMain={hrColorMain}
-                    thirdLettersColor={thirdLettersColor}
-                    typeWriter={typeWriter}
-                    hrColor={hrColor}
-                    animationTransition={animationTransition}
                     Ref_3={Ref_3}
                     isRef_3_Visible={isRef_3_Visible}
+                    min_width_600px={min_width_600px}
                     animation={animation}
+
+               // state={state}
+               // theme={theme}
+               // backgroundColor={backgroundColor}
+               // hrColorMain={hrColorMain}
+               // thirdLettersColor={thirdLettersColor}
+               // hrColor={hrColor}
+               // typeWriter={typeWriter}
+               // animationTransition={animationTransition}
                />
 
                {/* <div style={{ height: min_width_600px ? 62 : 34 }} /> */}
@@ -186,8 +214,7 @@ export default function _CombineSections({
                               transition={{ duration: 0.2 }}
                          >
                               <Footer
-                                   footerColor={footerColor}
-                                   footerTextColor={footerTextColor}
+                                   state={state}
                               />
                          </motion.div>
                     )}

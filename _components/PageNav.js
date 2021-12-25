@@ -6,17 +6,14 @@ import { motion } from 'framer-motion'
 
 import TitleSVG from './_illustratins/TitleSVG'
 
-export default function MenuAppBar({
+export default function MenuAppBar({ state, logo_W_H, strokeWidth, setOnAnimationEnd, animationTransition }) {
 
-     backgroundColor, thirdLogoColor, animationTransition,
-   secLettersColor, logo_W_H, primeLettersColor,
-     strokeWidth, setOnAnimationEnd
-}) {
 
+     const { backgroundColor, thirdLogoColor, secLettersColor, primeLettersColor } = state
 
      return (
 
-          <div className='vertical-center' >
+          <div className='vertical-center'>
                <motion.div
                     initial={{ scale: 1, y: -200, x: 10, opacity: 0 }}
                     animate={{ scale: 1, y: 0, x: 10, opacity: 1 }}
@@ -24,11 +21,8 @@ export default function MenuAppBar({
                     className='title'
                >
                     <TitleSVG
+                         state={state}
                          logo_W_H={logo_W_H}
-                         primeLettersColor={primeLettersColor}
-                         secLettersColor={secLettersColor}
-                         thirdLogoColor={thirdLogoColor}
-                         backgroundColor={backgroundColor}
                          strokeWidth={strokeWidth}
                          setOnAnimationEnd={setOnAnimationEnd}
                          animationTransition={animationTransition}

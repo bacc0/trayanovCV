@@ -1,42 +1,14 @@
 import { Hidden } from '@mui/material'
 import AnimationImage from './helpers/AnimationImage'
+import { makeStyles } from '@mui/styles'
 
+export default function Technologies({ min_width_600px, Ref_2, Ref_2b,
+                                             isRef_2_Visible, animation }) {
 
-export default function Technologies({
-     min_width_600px, backgroundColor, backgroundColor_2,
-     hrColorMain, animationTransition, Ref_2, Ref_2b,
-     isRef_2_Visible, animation, Y_position, theme
-}) {
-
-
-     const styleContainer = {
-          backgroundColor: backgroundColor_2,
-          paddingTop: min_width_600px ? 48 : 46,
-          paddingBottom: min_width_600px ? 12 : 34,
-
-
-          borderTop: `${theme === 'light' ? 0 : 1}px solid ${hrColorMain + 11}`,
-          borderBottom: `${theme === 'light' ? 0 : 1}px solid ${hrColorMain + 11}`,
-          transition: `background-color ${animationTransition} ease, 
-          color ${animationTransition} ease`,
-
-          // background: `radial-gradient(at 50% top, #4A0A6A, #4A0A6A, #040F1B, #040F1B, #040F1B)`,
-     }
-     const style_h2_ = {
-          fontSize: 35,
-          letterSpacing: 2.5,
-          color: backgroundColor,
-          transition: `color ${animationTransition} ease`
-     }
-     const style_hr_ = {
-          'background-color': hrColorMain,
-          transition: `background-color ${animationTransition} ease`
-     }
-
+     const classes = useStyles()
 
      return (
-          <div className='page-body' style={styleContainer}
-          >
+          <div className={`page-body ${classes.styleContainer}`}>
                <div className='page-body-left '>
                     <div className='container-content-left'>
                          <div className='content-left' >
@@ -45,11 +17,10 @@ export default function Technologies({
                                    <Hidden smUp >
                                         {animation(isRef_2_Visible, 0.02,
                                              <div style={{ margin: `24px 0 52px` }}>
-                                                  <h2 style={style_h2_}>
+                                                  <h2 className={classes.style_h2_}>
                                                        Tech stack
                                                   </h2>
-                                                  <hr style={style_hr_}
-                                                  />
+                                                  <hr className={classes.style_hr_} />
                                              </div>
                                         )}
                                    </Hidden>
@@ -88,12 +59,13 @@ export default function Technologies({
 
                                         {animation(isRef_2_Visible, 0.02,
                                              <div style={{ margin: `20px 0 38px` }}>
-                                                  <h2 style={style_h2_}
+                                                  <h2
+                                                       // style={style_h2_}
+                                                       className={classes.style_h2_}
                                                   >
                                                        Tech stack
                                                   </h2>
-                                                  <hr style={ style_hr_ }
-                                                  />
+                                                  <hr className={classes.style_hr_} />
                                              </div>
                                         )}
                                    </Hidden>
@@ -113,7 +85,7 @@ export default function Technologies({
                                         width={140}
                                         height={110}
                                         threshold={0.5}
-                                        Y_position={Y_position}
+                                        // Y_position={Y_position}
                                    />
                               )}
                          </div>
@@ -122,3 +94,36 @@ export default function Technologies({
           </div>
      )
 }
+
+
+
+const useStyles = makeStyles((
+     backgroundColor, animationTransition, hrColorMain, backgroundColor_2, min_width_600px, theme
+) => ({
+
+     styleContainer: {
+
+          backgroundColor: backgroundColor_2,
+          paddingTop: min_width_600px ? 48 : 46,
+          paddingBottom: min_width_600px ? 12 : 34,
+
+          borderTop: `${theme === 'light' ? 0 : 1}px solid ${hrColorMain + 11}`,
+          borderBottom: `${theme === 'light' ? 0 : 1}px solid ${hrColorMain + 11}`,
+          transition: `background-color ${animationTransition} ease, 
+          color ${animationTransition} ease`,
+          // background: `radial-gradient(at 50% top, #4A0A6A, #4A0A6A, #040F1B, #040F1B, #040F1B)`,
+          // backgroundColor: 'red'
+     },
+
+     style_h2_: {
+          fontSize: 35,
+          letterSpacing: 2.5,
+          color: backgroundColor,
+          transition: `color ${animationTransition} ease`
+     },
+
+     style_hr_: {
+          'background-color': hrColorMain,
+          transition: `background-color ${animationTransition} ease`
+     }
+}))

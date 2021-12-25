@@ -1,43 +1,18 @@
 import AnimationImage from './helpers/AnimationImage'
+import { makeStyles } from '@mui/styles'
+
 
 export default function AboutMe({
-     min_width_600px, backgroundColor, hrColorMain,
-     thirdLettersColor, hrColor, animationTransition,
-     Ref_3, isRef_3_Visible, animation, theme
-}) {
+     min_width_600px, Ref_3 , isRef_3_Visible, animation }) {
+     
+     const classes = useStyles()
 
-     const styleContainer = {
-          paddingTop: min_width_600px ? 50 : 85,
-          paddingBottom: min_width_600px ? 10 : 24,
-       
-     }
-     const style_h2_ = {
-          fontSize: 35, 
-          letterSpacing: 2.5,
-          color: backgroundColor, 
-          transition: `color ${animationTransition} ease`
-     }
-     const style_h3_ = {
-          color: thirdLettersColor,
-          transition: `color ${animationTransition} ease`,
-          marginTop: min_width_600px ? -2 : -21,
-          marginBottom: min_width_600px ? 0 : -11
-     }
-     const style_hr_I = {
-          'background-color': hrColorMain,
-          transition: `background-color ${animationTransition} ease`
-     }
-     const style_hr_II ={
-          'background-color': hrColor,
-          transition: `background-color ${animationTransition} ease`
-     }
+    
 
 
      return (
           <div>
-               <div className='page-body'
-                    style={styleContainer}
-               >
+               <div className={`page-body ${classes.styleContainer}`}>
                     <div className='page-body-left'>
 
                          <div className='container-content-left' >
@@ -49,10 +24,10 @@ export default function AboutMe({
 
                                         {animation(isRef_3_Visible, 0.02,
                                              <div style={{ marginTop: 6 }}>
-                                                  <h2 style={style_h2_}>
+                                                  <h2 className={classes.style_h2_}>
                                                        About me
                                                   </h2>
-                                                  <hr style={ style_hr_I }/>
+                                                  <hr className={classes.style_hr_II}/>
                                              </div>
                                         )}
                                    </div>
@@ -67,10 +42,10 @@ export default function AboutMe({
                                    >
                                         {animation(isRef_3_Visible, 0.1,
                                              <>
-                                                  <h3 style={ style_h3_ }>
+                                                  <h3 className={classes.style_h3_}>
                                                        Skills
                                                   </h3>
-                                                  <hr style={ style_hr_II }/>
+                                                  <hr className={classes.style_hr_II}/>
                                              </>
                                         )}
                                         {animation(isRef_3_Visible, 0.24,
@@ -154,3 +129,36 @@ export default function AboutMe({
           </div>
      )
 }
+
+
+const useStyles = makeStyles((
+     backgroundColor, animationTransition, hrColorMain, 
+     min_width_600px,  thirdLettersColor,hrColor
+) => ({
+
+      styleContainer: {
+          paddingTop: min_width_600px ? 50 : 85,
+          paddingBottom: min_width_600px ? 10 : 24,
+       
+     }
+     , style_h2_: {
+          fontSize: 35, 
+          letterSpacing: 2.5,
+          color: backgroundColor, 
+          transition: `color ${animationTransition} ease`
+     }
+     , style_h3_: {
+          color: thirdLettersColor,
+          transition: `color ${animationTransition} ease`,
+          marginTop: min_width_600px ? -2 : -21,
+          marginBottom: min_width_600px ? 0 : -11
+     }
+     , style_hr_I: {
+          'background-color': hrColorMain,
+          transition: `background-color ${animationTransition} ease`
+     }
+     , style_hr_II : {
+          'background-color': hrColor,
+          transition: `background-color ${animationTransition} ease`
+     }
+}))

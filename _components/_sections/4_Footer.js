@@ -5,9 +5,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
 
-
-export default function Footer({ footerColor, footerTextColor }) {
-
+export default function Footer({ state }) {
+     
+     const { footerColor, footerTextColor } = state
+  
      return (
           <div className="container-footer" style={{ backgroundColor: footerColor }}>
                <div className="footer">
@@ -49,9 +50,7 @@ export default function Footer({ footerColor, footerTextColor }) {
                               <div >
                                    <PhoneEnabledSharpIcon   fontSize='small'/>
                               </div>
-                              <div
-                                   className='footer-icon-text'
-                              >
+                              <div className='footer-icon-text'>
                                    <div> +44 (0) 7590 010066</div>
                               </div>
                          </a>
@@ -65,10 +64,8 @@ export default function Footer({ footerColor, footerTextColor }) {
                               <div >
                                    <GitHubIcon   fontSize='small'/>
                               </div>
-                              <div
-                                   className='footer-icon-text'
-                              >
-                                   <div> GitHubIcon</div>
+                              <div className='footer-icon-text'>
+                                   <div> GitHub </div>
                               </div>
                          </a>
                          <a
@@ -77,7 +74,7 @@ export default function Footer({ footerColor, footerTextColor }) {
                               href={'https://www.google.com/maps/@51.4764334,-0.1572618,16.21z'}
                          >
                               <div >
-                                   <LocationOnSharpIcon   fontSize='small'/>
+                                   <LocationOnSharpIcon  fontSize='small'/>
                               </div>
                               <div >
                                    <div

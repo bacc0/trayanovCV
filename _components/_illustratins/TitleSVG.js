@@ -4,7 +4,9 @@ import Script from 'next/script'
 
 
 
-export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, backgroundColor, strokeWidth, setOnAnimationEnd }) => {
+export default ({ state, logo_W_H, strokeWidth, setOnAnimationEnd }) => {
+
+     const { secLettersColor, thirdLogoColor, backgroundColor } = state
 
      const textMainFill = backgroundColor
      const textMainStroke = backgroundColor
@@ -17,18 +19,16 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
 
      const IM_Dev = secLettersColor
 
-
      return (
           <Fragment>
-
                <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 0.9 }}
                     transition={{ delay: 0.4, duration: 1.2 }}
                >
 
-                    {/* ---------------------   how use Tumult HYPE 4 (https://tumult.com/hype/) ---------------     */}
-                    {/* ---------------------   Copy from the HTML file (div and script)          ---------------     */}
+                    {/* --------------------  how use Tumult HYPE 4 (https://tumult.com/hype/) ---------------     */}
+                    {/* --------------------  Copy from the HTML file (div and script)           -------------     */}
                     {/* --------------------    import Script from 'next/script'                 ---------------     */}
                     {/* --------------------    ad generated folder to PUBLIC folder             ---------------     */}
 
@@ -104,7 +104,7 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
                               transition={{ delay: 2, duration: 0.3, ease: 'easeInOut' }}
                               id='Text-Second'>
                               <g>
-                                   <path 
+                                   <path
                                         d='M230.927,32.347 L211.498,32.347 L211.498,30.512 L230.927,30.512 z'
                                         fill={IM_Dev}
                                    />
@@ -195,7 +195,7 @@ export default ({ logo_W_H, primeLettersColor, secLettersColor, thirdLogoColor, 
 
 
 
-{/* 
+                              {/* 
                               <motion.g
                                    id="FRONT END 2"
                                    initial={{ opacity: 0, scale: 1 }}
