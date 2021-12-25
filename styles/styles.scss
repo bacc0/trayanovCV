@@ -1,8 +1,8 @@
 $distance-middle-half: 24px;
 $distance-middle-full: $distance-middle-half * 2;
 
-$margin-footer-mobile : 100px;
-$margin-footer-desktop : 70px;
+$margin-footer-mobile : 70px;
+$margin-footer-desktop : 60px;
 
 $element-width: 240px;
 
@@ -47,7 +47,7 @@ body {
           font-size: 16px;
           font-weight: 600;
 
-       
+
 
      }
 
@@ -212,7 +212,7 @@ body {
 
                                    .content-left {
                                         width: $element-width;
-
+                                       
                                    }
                               }
                          }

@@ -130,13 +130,10 @@ export default function _CombineSections({
                     strongText={strongText}
                     hrColor={hrColor}
                     animationTransition={animationTransition}
-
                     Ref_0={Ref_0}
                     isRef_0_Visible={isRef_0_Visible}
-
                     Ref_05={Ref_05}
                     isRef_05_Visible={isRef_05_Visible}
-
                     Ref_1={Ref_1}
                     isRef_1_Visible={isRef_1_Visible}
                     animation={animation}
@@ -152,7 +149,6 @@ export default function _CombineSections({
                     typeWriter={typeWriter}
                     hrColor={hrColor}
                     animationTransition={animationTransition}
-
                     Ref_2={Ref_2}
                     Ref_2b={Ref_2b}
                     isRef_2_Visible={isRef_2_Visible}
@@ -165,13 +161,11 @@ export default function _CombineSections({
                theme={theme}
                     min_width_600px={min_width_600px}
                     backgroundColor={backgroundColor}
-
                     hrColorMain={hrColorMain}
                     thirdLettersColor={thirdLettersColor}
                     typeWriter={typeWriter}
                     hrColor={hrColor}
                     animationTransition={animationTransition}
-
                     Ref_3={Ref_3}
                     isRef_3_Visible={isRef_3_Visible}
                     animation={animation}

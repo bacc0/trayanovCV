@@ -3,16 +3,18 @@ import AnimationImage from './helpers/AnimationImage'
 
 
 export default function Technologies({
-     min_width_600px, backgroundColor, backgroundColor_2, 
+     min_width_600px, backgroundColor, backgroundColor_2,
      hrColorMain, animationTransition, Ref_2, Ref_2b,
      isRef_2_Visible, animation, Y_position, theme
 }) {
 
+
      const styleContainer = {
           backgroundColor: backgroundColor_2,
-          paddingTop: min_width_600px ? 93 : 92,
-          paddingBottom: min_width_600px ? 54 : 74,
-          // minHeight: min_width_600px ? 300 : 300,
+          paddingTop: min_width_600px ? 48 : 46,
+          paddingBottom: min_width_600px ? 12 : 34,
+
+
           borderTop: `${theme === 'light' ? 0 : 1}px solid ${hrColorMain + 11}`,
           borderBottom: `${theme === 'light' ? 0 : 1}px solid ${hrColorMain + 11}`,
           transition: `background-color ${animationTransition} ease, 
@@ -20,6 +22,17 @@ export default function Technologies({
 
           // background: `radial-gradient(at 50% top, #4A0A6A, #4A0A6A, #040F1B, #040F1B, #040F1B)`,
      }
+     const style_h2_ = {
+          fontSize: 35,
+          letterSpacing: 2.5,
+          color: backgroundColor,
+          transition: `color ${animationTransition} ease`
+     }
+     const style_hr_ = {
+          'background-color': hrColorMain,
+          transition: `background-color ${animationTransition} ease`
+     }
+
 
      return (
           <div className='page-body' style={styleContainer}
@@ -32,46 +45,37 @@ export default function Technologies({
                                    <Hidden smUp >
                                         {animation(isRef_2_Visible, 0.02,
                                              <div style={{ margin: `24px 0 52px` }}>
-                                                  <h2 style={{
-                                                       color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
-                                                       transition: `color ${animationTransition} ease`
-                                                  }}
-                                                  >
-                                                       Tech stack {backgroundColor_2 && 'RED'}
+                                                  <h2 style={style_h2_}>
+                                                       Tech stack
                                                   </h2>
-                                                  <hr
-                                                       style={{ 'background-color': hrColorMain, transition: `background-color ${animationTransition} ease` }}
+                                                  <hr style={style_hr_}
                                                   />
                                              </div>
                                         )}
                                    </Hidden>
                               </div>
-
-                              {animation(isRef_2_Visible, 0.1,  <p>ReactJS</p>)}
+                              <div style={{ marginTop: min_width_600px ? 13 : -16, }}>
+                                   {animation(isRef_2_Visible, 0.1, <p>ReactJS</p>)}
+                              </div>
                               {animation(isRef_2_Visible, 0.14, <p>Hook</p>)}
                               {animation(isRef_2_Visible, 0.18, <p>NextJS</p>)}
                               {animation(isRef_2_Visible, 0.22, <p>Javascript</p>)}
                               {animation(isRef_2_Visible, 0.26, <p>Material</p>)}
-                              {animation(isRef_2_Visible, 0.3,  <p>CSS</p>)}
+                              {animation(isRef_2_Visible, 0.3, <p>CSS</p>)}
                               {animation(isRef_2_Visible, 0.34, <p>SASS</p>)}
                               {animation(isRef_2_Visible, 0.38, <p>HTML</p>)}
                               {animation(isRef_2_Visible, 0.42, <p>Framer Motion</p>)}
                               {animation(isRef_2_Visible, 0.46, <p>SVG Animations</p>)}
-                              {animation(isRef_2_Visible, 0.5,  <p>Adobe Illustrator</p>)}
+                              {animation(isRef_2_Visible, 0.5, <p>Adobe Illustrator</p>)}
                               {animation(isRef_2_Visible, 0.54, <p>Autodesk Graphic</p>)}
                               {animation(isRef_2_Visible, 0.58, <p>GIMP</p>)}
                               {animation(isRef_2_Visible, 0.62, <p>Adobe Photoshop</p>)}
-
                          </div>
                     </div>
                </div>
 
                <div className='page-body-right' >
-
-
-
                     <div className='container-content-right'>
-
                          <div
                               className='content-right'
                               style={{
@@ -84,36 +88,28 @@ export default function Technologies({
 
                                         {animation(isRef_2_Visible, 0.02,
                                              <div style={{ margin: `20px 0 38px` }}>
-                                                  <h2 style={{
-                                                       color: backgroundColor, fontSize: 35, letterSpacing: 2.5,
-                                                       transition: `color ${animationTransition} ease`
-                                                  }}
+                                                  <h2 style={style_h2_}
                                                   >
                                                        Tech stack
                                                   </h2>
-                                                  <hr style={{
-                                                       'background-color': hrColorMain,
-                                                       transition: `background-color ${animationTransition} ease`
-                                                  }}
+                                                  <hr style={ style_hr_ }
                                                   />
                                              </div>
                                         )}
-
                                    </Hidden>
                               </div>
 
                               {animation(isRef_2_Visible, min_width_600px ? 0.22 : 0.66, <p>Typescript</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.26 : 0.7,  <p>NodeJS</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.3 : 0.74,  <p>Express</p>)}
+                              {animation(isRef_2_Visible, min_width_600px ? 0.26 : 0.7, <p>NodeJS</p>)}
+                              {animation(isRef_2_Visible, min_width_600px ? 0.3 : 0.74, <p>Express</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.34 : 0.78, <p>Git Github Bitbucket</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.38 : 0.82, <p>Sourcetree</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.42 : 0.84, <p>Jira</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.46 : 0.88, <p>Jenkins</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.5 : 0.92,  <p>Storybook</p>)}
-
+                              {animation(isRef_2_Visible, min_width_600px ? 0.5 : 0.92, <p>Storybook</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.54 : 0.96,
                                    <AnimationImage
-                                        imageURL={ '/tech1.svg'}
+                                        imageURL={'/tech1.svg'}
                                         width={140}
                                         height={110}
                                         threshold={0.5}
