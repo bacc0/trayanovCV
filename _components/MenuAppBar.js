@@ -12,12 +12,9 @@ import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
-export default function MenuAppBar({ state, theme, setTheme }) {
+export default function MenuAppBar({ state, theme, setTheme, scrollDirection, min_width_600px }) {
 
-     const {
-          hrColor, hrColorMain,
-          AppBackgroundColor, scrollDirection,
-          animationTransition, min_width_600px, secLettersColor } = state
+     const { hrColor, hrColorMain, AppBackgroundColor, animationTransition, secLettersColor } = state
 
      const [heightAppBar, setHeightAppBarl] = useState(0)
 
@@ -26,7 +23,6 @@ export default function MenuAppBar({ state, theme, setTheme }) {
                setHeightAppBarl(65)
           }, 2000);
      }, []);
-
 
      const handleThemeChange = () => {
           setTheme(theme === 'light' ? 'dark' : 'light')
@@ -57,7 +53,7 @@ export default function MenuAppBar({ state, theme, setTheme }) {
           transition: `background-color 350ms ease, 
           height 800ms ease`,
      }
-    
+
      const titleStyle = {
           fontSize: 12,
           letterSpacing: 1.2,
@@ -89,11 +85,14 @@ export default function MenuAppBar({ state, theme, setTheme }) {
                                    initial={{ opacity: 0, y: -65 }}
                                    animate={{ opacity: 1, y: 0 }}
                                    transition={{ delay: 2, duration: 1, ease: 'easeInOut' }}
-                                   style={ToolbarContainer}>
-                                   <Toolbar style={{
-                                        maxWidth: min_width_600px ? 730 : 360,
-                                        margin: '0 auto'
-                                   }}>
+                                   style={ToolbarContainer}
+                              >
+                                   <Toolbar
+                                        style={{
+                                             maxWidth: min_width_600px ? 730 : 360,
+                                             margin: '0 auto'
+                                        }}
+                                   >
                                         <Hidden smDown>
                                              <Typography style={titleStyle}
                                                   sx={{ flexGrow: 1 }}>

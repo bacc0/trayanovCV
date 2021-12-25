@@ -5,7 +5,7 @@ import PageNav from './PageNav'
 import { useState, useEffect, Fragment } from 'react'
 
 
-export default function HomePage({ currentBrowser, theme, setTheme, Y_position,
+export default function HomePage({ currentBrowser, theme, setTheme, Y_position,scrollDirection
 }) {
 
      const color_1 = '#FFFFFF'
@@ -82,9 +82,10 @@ export default function HomePage({ currentBrowser, theme, setTheme, Y_position,
      return (
           <Fragment>
                <MenuAppBar
+                    state={state}
                     theme={theme}
                     setTheme={setTheme}
-                    state={state}
+                    scrollDirection={scrollDirection}
                />
                <div
                     className='page'

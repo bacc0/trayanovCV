@@ -48,7 +48,6 @@ export default function AboutMe({
      return (
           <div className='page-body' style={styleContainer}>
                <div className='page-body-left' >
-
                     <div className='container-content-left' >
                          <div ref={Ref_3}
                               className='content-left'
