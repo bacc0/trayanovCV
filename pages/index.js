@@ -4,6 +4,7 @@ import HomePage from '../_components/__HomePage'
 
 import { useViewportScroll } from 'framer-motion'
 import { detect } from 'detect-browser'
+import {background_3} from '../_components/_illustratins/background_3'
 
 
 var temp = 0
@@ -131,7 +132,7 @@ export default function Home() {
           thirdLettersColor: color_6,
           backgroundColor_2: color_2,
           AppBackgroundColor: color_1,
-          backgroundNav: `url('background_3_light.svg'), url( 'background_2.svg' ), url( 'background_1.svg' )`,
+          backgroundNav: `{url('background_3_light.svg')}, url( 'background_2.svg' ), url( 'background_1.svg' )`,
      })
 
      useEffect(() => {

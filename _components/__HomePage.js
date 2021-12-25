@@ -4,10 +4,12 @@ import MenuAppBar from './MenuAppBar'
 import PageNav from './PageNav'
 import { useState } from 'react'
 
+import {background_3} from './_illustratins/background_3'
 
-export default function HomePage({ 
-     state, currentBrowser, theme, setTheme, Y_position,scrollDirection }) {
-     
+
+export default function HomePage({
+     state, currentBrowser, theme, setTheme, Y_position, scrollDirection }) {
+
      const [onAnimationEnd, setOnAnimationEnd] = useState(false)
 
      const min_width_600px = useMediaQuery('(min-width:600px)')
@@ -17,11 +19,15 @@ export default function HomePage({
 
      const { AppBackgroundColor, hrColor, bodyColor, backgroundNav } = state
 
+    
+
      const styleBackgroundTitle = {
           backgroundColor: AppBackgroundColor,
           width: '100%',
           'background-image': min_width_600px ? backgroundNav : null,
-          backgroundPosition: `center -8px, center ${Number(20 + (Y_position * -1800)).toFixed(1)}px`,
+          backgroundPosition: ` center -8px, 
+                                center ${Number(20 + (Y_position * -1800)).toFixed(1)}px, 
+                                center center `,
           backgroundSize: 536,
           backgroundRepeat: 'no-repeat',
           borderBottom: `1px solid ${hrColor}`

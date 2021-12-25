@@ -38,19 +38,19 @@ export default function MenuAppBar({ state, theme, setTheme, scrollDirection, mi
           borderBottom: `1px solid ${hrColor}99`,
           fontSize: 10,
           height: scrollDirection === 'up' ? 0 : 65,
-          transition: `height 800ms ease`,
+          transition: `height 0ms ease`,
 
      }
      const ToolbarContainer = {
           borderBottom: `1px solid blck`,
           position: 'relative',
           top: scrollDirection === 'up' ? -65 : 0,
-          transition: `top 600ms ease`
+          transition: `top 0ms ease`
      }
      const underAppBAr = {
           height: heightAppBar,
           'background-color': AppBackgroundColor,
-          transition: `background-color 350ms ease, 
+          transition: `background-color 0ms ease, 
           height 800ms ease`,
      }
 
