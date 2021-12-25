@@ -86,6 +86,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, Y_position,s
                     theme={theme}
                     setTheme={setTheme}
                     scrollDirection={scrollDirection}
+                    min_width_600px={min_width_600px}
                />
                <div
                     className='page'
