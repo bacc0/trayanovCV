@@ -13,8 +13,6 @@ export default function _CombineSections({
      state, theme, min_width_600px, animationTransition, onAnimationEnd
 }) {
 
-     const { footerColor, footerTextColor } = state
-
      const { observe, unobserve, inView, scrollDirection, entry } =
           useInView(
                {
@@ -118,9 +116,8 @@ export default function _CombineSections({
           }
      }
 
-
-
      const animation = (is_Ref_Visible, delay, html) => {
+
 
           return (
                <AnimatePresence>
@@ -154,17 +151,9 @@ export default function _CombineSections({
                     Ref_1={Ref_1}
                     isRef_1_Visible={isRef_1_Visible}
                     animation={animation}
-               // theme={theme}
-               // strongText={strongText}
-               // backgroundColor={backgroundColor}
-               // hrColorMain={hrColorMain}
-               // thirdLettersColor={thirdLettersColor}
-               // hrColor={hrColor}
-               // animationTransition={animationTransition}
                />
 
                <Technologies
-                    // state={state}
                     theme={theme}
                     min_width_600px={min_width_600px}
                     Ref_2={Ref_2}
@@ -172,38 +161,22 @@ export default function _CombineSections({
                     isRef_2_Visible={isRef_2_Visible}
                     animation={animation}
 
-               // backgroundColor={backgroundColor}
-               // backgroundColor_2={backgroundColor_2}
-               // hrColorMain={hrColorMain}
-               // hrColor={hrColor}
-               // thirdLettersColor={thirdLettersColor}
-
-               // typeWriter={typeWriter}
-               // animationTransition={animationTransition}
+                    state={state}
+                    animationTransition={animationTransition}
+                    
                />
 
-               {/* <div style={{ height: 46 }} /> */}
                <AboutMe
+                    state={state}
                     Ref_3={Ref_3}
                     isRef_3_Visible={isRef_3_Visible}
                     min_width_600px={min_width_600px}
                     animation={animation}
-
-               // state={state}
-               // theme={theme}
-               // backgroundColor={backgroundColor}
-               // hrColorMain={hrColorMain}
-               // thirdLettersColor={thirdLettersColor}
-               // hrColor={hrColor}
-               // typeWriter={typeWriter}
-               // animationTransition={animationTransition}
+                    animationTransition={animationTransition}
                />
 
-               {/* <div style={{ height: min_width_600px ? 62 : 34 }} /> */}
-
-
                <div
-                    style={{ height: 230 }}
+                    style={{ height: 200 }}
                     ref={observe}
                >
 

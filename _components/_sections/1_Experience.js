@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect, Fragment } from 'react'
 import { Example } from './helpers/AnimationText';
 import AnimationImage from './helpers/AnimationImage'
-import { makeStyles } from '@mui/styles'
+
 
 
 export default function Experience({
@@ -10,12 +10,12 @@ export default function Experience({
      state,
      min_width_600px,
      typeWriter, Ref_0, isRef_0_Visible,
-     Ref_05, isRef_05_Visible, Ref_1, isRef_1_Visible, animation, 
+     Ref_05, isRef_05_Visible, Ref_1, isRef_1_Visible, animation,
 }) {
 
-   const { strongText }  = state
-
-     const classes = useStyles()
+     const { strongText, animationTransition, hrColorMain,
+          thirdLettersColor, hrColor,backgroundColor } = state
+    
      const [onAnimationStart, setOnAnimationStart] = useState(true)
 
      useEffect(() => {
@@ -25,8 +25,47 @@ export default function Experience({
      }, [])
 
 
+     const styleContainer = {
+          paddingTop: min_width_600px ? 53 : 68,
+          paddingBottom: min_width_600px ? 17 : 12,
+          minHeight: min_width_600px ? 300 : 300,
+
+          // backgroundColor: '#7026A5',
+          // background: `radial-gradient(at 50% top, #4A0A6A, #4A0A6A, #040F1B, #040F1B, #040F1B)`,
+
+          // backgroundColor: '#040F1B',
+          // 'background-image':`url('backAppGradient.svg')`,
+          // // backgroundPosition: `center -128px, top`,
+          // backgroundPosition: `center 0%`,
+          // backgroundSize: 536,
+          // 'background-repeat': 'no-repeat',
+
+     }
+     const style_h2_ = {
+          fontSize: 35,
+          letterSpacing: 2.5,
+          color: backgroundColor,
+          transition: `color ${animationTransition} ease`,
+     }
+     const style_h3_ = {
+          minHeight: 35,
+          letterSpacing: 1.3,
+          color: thirdLettersColor,
+          transition: `color ${animationTransition} ease`,
+     }
+
+     const style_hr_I = {
+          'background-color': hrColorMain,
+          transition: `background-color ${animationTransition} ease`
+     }
+     const style_hr_II = {
+          'background-color': hrColor,
+          transition: `background-color ${animationTransition} ease`
+     }
+
+
      return (
-          <div className={`page-body ${classes.styleContainer}`}>
+          <div className='page-body' style={styleContainer}>
                <div className='page-body-left'>
 
                     <div className='container-content-left' >
@@ -38,10 +77,10 @@ export default function Experience({
                               {animation(isRef_0_Visible, 0.1,
                                    <>
 
-                                        <h2 className={classes.style_h2_}>
+                                        <h2 style={style_h2_}>
                                              Experience
                                         </h2>
-                                        <hr className={classes.style_hr_I}/>
+                                        <hr style={style_hr_I} />
                                    </>
                               )}
 
@@ -54,7 +93,7 @@ export default function Experience({
                               style={{ marginTop: min_width_600px ? -20 : -2 }}
                          >
                               {animation(isRef_0_Visible, 0.14,
-                                   <h3 className={classes.style_h3_}>
+                                   <h3 style={style_h3_}>
                                         {onAnimationStart
                                              ? typeWriter('React Developer - Groundbits Ltd')
                                              : 'React Developer - Groundbits Ltd'
@@ -63,7 +102,7 @@ export default function Experience({
                               )}
 
                               {animation(isRef_0_Visible, 0.18,
-                                   <hr className={classes.style_hr_II} />
+                                   <hr style={style_hr_II} />
                               )}
                               {animation(isRef_0_Visible, 0.22,
                                    <strong style={{ color: strongText }}>Dec 2021 – Present </strong>
@@ -113,16 +152,15 @@ export default function Experience({
                          <div className='content-right' ref={Ref_05}>
                               {animation(isRef_05_Visible, 0.1,
                                    <>
-                                        <h3
-                                             className={classes.style_h3_}
-                                             style={{ marginTop: min_width_600px ? 19 : 10 }}
+                                        <h3 
+                                             style={{ ...style_h3_ , ...{marginTop: min_width_600px ? 19 : 10 }}}
                                         >
                                              {onAnimationStart
                                                   ? typeWriter(' React Developer - Amdocs via Appgr8')
                                                   : ' React Developer - Amdocs via Appgr8'
                                              }
                                         </h3>
-                                        <hr className={classes.style_hr_II} />
+                                        <hr style={style_hr_II} />
                                    </>
                               )}
 
@@ -166,14 +204,14 @@ export default function Experience({
                          <div className='content-right' ref={Ref_1}>
                               {animation(isRef_1_Visible, 0,
                                    <>
-                                        <h3 className={classes.style_h3_}>
+                                        <h3 style={style_h3_}>
                                              {onAnimationStart
                                                   ? typeWriter('React Developer - Groundbits Ltd')
                                                   : 'React Developer - Groundbits Ltd'
                                              }
                                         </h3>
 
-                                        <hr className={classes.style_hr_II}/>
+                                        <hr style={style_hr_II} />
                                    </>
                               )}
 
@@ -210,46 +248,3 @@ export default function Experience({
 }
 
 
-
-const useStyles = makeStyles((
-     backgroundColor, animationTransition, hrColorMain, backgroundColor_2, min_width_600px,
-     theme, thirdLettersColor, hrColor
-) => ({
-
-     styleContainer: {
-          paddingTop: min_width_600px ? 53 : 68,
-          paddingBottom: min_width_600px ? 17 : 12,
-          minHeight: min_width_600px ? 300 : 300,
-
-          // backgroundColor: '#7026A5',
-          // background: `radial-gradient(at 50% top, #4A0A6A, #4A0A6A, #040F1B, #040F1B, #040F1B)`,
-
-          // backgroundColor: '#040F1B',
-          // 'background-image':`url('backAppGradient.svg')`,
-          // // backgroundPosition: `center -128px, top`,
-          // backgroundPosition: `center 0%`,
-          // backgroundSize: 536,
-          // 'background-repeat': 'no-repeat',
-
-     },
-     style_h2_: {
-          fontSize: 35,
-          letterSpacing: 2.5,
-          color: backgroundColor,
-          transition: `color ${animationTransition} ease`,
-     },
-     style_h3_: {
-          minHeight: 35,
-          letterSpacing: 1.3,
-          color: thirdLettersColor,
-          transition: `color ${animationTransition} ease`,
-     },
-      style_hr_I : {
-          'background-color': hrColorMain,
-          transition: `background-color ${animationTransition} ease`
-     },
-     style_hr_II : {
-          'background-color': hrColor,
-          transition: `background-color ${animationTransition} ease`
-     }
-}))

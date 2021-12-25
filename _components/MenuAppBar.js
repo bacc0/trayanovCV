@@ -57,16 +57,7 @@ export default function MenuAppBar({ state, theme, setTheme }) {
           transition: `background-color 350ms ease, 
           height 800ms ease`,
      }
-     // const progressLineStyle = {
-     //      position: 'fixed',
-     //      top: 0,
-     //      zIndex: 1100,
-     //      width: `${(Y_position * 100).toFixed(0)}%`,
-     //      height: 0.75,
-     //      marginTop: 0,
-     //      backgroundColor: thirdLettersColor,
-     //      transition: `width 150ms ease`
-     // }
+    
      const titleStyle = {
           fontSize: 12,
           letterSpacing: 1.2,

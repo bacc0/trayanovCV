@@ -9,8 +9,6 @@ import TitleSVG from './_illustratins/TitleSVG'
 export default function MenuAppBar({ state, logo_W_H, strokeWidth, setOnAnimationEnd, animationTransition }) {
 
 
-     const { backgroundColor, thirdLogoColor, secLettersColor, primeLettersColor } = state
-
      return (
 
           <div className='vertical-center'>
