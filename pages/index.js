@@ -34,6 +34,7 @@ export default function Home() {
      }
 
      // ---------------------------------    Detect window scrolling Directions (UP DOWN)
+     
      useEffect(() => {
           var scrollableElement = document.body
           scrollableElement.addEventListener('wheel', checkScrollDirection)
