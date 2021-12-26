@@ -11,7 +11,7 @@ export default function Home() {
 
      var tempWindowWidth = 0
      var tempWindowHeight = 0
-// ???
+
      const [scrollDirection, setScrollDirection] = useState('down')
 
      const [W_screenSize, set_W_screenSize] = useState(tempWindowWidth)
