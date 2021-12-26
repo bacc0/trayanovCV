@@ -8,7 +8,7 @@ import { detect } from 'detect-browser'
 
 var temp = 0
 export default function Home() {
-
+//MMm
      var tempWindowWidth = 0
      var tempWindowHeight = 0
 
