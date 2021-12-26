@@ -1,22 +1,56 @@
 import * as React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useRef } from "react";
+import { motion } from "framer-motion";
+// import { useDimensions } from "./use-dimensions";
 
 
-export const animationText = ( is_Ref_Visible, delay, html ) => {
+export const AnimationText = ({ text }) => {
+
+     const menuItem = (index) => {
+          return (
+               <motion.li
+                    key={index}
+                    initial={{ y: 20, opacity: 0 }}
+                    variants={{
+                         open: {
+                              y: 0,
+                              opacity: 1 
+                         }
+                    }}
+               >
+                    {index}
+               </motion.li>
+          )
+     }
+
+
+     const containerRef = useRef(null);
+     // const { height } = 'auto';
+
      return (
-          <AnimatePresence>
-               {is_Ref_Visible == 1 && (
-                    <motion.div exit={{ opacity: 0.3, y: -10 }}>
-                         <motion.div
-                              initial={{ scale: 0.99, y: 50, opacity: 0 }}
-                              animate={{ scale: 1, y: 0, opacity: 1 }}
-                              transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: delay }}
-                         >
-                              {html}
-                         </motion.div>
-                    </motion.div>
-               )}
-          </AnimatePresence >
+          <motion.ul
+               style={{
+                    'list-style-type': 'none',
+                    margin: 0,
+                    padding: 0
+               }}
+               initial={true}
+               animate={"open"}
+               ref={containerRef}
+               variants={{
+                    open: {
+                         transition: { staggerChildren: 0.04, delayChildren: 0.3 }
+                    },
+                    // closed: {
+                    //      transition: { staggerChildren: 0.05, staggerDirection: 10 }
+                    // }
+               }}
+          >
+               {text.map((index) => (
+                    <>
+                         {menuItem(index)}
+                    </>
+               ))}
+          </motion.ul>
      )
-    
 }

@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect, Fragment } from 'react'
+import { Example } from './helpers/AnimationText';
 import AnimationImage from './helpers/AnimationImage'
 
 
@@ -9,7 +10,7 @@ export default function Experience({
      state,
      min_width_600px,
      typeWriter, Ref_0, isRef_0_Visible,
-     Ref_05, isRef_05_Visible, Ref_1, isRef_1_Visible, animationText,
+     Ref_05, isRef_05_Visible, Ref_1, isRef_1_Visible, animation,
 }) {
 
      const { strongText, animationTransition, hrColorMain,
@@ -73,7 +74,7 @@ export default function Experience({
                               className='content-left'
                               style={{ margin: `5px 0 ${min_width_600px ? 36 : -7}px` }}
                          >
-                              {animationText(isRef_0_Visible, 0.1,
+                              {animation(isRef_0_Visible, 0.1,
                                    <>
 
                                         <h2 style={style_h2_}>
@@ -91,7 +92,7 @@ export default function Experience({
                               className='content-left'
                               style={{ marginTop: min_width_600px ? -20 : -2 }}
                          >
-                              {animationText(isRef_0_Visible, 0.14,
+                              {animation(isRef_0_Visible, 0.14,
                                    <h3 style={style_h3_}>
                                         {onAnimationStart
                                              ? typeWriter('React Developer - Groundbits Ltd')
@@ -100,16 +101,16 @@ export default function Experience({
                                    </h3>
                               )}
 
-                              {animationText(isRef_0_Visible, 0.18,
+                              {animation(isRef_0_Visible, 0.18,
                                    <hr style={style_hr_II} />
                               )}
-                              {animationText(isRef_0_Visible, 0.22,
+                              {animation(isRef_0_Visible, 0.22,
                                    <strong style={{ color: strongText }}>Dec 2021 – Present </strong>
                               )}
-                              {animationText(isRef_0_Visible, 0.26,
+                              {animation(isRef_0_Visible, 0.26,
                                    <p>Developing a Website Builder.</p>
                               )}
-                              {animationText(isRef_0_Visible, 0.30,
+                              {animation(isRef_0_Visible, 0.30,
                                    <p>
                                         Using
                                         <span className='font-weight-300'> REACT </span>
@@ -127,7 +128,7 @@ export default function Experience({
                                    </p>
                               )}
 
-                              {animationText(isRef_0_Visible, 0.34,
+                              {animation(isRef_0_Visible, 0.34,
                                    <p>
                                         <div>Contact</div>
                                         <strong style={{ color: strongText }}>Ricard Rosson </strong>
@@ -135,9 +136,9 @@ export default function Experience({
                                    </p>
                               )}
 
-                              {animationText(isRef_0_Visible, 0.38,
+                              {animation(isRef_0_Visible, 0.38,
                                    <AnimationImage
-                                        imageURL={'/work.svg'}
+                                        imageURL={'/work1.svg'}
                                         width={140}
                                         height={110}
                                         threshold={0.5}
@@ -149,9 +150,11 @@ export default function Experience({
                <div className='page-body-right'>
                     <div className='container-content-right'>
                          <div className='content-right' ref={Ref_05}>
-                              {animationText(isRef_05_Visible, 0.1,
+                              {animation(isRef_05_Visible, 0.1,
                                    <>
-                                        <h3 style={{ ...style_h3_ , ...{marginTop: min_width_600px ? 20 : 10 }}}>
+                                        <h3 
+                                             style={{ ...style_h3_ , ...{marginTop: min_width_600px ? 19 : 10 }}}
+                                        >
                                              {onAnimationStart
                                                   ? typeWriter(' React Developer - Amdocs via Appgr8')
                                                   : ' React Developer - Amdocs via Appgr8'
@@ -161,16 +164,16 @@ export default function Experience({
                                    </>
                               )}
 
-                              {animationText(isRef_05_Visible, 0.14,
+                              {animation(isRef_05_Visible, 0.14,
                                    <strong style={{ color: strongText }}>
                                         July 2021 - Nov 2021
                                    </strong>
                               )}
 
-                              {animationText(isRef_05_Visible, 0.18,
+                              {animation(isRef_05_Visible, 0.18,
                                    <p>Building a new components for the application.</p>
                               )}
-                              {animationText(isRef_05_Visible, 0.22,
+                              {animation(isRef_05_Visible, 0.22,
                                    <p>
                                         Using
                                         <span className='font-weight-300'> MATERIAL UI</span>
@@ -183,7 +186,7 @@ export default function Experience({
                                         ect.
                                    </p>
                               )}
-                              {animationText(isRef_05_Visible, 0.26,
+                              {animation(isRef_05_Visible, 0.26,
                                    <p>
                                         For the software development the company used
                                         <span className='font-weight-300'> AGILE </span>
@@ -199,7 +202,7 @@ export default function Experience({
 
                     <div className='container-content-right'>
                          <div className='content-right' ref={Ref_1}>
-                              {animationText(isRef_1_Visible, 0,
+                              {animation(isRef_1_Visible, 0,
                                    <>
                                         <h3 style={style_h3_}>
                                              {onAnimationStart
@@ -212,15 +215,15 @@ export default function Experience({
                                    </>
                               )}
 
-                              {animationText(isRef_1_Visible, 0.1,
+                              {animation(isRef_1_Visible, 0.1,
                                    <strong style={{ color: strongText }}>
                                         Jan 2020 – Jan 2021
                                    </strong>
                               )}
-                              {animationText(isRef_1_Visible, 0.14,
+                              {animation(isRef_1_Visible, 0.14,
                                    <p>Creating a web builder application.</p>
                               )}
-                              {animationText(isRef_1_Visible, 0.18,
+                              {animation(isRef_1_Visible, 0.18,
                                    <p>
                                         Using
                                         <span className='font-weight-300'> REACT </span>

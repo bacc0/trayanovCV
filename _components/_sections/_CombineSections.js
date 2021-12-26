@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
-import { Typewriter } from 'react-simple-typewriter'
-import { animationText } from './helpers/animationText'
-import useInView from 'react-cool-inview'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import Experience from './1_Experience'
 import Technologies from './2_Technologies'
 import AboutMe from './3_AboutMe'
 import Footer from './4_Footer'
+import { Typewriter } from 'react-simple-typewriter'
+
+import useInView from 'react-cool-inview'
 
 export default function _CombineSections({
      state, theme, min_width_600px, animationTransition, onAnimationEnd
@@ -33,6 +33,9 @@ export default function _CombineSections({
                     //           // More useful options...
                }
           )
+     // console.log(inView)
+
+    
 
      const [isRef_0_Visible, setIsRef_0_Visible] = useState(true)
      const [isRef_05_Visible, setIsRef_05_Visible] = useState(true)
@@ -91,6 +94,7 @@ export default function _CombineSections({
                setIsRef_05_Visible(false)
           }
 
+
           if (window.pageYOffset + window.innerHeight - 44 >= Ref_1.current.offsetTop) {
                setIsRef_1_Visible(true)
           } else {
@@ -112,9 +116,30 @@ export default function _CombineSections({
           }
      }
 
+     const animation = (is_Ref_Visible, delay, html) => {
+
+
+          return (
+               <AnimatePresence>
+                    {is_Ref_Visible == 1 && (
+                         <motion.div exit={{ opacity: 0.3, y: -10 }}>
+                              <motion.div
+                                   initial={{ scale: 0.99, y: 50, opacity: 0 }}
+                                   animate={{ scale: 1, y: 0, opacity: 1 }}
+                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: delay }}
+                              >
+                                   {html}
+                              </motion.div>
+                         </motion.div>
+                    )}
+               </AnimatePresence >
+          )
+     }
+
 
      return (
-          <>
+
+          <div>
                <Experience
                     state={state}
                     min_width_600px={min_width_600px}
@@ -125,28 +150,31 @@ export default function _CombineSections({
                     isRef_05_Visible={isRef_05_Visible}
                     Ref_1={Ref_1}
                     isRef_1_Visible={isRef_1_Visible}
-                    animationText={animationText}
+                    animation={animation}
                />
+
                <Technologies
                     theme={theme}
                     min_width_600px={min_width_600px}
                     Ref_2={Ref_2}
                     Ref_2b={Ref_2b}
                     isRef_2_Visible={isRef_2_Visible}
-                    animationText={animationText}
+                    animation={animation}
 
                     state={state}
                     animationTransition={animationTransition}
                     
                />
+
                <AboutMe
                     state={state}
                     Ref_3={Ref_3}
                     isRef_3_Visible={isRef_3_Visible}
                     min_width_600px={min_width_600px}
-                    animationText={animationText}
+                    animation={animation}
                     animationTransition={animationTransition}
                />
+
                <div
                     style={{ height: 200 }}
                     ref={observe}
@@ -158,10 +186,12 @@ export default function _CombineSections({
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ duration: 0.2 }}
                          >
-                              <Footer state={state}/>
+                              <Footer
+                                   state={state}
+                              />
                          </motion.div>
                     )}
                </div>
-          </>
+          </div>
      )
 }
