@@ -5,7 +5,7 @@ import PageNav from './PageNav'
 import { useState, useEffect, Fragment } from 'react'
 
 
-export default function HomePage({ currentBrowser, theme, setTheme, Y_position,scrollDirection
+export default function HomePage({ currentBrowser, theme, setTheme, Y_position ,scrollDirection
 }) {
 
      const color_1 = '#FFFFFF'
@@ -85,6 +85,7 @@ export default function HomePage({ currentBrowser, theme, setTheme, Y_position,s
                     state={state}
                     theme={theme}
                     setTheme={setTheme}
+                    Y_position={Y_position}
                     scrollDirection={scrollDirection}
                     min_width_600px={min_width_600px}
                />

@@ -12,17 +12,33 @@ import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
-export default function MenuAppBar({ state, theme, setTheme, scrollDirection, min_width_600px }) {
+export default function MenuAppBar({ state, theme, setTheme, Y_position, scrollDirection, min_width_600px }) {
 
      const { hrColor, hrColorMain, AppBackgroundColor, animationTransition, secLettersColor } = state
 
      const [heightAppBar, setHeightAppBarl] = useState(0)
+     const [appBarIsVisible, setAppBarIsVisible] = useState(true)
 
      useEffect(() => {
           setTimeout(() => {
                setHeightAppBarl(65)
           }, 2000);
      }, []);
+
+     useEffect(() => {
+          if (Y_position < 0.05) {
+               setAppBarIsVisible(true)
+               // console.log('Y_position < 0.05')
+          } else {
+
+               scrollDirection === 'up' ? setAppBarIsVisible(false) : setAppBarIsVisible(true)
+
+               // console.log('NO')
+          }
+     }, [Y_position]);
+
+
+
 
      const handleThemeChange = () => {
           setTheme(theme === 'light' ? 'dark' : 'light')
@@ -37,15 +53,16 @@ export default function MenuAppBar({ state, theme, setTheme, scrollDirection, mi
           boxShadow: '0 0 0',
           borderBottom: `1px solid ${hrColor}99`,
           fontSize: 10,
-          height: scrollDirection === 'up' ? 0 : 65,
+          // height: scrollDirection === 'up' ? 0 : 65,
+          height: appBarIsVisible ? 65 : 0,
           transition: `height 800ms ease`,
-
 
      }
      const ToolbarContainer = {
           borderBottom: `1px solid blck`,
           position: 'relative',
-          top: scrollDirection === 'up' ? -65 : 0,
+          // top: scrollDirection === 'up' ? -65 : 0,
+          top: appBarIsVisible ? 0 : -65,
           transition: `top 600ms ease`
      }
      const underAppBAr = {
@@ -73,7 +90,7 @@ export default function MenuAppBar({ state, theme, setTheme, scrollDirection, mi
 
 
      return (
-          <Box  >
+          <Box>
                <div>
                     <motion.div
                          initial={{ opacity: 0, pathLength: 0, y: -65 }}
@@ -151,8 +168,6 @@ export default function MenuAppBar({ state, theme, setTheme, scrollDirection, mi
                                                   }
                                              </IconButton>
                                         </Stack>
-
-
                                    </Toolbar>
                               </motion.div>
                          </AppBar>
