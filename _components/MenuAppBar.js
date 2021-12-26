@@ -53,7 +53,8 @@ export default function MenuAppBar({ state, theme, setTheme, Y_position, scrollD
           boxShadow: '0 0 0',
           borderBottom: `1px solid ${hrColor}99`,
           fontSize: 10,
-          // height: scrollDirection === 'up' ? 0 : 65,
+          // height: scrollDirection === 'up' ? 0 : 65, change the navigation animation
+
           height: appBarIsVisible ? 65 : 0,
           transition: `height 800ms ease`,
 
