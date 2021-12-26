@@ -5,10 +5,13 @@ import HomePage from '../_components/__HomePage'
 import { useViewportScroll } from 'framer-motion'
 import { detect } from 'detect-browser'
 
-//+ 77
+
 var temp = 0
 export default function Home() {
-     
+       
+
+
+     // M
      var tempWindowWidth = 0
      var tempWindowHeight = 0
 
