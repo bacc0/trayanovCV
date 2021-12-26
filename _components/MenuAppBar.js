@@ -26,7 +26,7 @@ export default function MenuAppBar({ state, theme, setTheme, Y_position, scrollD
      }, []);
 
      useEffect(() => {
-          if (Y_position < 0.05) {
+          if (Y_position < 0.02) {
                setAppBarIsVisible(true)
                // console.log('Y_position < 0.05')
           } else {
