@@ -4,7 +4,7 @@ import HomePage from '../_components/__HomePage'
 
 import { useViewportScroll } from 'framer-motion'
 import { detect } from 'detect-browser'
-// Test ig
+
 
 var temp = 0
 export default function Home() {
