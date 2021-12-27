@@ -111,11 +111,11 @@ export default function HomePage({
      const styleBackgroundTitle_container = {
           backgroundColor: AppBackgroundColor,
           width: '100%',
-          'background-image':  backgroundNav_container,
+          'background-image': backgroundNav_container ,
           backgroundPosition: `center ${Number(20 + (Y_position * -1800)).toFixed(1)}px,
                                center center`,
           backgroundSize: 536,
-          backgroundRepeat: 'no-repeat',
+          backgroundRepeat: 'repeat-y, no-repeat',
           // opacity : opacityBackground,
           transition: `opacity 250ms ease`
      }
