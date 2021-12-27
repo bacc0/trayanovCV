@@ -10,8 +10,7 @@ import { Typewriter } from 'react-simple-typewriter'
 import useInView from 'react-cool-inview'
 
 export default function _CombineSections({
-     state, theme, min_width_600px, animationTransition, onAnimationEnd
-}) {
+     state, theme, min_width_600px, animationTransition, onAnimationEnd }) {
 
      const { observe, unobserve, inView, scrollDirection, entry } =
           useInView(
@@ -34,8 +33,6 @@ export default function _CombineSections({
                }
           )
      // console.log(inView)
-
-    
 
      const [isRef_0_Visible, setIsRef_0_Visible] = useState(true)
      const [isRef_05_Visible, setIsRef_05_Visible] = useState(true)
@@ -76,7 +73,6 @@ export default function _CombineSections({
 
           window.addEventListener('scroll', scrollHandler);
           return () => window.removeEventListener('scroll', scrollHandler);
-
      }, []);
 
 
@@ -93,7 +89,6 @@ export default function _CombineSections({
           } else {
                setIsRef_05_Visible(false)
           }
-
 
           if (window.pageYOffset + window.innerHeight - 44 >= Ref_1.current.offsetTop) {
                setIsRef_1_Visible(true)
@@ -160,10 +155,8 @@ export default function _CombineSections({
                     Ref_2b={Ref_2b}
                     isRef_2_Visible={isRef_2_Visible}
                     animation={animation}
-
                     state={state}
-                    animationTransition={animationTransition}
-                    
+                    animationTransition={animationTransition} 
                />
 
                <AboutMe
@@ -176,8 +169,8 @@ export default function _CombineSections({
                />
 
                <div
-                    style={{ height: 200 }}
                     ref={observe}
+                    style={{ height: 200 }}
                >
 
                     {inView && (
