@@ -42,9 +42,26 @@ export default function HomePage({
 
      const backgroundNav_1_light = `url('backgroundNav_1_light.svg') `
      const backgroundNav_1_dark = `url('backgroundNav_1_dark.svg')`
-     const backgroundNav_2 = `url('backgroundNav_2.svg')`
-     const backgroundNav_3 = `url('backgroundNav_3.svg')`
 
+     const [backgroundNav_2, setBackgroundNav_2] = useState( `url('backgroundClear.svg')`)
+     const [backgroundNav_3, setBackgroundNav_3] = useState( `url('backgroundClear.svg')`)
+
+     setTimeout(() => {
+          setBackgroundNav_2(`url('backgroundNav_2.svg')`)
+          setBackgroundNav_3(`url('backgroundNav_3.svg')`)
+          
+     }, 100);
+
+     useEffect(() => {
+          setState({
+               ...state,
+               backgroundNav_container: theme === 'light'
+                    ? `${backgroundNav_2}, ${backgroundNav_3}`
+                    : `${backgroundNav_2}, ${backgroundNav_3}`,
+          })
+          
+     }, [backgroundNav_2, backgroundNav_3]);
+ 
      const animationTransition = '0ms'
 
      useEffect(() => {
@@ -89,9 +106,11 @@ export default function HomePage({
           width: '100%',
           'background-image': min_width_600px ? backgroundNav_container : null,
           backgroundPosition: `center ${Number(20 + (Y_position * -1800)).toFixed(1)}px,
-                               center -8px`,
+                               center center`,
           backgroundSize: 536,
           backgroundRepeat: 'no-repeat',
+          // opacity : opacityBackground,
+          transition: `opacity 250ms ease`
      }
 
      const styleBackgroundTitle = {
