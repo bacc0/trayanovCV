@@ -30,7 +30,8 @@ export default function HomePage({
           footerColor: color_4,
           footerTextColor: color_1,
           backgroundNav_container: ``,
-          backgroundNav: ``
+          backgroundNav: ``,
+          backgroundNav_mobile: ``
      }
      const [state, setState] = useState(INITIAL_STATE)
 
@@ -43,13 +44,16 @@ export default function HomePage({
      const backgroundNav_1_light = `url('backgroundNav_1_light.svg') `
      const backgroundNav_1_dark = `url('backgroundNav_1_dark.svg')`
 
-     const [backgroundNav_2, setBackgroundNav_2] = useState( `url('backgroundClear.svg')`)
-     const [backgroundNav_3, setBackgroundNav_3] = useState( `url('backgroundClear.svg')`)
+     const backgroundNav_1_light_mobile = `url('backgroundNav_1_light_mobile.svg')`
+     const backgroundNav_1_dark_mobile = `url('backgroundNav_1_dark_mobile.svg')`
+
+     const [backgroundNav_2, setBackgroundNav_2] = useState(`url('backgroundClear.svg')`)
+     const [backgroundNav_3, setBackgroundNav_3] = useState(`url('backgroundClear.svg')`)
 
      setTimeout(() => {
           setBackgroundNav_2(`url('backgroundNav_2.svg')`)
           setBackgroundNav_3(`url('backgroundNav_3.svg')`)
-          
+
      }, 100);
 
      useEffect(() => {
@@ -59,9 +63,9 @@ export default function HomePage({
                     ? `${backgroundNav_2}, ${backgroundNav_3}`
                     : `${backgroundNav_2}, ${backgroundNav_3}`,
           })
-          
+
      }, [backgroundNav_2, backgroundNav_3]);
- 
+
      const animationTransition = '0ms'
 
      useEffect(() => {
@@ -87,11 +91,14 @@ export default function HomePage({
                backgroundNav: theme === 'light'
                     ? `${backgroundNav_1_light}, ${backgroundNav_1_dark}`
                     : `${backgroundNav_1_dark} , ${backgroundNav_1_light}`,
+               backgroundNav_mobile: theme === 'light'
+                    ? `${backgroundNav_1_light_mobile}, ${backgroundNav_1_dark_mobile}`
+                    : `${backgroundNav_1_dark_mobile} , ${backgroundNav_1_light_mobile}`
           })
 
      }, [theme]);
 
-     const { AppBackgroundColor, hrColor, bodyColor, backgroundNav_container, backgroundNav } = state
+     const { AppBackgroundColor, hrColor, bodyColor, backgroundNav_container, backgroundNav, backgroundNav_mobile } = state
 
      const bodyPage = {
           backgroundColor: AppBackgroundColor,
@@ -104,7 +111,7 @@ export default function HomePage({
      const styleBackgroundTitle_container = {
           backgroundColor: AppBackgroundColor,
           width: '100%',
-          'background-image': min_width_600px ? backgroundNav_container : null,
+          'background-image':  backgroundNav_container,
           backgroundPosition: `center ${Number(20 + (Y_position * -1800)).toFixed(1)}px,
                                center center`,
           backgroundSize: 536,
@@ -115,7 +122,7 @@ export default function HomePage({
 
      const styleBackgroundTitle = {
           width: '100%',
-          'background-image': min_width_600px ? backgroundNav : null,
+          'background-image': min_width_600px ? backgroundNav : backgroundNav_mobile,
           backgroundPosition: `center -8px`,
           backgroundSize: 536,
           backgroundRepeat: 'no-repeat',
