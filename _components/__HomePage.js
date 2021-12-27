@@ -4,7 +4,7 @@ import MenuAppBar from './MenuAppBar'
 import PageNav from './PageNav'
 import { useState, useEffect, Fragment } from 'react'
 
-//test branch
+
 export default function HomePage({ currentBrowser, theme, setTheme, Y_position ,scrollDirection
 }) {
 
