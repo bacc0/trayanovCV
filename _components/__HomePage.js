@@ -40,22 +40,10 @@ export default function HomePage({
      const logo_W_H = 230
      const strokeWidth = min_width_600px ? 1.2 : 1.5
 
-     const backgroundNav_1_light = `url('FRONT_END_2.svg') `
-
-     const backgroundNav_1_dark = `url('FRONT_END_2_DARK.svg')`
-
-     // const [backgroundNav_2, setBackgroundNav_2] = useState(``)
-     // const [backgroundNav_3, setBackgroundNav_3] = useState(``)
-
-     // useEffect(() => {
-     //      setInterval(() => {
-     //           setBackgroundNav_2(`url('backFrontEnd.svg')`)
-     //           setBackgroundNav_3(`url('FRONT_END_2_COLOR.svg')`)
-     //      }, 1000);
-     // }, []);
-
-     const backgroundNav_2 = `url('backFrontEnd.svg')`
-     const backgroundNav_3 = `url('FRONT_END_2_COLOR.svg')`
+     const backgroundNav_1_light = `url('backgroundNav_1_light.svg') `
+     const backgroundNav_1_dark = `url('backgroundNav_1_dark.svg')`
+     const backgroundNav_2 = `url('backgroundNav_2.svg')`
+     const backgroundNav_3 = `url('backgroundNav_3.svg')`
 
      const animationTransition = '0ms'
 
@@ -96,10 +84,7 @@ export default function HomePage({
                                   color ${animationTransition} ease`,
      }
 
-
-
      const styleBackgroundTitle_container = {
-          // borderBottom: `1px solid ${hrColor}`,
           backgroundColor: AppBackgroundColor,
           width: '100%',
           'background-image': min_width_600px ? backgroundNav_container : null,
@@ -110,7 +95,6 @@ export default function HomePage({
      }
 
      const styleBackgroundTitle = {
-
           width: '100%',
           'background-image': min_width_600px ? backgroundNav : null,
           backgroundPosition: `center -8px`,
@@ -130,24 +114,10 @@ export default function HomePage({
                     min_width_600px={min_width_600px}
                />
 
-               <div
-                    className='page'
-                    style={bodyPage}
-               >
-                    {/* -------------------------------------------------------- */}
+               <div className='page' style={bodyPage} >
 
-
-
-
-
-                    <div
-                         className='page-nav'
-                         style={styleBackgroundTitle_container}
-                    >
-                         <div
-                              className='title-container vertical-center-container'
-                              style={styleBackgroundTitle}
-                         >
+                    <div className='page-nav' style={styleBackgroundTitle_container} >
+                         <div className='title-container vertical-center-container' style={styleBackgroundTitle} >
                               <PageNav
                                    state={state}
                                    logo_W_H={logo_W_H}
@@ -158,10 +128,6 @@ export default function HomePage({
                          </div>
                     </div>
 
-
-
-
-                    {/* -------------------------------------------------------- */}
                     <CombineSections
                          state={state}
                          theme={theme}
