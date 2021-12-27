@@ -1,5 +1,4 @@
 import { useEffect, useState, Fragment } from 'react'
-
 import HomePage from '../_components/__HomePage'
 
 import { useViewportScroll } from 'framer-motion'
