@@ -5,10 +5,11 @@ import HomePage from '../_components/__HomePage'
 import { useViewportScroll } from 'framer-motion'
 import { detect } from 'detect-browser'
 
-
+//s
 var temp = 0
 export default function Home() {
 
+    
      var tempWindowWidth = 0
      var tempWindowHeight = 0
 
@@ -33,6 +34,7 @@ export default function Home() {
      }
 
      // ---------------------------------    Detect window scrolling Directions (UP DOWN)
+     
      useEffect(() => {
           var scrollableElement = document.body
           scrollableElement.addEventListener('wheel', checkScrollDirection)
@@ -62,22 +64,22 @@ export default function Home() {
           window.addEventListener('scroll', (e) => {
                newValue = window.pageYOffset;
                if (oldValue < newValue) {
-                   
 
-                   
-                         setScrollDirection('up')
-                       
-              
+
+
+                    setScrollDirection('up')
+
+
                } else if (oldValue > newValue) {
 
-                  
-                         setScrollDirection('down')
-                  
+
+                    setScrollDirection('down')
+
                }
                oldValue = newValue;
           });
 
-        
+
      }, [])
 
      useEffect(() => {
@@ -97,7 +99,7 @@ export default function Home() {
 
      // ---------------------------------    Detect Browser Name
      const browser = detect()
-     
+
 
      if (browser.name === 'firefox') {
           currentBrowser = 'firefox'
@@ -116,8 +118,8 @@ export default function Home() {
 
      useEffect(() => {
           window.scrollTo(0, 0)
-        }, [])
-        
+     }, [])
+
 
      return (
           <section className='pages-wrapper'>
@@ -128,7 +130,7 @@ export default function Home() {
                     Y_position={Y_position}
                     currentBrowser={currentBrowser}
                />
-               
+
 
           </section>
      )
