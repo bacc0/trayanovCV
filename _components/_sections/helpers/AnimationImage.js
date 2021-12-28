@@ -7,7 +7,7 @@ export default function AnimationImage({ imageURL, width, height, threshold = 0.
 
      const { observe, inView } = useInView({
           threshold: threshold,
-          unobserveOnEnter: true,
+          // unobserveOnEnter: true,
 
           //           onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
           //             // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
