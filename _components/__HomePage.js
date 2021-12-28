@@ -9,9 +9,9 @@ export default function HomePage({
 
      const color_1 = '#FFFFFF'
      const color_2 = '#FAFAFA' // F2F2F2
-     const color_3 = '#757575'
-     const color_4 = '#383838' //#040F1B
-     const color_5 = '#1d1d1f'
+     const color_3 = '#636189'  // #3F3D56
+     const color_4 = '#3F3D56' //#040F1B
+     const color_5 = '#2F2E41'
      const color_6 = '#8D30FE'
      const color_7 = '#CF68FE'
 
