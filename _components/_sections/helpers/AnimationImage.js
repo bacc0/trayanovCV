@@ -7,7 +7,7 @@ export default function AnimationImage({ imageURL, width, height, threshold = 0.
 
      const { observe, inView } = useInView({
           threshold: threshold,
-          // unobserveOnEnter: true,
+          unobserveOnEnter: true,
 
           //           onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
           //             // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
@@ -17,6 +17,7 @@ export default function AnimationImage({ imageURL, width, height, threshold = 0.
           //           },
           // onEnter: ({ scrollDirection, entry, observe, unobserve }) => {
           //   // Triggered when the target enters the viewport
+          //   console.log('unobserve')
           // },
                                    // onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
                                      // Triggered when the target leaves the viewport
@@ -35,8 +36,6 @@ export default function AnimationImage({ imageURL, width, height, threshold = 0.
                               animate={{ opacity: 1, pathLength: 1, y: 0 }}
                               transition={{ delay: 0, duration: 0.5, ease: 'linear' }}
                               exit={{ opacity: 0 }}
-
-
                          >
                               <Image
                                    src={imageURL}

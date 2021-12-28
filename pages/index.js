@@ -81,7 +81,7 @@ export default function Home() {
 
      useEffect(() => {
           if (Y_position === 0) {
-               console.log(0)
+              
                setScrollDirection('down')
           }
      }, [Y_position])

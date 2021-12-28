@@ -111,13 +111,14 @@ export default function HomePage({
      const styleBackgroundTitle_container = {
           backgroundColor: AppBackgroundColor,
           width: '100%',
-          'background-image': backgroundNav_container ,
+          'background-image': backgroundNav_container,
           backgroundPosition: `center ${Number(20 + (Y_position * -1800)).toFixed(1)}px,
                                center center`,
           backgroundSize: 536,
           backgroundRepeat: 'repeat-y, no-repeat',
           // opacity : opacityBackground,
-          transition: `opacity 250ms ease`
+          transition: `opacity 250ms ease`,
+       
      }
 
      const styleBackgroundTitle = {
@@ -126,7 +127,9 @@ export default function HomePage({
           backgroundPosition: `center -8px`,
           backgroundSize: 536,
           backgroundRepeat: 'no-repeat',
-          borderBottom: `1px solid ${hrColor}`,
+          // borderBottom: `1px solid ${hrColor}`,   
+          borderBottom:`1px solid ${color_3}55` ,
+          borderTop: `1px solid ${color_3}55` ,
      }
 
      return (
