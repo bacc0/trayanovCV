@@ -12,7 +12,8 @@ import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
-export default function MenuAppBar({ state, theme, setTheme, Y_position, scrollDirection, min_width_600px }) {
+export default function MenuAppBar({ 
+     state, theme, setTheme, Y_position, scrollDirection, min_width_600px, currentBrowser }) {
 
      const { hrColor, hrColorMain, AppBackgroundColor, animationTransition, secLettersColor } = state
 
@@ -46,7 +47,7 @@ export default function MenuAppBar({ state, theme, setTheme, Y_position, scrollD
 
      const AppBarStyle = {
           // backgroundColor: currentBrowser === 'firefox' ? 'red' : 'transparent',
-          backgroundColor: `${AppBackgroundColor}77`,
+          backgroundColor: currentBrowser === 'firefox' ? `${AppBackgroundColor}fa` : `${AppBackgroundColor}77`,
           '-webkit-backdrop-filter': `blur(10px)`,
           ' backdrop-filter': `blur(10px)`,
           color: hrColorMain,
@@ -121,7 +122,6 @@ export default function MenuAppBar({ state, theme, setTheme, Y_position, scrollD
                                         <Stack
                                              direction='row'
                                              spacing={1}
-
                                              style={iconsStackStyle}
                                         >
 

@@ -139,6 +139,7 @@ export default function HomePage({
                     theme={theme}
                     setTheme={setTheme}
                     Y_position={Y_position}
+                    currentBrowser={currentBrowser}
                     scrollDirection={scrollDirection}
                     min_width_600px={min_width_600px}
                />
