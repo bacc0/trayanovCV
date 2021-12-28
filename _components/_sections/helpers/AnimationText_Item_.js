@@ -1,7 +1,5 @@
-import * as React from "react";
-import { useRef } from "react";
-import { motion } from "framer-motion";
-// import { useDimensions } from "./use-dimensions";
+import * as React from 'react'
+import { motion } from 'framer-motion'
 
 
 export const AnimationText_Item = ( is_Ref_Visible, delay, html ) => {
@@ -20,5 +18,4 @@ export const AnimationText_Item = ( is_Ref_Visible, delay, html ) => {
                )}
           </AnimatePresence >
      )
-    
 }

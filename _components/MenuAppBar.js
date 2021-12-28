@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Stack, IconButton, Typography, Toolbar, AppBar, Box, Hidden } from '@mui/material'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound'
-
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
 import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp'
 import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
@@ -17,36 +16,27 @@ export default function MenuAppBar({
 
      const { hrColor, hrColorMain, AppBackgroundColor, animationTransition, secLettersColor } = state
 
-     const [heightAppBar, setHeightAppBarl] = useState(0)
+     const [heightAppBar, setHeightAppBar] = useState(0)
      const [appBarIsVisible, setAppBarIsVisible] = useState(true)
 
      useEffect(() => {
           setTimeout(() => {
-               setHeightAppBarl(65)
+               setHeightAppBar(65)
           }, 2000);
      }, []);
 
      useEffect(() => {
           if (Y_position < 0.02) {
                setAppBarIsVisible(true)
-               // console.log('Y_position < 0.05')
           } else {
-
                scrollDirection === 'up' ? setAppBarIsVisible(false) : setAppBarIsVisible(true)
-
-               // console.log('NO')
           }
      }, [Y_position]);
-
-
-
 
      const handleThemeChange = () => {
           setTheme(theme === 'light' ? 'dark' : 'light')
      }
-
      const AppBarStyle = {
-          // backgroundColor: currentBrowser === 'firefox' ? 'red' : 'transparent',
           backgroundColor: currentBrowser === 'firefox' ? `${AppBackgroundColor}fa` : `${AppBackgroundColor}77`,
           '-webkit-backdrop-filter': `blur(10px)`,
           ' backdrop-filter': `blur(10px)`,
@@ -54,16 +44,12 @@ export default function MenuAppBar({
           boxShadow: '0 0 0',
           borderBottom: `1px solid ${hrColor}99`,
           fontSize: 10,
-          // height: scrollDirection === 'up' ? 0 : 65, change the navigation animation
-
           height: appBarIsVisible ? 65 : 0,
           transition: `height 800ms ease`,
-
      }
      const ToolbarContainer = {
           borderBottom: `1px solid blck`,
           position: 'relative',
-          // top: scrollDirection === 'up' ? -65 : 0,
           top: appBarIsVisible ? 0 : -65,
           transition: `top 600ms ease`
      }
@@ -73,7 +59,6 @@ export default function MenuAppBar({
           transition: `background-color 350ms ease, 
           height 800ms ease`,
      }
-
      const titleStyle = {
           fontSize: 12,
           letterSpacing: 1.2,
@@ -98,7 +83,6 @@ export default function MenuAppBar({
                          initial={{ opacity: 0, pathLength: 0, y: -65 }}
                          animate={{ opacity: 1, pathLength: 1, y: 0 }}
                          transition={{ delay: 1.8, duration: 1, ease: 'easeInOut' }}
-                    // exit={{ opacity: 0, y: -6 }}
                     >
                          <AppBar style={AppBarStyle} position='fixed'>
                               <motion.div
@@ -114,8 +98,7 @@ export default function MenuAppBar({
                                         }}
                                    >
                                         <Hidden smDown>
-                                             <Typography style={titleStyle}
-                                                  sx={{ flexGrow: 1 }}>
+                                             <Typography style={titleStyle} sx={{ flexGrow: 1 }}>
                                                   Veselin Trayanov
                                              </Typography>
                                         </Hidden>
@@ -124,7 +107,6 @@ export default function MenuAppBar({
                                              spacing={1}
                                              style={iconsStackStyle}
                                         >
-
                                              <IconButton
                                                   href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'} aria-label='LinkedIn Icon' style={iconsStyle}
                                              >
@@ -173,10 +155,8 @@ export default function MenuAppBar({
                               </motion.div>
                          </AppBar>
                          <div style={underAppBAr} />
-                         {/* <hr style={progressLineStyle} /> */}
                     </motion.div>
                </div>
-
           </Box >
      )
 }

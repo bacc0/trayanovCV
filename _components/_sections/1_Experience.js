@@ -1,12 +1,8 @@
-import { motion, AnimatePresence } from 'framer-motion'
-import { useState, useEffect, Fragment } from 'react'
-import { Example } from './helpers/AnimationText';
+import { useState, useEffect } from 'react'
 import AnimationImage from './helpers/AnimationImage'
 
 
-
 export default function Experience({
-
      state,
      min_width_600px,
      typeWriter, Ref_0, isRef_0_Visible,
@@ -67,7 +63,6 @@ export default function Experience({
      return (
           <div className='page-body' style={styleContainer}>
                <div className='page-body-left'>
-
                     <div className='container-content-left' >
                          <div
                               ref={Ref_0}
@@ -83,7 +78,6 @@ export default function Experience({
                                         <hr style={style_hr_I} />
                                    </>
                               )}
-
                          </div>
                     </div>
 

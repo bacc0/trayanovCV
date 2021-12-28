@@ -2,11 +2,11 @@ import { Hidden } from '@mui/material'
 import AnimationImage from './helpers/AnimationImage'
 
 
-export default function Technologies({ state, min_width_600px, Ref_2, Ref_2b,
+export default function Technologies({ 
+     state, min_width_600px, Ref_2, Ref_2b,
      theme, animationTransition, isRef_2_Visible, animation }) {
     
      const { backgroundColor, hrColorMain } = state
-
 
      const styleContainer = {
 

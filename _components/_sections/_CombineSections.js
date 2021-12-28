@@ -96,7 +96,7 @@ export default function _CombineSections({
                setIsRef_1_Visible(false)
           }
 
-          if ((window.pageYOffset + window.innerHeight - 44 >= Ref_2.current.offsetTop) ||
+          if ( (window.pageYOffset + window.innerHeight - 44 >= Ref_2.current.offsetTop) ||
                (window.pageYOffset + window.innerHeight - 44 >= Ref_2b.current.offsetTop)) {
 
                setIsRef_2_Visible(true)

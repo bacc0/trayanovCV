@@ -1,12 +1,9 @@
-
-
 import { motion } from 'framer-motion'
-
-
-
 import TitleSVG from './_illustratins/TitleSVG'
 
-export default function MenuAppBar({ state, logo_W_H, strokeWidth, setOnAnimationEnd, animationTransition }) {
+
+export default function MenuAppBar({ 
+     state, logo_W_H, strokeWidth, setOnAnimationEnd, animationTransition }) {
 
 
      return (
