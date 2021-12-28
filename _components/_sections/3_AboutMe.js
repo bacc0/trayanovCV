@@ -5,9 +5,9 @@ export default function AboutMe({
      state, min_width_600px, Ref_3, isRef_3_Visible, animation, animationTransition }) {
 
      const { backgroundColor, hrColorMain, thirdLettersColor, hrColor } = state
-     
+
      const theme = useTheme()
-     
+
 
      const styles = (theme) => ({
           root: {
@@ -145,9 +145,12 @@ export default function AboutMe({
                                    )}
                                    {animation(isRef_3_Visible, min_width_600px ? 0.38 : 0.6,
                                         <AnimationImage
-                                             imageURL={'/about_me1.svg'}
-                                             width={140}
-                                             height={110}
+                                             // imageURL={'/about_me1.svg'}
+                                             // width={140}
+                                             // height={110}
+                                             imageURL={'/me.svg'}
+                                             width={min_width_600px ? 243 : 310}
+                                             height={min_width_600px ? 200 : 240}
                                              threshold={0.5}
                                         />
                                    )}

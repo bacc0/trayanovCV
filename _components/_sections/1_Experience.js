@@ -132,9 +132,12 @@ export default function Experience({
 
                               {animation(isRef_0_Visible, 0.38,
                                    <AnimationImage
-                                        imageURL={'/work1.svg'}
-                                        width={140}
-                                        height={110}
+                                        // imageURL={'/work1.svg'}
+                                        // width={140}
+                                        // height={110}
+                                        imageURL={'/exp.svg'}
+                                        width={min_width_600px ? 243 : 310}
+                                        height={min_width_600px ? 200 : 240}
                                         threshold={0.5}
                                    />
                               )}

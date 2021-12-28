@@ -105,9 +105,12 @@ export default function Technologies({
                               {animation(isRef_2_Visible, min_width_600px ? 0.5 : 0.92, <p>Storybook</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.54 : 0.96,
                                    <AnimationImage
-                                        imageURL={'/tech1.svg'}
-                                        width={140}
-                                        height={110}
+                                        // imageURL={'/tech1.svg'}
+                                        // width={140}
+                                        // height={110}
+                                        imageURL={'/tech.svg'}
+                                        width={min_width_600px ? 243 : 310}
+                                        height={min_width_600px ? 200 : 240}
                                         threshold={0.5}
                                    // Y_position={Y_position}
                                    />
