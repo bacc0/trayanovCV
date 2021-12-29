@@ -13,7 +13,7 @@ export default function _CombineSections({
      state, theme, min_width_600px, animationTransition, onAnimationEnd }) {
 
      const { observe, unobserve, inView, scrollDirection, entry } =
-          useInView({ 
+          useInView({
                threshold: 0.01, // Default is 0
                // unobserveOnEnter: true,
           })
@@ -60,7 +60,6 @@ export default function _CombineSections({
           return () => window.removeEventListener('scroll', scrollHandler);
      }, []);
 
-
      const scrollHandler = () => {
 
           if (window.pageYOffset + window.innerHeight - 44 >= Ref_0.current.offsetTop) {
@@ -81,7 +80,7 @@ export default function _CombineSections({
                setIsRef_1_Visible(false)
           }
 
-          if ( (window.pageYOffset + window.innerHeight - 44 >= Ref_2.current.offsetTop) ||
+          if ((window.pageYOffset + window.innerHeight - 44 >= Ref_2.current.offsetTop) ||
                (window.pageYOffset + window.innerHeight - 44 >= Ref_2b.current.offsetTop)) {
 
                setIsRef_2_Visible(true)
@@ -97,8 +96,6 @@ export default function _CombineSections({
      }
 
      const animation = (is_Ref_Visible, delay, html) => {
-
-
           return (
                <AnimatePresence>
                     {is_Ref_Visible == 1 && (
@@ -141,7 +138,7 @@ export default function _CombineSections({
                     isRef_2_Visible={isRef_2_Visible}
                     animation={animation}
                     state={state}
-                    animationTransition={animationTransition} 
+                    animationTransition={animationTransition}
                />
 
                <AboutMe
@@ -153,9 +150,12 @@ export default function _CombineSections({
                     animationTransition={animationTransition}
                />
 
-               <div ref={observe} style={{ height: 200 }} >
-                    {inView && <Footer state={state}/>}
+               <div ref={observe} style={{ height: 200 }}>
+                    {inView && (
+                         <Footer state={state} min_width_600px={min_width_600px} />
+                    )}
                </div>
+               {/* <div style={{ minHeight: min_width_600px ? 0 : 70,backgroundColor: 'lime' }} /> */}
           </div>
      )
 }

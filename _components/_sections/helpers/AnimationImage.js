@@ -3,37 +3,37 @@ import Image from 'next/image'
 import useInView from 'react-cool-inview'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export default function AnimationImage({ 
+export default function AnimationImage({
      imageURL, width, height, threshold = 0.5, min_width_600px }) {
 
      const { observe, inView } = useInView({
           threshold: threshold,
           // unobserveOnEnter: true,
 
-          //           onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
-          //             // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
+          // onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
+          //      // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
 
-          //             unobserve(); // To stop observing the current target element
-          //             observe(); // To re-start observing the current target element
-          //           },
-          // onEnter: ({ scrollDirection, entry, observe, unobserve }) => {
-          //   // Triggered when the target enters the viewport
-          //   console.log('unobserve')
+          //      unobserve(); // To stop observing the current target element
+          //      observe(); // To re-start observing the current target element
           // },
-                                   // onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
-                                     // Triggered when the target leaves the viewport
-          // console.log(scrollDirection)
-          // unobserve()
-                                   // },
-          //           // More useful options...
+          // onEnter: ({ scrollDirection, entry, observe, unobserve }) => {
+          //      // Triggered when the target enters the viewport
+          //      console.log('unobserve')
+          // },
+          // onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
+          //                            Triggered when the target leaves the viewport
+          //      console.log(scrollDirection)
+          //      unobserve()
+          // },
+          // More useful options...
      })
 
      return (
-          <div ref={observe} style={{ 
-                    height, 
-                    display: 'flex', 
-                    justifyContent: min_width_600px ? 'flex-start' : 'center' 
-               }}
+          <div ref={observe} style={{
+               height,
+               display: 'flex',
+               justifyContent: min_width_600px ? 'flex-start' : 'center'
+          }}
           >
                <AnimatePresence>
                     {inView && (

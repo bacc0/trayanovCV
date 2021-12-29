@@ -9,6 +9,8 @@ export default function AboutMe({
 
      const theme = useTheme()
 
+     const paddingTop =  min_width_600px ? 58 : 85
+     const paddingBottom =  min_width_600px ? 72 : 84
 
      const styles = (theme) => ({
           root: {
@@ -21,8 +23,9 @@ export default function AboutMe({
           },
      });
      const styleContainer = {
-          paddingTop: min_width_600px ? 50 : 85,
-          paddingBottom: min_width_600px ? 0 : 18,
+          paddingTop: paddingTop,
+          paddingBottom: paddingBottom,
+          minHeight: 0
 
      }
      const style_h2_ = {
@@ -102,7 +105,11 @@ export default function AboutMe({
                                         <p>Experience working with dynamic content.</p>
                                    )}
                                    {animation(isRef_3_Visible, 0.40,
-                                        <p>Problem Solving Skills. Attention to Detail.</p>
+                                        <p
+                                           style={{
+                                                marginBottom: min_width_600px ? '0em' : '1em',
+                                           }}
+                                        >Problem Solving Skills. Attention to Detail.</p>
                                    )}
                               </div>
                          )}
@@ -145,7 +152,7 @@ export default function AboutMe({
                                         </p>
                                    )}
                                    {animation(isRef_3_Visible, min_width_600px ? 0.34 : 0.56,
-                                        <div style={{ marginTop: -7 }}>
+                                        <div style={{ marginTop: min_width_600px ? -7 : -27 }}>
                                              <Image_type
                                                   image_Name={'aboutMe_Image'}
                                                   min_width_600px={min_width_600px}

@@ -8,11 +8,16 @@ export default function Technologies({
 
      const { backgroundColor, hrColorMain, thirdLogoColor } = state
 
+     const paddingTop = min_width_600px ? 55 : 48
+     const paddingBottom = min_width_600px ? 72 : 92
+
+
      const styleContainer = {
 
           backgroundColor: state.backgroundColor_2,
-          paddingTop: min_width_600px ? 48 : 48,
-          paddingBottom: min_width_600px ? 0 : 26,
+          paddingTop: paddingTop,
+          paddingBottom: paddingBottom,
+          minHeight: 0,
 
           borderTop: `${theme === 'light' ? 0 : 1}px solid ${state.hrColorMain + 11}`,
           borderBottom: `${theme === 'light' ? 0 : 1}px solid ${state.hrColorMain + 11}`,
@@ -68,7 +73,13 @@ export default function Technologies({
                               {animation(isRef_2_Visible, 0.54, <p>Adobe Illustrator</p>)}
                               {animation(isRef_2_Visible, 0.58, <p>Autodesk Graphic</p>)}
                               {animation(isRef_2_Visible, 0.62, <p>GIMP</p>)}
-                              {animation(isRef_2_Visible, 0.64, <p>Adobe Photoshop</p>)}
+                              {animation(isRef_2_Visible, 0.64,
+                                   <p
+                                        style={{
+                                             marginBottom: min_width_600px ? '0em' : '1em',
+                                        }}
+                                   >Adobe Photoshop</p>
+                              )}
                          </div>
                     </div>
                </div>

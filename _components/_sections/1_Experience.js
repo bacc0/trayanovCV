@@ -15,6 +15,9 @@ export default function Experience({
 
      const [onAnimationStart, setOnAnimationStart] = useState(true)
 
+     const paddingTop = min_width_600px ? 59 : 68
+     const paddingBottom =  min_width_600px ? 72 : 27
+
      useEffect(() => {
           setTimeout(() => {
                setOnAnimationStart(false)
@@ -23,8 +26,8 @@ export default function Experience({
 
 
      const styleContainer = {
-          paddingTop: min_width_600px ? 53 : 68,
-          paddingBottom: min_width_600px ? 17 : 13,
+          paddingTop: paddingTop,
+          paddingBottom: paddingBottom,
           minHeight: min_width_600px ? 300 : 300,
 
           // backgroundColor: '#7026A5',
@@ -72,7 +75,6 @@ export default function Experience({
                          >
                               {animation(isRef_0_Visible, 0.1,
                                    <>
-
                                         <h2 style={style_h2_}>
                                              Experience
                                         </h2>
@@ -132,7 +134,9 @@ export default function Experience({
                               )}
 
                               {animation(isRef_0_Visible, 0.38,
-                                   <div style={{ marginTop: 35 }}>
+                                   <div style={{ 
+                                        marginTop: min_width_600px ? 19 : 26, 
+                                        marginBottom: min_width_600px ? 0 : 64 }}>
                                         <Image_type
                                              image_Name={'experience_Image'}
                                              min_width_600px={min_width_600px}
@@ -228,7 +232,11 @@ export default function Experience({
                                    <p>Creating a web builder application.</p>
                               )}
                               {animation(isRef_1_Visible, 0.18,
-                                   <p>
+                                   <p 
+                                        style={{
+                                             marginBottom: min_width_600px ? '0em' : '0em',
+                                        }}
+                                   >
                                         Using
                                         <span className='font-weight-300'> REACT </span>
                                         with

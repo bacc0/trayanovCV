@@ -251,13 +251,14 @@ body {
 
 
      .container-footer {
-          border: 1px solid #444444;
+          // border: 1px solid #444444;
 
           .footer {
                // border: 1px solid #444444;
                width: $element-width + $element-width + $distance-middle-full;
                margin: $margin-footer-desktop auto;
                display: flex;
+              
 
                .footer-left {
                     // border: 1px solid #0044c1;

@@ -5,14 +5,15 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
 
-export default function Footer({ state }) {
+export default function Footer({ state, min_width_600px }) {
      
      const { footerColor, footerTextColor } = state
   
      return (
-          <div className="container-footer" style={{ backgroundColor: footerColor }}>
-               <div className="footer">
-
+          <div className="container-footer" style={{ backgroundColor: footerColor ,border: `1px solid ${footerColor}` }}>
+               <div className="footer" 
+                    style={{ minHeight: min_width_600px ? 'auto' : 155}}
+               >
                     <div className="footer-left">
                          <a
                               className='footer-items-container'
@@ -47,7 +48,7 @@ export default function Footer({ state }) {
                               style={{ color: footerTextColor, textDecoration: 'none', marginBottom: 7 }}
                               href={`tel: 00447590010066`}
                          >
-                              <div >
+                              <div>
                                    <PhoneEnabledSharpIcon   fontSize='small'/>
                               </div>
                               <div className='footer-icon-text'>
