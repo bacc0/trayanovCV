@@ -12,7 +12,7 @@ export default function Technologies({
 
           backgroundColor: state.backgroundColor_2,
           paddingTop: min_width_600px ? 48 : 48,
-          paddingBottom: min_width_600px ? 0 : 27,
+          paddingBottom: min_width_600px ? 0 : 26,
 
           borderTop: `${theme === 'light' ? 0 : 1}px solid ${state.hrColorMain + 11}`,
           borderBottom: `${theme === 'light' ? 0 : 1}px solid ${state.hrColorMain + 11}`,
@@ -64,12 +64,11 @@ export default function Technologies({
                               {animation(isRef_2_Visible, 0.38, <p>HTML</p>)}
                               {animation(isRef_2_Visible, 0.42, <p>Framer Motion</p>)}
                               {animation(isRef_2_Visible, 0.46, <p>SVG's Animations</p>)}
-                              {animation(isRef_2_Visible, 0.50, <p>SVG's Manipulations</p>)}
-                              {animation(isRef_2_Visible, 0.54, <p>Shapeshifter</p>)}
-                              {animation(isRef_2_Visible, 0.58, <p>Adobe Illustrator</p>)}
-                              {animation(isRef_2_Visible, 0.62, <p>Autodesk Graphic</p>)}
-                              {animation(isRef_2_Visible, 0.64, <p>GIMP</p>)}
-                              {animation(isRef_2_Visible, 0.68, <p>Adobe Photoshop</p>)}
+                              {animation(isRef_2_Visible, 0.50, <p>Shapeshifter</p>)}
+                              {animation(isRef_2_Visible, 0.54, <p>Adobe Illustrator</p>)}
+                              {animation(isRef_2_Visible, 0.58, <p>Autodesk Graphic</p>)}
+                              {animation(isRef_2_Visible, 0.62, <p>GIMP</p>)}
+                              {animation(isRef_2_Visible, 0.64, <p>Adobe Photoshop</p>)}
                          </div>
                     </div>
                </div>
@@ -105,7 +104,7 @@ export default function Technologies({
                               {animation(isRef_2_Visible, min_width_600px ? 0.42 : 0.84, <p>Jira</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.46 : 0.88, <p>Storybook</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.5 : 0.92,
-                                  <div style={{ marginTop: -3}}>
+                                  <div style={{ marginTop: 20}}>
                                        <AnimationImage
                                              // imageURL={'/tech1.svg'}
                                              // width={140}

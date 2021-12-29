@@ -101,7 +101,7 @@ export default function AboutMe({
                                         <p>Experience working with dynamic content.</p>
                                    )}
                                     {animation(isRef_3_Visible, 0.40,
-                                        <p>Developing with ReactJS single page JavaScript Applications.</p>
+                                        <p>Problem Solving Skills. Attention to Detail.</p>
                                    )}
                               </div>
                          )}
@@ -127,25 +127,24 @@ export default function AboutMe({
                                    )}
 
                                    {animation(isRef_3_Visible, min_width_600px ? 0.22 : 0.44,
-                                        <p>Problem Solving Skills.</p>
+                                        <p>
+                                             Developing with ReactJS single page JavaScript Applications.
+                                        </p>
                                    )}
 
                                    {animation(isRef_3_Visible, min_width_600px ? 0.26 : 0.48,
-                                        <p>Attention to Detail.</p>)}
-
-                                   {animation(isRef_3_Visible, min_width_600px ? 0.3 : 0.52,
                                         <p>
                                              Web developer able to build an application from the ground up, from concept, navigation, working with data and programming to UX.
                                         </p>
                                    )}
 
-                                   {animation(isRef_3_Visible, min_width_600px ? 0.34 : 0.56,
+                                   {animation(isRef_3_Visible, min_width_600px ? 0.3 : 0.52,
                                         <p>
                                              Skilled at writing well-designed, efficient code using current best practices in Web development.
                                         </p>
                                    )}
-                                   {animation(isRef_3_Visible, min_width_600px ? 0.38 : 0.6,
-                                        <div style={{ marginTop: -5}}>
+                                   {animation(isRef_3_Visible, min_width_600px ? 0.34 : 0.56,
+                                        <div style={{ marginTop: -7}}>
                                              <AnimationImage
                                                   // imageURL={'/about_me1.svg'}
                                                   // width={140}
