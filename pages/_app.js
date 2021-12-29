@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
 
 
 
-                    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"
+                    <meta 
                           name="theme-color" content="#3F3D56"
                     />
 
