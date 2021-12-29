@@ -21,7 +21,7 @@ export default function AboutMe({
      });
      const styleContainer = {
           paddingTop: min_width_600px ? 50 : 85,
-          paddingBottom: min_width_600px ? 10 : 24,
+          paddingBottom: min_width_600px ? 0 : 18,
 
      }
      const style_h2_ = {
@@ -100,6 +100,9 @@ export default function AboutMe({
                                    {animation(isRef_3_Visible, 0.36,
                                         <p>Experience working with dynamic content.</p>
                                    )}
+                                    {animation(isRef_3_Visible, 0.40,
+                                        <p>Developing with ReactJS single page JavaScript Applications.</p>
+                                   )}
                               </div>
                          )}
                     </div>
@@ -115,12 +118,12 @@ export default function AboutMe({
                                    className='content-right'
                                    style={{ marginTop: min_width_600px ? 21 : 0 }}
                               >
-                                   {animation(isRef_3_Visible, min_width_600px ? 0.14 : 0.36,
+                                   {/* {animation(isRef_3_Visible, min_width_600px ? 0.14 : 0.36,
                                         <p>Developing with ReactJS single page JavaScript Applications.</p>
-                                   )}
+                                   )} */}
 
                                    {animation(isRef_3_Visible, min_width_600px ? 0.18 : 0.4,
-                                        <p>Attention to Detail.</p>
+                                        <p>Good understanding working with APIs (RESTful services).</p>
                                    )}
 
                                    {animation(isRef_3_Visible, min_width_600px ? 0.22 : 0.44,
@@ -128,13 +131,11 @@ export default function AboutMe({
                                    )}
 
                                    {animation(isRef_3_Visible, min_width_600px ? 0.26 : 0.48,
-                                        <p>Good understanding working with APIs (RESTful services).
-
-                                        </p>)}
+                                        <p>Attention to Detail.</p>)}
 
                                    {animation(isRef_3_Visible, min_width_600px ? 0.3 : 0.52,
                                         <p>
-                                             Web developer able to build a Web presence from the ground up, from concept, navigation, working with data and programming to UX.
+                                             Web developer able to build an application from the ground up, from concept, navigation, working with data and programming to UX.
                                         </p>
                                    )}
 
@@ -144,15 +145,17 @@ export default function AboutMe({
                                         </p>
                                    )}
                                    {animation(isRef_3_Visible, min_width_600px ? 0.38 : 0.6,
-                                        <AnimationImage
-                                             // imageURL={'/about_me1.svg'}
-                                             // width={140}
-                                             // height={110}
-                                             imageURL={'/me.svg'}
-                                             width={min_width_600px ? 243 : 310}
-                                             height={min_width_600px ? 200 : 240}
-                                             threshold={0.5}
-                                        />
+                                        <div style={{ marginTop: -5}}>
+                                             <AnimationImage
+                                                  // imageURL={'/about_me1.svg'}
+                                                  // width={140}
+                                                  // height={110}
+                                                  imageURL={'/me.svg'}
+                                                  width={min_width_600px ? 243 : 310}
+                                                  height={min_width_600px ? 200 : 240}
+                                                  threshold={0.5}
+                                             />
+                                        </div>
                                    )}
                               </div>
                          </div>

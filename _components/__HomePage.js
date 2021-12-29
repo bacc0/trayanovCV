@@ -77,7 +77,7 @@ export default function HomePage({
                thirdLettersColor: theme === 'light' ? color_6 : color_7,
                thirdLogoColor: theme === 'light' ? color_6 : color_7,
                strongText: theme === 'light' ? color_3 : color_2,
-               hrColor: theme === 'light' ? color_2 : color_3,
+               hrColor: theme === 'light' ? 'transparent' : 'transparent',
                hrColorMain: theme === 'light' ? color_5 : color_1,
                backgroundColor: theme === 'light' ? color_5 : color_1,
                backgroundColor_2: theme === 'light' ? color_2 : color_4,

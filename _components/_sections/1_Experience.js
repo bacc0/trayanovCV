@@ -23,7 +23,7 @@ export default function Experience({
 
      const styleContainer = {
           paddingTop: min_width_600px ? 53 : 68,
-          paddingBottom: min_width_600px ? 17 : 12,
+          paddingBottom: min_width_600px ? 18 : 15,
           minHeight: min_width_600px ? 300 : 300,
 
           // backgroundColor: '#7026A5',
@@ -124,22 +124,23 @@ export default function Experience({
 
                               {animation(isRef_0_Visible, 0.34,
                                    <p>
-                                        <div>Contact</div>
                                         <strong style={{ color: strongText }}>Ricard Rosson </strong>
                                         <div>ricard@iacos.net</div>
                                    </p>
                               )}
 
                               {animation(isRef_0_Visible, 0.38,
-                                   <AnimationImage
-                                        // imageURL={'/work1.svg'}
-                                        // width={140}
-                                        // height={110}
-                                        imageURL={'/exp.svg'}
-                                        width={min_width_600px ? 243 : 310}
-                                        height={min_width_600px ? 200 : 240}
-                                        threshold={0.5}
-                                   />
+                                    <div style={{ marginTop: -5}}>
+                                         <AnimationImage
+                                             // imageURL={'/work1.svg'}
+                                             // width={140}
+                                             // height={110}
+                                             imageURL={'/exp.svg'}
+                                             width={min_width_600px ? 243 : 310}
+                                             height={min_width_600px ? 200 : 240}
+                                             threshold={0.5}
+                                        />  
+                                   </div> 
                               )}
                          </div>
                     </div>
