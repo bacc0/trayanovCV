@@ -9,7 +9,7 @@ export default function Technologies({
      const { backgroundColor, hrColorMain, thirdLogoColor } = state
 
      const paddingTop = min_width_600px ? 55 : 48
-     const paddingBottom = min_width_600px ? 72 : 92
+     const paddingBottom = min_width_600px ? 72 : 24
 
 
      const styleContainer = {
@@ -115,7 +115,12 @@ export default function Technologies({
                               {animation(isRef_2_Visible, min_width_600px ? 0.42 : 0.84, <p>Jira</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.46 : 0.88, <p>Storybook</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.5 : 0.92,
-                                   <div style={{ marginTop: 20 }}>
+                                   <div
+                                        style={{
+                                             marginTop: min_width_600px ? 15 : 36,
+                                             marginBottom: min_width_600px ? 0 : 0
+                                        }}
+                                   >
                                         <Image_type
                                              image_Name={'technologies_Image'}
                                              min_width_600px={min_width_600px}

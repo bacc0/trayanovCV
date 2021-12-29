@@ -111,7 +111,7 @@ body .pages-wrapper .page .page-nav .title-container {
   }
   body .pages-wrapper .page .page-body .page-body-left {
     width: 100%;
-    min-width: 300px;
+    padding: 0;
   }
   body .pages-wrapper .page .page-body .page-body-left .container-content-left {
     width: 100%;
@@ -130,7 +130,7 @@ body .pages-wrapper .page .page-nav .title-container {
   }
   body .pages-wrapper .page .page-body .page-body-right {
     width: 100%;
-    min-width: 300px;
+    padding: 0;
   }
   body .pages-wrapper .page .page-body .page-body-right .container-right-accent {
     height: 120px;
@@ -165,7 +165,7 @@ body .pages-wrapper .page .page-nav .title-container {
   }
   body .pages-wrapper .page .page-body .page-body-left {
     width: 50%;
-    min-width: 300px;
+    padding: 0;
   }
   body .pages-wrapper .page .page-body .page-body-left .container-content-left {
     margin-right: 24px;
@@ -182,7 +182,7 @@ body .pages-wrapper .page .page-nav .title-container {
   }
   body .pages-wrapper .page .page-body .page-body-right {
     width: 50%;
-    min-width: 300px;
+    padding: 0;
   }
   body .pages-wrapper .page .page-body .page-body-right .container-right-accent {
     height: 120px;
@@ -192,7 +192,6 @@ body .pages-wrapper .page .page-nav .title-container {
   body .pages-wrapper .page .page-body .page-body-right .container-content-right {
     min-height: 100px;
     margin-left: 24px;
-    margin-bottom: 48px;
     margin-top: 10px;
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right .content-right {

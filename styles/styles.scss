@@ -136,7 +136,7 @@ body {
 
                          .page-body-left {
                               width: 100%;
-                              min-width: 300px;
+                              padding: 0;
 
 
                               .container-content-left {
@@ -158,7 +158,7 @@ body {
 
                          .page-body-right {
                               width: 100%;
-                              min-width: 300px;
+                              padding: 0;
 
                               // margin-top: 10px;
                               // background-color: #D2D844;
@@ -199,7 +199,7 @@ body {
 
                          .page-body-left {
                               width: 50%;
-                              min-width: 300px;
+                              padding: 0;
 
 
 
@@ -219,7 +219,7 @@ body {
 
                          .page-body-right {
                               width: 50%;
-                              min-width: 300px;
+                              padding: 0;
 
                               .container-right-accent {
                                    // background-color: #D2D844;
@@ -232,7 +232,7 @@ body {
 
                                    min-height: 100px;
                                    margin-left: $distance-middle-half;
-                                   margin-bottom: $distance-middle-full;
+                                   // margin-bottom: $distance-middle-full;
                                    margin-top: 10px;
 
                                    .content-right {

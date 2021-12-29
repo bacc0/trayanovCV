@@ -15,8 +15,8 @@ export default function Experience({
 
      const [onAnimationStart, setOnAnimationStart] = useState(true)
 
-     const paddingTop = min_width_600px ? 59 : 68
-     const paddingBottom =  min_width_600px ? 72 : 27
+     const paddingTop = min_width_600px ? 58 : 67
+     const paddingBottom =  min_width_600px ? 72 : 28
 
      useEffect(() => {
           setTimeout(() => {
@@ -135,8 +135,10 @@ export default function Experience({
 
                               {animation(isRef_0_Visible, 0.38,
                                    <div style={{ 
-                                        marginTop: min_width_600px ? 19 : 26, 
-                                        marginBottom: min_width_600px ? 0 : 64 }}>
+                                        marginTop: min_width_600px ? 15 : 36, 
+                                        marginBottom: min_width_600px ? 0 : -3 
+                                   }}
+                                        >
                                         <Image_type
                                              image_Name={'experience_Image'}
                                              min_width_600px={min_width_600px}
@@ -179,11 +181,13 @@ export default function Experience({
                               )}
 
                               {animation(isRef_05_Visible, 0.18,
-                                   <p>Building a new components for the application.</p>
+                                   <p>Building a new application for the mobile network operator.</p>
                               )}
                               {animation(isRef_05_Visible, 0.22,
                                    <p>
                                         Using
+                                        <span className='font-weight-300'> REACT</span>
+                                        ,
                                         <span className='font-weight-300'> MATERIAL UI</span>
                                         ,
                                         <span className='font-weight-300'> TYPESCRIPT</span>
@@ -212,7 +216,7 @@ export default function Experience({
                          <div className='content-right' ref={Ref_1}>
                               {animation(isRef_1_Visible, 0,
                                    <>
-                                        <h3 style={style_h3_}>
+                                        <h3 style={{ ...style_h3_, ...{ marginTop: min_width_600px ? 26 : -15 } }}>
                                              {onAnimationStart
                                                   ? typeWriter('React Developer - Groundbits Ltd')
                                                   : 'React Developer - Groundbits Ltd'

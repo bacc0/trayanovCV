@@ -10,7 +10,7 @@ export default function AboutMe({
      const theme = useTheme()
 
      const paddingTop =  min_width_600px ? 58 : 85
-     const paddingBottom =  min_width_600px ? 72 : 84
+     const paddingBottom =  min_width_600px ? 72 : 16
 
      const styles = (theme) => ({
           root: {
@@ -152,7 +152,10 @@ export default function AboutMe({
                                         </p>
                                    )}
                                    {animation(isRef_3_Visible, min_width_600px ? 0.34 : 0.56,
-                                        <div style={{ marginTop: min_width_600px ? -7 : -27 }}>
+                                        <div style={{ 
+                                             marginTop: min_width_600px ?  -10 : 10,
+                                             marginBottom: min_width_600px ? 0 : 0
+                                         }}>
                                              <Image_type
                                                   image_Name={'aboutMe_Image'}
                                                   min_width_600px={min_width_600px}
