@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import useInView from 'react-cool-inview'
 
 
-export default ({ image_Name, min_width_600px, threshold = 0.5, color }) => {
+export default ({ image_Name, min_width_600px, threshold = 0.45, color }) => {
 
      const mainColor = color
      const [opacity, setOpacity] = useState(0)
@@ -21,7 +21,7 @@ export default ({ image_Name, min_width_600px, threshold = 0.5, color }) => {
                setOpacity(1)
           },
           onLeave: () => {
-               setOpacity(0.1)
+               setOpacity(0.05)
           },
      })
 
@@ -449,7 +449,7 @@ export default ({ image_Name, min_width_600px, threshold = 0.5, color }) => {
                     display: 'flex',
                     justifyContent: min_width_600px ? 'flex-start' : 'center',
                     opacity,
-                    transition: `opacity 450ms ease`
+                    transition: `opacity 550ms ease`
                }}
           >
                {image_Name === 'experience_Image' && experience_Image()}

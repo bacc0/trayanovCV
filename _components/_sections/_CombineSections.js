@@ -14,8 +14,8 @@ export default function _CombineSections({
 
      const { observe, unobserve, inView, scrollDirection, entry } =
           useInView({ 
-               threshold: 0.05, // Default is 0
-               unobserveOnEnter: true,
+               threshold: 0.01, // Default is 0
+               // unobserveOnEnter: true,
           })
      // console.log(inView)
 
@@ -153,22 +153,8 @@ export default function _CombineSections({
                     animationTransition={animationTransition}
                />
 
-               <div
-                    ref={observe}
-                    style={{ height: 200 }}
-               >
-
-                    {inView && (
-                         <motion.div
-                              initial={{ opacity: 0.8, y: 0 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.2 }}
-                         >
-                              <Footer
-                                   state={state}
-                              />
-                         </motion.div>
-                    )}
+               <div ref={observe} style={{ height: 200 }} >
+                    {inView && <Footer state={state}/>}
                </div>
           </div>
      )
