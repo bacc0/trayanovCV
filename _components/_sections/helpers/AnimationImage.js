@@ -3,7 +3,8 @@ import Image from 'next/image'
 import useInView from 'react-cool-inview'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export default function AnimationImage({ imageURL, width, height, threshold = 0.5 }) {
+export default function AnimationImage({ 
+     imageURL, width, height, threshold = 0.5, min_width_600px }) {
 
      const { observe, inView } = useInView({
           threshold: threshold,
@@ -28,7 +29,12 @@ export default function AnimationImage({ imageURL, width, height, threshold = 0.
      })
 
      return (
-          <div ref={observe} style={{ height, width }}>
+          <div ref={observe} style={{ 
+                    height, 
+                    display: 'flex', 
+                    justifyContent: min_width_600px ? 'flex-start' : 'center' 
+               }}
+          >
                <AnimatePresence>
                     {inView && (
                          <motion.div

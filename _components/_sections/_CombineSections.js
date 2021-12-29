@@ -13,25 +13,10 @@ export default function _CombineSections({
      state, theme, min_width_600px, animationTransition, onAnimationEnd }) {
 
      const { observe, unobserve, inView, scrollDirection, entry } =
-          useInView(
-               {
-                    threshold: 0.05, // Default is 0
-                    //           onChange: ({ inView, scrollDirection, entry, observe, unobserve }) => {
-                    //             // Triggered whenever the target meets a threshold, e.g. [0.25, 0.5, ...]
-
-                    //             unobserve(); // To stop observing the current target element
-                    //             observe(); // To re-start observing the current target element
-                    //           },
-                    //           onEnter: ({ scrollDirection, entry, observe, unobserve }) => {
-                    //             // Triggered when the target enters the viewport
-
-                    //           },
-                    // onLeave: ({ scrollDirection, entry, observe, unobserve }) => {
-                    //   // Triggered when the target leaves the viewport
-                    // },
-                    //           // More useful options...
-               }
-          )
+          useInView({ 
+               threshold: 0.05, // Default is 0
+               unobserveOnEnter: true,
+          })
      // console.log(inView)
 
      const [isRef_0_Visible, setIsRef_0_Visible] = useState(true)

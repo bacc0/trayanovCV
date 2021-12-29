@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import AnimationImage from './helpers/AnimationImage'
+import Image_type from '../_illustratins/Image_type'
+
 
 
 export default function Experience({
@@ -9,9 +10,9 @@ export default function Experience({
      Ref_05, isRef_05_Visible, Ref_1, isRef_1_Visible, animation,
 }) {
 
-     const { strongText, animationTransition, hrColorMain,
-          thirdLettersColor, hrColor,backgroundColor } = state
-    
+     const { strongText, animationTransition, hrColorMain, thirdLogoColor,
+          thirdLettersColor, hrColor, backgroundColor } = state
+
      const [onAnimationStart, setOnAnimationStart] = useState(true)
 
      useEffect(() => {
@@ -124,24 +125,28 @@ export default function Experience({
 
                               {animation(isRef_0_Visible, 0.34,
                                    <p>
-                                        <br/>
+                                        <br />
                                         <strong style={{ color: strongText }}>Ricard Rosson </strong>
                                         <div>ricard@iacos.net</div>
                                    </p>
                               )}
 
                               {animation(isRef_0_Visible, 0.38,
-                                    <div style={{ marginTop: 35}}>
-                                         <AnimationImage
+                                   <div style={{ marginTop: 35 }}>
+                                        <Image_type
+                                             image_Name={'experience_Image'}
+                                             min_width_600px={min_width_600px}
+                                             color={thirdLogoColor}
+                                        />
+                                        {/* <AnimationImage
                                              // imageURL={'/work1.svg'}
-                                             // width={140}
-                                             // height={110}
                                              imageURL={'/exp.svg'}
-                                             width={min_width_600px ? 243 : 310}
-                                             height={min_width_600px ? 200 : 240}
+                                             width={243}
+                                             height={200}
+                                             min_width_600px={min_width_600px}
                                              threshold={0.5}
-                                        />  
-                                   </div> 
+                                        />   */}
+                                   </div>
                               )}
                          </div>
                     </div>
@@ -151,8 +156,8 @@ export default function Experience({
                          <div className='content-right' ref={Ref_05}>
                               {animation(isRef_05_Visible, 0.1,
                                    <>
-                                        <h3 
-                                             style={{ ...style_h3_ , ...{marginTop: min_width_600px ? 19 : 10 }}}
+                                        <h3
+                                             style={{ ...style_h3_, ...{ marginTop: min_width_600px ? 19 : 10 } }}
                                         >
                                              {onAnimationStart
                                                   ? typeWriter(' React Developer - Amdocs via Appgr8')

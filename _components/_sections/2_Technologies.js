@@ -1,12 +1,12 @@
 import { Hidden } from '@mui/material'
-import AnimationImage from './helpers/AnimationImage'
+import Image_type from '../_illustratins/Image_type'
 
 
-export default function Technologies({ 
+export default function Technologies({
      state, min_width_600px, Ref_2, Ref_2b,
      theme, animationTransition, isRef_2_Visible, animation }) {
-    
-     const { backgroundColor, hrColorMain } = state
+
+     const { backgroundColor, hrColorMain, thirdLogoColor } = state
 
      const styleContainer = {
 
@@ -104,18 +104,13 @@ export default function Technologies({
                               {animation(isRef_2_Visible, min_width_600px ? 0.42 : 0.84, <p>Jira</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.46 : 0.88, <p>Storybook</p>)}
                               {animation(isRef_2_Visible, min_width_600px ? 0.5 : 0.92,
-                                  <div style={{ marginTop: 20}}>
-                                       <AnimationImage
-                                             // imageURL={'/tech1.svg'}
-                                             // width={140}
-                                             // height={110}
-                                             imageURL={'/tech.svg'}
-                                             width={min_width_600px ? 243 : 310}
-                                             height={min_width_600px ? 200 : 240}
-                                             threshold={0.5}
-                                        // Y_position={Y_position}
+                                   <div style={{ marginTop: 20 }}>
+                                        <Image_type
+                                             image_Name={'technologies_Image'}
+                                             min_width_600px={min_width_600px}
+                                             color={thirdLogoColor}
                                         />
-                                   </div> 
+                                   </div>
                               )}
                          </div>
                     </div>

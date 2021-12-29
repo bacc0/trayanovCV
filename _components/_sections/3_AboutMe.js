@@ -1,10 +1,11 @@
-import AnimationImage from './helpers/AnimationImage'
-import { useTheme, makeStyles } from '@mui/styles'
+import { useTheme } from '@mui/styles'
+import Image_type from '../_illustratins/Image_type'
+
 
 export default function AboutMe({
      state, min_width_600px, Ref_3, isRef_3_Visible, animation, animationTransition }) {
 
-     const { backgroundColor, hrColorMain, thirdLettersColor, hrColor } = state
+     const { backgroundColor, hrColorMain, thirdLettersColor, hrColor, thirdLogoColor } = state
 
      const theme = useTheme()
 
@@ -100,7 +101,7 @@ export default function AboutMe({
                                    {animation(isRef_3_Visible, 0.36,
                                         <p>Experience working with dynamic content.</p>
                                    )}
-                                    {animation(isRef_3_Visible, 0.40,
+                                   {animation(isRef_3_Visible, 0.40,
                                         <p>Problem Solving Skills. Attention to Detail.</p>
                                    )}
                               </div>
@@ -144,15 +145,11 @@ export default function AboutMe({
                                         </p>
                                    )}
                                    {animation(isRef_3_Visible, min_width_600px ? 0.34 : 0.56,
-                                        <div style={{ marginTop: -7}}>
-                                             <AnimationImage
-                                                  // imageURL={'/about_me1.svg'}
-                                                  // width={140}
-                                                  // height={110}
-                                                  imageURL={'/me.svg'}
-                                                  width={min_width_600px ? 243 : 310}
-                                                  height={min_width_600px ? 200 : 240}
-                                                  threshold={0.5}
+                                        <div style={{ marginTop: -7 }}>
+                                             <Image_type
+                                                  image_Name={'aboutMe_Image'}
+                                                  min_width_600px={min_width_600px}
+                                                  color={thirdLogoColor}
                                              />
                                         </div>
                                    )}
