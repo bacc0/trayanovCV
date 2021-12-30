@@ -8,7 +8,7 @@ export default ({ image_Name, min_width_600px, threshold = 0.45, color }) => {
      const [opacity, setOpacity] = useState(0)
      const [logo_W, setLogo_W] = useState(243)
      const [logo_H, setLogo_H] = useState(143)
-    
+
 
      useEffect(() => {
           setLogo_W(min_width_600px ? 243 : 310)
@@ -447,13 +447,15 @@ export default ({ image_Name, min_width_600px, threshold = 0.45, color }) => {
                     display: 'flex',
                     justifyContent: min_width_600px ? 'flex-start' : 'center',
                     opacity,
-                    transition: `opacity 550ms ease`,
+                    transition: `opacity 1250ms ease`,
                     height: min_width_600px ? 180 : 240
                }}
           >
-               {image_Name === 'experience_Image' && experience_Image()}
-               {image_Name === 'technologies_Image' && technologies_Image()}
-               {image_Name === 'aboutMe_Image' &&  aboutMe_Image()}
+               <div>
+                    {observe && (image_Name === 'experience_Image' && experience_Image())}
+                    {observe && (image_Name === 'technologies_Image' && technologies_Image())}
+                    {observe && (image_Name === 'aboutMe_Image' && aboutMe_Image())}
+               </div>
           </div>
      )
 }
