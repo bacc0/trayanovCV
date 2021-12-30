@@ -46,6 +46,8 @@ export default function Experience({
           transition: `color ${animationTransition} ease`,
      }
      const style_h3_ = {
+          minHeight: min_width_600px ? 40 : 56,
+          // backgroundColor: 'lime',
           color: thirdLettersColor,
           transition: `color ${animationTransition} ease`,
      }
