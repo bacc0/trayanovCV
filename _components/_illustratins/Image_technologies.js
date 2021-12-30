@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import useInView from 'react-cool-inview'
 
 
-export default ({ min_width_600px, threshold = 0.45, color }) => {
+export default ({ min_width_600px, threshold = 0.35, color }) => {
 
      const mainColor = color
      const [opacity, setOpacity] = useState(0)
@@ -284,7 +284,7 @@ export default ({ min_width_600px, threshold = 0.45, color }) => {
                     display: 'flex',
                     justifyContent: min_width_600px ? 'flex-start' : 'center',
                     opacity,
-                    transition: `opacity 1250ms ease`,
+                    transition: `opacity 550ms ease`,
                     height: min_width_600px ? 180 : 240
                }}
           >

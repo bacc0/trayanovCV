@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Image_type1 from '../_illustratins/Image_type1'
+import Image_experience from '../_illustratins/Image_experience'
 import { Typewriter } from 'react-simple-typewriter'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -169,7 +169,7 @@ export default function Experience({
                                              marginBottom: min_width_600px ? 0 : 2
                                         }}
                                    >
-                                        <Image_type1
+                                        <Image_experience
                                              min_width_600px={min_width_600px}
                                              color={thirdLogoColor}
                                         />

@@ -129,10 +129,8 @@ export default function _CombineSections({
                     animationTransition={animationTransition}
                />
 
-               <div ref={observe} style={{ height: 200 }}>
-                    {inView && (
-                         <Footer state={state} min_width_600px={min_width_600px} />
-                    )}
+               <div ref={observe} style={{ opacity: inView ? 1 : 0 }}> 
+                    <Footer state={state} min_width_600px={min_width_600px} />
                </div>
                {/* <div style={{ minHeight: min_width_600px ? 0 : 70,backgroundColor: 'lime' }} /> */}
           </div>

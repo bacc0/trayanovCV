@@ -1,5 +1,5 @@
 import { useTheme } from '@mui/styles'
-import Image_type3 from '../_illustratins/Image_type3'
+import Image_aboutMe from '../_illustratins/Image_aboutMe'
 import { motion, AnimatePresence } from 'framer-motion'
 
 
@@ -161,7 +161,7 @@ export default function AboutMe({
                                                   marginBottom: min_width_600px ? 0 : 0
                                              }}
                                         >
-                                             <Image_type3
+                                             <Image_aboutMe
                                                   min_width_600px={min_width_600px}
                                                   color={thirdLogoColor}
                                              />
