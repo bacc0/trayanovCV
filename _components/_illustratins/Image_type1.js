@@ -8,7 +8,6 @@ export default ({ image_Name, min_width_600px, threshold = 0.45, color }) => {
      const [opacity, setOpacity] = useState(0)
      const [logo_W, setLogo_W] = useState(243)
      const [logo_H, setLogo_H] = useState(143)
-    
 
      useEffect(() => {
           setLogo_W(min_width_600px ? 243 : 310)
@@ -17,10 +16,13 @@ export default ({ image_Name, min_width_600px, threshold = 0.45, color }) => {
 
      const { observe, inView } = useInView({
           threshold: threshold,
-          unobserveOnEnter: true,
-
-          onEnter: () => { setOpacity(1) },
-          onLeave: () => { setOpacity(0.05) }
+          // unobserveOnEnter: true,
+          onEnter: () => {
+               setOpacity(1)
+          },
+          onLeave: () => {
+               setOpacity(0.05)
+          },
      })
 
      const experience_Image = () => {
