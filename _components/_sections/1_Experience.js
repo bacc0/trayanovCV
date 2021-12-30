@@ -175,14 +175,6 @@ export default function Experience({
                                              min_width_600px={min_width_600px}
                                              color={thirdLogoColor}
                                         />
-                                        {/* <AnimationImage
-                                             // imageURL={'/work1.svg'}
-                                             imageURL={'/exp.svg'}
-                                             width={243}
-                                             height={200}
-                                             min_width_600px={min_width_600px}
-                                             threshold={0.5}
-                                        />   */}
                                    </div>
                               )}
                          </div>
