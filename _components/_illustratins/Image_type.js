@@ -5,7 +5,7 @@ import useInView from 'react-cool-inview'
 export default ({ image_Name, min_width_600px, threshold = 0.45, color }) => {
 
      const mainColor = color
-     const [opacity, setOpacity] = useState(0)
+     // const [opacity, setOpacity] = useState(0)
      const [logo_W, setLogo_W] = useState(243)
      const [logo_H, setLogo_H] = useState(143)
 
@@ -15,13 +15,13 @@ export default ({ image_Name, min_width_600px, threshold = 0.45, color }) => {
           setLogo_H(min_width_600px ? 209 : 247)
      }, [min_width_600px])
 
-     const { observe, inView } = useInView({
-          threshold: threshold,
-          unobserveOnEnter: true,
+     // const { observe, inView } = useInView({
+     //      threshold: threshold,
+     //      unobserveOnEnter: true,
 
-          onEnter: () => { setOpacity(1) },
-          onLeave: () => { setOpacity(0.05) }
-     })
+     //      onEnter: () => { setOpacity(1) },
+     //      onLeave: () => { setOpacity(0.05) }
+     // })
 
      const experience_Image = () => {
           return (
@@ -442,19 +442,20 @@ export default ({ image_Name, min_width_600px, threshold = 0.45, color }) => {
      }
 
      return (
-          <div ref={observe}
+          <div 
+          // ref={observe}
                style={{
                     display: 'flex',
                     justifyContent: min_width_600px ? 'flex-start' : 'center',
-                    opacity,
-                    transition: `opacity 1250ms ease`,
+                    // opacity,
+                    // transition: `opacity 1250ms ease`,
                     height: min_width_600px ? 180 : 240
                }}
           >
                <div>
-                    {observe && (image_Name === 'experience_Image' && experience_Image())}
-                    {observe && (image_Name === 'technologies_Image' && technologies_Image())}
-                    {observe && (image_Name === 'aboutMe_Image' && aboutMe_Image())}
+                    {image_Name === 'experience_Image' && experience_Image()}
+                    {image_Name === 'technologies_Image' && technologies_Image()}
+                    {image_Name === 'aboutMe_Image' && aboutMe_Image()}
                </div>
           </div>
      )
