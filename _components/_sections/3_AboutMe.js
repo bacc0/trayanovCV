@@ -1,5 +1,6 @@
 import { useTheme } from '@mui/styles'
-import Image_type from '../_illustratins/Image_type'
+import Image_type3 from '../_illustratins/Image_type3'
+import { motion, AnimatePresence } from 'framer-motion'
 
 
 export default function AboutMe({
@@ -9,8 +10,8 @@ export default function AboutMe({
 
      const theme = useTheme()
 
-     const paddingTop =  min_width_600px ? 62 : 60
-     const paddingBottom =  min_width_600px ? 58 : 9
+     const paddingTop = min_width_600px ? 62 : 60
+     const paddingBottom = min_width_600px ? 58 : 9
 
      const styles = (theme) => ({
           root: {
@@ -30,7 +31,7 @@ export default function AboutMe({
 
      }
      const style_h2_ = {
-        
+
           color: backgroundColor,
           transition: `color ${animationTransition} ease`
      }
@@ -57,7 +58,7 @@ export default function AboutMe({
                     <div className='container-content-left' >
                          <div ref={Ref_3}
                               className='content-left'
-                              // style={{ margin: `${min_width_600px ? 0 : -20}px 0 ${min_width_600px ? 36 : -7}px` }}
+                         // style={{ margin: `${min_width_600px ? 0 : -20}px 0 ${min_width_600px ? 36 : -7}px` }}
                          >
                               {animation(isRef_3_Visible, 0.02,
                                    <>
@@ -74,7 +75,7 @@ export default function AboutMe({
                          {isRef_3_Visible && (
                               <div
                                    className='content-left'
-                                   // style={{ marginTop: min_width_600px ? -15 : 16 }}
+                              // style={{ marginTop: min_width_600px ? -15 : 16 }}
                               >
                                    {animation(isRef_3_Visible, 0.1,
                                         <>
@@ -108,9 +109,9 @@ export default function AboutMe({
                                    )}
                                    {animation(isRef_3_Visible, 0.40,
                                         <p
-                                           style={{
-                                                marginBottom: min_width_600px ? '0em' : '1em',
-                                           }}
+                                             style={{
+                                                  marginBottom: min_width_600px ? '0em' : '1em',
+                                             }}
                                         >Problem Solving Skills. Attention to Detail.</p>
                                    )}
                               </div>
@@ -154,12 +155,13 @@ export default function AboutMe({
                                         </p>
                                    )}
                                    {animation(isRef_3_Visible, min_width_600px ? 0.34 : 0.56,
-                                        <div style={{ 
-                                             marginTop: min_width_600px ?  -7 : 10,
-                                             marginBottom: min_width_600px ? 0 : 0
-                                         }}>
-                                             <Image_type
-                                                  image_Name={'aboutMe_Image'}
+                                        <div
+                                             style={{
+                                                  marginTop: min_width_600px ? -7 : 10,
+                                                  marginBottom: min_width_600px ? 0 : 0
+                                             }}
+                                        >
+                                             <Image_type3
                                                   min_width_600px={min_width_600px}
                                                   color={thirdLogoColor}
                                              />

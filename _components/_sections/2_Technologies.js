@@ -1,5 +1,5 @@
 import { Hidden } from '@mui/material'
-import Image_type from '../_illustratins/Image_type'
+import Image_type2 from '../_illustratins/Image_type2'
 
 
 export default function Technologies({
@@ -122,8 +122,7 @@ export default function Technologies({
                                              marginBottom: min_width_600px ? 0 : 0
                                         }}
                                    >
-                                        <Image_type
-                                             image_Name={'technologies_Image'}
+                                        <Image_type2
                                              min_width_600px={min_width_600px}
                                              color={thirdLogoColor}
                                         />

@@ -1,19 +1,17 @@
 import { useState, useEffect } from 'react'
-import Image_type from '../_illustratins/Image_type'
+import Image_type1 from '../_illustratins/Image_type1'
 import { Typewriter } from 'react-simple-typewriter'
 import { motion, AnimatePresence } from 'framer-motion'
 
 
 export default function Experience({
-     state,
-     min_width_600px,
-     onAnimationEnd , Ref_0, isRef_0_Visible,
-     Ref_05, isRef_05_Visible, Ref_1, isRef_1_Visible, animation,
-}) {
+     state, min_width_600px, onAnimationEnd, Ref_0, isRef_0_Visible,
+     Ref_05, isRef_05_Visible, Ref_1, isRef_1_Visible, animation }) {
 
-     
-     const { strongText, animationTransition, hrColorMain, thirdLogoColor,
-          thirdLettersColor, hrColor, backgroundColor } = state
+
+     const {
+          strongText, animationTransition, hrColorMain,
+          thirdLogoColor, thirdLettersColor, hrColor, backgroundColor } = state
 
      const [onAnimationStart, setOnAnimationStart] = useState(true)
 
@@ -25,7 +23,7 @@ export default function Experience({
                setOnAnimationStart(false)
           }, 6000)
      }, [])
-     const typeWriter = ( sentence, typeSpeed=75 ) => {
+     const typeWriter = (sentence, typeSpeed = 75) => {
           return (
                onAnimationEnd && (
                     <motion.div
@@ -123,7 +121,7 @@ export default function Experience({
                                         }
                                         <div style={{ fontSize: min_width_600px ? 14 : 16 }}>
                                              {onAnimationStart
-                                                  ? typeWriter( 'Groundbits Ltd', 165)
+                                                  ? typeWriter('Groundbits Ltd', 165)
                                                   : 'Groundbits Ltd'
                                              }
                                         </div>
@@ -165,13 +163,13 @@ export default function Experience({
                               )}
 
                               {animation(isRef_0_Visible, 0.38,
-                                   <div style={{
-                                        marginTop: min_width_600px ? 10 : 34,
-                                        marginBottom: min_width_600px ? 0 : 2
-                                   }}
+                                   <div
+                                        style={{
+                                             marginTop: min_width_600px ? 10 : 34,
+                                             marginBottom: min_width_600px ? 0 : 2
+                                        }}
                                    >
-                                        <Image_type
-                                             image_Name={'experience_Image'}
+                                        <Image_type1
                                              min_width_600px={min_width_600px}
                                              color={thirdLogoColor}
                                         />

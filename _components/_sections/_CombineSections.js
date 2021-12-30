@@ -71,6 +71,7 @@ export default function _CombineSections({
           } else {
                setIsRef_3_Visible(false)
           }
+         
      }
 
      const animation = (is_Ref_Visible, delay, html) => {
