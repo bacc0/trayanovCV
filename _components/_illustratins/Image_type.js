@@ -10,8 +10,8 @@ export default ({ image_Name, min_width_600px, threshold = 0.45, color }) => {
      const [logo_H, setLogo_H] = useState(143)
 
      useEffect(() => {
-          setLogo_W(min_width_600px ? 243 : '76vw')
-          setLogo_H(min_width_600px ? 200 : '66vw')
+          setLogo_W(min_width_600px ? 243 : 310)
+          setLogo_H(min_width_600px ? 209 : 247)
      }, [min_width_600px])
 
      const { observe, inView } = useInView({

@@ -1,8 +1,8 @@
 $distance-middle-half: 24px;
 $distance-middle-full: $distance-middle-half * 2;
 
-$margin-footer-mobile : 70px;
-$margin-footer-desktop : 60px;
+$margin-footer-mobile : 58px;
+$margin-footer-desktop : 58px;
 
 $element-width: 240px;
 
@@ -13,7 +13,7 @@ $title-width: ($element-width + $distance-middle-half) * 2;
 
 $accent-height: 120px;
 
-$nav-height: 200px;
+$nav-height: 195px;
 
 
 body {
@@ -41,20 +41,24 @@ body {
           border: 0 none;
           margin-top: 20px
      }
+     p {
+          margin: 12px 0 0;
+     }
 
      h2 {
+          margin: 0;
           margin-top: -2px;
           font-size: 16px;
           font-weight: 600;
-
 
 
      }
 
      h3 {
-          margin-top: -2px;
           font-size: 16px;
           font-weight: 600;
+          margin: 0;
+          margin-top: 5px;
      }
 
      h1 {
@@ -62,7 +66,10 @@ body {
           line-height: 24px;
           letter-spacing: 6px;
           font-weight: 300;
+          padding: 0;
+          margin: 0;
           margin-top: -8px;
+
      }
 
      .font-weight-300 {
@@ -178,7 +185,7 @@ body {
                                    margin-right: 0;
                                    display: flex;
                                    justify-content: center;
-                                   margin-top: 0px;
+                                   // margin-top: 0px;
 
                                    .content-right {
                                         width: $element-width-mobile;
@@ -208,7 +215,7 @@ body {
                                    margin-right: $distance-middle-half;
                                    display: flex;
                                    justify-content: flex-end;
-                                   margin-top: 11px;
+                                   // margin-top: 11px;
 
                                    .content-left {
                                         width: $element-width;
@@ -233,7 +240,7 @@ body {
                                    min-height: 100px;
                                    margin-left: $distance-middle-half;
                                    // margin-bottom: $distance-middle-full;
-                                   margin-top: 10px;
+                                   // margin-top: 10px;
 
                                    .content-right {
                                         width: $element-width;

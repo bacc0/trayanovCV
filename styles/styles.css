@@ -19,16 +19,22 @@ body hr {
   margin-top: 20px;
 }
 
+body p {
+  margin: 12px 0 0;
+}
+
 body h2 {
+  margin: 0;
   margin-top: -2px;
   font-size: 16px;
   font-weight: 600;
 }
 
 body h3 {
-  margin-top: -2px;
   font-size: 16px;
   font-weight: 600;
+  margin: 0;
+  margin-top: 5px;
 }
 
 body h1 {
@@ -36,6 +42,8 @@ body h1 {
   line-height: 24px;
   letter-spacing: 6px;
   font-weight: 300;
+  padding: 0;
+  margin: 0;
   margin-top: -8px;
 }
 
@@ -80,7 +88,7 @@ body .pages-wrapper .page {
 
 body .pages-wrapper .page .page-nav {
   width: 100%;
-  height: 200px;
+  height: 195px;
 }
 
 body .pages-wrapper .page .page-nav .title-container {
@@ -147,7 +155,6 @@ body .pages-wrapper .page .page-nav .title-container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 0px;
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right .content-right {
     width: 80%;
@@ -175,7 +182,6 @@ body .pages-wrapper .page .page-nav .title-container {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin-top: 11px;
   }
   body .pages-wrapper .page .page-body .page-body-left .container-content-left .content-left {
     width: 240px;
@@ -192,7 +198,6 @@ body .pages-wrapper .page .page-nav .title-container {
   body .pages-wrapper .page .page-body .page-body-right .container-content-right {
     min-height: 100px;
     margin-left: 24px;
-    margin-top: 10px;
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right .content-right {
     width: 240px;
@@ -202,7 +207,7 @@ body .pages-wrapper .page .page-nav .title-container {
 
 body .container-footer .footer {
   width: 528px;
-  margin: 60px auto;
+  margin: 58px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,7 +240,7 @@ body .footer-items-container .footer-icon-text {
 @media only screen and (max-width: 600px) {
   body .container-footer .footer {
     width: 80%;
-    margin: 70px auto;
+    margin: 58px auto;
     display: block;
   }
   body .container-footer .footer .footer-left {

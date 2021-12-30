@@ -15,8 +15,8 @@ export default function Experience({
 
      const [onAnimationStart, setOnAnimationStart] = useState(true)
 
-     const paddingTop = min_width_600px ? 58 : 67
-     const paddingBottom =  min_width_600px ? 72 : 28
+     const paddingTop = min_width_600px ? 65 : 62
+     const paddingBottom =  min_width_600px ? 65 : 18
 
      useEffect(() => {
           setTimeout(() => {
@@ -60,8 +60,14 @@ export default function Experience({
      }
      const style_hr_II = {
           'background-color': hrColor,
-          transition: `background-color ${animationTransition} ease`
+          transition: `background-color ${animationTransition} ease`,
+          marginBottom: 7
      }
+
+     const styleContact = { 
+          color: strongText,
+          marginTop: 28
+      }
 
 
      return (
@@ -71,7 +77,7 @@ export default function Experience({
                          <div
                               ref={Ref_0}
                               className='content-left'
-                              style={{ margin: `5px 0 ${min_width_600px ? 36 : -7}px` }}
+                              // style={{ margin: `0 0 ${min_width_600px ? 0 : -7}px` }}
                          >
                               {animation(isRef_0_Visible, 0.1,
                                    <>
@@ -87,7 +93,7 @@ export default function Experience({
                     <div className='container-content-left'  >
                          <div
                               className='content-left'
-                              style={{ marginTop: min_width_600px ? -20 : -2 }}
+                              style={{ marginTop: min_width_600px ? 20 : -2 }}
                          >
                               {animation(isRef_0_Visible, 0.14,
                                    <h3 style={style_h3_}>
@@ -126,16 +132,15 @@ export default function Experience({
                               )}
 
                               {animation(isRef_0_Visible, 0.34,
-                                   <p>
-                                        <br />
-                                        <strong style={{ color: strongText }}>Ricard Rosson </strong>
+                                   <p style={styleContact}>
+                                        <strong>Ricard Rosson </strong>
                                         <div>ricard@iacos.net</div>
                                    </p>
                               )}
 
                               {animation(isRef_0_Visible, 0.38,
                                    <div style={{ 
-                                        marginTop: min_width_600px ? 15 : 36, 
+                                        marginTop: min_width_600px ? 10 : 36, 
                                         marginBottom: min_width_600px ? 0 : -3 
                                    }}
                                         >
@@ -163,7 +168,7 @@ export default function Experience({
                               {animation(isRef_05_Visible, 0.1,
                                    <>
                                         <h3
-                                             style={{ ...style_h3_, ...{ marginTop: min_width_600px ? 19 : 10 } }}
+                                             style={{ ...style_h3_, ...{ marginTop: min_width_600px ? 4 : 0 } }}
                                         >
                                              {onAnimationStart
                                                   ? typeWriter(' React Developer - Amdocs via Appgr8')

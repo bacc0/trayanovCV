@@ -9,8 +9,8 @@ export default function AboutMe({
 
      const theme = useTheme()
 
-     const paddingTop =  min_width_600px ? 58 : 85
-     const paddingBottom =  min_width_600px ? 72 : 16
+     const paddingTop =  min_width_600px ? 65 : 62
+     const paddingBottom =  min_width_600px ? 65 : 9
 
      const styles = (theme) => ({
           root: {
@@ -37,8 +37,8 @@ export default function AboutMe({
      const style_h3_ = {
           color: thirdLettersColor,
           transition: `color ${animationTransition} ease`,
-          marginTop: min_width_600px ? -2 : -21,
-          marginBottom: min_width_600px ? 0 : -11
+          marginTop: min_width_600px ? 24 : -21,
+          marginBottom: min_width_600px ? -7 : -11
      }
      const style_hr_I = {
           'background-color': hrColorMain,
@@ -46,7 +46,8 @@ export default function AboutMe({
      }
      const style_hr_II = {
           'background-color': hrColor,
-          transition: `background-color ${animationTransition} ease`
+          transition: `background-color ${animationTransition} ease`,
+          marginBottom: 14
      }
 
      return (
@@ -55,15 +56,15 @@ export default function AboutMe({
                     <div className='container-content-left' >
                          <div ref={Ref_3}
                               className='content-left'
-                              style={{ margin: `${min_width_600px ? 0 : -20}px 0 ${min_width_600px ? 36 : -7}px` }}
+                              // style={{ margin: `${min_width_600px ? 0 : -20}px 0 ${min_width_600px ? 36 : -7}px` }}
                          >
                               {animation(isRef_3_Visible, 0.02,
-                                   <div style={{ marginTop: 6 }}>
+                                   <>
                                         <h2 style={style_h2_}>
                                              About me
                                         </h2>
                                         <hr style={style_hr_I} />
-                                   </div>
+                                   </>
                               )}
                          </div>
                     </div>
@@ -72,7 +73,7 @@ export default function AboutMe({
                          {isRef_3_Visible && (
                               <div
                                    className='content-left'
-                                   style={{ marginTop: min_width_600px ? -15 : 16 }}
+                                   // style={{ marginTop: min_width_600px ? -15 : 16 }}
                               >
                                    {animation(isRef_3_Visible, 0.1,
                                         <>
@@ -124,7 +125,7 @@ export default function AboutMe({
                          <div className='container-content-right'>
                               <div
                                    className='content-right'
-                                   style={{ marginTop: min_width_600px ? 21 : 0 }}
+                                   style={{ marginTop: min_width_600px ? -8 : 0 }}
                               >
                                    {/* {animation(isRef_3_Visible, min_width_600px ? 0.14 : 0.36,
                                         <p>Developing with ReactJS single page JavaScript Applications.</p>
@@ -153,7 +154,7 @@ export default function AboutMe({
                                    )}
                                    {animation(isRef_3_Visible, min_width_600px ? 0.34 : 0.56,
                                         <div style={{ 
-                                             marginTop: min_width_600px ?  -10 : 10,
+                                             marginTop: min_width_600px ?  -7 : 10,
                                              marginBottom: min_width_600px ? 0 : 0
                                          }}>
                                              <Image_type

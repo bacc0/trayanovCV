@@ -8,8 +8,8 @@ export default function Technologies({
 
      const { backgroundColor, hrColorMain, thirdLogoColor } = state
 
-     const paddingTop = min_width_600px ? 55 : 48
-     const paddingBottom = min_width_600px ? 72 : 24
+     const paddingTop = min_width_600px ? 65 : 44
+     const paddingBottom = min_width_600px ? 65 : 18
 
 
      const styleContainer = {
@@ -57,7 +57,7 @@ export default function Technologies({
                                         )}
                                    </Hidden>
                               </div>
-                              <div style={{ marginTop: min_width_600px ? 13 : -16, }}>
+                              <div style={{ marginTop: min_width_600px ? -9 : -6 }}>
                                    {animation(isRef_2_Visible, 0.1, <p>ReactJS</p>)}
                               </div>
                               {animation(isRef_2_Visible, 0.14, <p>Hook</p>)}
@@ -97,11 +97,13 @@ export default function Technologies({
                                    <Hidden smDown >
 
                                         {animation(isRef_2_Visible, 0.02,
-                                             <div style={{ margin: `20px 0 38px` }}>
+                                             <div 
+                                             // style={{ margin: `0px 0 38px` }} 
+                                             >
                                                   <h2 style={style_h2_} >
                                                        Tech stack
                                                   </h2>
-                                                  <hr style={style_hr_} />
+                                                  <hr style={{...style_hr_, ...{ marginBottom: 31}}} />
                                              </div>
                                         )}
                                    </Hidden>
@@ -117,7 +119,7 @@ export default function Technologies({
                               {animation(isRef_2_Visible, min_width_600px ? 0.5 : 0.92,
                                    <div
                                         style={{
-                                             marginTop: min_width_600px ? 15 : 36,
+                                             marginTop: min_width_600px ? 10 : 34,
                                              marginBottom: min_width_600px ? 0 : 0
                                         }}
                                    >
