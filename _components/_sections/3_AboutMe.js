@@ -36,6 +36,7 @@ export default function AboutMe({
      }
      const style_h3_ = {
           color: thirdLettersColor,
+          fontSize: 19.5,
           transition: `color ${animationTransition} ease`,
           marginTop: min_width_600px ? 26 : 1,
           marginBottom: min_width_600px ? -7 : 26

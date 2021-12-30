@@ -5,7 +5,6 @@ import Experience from './1_Experience'
 import Technologies from './2_Technologies'
 import AboutMe from './3_AboutMe'
 import Footer from './4_Footer'
-import { Typewriter } from 'react-simple-typewriter'
 
 import useInView from 'react-cool-inview'
 
@@ -32,27 +31,6 @@ export default function _CombineSections({
      const Ref_2b = useRef()
      const Ref_3 = useRef();
 
-     const typeWriter = (sentence) => {
-          return (
-               onAnimationEnd && (
-                    <motion.div
-                         initial={{ opacity: 0 }}
-                         animate={{ opacity: 1 }}
-                         transition={{ duration: 1.3 }}
-                    >
-                         <Typewriter
-                              words={[sentence]}
-                              loop={1}
-                              cursor
-                              cursorStyle=''
-                              typeSpeed={75}
-                              deleteSpeed={50}
-                              delaySpeed={2000}
-                         />
-                    </motion.div>
-               )
-          )
-     }
 
      useEffect(() => {
 
@@ -120,7 +98,7 @@ export default function _CombineSections({
                <Experience
                     state={state}
                     min_width_600px={min_width_600px}
-                    typeWriter={typeWriter}
+                    onAnimationEnd={onAnimationEnd}
                     Ref_0={Ref_0}
                     isRef_0_Visible={isRef_0_Visible}
                     Ref_05={Ref_05}

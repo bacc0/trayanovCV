@@ -26,13 +26,13 @@ body p {
 body h2 {
   margin: 0;
   margin-top: -2px;
-  font-size: 35px;
+  font-size: 31.5px;
   font-weight: 600;
   letter-spacing: 2.5px;
 }
 
 body h3 {
-  font-size: 20px;
+  font-size: 19.5px;
   font-weight: 400;
   margin: 0;
   margin-top: 5px;
@@ -42,12 +42,12 @@ body h3 {
 
 @media only screen and (min-width: 601px) {
   body h3 {
-    font-size: 18px;
+    font-size: 12px;
   }
 }
 
 body h1 {
-  font-size: 30px;
+  font-size: 31.5px;
   line-height: 24px;
   letter-spacing: 6px;
   font-weight: 300;
@@ -61,7 +61,7 @@ body .font-weight-300 {
 }
 
 body .accent-title {
-  font-size: 22px;
+  font-size: 19.5px;
   line-height: 40px;
   letter-spacing: 4px;
 }
@@ -117,7 +117,7 @@ body .pages-wrapper .page .page-nav .title-container {
 @media only screen and (max-width: 600px) {
   body .pages-wrapper .page .page-body {
     width: 100%;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.78px;
     word-spacing: 3px;
