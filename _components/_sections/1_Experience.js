@@ -42,14 +42,10 @@ export default function Experience({
 
      }
      const style_h2_ = {
-          fontSize: 35,
-          letterSpacing: 2.5,
           color: backgroundColor,
           transition: `color ${animationTransition} ease`,
      }
      const style_h3_ = {
-          minHeight: 35,
-          letterSpacing: 1.3,
           color: thirdLettersColor,
           transition: `color ${animationTransition} ease`,
      }
@@ -61,7 +57,7 @@ export default function Experience({
      const style_hr_II = {
           'background-color': hrColor,
           transition: `background-color ${animationTransition} ease`,
-          marginBottom: 7
+          marginBottom: -8
      }
 
      const styleContact = { 
@@ -168,7 +164,7 @@ export default function Experience({
                               {animation(isRef_05_Visible, 0.1,
                                    <>
                                         <h3
-                                             style={{ ...style_h3_, ...{ marginTop: min_width_600px ? 4 : 0 } }}
+                                             style={{ ...style_h3_, ...{ marginTop: min_width_600px ? 0 : 0 } }}
                                         >
                                              {onAnimationStart
                                                   ? typeWriter(' React Developer - Amdocs via Appgr8')

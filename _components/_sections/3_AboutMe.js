@@ -25,12 +25,12 @@ export default function AboutMe({
      const styleContainer = {
           paddingTop: paddingTop,
           paddingBottom: paddingBottom,
-          minHeight: 0
+          minHeight: 0,
+          borderBottom: `0.3px solid ${hrColorMain}33`
 
      }
      const style_h2_ = {
-          fontSize: 35,
-          letterSpacing: 2.5,
+        
           color: backgroundColor,
           transition: `color ${animationTransition} ease`
      }
@@ -47,7 +47,7 @@ export default function AboutMe({
      const style_hr_II = {
           'background-color': hrColor,
           transition: `background-color ${animationTransition} ease`,
-          marginBottom: 14
+          marginBottom: -14
      }
 
      return (

@@ -28,8 +28,7 @@ export default function Technologies({
      }
 
      const style_h2_ = {
-          fontSize: 35,
-          letterSpacing: 2.5,
+         
           color: backgroundColor,
           transition: `color ${animationTransition} ease`
      }
