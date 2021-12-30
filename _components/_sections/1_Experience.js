@@ -15,7 +15,7 @@ export default function Experience({
 
      const [onAnimationStart, setOnAnimationStart] = useState(true)
 
-     const paddingTop = min_width_600px ? 65 : 62
+     const paddingTop = min_width_600px ? 63 : 62
      const paddingBottom =  min_width_600px ? 65 : 18
 
      useEffect(() => {
@@ -57,7 +57,7 @@ export default function Experience({
      const style_hr_II = {
           'background-color': hrColor,
           transition: `background-color ${animationTransition} ease`,
-          marginBottom: 20
+          marginBottom: min_width_600px ? 6 : 20
      }
 
      const styleContact = { 
@@ -136,8 +136,8 @@ export default function Experience({
 
                               {animation(isRef_0_Visible, 0.38,
                                    <div style={{ 
-                                        marginTop: min_width_600px ? 10 : 36, 
-                                        marginBottom: min_width_600px ? 0 : -3 
+                                        marginTop: min_width_600px ? 10 : 34, 
+                                        marginBottom: min_width_600px ? 0 : 2 
                                    }}
                                         >
                                         <Image_type
@@ -217,7 +217,7 @@ export default function Experience({
                          <div className='content-right' ref={Ref_1}>
                               {animation(isRef_1_Visible, 0,
                                    <>
-                                        <h3 style={{ ...style_h3_, ...{ marginTop: min_width_600px ? 26 : -15 } }}>
+                                        <h3 style={{ ...style_h3_, ...{ marginTop: min_width_600px ? 26 : 0 } }}>
                                              {onAnimationStart
                                                   ? typeWriter('React Developer - Groundbits Ltd')
                                                   : 'React Developer - Groundbits Ltd'
@@ -229,7 +229,7 @@ export default function Experience({
                               )}
 
                               {animation(isRef_1_Visible, 0.1,
-                                   <strong style={{ color: strongText }}>
+                                   <strong style={{ color: strongText , marginTop: 0}}>
                                         Jan 2020 – Jan 2021
                                    </strong>
                               )}

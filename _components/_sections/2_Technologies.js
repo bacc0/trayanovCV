@@ -8,8 +8,8 @@ export default function Technologies({
 
      const { backgroundColor, hrColorMain, thirdLogoColor } = state
 
-     const paddingTop = min_width_600px ? 65 : 44
-     const paddingBottom = min_width_600px ? 65 : 18
+     const paddingTop = min_width_600px ? 62 : 35
+     const paddingBottom = min_width_600px ? 65 : 17
 
 
      const styleContainer = {

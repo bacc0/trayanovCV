@@ -9,8 +9,8 @@ export default function AboutMe({
 
      const theme = useTheme()
 
-     const paddingTop =  min_width_600px ? 65 : 62
-     const paddingBottom =  min_width_600px ? 65 : 9
+     const paddingTop =  min_width_600px ? 62 : 60
+     const paddingBottom =  min_width_600px ? 58 : 9
 
      const styles = (theme) => ({
           root: {
@@ -37,8 +37,8 @@ export default function AboutMe({
      const style_h3_ = {
           color: thirdLettersColor,
           transition: `color ${animationTransition} ease`,
-          marginTop: min_width_600px ? 24 : -21,
-          marginBottom: min_width_600px ? -7 : -11
+          marginTop: min_width_600px ? 26 : 1,
+          marginBottom: min_width_600px ? -7 : 26
      }
      const style_hr_I = {
           'background-color': hrColorMain,
@@ -47,7 +47,7 @@ export default function AboutMe({
      const style_hr_II = {
           'background-color': hrColor,
           transition: `background-color ${animationTransition} ease`,
-          marginBottom: 29
+          // marginBottom: 29
      }
 
      return (
