@@ -47,7 +47,7 @@ export default function AboutMe({
      const style_hr_II = {
           'background-color': hrColor,
           transition: `background-color ${animationTransition} ease`,
-          marginBottom: -14
+          marginBottom: 29
      }
 
      return (

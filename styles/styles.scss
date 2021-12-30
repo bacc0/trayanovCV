@@ -13,7 +13,8 @@ $title-width: ($element-width + $distance-middle-half) * 2;
 
 $accent-height: 120px;
 
-$nav-height: 195px;
+$nav-height: 175px;  // 65px nav / 65 (back nav) + (65 * 1.61 GR) = 170px
+// $nav-height: 195px;
 
 
 body {
@@ -54,12 +55,17 @@ body {
      }
 
      h3 {
-          font-size: 18px;
+          font-size: 20px;
           font-weight: 400;
           margin: 0;
           margin-top: 5px;
           line-height: 1.4;
           letter-spacing: 1.6px;
+     }
+     @media only screen and (min-width: 601px) {
+          h3 {
+               font-size: 18px;
+          }
      }
 
      h1 {

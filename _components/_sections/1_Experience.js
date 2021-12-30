@@ -57,7 +57,7 @@ export default function Experience({
      const style_hr_II = {
           'background-color': hrColor,
           transition: `background-color ${animationTransition} ease`,
-          marginBottom: -8
+          marginBottom: 20
      }
 
      const styleContact = { 
