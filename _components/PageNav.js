@@ -26,7 +26,8 @@ export default function MenuAppBar({
                <div
                     style={{
                          position: 'relative',
-                         // top: -200,
+                         top: -5,
+                         // backgroundColor: 'red'
                     }}
 
                >
@@ -34,7 +35,7 @@ export default function MenuAppBar({
                          style={{
                               position: 'relative',
                               top: -13,
-                              fontSize: 14,
+                              fontSize: 16,
                          }}
                     >hello i'm </h3>
                     <h1

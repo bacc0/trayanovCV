@@ -3,8 +3,8 @@ import Image_technologies from '../_illustratins/Image_technologies'
 
 
 export default function Technologies({
-     state, min_width_600px, Ref_2, Ref_2b,
-     theme, animationTransition, isRef_2_Visible, animation }) {
+     state, min_width_600px,
+     theme, animationTransition, animation }) {
 
      const { backgroundColor, hrColorMain, thirdLogoColor } = state
 
@@ -28,7 +28,7 @@ export default function Technologies({
      }
 
      const style_h2_ = {
-         
+
           color: backgroundColor,
           transition: `color ${animationTransition} ease`
      }
@@ -43,42 +43,38 @@ export default function Technologies({
                <div className='page-body-left '>
                     <div className='container-content-left'>
                          <div className='content-left' >
-                              <div ref={Ref_2b} >
+                              <Hidden smUp >
+                                   <div style={{ margin: `24px 0 52px` }}>
+                                        <h2 style={style_h2_}>
+                                             Tech stack
+                                        </h2>
+                                        <hr style={style_hr_} />
+                                   </div>
+                              </Hidden>
 
-                                   <Hidden smUp >
-                                        {animation(isRef_2_Visible, 0.02,
-                                             <div style={{ margin: `24px 0 52px` }}>
-                                                  <h2 style={style_h2_}>
-                                                       Tech stack
-                                                  </h2>
-                                                  <hr style={style_hr_} />
-                                             </div>
-                                        )}
-                                   </Hidden>
-                              </div>
                               <div style={{ marginTop: min_width_600px ? -9 : -6 }}>
-                                   {animation(isRef_2_Visible, 0.1, <p>ReactJS</p>)}
+                                   <p>ReactJS</p>
                               </div>
-                              {animation(isRef_2_Visible, 0.14, <p>Hook</p>)}
-                              {animation(isRef_2_Visible, 0.18, <p>NextJS</p>)}
-                              {animation(isRef_2_Visible, 0.22, <p>Javascript</p>)}
-                              {animation(isRef_2_Visible, 0.26, <p>Material</p>)}
-                              {animation(isRef_2_Visible, 0.3, <p>CSS</p>)}
-                              {animation(isRef_2_Visible, 0.34, <p>SASS</p>)}
-                              {animation(isRef_2_Visible, 0.38, <p>HTML</p>)}
-                              {animation(isRef_2_Visible, 0.42, <p>Framer Motion</p>)}
-                              {animation(isRef_2_Visible, 0.46, <p>SVG's Animations</p>)}
-                              {animation(isRef_2_Visible, 0.50, <p>Shapeshifter</p>)}
-                              {animation(isRef_2_Visible, 0.54, <p>Adobe Illustrator</p>)}
-                              {animation(isRef_2_Visible, 0.58, <p>Autodesk Graphic</p>)}
-                              {animation(isRef_2_Visible, 0.62, <p>GIMP</p>)}
-                              {animation(isRef_2_Visible, 0.64,
-                                   <p
-                                        style={{
-                                             marginBottom: min_width_600px ? '0em' : '1em',
-                                        }}
-                                   >Adobe Photoshop</p>
-                              )}
+                              <p>Hook</p>
+                              <p>NextJS</p>
+                              <p>Javascript</p>
+                              <p>Material</p>
+                              <p>CSS</p>
+                              <p>SASS</p>
+                              <p>HTML</p>
+                              <p>Framer Motion</p>
+                              <p>SVG's Animations</p>
+                              <p>Shapeshifter</p>
+                              <p>Adobe Illustrator</p>
+                              <p>Autodesk Graphic</p>
+                              <p>GIMP</p>
+                              <p
+                                   style={{
+                                        marginBottom: min_width_600px ? '0em' : '1em',
+                                   }}
+                              >
+                                   Adobe Photoshop
+                              </p>
                          </div>
                     </div>
                </div>
@@ -92,42 +88,39 @@ export default function Technologies({
                                    marginBottom: min_width_600px ? 0 : -8
                               }}
                          >
-                              <div ref={Ref_2} >
-                                   <Hidden smDown >
 
-                                        {animation(isRef_2_Visible, 0.02,
-                                             <div 
-                                             // style={{ margin: `0px 0 38px` }} 
-                                             >
-                                                  <h2 style={style_h2_} >
-                                                       Tech stack
-                                                  </h2>
-                                                  <hr style={{...style_hr_, ...{ marginBottom: 31}}} />
-                                             </div>
-                                        )}
-                                   </Hidden>
+                              <Hidden smDown >
+
+
+                                   <>
+                                        <h2 style={style_h2_} >
+                                             Tech stack
+                                        </h2>
+                                        <hr style={{ ...style_hr_, ...{ marginBottom: 31 } }} />
+                                   </>
+                              </Hidden>
+
+
+                              <p>Typescript</p>
+                              <p>NodeJS</p>
+                              <p>Express</p>
+                              <p>Git Github Bitbucket</p>
+                              <p>Sourcetree</p>
+                              <p>Jira</p>
+                              <p>Storybook</p>
+
+                              <div
+                                   style={{
+                                        marginTop: min_width_600px ? 10 : 34,
+                                        marginBottom: min_width_600px ? 0 : 0
+                                   }}
+                              >
+                                   <Image_technologies
+                                        min_width_600px={min_width_600px}
+                                        color={thirdLogoColor}
+                                   />
                               </div>
 
-                              {animation(isRef_2_Visible, min_width_600px ? 0.22 : 0.66, <p>Typescript</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.26 : 0.7, <p>NodeJS</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.3 : 0.74, <p>Express</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.34 : 0.78, <p>Git Github Bitbucket</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.38 : 0.82, <p>Sourcetree</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.42 : 0.84, <p>Jira</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.46 : 0.88, <p>Storybook</p>)}
-                              {animation(isRef_2_Visible, min_width_600px ? 0.5 : 0.92,
-                                   <div
-                                        style={{
-                                             marginTop: min_width_600px ? 10 : 34,
-                                             marginBottom: min_width_600px ? 0 : 0
-                                        }}
-                                   >
-                                        <Image_technologies
-                                             min_width_600px={min_width_600px}
-                                             color={thirdLogoColor}
-                                        />
-                                   </div>
-                              )}
                          </div>
                     </div>
                </div>

@@ -56,8 +56,16 @@ export default function MenuAppBar({
      const underAppBAr = {
           height: heightAppBar,
           'background-color': AppBackgroundColor,
+
+
           transition: `background-color 350ms ease, 
           height 800ms ease`,
+
+          width: '100%',
+          'background-image': `url('react_logo_BG.svg')`,
+          backgroundPosition: `30vw  -144px`,
+          backgroundSize: 600,
+          backgroundRepeat: 'no-repeat',
      }
      const titleStyle = {
           fontSize: 12,
@@ -99,7 +107,7 @@ export default function MenuAppBar({
                                    >
                                         <Hidden smDown>
                                              <Typography style={titleStyle} sx={{ flexGrow: 1 }}>
-                                                  Veselin Trayanov
+                                                  Veselin Trayanov 
                                              </Typography>
                                         </Hidden>
                                         <Stack

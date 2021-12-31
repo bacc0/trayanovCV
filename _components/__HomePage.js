@@ -118,22 +118,77 @@ export default function HomePage({
           backgroundRepeat: 'repeat-y, no-repeat',
           // opacity : opacityBackground,
           transition: `opacity 250ms ease`,
-       
+
      }
 
-     const styleBackgroundTitle = {
+     const styleBackgroundTitle_1 = {
           width: '100%',
           'background-image': min_width_600px ? backgroundNav : backgroundNav_mobile,
           backgroundPosition: `center -8px`,
           backgroundSize: 536,
           backgroundRepeat: 'no-repeat',
           // borderBottom: `1px solid ${hrColor}`,   
-          borderBottom:`1px solid ${color_3}55` ,
-          borderTop: `1px solid ${color_3}55` ,
+          borderBottom: `1px solid ${color_3}55`,
+          borderTop: `1px solid ${color_3}55`,
      }
+
+     const styleBackgroundTitle = {
+          width: '100%',
+          'background-image': `url('react_logo.svg')`,
+          backgroundPosition: `30vw  -210px`,
+          backgroundSize: 600,
+          backgroundRepeat: 'no-repeat',
+          // transform: 'rotate(30deg)',
+          borderTop: `0.3px solid ${color_3}55`,
+          borderBottom: `0.3px solid ${color_3}55`,
+          overflow: 'hidden'
+     }
+
+     // const styleBackgroundTitle2 = {
+     //      position: 'relative',
+     //      top:93,
+     //      left:79,
+     //      width: 350,
+     //      height: 350,
+     //      'background-image': `url('react_logo.svg')`,
+     //      backgroundPosition: `center center`,
+     //      backgroundSize: 350,
+     //      backgroundRepeat: 'no-repeat',
+     //      transform: `rotate( ${Number( 35 + (Y_position * 100)).toFixed(0) * 6}deg)`,
+     //      transition: `transform 10ms ease-in`
+         
+     // }
 
      return (
           <Fragment>
+               <style jsx global>
+                    {`
+                         .progress {
+                              width: 100%;
+                              height: 0px;
+                         }
+
+                         .progress:before {
+                              content: "";
+                              position: absolute;
+                              height: 1px;
+                              width: ${Number((Y_position * 100)).toFixed(0)}%;
+                              border-bottom: 1px solid ${bodyColor};
+                              transition: width 150ms ease-in;
+                         }
+                         
+				`}
+               </style>
+               <div
+                    className="progress"
+                    style={{
+                         position: 'sticky',
+                         top: -1,
+                         zIndex: 2000
+                    }}
+               />
+
+               
                <MenuAppBar
                     state={state}
                     theme={theme}
@@ -146,13 +201,16 @@ export default function HomePage({
 
                <div className='page' style={bodyPage} >
 
-                    <div className='page-nav' 
+                    <div className='page-nav'
                     // style={styleBackgroundTitle_container}
-                     >
-                         <div 
-                         className='title-container vertical-center-container' 
-                         style={styleBackgroundTitle} 
+                    >
+                         <div
+                              className='title-container vertical-center-container'
+                              style={styleBackgroundTitle}
                          >
+                              {/* <div style={styleBackgroundTitle2}>
+
+               </div> */}
                               <PageNav
                                    state={state}
                                    logo_W_H={logo_W_H}
