@@ -29,7 +29,7 @@ export default function MenuAppBar({
      }, []);
 
      useEffect(() => {
-          if (Y_position < 0.02) {
+          if (Y_position < 0.035) {
                setAppBarIsVisible(true)
           } else {
 
