@@ -26,7 +26,7 @@ export default function MenuAppBar({
                <div
                     style={{
                          position: 'relative',
-                         top: -65,
+                         top: -56,
                          minWidth: 250,
                          // backgroundColor: 'pink'
                     }}
@@ -62,7 +62,7 @@ export default function MenuAppBar({
                     <h3
                          style={{
                               position: 'relative',
-                              top: 19,
+                              top: 22,
                               fontSize: 19.5,
                               fontWeight: 400,
                               // textAlign: 'center',
