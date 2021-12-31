@@ -98,7 +98,7 @@ export default function HomePage({
 
      }, [theme]);
 
-     const { AppBackgroundColor, hrColor, bodyColor, backgroundNav_container, backgroundNav, backgroundNav_mobile } = state
+     const { AppBackgroundColor, hrColor,secLettersColor,  bodyColor, backgroundNav_container, backgroundNav, backgroundNav_mobile } = state
 
      const bodyPage = {
           backgroundColor: AppBackgroundColor,
@@ -139,8 +139,8 @@ export default function HomePage({
           backgroundSize: 600,
           backgroundRepeat: 'no-repeat',
           // transform: 'rotate(30deg)',
-          borderTop: `0.3px solid ${color_3}55`,
-          borderBottom: `0.3px solid ${color_3}55`,
+          // borderTop: `0.3px solid ${color_3}55`,
+           borderBottom: `0.3px solid ${secLettersColor}55`,
           overflow: 'hidden'
      }
 

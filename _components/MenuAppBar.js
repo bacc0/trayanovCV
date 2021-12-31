@@ -42,30 +42,33 @@ export default function MenuAppBar({
           ' backdrop-filter': `blur(10px)`,
           color: hrColorMain,
           boxShadow: '0 0 0',
-          borderBottom: `1px solid ${hrColor}99`,
+          borderBottom: `0.3px solid ${secLettersColor}55`,
           fontSize: 10,
           height: appBarIsVisible ? 65 : 0,
           transition: `height 800ms ease`,
      }
      const ToolbarContainer = {
-          borderBottom: `1px solid blck`,
+          // borderBottom: `1px solid blck`,
           position: 'relative',
           top: appBarIsVisible ? 0 : -65,
           transition: `top 600ms ease`
      }
-     const underAppBAr = {
+     const underAppBar = {
           height: heightAppBar,
           'background-color': AppBackgroundColor,
 
 
-          transition: `background-color 350ms ease, 
-          height 800ms ease`,
+          
 
           width: '100%',
-          'background-image': `url('react_logo_BG.svg')`,
+          'background-image': `url('react_logo.svg')`,
           backgroundPosition: `30vw  -144px`,
           backgroundSize: 600,
           backgroundRepeat: 'no-repeat',
+
+          transition: `background-image 0ms ease,
+          background-color 350ms ease, 
+          height 800ms ease`,
      }
      const titleStyle = {
           fontSize: 12,
@@ -86,7 +89,7 @@ export default function MenuAppBar({
 
      return (
           <Box>
-               <div>
+           
                     <motion.div
                          initial={{ opacity: 0, pathLength: 0, y: -65 }}
                          animate={{ opacity: 1, pathLength: 1, y: 0 }}
@@ -162,9 +165,8 @@ export default function MenuAppBar({
                                    </Toolbar>
                               </motion.div>
                          </AppBar>
-                         <div style={underAppBAr} />
+                         <div style={underAppBar} />
                     </motion.div>
-               </div>
           </Box >
      )
 }

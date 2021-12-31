@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function AboutMe({
      state, min_width_600px, animationTransition }) {
 
-     const { backgroundColor, hrColorMain, thirdLettersColor, hrColor, thirdLogoColor } = state
+     const { backgroundColor, hrColorMain, thirdLettersColor, hrColor, thirdLogoColor, secLettersColor } = state
 
      const theme = useTheme()
 
@@ -27,7 +27,7 @@ export default function AboutMe({
           paddingTop: paddingTop,
           paddingBottom: paddingBottom,
           minHeight: 0,
-          borderBottom: `0.3px solid ${hrColorMain}33`
+          borderBottom: `0.3px solid ${secLettersColor}55`,
 
      }
      const style_h2_ = {
