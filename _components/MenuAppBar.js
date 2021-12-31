@@ -76,8 +76,8 @@ export default function MenuAppBar({
           
 
           width: '100%',
-          'background-image': `url('react_logo.svg')`,
-          backgroundPosition: `30vw  -144px`,
+          'background-image': `url('react_logo_BG.svg')`,
+          backgroundPosition: `30vw  -155px`,
           backgroundSize: 600,
           backgroundRepeat: 'no-repeat',
 
