@@ -45,6 +45,7 @@ export default function Experience({
 
 
      const styleContainer = {
+         
           paddingTop: paddingTop,
           paddingBottom: paddingBottom,
           minHeight: min_width_600px ? 300 : 300,

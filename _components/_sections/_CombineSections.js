@@ -11,7 +11,7 @@ import Footer from './4_Footer'
 export default function _CombineSections({
      state, theme, min_width_600px, animationTransition, onAnimationEnd }) {
 
-    
+
 
      const [isRef_0_Visible, setIsRef_0_Visible] = useState(true)
      const [isRef_05_Visible, setIsRef_05_Visible] = useState(true)
@@ -83,7 +83,7 @@ export default function _CombineSections({
                               <motion.div
                                    initial={{ scale: 0.99, y: 50, opacity: 0 }}
                                    animate={{ scale: 1, y: 0, opacity: 1 }}
-                                   transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: delay }}
+                                   transition={{ type: 'spring', ease: 'linear', duration: 0.9, delay: delay }}
                               >
                                    {html}
                               </motion.div>
@@ -109,27 +109,28 @@ export default function _CombineSections({
                     isRef_1_Visible={isRef_1_Visible}
                     animation={animation}
                />
-
-               <Technologies
-                    theme={theme}
-                    min_width_600px={min_width_600px}
-                    Ref_2={Ref_2}
-                    Ref_2b={Ref_2b}
-                    isRef_2_Visible={isRef_2_Visible}
-                    animation={animation}
-                    state={state}
-                    animationTransition={animationTransition}
-               />
-
-               <AboutMe
-                    state={state}
-                    Ref_3={Ref_3}
-                    isRef_3_Visible={isRef_3_Visible}
-                    min_width_600px={min_width_600px}
-                    animation={animation}
-                    animationTransition={animationTransition}
-               />
-
+               {/* <div style={{ minHeight: 10 }}> */}
+                    <Technologies
+                         theme={theme}
+                         min_width_600px={min_width_600px}
+                         Ref_2={Ref_2}
+                         Ref_2b={Ref_2b}
+                         isRef_2_Visible={isRef_2_Visible}
+                         animation={animation}
+                         state={state}
+                         animationTransition={animationTransition}
+                    />
+               {/* </div>
+               <div style={{ minHeight: 300 }}> */}
+                    <AboutMe
+                         state={state}
+                         Ref_3={Ref_3}
+                         isRef_3_Visible={isRef_3_Visible}
+                         min_width_600px={min_width_600px}
+                         animation={animation}
+                         animationTransition={animationTransition}
+                    />
+               {/* </div> */}
                {visibilityFooter && (
                     <Footer state={state} min_width_600px={min_width_600px} />
                )}
