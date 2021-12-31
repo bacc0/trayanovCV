@@ -98,7 +98,7 @@ export default function HomePage({
 
      }, [theme]);
 
-     const { AppBackgroundColor, hrColor,secLettersColor,  bodyColor, backgroundNav_container, backgroundNav, backgroundNav_mobile, thirdLettersColor } = state
+     const { AppBackgroundColor, hrColor, secLettersColor, bodyColor, backgroundNav_container, backgroundNav, backgroundNav_mobile, thirdLettersColor } = state
 
      const bodyPage = {
           backgroundColor: AppBackgroundColor,
@@ -140,8 +140,18 @@ export default function HomePage({
           backgroundRepeat: 'no-repeat',
           // transform: 'rotate(30deg)',
           // borderTop: `0.3px solid ${color_3}55`,
-           borderBottom: `0.3px solid ${secLettersColor}55`,
+          borderBottom: `0.3px solid ${secLettersColor}55`,
           overflow: 'hidden'
+     }
+
+     const styleProgressBar = {
+          // height: 20,
+          // backgroundColor: 'red',
+          position: 'sticky',
+          top: 0,
+          zIndex: 2000,
+          width: `${Number((Y_position * 100)).toFixed(0)}%`,
+          borderBottom: `1px solid ${thirdLettersColor}`,
      }
 
      // const styleBackgroundTitle2 = {
@@ -156,39 +166,17 @@ export default function HomePage({
      //      backgroundRepeat: 'no-repeat',
      //      transform: `rotate( ${Number( 35 + (Y_position * 100)).toFixed(0) * 6}deg)`,
      //      transition: `transform 10ms ease-in`
-         
+
      // }
 
      return (
           <Fragment>
-               <style jsx global>
-                    {`
-                         .progress {
-                              width: 100%;
-                              height: 0px;
-                         }
-
-                         .progress:before {
-                              content: "";
-                              position: absolute;
-                              height: 0px;
-                              width: ${Number((Y_position * 100)).toFixed(0)}%;
-                              border-bottom: 1px solid ${thirdLettersColor};
-                              transition: width 150ms ease-in;
-                         }
-                         
-				`}
-               </style>
                <div
-                    className="progress"
-                    style={{
-                         position: 'sticky',
-                         top: 0,
-                         zIndex: 2000
-                    }}
+                    // className="progress"
+                    style={styleProgressBar}
                />
 
-               
+
                <MenuAppBar
                     state={state}
                     theme={theme}

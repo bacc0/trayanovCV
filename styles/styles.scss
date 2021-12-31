@@ -19,19 +19,23 @@ $nav-height: 185px; // 65px nav / 65 (back nav) + (65 * 1.61 GR) = 170px   + 10p
 
 body {
 
-     svg {
-          // https://css-tricks.com/how-to-do-knockout-text/
-     }
+     
 
      margin: 0;
      padding: 0;
      font-size: 14px;
      line-height: 24px;
-     font-family: 'Poppins', sans-serif;
+     font-family: 'Poppins',
+     sans-serif;
      letter-spacing: 0.7px;
      word-spacing: 3px;
      font-weight: 200;
      margin-top: 0px;
+
+     svg {
+          // https://css-tricks.com/how-to-do-knockout-text/
+     }
+
 
      hr {
           width: 100%;
@@ -94,7 +98,7 @@ body {
 
 
 
-    
+
 
      .pages-wrapper {
 
