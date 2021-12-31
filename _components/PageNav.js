@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import TitleSVG from './_illustratins/TitleSVG'
-
+import { typeWriter } from './_sections/helpers/TypeWriter'
 
 export default function MenuAppBar({
      state, logo_W_H, strokeWidth, setOnAnimationEnd, animationTransition }) {
@@ -27,6 +27,7 @@ export default function MenuAppBar({
                     style={{
                          position: 'relative',
                          top: -5,
+                         minWidth: 210,
                          // backgroundColor: 'red'
                     }}
 
@@ -57,10 +58,12 @@ export default function MenuAppBar({
                               top: 19,
                               fontSize: 19.5,
                               fontWeight: 400,
-                              textAlign: 'center'
+                              // textAlign: 'center',
+                              // backgroundColor: 'red',
+                              minHeight: 22
                          }}
                     >
-                         front ...end developer
+                         {typeWriter('front ...end developer')}
                     </h3>
                </div>
           </div>
