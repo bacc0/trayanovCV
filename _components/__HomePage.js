@@ -183,7 +183,7 @@ export default function HomePage({
                     className="progress"
                     style={{
                          position: 'sticky',
-                         top: 0,
+                         top: -1,
                          zIndex: 2000
                     }}
                />
