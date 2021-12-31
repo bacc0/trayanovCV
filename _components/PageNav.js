@@ -2,14 +2,14 @@ import { motion } from 'framer-motion'
 import TitleSVG from './_illustratins/TitleSVG'
 
 
-export default function MenuAppBar({ 
+export default function MenuAppBar({
      state, logo_W_H, strokeWidth, setOnAnimationEnd, animationTransition }) {
 
 
      return (
 
           <div className='vertical-center'>
-               <motion.div
+               {/* <motion.div
                     initial={{ scale: 1, y: -200, x: 10, opacity: 0 }}
                     animate={{ scale: 1, y: 0, x: 10, opacity: 1 }}
                     transition={{ type: 'spring', duration: 0.9, delay: 0 }}
@@ -22,7 +22,46 @@ export default function MenuAppBar({
                          setOnAnimationEnd={setOnAnimationEnd}
                          animationTransition={animationTransition}
                     />
-               </motion.div>
+               </motion.div> */}
+               <div
+                    style={{
+                         position: 'relative',
+                         // top: -200,
+                    }}
+
+               >
+                    <h3
+                         style={{
+                              position: 'relative',
+                              top: -13,
+                              fontSize: 14,
+                         }}
+                    >hello i'm </h3>
+                    <h1
+                         style={{
+                              position: 'relative',
+                              top: 8,
+                              fontSize: 51,
+                              fontWeight: 600,
+                              textAlign: 'center',
+                              letterSpacing: 2.5
+                         }}
+
+                    >
+                         veselin
+                    </h1>
+                    <h3
+                         style={{
+                              position: 'relative',
+                              top: 19,
+                              fontSize: 19.5,
+                              fontWeight: 400,
+                              textAlign: 'center'
+                         }}
+                    >
+                         front ...end developer
+                    </h3>
+               </div>
           </div>
 
      )

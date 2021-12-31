@@ -146,8 +146,13 @@ export default function HomePage({
 
                <div className='page' style={bodyPage} >
 
-                    <div className='page-nav' style={styleBackgroundTitle_container} >
-                         <div className='title-container vertical-center-container' style={styleBackgroundTitle} >
+                    <div className='page-nav' 
+                    // style={styleBackgroundTitle_container}
+                     >
+                         <div 
+                         className='title-container vertical-center-container' 
+                         style={styleBackgroundTitle} 
+                         >
                               <PageNav
                                    state={state}
                                    logo_W_H={logo_W_H}
