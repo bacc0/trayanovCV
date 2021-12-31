@@ -66,7 +66,7 @@ export default function MenuAppBar({
           backgroundSize: 600,
           backgroundRepeat: 'no-repeat',
 
-          transition: `background-image 0ms ease,
+          transition: `
           background-color 350ms ease, 
           height 800ms ease`,
      }
