@@ -28,7 +28,7 @@ export default function MenuAppBar({
                          position: 'relative',
                          top: -5,
                          minWidth: 230,
-                         // backgroundColor: 'red'
+                         backgroundColor: 'pink'
                     }}
 
                >
@@ -38,6 +38,8 @@ export default function MenuAppBar({
                               top: -13,
                               fontSize: 16,
                               minWidth: 230,
+                         backgroundColor: 'lime'
+
                          }}
                     >hello i'm </h3>
                     <h1
@@ -49,6 +51,9 @@ export default function MenuAppBar({
                               textAlign: 'center',
                               letterSpacing: 2.5,
                               minWidth: 230,
+                         backgroundColor: 'beige',
+                         minHeight: 25,
+
                          }}
 
                     >
@@ -61,7 +66,7 @@ export default function MenuAppBar({
                               fontSize: 19.5,
                               fontWeight: 400,
                               // textAlign: 'center',
-                              // backgroundColor: 'red',
+                              backgroundColor: 'red',
                               minHeight: 24,
                               minWidth: 230,
                          }}
