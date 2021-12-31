@@ -12,7 +12,7 @@ export default function Footer({ state, min_width_600px }) {
      return (
           <div className="container-footer" style={{ backgroundColor: footerColor ,border: `1px solid ${footerColor}` }}>
                <div className="footer" 
-                    style={{ minHeight: min_width_600px ? 'auto' : 155}}
+               
                >
                     <div className="footer-left">
                          <a

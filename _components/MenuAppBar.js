@@ -19,9 +19,12 @@ export default function MenuAppBar({
      const [heightAppBar, setHeightAppBar] = useState(0)
      const [appBarIsVisible, setAppBarIsVisible] = useState(true)
 
+
+   
+
      useEffect(() => {
           setTimeout(() => {
-               setHeightAppBar(65)
+               setHeightAppBar(55)
           }, 2000);
      }, []);
 
@@ -29,7 +32,14 @@ export default function MenuAppBar({
           if (Y_position < 0.02) {
                setAppBarIsVisible(true)
           } else {
-               scrollDirection === 'up' ? setAppBarIsVisible(false) : setAppBarIsVisible(true)
+
+               if (scrollDirection === 'up' ) {
+                    appBarIsVisible !== false ?  setAppBarIsVisible(false) : null
+               }
+               if (scrollDirection === 'down' ) {
+                    appBarIsVisible !== true ?  setAppBarIsVisible(true) : null
+               }
+               // scrollDirection === 'up' ? setAppBarIsVisible(false) : setAppBarIsVisible(true)
           }
      }, [Y_position]);
 
@@ -44,15 +54,20 @@ export default function MenuAppBar({
           boxShadow: '0 0 0',
           borderBottom: `0.3px solid ${secLettersColor}55`,
           fontSize: 10,
-          height: appBarIsVisible ? 65 : 0,
-          transition: `height 800ms ease`,
-     }
-     const ToolbarContainer = {
-          // borderBottom: `1px solid blck`,
-          position: 'relative',
+          // height: appBarIsVisible ? 65 : 0,
+          // transition: `height 800ms ease`,
+          // height: 65,
+          position: 'fixed',
           top: appBarIsVisible ? 0 : -65,
-          transition: `top 600ms ease`
+          transition: `top 800ms ease`,
+          
      }
+     // const ToolbarContainer = {
+     //      borderBottom: `1px solid blck`,
+     //      position: 'relative',
+     //      top: appBarIsVisible ? 0 : -65,
+     //      transition: `top 600ms ease`
+     // }
      const underAppBar = {
           height: heightAppBar,
           'background-color': AppBackgroundColor,
@@ -100,7 +115,7 @@ export default function MenuAppBar({
                                    initial={{ opacity: 0, y: -65 }}
                                    animate={{ opacity: 1, y: 0 }}
                                    transition={{ delay: 2, duration: 1, ease: 'easeInOut' }}
-                                   style={ToolbarContainer}
+                                   // style={ToolbarContainer}
                               >
                                    <Toolbar
                                         style={{

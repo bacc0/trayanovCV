@@ -13,8 +13,8 @@ $title-width: ($element-width + $distance-middle-half) * 2;
 
 $accent-height: 120px;
 
-$nav-height: 175px; // 65px nav / 65 (back nav) + (65 * 1.61 GR) = 170px
-// $nav-height: 195px;
+$nav-height: 185px; // 65px nav / 65 (back nav) + (65 * 1.61 GR) = 170px   + 10px back of navbar
+// $nav-height: 195px; 
 
 
 body {
@@ -92,29 +92,9 @@ body {
 
      }
 
-     .vertical-center-container {
-          position: relative;
 
-          .vertical-center {
-               margin: 0;
-               position: absolute;
-               top: 50%;
-               -ms-transform: translateY(-50%);
-               transform: translateY(-50%);
-          }
-     }
 
-     .vertical-center-container-right {
-          position: relative;
-
-          .vertical-center-right {
-               margin: 0 0 0 $distance-middle-half;
-               position: absolute;
-               top: 50%;
-               -ms-transform: translateY(-50%);
-               transform: translateY(-50%);
-          }
-     }
+    
 
      .pages-wrapper {
 
