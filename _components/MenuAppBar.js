@@ -59,7 +59,7 @@ export default function MenuAppBar({
           // height: 65,
           position: 'fixed',
           top: appBarIsVisible ? 0 : -65,
-          transition: `top 1000ms ease`, //800ms
+          transition: `top 800ms ease`, //800ms
           
      }
      // const ToolbarContainer = {
