@@ -171,7 +171,7 @@ export default function HomePage({
                          .progress:before {
                               content: "";
                               position: absolute;
-                              height: 1px;
+                              height: 0px;
                               width: ${Number((Y_position * 100)).toFixed(0)}%;
                               border-bottom: 1px solid ${thirdLettersColor};
                               transition: width 150ms ease-in;
@@ -183,7 +183,7 @@ export default function HomePage({
                     className="progress"
                     style={{
                          position: 'sticky',
-                         top: -1,
+                         top: 0,
                          zIndex: 2000
                     }}
                />
