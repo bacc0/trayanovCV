@@ -37,6 +37,7 @@ export default function MenuAppBar({
                               position: 'relative',
                               top: -13,
                               fontSize: 16,
+                              minWidth: 230,
                          }}
                     >hello i'm </h3>
                     <h1
@@ -46,7 +47,8 @@ export default function MenuAppBar({
                               fontSize: 51,
                               fontWeight: 600,
                               textAlign: 'center',
-                              letterSpacing: 2.5
+                              letterSpacing: 2.5,
+                              minWidth: 230,
                          }}
 
                     >
