@@ -27,7 +27,7 @@ export default function MenuAppBar({
                     style={{
                          position: 'relative',
                          top: -5,
-                         minWidth: 210,
+                         minWidth: 220,
                          // backgroundColor: 'red'
                     }}
 
@@ -59,8 +59,9 @@ export default function MenuAppBar({
                               fontSize: 19.5,
                               fontWeight: 400,
                               // textAlign: 'center',
-                              // backgroundColor: 'red',
-                              minHeight: 22
+                              backgroundColor: 'red',
+                              minHeight: 22,
+                              minWidth: 220,
                          }}
                     >
                          {typeWriter('front ...end developer')}
