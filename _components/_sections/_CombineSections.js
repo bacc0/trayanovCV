@@ -6,23 +6,21 @@ import Technologies from './2_Technologies'
 import AboutMe from './3_AboutMe'
 import Footer from './4_Footer'
 
-import useInView from 'react-cool-inview'
+
 
 export default function _CombineSections({
      state, theme, min_width_600px, animationTransition, onAnimationEnd }) {
 
-     const { observe, unobserve, inView, scrollDirection, entry } =
-          useInView({
-               threshold: 0.01, // Default is 0
-               // unobserveOnEnter: true,
-          })
-     // console.log(inView)
+    
 
      const [isRef_0_Visible, setIsRef_0_Visible] = useState(true)
      const [isRef_05_Visible, setIsRef_05_Visible] = useState(true)
      const [isRef_1_Visible, setIsRef_1_Visible] = useState(true)
      const [isRef_2_Visible, setIsRef_2_Visible] = useState(true)
      const [isRef_3_Visible, setIsRef_3_Visible] = useState(true)
+
+     const [visibilityFooter, setVisibilityFooter] = useState(false)
+
 
      const Ref_0 = useRef()
      const Ref_05 = useRef()
@@ -31,12 +29,15 @@ export default function _CombineSections({
      const Ref_2b = useRef()
      const Ref_3 = useRef();
 
+     useEffect(() => {
+          isRef_3_Visible ? setVisibilityFooter(true) : setVisibilityFooter(false)
+     }, [isRef_3_Visible])
 
      useEffect(() => {
 
           window.addEventListener('scroll', scrollHandler);
           return () => window.removeEventListener('scroll', scrollHandler);
-     }, []);
+     }, [])
 
      const scrollHandler = () => {
 
@@ -71,7 +72,7 @@ export default function _CombineSections({
           } else {
                setIsRef_3_Visible(false)
           }
-         
+
      }
 
      const animation = (is_Ref_Visible, delay, html) => {
@@ -129,9 +130,9 @@ export default function _CombineSections({
                     animationTransition={animationTransition}
                />
 
-               <div ref={observe} style={{ opacity: inView ? 1 : 0 }}> 
+               {visibilityFooter && (
                     <Footer state={state} min_width_600px={min_width_600px} />
-               </div>
+               )}
                {/* <div style={{ minHeight: min_width_600px ? 0 : 70,backgroundColor: 'lime' }} /> */}
           </div>
      )
