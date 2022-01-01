@@ -77,6 +77,7 @@ export default function MenuAppBar({
                               fontSize: 16,
                               minWidth: 250,
                               // backgroundColor: 'lime'
+                              color: state.strongText
 
                          }}
                     >hello i'm </h3>
@@ -104,7 +105,7 @@ export default function MenuAppBar({
                               fontSize: 19.5,
                               fontWeight: 400,
                               // textAlign: 'center',
-                              // backgroundColor: 'red',
+                              color: state.strongText,
                               minHeight: 24,
                               minWidth: 250,
                          }}
