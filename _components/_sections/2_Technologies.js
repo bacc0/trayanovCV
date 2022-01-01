@@ -1,10 +1,10 @@
 import { Hidden } from '@mui/material'
 import Image_technologies from '../_illustratins/Image_technologies'
 import Img_handler from '../_illustratins/Img_handler'
-
+import Img_handle_inview from '../_illustratins/Img_handle_inview'
 export default function Technologies({
      state, min_width_600px,
-     theme, animationTransition, animation }) {
+     theme, animationTransition }) {
 
      const { backgroundColor, hrColorMain, thirdLogoColor } = state
 
@@ -115,10 +115,14 @@ export default function Technologies({
                                         marginBottom: min_width_600px ? 0 : 0
                                    }}
                               >
-                                   <Img_handler
+                                   <Img_handle_inview
                                         src={'./tech.svg'}
                                         min_width_600px={min_width_600px}
                                    />
+                                   {/* <Img_handler
+                                        src={'./tech.svg'}
+                                        min_width_600px={min_width_600px}
+                                   /> */}
                                    {/* <Image_technologies
                                         min_width_600px={min_width_600px}
                                         color={thirdLogoColor}

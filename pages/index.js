@@ -90,7 +90,7 @@ export default function Home() {
 
      useEffect(() => {
 
-          scrollYProgress.onChange((v) => set_Y_position(v))
+          scrollYProgress.onChange((v) => (set_Y_position(v)))
      }, [scrollYProgress])
 
 

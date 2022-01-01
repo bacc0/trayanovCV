@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
 import Image_experience from '../_illustratins/Image_experience'
 import { typeWriter } from './helpers/TypeWriter'
-
-
 import Img_handler from '../_illustratins/Img_handler'
+import Img_handle_inview from '../_illustratins/Img_handle_inview'
 
 export default function Experience({
-     state, min_width_600px, onAnimationEnd, Ref_0, isRef_0_Visible
+     state, min_width_600px, Y_position
 }) {
 
 
@@ -82,7 +81,7 @@ export default function Experience({
                <div className='page-body-left'>
                     <div className='container-content-left' >
                          <div
-                              ref={Ref_0}
+
                               className='content-left'
                          // style={{ margin: `0 0 ${min_width_600px ? 0 : -7}px` }}
                          >
@@ -103,11 +102,13 @@ export default function Experience({
                               <h3 style={style_h3_}>
                                    React Developer
                                    <div style={{ fontSize: min_width_600px ? 14 : 16 }}>
-                                        {before_animation_start && (
+                                        Groundbits Ltd
+
+                                        {/* {before_animation_start && (
                                              on_animation_end
                                                   ? typeWriter('Groundbits Ltd', 165)
                                                   : 'Groundbits Ltd'
-                                        )}
+                                        )} */}
                                    </div>
                               </h3>
 
@@ -143,10 +144,14 @@ export default function Experience({
                                         marginBottom: min_width_600px ? 0 : 2
                                    }}
                               >
-                                   <Img_handler
+                                   <Img_handle_inview
                                         src={'./exp.svg'}
                                         min_width_600px={min_width_600px}
                                    />
+                                   {/* <Img_handler
+                                        src={'./exp.svg'}
+                                        min_width_600px={min_width_600px}
+                                   /> */}
 
                                    {/* <Image_experience
                                         min_width_600px={min_width_600px}
@@ -164,11 +169,13 @@ export default function Experience({
                               >
                                    React Developer
                                    <div style={{ fontSize: min_width_600px ? 14 : 16 }}>
-                                        {before_animation_start && (
+                                        Amdocs via Appgr8
+
+                                        {/* {before_animation_start && (
                                              on_animation_end
                                                   ? typeWriter('Amdocs via Appgr8', 165)
                                                   : 'Amdocs via Appgr8'
-                                        )}
+                                        )} */}
                                    </div>
                               </h3>
                               <hr style={style_hr_II} />
@@ -208,11 +215,12 @@ export default function Experience({
                               <h3 style={{ ...style_h3_, ...{ marginTop: min_width_600px ? 26 : 0 } }}>
                                    React Developer
                                    <div style={{ fontSize: min_width_600px ? 14 : 16 }}>
-                                        {before_animation_start && (
+                                        Groundbits Ltd
+                                        {/* {before_animation_start && (
                                              on_animation_end
                                                   ? typeWriter('Groundbits Ltd', 165)
                                                   : 'Groundbits Ltd'
-                                        )}
+                                        )} */}
                                    </div>
                               </h3>
 

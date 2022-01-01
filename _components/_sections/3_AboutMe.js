@@ -6,6 +6,7 @@ import { makeStyles } from '@mui/styles'
 import Image_aboutMe from '../_illustratins/Image_aboutMe'
 import { motion, AnimatePresence } from 'framer-motion'
 import Img_handler from '../_illustratins/Img_handler'
+import Img_handle_inview from '../_illustratins/Img_handle_inview'
 
 export default function AboutMe({
      state, min_width_600px, animationTransition }) {
@@ -157,10 +158,14 @@ export default function AboutMe({
                                         marginBottom: min_width_600px ? 0 : 0
                                    }}
                               >
-                                   <Img_handler
+                                   <Img_handle_inview
                                         src={'./me.svg'}
                                         min_width_600px={min_width_600px}
                                    />
+                                   {/* <Img_handler
+                                        src={'./me.svg'}
+                                        min_width_600px={min_width_600px}
+                                   /> */}
                                    {/* <Image_aboutMe
                                         min_width_600px={min_width_600px}
                                         color={thirdLogoColor}

@@ -152,6 +152,7 @@ export default function HomePage({
           top: 0,
           zIndex: 2000,
           width: `${Number((Y_position * 100)).toFixed(0)}%`,
+          maxWidth : '100%',
           borderBottom: `1px solid ${thirdLettersColor}`,
      }
 
@@ -172,10 +173,7 @@ export default function HomePage({
 
      return (
           <Fragment>
-               <div
-                    // className="progress"
-                    style={styleProgressBar}
-               />
+               <div style={styleProgressBar} />
 
 
                <MenuAppBar
@@ -214,6 +212,8 @@ export default function HomePage({
                     <CombineSections
                          state={state}
                          theme={theme}
+                         Y_position={ Number((Y_position * 100)).toFixed(0) }
+                         scrollDirection={scrollDirection}
                          min_width_600px={min_width_600px}
                          onAnimationEnd={onAnimationEnd}
                          animationTransition={animationTransition}
