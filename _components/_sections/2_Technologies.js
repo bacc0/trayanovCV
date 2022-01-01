@@ -8,8 +8,8 @@ export default function Technologies({
 
      const { backgroundColor, hrColorMain, thirdLogoColor } = state
 
-     const paddingTop = min_width_600px ? 62 : 35
-     const paddingBottom = min_width_600px ? 65 : 17
+     const paddingTop = min_width_600px ? 62 : 36
+     const paddingBottom = min_width_600px ? 60 : 12
 
 
      const styleContainer = {
@@ -52,13 +52,13 @@ export default function Technologies({
                                    </div>
                               </Hidden>
 
-                              <div style={{ marginTop: min_width_600px ? -9 : -6 }}>
+                              <div style={{ marginTop: min_width_600px ? -9 : 0 }}>
                                    <p>ReactJS</p>
                               </div>
                               <p>Hook</p>
                               <p>NextJS</p>
                               <p>Javascript</p>
-                              <p>Material</p>
+                              <p>Material UI (MUI)</p>
                               <p>CSS</p>
                               <p>SASS</p>
                               <p>HTML</p>

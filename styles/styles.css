@@ -119,6 +119,7 @@ body .pages-wrapper .page .page-nav .title-container {
   }
   body .pages-wrapper .page .page-body .page-body-left .container-content-left .content-left {
     width: 80%;
+    max-width: 350px;
     padding-bottom: 39px;
   }
   body .pages-wrapper .page .page-body .page-body-right {
@@ -132,7 +133,6 @@ body .pages-wrapper .page .page-nav .title-container {
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right {
     width: 100%;
-    min-height: 100px;
     margin-right: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -143,7 +143,7 @@ body .pages-wrapper .page .page-nav .title-container {
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right .content-right {
     width: 80%;
-    min-height: 100px;
+    max-width: 350px;
     padding-bottom: 39px;
   }
 }
@@ -181,12 +181,10 @@ body .pages-wrapper .page .page-nav .title-container {
     margin-bottom: 64px;
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right {
-    min-height: 100px;
     margin-left: 32px;
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right .content-right {
     width: 210px;
-    min-height: 100px;
   }
 }
 

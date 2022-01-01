@@ -23,8 +23,8 @@ export default function AboutMe({
      // }, [min_width_600px]);
 
 
-     const paddingTop = min_width_600px ? 62 : 60
-     const paddingBottom = min_width_600px ? 58 : 9
+     // const paddingTop = min_width_600px ? 62 : 60
+     // const paddingBottom = min_width_600px ? 58 : 9
 
      const props = {
           hrColor,
@@ -73,8 +73,8 @@ export default function AboutMe({
                // className='page-body'
                //  style={styleContainer}
                style={{
-                    paddingTop: props.min_width_600px ? 62 : 60,
-                    paddingBottom: props.min_width_600px ? 58 : 9,
+                    paddingTop: props.min_width_600px ? 62 : 59,
+                    paddingBottom: props.min_width_600px ? 58 : 3,
                }}
                className={`${classes.styleContainer} page-body`}
           >
@@ -150,7 +150,7 @@ export default function AboutMe({
                               </p>
 
                               <p>
-                                   Skilled at writing well-designed, efficient code using current best practices in Web development.
+                                   Skilled at writing well designed, efficient code using current best practices in Web development.
                               </p>
                               <div
                                    style={{

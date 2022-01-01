@@ -16,8 +16,8 @@ export default function Experience({
      const [before_animation_start, setBefore_animation_start] = useState(false)
      const [on_animation_end, setOn_animation_end] = useState(true)
 
-     const paddingTop = min_width_600px ? 63 : 62
-     const paddingBottom = min_width_600px ? 65 : 18
+     const paddingTop = min_width_600px ? 63 : 60
+     const paddingBottom = min_width_600px ? 60 : 18
 
      useEffect(() => {
           setTimeout(() => {
@@ -67,12 +67,12 @@ export default function Experience({
      const style_hr_II = {
           'background-color': hrColor,
           transition: `background-color ${animationTransition} ease`,
-          marginBottom: min_width_600px ? 6 : 20
+          marginBottom: min_width_600px ? 6 : 7
      }
 
      const styleContact = {
           color: strongText,
-          marginTop: 28
+          marginTop: min_width_600px ? 28 : 39
      }
 
 
@@ -103,12 +103,6 @@ export default function Experience({
                                    React Developer
                                    <div style={{ fontSize: min_width_600px ? 14 : 16 }}>
                                         Groundbits Ltd
-
-                                        {/* {before_animation_start && (
-                                             on_animation_end
-                                                  ? typeWriter('Groundbits Ltd', 165)
-                                                  : 'Groundbits Ltd'
-                                        )} */}
                                    </div>
                               </h3>
 
@@ -118,17 +112,9 @@ export default function Experience({
                               <p>Developing a Website Builder.</p>
 
                               <p>
-                                   Using REACT with
-                                   <span className='font-weight-300'> NEXTJS</span>
-                                   , for styling
-                                   <span className='font-weight-300'> MATERIAL UI (MUI)</span>
-                                   ,
-                                   <span className='font-weight-300'> STRAPI </span>
-                                   for contains management system (CMS), for animation
-                                   <span className='font-weight-300'> FRAMER MOTION </span>
-                                   and directly
-                                   <span className='font-weight-300'> SVG’s </span>
-                                   manipulation.
+                                   Using REACT with NEXTJS, for styling MATERIAL UI (MUI),
+                                   STRAPI for contains management system (CMS), 
+                                   for animation FRAMER MOTION and directly SVG’s manipulation.
                               </p>
 
                               <p style={styleContact}>
@@ -184,26 +170,11 @@ export default function Experience({
 
                               <p>Building a new application for the mobile network operator.</p>
                               <p>
-                                   Using
-                                   <span className='font-weight-300'> REACT</span>
-                                   ,
-                                   <span className='font-weight-300'> MATERIAL UI</span>
-                                   ,
-                                   <span className='font-weight-300'> TYPESCRIPT</span>
-                                   ,
-                                   <span className='font-weight-300'> SOURCETREE</span>
-                                   ,
-                                   <span className='font-weight-300'> BITBUKET </span>
-                                   ect.
+                                   Using REACT, MATERIAL UI, TYPESCRIPT, SOURCETREE, BITBUCKET ect.
                               </p>
                               <p>
-                                   For the software development the company used
-                                   <span className='font-weight-300'> AGILE </span>
-                                   with the
-                                   <span className='font-weight-300'> SCRUM </span>
-                                   framework and
-                                   <span className='font-weight-300'> JIRA</span>
-                                   .
+                                   For the software development the company used AGILE 
+                                   with the SCRUM framework and JIRA.
                               </p>
                          </div>
                     </div>
@@ -214,11 +185,6 @@ export default function Experience({
                                    React Developer
                                    <div style={{ fontSize: min_width_600px ? 14 : 16 }}>
                                         Groundbits Ltd
-                                        {/* {before_animation_start && (
-                                             on_animation_end
-                                                  ? typeWriter('Groundbits Ltd', 165)
-                                                  : 'Groundbits Ltd'
-                                        )} */}
                                    </div>
                               </h3>
 
@@ -235,19 +201,9 @@ export default function Experience({
                                         marginBottom: min_width_600px ? '0em' : '0em',
                                    }}
                               >
-                                   Using
-                                   <span className='font-weight-300'> REACT </span>
-                                   with
-                                   <span className='font-weight-300'> NEXTJS</span>
-                                   , for styling
-                                   <span className='font-weight-300'> MATERIAL UI (MUI)</span>
-                                   ,
-                                   <span className='font-weight-300'> STRAPI </span>
-                                   for contains management system (CMS), for animation
-                                   <span className='font-weight-300'> FRAMER MOTION </span>
-                                   and directly
-                                   <span className='font-weight-300'> SVG’s </span>
-                                   manipulation.
+                                   Using REACT with NEXTJS, for styling MATERIAL UI (MUI),
+                                   STRAPI for contains management system (CMS), 
+                                   for animation FRAMER MOTION and directly SVG’s manipulation.
                               </p>
                          </div>
                     </div>
