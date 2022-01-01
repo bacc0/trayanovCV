@@ -18,7 +18,7 @@ export default ({ src, min_width_600px }) => {
 
           const currentPosition = Ref_0.current.offsetTop
           const borderDown = window.pageYOffset + window.innerHeight - 100
-          let numUP = min_width_600px ? 100 : 190
+          let numUP = min_width_600px ? 80 : 190
           const borderUp = window.pageYOffset - numUP
 
           borderDown > currentPosition
