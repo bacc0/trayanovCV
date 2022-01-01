@@ -160,8 +160,6 @@ export default function AboutMe({
                                    <Img_handler
                                         src={'./me.svg'}
                                         min_width_600px={min_width_600px}
-                                        color={thirdLogoColor}
-
                                    />
                                    {/* <Image_aboutMe
                                         min_width_600px={min_width_600px}

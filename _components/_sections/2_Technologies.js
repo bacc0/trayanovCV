@@ -118,7 +118,6 @@ export default function Technologies({
                                    <Img_handler
                                         src={'./tech.svg'}
                                         min_width_600px={min_width_600px}
-                                        color={thirdLogoColor}
                                    />
                                    {/* <Image_technologies
                                         min_width_600px={min_width_600px}

@@ -146,7 +146,6 @@ export default function Experience({
                                    <Img_handler
                                         src={'./exp.svg'}
                                         min_width_600px={min_width_600px}
-                                        color={thirdLogoColor}
                                    />
 
                                    {/* <Image_experience
