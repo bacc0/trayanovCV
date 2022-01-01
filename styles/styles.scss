@@ -1,11 +1,12 @@
-$distance-middle-half: 24px;
+$distance-middle-half: 32px;
 $distance-middle-full: $distance-middle-half * 2;
 
 $margin-footer-mobile : 58px;
 $margin-footer-desktop : 58px;
 
-$element-width: 240px;
+$element-width: 210px;
 
+// $element-width-mobile: 80%;
 $element-width-mobile: 80%;
 
 
@@ -13,7 +14,7 @@ $title-width: ($element-width + $distance-middle-half) * 2;
 
 $accent-height: 120px;
 
-$nav-height: 185px; // 65px nav / 65 (back nav) + (65 * 1.61 GR) = 170px   + 10px back of navbar
+$nav-height: 216px; // 65px nav /  (65 * 1.61 GR) * 2 = 206  + 10px (65 -10 = 55 (back nav)) = 216
 // $nav-height: 195px; 
 
 

@@ -135,13 +135,14 @@ export default function HomePage({
      const styleBackgroundTitle = {
           width: '100%',
           'background-image': `url('react_logo.svg')`,
-          backgroundPosition: `30vw  -210px`,
-          backgroundSize: 600,
+          backgroundPosition: `30vw  -136px`, // -210px
+          backgroundSize:700,
           backgroundRepeat: 'no-repeat',
           // transform: 'rotate(30deg)',
           // borderTop: `0.3px solid ${color_3}55`,
           borderBottom: `0.3px solid ${secLettersColor}55`,
-          overflow: 'hidden'
+          overflow: 'hidden',
+          // height:300
      }
 
      const styleProgressBar = {
@@ -193,6 +194,7 @@ export default function HomePage({
                     // style={styleBackgroundTitle_container}
                     >
                          <div
+
                               className='title-container vertical-center-container'
                               style={styleBackgroundTitle}
                          >

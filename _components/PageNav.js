@@ -8,7 +8,10 @@ export default function MenuAppBar({
 
      return (
 
-          <div className='vertical-center'>
+          <div className='vertical-center'
+          
+          
+          >
                {/* <motion.div
                     initial={{ scale: 1, y: -200, x: 10, opacity: 0 }}
                     animate={{ scale: 1, y: 0, x: 10, opacity: 1 }}
@@ -26,7 +29,7 @@ export default function MenuAppBar({
                <div
                     style={{
                          position: 'relative',
-                         top: -56,
+                         top: -95,
                          minWidth: 250,
                          // backgroundColor: 'pink'
                     }}
@@ -35,7 +38,7 @@ export default function MenuAppBar({
                     <h3
                          style={{
                               position: 'relative',
-                              top: -13,
+                              top: 0,
                               fontSize: 16,
                               minWidth: 250,
                          // backgroundColor: 'lime'
@@ -45,7 +48,7 @@ export default function MenuAppBar({
                     <h1
                          style={{
                               position: 'relative',
-                              top: 8,
+                              top: 27,
                               fontSize: 51,
                               fontWeight: 600,
                               textAlign: 'center',
@@ -62,7 +65,7 @@ export default function MenuAppBar({
                     <h3
                          style={{
                               position: 'relative',
-                              top: 22,
+                              top: 43,
                               fontSize: 19.5,
                               fontWeight: 400,
                               // textAlign: 'center',

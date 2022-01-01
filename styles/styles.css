@@ -73,7 +73,7 @@ body .pages-wrapper .page {
 
 body .pages-wrapper .page .page-nav {
   width: 100%;
-  height: 185px;
+  height: 216px;
 }
 
 body .pages-wrapper .page .page-nav .title-container {
@@ -127,8 +127,8 @@ body .pages-wrapper .page .page-nav .title-container {
   }
   body .pages-wrapper .page .page-body .page-body-right .container-right-accent {
     height: 120px;
-    margin-left: 24px;
-    margin-bottom: 48px;
+    margin-left: 32px;
+    margin-bottom: 64px;
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right {
     width: 100%;
@@ -160,7 +160,7 @@ body .pages-wrapper .page .page-nav .title-container {
     padding: 0;
   }
   body .pages-wrapper .page .page-body .page-body-left .container-content-left {
-    margin-right: 24px;
+    margin-right: 32px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -169,7 +169,7 @@ body .pages-wrapper .page .page-nav .title-container {
             justify-content: flex-end;
   }
   body .pages-wrapper .page .page-body .page-body-left .container-content-left .content-left {
-    width: 240px;
+    width: 210px;
   }
   body .pages-wrapper .page .page-body .page-body-right {
     width: 50%;
@@ -177,21 +177,21 @@ body .pages-wrapper .page .page-nav .title-container {
   }
   body .pages-wrapper .page .page-body .page-body-right .container-right-accent {
     height: 120px;
-    margin-left: 24px;
-    margin-bottom: 48px;
+    margin-left: 32px;
+    margin-bottom: 64px;
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right {
     min-height: 100px;
-    margin-left: 24px;
+    margin-left: 32px;
   }
   body .pages-wrapper .page .page-body .page-body-right .container-content-right .content-right {
-    width: 240px;
+    width: 210px;
     min-height: 100px;
   }
 }
 
 body .container-footer .footer {
-  width: 528px;
+  width: 484px;
   margin: 58px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -199,12 +199,12 @@ body .container-footer .footer {
 }
 
 body .container-footer .footer .footer-left {
-  width: 240px;
-  margin-right: 48px;
+  width: 210px;
+  margin-right: 64px;
 }
 
 body .container-footer .footer .footer-right {
-  width: 240px;
+  width: 210px;
 }
 
 body .footer-items-container {

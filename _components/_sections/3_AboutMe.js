@@ -1,4 +1,5 @@
 
+// import { useEffect,  useState } from 'react'
 import { makeStyles } from '@mui/styles'
 
 
@@ -11,23 +12,30 @@ export default function AboutMe({
 
      const { backgroundColor, hrColorMain, thirdLettersColor, hrColor, thirdLogoColor, secLettersColor } = state
 
+
+     // const [paddingTop, setPaddingTop] = useState(60)
+     // const [paddingBottom, setPaddingBottom] = useState(9)
+
+     // useEffect(() => {
+     //      setPaddingTop(min_width_600px ? 62 : 60)
+     //      setPaddingBottom(min_width_600px ? 58 : 9)
+     // }, [min_width_600px]);
+
+
      const paddingTop = min_width_600px ? 62 : 60
      const paddingBottom = min_width_600px ? 58 : 9
 
      const props = {
           hrColor,
-          paddingTop,
           hrColorMain,
-          paddingBottom,
           secLettersColor,
           min_width_600px,
           backgroundColor,
           thirdLettersColor,
           animationTransition,
-     };
+     }
 
-
-     const classes = useStyles(props);
+     const classes = useStyles(props)
 
 
      // const styleContainer = {
@@ -63,6 +71,10 @@ export default function AboutMe({
           <div
                // className='page-body'
                //  style={styleContainer}
+                  style={{
+                    paddingTop: props.min_width_600px ? 62 : 60,
+                    paddingBottom: props.min_width_600px ? 58 : 9,
+                  }}
                className={`${classes.styleContainer} page-body`}
           >
                <div className='page-body-left' >
@@ -160,16 +172,13 @@ export default function AboutMe({
 }
 
 
-// -----------------------  Style  ---------------------
+// -----------------------  dynamic Styles  ---------------------
 
 
 const useStyles = makeStyles({
 
      styleContainer: (props) => ({
           // backgroundColor: props.secLettersColor,
-          paddingTop: props.paddingTop,
-          paddingBottom: props.paddingBottom,
-          minHeight: 0,
           borderBottom: `0.3px solid ${props.secLettersColor}55`,
      }),
 
@@ -179,7 +188,6 @@ const useStyles = makeStyles({
      }),
 
      style_h3_: (props) => ({
-          
           color: props.thirdLettersColor,
           fontSize: 19.5,
           transition: `color ${props.animationTransition} ease`,
@@ -188,29 +196,17 @@ const useStyles = makeStyles({
      }),
 
      style_hr_I: (props) => ({
-          
           backgroundColor: props.hrColorMain,
           transition: `background-color ${props.animationTransition} ease`
      }),
 
      style_hr_II: (props) => ({
-        
           backgroundColor: props.hrColor,
           transition: `background-color ${props.animationTransition} ease`,
-          // marginBottom: 29
-     })
+     }),
 
-
-
-
-
-     // // style rule
-     // foo: (props) => ({
-     //      backgroundColor: props.backgroundColor,
-     // }),
      // bar: {
-     //      // CSS property
-     //      color: (props) => props.color,
+     //      color: (props) => props.thirdLettersColor,
      // },
 })
 
