@@ -1,16 +1,49 @@
 import { motion } from 'framer-motion'
 import TitleSVG from './_illustratins/TitleSVG'
 import { typeWriter } from './_sections/helpers/TypeWriter'
+import Script from 'next/script'
 
 export default function MenuAppBar({
      state, logo_W_H, strokeWidth, setOnAnimationEnd, animationTransition }) {
 
 
+     const colibri = (
+          <>
+               <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 0.9 }}
+                    transition={{ delay: 0.4, duration: 1.2 }}
+               >
+
+                    <div id='colibri_hype_container'
+                         class='HYPE_document'
+                         style={{
+                              // backgroundColor:'lime',
+                              position: 'relative',
+                              top: -20,
+                              right: 140,
+                              margin: 'auto',
+                              position: 'relative',
+                              width: '81px',
+                              height: '68px',
+                              overflow: 'hidden'
+                         }} />
+               </motion.div>
+               <Script
+                    // type='text/javascript'
+                    // charset='utf-8'
+                    src='colibri.hyperesources/colibri_hype_generated_script.js?23464'
+                    strategy='afterInteractive'
+               >
+               </Script>
+          </>
+     )
+
      return (
 
           <div className='vertical-center'
-          
-          
+
+
           >
                {/* <motion.div
                     initial={{ scale: 1, y: -200, x: 10, opacity: 0 }}
@@ -26,6 +59,8 @@ export default function MenuAppBar({
                          animationTransition={animationTransition}
                     />
                </motion.div> */}
+
+{colibri}
                <div
                     style={{
                          position: 'relative',
@@ -41,7 +76,7 @@ export default function MenuAppBar({
                               top: 0,
                               fontSize: 16,
                               minWidth: 250,
-                         // backgroundColor: 'lime'
+                              // backgroundColor: 'lime'
 
                          }}
                     >hello i'm </h3>
@@ -54,8 +89,8 @@ export default function MenuAppBar({
                               textAlign: 'center',
                               letterSpacing: 2.5,
                               minWidth: 250,
-                         // backgroundColor: 'beige',
-                         // minHeight: 25,
+                              // backgroundColor: 'beige',
+                              // minHeight: 25,
 
                          }}
 
@@ -76,6 +111,8 @@ export default function MenuAppBar({
                     >
                          {typeWriter('front ...end developer')}
                     </h3>
+
+
                </div>
           </div>
 
