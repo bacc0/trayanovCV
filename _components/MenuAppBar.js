@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 import { Stack, IconButton, Typography, Toolbar, AppBar, Box, Hidden } from '@mui/material'
 import LightModeIcon from '@mui/icons-material/LightMode'
-import NightlightRoundIcon from '@mui/icons-material/NightlightRound'
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
 import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp'
 import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
@@ -14,7 +14,7 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 export default function MenuAppBar({ 
      state, theme, setTheme, Y_position, scrollDirection, min_width_600px, currentBrowser }) {
 
-     const { hrColor, hrColorMain, AppBackgroundColor, animationTransition, secLettersColor } = state
+     const { strongText, thirdLettersColor, hrColorMain, AppBackgroundColor, animationTransition, secLettersColor } = state
 
      const [heightAppBar, setHeightAppBar] = useState(0)
      const [appBarIsVisible, setAppBarIsVisible] = useState(true)
@@ -98,7 +98,7 @@ export default function MenuAppBar({
           width: min_width_600px ? 'auto' : '100%'
      }
      const iconsStyle = {
-          color: hrColorMain,
+          color: strongText,
           transition: `color ${animationTransition} ease`,
      }
 
@@ -171,9 +171,10 @@ export default function MenuAppBar({
                                              <IconButton
                                                   onClick={() => handleThemeChange()}
                                                   aria-label='theme icon' style={iconsStyle}
+                                                  style={{ color: thirdLettersColor}}
                                              >
                                                   {theme === 'light'
-                                                       ? <NightlightRoundIcon />
+                                                       ? <DarkModeIcon />
                                                        : <LightModeIcon />
                                                   }
                                              </IconButton>
