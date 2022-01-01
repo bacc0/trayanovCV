@@ -5,7 +5,7 @@ import { makeStyles } from '@mui/styles'
 
 import Image_aboutMe from '../_illustratins/Image_aboutMe'
 import { motion, AnimatePresence } from 'framer-motion'
-
+import Img_handler from '../_illustratins/Img_handler'
 
 export default function AboutMe({
      state, min_width_600px, animationTransition }) {
@@ -71,10 +71,10 @@ export default function AboutMe({
           <div
                // className='page-body'
                //  style={styleContainer}
-                  style={{
+               style={{
                     paddingTop: props.min_width_600px ? 62 : 60,
                     paddingBottom: props.min_width_600px ? 58 : 9,
-                  }}
+               }}
                className={`${classes.styleContainer} page-body`}
           >
                <div className='page-body-left' >
@@ -101,8 +101,8 @@ export default function AboutMe({
                               >
                                    Skills
                               </h3>
-                              <hr 
-                              className={classes.style_hr_II}
+                              <hr
+                                   className={classes.style_hr_II}
                               // style={style_hr_II} 
                               />
                               <p>I’m very focusin my work.</p>
@@ -157,10 +157,16 @@ export default function AboutMe({
                                         marginBottom: min_width_600px ? 0 : 0
                                    }}
                               >
-                                   <Image_aboutMe
+                                   <Img_handler
+                                        src={'./me.svg'}
                                         min_width_600px={min_width_600px}
                                         color={thirdLogoColor}
+
                                    />
+                                   {/* <Image_aboutMe
+                                        min_width_600px={min_width_600px}
+                                        color={thirdLogoColor}
+                                   /> */}
                               </div>
 
                          </div>

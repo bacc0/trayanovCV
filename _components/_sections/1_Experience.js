@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react'
 import Image_experience from '../_illustratins/Image_experience'
 import { typeWriter } from './helpers/TypeWriter'
 
+
+import Img_handler from '../_illustratins/Img_handler'
+
 export default function Experience({
-     state, min_width_600px, onAnimationEnd, Ref_0, isRef_0_Visible,
+     state, min_width_600px, onAnimationEnd, Ref_0, isRef_0_Visible
 }) {
 
 
@@ -140,10 +143,16 @@ export default function Experience({
                                         marginBottom: min_width_600px ? 0 : 2
                                    }}
                               >
-                                   <Image_experience
+                                   <Img_handler
+                                        src={'./exp.svg'}
                                         min_width_600px={min_width_600px}
                                         color={thirdLogoColor}
                                    />
+
+                                   {/* <Image_experience
+                                        min_width_600px={min_width_600px}
+                                        color={thirdLogoColor}
+                                   /> */}
                               </div>
                          </div>
                     </div>
