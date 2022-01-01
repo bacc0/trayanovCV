@@ -21,7 +21,7 @@ export default function MenuAppBar({
                               // backgroundColor:'lime',
                               position: 'relative',
                               top: -20,
-                              right: 160,
+                              right: 150,
                               margin: 'auto',
                               position: 'relative',
                               width: '81px',
