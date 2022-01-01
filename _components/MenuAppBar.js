@@ -48,6 +48,7 @@ export default function MenuAppBar({
      }
      const AppBarStyle = {
           backgroundColor: currentBrowser === 'firefox' ? `${AppBackgroundColor}fa` : `${AppBackgroundColor}77`,
+ 
           '-webkit-backdrop-filter': `blur(10px)`,
           ' backdrop-filter': `blur(10px)`,
           color: hrColorMain,
@@ -119,7 +120,7 @@ export default function MenuAppBar({
                               >
                                    <Toolbar
                                         style={{
-                                             maxWidth: min_width_600px ? 730 : 360,
+                                             maxWidth: min_width_600px ? 674 : 360,
                                              margin: '0 auto'
                                         }}
                                    >
