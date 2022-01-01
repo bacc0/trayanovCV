@@ -118,9 +118,7 @@ export default function Experience({
                               <p>Developing a Website Builder.</p>
 
                               <p>
-                                   Using
-                                   <span className='font-weight-300'> REACT </span>
-                                   with
+                                   Using REACT with
                                    <span className='font-weight-300'> NEXTJS</span>
                                    , for styling
                                    <span className='font-weight-300'> MATERIAL UI (MUI)</span>

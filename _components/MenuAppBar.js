@@ -120,7 +120,7 @@ export default function MenuAppBar({
                               >
                                    <Toolbar
                                         style={{
-                                             maxWidth: min_width_600px ? 674 : 360,
+                                             maxWidth: min_width_600px ? 680 : 360,
                                              margin: '0 auto'
                                         }}
                                    >

@@ -135,7 +135,8 @@ export default function HomePage({
      const styleBackgroundTitle = {
           width: '100%',
           'background-image': `url('react_logo.svg')`,
-          backgroundPosition: `30vw  -136px`, // -210px
+          backgroundPosition: `30vw  -136px`, 
+          // backgroundPosition: `30vw  ${Number(-136 + (Y_position * -700)).toFixed(1)}px`, 
           backgroundSize:700,
           backgroundRepeat: 'no-repeat',
           // transform: 'rotate(30deg)',
