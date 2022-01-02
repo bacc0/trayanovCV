@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-// import useInView from 'react-cool-inview'
-import { useInView } from 'react-intersection-observer'
-
+import useInView from 'react-cool-inview'
 
 export default ({ src, min_width_600px, threshold = 0.45 }) => {
 
@@ -11,22 +9,13 @@ export default ({ src, min_width_600px, threshold = 0.45 }) => {
      const [logo_W, setLogo_W] = useState(243)
      const [logo_H, setLogo_H] = useState(143)
 
+     const { observe } = useInView({
+          threshold: threshold,
+          unobserveOnEnter: true,
 
-     const {ref, inView, entry} = useInView({
-          threshold: 0.5,
-          triggerOnce: true,
-          // rootMargin: '20px'
+          onEnter: () => { setVisible(true), setOpacity(1)},
+          // onLeave: () => { setOpacity(0.05) }
      })
-
-
-     useEffect(() => {
-          if (inView) {
-               setVisible(true),
-               setInterval(() => { setOpacity(true) }, 100)
-          }
-          console.log(inView)
-     }, [inView])
-
 
      useEffect(() => {
           setLogo_W(min_width_600px ? 225 : 310)
@@ -40,9 +29,8 @@ export default ({ src, min_width_600px, threshold = 0.45 }) => {
           transition: `opacity 777ms ease`,
           height: min_width_600px ? 180 : 240
      }
-
      return (
-          <div ref={ref} style={stylePicture} >
+          <div ref={observe} style={stylePicture}>
                {visible && <img src={src} alt={src} width={logo_W} height={logo_H} />}
           </div>
      )

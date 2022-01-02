@@ -8,7 +8,7 @@ import Footer from './4_Footer'
 
 
 export default function _CombineSections({
-     state, theme, min_width_600px, animationTransition }) {
+     state, theme, min_width_600px, animationTransition, Y_position }) {
 
 
 
@@ -33,16 +33,29 @@ export default function _CombineSections({
 
      return (
           <>
-               <Experience
-                    state={state}
-                    min_width_600px={min_width_600px}
-               />
-               <Technologies
-                    theme={theme}
-                    min_width_600px={min_width_600px}
-                    state={state}
-                    animationTransition={animationTransition}
-               />
+
+               <div
+                    style={{
+                         // position: 'relative',
+                         // top: - Number((Y_position * 300)).toFixed(0),
+                         // borderTop: `0.3px solid ${state.secLettersColor}55`,
+                         // backgroundColor: state.AppBackgroundColor,
+                         // '-webkit-backdrop-filter': `blur(10px)`,
+                         // ' backdrop-filter': `blur(10px)`,
+
+                    }}
+               >
+                    <Experience
+                         state={state}
+                         min_width_600px={min_width_600px}
+                    />
+                    <Technologies
+                         theme={theme}
+                         min_width_600px={min_width_600px}
+                         state={state}
+                         animationTransition={animationTransition}
+                    />
+               </div>
                <AboutMe
                     state={state}
                     min_width_600px={min_width_600px}

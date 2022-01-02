@@ -134,16 +134,12 @@ export default function HomePage({
 
      const styleBackgroundTitle = {
           width: '100%',
-          'background-image': `url('react_logo.svg')`,
+          backgroundImage: `url('react_logo.svg')`,
           backgroundPosition: `30vw  -136px`, 
-          // backgroundPosition: `30vw  ${Number(-136 + (Y_position * -700)).toFixed(1)}px`, 
           backgroundSize:700,
           backgroundRepeat: 'no-repeat',
-          // transform: 'rotate(30deg)',
-          // borderTop: `0.3px solid ${color_3}55`,
           borderBottom: `0.3px solid ${secLettersColor}55`,
           overflow: 'hidden',
-          // height:300
      }
 
      const styleProgressBar = {
@@ -213,7 +209,7 @@ export default function HomePage({
                     <CombineSections
                          state={state}
                          theme={theme}
-                         Y_position={ Number((Y_position * 100)).toFixed(0) }
+                         Y_position={Y_position }
                          scrollDirection={scrollDirection}
                          min_width_600px={min_width_600px}
                          onAnimationEnd={onAnimationEnd}
