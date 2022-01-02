@@ -3,6 +3,8 @@ import CombineSections from './_sections/_CombineSections'
 import MenuAppBar from './MenuAppBar'
 import PageNav from './PageNav'
 import { useState, useEffect, Fragment } from 'react'
+import Script from 'next/script'
+import { motion } from 'framer-motion'
 
 export default function HomePage({
      currentBrowser, theme, setTheme, Y_position, scrollDirection }) {
@@ -108,6 +110,31 @@ export default function HomePage({
                                   color ${animationTransition} ease`,
      }
 
+     const styleBackAnimation = {
+          
+          top: 0,
+          margin: 'auto',
+          position: 'absolute',
+          width: '100%',
+          height: '68px',
+          overflow: 'hidden',
+          
+     }
+
+
+     const backAnimation = (
+          <>
+               <div 
+                    id='appback_hype_container' class='HYPE_document'
+
+                    style={ styleBackAnimation}
+               />
+               <Script
+                    src='appBack.hyperesources/appback_hype_generated_script.js?88592'
+                    strategy='afterInteractive'
+               />
+          </>
+     )
      const styleBackgroundTitle_container = {
           backgroundColor: AppBackgroundColor,
           width: '100%',
@@ -135,8 +162,8 @@ export default function HomePage({
      const styleBackgroundTitle = {
           width: '100%',
           backgroundImage: `url('react_logo.svg')`,
-          backgroundPosition: `30vw  -136px`, 
-          backgroundSize:700,
+          backgroundPosition: `30vw  -136px`,
+          backgroundSize: 700,
           backgroundRepeat: 'no-repeat',
           borderBottom: `0.3px solid ${secLettersColor}55`,
           overflow: 'hidden',
@@ -149,24 +176,11 @@ export default function HomePage({
           top: 0,
           zIndex: 2000,
           width: `${Number((Y_position * 100)).toFixed(0)}%`,
-          maxWidth : '100%',
+          maxWidth: '100%',
           borderBottom: `1px solid ${thirdLettersColor}`,
      }
 
-     // const styleBackgroundTitle2 = {
-     //      position: 'relative',
-     //      top:93,
-     //      left:79,
-     //      width: 350,
-     //      height: 350,
-     //      'background-image': `url('react_logo.svg')`,
-     //      backgroundPosition: `center center`,
-     //      backgroundSize: 350,
-     //      backgroundRepeat: 'no-repeat',
-     //      transform: `rotate( ${Number( 35 + (Y_position * 100)).toFixed(0) * 6}deg)`,
-     //      transition: `transform 10ms ease-in`
-
-     // }
+     
 
      return (
           <Fragment>
@@ -182,7 +196,7 @@ export default function HomePage({
                     scrollDirection={scrollDirection}
                     min_width_600px={min_width_600px}
                />
-
+ {backAnimation}
                <div className='page' style={bodyPage} >
 
                     <div className='page-nav'
@@ -191,7 +205,7 @@ export default function HomePage({
                          <div
 
                               className='title-container vertical-center-container'
-                              style={styleBackgroundTitle}
+                              // style={styleBackgroundTitle}
                          >
                               {/* <div style={styleBackgroundTitle2}>
 
@@ -209,13 +223,14 @@ export default function HomePage({
                     <CombineSections
                          state={state}
                          theme={theme}
-                         Y_position={Y_position }
+                         Y_position={Y_position}
                          scrollDirection={scrollDirection}
                          min_width_600px={min_width_600px}
                          onAnimationEnd={onAnimationEnd}
                          animationTransition={animationTransition}
                     />
                </div>
+          
           </Fragment >
      )
 }

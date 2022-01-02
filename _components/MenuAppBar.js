@@ -11,7 +11,11 @@ import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
-export default function MenuAppBar({ 
+
+
+
+
+export default function MenuAppBar({
      state, theme, setTheme, Y_position, scrollDirection, min_width_600px, currentBrowser }) {
 
      const { strongText, thirdLettersColor, hrColorMain, AppBackgroundColor, animationTransition, secLettersColor } = state
@@ -20,11 +24,11 @@ export default function MenuAppBar({
      const [appBarIsVisible, setAppBarIsVisible] = useState(true)
 
 
-   
+
 
      useEffect(() => {
           setTimeout(() => {
-               setHeightAppBar(55)
+               setHeightAppBar(55) //271
           }, 2000);
      }, []);
 
@@ -33,11 +37,11 @@ export default function MenuAppBar({
                setAppBarIsVisible(true)
           } else {
 
-               if (scrollDirection === 'up' ) {
-                    appBarIsVisible !== false ?  setAppBarIsVisible(false) : null
+               if (scrollDirection === 'up') {
+                    appBarIsVisible !== false ? setAppBarIsVisible(false) : null
                }
-               if (scrollDirection === 'down' ) {
-                    appBarIsVisible !== true ?  setAppBarIsVisible(true) : null
+               if (scrollDirection === 'down') {
+                    appBarIsVisible !== true ? setAppBarIsVisible(true) : null
                }
                // scrollDirection === 'up' ? setAppBarIsVisible(false) : setAppBarIsVisible(true)
           }
@@ -48,7 +52,7 @@ export default function MenuAppBar({
      }
      const AppBarStyle = {
           backgroundColor: currentBrowser === 'firefox' ? `${AppBackgroundColor}fa` : `${AppBackgroundColor}77`,
- 
+         
           '-webkit-backdrop-filter': `blur(10px)`,
           ' backdrop-filter': `blur(10px)`,
           color: hrColorMain,
@@ -61,7 +65,7 @@ export default function MenuAppBar({
           position: 'fixed',
           top: appBarIsVisible ? 0 : -65,
           transition: `top 800ms ease`, //800ms
-          
+
      }
      // const ToolbarContainer = {
      //      borderBottom: `1px solid blck`,
@@ -72,9 +76,10 @@ export default function MenuAppBar({
      const underAppBar = {
           height: heightAppBar,
           'background-color': AppBackgroundColor,
+          // backgroundColor: `red`,
 
 
-          
+
 
           width: '100%',
           'background-image': `url('react_logo_BG.svg')`,
@@ -102,88 +107,94 @@ export default function MenuAppBar({
           transition: `color ${animationTransition} ease`,
      }
 
+     
+
 
      return (
           <Box>
-           
-                    <motion.div
-                         initial={{ opacity: 0, pathLength: 0, y: -65 }}
-                         animate={{ opacity: 1, pathLength: 1, y: 0 }}
-                         transition={{ delay: 1.8, duration: 1, ease: 'easeInOut' }}
-                    >
-                         <AppBar style={AppBarStyle} position='fixed'>
-                              <motion.div
-                                   initial={{ opacity: 0, y: -65 }}
-                                   animate={{ opacity: 1, y: 0 }}
-                                   transition={{ delay: 2, duration: 1, ease: 'easeInOut' }}
-                                   // style={ToolbarContainer}
+
+               <motion.div
+                    initial={{ opacity: 0, pathLength: 0, y: -65 }}
+                    animate={{ opacity: 1, pathLength: 1, y: 0 }}
+                    transition={{ delay: 1.8, duration: 1, ease: 'easeInOut' }}
+               >
+                    
+                    {/* {backAnimation} */}
+                    <AppBar style={AppBarStyle} position='fixed'>
+                         <motion.div
+                              initial={{ opacity: 0, y: -65 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ delay: 2, duration: 1, ease: 'easeInOut' }}
+                         // style={ToolbarContainer}
+                         >
+                              <Toolbar
+                                   style={{
+                                        maxWidth: min_width_600px ? 680 : 360,
+                                        margin: '0 auto'
+                                   }}
                               >
-                                   <Toolbar
-                                        style={{
-                                             maxWidth: min_width_600px ? 680 : 360,
-                                             margin: '0 auto'
-                                        }}
+                                   <Hidden smDown>
+                                        <Typography style={titleStyle} sx={{ flexGrow: 1 }}>
+                                             Veselin Trayanov
+                                        </Typography>
+                                   </Hidden>
+                                   <Stack
+                                        direction='row'
+                                        spacing={1}
+                                        style={iconsStackStyle}
                                    >
-                                        <Hidden smDown>
-                                             <Typography style={titleStyle} sx={{ flexGrow: 1 }}>
-                                                  Veselin Trayanov 
-                                             </Typography>
-                                        </Hidden>
-                                        <Stack
-                                             direction='row'
-                                             spacing={1}
-                                             style={iconsStackStyle}
+                                        <IconButton
+                                             href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'} aria-label='LinkedIn Icon' style={iconsStyle}
                                         >
-                                             <IconButton
-                                                  href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'} aria-label='LinkedIn Icon' style={iconsStyle}
-                                             >
-                                                  <LinkedInIcon />
-                                             </IconButton>
+                                             <LinkedInIcon />
+                                        </IconButton>
 
-                                             <IconButton
-                                                  href={`tel: 00447590010066`}
-                                                  aria-label='Phone Icon' style={iconsStyle}
-                                             >
-                                                  <PhoneEnabledSharpIcon />
-                                             </IconButton>
+                                        <IconButton
+                                             href={`tel: 00447590010066`}
+                                             aria-label='Phone Icon' style={iconsStyle}
+                                        >
+                                             <PhoneEnabledSharpIcon />
+                                        </IconButton>
 
-                                             <IconButton
-                                                  href={`mailto: bacco23@gmail.com`}
-                                                  aria-label='Local Icon' style={iconsStyle}
-                                             >
-                                                  <LocalPostOfficeSharpIcon />
-                                             </IconButton>
+                                        <IconButton
+                                             href={`mailto: bacco23@gmail.com`}
+                                             aria-label='Local Icon' style={iconsStyle}
+                                        >
+                                             <LocalPostOfficeSharpIcon />
+                                        </IconButton>
 
-                                             <IconButton
-                                                  href={'https://www.google.com/maps/@51.4764334,-0.1572618,16.21z'}
-                                                  aria-label='Location Icon' style={iconsStyle}
-                                             >
-                                                  <LocationOnSharpIcon />
-                                             </IconButton>
+                                        <IconButton
+                                             href={'https://www.google.com/maps/@51.4764334,-0.1572618,16.21z'}
+                                             aria-label='Location Icon' style={iconsStyle}
+                                        >
+                                             <LocationOnSharpIcon />
+                                        </IconButton>
 
-                                             <IconButton
-                                                  href={'https://github.com/bacc0'}
-                                                  aria-label='GitHub Icon' style={iconsStyle}
-                                             >
-                                                  <GitHubIcon />
-                                             </IconButton>
+                                        <IconButton
+                                             href={'https://github.com/bacc0'}
+                                             aria-label='GitHub Icon' style={iconsStyle}
+                                        >
+                                             <GitHubIcon />
+                                        </IconButton>
 
-                                             <IconButton
-                                                  onClick={() => handleThemeChange()}
-                                                  aria-label='theme icon' style={iconsStyle}
-                                                  style={{ color: thirdLettersColor}}
-                                             >
-                                                  {theme === 'light'
-                                                       ? <DarkModeIcon />
-                                                       : <LightModeIcon />
-                                                  }
-                                             </IconButton>
-                                        </Stack>
-                                   </Toolbar>
-                              </motion.div>
-                         </AppBar>
-                         <div style={underAppBar} />
-                    </motion.div>
+                                        <IconButton
+                                             onClick={() => handleThemeChange()}
+                                             aria-label='theme icon' style={iconsStyle}
+                                             style={{ color: thirdLettersColor }}
+                                        >
+                                             {theme === 'light'
+                                                  ? <DarkModeIcon />
+                                                  : <LightModeIcon />
+                                             }
+                                        </IconButton>
+                                   </Stack>
+                              </Toolbar>
+                         </motion.div>
+                    </AppBar>
+                    <div style={underAppBar} />
+               </motion.div>
           </Box >
      )
 }
+
+

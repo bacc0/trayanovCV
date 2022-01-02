@@ -10,7 +10,7 @@ export default function Experience({
 
 
      const {
-          strongText, animationTransition, hrColorMain,
+          strongText, animationTransition, hrColorMain, secLettersColor,
           thirdLogoColor, thirdLettersColor, hrColor, backgroundColor } = state
 
      const [before_animation_start, setBefore_animation_start] = useState(false)
@@ -33,10 +33,12 @@ export default function Experience({
 
 
      const styleContainer = {
+
           paddingTop: paddingTop,
           paddingBottom: paddingBottom,
           minHeight: min_width_600px ? 300 : 300,
 
+          borderTop: `0.3px solid ${secLettersColor}55`,
           // backgroundColor: '#7026A5',
           // background: `radial-gradient(at 50% top, #4A0A6A, #4A0A6A, #040F1B, #040F1B, #040F1B)`,
 
