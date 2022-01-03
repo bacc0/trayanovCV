@@ -16,17 +16,25 @@ export default function MenuAppBar({
      const { strongText, thirdLettersColor, hrColorMain, AppBackgroundColor, animationTransition, secLettersColor } = state
 
      const [heightAppBar, setHeightAppBar] = useState(0)
-     const [appBarIsVisible, setAppBarIsVisible] = useState(true)
+     const [appBarIsVisible, setAppBarIsVisible] = useState(false)
+     const [marker, setMarker] = useState(false)
 
-     useEffect(() => {
-          setTimeout(() => {
-               setHeightAppBar(55) 
-          }, 2000);
-     }, []);
+    
+     setTimeout(() => {
+          setHeightAppBar(55)
+         
+     }, 2000)
+
 
      useEffect(() => {
           if (Y_position < 0.035) {
-               setAppBarIsVisible(true)
+
+               if (marker) {
+                    setAppBarIsVisible(true)
+               } else {
+                    setTimeout(() => { setAppBarIsVisible(true) }, 2000)
+                    setMarker(true)
+               }
           } else {
 
                if (scrollDirection === 'up') {
@@ -43,7 +51,7 @@ export default function MenuAppBar({
      }
      const AppBarStyle = {
           backgroundColor: currentBrowser === 'firefox' ? `${AppBackgroundColor}fa` : `${AppBackgroundColor}77`,
-         
+
           '-webkit-backdrop-filter': `blur(10px)`,
           ' backdrop-filter': `blur(10px)`,
           color: hrColorMain,
@@ -52,9 +60,9 @@ export default function MenuAppBar({
           fontSize: 10,
           position: 'fixed',
           top: appBarIsVisible ? 0 : -65,
-          transition: `top 800ms ease`, 
+          transition: `top 800ms ease`,
      }
-    
+
      const underAppBar = {
           height: heightAppBar,
           transition: `
@@ -81,15 +89,15 @@ export default function MenuAppBar({
      return (
           <Box>
                <motion.div
-                    initial={{ opacity: 0, pathLength: 0, y: -65 }}
-                    animate={{ opacity: 1, pathLength: 1, y: 0 }}
-                    transition={{ delay: 1.8, duration: 1, ease: 'easeInOut' }}
+               //  initial={{ opacity: 0, y: -65 }}
+               //  animate={{ opacity: 1, y: 0 }}
+               //  transition={{ delay: 0, duration: 2, ease: 'easeInOut' }}
                >
                     <AppBar style={AppBarStyle} position='fixed'>
                          <motion.div
                               initial={{ opacity: 0, y: -65 }}
                               animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: 2, duration: 1, ease: 'easeInOut' }}
+                              transition={{ delay: 0, duration: 2, ease: 'easeInOut' }}
                          >
                               <Toolbar
                                    style={{

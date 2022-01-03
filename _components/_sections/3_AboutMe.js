@@ -55,7 +55,7 @@ export default function Kkk({ state, min_width_600px }) {
           // height: '50px',
           // backgroundColor: '#44444422',
           width: min_width_600px ? 484 : '80%',
-          maxWidth: min_width_600px ? 484 : 300,
+          maxWidth: min_width_600px ? 484 : 340,
 
           display: min_width_600px ? 'flex' : 'block',
 
@@ -164,7 +164,7 @@ export default function Kkk({ state, min_width_600px }) {
 
                          <div style={sections}>
                               <div style={{...pContainer,
-                                             ...{ marginTop: min_width_600px ? 60 : 39}}}
+                                             ...{ marginTop: min_width_600px ? 57 : 39}}}
                               >
                                    <p>I'm very positive creative, flexible and responsible.</p>
                                    <p>Experience working with dynamic content.</p>

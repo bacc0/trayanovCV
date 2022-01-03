@@ -156,7 +156,7 @@ export default function HomePage({
           zIndex: 2000,
           width: `${Number((Y_position * 100)).toFixed(0)}%`,
           maxWidth: '100%',
-          borderBottom: `1px solid ${thirdLettersColor}`,
+          // borderBottom: `1px solid ${thirdLettersColor}`,
      }
 
 

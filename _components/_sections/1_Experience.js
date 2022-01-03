@@ -55,7 +55,7 @@ export default function Kkk({ state, min_width_600px }) {
           // height: '50px',
           // backgroundColor: '#44444422',
           width: min_width_600px ? 484 : '80%',
-          maxWidth: min_width_600px ?  484 :300,
+          maxWidth: min_width_600px ?  484 :340,
 
           display: min_width_600px ? 'flex' : 'block',
 
@@ -72,7 +72,6 @@ export default function Kkk({ state, min_width_600px }) {
 
      const h2container = {
           paddingTop: 0,
-          // backgroundColor: 'red',
           height: 39,
           width: 210,
           borderBottom: `1.5px solid ${backgroundColor}`,
@@ -125,13 +124,10 @@ export default function Kkk({ state, min_width_600px }) {
      return (
           <>
                <div style={{...sectionsContainer,
-                              ...{borderTop: `0.3px solid ${secLettersColor}55`}}}
+                              ...{borderTop: `1.8px solid ${secLettersColor}55`}}}
                >
                     <div style={{...sectionsBody, ...{ marginBottom: 20}}}>
-
                          <div style={sections}>
-
-
                               <div style={h2container}>
                                    <h2 >Experience</h2>
                               </div>
@@ -174,20 +170,14 @@ export default function Kkk({ state, min_width_600px }) {
                                         <strong>Ricard Rosson</strong>
                                    </div>
                               </div>
-
                               <div
                                    style={pContainer}>
                                    <p>ricard@iacos.net</p>
                               </div>
-                              
                          </div>
 
 
-
-
                          <div style={sections}>
-
-                             
                               <div
                                    style={h3container}>
                                    <h3 style={{...style_h3_, 
@@ -199,7 +189,6 @@ export default function Kkk({ state, min_width_600px }) {
                                         </div>
                                    </h3>
                               </div>
-
                               <div
                                    style={textStrongContainer}>
 
@@ -209,17 +198,12 @@ export default function Kkk({ state, min_width_600px }) {
                                         <strong>July 2021 - Nov 2021</strong>
                                    </div>
                               </div>
-
                               <div
                                    style={pContainer}>
                                    <p>Building a new application for the mobile network operator.</p>
                                    <p>Using REACT, MATERIAL UI, TYPESCRIPT, SOURCETREE, BITBUCKET ect.</p>
                                    <p>For the software development the company used AGILE with the SCRUM framework and JIRA.</p>
                               </div>
-                             
-
-
-                            
                               <div
                                    style={h3container}>
                                    <h3  style={{ ...style_h3_, 
@@ -231,7 +215,6 @@ export default function Kkk({ state, min_width_600px }) {
                                         </div>
                                    </h3>
                               </div>
-
                               <div style={textStrongContainer}>
                                    <div style={{ ...textStrong,
                                                  ...{marginTop: min_width_600px ? -8 : 33}}}
@@ -244,14 +227,8 @@ export default function Kkk({ state, min_width_600px }) {
                                    <p>Creating a web builder application.</p>
                                    <p>Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation.</p>
                               </div>
-
-                             
-                              
-
-
                          </div>
                     </div>
-
                </div>
           </>
      )
