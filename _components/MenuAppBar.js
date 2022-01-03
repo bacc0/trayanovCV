@@ -23,7 +23,7 @@ export default function MenuAppBar({
      setTimeout(() => {
           setHeightAppBar(55)
          
-     }, 2000)
+     }, 2100)
 
 
      useEffect(() => {
