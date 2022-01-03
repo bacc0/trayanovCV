@@ -20,6 +20,12 @@ $nav-height: 216px; // 65px nav /  (65 * 1.61 GR) * 2 = 206  + 10px (65 -10 = 55
 
 body {
 
+     @keyframes rotate {
+          to {
+               transform: rotate(360deg);
+          }
+     }
+
 
 
      margin: 0;
@@ -27,7 +33,7 @@ body {
      font-size: 14px;
      line-height: 24px;
      font-family: 'Poppins',
-          sans-serif;
+     sans-serif;
      letter-spacing: 0.7px;
      word-spacing: 3px;
      font-weight: 200;
@@ -45,7 +51,7 @@ body {
           height: 1px;
           border: 0 none;
           margin-top: 20px;
-         
+
      }
 
      p {

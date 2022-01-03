@@ -5,7 +5,7 @@ import PageNav from './PageNav'
 import { useState, useEffect, Fragment } from 'react'
 import Script from 'next/script'
 import { motion } from 'framer-motion'
-
+import Image from 'next/image'
 
 export default function HomePage({
      currentBrowser, theme, setTheme, Y_position, scrollDirection, W_screenSize }) {
@@ -111,71 +111,53 @@ export default function HomePage({
                                   color ${animationTransition} ease`,
      }
 
+     const [opacityBG, setOpacityBG] = useState(0);    
 
+     useEffect(() => {
+          setInterval(() => {
+               setOpacityBG(1)
+          }, 2500);
+     }, []);
 
-
-     const styleBackAnimation_Desk = {
-          backgroundColor: 'yellow',
-          top: 0,
-          left: 0, //'0 auto'
-          marginTop: 0,
+     const styleBackAnimationContainer = {
+          display: 'flex',
+          justifyContent: 'flex-end',
           overflow: 'hidden',
-          position: `absolute`,
-          height: `366px`,
-          maxWidth: 700,
-     }
-     const styleBackAnimation_Mobile = {
-          backgroundColor: 'red',
+          height: 272,
           top: 0,
-          left: 0, //'0 auto'
-          marginTop: 0,
-          overflow: 'hidden',
           position: `absolute`,
-          height: `366px`,
-          width: `${W_screenSize}px`,
-          width: 300,
-          maxWidth: 700,
+          width: '100%',
+          paddingLeft: 80,
      }
 
 
+     const styleBackAnimation = {
+          top: min_width_600px ? -19 : 100,
+          position: `absolute`,
+          animation: `rotate 30s linear infinite`,
+          opacity: opacityBG,
+          transition: `opacity 1s linear`,
+     }
 
-     // const [backAnimation, setBackAnimation] = useState('')
-
-     // useEffect(() => {
-     //      setBackAnimation(
-     //      W_screenSize 
-     //           ?
-     //           <>
-     //                <div style={{ display: 'flex', justifyContent: 'center' }}>
-     //                     <div
-     //                          id='appback_hype_container' class='HYPE_document'
-     //                          style={styleBackAnimation}
-     //                     />
-     //                     <Script
-     //                          src='appBack.hyperesources/appback_hype_generated_script.js?88592'
-     //                          strategy='afterInteractive'
-     //                     />
-     //                </div>
-
-     //           </>
-
-     //           : 
-     //           <>
-     //                <div
-     //                     id='appbackmobile_hype_container' class='HYPE_document'
-     //                     style={styleBackAnimation}
-     //                />
-     //                <Script
-     //                     src='appBack_mobile.hyperesources/appbackmobile_hype_generated_script.js?8194'
-     //                     strategy='afterInteractive'
-     //                />
-
-     //           </>)
-     // }, [W_screenSize]);
 
      const backAnimation = (
           <>
-               <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+
+               <div style={styleBackAnimationContainer}>
+          
+                    <div style={styleBackAnimation}>
+                         <Image
+                              src={'/react_logo.svg'}
+                              alt={'background image'}
+                              width={min_width_600px ? 700 : 500}
+                              height={min_width_600px ? 700 : 500}
+                         />
+                         
+                    </div>
+               </div>
+
+
+               {/* <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                     <div
                          id='appback_hype_container' class='HYPE_document'
                          style={{
@@ -193,44 +175,12 @@ export default function HomePage({
                          src='appBack.hyperesources/appback_hype_generated_script.js?88592'
                          strategy='afterInteractive'
                     />
-               </div>
+               </div> */}
           </>
      )
 
 
-     const styleBackgroundTitle_container = {
-          backgroundColor: AppBackgroundColor,
-          width: '100%',
-          'background-image': backgroundNav_container,
-          backgroundPosition: `center ${Number(20 + (Y_position * -1800)).toFixed(1)}px,
-                               center center`,
-          backgroundSize: 536,
-          backgroundRepeat: 'repeat-y, no-repeat',
-          // opacity : opacityBackground,
-          transition: `opacity 250ms ease`,
 
-     }
-
-     const styleBackgroundTitle_1 = {
-          width: '100%',
-          'background-image': min_width_600px ? backgroundNav : backgroundNav_mobile,
-          backgroundPosition: `center -8px`,
-          backgroundSize: 536,
-          backgroundRepeat: 'no-repeat',
-          // borderBottom: `1px solid ${hrColor}`,   
-          borderBottom: `1px solid ${color_3}55`,
-          borderTop: `1px solid ${color_3}55`,
-     }
-
-     const styleBackgroundTitle = {
-          width: '100%',
-          backgroundImage: `url('react_logo.svg')`,
-          backgroundPosition: `30vw  -136px`,
-          backgroundSize: 700,
-          backgroundRepeat: 'no-repeat',
-          borderBottom: `0.3px solid ${secLettersColor}55`,
-          overflow: 'hidden',
-     }
 
      const styleProgressBar = {
           // height: 20,
