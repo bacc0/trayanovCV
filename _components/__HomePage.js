@@ -132,7 +132,7 @@ export default function HomePage({
 
 
      const styleBackAnimation = {
-          top: min_width_600px ? 25 : 135,
+          top: min_width_600px ? 25 : 75,
           position: `absolute`,
           animation: `rotate 80s linear infinite`,
           opacity: opacityBG,
