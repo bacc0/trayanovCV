@@ -185,7 +185,7 @@ export default function HomePage({
                               overflow: 'hidden',
                               position: `absolute`,
                               height: `366px`,
-                              width: W_screenSize > 699 ? 700 : 300,
+                              width: W_screenSize > 699 ? 700 : W_screenSize,
                               maxWidth: 700,
                          }}
                     />
