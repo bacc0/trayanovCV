@@ -1,10 +1,11 @@
-import { useMediaQuery } from '@mui/material'
+import { useMediaQuery, Hidden } from '@mui/material'
 import CombineSections from './_sections/_CombineSections'
 import MenuAppBar from './MenuAppBar'
 import PageNav from './PageNav'
 import { useState, useEffect, Fragment } from 'react'
 import Script from 'next/script'
 import { motion } from 'framer-motion'
+
 
 export default function HomePage({
      currentBrowser, theme, setTheme, Y_position, scrollDirection, W_screenSize }) {
@@ -110,30 +111,93 @@ export default function HomePage({
                                   color ${animationTransition} ease`,
      }
 
-     const styleBackAnimation = {
-          top:0,
-          margin: '0 auto',
+
+
+
+     const styleBackAnimation_Desk = {
+          backgroundColor: 'yellow',
+          top: 0,
+          left: 0, //'0 auto'
+          marginTop: 0,
+          overflow: 'hidden',
+          position: `absolute`,
+          height: `366px`,
+          maxWidth: 700,
+     }
+     const styleBackAnimation_Mobile = {
+          backgroundColor: 'red',
+          top: 0,
+          left: 0, //'0 auto'
+          marginTop: 0,
           overflow: 'hidden',
           position: `absolute`,
           height: `366px`,
           width: `${W_screenSize}px`,
+          width: 300,
           maxWidth: 700,
-          marginLeft: W_screenSize > 500 ? 190 : 0
      }
 
 
+
+     // const [backAnimation, setBackAnimation] = useState('')
+
+     // useEffect(() => {
+     //      setBackAnimation(
+     //      W_screenSize 
+     //           ?
+     //           <>
+     //                <div style={{ display: 'flex', justifyContent: 'center' }}>
+     //                     <div
+     //                          id='appback_hype_container' class='HYPE_document'
+     //                          style={styleBackAnimation}
+     //                     />
+     //                     <Script
+     //                          src='appBack.hyperesources/appback_hype_generated_script.js?88592'
+     //                          strategy='afterInteractive'
+     //                     />
+     //                </div>
+
+     //           </>
+
+     //           : 
+     //           <>
+     //                <div
+     //                     id='appbackmobile_hype_container' class='HYPE_document'
+     //                     style={styleBackAnimation}
+     //                />
+     //                <Script
+     //                     src='appBack_mobile.hyperesources/appbackmobile_hype_generated_script.js?8194'
+     //                     strategy='afterInteractive'
+     //                />
+
+     //           </>)
+     // }, [W_screenSize]);
+
      const backAnimation = (
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-               <div
-                    id='appback_hype_container' class='HYPE_document'
-                    style={styleBackAnimation}
-               />
-               <Script
-                    src='appBack.hyperesources/appback_hype_generated_script.js?88592'
-                    strategy='afterInteractive'
-               />
-          </div>
+          <>
+               <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    <div
+                         id='appback_hype_container' class='HYPE_document'
+                         style={{
+                              top: 0,
+                              left: W_screenSize > 700  ? 200 : 0, //'0 auto'
+                              marginTop: 0,
+                              overflow: 'hidden',
+                              position: `absolute`,
+                              height: `366px`,
+                              width: W_screenSize > 699 ? 700 : 300,
+                              maxWidth: 700,
+                         }}
+                    />
+                    <Script
+                         src='appBack.hyperesources/appback_hype_generated_script.js?88592'
+                         strategy='afterInteractive'
+                    />
+               </div>
+          </>
      )
+
+
      const styleBackgroundTitle_container = {
           backgroundColor: AppBackgroundColor,
           width: '100%',

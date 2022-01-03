@@ -124,8 +124,10 @@ export default function Home() {
           <section className='pages-wrapper'>
 
                < HomePage
-                    W_screenSize={W_screenSize} theme={theme}
-                    setTheme={setTheme} scrollDirection={scrollDirection}
+                    W_screenSize={W_screenSize} 
+                    theme={theme}
+                    setTheme={setTheme} 
+                    scrollDirection={scrollDirection}
                     Y_position={Y_position}
                     currentBrowser={currentBrowser}
                />
