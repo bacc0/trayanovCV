@@ -132,9 +132,9 @@ export default function HomePage({
 
 
      const styleBackAnimation = {
-          top: min_width_600px ? -19 : 100,
+          top: min_width_600px ? 25 : 135,
           position: `absolute`,
-          animation: `rotate 30s linear infinite`,
+          animation: `rotate 80s linear infinite`,
           opacity: opacityBG,
           transition: `opacity 1s linear`,
      }
@@ -149,8 +149,8 @@ export default function HomePage({
                          <Image
                               src={'/react_logo.svg'}
                               alt={'background image'}
-                              width={min_width_600px ? 700 : 500}
-                              height={min_width_600px ? 700 : 500}
+                              width={min_width_600px ? 600 : 500}
+                              height={min_width_600px ? 600 : 500}
                          />
                          
                     </div>
