@@ -29,7 +29,7 @@ export default ({ src, min_width_600px, threshold = 0.45 }) => {
 
      useEffect(() => {
           setLogo_W(min_width_600px ? 210 : 310)
-          setLogo_H(min_width_600px ? 187 : 249)
+          setLogo_H(min_width_600px ? 187 : 255)
      }, [min_width_600px])
 
      const stylePicture = {

@@ -34,7 +34,19 @@ body hr {
 }
 
 body p {
-  margin: 12px 0 0;
+  line-height: 28px;
+  margin: 0;
+  margin: 19px 0 0px;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 601px) {
+  body p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 100;
+  }
 }
 
 body h2 {
@@ -49,8 +61,6 @@ body h3 {
   font-size: 19.5px;
   font-weight: 400;
   margin: 0;
-  margin-top: 5px;
-  line-height: 1.4;
   letter-spacing: 1.6px;
 }
 
@@ -108,7 +118,7 @@ body .pages-wrapper .page .page-nav .title-container {
   body .pages-wrapper .page .page-body {
     width: 100%;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 25px;
     letter-spacing: 0.78px;
     word-spacing: 3px;
     font-weight: 300;
@@ -134,7 +144,7 @@ body .pages-wrapper .page .page-nav .title-container {
   body .pages-wrapper .page .page-body .page-body-left .container-content-left .content-left {
     width: 80%;
     max-width: 350px;
-    padding-bottom: 39px;
+    padding-bottom: 24px;
   }
   body .pages-wrapper .page .page-body .page-body-right {
     width: 100%;
@@ -158,7 +168,7 @@ body .pages-wrapper .page .page-nav .title-container {
   body .pages-wrapper .page .page-body .page-body-right .container-content-right .content-right {
     width: 80%;
     max-width: 350px;
-    padding-bottom: 39px;
+    padding-bottom: 24px;
   }
 }
 
