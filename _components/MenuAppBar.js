@@ -75,17 +75,17 @@ export default function MenuAppBar({
      // }
      const underAppBar = {
           height: heightAppBar,
-          'background-color': AppBackgroundColor,
+          // 'background-color': AppBackgroundColor,
           // backgroundColor: `red`,
 
 
 
 
-          width: '100%',
-          'background-image': `url('react_logo_BG.svg')`,
-          backgroundPosition: `30vw  -81px`,
-          backgroundSize: 700,
-          backgroundRepeat: 'no-repeat',
+          // width: '100%',
+          // 'background-image': `url('react_logo_BG.svg')`,
+          // backgroundPosition: `30vw  -81px`,
+          // backgroundSize: 700,
+          // backgroundRepeat: 'no-repeat',
 
           transition: `
           background-color 350ms ease, 

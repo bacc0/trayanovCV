@@ -128,6 +128,8 @@ export default function HomePage({
           position: `absolute`,
           width: '100%',
           // paddingLeft: 80,
+          'background-color': AppBackgroundColor,
+
      }
 
 
