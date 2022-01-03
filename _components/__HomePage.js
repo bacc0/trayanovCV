@@ -1,14 +1,13 @@
-import { useMediaQuery, Hidden } from '@mui/material'
+import { useMediaQuery } from '@mui/material'
 import CombineSections from './_sections/_CombineSections'
 import MenuAppBar from './MenuAppBar'
 import PageNav from './PageNav'
 import { useState, useEffect, Fragment } from 'react'
-import Script from 'next/script'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 
+
 export default function HomePage({
-     currentBrowser, theme, setTheme, Y_position, scrollDirection, W_screenSize }) {
+     currentBrowser, theme, setTheme, Y_position, scrollDirection }) {
 
      const color_1 = '#FFFFFF'
      const color_2 = '#FAFAFA' // F2F2F2
@@ -66,7 +65,6 @@ export default function HomePage({
                     ? `${backgroundNav_2}, ${backgroundNav_3}`
                     : `${backgroundNav_2}, ${backgroundNav_3}`,
           })
-
      }, [backgroundNav_2, backgroundNav_3]);
 
      const animationTransition = '0ms'
@@ -101,7 +99,7 @@ export default function HomePage({
 
      }, [theme]);
 
-     const { AppBackgroundColor, hrColor, secLettersColor, bodyColor, backgroundNav_container, backgroundNav, backgroundNav_mobile, thirdLettersColor } = state
+     const { AppBackgroundColor, bodyColor, thirdLettersColor } = state
 
      const bodyPage = {
           backgroundColor: AppBackgroundColor,
@@ -111,7 +109,7 @@ export default function HomePage({
                                   color ${animationTransition} ease`,
      }
 
-     const [opacityBG, setOpacityBG] = useState(0);    
+     const [opacityBG, setOpacityBG] = useState(0);
 
      useEffect(() => {
           setInterval(() => {
@@ -127,11 +125,8 @@ export default function HomePage({
           top: 0,
           position: `absolute`,
           width: '100%',
-          // paddingLeft: 80,
-          'background-color': AppBackgroundColor,
-
+          backgroundColor: AppBackgroundColor,
      }
-
 
      const styleBackAnimation = {
           top: min_width_600px ? 25 : 75,
@@ -141,52 +136,21 @@ export default function HomePage({
           transition: `opacity 1s linear`,
      }
 
-
      const backAnimation = (
-          <>
+          <div style={styleBackAnimationContainer}>
+               <div style={styleBackAnimation}>
+                    <Image
+                         src={'/react_logo.svg'}
+                         alt={'background image'}
+                         width={min_width_600px ? 600 : 500}
+                         height={min_width_600px ? 600 : 500}
+                    />
 
-               <div style={styleBackAnimationContainer}>
-          
-                    <div style={styleBackAnimation}>
-                         <Image
-                              src={'/react_logo.svg'}
-                              alt={'background image'}
-                              width={min_width_600px ? 600 : 500}
-                              height={min_width_600px ? 600 : 500}
-                         />
-                         
-                    </div>
                </div>
-
-
-               {/* <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                    <div
-                         id='appback_hype_container' class='HYPE_document'
-                         style={{
-                              top: 0,
-                              left: W_screenSize > 700  ? 200 : 0, //'0 auto'
-                              marginTop: 0,
-                              overflow: 'hidden',
-                              position: `absolute`,
-                              height: `366px`,
-                              width: W_screenSize > 699 ? 700 : W_screenSize,
-                              maxWidth: 700,
-                         }}
-                    />
-                    <Script
-                         src='appBack.hyperesources/appback_hype_generated_script.js?88592'
-                         strategy='afterInteractive'
-                    />
-               </div> */}
-          </>
+          </div>
      )
 
-
-
-
      const styleProgressBar = {
-          // height: 20,
-          // backgroundColor: 'red',
           position: 'sticky',
           top: 0,
           zIndex: 2000,
@@ -196,12 +160,9 @@ export default function HomePage({
      }
 
 
-
      return (
           <Fragment>
                <div style={styleProgressBar} />
-
-
                <MenuAppBar
                     state={state}
                     theme={theme}
@@ -213,18 +174,8 @@ export default function HomePage({
                />
                {backAnimation}
                <div className='page' style={bodyPage} >
-
-                    <div className='page-nav'
-                    // style={styleBackgroundTitle_container}
-                    >
-                         <div
-
-                              className='title-container vertical-center-container'
-                         // style={styleBackgroundTitle}
-                         >
-                              {/* <div style={styleBackgroundTitle2}>
-
-               </div> */}
+                    <div className='page-nav'>
+                         <div className='title-container vertical-center-container'>
                               <PageNav
                                    state={state}
                                    logo_W_H={logo_W_H}
@@ -245,7 +196,6 @@ export default function HomePage({
                          animationTransition={animationTransition}
                     />
                </div>
-
           </Fragment >
      )
 }

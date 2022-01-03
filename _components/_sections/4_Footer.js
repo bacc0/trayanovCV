@@ -5,7 +5,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
 
-export default function Footer({ state, min_width_600px }) {
+export default function Footer({ state }) {
+     
      
      const { footerColor, footerTextColor } = state
   
@@ -20,12 +21,10 @@ export default function Footer({ state, min_width_600px }) {
                               style={{ color: footerTextColor, textDecoration: 'none', margin: '0 0 7px' }}
                               href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'}
                          >
-                              <div >
+                              <div>
                                    <LinkedInIcon  fontSize='small'/>
                               </div>
-                              <div
-                                   className='footer-icon-text'
-                              >
+                              <div className='footer-icon-text'>
                                    <div> LinkedIn </div>
                               </div>
                          </a>

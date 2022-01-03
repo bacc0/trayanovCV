@@ -3,8 +3,7 @@ import TitleSVG from './_illustratins/TitleSVG'
 import { typeWriter } from './_sections/helpers/TypeWriter'
 import Script from 'next/script'
 
-export default function MenuAppBar({
-     state, logo_W_H, strokeWidth, setOnAnimationEnd, animationTransition }) {
+export default function MenuAppBar({ state }) {
 
 
      const colibri = (
@@ -30,47 +29,24 @@ export default function MenuAppBar({
                          }} />
                </motion.div>
                <Script
-                    // type='text/javascript'
-                    // charset='utf-8'
                     src='colibri.hyperesources/colibri_hype_generated_script.js?23464'
                     strategy='afterInteractive'
                >
                </Script>
-
-              
           </>
      )
 
      return (
 
-          <div className='vertical-center'
+          <div className='vertical-center'>
 
-
-          >
-               {/* <motion.div
-                    initial={{ scale: 1, y: -200, x: 10, opacity: 0 }}
-                    animate={{ scale: 1, y: 0, x: 10, opacity: 1 }}
-                    transition={{ type: 'spring', duration: 0.9, delay: 0 }}
-                    className='title'
-               >
-                    <TitleSVG
-                         state={state}
-                         logo_W_H={logo_W_H}
-                         strokeWidth={strokeWidth}
-                         setOnAnimationEnd={setOnAnimationEnd}
-                         animationTransition={animationTransition}
-                    />
-               </motion.div> */}
-
-{colibri}
+               {colibri}
                <div
                     style={{
                          position: 'relative',
                          top: -95,
                          minWidth: 250,
-                         // backgroundColor: 'pink'
                     }}
-
                >
                     <h3
                          style={{
@@ -78,11 +54,11 @@ export default function MenuAppBar({
                               top: 0,
                               fontSize: 16,
                               minWidth: 250,
-                              // backgroundColor: 'lime'
                               color: state.strongText
-
                          }}
-                    >hello i'm </h3>
+                    >
+                         hello i'm
+                    </h3>
                     <h1
                          style={{
                               position: 'relative',
@@ -92,9 +68,6 @@ export default function MenuAppBar({
                               textAlign: 'center',
                               letterSpacing: 2.5,
                               minWidth: 250,
-                              // backgroundColor: 'beige',
-                              // minHeight: 25,
-
                          }}
 
                     >
@@ -106,7 +79,6 @@ export default function MenuAppBar({
                               top: 43,
                               fontSize: 19.5,
                               fontWeight: 400,
-                              // textAlign: 'center',
                               color: state.strongText,
                               minHeight: 24,
                               minWidth: 250,
@@ -114,10 +86,7 @@ export default function MenuAppBar({
                     >
                          {typeWriter('front ...end developer')}
                     </h3>
-
-
                </div>
           </div>
-
      )
 }

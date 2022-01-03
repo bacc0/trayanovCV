@@ -1,54 +1,21 @@
-import { useState, useEffect } from 'react'
-import Image_experience from '../_illustratins/Image_experience'
-import { typeWriter } from './helpers/TypeWriter'
-import Img_handler from '../_illustratins/Img_handler'
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
 
-export default function Experience({
-     state, min_width_600px, Y_position
-}) {
+export default function Experience({ state, min_width_600px }) {
 
 
      const {
           strongText, animationTransition, hrColorMain, secLettersColor,
-          thirdLogoColor, thirdLettersColor, hrColor, backgroundColor } = state
-
-     const [before_animation_start, setBefore_animation_start] = useState(false)
-     const [on_animation_end, setOn_animation_end] = useState(true)
+          thirdLettersColor, hrColor, backgroundColor } = state
 
      const paddingTop = min_width_600px ? 63 : 60
      const paddingBottom = min_width_600px ? 60 : 18
-
-     useEffect(() => {
-          setTimeout(() => {
-               setBefore_animation_start(true)
-          }, 2300)
-     }, [])
-
-     useEffect(() => {
-          setTimeout(() => {
-               setOn_animation_end(false)
-          }, 6000)
-     }, [])
-
 
      const styleContainer = {
 
           paddingTop: paddingTop,
           paddingBottom: paddingBottom,
           minHeight: min_width_600px ? 300 : 300,
-
           borderTop: `0.3px solid ${secLettersColor}55`,
-          // backgroundColor: '#7026A5',
-          // background: `radial-gradient(at 50% top, #4A0A6A, #4A0A6A, #040F1B, #040F1B, #040F1B)`,
-
-          // backgroundColor: '#040F1B',
-          // 'background-image':`url('backAppGradient.svg')`,
-          // // backgroundPosition: `center -128px, top`,
-          // backgroundPosition: `center 0%`,
-          // backgroundSize: 536,
-          // 'background-repeat': 'no-repeat',
-
      }
      const style_h2_ = {
           color: backgroundColor,
@@ -56,7 +23,6 @@ export default function Experience({
      }
      const style_h3_ = {
           minHeight: min_width_600px ? 40 : 56,
-          // backgroundColor: 'lime',
           fontSize: 19.5,
           color: thirdLettersColor,
           transition: `color ${animationTransition} ease`,
@@ -82,17 +48,11 @@ export default function Experience({
           <div className='page-body' style={styleContainer}>
                <div className='page-body-left'>
                     <div className='container-content-left' >
-                         <div
-
-                              className='content-left'
-                         // style={{ margin: `0 0 ${min_width_600px ? 0 : -7}px` }}
-                         >
-
+                         <div className='content-left'>
                               <h2 style={style_h2_}>
                                    Experience
                               </h2>
                               <hr style={style_hr_I} />
-
                          </div>
                     </div>
 
@@ -134,15 +94,6 @@ export default function Experience({
                                         src={'./exp.svg'}
                                         min_width_600px={min_width_600px}
                                    />
-                                   {/* <Img_handler
-                                        src={'./exp.svg'}
-                                        min_width_600px={min_width_600px}
-                                   /> */}
-
-                                   {/* <Image_experience
-                                        min_width_600px={min_width_600px}
-                                        color={thirdLogoColor}
-                                   /> */}
                               </div>
                          </div>
                     </div>
@@ -156,12 +107,6 @@ export default function Experience({
                                    React Developer
                                    <div style={{ fontSize: min_width_600px ? 14 : 16 }}>
                                         Amdocs via Appgr8
-
-                                        {/* {before_animation_start && (
-                                             on_animation_end
-                                                  ? typeWriter('Amdocs via Appgr8', 165)
-                                                  : 'Amdocs via Appgr8'
-                                        )} */}
                                    </div>
                               </h3>
                               <hr style={style_hr_II} />
@@ -197,7 +142,6 @@ export default function Experience({
                               </strong>
 
                               <p>Creating a web builder application.</p>
-
                               <p
                                    style={{
                                         marginBottom: min_width_600px ? '0em' : '0em',

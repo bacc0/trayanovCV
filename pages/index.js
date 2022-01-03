@@ -95,7 +95,6 @@ export default function Home() {
           currentBrowser = 'firefox'
      }
 
-
  // ---------------------------------    Detect Browser Size
 
      // if (typeof window !== 'undefined') {
@@ -122,7 +121,6 @@ export default function Home() {
 
      return (
           <section className='pages-wrapper'>
-
                < HomePage
                     W_screenSize={W_screenSize} 
                     theme={theme}
@@ -131,8 +129,6 @@ export default function Home() {
                     Y_position={Y_position}
                     currentBrowser={currentBrowser}
                />
-
-
           </section>
      )
 }

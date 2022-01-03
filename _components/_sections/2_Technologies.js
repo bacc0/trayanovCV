@@ -1,16 +1,15 @@
 import { Hidden } from '@mui/material'
-import Image_technologies from '../_illustratins/Image_technologies'
-import Img_handler from '../_illustratins/Img_handler'
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
+
+
 export default function Technologies({
      state, min_width_600px,
      theme, animationTransition }) {
 
-     const { backgroundColor, hrColorMain, thirdLogoColor } = state
+     const { backgroundColor, hrColorMain } = state
 
      const paddingTop = min_width_600px ? 62 : 36
      const paddingBottom = min_width_600px ? 60 : 12
-
 
      const styleContainer = {
 
@@ -28,7 +27,6 @@ export default function Technologies({
      }
 
      const style_h2_ = {
-
           color: backgroundColor,
           transition: `color ${animationTransition} ease`
      }
@@ -88,10 +86,7 @@ export default function Technologies({
                                    marginBottom: min_width_600px ? 0 : -8
                               }}
                          >
-
                               <Hidden smDown >
-
-
                                    <>
                                         <h2 style={style_h2_} >
                                              Tech stack
@@ -99,7 +94,6 @@ export default function Technologies({
                                         <hr style={{ ...style_hr_, ...{ marginBottom: 31 } }} />
                                    </>
                               </Hidden>
-
 
                               <p>Typescript</p>
                               <p>NodeJS</p>
@@ -119,16 +113,7 @@ export default function Technologies({
                                         src={'./tech.svg'}
                                         min_width_600px={min_width_600px}
                                    />
-                                   {/* <Img_handler
-                                        src={'./tech.svg'}
-                                        min_width_600px={min_width_600px}
-                                   /> */}
-                                   {/* <Image_technologies
-                                        min_width_600px={min_width_600px}
-                                        color={thirdLogoColor}
-                                   /> */}
                               </div>
-
                          </div>
                     </div>
                </div>

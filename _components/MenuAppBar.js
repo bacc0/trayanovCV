@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
-
-import { motion, AnimatePresence } from 'framer-motion'
-
+import { motion } from 'framer-motion'
 import { Stack, IconButton, Typography, Toolbar, AppBar, Box, Hidden } from '@mui/material'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -12,9 +10,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
 
-
-
-
 export default function MenuAppBar({
      state, theme, setTheme, Y_position, scrollDirection, min_width_600px, currentBrowser }) {
 
@@ -23,12 +18,9 @@ export default function MenuAppBar({
      const [heightAppBar, setHeightAppBar] = useState(0)
      const [appBarIsVisible, setAppBarIsVisible] = useState(true)
 
-
-
-
      useEffect(() => {
           setTimeout(() => {
-               setHeightAppBar(55) //271
+               setHeightAppBar(55) 
           }, 2000);
      }, []);
 
@@ -43,7 +35,6 @@ export default function MenuAppBar({
                if (scrollDirection === 'down') {
                     appBarIsVisible !== true ? setAppBarIsVisible(true) : null
                }
-               // scrollDirection === 'up' ? setAppBarIsVisible(false) : setAppBarIsVisible(true)
           }
      }, [Y_position]);
 
@@ -59,34 +50,13 @@ export default function MenuAppBar({
           boxShadow: '0 0 0',
           borderBottom: `0.3px solid ${secLettersColor}55`,
           fontSize: 10,
-          // height: appBarIsVisible ? 65 : 0,
-          // transition: `height 800ms ease`,
-          // height: 65,
           position: 'fixed',
           top: appBarIsVisible ? 0 : -65,
-          transition: `top 800ms ease`, //800ms
-
+          transition: `top 800ms ease`, 
      }
-     // const ToolbarContainer = {
-     //      borderBottom: `1px solid blck`,
-     //      position: 'relative',
-     //      top: appBarIsVisible ? 0 : -65,
-     //      transition: `top 600ms ease`
-     // }
+    
      const underAppBar = {
           height: heightAppBar,
-          // 'background-color': AppBackgroundColor,
-          // backgroundColor: `red`,
-
-
-
-
-          // width: '100%',
-          // 'background-image': `url('react_logo_BG.svg')`,
-          // backgroundPosition: `30vw  -81px`,
-          // backgroundSize: 700,
-          // backgroundRepeat: 'no-repeat',
-
           transition: `
           background-color 350ms ease, 
           height 800ms ease`,
@@ -107,25 +77,19 @@ export default function MenuAppBar({
           transition: `color ${animationTransition} ease`,
      }
 
-     
-
 
      return (
           <Box>
-
                <motion.div
                     initial={{ opacity: 0, pathLength: 0, y: -65 }}
                     animate={{ opacity: 1, pathLength: 1, y: 0 }}
                     transition={{ delay: 1.8, duration: 1, ease: 'easeInOut' }}
                >
-                    
-                    {/* {backAnimation} */}
                     <AppBar style={AppBarStyle} position='fixed'>
                          <motion.div
                               initial={{ opacity: 0, y: -65 }}
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ delay: 2, duration: 1, ease: 'easeInOut' }}
-                         // style={ToolbarContainer}
                          >
                               <Toolbar
                                    style={{
