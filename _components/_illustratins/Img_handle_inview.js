@@ -15,7 +15,6 @@ export default ({ src, min_width_600px, threshold = 0.45 }) => {
      const {ref, inView, entry} = useInView({
           threshold: 0.5,
           triggerOnce: true,
-          // rootMargin: '20px'
      })
 
 
@@ -29,8 +28,8 @@ export default ({ src, min_width_600px, threshold = 0.45 }) => {
 
 
      useEffect(() => {
-          setLogo_W(min_width_600px ? 225 : 310)
-          setLogo_H(min_width_600px ? 196 : 249)
+          setLogo_W(min_width_600px ? 210 : 310)
+          setLogo_H(min_width_600px ? 187 : 249)
      }, [min_width_600px])
 
      const stylePicture = {
