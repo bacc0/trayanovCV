@@ -127,7 +127,7 @@ export default function HomePage({
           top: 0,
           position: `absolute`,
           width: '100%',
-          paddingLeft: 80,
+          // paddingLeft: 80,
      }
 
 
