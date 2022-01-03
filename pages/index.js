@@ -2,6 +2,8 @@ import { useEffect, useState, Fragment } from 'react'
 import HomePage from '../_components/__HomePage'
 import { useViewportScroll } from 'framer-motion'
 import { detect } from 'detect-browser'
+import { useWindowSize } from 'react-window-size-hooks'
+
 
 var temp = 0
 export default function Home() {
@@ -61,21 +63,12 @@ export default function Home() {
           window.addEventListener('scroll', (e) => {
                newValue = window.pageYOffset;
                if (oldValue < newValue) {
-
-
-
                     setScrollDirection('up')
-
-
                } else if (oldValue > newValue) {
-
-
                     setScrollDirection('down')
-
                }
                oldValue = newValue;
-          });
-
+          })
 
      }, [])
 
@@ -103,14 +96,23 @@ export default function Home() {
      }
 
 
+ // ---------------------------------    Detect Browser Size
 
-     if (typeof window !== 'undefined') {
-          window.addEventListener('resize', () => {
+     // if (typeof window !== 'undefined') {
+     //      window.addEventListener('resize', () => {
 
-               set_W_screenSize(window.innerWidth)
-               set_H_screenSize(window.innerHeight)
-          })
-     }
+     //           set_W_screenSize(window.innerWidth)
+     //           set_H_screenSize(window.innerHeight)
+     //      })
+     // }
+
+     const { width, height } = useWindowSize()
+
+     useEffect(() => {
+          set_W_screenSize(window.innerWidth)
+          set_H_screenSize(window.innerHeight)
+     }, [width, height]);
+     
      // ---------------------------------    scroll to the top on reload
 
      useEffect(() => {

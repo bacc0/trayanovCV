@@ -7,7 +7,7 @@ import Script from 'next/script'
 import { motion } from 'framer-motion'
 
 export default function HomePage({
-     currentBrowser, theme, setTheme, Y_position, scrollDirection }) {
+     currentBrowser, theme, setTheme, Y_position, scrollDirection, W_screenSize }) {
 
      const color_1 = '#FFFFFF'
      const color_2 = '#FAFAFA' // F2F2F2
@@ -111,29 +111,28 @@ export default function HomePage({
      }
 
      const styleBackAnimation = {
-          
-          top: 0,
-          margin: 'auto',
-          position: 'absolute',
-          width: '100%',
-          height: '68px',
+          top:0,
+          margin: '0 auto',
           overflow: 'hidden',
-          
+          position: `absolute`,
+          height: `366px`,
+          width: `${W_screenSize}px`,
+          maxWidth: 700,
+          marginLeft: W_screenSize > 500 ? 190 : 0
      }
 
 
      const backAnimation = (
-          <>
-               <div 
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+               <div
                     id='appback_hype_container' class='HYPE_document'
-
-                    style={ styleBackAnimation}
+                    style={styleBackAnimation}
                />
                <Script
                     src='appBack.hyperesources/appback_hype_generated_script.js?88592'
                     strategy='afterInteractive'
                />
-          </>
+          </div>
      )
      const styleBackgroundTitle_container = {
           backgroundColor: AppBackgroundColor,
@@ -180,7 +179,7 @@ export default function HomePage({
           borderBottom: `1px solid ${thirdLettersColor}`,
      }
 
-     
+
 
      return (
           <Fragment>
@@ -196,7 +195,7 @@ export default function HomePage({
                     scrollDirection={scrollDirection}
                     min_width_600px={min_width_600px}
                />
- {backAnimation}
+               {backAnimation}
                <div className='page' style={bodyPage} >
 
                     <div className='page-nav'
@@ -205,7 +204,7 @@ export default function HomePage({
                          <div
 
                               className='title-container vertical-center-container'
-                              // style={styleBackgroundTitle}
+                         // style={styleBackgroundTitle}
                          >
                               {/* <div style={styleBackgroundTitle2}>
 
@@ -230,7 +229,7 @@ export default function HomePage({
                          animationTransition={animationTransition}
                     />
                </div>
-          
+
           </Fragment >
      )
 }
