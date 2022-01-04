@@ -15,8 +15,10 @@ export default ({ color }) => {
 
      return (
           <>
-               <div
-
+               <motion.div
+                    initial={{ opacity: 0 }}  // x=?
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2.7, duration: 1 }}
                >
                     <svg
                          version='1.1'
@@ -118,7 +120,7 @@ export default ({ color }) => {
                          </g>
 
                     </svg>
-               </div>
+               </motion.div>
           </>
      )
 }

@@ -135,7 +135,7 @@ export default function HomePage({
           position: `absolute`,
           animation: `rotate 40s linear infinite`,
           opacity: opacityBG,
-          transition: `opacity 1s linear`,
+          transition: `opacity 4s linear`,
      }
 
      const backAnimation = (
