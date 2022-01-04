@@ -121,6 +121,9 @@ export default function HomePage({
           }, 2500);
      }, []);
 
+     const gradient = `linear-gradient( #11111102 ,#11111104 ,#11111107, transparent ,transparent, transparent, transparent, transparent, #11111104, #11111107)`
+
+     
      const styleBackAnimationContainer = {
           display: 'flex',
           justifyContent: 'flex-end',
@@ -130,7 +133,7 @@ export default function HomePage({
           position: `absolute`,
           width: '100%',
           backgroundColor: AppBackgroundColor,
-          background: `linear-gradient( rgba(0, 0, 0, 0.02) ,rgba(0, 0, 0, 0.02) ,rgba(0, 0, 0, 0.03), transparent ,transparent, transparent, transparent, transparent, transparent, rgba(0, 0, 0, 0.03))`,
+          background: gradient,
           opacity: backgroundOpacity,
           transition: `opacity 4s linear`
      }
