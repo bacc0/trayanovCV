@@ -25,6 +25,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
                </Typography>
           </motion.div>
      )
+
      const veselin = (
           <Box sx={{ height: theme.spacing(44), mt: theme.spacing(-7.2), ml: theme.spacing(-0.8) }} >
                <Veselin color={state.bodyColor} />
@@ -42,15 +43,18 @@ export default function MenuAppBar({ state, min_width_600px }) {
                     sx={{
                          mt: 1,
                          mt: theme.spacing(-28.7),
+                         ml: min_width_600px ? 4 : 3,
                          color: state.strongText,
                          fontWeight: 100,
                          letterSpacing: 1.3,
+                         textAlign: 'left'
                     }}
                >
                     {typeWriter('front ...end developer')}
                </Typography>
           </motion.div>
      )
+
      const cardStyle = {
           m: 0,
           pt: min_width_600px ? 5.5 : 3.5,
@@ -72,7 +76,6 @@ export default function MenuAppBar({ state, min_width_600px }) {
                </Card>
           </div>
      )
-
 
      const colibri = (
           <>
@@ -104,23 +107,18 @@ export default function MenuAppBar({ state, min_width_600px }) {
           </>
      )
 
-     return (
+     const styleRoot = {
+          position: 'relative',
+          top: 0,
+          minWidth: 250,
+          height: 205,
+     }
 
-          <div
-               style={{
-                    position: 'relative',
-                    top: 0,
-                    minWidth: 250,
-                    height: 205,
-               }}
-          >
+
+     return (
+          <div style={styleRoot}>
                {cardTitle}
                {colibri}
-
-
-
-
-
           </div>
      )
 }

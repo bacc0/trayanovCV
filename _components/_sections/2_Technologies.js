@@ -83,7 +83,7 @@ export default function Kkk({ state, min_width_600px }) {
      }
      const leftSection = (
           <Card sx={L_R_cardsStyle}>
-               <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
+               <CardContent sx={{ p: 0,mt: 1.8, mb: -3.3, color: bodyColor }}>
 
                     {/* <Box sx={{ height: theme.spacing(1.7) }} /> */}
                     <Typography variant="p">ReactJS<br /></Typography>

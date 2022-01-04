@@ -72,7 +72,7 @@ export default function Kkk({ state, min_width_600px }) {
           </Card>
      )
      const img = (
-          <Box sx={{ mt: theme.spacing(-1), mb: theme.spacing(min_width_600px ? 0.7 : 1.5) }}>
+          <Box sx={{ mt: theme.spacing(min_width_600px ? -0.8 : -2.4), mb: theme.spacing(0.3) }}>
                <Img_handle_inview
                     src={'./exp.svg'}
                     min_width_600px={min_width_600px}
@@ -123,7 +123,7 @@ export default function Kkk({ state, min_width_600px }) {
                                         <Typography variant="p"  >
                                              {mail}
                                         </Typography>
-                                        <Box sx={{ height: theme.spacing(min_width_600px ? 1.8 : 4.1) }} />
+                                        <Box sx={{ height: theme.spacing(min_width_600px ? 2.3 : 4.1) }} />
                                         {img} 
                                    </>
                               )

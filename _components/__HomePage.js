@@ -130,7 +130,7 @@ export default function HomePage({
           position: `absolute`,
           width: '100%',
           backgroundColor: AppBackgroundColor,
-          background: `linear-gradient(  transparent,rgba(0, 0, 0, 0) ,rgba(0, 0, 0, 0.03), transparent ,transparent, transparent, transparent, transparent, transparent, rgba(0, 0, 0, 0.03))`,
+          background: `linear-gradient( rgba(0, 0, 0, 0.02) ,rgba(0, 0, 0, 0.02) ,rgba(0, 0, 0, 0.03), transparent ,transparent, transparent, transparent, transparent, transparent, rgba(0, 0, 0, 0.03))`,
           opacity: backgroundOpacity,
           transition: `opacity 4s linear`
      }

@@ -51,6 +51,7 @@ export default function Kkk({ state, min_width_600px }) {
           <Card
                sx={{
                     m: 0,
+                    mb: min_width_600px ? -2 : -3.7,
                     pb: 3,
                     width: 'auto',
                     height: 1,
@@ -59,12 +60,13 @@ export default function Kkk({ state, min_width_600px }) {
                     backgroundColor: "transparent"
                }}
           >
-               <Box sx={{
-                    borderBottom: 1.3,
-                    width: min_width_600px ? 210 : '100%',
-                    color: backgroundColor,
+               <Box
+                    sx={{
+                         borderBottom: 1.3,
+                         width: min_width_600px ? 210 : '100%',
+                         color: backgroundColor,
 
-               }}
+                    }}
                >
                     <Typography variant="h4" sx={{ letterSpacing: 2 }}>
                          About me
@@ -96,8 +98,8 @@ export default function Kkk({ state, min_width_600px }) {
                     <Typography variant="h5" sx={{ mt: 1.7, color: thirdLettersColor, letterSpacing: 1 }} >
                          Skills
                     </Typography>
-                   
-                    
+
+
                     <Box sx={{ height: theme.spacing(1.7) }} />
 
                     <Typography variant="p">
@@ -124,11 +126,11 @@ export default function Kkk({ state, min_width_600px }) {
      )
 
      const rightSection = (
-          <Card sx={{...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.7 : -2 }}}>
+          <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.7 : -2 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
 
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    
+
 
                     <Typography variant="p">
                          Experience working with dynamic content.
