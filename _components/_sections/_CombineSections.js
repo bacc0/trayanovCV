@@ -12,26 +12,37 @@ export default function _CombineSections({
 
      return (
           <>
-               <Experience
+                    <div style={{ borderTop: `1px solid ${state.thirdLettersColor}`}}></div>
+
+               {/* <Kkk
+                    state={state}
+                    min_width_600px={min_width_600px}
+               /> */}
+            <Experience
                     state={state}
                     min_width_600px={min_width_600px}
                />
-               <Technologies
+                    <div style={{ borderTop: `0.3px solid ${state.separationsColor}`}}/>
+
+                <Technologies
                     theme={theme}
                     min_width_600px={min_width_600px}
                     state={state}
                     animationTransition={animationTransition}
                />
+                    <div style={{ borderTop: `0.3px solid ${state.separationsColor}`}}/>
 
                <AboutMe
                     state={state}
                     min_width_600px={min_width_600px}
                     animationTransition={animationTransition}
-               /> 
+               />
+                    <div style={{ borderTop: `0.3px solid ${state.separationsColor}`}}/>
+
                <Footer
                     state={state}
                     min_width_600px={min_width_600px}
-               /> 
+               />
           </>
      )
 }

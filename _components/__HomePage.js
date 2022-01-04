@@ -21,6 +21,7 @@ export default function HomePage({
           primeLettersColor: color_1,
           secLettersColor: color_3,
           thirdLettersColor: color_6,
+          separationsColor:  color_1,
           thirdLogoColor: color_6,
           strongText: color_3,
           hrColor: color_2,
@@ -76,6 +77,7 @@ export default function HomePage({
                primeLettersColor: theme === 'light' ? color_1 : color_5,
                secLettersColor: theme === 'light' ? color_3 : color_2,
                thirdLettersColor: theme === 'light' ? color_6 : color_7,
+               separationsColor: theme === 'light' ? color_1 : color_3,
                thirdLogoColor: theme === 'light' ? color_6 : color_6,
                strongText: theme === 'light' ? color_3 : color_2,
                hrColor: theme === 'light' ? 'transparent' : 'transparent',
@@ -182,6 +184,7 @@ export default function HomePage({
                                    strokeWidth={strokeWidth}
                                    setOnAnimationEnd={setOnAnimationEnd}
                                    animationTransition={animationTransition}
+                                   min_width_600px={min_width_600px}
                               />
                          </div>
                     </div>

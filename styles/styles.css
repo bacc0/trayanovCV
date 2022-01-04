@@ -214,7 +214,7 @@ body .pages-wrapper .page .page-nav .title-container {
 
 body .container-footer .footer {
   width: 484px;
-  margin: 58px auto;
+  margin: 62px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,7 +247,7 @@ body .footer-items-container .footer-icon-text {
 @media only screen and (max-width: 600px) {
   body .container-footer .footer {
     width: 80%;
-    margin: 58px auto;
+    margin: 62px auto;
     display: block;
   }
   body .container-footer .footer .footer-left {
