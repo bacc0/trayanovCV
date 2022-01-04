@@ -1,5 +1,5 @@
 import { Typewriter } from 'react-simple-typewriter'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export const typeWriter = (sentence, typeSpeed = 75) => {
      return (
@@ -14,9 +14,9 @@ export const typeWriter = (sentence, typeSpeed = 75) => {
                     loop={1}
                     cursor
                     cursorStyle='_'
-                    typeSpeed={140}
-                    deleteSpeed={50}
-                    delaySpeed={500}
+                    typeSpeed={90}
+                    deleteSpeed={40}
+                    delaySpeed={200}
 
                   
                />

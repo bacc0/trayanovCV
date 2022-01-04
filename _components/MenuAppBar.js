@@ -32,7 +32,7 @@ export default function MenuAppBar({
                if (marker) {
                     setAppBarIsVisible(true)
                } else {
-                    setTimeout(() => { setAppBarIsVisible(true) }, 2000)
+                    setTimeout(() => { setAppBarIsVisible(true) }, 1550)
                     setMarker(true)
                }
           } else {
@@ -60,12 +60,12 @@ export default function MenuAppBar({
           fontSize: 10,
           position: 'fixed',
           top: appBarIsVisible ? 0 : -300,
-          transition: `top 1200ms ease`,
+          transition: `top 1300ms linear`,
      }
 
      const underAppBar = {
           height: 55,
-          transition: `background-color 350ms ease`,
+          transition: `background-color 350ms linear`,
      }
      const titleStyle = {
           fontSize: 12,

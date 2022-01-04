@@ -10,15 +10,15 @@ export default ({ color }) => {
      const fill = color
      const stroke = color
      const strokeWidth = 0.8
-     const transitionFill = { delay: 4.9, duration: 2.5 }
-     const transitionStroke = { delay: 2.6, duration: 2.5 }
+     const transitionFill = { delay: 7, duration: 4 }
+     const transitionStroke = { delay: 2.5, duration: 2 }
 
      return (
           <>
                <motion.div
                     initial={{ opacity: 0 }}  // x=?
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 2.8, duration: 1 }}
+                    transition={{ delay: 2.6, duration: 1 }}
                >
                     <svg
                          version='1.1'

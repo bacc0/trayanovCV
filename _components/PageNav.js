@@ -18,7 +18,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
           <motion.div
                initial={{ opacity: 0, scale: 1.5 }}
                animate={{ opacity: 1, scale: 1 }}
-               transition={{ delay: 2.2, duration: 0.25 }}
+               transition={{ delay: 0.5, duration: 0.25 }}
           >
                <Typography variant="h5" sx={{ letterSpacing: 1.3, color: state.strongText, fontWeight: 100 }}>
                     hello i'm
@@ -32,6 +32,11 @@ export default function MenuAppBar({ state, min_width_600px }) {
           </Box>
      )
 
+     const [vis, setVis] = React.useState(false);
+     setInterval(() => {
+          setVis(true)
+     }, 4300);
+
      const typing = (
           <motion.div
                initial={{ opacity: 0.4, pathLength: 0 }}
@@ -43,14 +48,15 @@ export default function MenuAppBar({ state, min_width_600px }) {
                     sx={{
                          mt: 1,
                          mt: theme.spacing(-28.7),
-                         // ml: min_width_600px ? 4 : 3,
                          color: state.strongText,
                          fontWeight: 100,
                          letterSpacing: 1.3,
-                         // textAlign: 'left'
+                         minHeight: 30
                     }}
                >
-                    {typeWriter( [ 'hello', '...', 'front ...end developer'])}
+                    {vis && (<div>
+                         {typeWriter(['...end ', 'front ...end developer'])}
+                    </div>)}
                </Typography>
           </motion.div>
      )
@@ -64,6 +70,8 @@ export default function MenuAppBar({ state, min_width_600px }) {
           borderLeft: 0,
           backgroundColor: "transparent",
      }
+
+
 
      const cardTitle = (
           <div style={{ display: 'flex', justifyContent: 'center' }}>
