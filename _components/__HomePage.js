@@ -21,7 +21,7 @@ export default function HomePage({
           primeLettersColor: color_1,
           secLettersColor: color_3,
           thirdLettersColor: color_6,
-          separationsColor:  color_1,
+          separationsColor: color_1,
           thirdLogoColor: color_6,
           strongText: color_3,
           hrColor: color_2,
@@ -112,10 +112,12 @@ export default function HomePage({
      }
 
      const [opacityBG, setOpacityBG] = useState(0);
+     const [backgroundOpacity, setBackgroundOpacity] = useState(0);
 
      useEffect(() => {
           setInterval(() => {
                setOpacityBG(1)
+               setBackgroundOpacity(1)
           }, 2500);
      }, []);
 
@@ -128,6 +130,9 @@ export default function HomePage({
           position: `absolute`,
           width: '100%',
           backgroundColor: AppBackgroundColor,
+          background: `linear-gradient(  transparent,rgba(0, 0, 0, 0) ,rgba(0, 0, 0, 0.03), transparent ,transparent, transparent, transparent, transparent, transparent, rgba(0, 0, 0, 0.03))`,
+          opacity: backgroundOpacity,
+          transition: `opacity 4s linear`
      }
 
      const styleBackAnimation = {
@@ -152,18 +157,21 @@ export default function HomePage({
           </div>
      )
 
+
+
      const styleProgressBar = {
           position: 'sticky',
           top: 0,
           zIndex: 2000,
           width: `${Number((Y_position * 100)).toFixed(0)}%`,
           maxWidth: '100%',
-          // borderBottom: `1px solid ${thirdLettersColor}`,
+          // borderBottom: `1px solid ${state.secLettersColor}`,
      }
 
+ 
 
      return (
-          <Fragment>
+          <div >
                <div style={styleProgressBar} />
                <MenuAppBar
                     state={state}
@@ -199,7 +207,7 @@ export default function HomePage({
                          animationTransition={animationTransition}
                     />
                </div>
-          </Fragment >
+          </div >
      )
 }
 

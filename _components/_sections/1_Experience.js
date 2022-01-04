@@ -19,7 +19,8 @@ export default function Kkk({ state, min_width_600px }) {
           display: 'flex',
           justifyContent: 'center',
           // backgroundColor: 'beige',
-          borderTop: `0.3px solid ${secLettersColor}55`,
+          // borderTop: `11.3px solid ${secLettersColor}55`,
+          // transition: `borderTop 22s ease`
      }
      const titleContainer = {
           width: min_width_600px ? 484 : '80%',

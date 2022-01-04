@@ -16,9 +16,28 @@ export default function MenuAppBar({ state, min_width_600px }) {
 
 
 
+
+
+     const hello = (
+          <motion.div
+               initial={{ opacity: 0, scale: 1.7 }}
+               animate={{ opacity: 1, scale: 1 }}
+               transition={{ delay: 2.2, duration: 0.2 }}
+          >
+               <Typography variant="h5" sx={{ letterSpacing: 1.3, color: state.strongText, fontWeight: 100 }}>
+                    hello i'm
+               </Typography>
+          </motion.div>
+     )
+     const veselin = (
+          <Box sx={{ height: theme.spacing(44), mt: theme.spacing(-7.2), ml: theme.spacing(-0.8) }} >
+               <Veselin color={state.bodyColor} />
+          </Box>
+     )
+
      const typing = (
           <motion.div
-               initial={{ opacity: 0, pathLength: 0 }} 
+               initial={{ opacity: 0, pathLength: 0 }}
                animate={{ opacity: 1, pathLength: 1 }}
                transition={{ delay: 0.2, duration: 1.5 }}
           >
@@ -36,42 +55,25 @@ export default function MenuAppBar({ state, min_width_600px }) {
                </Typography>
           </motion.div>
      )
+     const cardStyle = {
+          m: 0,
+          pt: min_width_600px ? 5.5 : 3.5,
+          pb: 0,
+          width: 300,
+          boxShadow: 0,
+          borderLeft: 0,
+          backgroundColor: "transparent",
+     }
 
      const cardTitle = (
-          <div
-               style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-               }}
-
-          >
-               <Card
-                    sx={{
-                         m: 0,
-                         pt: min_width_600px ? 5.5 : 3.5,
-                         pb: 0,
-                         width: 300,
-                         boxShadow: 0,
-                         borderLeft: 0,
-                         backgroundColor: "transparent",
-                         // backgroundColor: "red"
-                    }}
-
-               >
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+               <Card sx={cardStyle}>
                     <Box sx={{ color: state.backgroundColor, textAlign: 'center', fontSize: 19.4, letterSpacing: 2 }}>
-
-                         <Typography variant="h5" sx={{ letterSpacing: 1.3, color: state.strongText, fontWeight: 100 }}>
-                              hello i'm
-                         </Typography>
-
-                         <Box sx={{ height: theme.spacing(44), mt: theme.spacing(-7.2), ml: theme.spacing(-0.8) }} >
-                              <Veselin color={state.bodyColor} />
-                         </Box>
+                         {hello}
+                         {veselin}
                          {typing}
                     </Box>
                </Card>
-
-
           </div>
      )
 

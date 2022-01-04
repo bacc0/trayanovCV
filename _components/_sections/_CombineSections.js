@@ -12,7 +12,7 @@ export default function _CombineSections({
 
      return (
           <>
-                    <div style={{ borderTop: `1px solid ${state.thirdLettersColor}`}}></div>
+                    {/* <div style={{ borderTop: `1px solid ${state.thirdLettersColor}`}}></div> */}
 
                {/* <Kkk
                     state={state}

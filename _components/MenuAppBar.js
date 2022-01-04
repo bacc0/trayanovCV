@@ -15,15 +15,15 @@ export default function MenuAppBar({
 
      const { strongText, thirdLettersColor, hrColorMain, AppBackgroundColor, animationTransition, secLettersColor } = state
 
-     const [heightAppBar, setHeightAppBar] = useState(0)
+     
      const [appBarIsVisible, setAppBarIsVisible] = useState(false)
      const [marker, setMarker] = useState(false)
 
     
-     setTimeout(() => {
-          setHeightAppBar(55)
+     // setTimeout(() => {
+     //      setHeightAppBar(55)
          
-     }, 2100)
+     // }, 2200)
 
 
      useEffect(() => {
@@ -59,15 +59,13 @@ export default function MenuAppBar({
           borderBottom: `0.3px solid ${secLettersColor}55`,
           fontSize: 10,
           position: 'fixed',
-          top: appBarIsVisible ? 0 : -65,
-          transition: `top 800ms ease`,
+          top: appBarIsVisible ? 0 : -300,
+          transition: `top 1200ms ease`,
      }
 
      const underAppBar = {
-          height: heightAppBar,
-          transition: `
-          background-color 350ms ease, 
-          height 800ms ease`,
+          height: 55,
+          transition: `background-color 350ms ease`,
      }
      const titleStyle = {
           fontSize: 12,
@@ -95,9 +93,9 @@ export default function MenuAppBar({
                >
                     <AppBar style={AppBarStyle} position='fixed'>
                          <motion.div
-                              initial={{ opacity: 0, y: -65 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: 0, duration: 2, ease: 'easeInOut' }}
+                              // initial={{ opacity: 0, y: -65 }}
+                              // animate={{ opacity: 1, y: 0 }}
+                              // transition={{ delay: 0, duration: 2, ease: 'easeInOut' }}
                          >
                               <Toolbar
                                    style={{
