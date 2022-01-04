@@ -1,10 +1,5 @@
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
-import { useTheme } from '@mui/material/styles'
-import * as React from 'react'
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
+import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 
 
 export default function Kkk({ state, min_width_600px }) {

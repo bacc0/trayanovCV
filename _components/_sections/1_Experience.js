@@ -1,10 +1,6 @@
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
-import { useTheme } from '@mui/material/styles'
-import * as React from 'react'
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
+// import { useTheme } from '@mui/material/styles'
+import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 
 
 export default function Kkk({ state, min_width_600px }) {
@@ -171,19 +167,21 @@ export default function Kkk({ state, min_width_600px }) {
           <div style={sectionsContainer}>
                <div style={titleContainer}>
                     <div>{cardTitle}</div>
-                    <div style={sectionsBody}>
-                         <div style={sections}>
+                    <Box style={sectionsBody} 
+                         
+                    >
+                         <Box style={sections}>
                               {/* {img} */}
                               {groundbits('Dec 2021 – Present', 'Ricard Rosson', 'ricard@iacos.net')}
-                         </div>
+                         </Box>
 
-                         <div style={sections}>
+                         <Box style={sections} >
                               <Box sx={{ height: theme.spacing(min_width_600px ? 0 : 2.4) }} />
                               {amdocs}
                               <Box sx={{ height: theme.spacing(2.4) }} />
                               {groundbits('Jan 2020 – Jan 2021')}
-                         </div>
-                    </div>
+                         </Box>
+                    </Box>
                </div>
           </div>
      )

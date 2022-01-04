@@ -3,7 +3,7 @@ import Technologies from './2_Technologies'
 import AboutMe from './3_AboutMe'
 import Footer from './4_Footer'
 import Kkk from './Kkk'
-
+import Box from '@mui/material/Box'
 
 
 export default function _CombineSections({
@@ -11,38 +11,44 @@ export default function _CombineSections({
 
 
      return (
-          <>
-                    {/* <div style={{ borderTop: `1px solid ${state.thirdLettersColor}`}}></div> */}
+          <Box
+               sx={{
+                    fontSize: min_width_600px ? 14 : 17,
+                    lineHeight: min_width_600px ? 1.7 : 1.9,
+                    fontWeight: min_width_600px ? 100 : 300,
+               }}
+          >
+               {/* <div style={{ borderTop: `1px solid ${state.thirdLettersColor}`}}></div> */}
 
                {/* <Kkk
                     state={state}
                     min_width_600px={min_width_600px}
                /> */}
-            <Experience
+               <Experience
                     state={state}
                     min_width_600px={min_width_600px}
                />
-                    <div style={{ borderTop: `0.3px solid ${state.separationsColor}`}}/>
+               <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
 
-                <Technologies
+               <Technologies
                     theme={theme}
                     min_width_600px={min_width_600px}
                     state={state}
                     animationTransition={animationTransition}
                />
-                    <div style={{ borderTop: `0.3px solid ${state.separationsColor}`}}/>
+               <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
 
                <AboutMe
                     state={state}
                     min_width_600px={min_width_600px}
                     animationTransition={animationTransition}
                />
-                    <div style={{ borderTop: `0.3px solid ${state.separationsColor}`}}/>
+               <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
 
                <Footer
                     state={state}
                     min_width_600px={min_width_600px}
                />
-          </>
+          </Box>
      )
 }

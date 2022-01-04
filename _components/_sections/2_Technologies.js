@@ -1,16 +1,11 @@
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
-import { useTheme } from '@mui/material/styles'
-import * as React from 'react'
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
+import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 
 
 export default function Kkk({ state, min_width_600px }) {
 
 
-     const {  bodyColor, backgroundColor, backgroundColor_2 } = state
+     const { bodyColor, backgroundColor, backgroundColor_2 } = state
 
      const sectionsContainer = {
           width: '100%',
@@ -83,7 +78,7 @@ export default function Kkk({ state, min_width_600px }) {
      }
      const leftSection = (
           <Card sx={L_R_cardsStyle}>
-               <CardContent sx={{ p: 0,mt: 1.8, mb: -3.3, color: bodyColor }}>
+               <CardContent sx={{ p: 0, mt: 1.8, mb: -3.3, color: bodyColor }}>
 
                     {/* <Box sx={{ height: theme.spacing(1.7) }} /> */}
                     <Typography variant="p">ReactJS<br /></Typography>
@@ -94,65 +89,58 @@ export default function Kkk({ state, min_width_600px }) {
                     <Box sx={{ height: theme.spacing(1.7) }} />
                     <Typography variant="p">Javascript<br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    <Typography variant="p">Material UI (MUI)<br /></Typography>
+                    <Typography variant="p">MUI Material UI<br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    <Typography variant="p">CSS<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
-                    <Typography variant="p">SASS<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
-                    <Typography variant="p">HTML<br /></Typography>
-
-                   
+                    <Typography variant="p">CSS SASS HTML<br /></Typography>
 
                </CardContent>
           </Card>
      )
      const rightSection = (
-          <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.7 : -0.3 }}}>
+          <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.7 : -0.3 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
+               <Typography variant="p">Framer Motion<br /></Typography>
+               <Box sx={{ height: theme.spacing(1.7) }} />
 
-                    <Typography variant="p">Framer Motion<br /></Typography>
+                    <Typography variant="p">SVG's animations<br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
 
-                    <Typography variant="p">SVG's Animations<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
-                    
                     <Typography variant="p">Shapes shifter<br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    
-                    <Typography variant="p">Adobe Illustrator<br /></Typography>
+
+                    <Typography variant="p">Illustrator Adobe <br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    
-                    <Typography variant="p">Autodesk Graphic<br /></Typography>
+
+                    <Typography variant="p">Graphic Autodesk <br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    
+
                     <Typography variant="p">GIMP<br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    
-                    <Typography variant="p">Adobe Photoshop<br /></Typography>
+
+                    <Typography variant="p">Photoshop Adobe<br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    
+
                     <Typography variant="p">Typescript<br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    
+
                     <Typography variant="p">NodeJS<br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    
+
                     <Typography variant="p">Express<br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    
+
                     <Typography variant="p">Git Github Bitbucket<br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    
+
                     <Typography variant="p">Sourcetree<br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    
+
                     <Typography variant="p">Jira<br /></Typography>
                     <Box sx={{ height: theme.spacing(1.7) }} />
-                    
-                    
 
-                   
+
+
+
 
                </CardContent>
           </Card>
@@ -163,7 +151,7 @@ export default function Kkk({ state, min_width_600px }) {
           <div style={sectionsContainer}>
                <div style={titleContainer}>
                     <div>{cardTitle}</div>
-                    <div style={sectionsBody}>
+                    <Box style={sectionsBody}>
                          <div style={sections}>
                               {img}
                               {leftSection}
@@ -172,7 +160,7 @@ export default function Kkk({ state, min_width_600px }) {
                               <Box sx={{ height: theme.spacing(min_width_600px ? 0 : 2.4) }} />
                               {rightSection}
                          </div>
-                    </div>
+                    </Box>
                </div>
           </div>
      )
