@@ -16,9 +16,9 @@ export default function MenuAppBar({ state, min_width_600px }) {
 
      const hello = (
           <motion.div
-               initial={{ opacity: 0, scale: 1.7 }}
+               initial={{ opacity: 0, scale: 1.9 }}
                animate={{ opacity: 1, scale: 1 }}
-               transition={{ delay: 2.2, duration: 0.3 }}
+               transition={{ delay: 2.2, duration: 0.25 }}
           >
                <Typography variant="h5" sx={{ letterSpacing: 1.3, color: state.strongText, fontWeight: 100 }}>
                     hello i'm
