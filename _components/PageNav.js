@@ -16,7 +16,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
 
      const hello = (
           <motion.div
-               initial={{ opacity: 0, scale: 1.9 }}
+               initial={{ opacity: 0, scale: 1.5 }}
                animate={{ opacity: 1, scale: 1 }}
                transition={{ delay: 2.2, duration: 0.25 }}
           >
