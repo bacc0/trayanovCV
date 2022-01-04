@@ -34,23 +34,23 @@ export default function MenuAppBar({ state, min_width_600px }) {
 
      const typing = (
           <motion.div
-               initial={{ opacity: 0, pathLength: 0 }}
+               initial={{ opacity: 0.4, pathLength: 0 }}
                animate={{ opacity: 1, pathLength: 1 }}
-               transition={{ delay: 0.2, duration: 1.5 }}
+               transition={{ delay: 0, duration: 5.5 }}
           >
                <Typography
                     variant="h5"
                     sx={{
                          mt: 1,
                          mt: theme.spacing(-28.7),
-                         ml: min_width_600px ? 4 : 3,
+                         // ml: min_width_600px ? 4 : 3,
                          color: state.strongText,
                          fontWeight: 100,
                          letterSpacing: 1.3,
-                         textAlign: 'left'
+                         // textAlign: 'left'
                     }}
                >
-                    {typeWriter('front ...end developer')}
+                    {typeWriter( [ 'hello', '...', 'front ...end developer'])}
                </Typography>
           </motion.div>
      )

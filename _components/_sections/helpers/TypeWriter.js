@@ -10,11 +10,15 @@ export const typeWriter = (sentence, typeSpeed = 75) => {
                transition={{ duration: 0.6 }}
           >
                <Typewriter
-                    words={[sentence]}
+                    words={sentence}
                     loop={1}
-                    typeSpeed={typeSpeed}
+                    cursor
+                    cursorStyle='_'
+                    typeSpeed={140}
                     deleteSpeed={50}
-                    delaySpeed={2000}
+                    delaySpeed={500}
+
+                  
                />
           </motion.div>
      )
