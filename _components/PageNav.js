@@ -14,15 +14,11 @@ export default function MenuAppBar({ state, min_width_600px }) {
 
      const theme = useTheme()
 
-
-
-
-
      const hello = (
           <motion.div
                initial={{ opacity: 0, scale: 1.7 }}
                animate={{ opacity: 1, scale: 1 }}
-               transition={{ delay: 2.2, duration: 0.2 }}
+               transition={{ delay: 2.2, duration: 0.3 }}
           >
                <Typography variant="h5" sx={{ letterSpacing: 1.3, color: state.strongText, fontWeight: 100 }}>
                     hello i'm
