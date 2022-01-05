@@ -76,7 +76,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
      )
 
      const veselin = (
-          <Box sx={{ height: theme.spacing(50), mt: '-98px', minWidth: '300px'}} >
+          <Box sx={{ height: theme.spacing(50), mt: '-98px', minWidth: '310px'}} >
                <Veselin color={state.strongText} />
           </Box>
      )
