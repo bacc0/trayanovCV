@@ -126,7 +126,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
                <div style={card_title_style}>
                     <Card sx={card_style_container}>
                          <Box sx={card_style}>
-                              <div style={{ minHeight: '50px' }}>
+                              <div style={{  height: '50px',}}>
                                    {colibri}
                               </div>
                               <Box sx={style_hello_container} >
