@@ -12,7 +12,7 @@ export default ({ color }) => {
      const strokeWidth = 0.6
      const transitionFill = { delay: 2.4, duration: 1 }
      const transitionStroke = { delay: 0.4, duration: 2 }
-     const size = 250
+     const size = 240
 
      return (
           <>

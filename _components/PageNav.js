@@ -65,7 +65,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
                               minWidth: '300px',
                               mt: '-54px',
                               minWidth: 300
-                              ,backgroundColor:'lime'
+                              // ,backgroundColor:'lime'
                          }}
                     >
                          hello i'm
@@ -76,7 +76,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
      )
 
      const veselin = (
-          <Box sx={{ height: theme.spacing(50), mt: '-98px', minWidth: '300px',backgroundColor:'red'}} >
+          <Box sx={{ height: theme.spacing(50), mt: '-98px', minWidth: '300px'}} >
                <Veselin color={state.strongText} />
           </Box>
      )
@@ -87,7 +87,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
      }, 3200);
 
      const typing = (
-          <Box sx={{ minWidth: '300px',backgroundColor:'lime' }} >
+          <Box sx={{ minWidth: '300px'}} >
                <Typography
                     variant="h4"
                     sx={{
