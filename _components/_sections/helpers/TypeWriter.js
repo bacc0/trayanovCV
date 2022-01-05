@@ -17,8 +17,6 @@ export const typeWriter = (sentence, typeSpeed = 75) => {
                     typeSpeed={90}
                     deleteSpeed={40}
                     delaySpeed={200}
-
-                  
                />
           </motion.div>
      )

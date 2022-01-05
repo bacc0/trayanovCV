@@ -9,22 +9,23 @@ export default ({ color }) => {
 
      const fill = color
      const stroke = color
-     const strokeWidth = 0.8
-     const transitionFill = { delay: 7, duration: 4 }
-     const transitionStroke = { delay: 2.5, duration: 2 }
+     const strokeWidth = 0.6
+     const transitionFill = { delay: 2.4, duration: 1 }
+     const transitionStroke = { delay: 0.4, duration: 2 }
+     const size = 250
 
      return (
           <>
                <motion.div
                     initial={{ opacity: 0 }}  // x=?
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 2.6, duration: 1 }}
+                    transition={{ delay: 0.6, duration: 1.5 }}
                >
                     <svg
                          version='1.1'
                          xmlns='http://www.w3.org/2000/svg'
-                         width={170}
-                         height={170}
+                         width={size}
+                         height={size}
                          viewBox='0, 0, 205, 48'
 
                     >
