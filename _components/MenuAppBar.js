@@ -10,6 +10,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
 
+
 export default function MenuAppBar({
      state, theme, setTheme, Y_position, scrollDirection, min_width_600px, currentBrowser }) {
 
@@ -50,7 +51,7 @@ export default function MenuAppBar({
           setTheme(theme === 'light' ? 'dark' : 'light')
      }
      const AppBarStyle = {
-          backgroundColor: currentBrowser === 'firefox' ? `${AppBackgroundColor}fa` : `${AppBackgroundColor}77`,
+          backgroundColor: currentBrowser !== 'firefox' ? `${AppBackgroundColor}cc` : `${AppBackgroundColor}fa`,
 
           '-webkit-backdrop-filter': `blur(10px)`,
           ' backdrop-filter': `blur(10px)`,

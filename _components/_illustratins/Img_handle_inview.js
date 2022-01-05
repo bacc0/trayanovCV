@@ -23,7 +23,7 @@ export default ({ src, min_width_600px, threshold = 0.45 }) => {
                setVisible(true),
                setInterval(() => { setOpacity(true) }, 100)
           }
-          console.log(inView)
+          // console.log(inView)
      }, [inView])
 
 

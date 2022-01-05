@@ -45,8 +45,8 @@ export default function MenuAppBar({ state, min_width_600px }) {
      )
 
      const hello = (
-            <Box sx={{ minWidth: '300px'}} >
-               {colibri}
+          <Box sx={{ minWidth: '300px' }} >
+
                <motion.div
                     initial={{ opacity: 0, scale: 1.5, x: 20 }}
                     animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -55,16 +55,11 @@ export default function MenuAppBar({ state, min_width_600px }) {
                     <Typography
                          variant="h5"
                          sx={{
-                              letterSpacing: 1.3,
                               color: state.strongText,
                               fontWeight: 100,
                               fontSize: 20,
                               letterSpacing: 1.2,
-                              minHeight: 20,
-                              ml: '-75px',
-                              minWidth: '300px',
-                              mt: '-58px',
-                              minWidth: 300
+
                               // ,backgroundColor:'lime'
                          }}
                     >
@@ -72,14 +67,9 @@ export default function MenuAppBar({ state, min_width_600px }) {
                     </Typography>
 
                </motion.div>
-            </Box>
-     )
-
-     const veselin = (
-          <Box sx={{ height: theme.spacing(50), mt: '-98px', minWidth: '310px'}} >
-               <Veselin color={state.strongText} />
           </Box>
      )
+
 
      const [vis, setVis] = React.useState(false);
      setInterval(() => {
@@ -87,16 +77,15 @@ export default function MenuAppBar({ state, min_width_600px }) {
      }, 3200);
 
      const typing = (
-          <Box sx={{ minWidth: '300px'}} >
+          <Box sx={{ minWidth: '300px' }} >
                <Typography
                     variant="h4"
                     sx={{
-                         mt: 1,
-                         mt: '-237px',
+
                          color: state.strongText,
                          fontSize: 22,
                          letterSpacing: 1.3,
-                         minHeight: 50,
+
                          // fontWeight: 600,
                          // backgroundColor: '#22222222'
                     }}
@@ -112,6 +101,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
           m: 0,
           pt: min_width_600px ? 5.5 : 3.5,
           pb: min_width_600px ? 5.5 : 3.5,
+
           pb: 0,
           minWidth: 300,
           boxShadow: 0,
@@ -122,12 +112,36 @@ export default function MenuAppBar({ state, min_width_600px }) {
 
 
      const cardTitle = (
-          <div style={{ display: 'flex', justifyContent: 'center', height: 205 }}>
+          <div style={{ display: 'flex', justifyContent: 'center', minHeight: 205 }}>
                <Card sx={cardStyle}>
-                    <Box sx={{ color: state.backgroundColor, textAlign: 'center', fontSize: 19.4, letterSpacing: 2 }}>
-                         {hello}
-                         {veselin}
-                         {typing}
+                    <Box sx={{ color: state.backgroundColor, textAlign: 'center', fontSize: 19.4, letterSpacing: 2, }}>
+                         <Box sx={{ minHeight: '50px' }}>
+                              {colibri}
+                         </Box>
+                         <Box
+                              sx={{
+                                   mt: '-58px',
+                                   ml: '-75px',
+                                   minHeight: '20px',
+                                   minWidth: '300px',
+                                   // backgroundColor: 'red',
+                              }}
+                         >
+                              {hello}
+                         </Box>
+                         <Box sx={{ height: '166px',  mt: '-98px', minWidth: '310px' }} >
+                              <Veselin color={state.strongText} />
+                         </Box>
+                         <Box sx={{
+                              mt: 1,
+                              mt: '-237px',
+                              minHeight: 50,
+                              minHeight: '25px', 
+                              // backgroundColor: 'red', 
+                         }}
+                         >
+                              {typing}
+                         </Box>
                     </Box>
                </Card>
           </div>

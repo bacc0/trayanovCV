@@ -20,7 +20,8 @@ export default function Home() {
      const { scrollYProgress } = useViewportScroll(0)
      const [Y_position, set_Y_position] = useState(0)
      // const [currentBrowser, setCurrentBrowser] = useState(0)
-     let currentBrowser = ''
+     // let currentBrowser = ''
+     const [currentBrowser, setCurrentBrowser] = useState('')
 
      // ---------------------------------    Detect window Size
      if (typeof window !== 'undefined') {
@@ -93,6 +94,7 @@ export default function Home() {
 
      if (browser.name === 'firefox') {
           currentBrowser = 'firefox'
+          // setCurrentBrowser('firefox')
      }
 
  // ---------------------------------    Detect Browser Size
