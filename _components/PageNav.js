@@ -17,15 +17,15 @@ export default function MenuAppBar({ state, min_width_600px }) {
      const colibri = (
           <>
                <motion.div
-                    initial={{ opacity: 0, scale: 1, x: 32 , y:  3 }}
-                    animate={{ opacity: 1, scale: 0.8, x: 0  , y: 0 }}
+                    initial={{ opacity: 0, scale: 1, x: 32, y: 3 }}
+                    animate={{ opacity: 1, scale: 0.8, x: 0, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.25 }}
                >
 
                     <div id='colibri_hype_container'
                          class='HYPE_document'
                          style={{
-                           
+
                               position: 'relative',
                               top: -40,
                               right: 156,
@@ -45,39 +45,38 @@ export default function MenuAppBar({ state, min_width_600px }) {
      )
 
      const hello = (
-          <>
-          {colibri}
-          <motion.div
-               initial={{ opacity: 0, scale: 1.5, x: 20}}
-               animate={{ opacity: 1, scale: 1 , x: 0 }}
-               transition={{ delay: 0.5, duration: 0.25 }}
-          >
-               <Typography 
-                    variant="h5" 
-                    sx={{ 
-                         letterSpacing: 1.3, 
-                         color: state.strongText, 
-                         fontWeight: 100,
-                         fontSize: 20,
-                         letterSpacing: 1.2,
-                         minHeight: 20,
-                         ml: '-75px' ,
-                         mt: '-54px' ,
-                         minWidth: 300,
-                         // backgroundColor:'red'
-               }}
+            <Box sx={{ minWidth: '300px'}} >
+               {colibri}
+               <motion.div
+                    initial={{ opacity: 0, scale: 1.5, x: 20 }}
+                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                    transition={{ delay: 0.5, duration: 0.25 }}
                >
-                    hello i'm
-               </Typography>
-               
-          </motion.div>
-   </>  
-   )
+                    <Typography
+                         variant="h5"
+                         sx={{
+                              letterSpacing: 1.3,
+                              color: state.strongText,
+                              fontWeight: 100,
+                              fontSize: 20,
+                              letterSpacing: 1.2,
+                              minHeight: 20,
+                              ml: '-75px',
+                              mt: '-54px',
+                              minWidth: 300,
+                              // backgroundColor:'red'
+                         }}
+                    >
+                         hello i'm
+                    </Typography>
+
+               </motion.div>
+            </Box>
+     )
 
      const veselin = (
-          <Box sx={{ height: theme.spacing(50), mt: '-98px'}} >
-               <Veselin color={state.strongText}  />
-               
+          <Box sx={{ height: theme.spacing(50), mt: '-98px', minWidth: '300px'}} >
+               <Veselin color={state.strongText} />
           </Box>
      )
 
@@ -87,6 +86,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
      }, 3200);
 
      const typing = (
+          <Box sx={{ minWidth: '300px' }} >
                <Typography
                     variant="h4"
                     sx={{
@@ -104,6 +104,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
                          {typeWriter(['...end ', 'front ...end developer'])}
                     </div>)}
                </Typography>
+          </Box>
      )
 
      const cardStyle = {
@@ -120,7 +121,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
 
 
      const cardTitle = (
-          <div style={{ display: 'flex', justifyContent: 'center', height: 205}}>
+          <div style={{ display: 'flex', justifyContent: 'center', height: 205 }}>
                <Card sx={cardStyle}>
                     <Box sx={{ color: state.backgroundColor, textAlign: 'center', fontSize: 19.4, letterSpacing: 2 }}>
                          {hello}
