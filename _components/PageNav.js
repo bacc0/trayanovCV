@@ -94,7 +94,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
                          mt: 1,
                          mt: '-237px',
                          color: state.strongText,
-                         fontSize: 29,
+                         fontSize: 22,
                          letterSpacing: 1.3,
                          minHeight: 50,
                          // fontWeight: 600,
@@ -149,7 +149,6 @@ export default function MenuAppBar({ state, min_width_600px }) {
      return (
           <div style={styleRoot}>
                {cardTitle}
-               {/* {colibri} */}
           </div>
      )
 }
