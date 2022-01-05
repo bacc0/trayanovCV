@@ -4,17 +4,22 @@ import AboutMe from './3_AboutMe'
 import Footer from './4_Footer'
 import Kkk from './Kkk'
 import Box from '@mui/material/Box'
-import { motion, Animate } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 export default function _CombineSections({
      state, theme, min_width_600px, animationTransition, Y_position }) {
 
 
+
+
+          
+
+
      return (
           <motion.div
                initial={{ opacity: 0., y: 30 }}
-               animate={{ opacity: 1, y: 0 }}
+               animate={{ opacity: 1,  y: 0 }}
                transition={{ delay: 0.2, duration: 0.25, ease: 'easeInOut' }}
           >
                <Box
@@ -24,16 +29,12 @@ export default function _CombineSections({
                          fontWeight: min_width_600px ? 100 : 300,
                     }}
                >
-                    {/* <div style={{ borderTop: `1px solid ${state.thirdLettersColor}`}}></div> */}
-
-                    {/* <Kkk
-                    state={state}
-                    min_width_600px={min_width_600px}
-               /> */}
+                  
                     <Experience
                          state={state}
                          min_width_600px={min_width_600px}
                     />
+
                     <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
 
                     <Technologies

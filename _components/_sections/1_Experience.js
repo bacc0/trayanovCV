@@ -1,6 +1,6 @@
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
-// import { useTheme } from '@mui/material/styles'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
+import { motion } from 'framer-motion'
 
 
 export default function Kkk({ state, min_width_600px }) {
@@ -51,15 +51,15 @@ export default function Kkk({ state, min_width_600px }) {
                     height: 1,
                     boxShadow: 0,
                     borderLeft: 0,
-                    backgroundColor: "transparent" 
+                    backgroundColor: "transparent"
                }}
           >
-               <Box sx={{ 
-                    borderBottom: 1.3, 
-                    width: min_width_600px ? 210 : '100%',  
+               <Box sx={{
+                    borderBottom: 1.3,
+                    width: min_width_600px ? 210 : '100%',
                     color: backgroundColor,
-                    
-                    }}
+
+               }}
                >
                     <Typography variant="h4" sx={{ letterSpacing: 2 }}>
                          Experience
@@ -86,14 +86,14 @@ export default function Kkk({ state, min_width_600px }) {
           return (
                <Card sx={L_R_cardsStyle}>
                     <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
-                    
+
                          <Typography variant="h5" sx={{ mt: 1.7, color: thirdLettersColor, letterSpacing: 1 }} >
                               React Developer
                          </Typography>
                          <Typography sx={{ mt: 0.5, mb: 3.24, color: thirdLettersColor, letterSpacing: 0.62 }} >
                               Groundbits Ltd
                          </Typography>
-                         <Typography variant="p" sx={{ fontWeight: 'bold', color: strongText}}>
+                         <Typography variant="p" sx={{ fontWeight: 'bold', color: strongText }}>
                               {period}
                               <br />
                          </Typography>
@@ -120,7 +120,7 @@ export default function Kkk({ state, min_width_600px }) {
                                              {mail}
                                         </Typography>
                                         <Box sx={{ height: theme.spacing(min_width_600px ? 2.3 : 4.1) }} />
-                                        {img} 
+                                        {img}
                                    </>
                               )
                          }
@@ -132,10 +132,10 @@ export default function Kkk({ state, min_width_600px }) {
      const amdocs = (
           <Card sx={L_R_cardsStyle}>
                <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
-                    <Typography variant="h5" sx={{ mt: 1.7, color: thirdLettersColor, letterSpacing: 1}} >
+                    <Typography variant="h5" sx={{ mt: 1.7, color: thirdLettersColor, letterSpacing: 1 }} >
                          React Developer
                     </Typography>
-                    <Typography sx={{ mt: 0.5, mb: 3.24, color: thirdLettersColor, letterSpacing: 0.62}} >
+                    <Typography sx={{ mt: 0.5, mb: 3.24, color: thirdLettersColor, letterSpacing: 0.62 }} >
                          Amdocs via Appgr8
                     </Typography>
                     <Typography variant="p" sx={{ fontWeight: 'bold', color: strongText }}>
@@ -167,21 +167,25 @@ export default function Kkk({ state, min_width_600px }) {
           <div style={sectionsContainer}>
                <div style={titleContainer}>
                     <div>{cardTitle}</div>
-                    <Box style={sectionsBody} 
-                         
+                    <motion.div
+                         initial={{ opacity: 1, y: 5 }}
+                         animate={{ opacity: 1, y: 0 }}
+                         transition={{ delay: 0.25, duration: 0.25, ease: 'easeInOut' }}
                     >
-                         <Box style={sections}>
-                              {/* {img} */}
-                              {groundbits('Dec 2021 – Present', 'Ricard Rosson', 'ricard@iacos.net')}
-                         </Box>
+                         <Box style={sectionsBody}>
+                              <Box style={sections}>
+                                   {/* {img} */}
+                                   {groundbits('Dec 2021 – Present', 'Ricard Rosson', 'ricard@iacos.net')}
+                              </Box>
 
-                         <Box style={sections} >
-                              <Box sx={{ height: theme.spacing(min_width_600px ? 0 : 2.4) }} />
-                              {amdocs}
-                              <Box sx={{ height: theme.spacing(2.4) }} />
-                              {groundbits('Jan 2020 – Jan 2021')}
+                              <Box style={sections} >
+                                   <Box sx={{ height: theme.spacing(min_width_600px ? 0 : 2.4) }} />
+                                   {amdocs}
+                                   <Box sx={{ height: theme.spacing(2.4) }} />
+                                   {groundbits('Jan 2020 – Jan 2021')}
+                              </Box>
                          </Box>
-                    </Box>
+                    </motion.div>
                </div>
           </div>
      )
