@@ -63,7 +63,7 @@ export default function MenuAppBar({
           fontSize: 10,
           position: 'fixed',
           top: appBarIsVisible ? 0 : -150,
-          transition: `top ${scrollDirection === 'up' ? '800ms' : '600ms'} linear`,
+          transition: `top ${scrollDirection === 'up' ? '800ms' : '700ms'} linear`,
      }
 
      const underAppBar = {
