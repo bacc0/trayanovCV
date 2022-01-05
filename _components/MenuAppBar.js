@@ -63,7 +63,7 @@ export default function MenuAppBar({
           fontSize: 10,
           position: 'fixed',
           top: appBarIsVisible ? 0 : -150,
-          transition: `top ${scrollDirection === 'up' ? '800ms' : '650ms'} linear`,
+          transition: `top ${scrollDirection === 'up' ? '800ms' : '600ms'} linear`,
      }
 
      const underAppBar = {
@@ -155,7 +155,7 @@ export default function MenuAppBar({
                                    }}
                                         initial={{ opacity: 0 }}
                                         animate={{opacity: 1}}
-                                        transition={{ delay: 6.3, duration: 0.4, ease: 'linear' }}
+                                        transition={{ delay: 6.5, duration: 0.4, ease: 'linear' }}
                                    >
                                              {theme === 'light'
                                                   ? <DarkModeIcon />
