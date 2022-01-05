@@ -25,7 +25,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
           <motion.div
                initial={{ opacity: 0, scale: 1, x: 32, y: 3 }}
                animate={{ opacity: 1, scale: 0.8, x: 0, y: 0 }}
-               transition={{ delay: 0.5, duration: 0.25 }}
+               transition={{ delay: 0.2, duration: 0.25 }}
           >
                <div id='colibri_hype_container' class='HYPE_document' style={style_colibri} />
                <Script
@@ -54,7 +54,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
                <motion.div
                     initial={{ opacity: 0, scale: 1.5, x: 20 }}
                     animate={{ opacity: 1, scale: 1, x: 0 }}
-                    transition={{ delay: 0.5, duration: 0.25 }}
+                    transition={{ delay: 0.2, duration: 0.25 }}
                >
                     <Typography variant='h5' sx={style_hello} >
                          hello i'm

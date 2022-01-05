@@ -88,85 +88,75 @@ export default function MenuAppBar({
 
 
      return (
-          <Box>
-               <motion.div
-               //  initial={{ opacity: 0, y: -65 }}
-               //  animate={{ opacity: 1, y: 0 }}
-               //  transition={{ delay: 0, duration: 2, ease: 'easeInOut' }}
-               >
-                    <AppBar style={AppBarStyle} position='fixed'>
-                         <motion.div
-                         // initial={{ opacity: 0, y: -65 }}
-                         // animate={{ opacity: 1, y: 0 }}
-                         // transition={{ delay: 0, duration: 2, ease: 'easeInOut' }}
+          <>
+               <AppBar style={AppBarStyle} position='fixed'>
+
+                    <Toolbar
+                         style={{
+                              maxWidth: min_width_600px ? 744 : 360,
+                              margin: '0 auto'
+                         }}
+                    >
+                         <Hidden smDown>
+                              <Typography style={titleStyle} sx={{ flexGrow: 1 }}>
+                                   Veselin Trayanov
+                              </Typography>
+                         </Hidden>
+                         <Stack
+                              direction='row'
+                              spacing={1}
+                              style={iconsStackStyle}
                          >
-                              <Toolbar
-                                   style={{
-                                        maxWidth: min_width_600px ? 744 : 360,
-                                        margin: '0 auto'
-                                   }}
+                              <IconButton
+                                   href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'} aria-label='LinkedIn Icon' style={iconsStyle}
                               >
-                                   <Hidden smDown>
-                                        <Typography style={titleStyle} sx={{ flexGrow: 1 }}>
-                                             Veselin Trayanov
-                                        </Typography>
-                                   </Hidden>
-                                   <Stack
-                                        direction='row'
-                                        spacing={1}
-                                        style={iconsStackStyle}
-                                   >
-                                        <IconButton
-                                             href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'} aria-label='LinkedIn Icon' style={iconsStyle}
-                                        >
-                                             <LinkedInIcon />
-                                        </IconButton>
+                                   <LinkedInIcon />
+                              </IconButton>
 
-                                        <IconButton
-                                             href={`tel: 00447590010066`}
-                                             aria-label='Phone Icon' style={iconsStyle}
-                                        >
-                                             <PhoneEnabledSharpIcon />
-                                        </IconButton>
+                              <IconButton
+                                   href={`tel: 00447590010066`}
+                                   aria-label='Phone Icon' style={iconsStyle}
+                              >
+                                   <PhoneEnabledSharpIcon />
+                              </IconButton>
 
-                                        <IconButton
-                                             href={`mailto: bacco23@gmail.com`}
-                                             aria-label='Local Icon' style={iconsStyle}
-                                        >
-                                             <LocalPostOfficeSharpIcon />
-                                        </IconButton>
+                              <IconButton
+                                   href={`mailto: bacco23@gmail.com`}
+                                   aria-label='Local Icon' style={iconsStyle}
+                              >
+                                   <LocalPostOfficeSharpIcon />
+                              </IconButton>
 
-                                        <IconButton
-                                             href={'https://www.google.com/maps/@51.4764334,-0.1572618,16.21z'}
-                                             aria-label='Location Icon' style={iconsStyle}
-                                        >
-                                             <LocationOnSharpIcon />
-                                        </IconButton>
+                              <IconButton
+                                   href={'https://www.google.com/maps/@51.4764334,-0.1572618,16.21z'}
+                                   aria-label='Location Icon' style={iconsStyle}
+                              >
+                                   <LocationOnSharpIcon />
+                              </IconButton>
 
-                                        <IconButton
-                                             href={'https://github.com/bacc0'}
-                                             aria-label='GitHub Icon' style={iconsStyle}
-                                        >
-                                             <GitHubIcon />
-                                        </IconButton>
+                              <IconButton
+                                   href={'https://github.com/bacc0'}
+                                   aria-label='GitHub Icon' style={iconsStyle}
+                              >
+                                   <GitHubIcon />
+                              </IconButton>
 
-                                        <IconButton
-                                             onClick={() => handleThemeChange()}
-                                             aria-label='theme icon' style={iconsStyle}
-                                             style={{ color: thirdLettersColor }}
-                                        >
-                                             {theme === 'light'
-                                                  ? <DarkModeIcon />
-                                                  : <LightModeIcon />
-                                             }
-                                        </IconButton>
-                                   </Stack>
-                              </Toolbar>
-                         </motion.div>
-                    </AppBar>
-                    <div style={underAppBar} />
-               </motion.div>
-          </Box >
+                              <IconButton
+                                   onClick={() => handleThemeChange()}
+                                   aria-label='theme icon' style={iconsStyle}
+                                   style={{ color: thirdLettersColor }}
+                              >
+                                   {theme === 'light'
+                                        ? <DarkModeIcon />
+                                        : <LightModeIcon />
+                                   }
+                              </IconButton>
+                         </Stack>
+                    </Toolbar>
+
+               </AppBar>
+               <div style={underAppBar} />
+          </ >
      )
 }
 
