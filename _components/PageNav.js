@@ -63,7 +63,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
                               minHeight: 20,
                               ml: '-75px',
                               minWidth: '300px',
-                              mt: '-54px',
+                              mt: '-58px',
                               minWidth: 300
                               // ,backgroundColor:'lime'
                          }}
