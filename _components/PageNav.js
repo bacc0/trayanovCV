@@ -44,6 +44,21 @@ export default function MenuAppBar({ state, min_width_600px }) {
           </>
      )
 
+     const style_hello_container = {
+          mt: '-58px',
+          ml: '-75px',
+          minHeight: '20px',
+          minWidth: '300px',
+          // backgroundColor: 'red',
+     }
+     const style_hello = {
+          color: state.strongText,
+          fontWeight: 100,
+          fontSize: 20,
+          letterSpacing: 1.2,
+          // ,backgroundColor:'lime'
+     }
+
      const hello = (
           <Box sx={{ minWidth: '300px' }} >
 
@@ -54,14 +69,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
                >
                     <Typography
                          variant="h5"
-                         sx={{
-                              color: state.strongText,
-                              fontWeight: 100,
-                              fontSize: 20,
-                              letterSpacing: 1.2,
-
-                              // ,backgroundColor:'lime'
-                         }}
+                         sx={style_hello}
                     >
                          hello i'm
                     </Typography>
@@ -70,6 +78,18 @@ export default function MenuAppBar({ state, min_width_600px }) {
           </Box>
      )
 
+     const style_typing_container = {
+          mt: 1,
+          mt: '6px',
+          minHeight: 100,
+          minHeight: '30px', 
+          // backgroundColor: 'red',
+     }
+     const style_typing = {
+          color: state.strongText,
+          fontSize: 22,
+          letterSpacing: 1.3,
+     }
 
      const [vis, setVis] = React.useState(false);
      setInterval(() => {
@@ -80,15 +100,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
           <Box sx={{ minWidth: '300px' }} >
                <Typography
                     variant="h4"
-                    sx={{
-
-                         color: state.strongText,
-                         fontSize: 22,
-                         letterSpacing: 1.3,
-
-                         // fontWeight: 600,
-                         // backgroundColor: '#22222222'
-                    }}
+                    sx={style_typing}
                >
                     {vis && (<div>
                          {typeWriter(['...end ', 'front ...end developer'])}
@@ -97,49 +109,37 @@ export default function MenuAppBar({ state, min_width_600px }) {
           </Box>
      )
 
-     const cardStyle = {
+     const card_style_container = { display: 'flex', justifyContent: 'center', minHeight: 205 }
+
+     const card_style = {
           m: 0,
           pt: min_width_600px ? 5.5 : 3.5,
-          pb: min_width_600px ? 5.5 : 3.5,
-
           pb: 0,
           minWidth: 300,
           boxShadow: 0,
           borderLeft: 0,
           backgroundColor: "transparent",
      }
-
+     const card_veselin = { 
+          height: '160px',
+           mt: '-98px', minWidth: '310px'
+          }
 
 
      const cardTitle = (
-          <div style={{ display: 'flex', justifyContent: 'center', minHeight: 205 }}>
-               <Card sx={cardStyle}>
+          <div style={card_style_container}>
+               <Card sx={card_style}>
                     <Box sx={{ color: state.backgroundColor, textAlign: 'center', fontSize: 19.4, letterSpacing: 2, }}>
                          <Box sx={{ minHeight: '50px' }}>
                               {colibri}
                          </Box>
-                         <Box
-                              sx={{
-                                   mt: '-58px',
-                                   ml: '-75px',
-                                   minHeight: '20px',
-                                   minWidth: '300px',
-                                   // backgroundColor: 'red',
-                              }}
-                         >
+                         <Box sx={style_hello_container} >
                               {hello}
                          </Box>
-                         <Box sx={{ height: '166px',  mt: '-98px', minWidth: '310px' }} >
+                         <Box sx={card_veselin} >
                               <Veselin color={state.strongText} />
                          </Box>
-                         <Box sx={{
-                              mt: 1,
-                              mt: '-237px',
-                              minHeight: 50,
-                              minHeight: '25px', 
-                              // backgroundColor: 'red', 
-                         }}
-                         >
+                         <Box sx={style_typing_container}>
                               {typing}
                          </Box>
                     </Box>
@@ -147,21 +147,16 @@ export default function MenuAppBar({ state, min_width_600px }) {
           </div>
      )
 
-
-
-     const styleRoot = {
+     const style_root = {
           position: 'relative',
           top: 0,
           minWidth: 300,
           width: '100%',
           height: 205,
-          // backgroundColor: 'beige'
-
      }
 
-
      return (
-          <div style={styleRoot}>
+          <div style={style_root}>
                {cardTitle}
           </div>
      )
