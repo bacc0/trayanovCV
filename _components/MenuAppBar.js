@@ -51,7 +51,6 @@ export default function MenuAppBar({
           setTheme(theme === 'light' ? 'dark' : 'light')
      }
 
-     
 
      const AppBarStyle = {
           backgroundColor: currentBrowser !== 'firefox' ? `${AppBackgroundColor}cc` : `${AppBackgroundColor}fa`,
@@ -63,10 +62,8 @@ export default function MenuAppBar({
           borderBottom: `0.3px solid ${secLettersColor}55`,
           fontSize: 10,
           position: 'fixed',
-          top: appBarIsVisible
-               ? 0
-               :  -300,
-          transition: `top ${scrollDirection === 'up' ? '2000ms' : '1200ms'} linear`,
+          top: appBarIsVisible ? 0 : -300,
+          transition: `top ${scrollDirection === 'up' ? '1700ms' : '1200ms'} linear`,
      }
 
      const underAppBar = {
