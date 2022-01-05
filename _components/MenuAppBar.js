@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion, Animate } from 'framer-motion'
 import { Stack, IconButton, Typography, Toolbar, AppBar, Box, Hidden } from '@mui/material'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -16,14 +16,14 @@ export default function MenuAppBar({
 
      const { strongText, thirdLettersColor, hrColorMain, AppBackgroundColor, animationTransition, secLettersColor } = state
 
-     
+
      const [appBarIsVisible, setAppBarIsVisible] = useState(false)
      const [marker, setMarker] = useState(false)
 
-    
+
      // setTimeout(() => {
      //      setHeightAppBar(55)
-         
+
      // }, 2200)
 
 
@@ -50,6 +50,9 @@ export default function MenuAppBar({
      const handleThemeChange = () => {
           setTheme(theme === 'light' ? 'dark' : 'light')
      }
+
+     
+
      const AppBarStyle = {
           backgroundColor: currentBrowser !== 'firefox' ? `${AppBackgroundColor}cc` : `${AppBackgroundColor}fa`,
 
@@ -60,8 +63,10 @@ export default function MenuAppBar({
           borderBottom: `0.3px solid ${secLettersColor}55`,
           fontSize: 10,
           position: 'fixed',
-          top: appBarIsVisible ? 0 : -300,
-          transition: `top 1300ms linear`,
+          top: appBarIsVisible
+               ? 0
+               :  -300,
+          transition: `top ${scrollDirection === 'up' ? '2000ms' : '1200ms'} linear`,
      }
 
      const underAppBar = {
@@ -94,9 +99,9 @@ export default function MenuAppBar({
                >
                     <AppBar style={AppBarStyle} position='fixed'>
                          <motion.div
-                              // initial={{ opacity: 0, y: -65 }}
-                              // animate={{ opacity: 1, y: 0 }}
-                              // transition={{ delay: 0, duration: 2, ease: 'easeInOut' }}
+                         // initial={{ opacity: 0, y: -65 }}
+                         // animate={{ opacity: 1, y: 0 }}
+                         // transition={{ delay: 0, duration: 2, ease: 'easeInOut' }}
                          >
                               <Toolbar
                                    style={{

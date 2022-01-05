@@ -94,7 +94,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
 
      const card_style_container = {
           m: 0,
-          pt: min_width_600px ? 5.5 : 3.5,
+          pt: min_width_600px ? 5.5 : 5.5,
           pb: 0,
           minWidth: 300,
           boxShadow: 0,
