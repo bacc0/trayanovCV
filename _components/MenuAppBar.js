@@ -83,6 +83,7 @@ export default function MenuAppBar({
      }
      const iconsStyle = {
           color: strongText,
+          width: 40, height: 40,
           transition: `color ${animationTransition} ease`,
      }
 
@@ -141,22 +142,27 @@ export default function MenuAppBar({
                                    >
                                         <GitHubIcon />
                                    </IconButton>
-                                   <motion.span
-                                        initial={{ opacity: 0, y: 180 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 7.2, duration: 0.1, ease: 'linear' }}
+                                   <IconButton
+                                      
+                                   
+                                        onClick={() => handleThemeChange()}
+                                        aria-label='theme icon' style={{...iconsStyle, ...{color: thirdLettersColor}}}
                                    >
-                                        <IconButton
-                                             onClick={() => handleThemeChange()}
-                                             aria-label='theme icon' style={iconsStyle}
-                                             style={{ color: thirdLettersColor }}
-                                        >
+                                   <motion.div
+                                   style={{
+                                        position: 'relative',
+                                        top: 2
+                                   }}
+                                        initial={{ opacity: 0 }}
+                                        animate={{opacity: 1}}
+                                        transition={{ delay: 7, duration: 0.4, ease: 'linear' }}
+                                   >
                                              {theme === 'light'
                                                   ? <DarkModeIcon />
                                                   : <LightModeIcon />
                                              }
+                                   </motion.div>
                                         </IconButton>
-                                   </motion.span>
                               </Stack>
                          </Toolbar>
                     </div>
