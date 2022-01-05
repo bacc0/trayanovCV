@@ -88,75 +88,82 @@ export default function MenuAppBar({
 
 
      return (
-          <>
+          <Box>
+
                <AppBar style={AppBarStyle} position='fixed'>
-
-                    <Toolbar
-                         style={{
-                              maxWidth: min_width_600px ? 744 : 360,
-                              margin: '0 auto'
-                         }}
-                    >
-                         <Hidden smDown>
-                              <Typography style={titleStyle} sx={{ flexGrow: 1 }}>
-                                   Veselin Trayanov
-                              </Typography>
-                         </Hidden>
-                         <Stack
-                              direction='row'
-                              spacing={1}
-                              style={iconsStackStyle}
+                    <div>
+                         <Toolbar
+                              style={{
+                                   maxWidth: min_width_600px ? 744 : 360,
+                                   margin: '0 auto'
+                              }}
                          >
-                              <IconButton
-                                   href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'} aria-label='LinkedIn Icon' style={iconsStyle}
+                              <Hidden smDown>
+                                   <Typography style={titleStyle} sx={{ flexGrow: 1 }}>
+                                        Veselin Trayanov
+                                   </Typography>
+                              </Hidden>
+                              <Stack
+                                   direction='row'
+                                   spacing={1}
+                                   style={iconsStackStyle}
                               >
-                                   <LinkedInIcon />
-                              </IconButton>
+                                   <IconButton
+                                        href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'} aria-label='LinkedIn Icon' style={iconsStyle}
+                                   >
+                                        <LinkedInIcon />
+                                   </IconButton>
 
-                              <IconButton
-                                   href={`tel: 00447590010066`}
-                                   aria-label='Phone Icon' style={iconsStyle}
-                              >
-                                   <PhoneEnabledSharpIcon />
-                              </IconButton>
+                                   <IconButton
+                                        href={`tel: 00447590010066`}
+                                        aria-label='Phone Icon' style={iconsStyle}
+                                   >
+                                        <PhoneEnabledSharpIcon />
+                                   </IconButton>
 
-                              <IconButton
-                                   href={`mailto: bacco23@gmail.com`}
-                                   aria-label='Local Icon' style={iconsStyle}
-                              >
-                                   <LocalPostOfficeSharpIcon />
-                              </IconButton>
+                                   <IconButton
+                                        href={`mailto: bacco23@gmail.com`}
+                                        aria-label='Local Icon' style={iconsStyle}
+                                   >
+                                        <LocalPostOfficeSharpIcon />
+                                   </IconButton>
 
-                              <IconButton
-                                   href={'https://www.google.com/maps/@51.4764334,-0.1572618,16.21z'}
-                                   aria-label='Location Icon' style={iconsStyle}
-                              >
-                                   <LocationOnSharpIcon />
-                              </IconButton>
+                                   <IconButton
+                                        href={'https://www.google.com/maps/@51.4764334,-0.1572618,16.21z'}
+                                        aria-label='Location Icon' style={iconsStyle}
+                                   >
+                                        <LocationOnSharpIcon />
+                                   </IconButton>
 
-                              <IconButton
-                                   href={'https://github.com/bacc0'}
-                                   aria-label='GitHub Icon' style={iconsStyle}
-                              >
-                                   <GitHubIcon />
-                              </IconButton>
-
-                              <IconButton
-                                   onClick={() => handleThemeChange()}
-                                   aria-label='theme icon' style={iconsStyle}
-                                   style={{ color: thirdLettersColor }}
-                              >
-                                   {theme === 'light'
-                                        ? <DarkModeIcon />
-                                        : <LightModeIcon />
-                                   }
-                              </IconButton>
-                         </Stack>
-                    </Toolbar>
-
+                                   <IconButton
+                                        href={'https://github.com/bacc0'}
+                                        aria-label='GitHub Icon' style={iconsStyle}
+                                   >
+                                        <GitHubIcon />
+                                   </IconButton>
+                                   <motion.span
+                                        initial={{ opacity: 0, y: 180 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 7.2, duration: 0.1, ease: 'linear' }}
+                                   >
+                                        <IconButton
+                                             onClick={() => handleThemeChange()}
+                                             aria-label='theme icon' style={iconsStyle}
+                                             style={{ color: thirdLettersColor }}
+                                        >
+                                             {theme === 'light'
+                                                  ? <DarkModeIcon />
+                                                  : <LightModeIcon />
+                                             }
+                                        </IconButton>
+                                   </motion.span>
+                              </Stack>
+                         </Toolbar>
+                    </div>
                </AppBar>
                <div style={underAppBar} />
-          </ >
+
+          </Box >
      )
 }
 

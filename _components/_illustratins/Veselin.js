@@ -15,7 +15,11 @@ export default ({ color }) => {
      const size = 250
 
      return (
-          <>
+          <motion.div
+               initial={{ scale: 0.9 }}  // x=?
+               animate={{ scale: 1 }}
+               transition={{ delay: 2.16, duration: .25, type: "tween", stiffness: 400 }}
+          >
                <motion.div
                     initial={{ opacity: 0 }}  // x=?
                     animate={{ opacity: 1 }}
@@ -37,6 +41,7 @@ export default ({ color }) => {
                                         transition={transitionFill}
                                         d="M15.982,39.23 L23.926,15.087 L29.529,15.087 L18.028,46.522 L13.848,46.522 L2.228,15.087 L7.83,15.087 z" fill={fill} />
                                    <motion.path
+                                        // strokeDasharray="2 1"
                                         initial={{ opacity: 1, pathLength: 0 }}  // x=?
                                         animate={{ opacity: 1, pathLength: 1 }}
                                         transition={transitionStroke}
@@ -122,6 +127,6 @@ export default ({ color }) => {
 
                     </svg>
                </motion.div>
-          </>
+          </motion.div>
      )
 }
