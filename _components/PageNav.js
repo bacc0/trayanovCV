@@ -40,6 +40,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
           ml: '-75px',
           minHeight: '20px',
           minWidth: '300px',
+          
      }
      const style_hello = {
           color: state.strongText,
@@ -63,10 +64,12 @@ export default function MenuAppBar({ state, min_width_600px }) {
      )
 
      const style_typing_container = {
-          mt: 1,
-          mt: '6px',
+         
           minHeight: 100,
-          minHeight: '30px', minWidth: '300px'
+          minHeight: '30px', 
+          minWidth: '300px',
+          position: 'absolute',
+          top: 128
      }
      const style_typing = {
           color: state.strongText,
@@ -111,7 +114,8 @@ export default function MenuAppBar({ state, min_width_600px }) {
      const card_veselin = {
           mt: '-98px', 
           height: '160px',
-          minWidth: '310px'
+          minWidth: '310px',
+          position: 'absolute'
      }
      const style_root = {
           top: 0,
