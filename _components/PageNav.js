@@ -83,6 +83,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
      const style_typing = {
           color: state.strongText,
           fontSize: 19,
+          fontWeight: 200,
           letterSpacing: 1.3,
      }
 
@@ -91,7 +92,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
      setInterval(() => { setVis(true) }, 3200);
 
      const typing = (
-          <Typography variant='h4' sx={style_typing}>
+          <Typography variant='h3' sx={style_typing}>
                {vis && (<div>
                     {typeWriter([ '... end ', 'front end developer' ])}
                </div>)}

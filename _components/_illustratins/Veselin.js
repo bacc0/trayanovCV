@@ -11,8 +11,8 @@ export default ({ color }) => {
      const stroke = color
      const strokeWidth = 0.6
      const transitionStroke = { delay: 0.4, duration: 2 }
-     const strokeWidthLines = 0.2
-     const transitionStrokeLines = { delay: 6.8, duration: 1.3 }
+     const strokeWidthLines = 0.6
+     const transitionStrokeLines = { delay: 6.8, duration: 0.9 }
 
      const transitionFill = { delay: 2.4, duration: 1 }
      const size = 270
@@ -32,7 +32,19 @@ export default ({ color }) => {
                          initial={{ pathLength: 0 }}
                          animate={{ pathLength: 1 }}
                          transition={transitionStrokeLines}
-                         d="M217.458,131.496 L8.542,131.496 L8.542,2.984 L217.458,2.984 L217.297,83.671" fill-opacity="0" stroke={color} strokeWidth={strokeWidthLines}
+                         d="M163.527,131.384 L8.611,131.608 L8.478,71.977" 
+                         fill-opacity="0" 
+                         stroke={color} 
+                         strokeWidth={strokeWidthLines}
+                    />
+                    <motion.path
+                         initial={{ pathLength: 0 }}
+                         animate={{ pathLength: 1 }}
+                         transition={transitionStrokeLines}
+                         d="M63.087,3.091 L217.389,2.872 L217.315,62.809" 
+                         fill-opacity="0" 
+                         stroke={color} 
+                         strokeWidth={strokeWidthLines}
                     />
                    
                </g>
