@@ -13,7 +13,7 @@ export default ({ color }) => {
      const transitionStrokeLines = { delay: 6.8, duration: 0.9 }
 
      const transitionFill = { delay: 2.4, duration: 1 }
-     const size = 270
+     const size = 310
 
      return (
           <svg version='1.1' xmlns='http://www.w3.org/2000/svg'
