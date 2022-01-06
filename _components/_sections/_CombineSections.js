@@ -10,8 +10,42 @@ import { motion } from 'framer-motion'
 export default function _CombineSections({
      state, theme, min_width_600px, animationTransition, Y_position }) {
 
+          const measurements = {
+               pageContainerWidth: 526,
+               sectionWidth: 230,
+          }
 
+          const stylesPage = {
+               
 
+           sectionsContainer : {
+               width: '100%',
+               display: 'flex',
+               justifyContent: 'center',
+               // backgroundColor: 'beige',
+          },
+           titleContainer : {
+               width: min_width_600px ? measurements.pageContainerWidth : '80%',
+               maxWidth: min_width_600px ? measurements.pageContainerWidth : 300,
+               padding: `60px 0 48px`,
+               // backgroundColor: '#44444422',
+     
+          },
+           sectionsBody : {
+               // backgroundColor: '#44444422',
+               width: min_width_600px ? measurements.pageContainerWidth : '100%',
+               maxWidth: min_width_600px ? measurements.pageContainerWidth : 300,
+               display: min_width_600px ? 'flex' : 'block',
+               justifyContent: min_width_600px ? 'space-between' : 'center',
+               height: 'auto'
+          },
+           sections : {
+               //  backgroundColor: '#44444411',
+               width: min_width_600px ? measurements.sectionWidth : '100%',
+     
+          }
+
+}
 
           
 
@@ -24,7 +58,7 @@ export default function _CombineSections({
           >
                <Box
                     sx={{
-                         fontSize: min_width_600px ? 14 : 17,
+                         fontSize: min_width_600px ? 12 : 17,
                          lineHeight: min_width_600px ? 1.7 : 1.9,
                          fontWeight: min_width_600px ? 100 : 300,
                     }}
@@ -33,6 +67,8 @@ export default function _CombineSections({
                     <Experience
                          state={state}
                          min_width_600px={min_width_600px}
+                         stylesPage={stylesPage}
+                         measurements={measurements}
                     />
 
                     <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
@@ -42,6 +78,8 @@ export default function _CombineSections({
                          min_width_600px={min_width_600px}
                          state={state}
                          animationTransition={animationTransition}
+                         stylesPage={stylesPage}
+                         measurements={measurements}
                     />
                     <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
 
@@ -49,12 +87,15 @@ export default function _CombineSections({
                          state={state}
                          min_width_600px={min_width_600px}
                          animationTransition={animationTransition}
+                         stylesPage={stylesPage}
+                         measurements={measurements}
                     />
                     <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
 
                     <Footer
                          state={state}
-                         min_width_600px={min_width_600px}
+                         // min_width_600px={min_width_600px}
+                         stylesPage={stylesPage}
                     />
                </Box>
           </motion.div>

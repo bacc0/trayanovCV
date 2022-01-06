@@ -5,24 +5,28 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
 
-export default function Footer({ state }) {
-     
-     
+export default function Footer({ state, stylesPage }) {
+
+     const { sectionsBody, sections } = stylesPage
+
      const { footerColor, footerTextColor } = state
-  
+
+     const container_footer_style = {
+          backgroundColor: footerColor,
+          border: `1px solid ${footerColor}`
+     }
+
      return (
-          <div className="container-footer" style={{ backgroundColor: footerColor ,border: `1px solid ${footerColor}` }}>
-               <div className="footer" 
-               
-               >
-                    <div className="footer-left">
+          <div className="container-footer" style={container_footer_style}>
+               <div className="footer" style={sectionsBody}>
+                    <div style={sections}>
                          <a
                               className='footer-items-container'
                               style={{ color: footerTextColor, textDecoration: 'none', margin: '0 0 7px' }}
                               href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'}
                          >
                               <div>
-                                   <LinkedInIcon  fontSize='small'/>
+                                   <LinkedInIcon fontSize='small' />
                               </div>
                               <div className='footer-icon-text'>
                                    <div> LinkedIn </div>
@@ -34,7 +38,7 @@ export default function Footer({ state }) {
                               href={`mailto: bacco23@gmail.com`}
                          >
                               <div >
-                                   <LocalPostOfficeSharpIcon  fontSize='small'/>
+                                   <LocalPostOfficeSharpIcon fontSize='small' />
                               </div>
                               <div
                                    className='footer-icon-text'
@@ -48,21 +52,21 @@ export default function Footer({ state }) {
                               href={`tel: 00447590010066`}
                          >
                               <div>
-                                   <PhoneEnabledSharpIcon   fontSize='small'/>
+                                   <PhoneEnabledSharpIcon fontSize='small' />
                               </div>
                               <div className='footer-icon-text'>
                                    <div> +44 (0) 7590 010066</div>
                               </div>
                          </a>
                     </div>
-                    <div className="footer-right">
+                    <div style={sections}>
                          <a
                               className='footer-items-container '
                               style={{ color: footerTextColor, margin: '0px 0 7px', textDecoration: 'none' }}
                               href={'https://github.com/bacc0'}
                          >
                               <div >
-                                   <GitHubIcon   fontSize='small'/>
+                                   <GitHubIcon fontSize='small' />
                               </div>
                               <div className='footer-icon-text'>
                                    <div> GitHub </div>
@@ -74,7 +78,7 @@ export default function Footer({ state }) {
                               href={'https://www.google.com/maps/@51.4764334,-0.1572618,16.21z'}
                          >
                               <div >
-                                   <LocationOnSharpIcon  fontSize='small'/>
+                                   <LocationOnSharpIcon fontSize='small' />
                               </div>
                               <div >
                                    <div

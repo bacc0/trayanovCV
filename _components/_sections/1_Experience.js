@@ -3,45 +3,13 @@ import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { motion } from 'framer-motion'
 
 
-export default function Kkk({ state, min_width_600px }) {
+export default function Experience({ state, min_width_600px, stylesPage, measurements }) {
 
+     const { sectionsContainer, titleContainer, sectionsBody, sections } = stylesPage
+     const { strongText, thirdLettersColor, bodyColor, backgroundColor } = state
 
-     const {
-          strongText, animationTransition, hrColorMain, secLettersColor,
-          thirdLettersColor, bodyColor, backgroundColor } = state
-
-     const sectionsContainer = {
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          // backgroundColor: 'beige',
-          // borderTop: `11.3px solid ${secLettersColor}55`,
-          // transition: `borderTop 22s ease`
-     }
-     const titleContainer = {
-          width: min_width_600px ? 484 : '80%',
-          maxWidth: min_width_600px ? 484 : 300,
-          padding: `60px 0 48px`,
-          // borderTop: `1.3px solid ${secLettersColor}55`,
-          // borderBottom: `1.3px solid ${secLettersColor}55`,
-     }
-     const sectionsBody = {
-          // height: '50px',
-          // backgroundColor: '#44444422',
-          width: min_width_600px ? 484 : '100%',
-          maxWidth: min_width_600px ? 484 : 300,
-
-          display: min_width_600px ? 'flex' : 'block',
-
-          justifyContent: min_width_600px ? 'space-between' : 'center',
-
-          height: 'auto'
-     }
-     const sections = {
-          width: min_width_600px ? 210 : '100%',
-
-     }
      const theme = useTheme()
+
      const cardTitle = (
           <Card
                sx={{
@@ -56,9 +24,8 @@ export default function Kkk({ state, min_width_600px }) {
           >
                <Box sx={{
                     borderBottom: 1.3,
-                    width: min_width_600px ? 210 : '100%',
+                    width: min_width_600px ? measurements.sectionWidth : '100%',
                     color: backgroundColor,
-
                }}
                >
                     <Typography variant="h4" sx={{ letterSpacing: 2 }}>
@@ -67,14 +34,17 @@ export default function Kkk({ state, min_width_600px }) {
                </Box>
           </Card>
      )
+
      const img = (
           <Box sx={{ mt: theme.spacing(min_width_600px ? -0.8 : -2.4), mb: theme.spacing(0.3) }}>
                <Img_handle_inview
                     src={'./exp.svg'}
                     min_width_600px={min_width_600px}
+                    width={measurements.sectionWidth}
                />
           </Box>
      )
+
      const L_R_cardsStyle = {
           m: 0,
           maxWidth: '100%',
@@ -82,6 +52,7 @@ export default function Kkk({ state, min_width_600px }) {
           borderLeft: 0,
           backgroundColor: "transparent"
      }
+
      const groundbits = (period, contact, mail) => {
           return (
                <Card sx={L_R_cardsStyle}>
@@ -127,8 +98,8 @@ export default function Kkk({ state, min_width_600px }) {
                     </CardContent>
                </Card>
           )
-
      }
+
      const amdocs = (
           <Card sx={L_R_cardsStyle}>
                <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
@@ -174,7 +145,6 @@ export default function Kkk({ state, min_width_600px }) {
                     >
                          <Box style={sectionsBody}>
                               <Box style={sections}>
-                                   {/* {img} */}
                                    {groundbits('Dec 2021 – Present', 'Ricard Rosson', 'ricard@iacos.net')}
                               </Box>
 

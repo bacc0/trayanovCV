@@ -2,40 +2,13 @@ import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 
 
-export default function Kkk({ state, min_width_600px }) {
+export default function Technologies({ state, min_width_600px, stylesPage, measurements }) {
 
-
+     const { sectionsContainer, titleContainer, sectionsBody, sections } = stylesPage
      const { bodyColor, backgroundColor, backgroundColor_2 } = state
 
-     const sectionsContainer = {
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          backgroundColor: backgroundColor_2,
-     }
-     const titleContainer = {
-          width: min_width_600px ? 484 : '80%',
-          maxWidth: min_width_600px ? 484 : 300,
-          padding: `60px 0 48px`,
-          // borderTop: `1.3px solid ${secLettersColor}55`,
-          // borderBottom: `1.3px solid ${secLettersColor}55`,
-     }
-     const sectionsBody = {
-          // height: '50px',
-          // backgroundColor: '#44444422',
-          width: min_width_600px ? 484 : '100%',
-          maxWidth: min_width_600px ? 484 : 300,
-
-          display: min_width_600px ? 'flex' : 'block',
-
-          justifyContent: min_width_600px ? 'space-between' : 'center',
-
-          height: 'auto'
-     }
-     const sections = {
-          width: min_width_600px ? 210 : '100%',
-     }
      const theme = useTheme()
+
      const cardTitle = (
           <Card
                sx={{
@@ -50,7 +23,7 @@ export default function Kkk({ state, min_width_600px }) {
           >
                <Box sx={{
                     borderBottom: 1.3,
-                    width: min_width_600px ? 210 : '100%',
+                    width: min_width_600px ? measurements.sectionWidth : '100%',
                     color: backgroundColor,
 
                }}
@@ -66,6 +39,7 @@ export default function Kkk({ state, min_width_600px }) {
                <Img_handle_inview
                     src={'./tech.svg'}
                     min_width_600px={min_width_600px}
+                    width={measurements.sectionWidth}
                />
           </Box>
      )
@@ -148,7 +122,7 @@ export default function Kkk({ state, min_width_600px }) {
 
 
      return (
-          <div style={sectionsContainer}>
+          <div style={{...sectionsContainer, ...{  backgroundColor: backgroundColor_2 }}}>
                <div style={titleContainer}>
                     <div>{cardTitle}</div>
                     <Box style={sectionsBody}>

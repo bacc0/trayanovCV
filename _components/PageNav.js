@@ -103,11 +103,18 @@ export default function MenuAppBar({ state, min_width_600px }) {
           display: 'flex', 
           minHeight: 205,
           justifyContent: 'center', 
+          top: 0,
+          width: '100%',
+          height: 207,
+          position: 'relative',
+          minWidth: 300,
+          // backgroundColor: 'red'
+          
      }
 
      const card_style_container = {
           m: 0,
-          pt: min_width_600px ? 5.5 : 5.5,
+          pt: min_width_600px ? 6.1 : 5.4,
           pb: 0,
           minWidth: 300,
           boxShadow: 0,
@@ -118,26 +125,32 @@ export default function MenuAppBar({ state, min_width_600px }) {
           color: state.backgroundColor,
           textAlign: 'center',
           fontSize: 19.4,
-          letterSpacing: 2
+          
+          letterSpacing: 2,
+          // backgroundColor: 'lime',
+          height: 116,
+
+
      }
 
      const card_veselin = {
           mt: '-121px', 
           ml:'9px',
-          height: '160px',
-          minWidth: '310px',
-          position: 'absolute'
+          // height: '160px',
+          // minWidth: '310px',
+          position: 'relative'
      }
      const style_root = {
-          top: 0,
-          width: '100%',
-          height: 205,
-          position: 'relative',
-          minWidth: 300,
+          // top: 0,
+          // width: '100%',
+          // height: 207,
+          // position: 'relative',
+          // minWidth: 300,
+          // backgroundColor: 'red'
      }
 
      const cardTitle = (
-          <div style={style_root}>
+          // <div style={style_root}>
                <div style={card_title_style}>
                     <Card sx={card_style_container}>
                          <Box sx={card_style}>
@@ -156,7 +169,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
                          </Box>
                     </Card>
                </div>
-          </div>
+          // </div>
      )
 
 

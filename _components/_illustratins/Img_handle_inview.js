@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 
-export default ({ src, min_width_600px, threshold = 0.45 }) => {
+export default ({ src, min_width_600px, threshold = 0.45, width }) => {
 
 
      const [opacity, setOpacity] = useState(0)
@@ -28,8 +28,10 @@ export default ({ src, min_width_600px, threshold = 0.45 }) => {
 
 
      useEffect(() => {
-          setLogo_W(min_width_600px ? 210 : 310)
-          setLogo_H(min_width_600px ? 187 : 255)
+          // setLogo_W(min_width_600px ? 210 : 310)
+          // setLogo_H(min_width_600px ? 187 : 255)
+          setLogo_W(min_width_600px ? width : 310)
+          setLogo_H(min_width_600px ? 203 : 255)
      }, [min_width_600px])
 
      const stylePicture = {
