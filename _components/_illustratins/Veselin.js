@@ -9,7 +9,7 @@ export default ({ color }) => {
      const stroke = color
      const strokeWidth = 0.6
      const transitionStroke = { delay: 0.4, duration: 2 }
-     const strokeWidthLines = 0.8
+     const strokeWidthLines = 1.2
      const transitionStrokeLines = { delay: 6.8, duration: 0.9 }
 
      const transitionFill = { delay: 2.4, duration: 1 }
