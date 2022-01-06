@@ -25,7 +25,7 @@ export default function AboutMe({ state, min_width_600px, stylesPage, measuremen
           >
                <Box
                     sx={{
-                         borderBottom: 1.3,
+                         borderBottom: 1.5,
                          width: min_width_600px ? measurements.sectionWidth : '100%',
                          color: backgroundColor,
 
