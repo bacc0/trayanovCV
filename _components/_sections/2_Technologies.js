@@ -35,7 +35,7 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
           </Card>
      )
      const img = (
-          <Box sx={{ mt: theme.spacing(-1), mb: theme.spacing(min_width_600px ? 0.7 : 1.5) }}>
+          <Box sx={{ mt: '-6px', mb: theme.spacing(min_width_600px ? 0.7 : 1.5) }}>
                <Img_handle_inview
                     src={'./tech.svg'}
                     min_width_600px={min_width_600px}
@@ -71,7 +71,7 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
           </Card>
      )
      const rightSection = (
-          <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.7 : -0.3 } }}>
+          <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.9 : -0.3 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
                <Typography variant="p">Framer Motion<br /></Typography>
                <Box sx={{ height: theme.spacing(1.7) }} />
