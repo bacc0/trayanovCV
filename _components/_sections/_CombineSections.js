@@ -26,7 +26,7 @@ export default function _CombineSections({
           titleContainer: {
                // backgroundColor: '#44444422',
                width: min_width_600px ? measurements.pageContainerWidth : '80%',
-               maxWidth: min_width_600px ? measurements.pageContainerWidth : 300,
+               maxWidth: min_width_600px ? measurements.pageContainerWidth : 380,
                padding: `60px 0 48px`,
           },
           sectionsBody: {
