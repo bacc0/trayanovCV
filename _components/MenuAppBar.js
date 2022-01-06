@@ -22,7 +22,7 @@ export default function MenuAppBar({
      const renderCounter = useRef(0)
      renderCounter.current = renderCounter.current + 1
 
-     
+
      const [appBarIsVisible, setAppBarIsVisible] = useState(false)
      const [marker, setMarker] = useState(false)
 
@@ -148,32 +148,20 @@ export default function MenuAppBar({
                                         <GitHubIcon />
                                    </IconButton>
                                    <IconButton
-
-
                                         onClick={() => handleThemeChange()}
-                                        aria-label='theme icon' style={{ ...iconsStyle, ...{ color: thirdLettersColor } }}
+                                        aria-label='theme icon'
+                                        style={{ ...iconsStyle, ...{ color: thirdLettersColor } }}
                                    >
-                                        <motion.div
-                                             style={{
-                                                  position: 'relative',
-                                                  top: 2
-                                             }}
-                                             initial={{ opacity: 0 }}
-                                             animate={{ opacity: 1 }}
-                                             transition={{ delay: 6.5, duration: 0.4, ease: 'linear' }}
-                                        >
-                                             {theme === 'light'
-                                                  ? <DarkModeIcon />
-                                                  : <LightModeIcon />
-                                             }
-                                        </motion.div>
+                                        {theme === 'light'
+                                             ? <DarkModeIcon />
+                                             : <LightModeIcon />
+                                        }
                                    </IconButton>
                               </Stack>
                          </Toolbar>
                     </div>
                </AppBar>
                <div style={underAppBar} />
-
           </Box >
      )
 }
