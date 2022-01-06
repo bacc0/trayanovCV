@@ -12,13 +12,21 @@ import Veselin from './_illustratins/Veselin'
 export default function MenuAppBar({ state, min_width_600px }) {
 
      const style_colibri = {
-          top: -40,
-          right: 156,
+          // top: -40,
+          // right: 156,
+          // margin: 'auto',
+          // width: '81px',
+          // height: '50px',
+          // overflow: 'hidden',
+          // position: 'relative',
+
+          top: -22,
+          right: 272,
           margin: 'auto',
           width: '81px',
           height: '50px',
           overflow: 'hidden',
-          position: 'relative',
+          position: 'absolute',
      }
 
      const colibri = (
@@ -69,7 +77,8 @@ export default function MenuAppBar({ state, min_width_600px }) {
           minHeight: '30px', 
           minWidth: '300px',
           position: 'absolute',
-          top: 128
+          top: 137,
+          ml: '0px'
      }
      const style_typing = {
           color: state.strongText,
@@ -112,7 +121,8 @@ export default function MenuAppBar({ state, min_width_600px }) {
      }
 
      const card_veselin = {
-          mt: '-98px', 
+          mt: '-95px', 
+          ml:'-5px',
           height: '160px',
           minWidth: '310px',
           position: 'absolute'
@@ -130,18 +140,21 @@ export default function MenuAppBar({ state, min_width_600px }) {
                <div style={card_title_style}>
                     <Card sx={card_style_container}>
                          <Box sx={card_style}>
-                              <div style={{  height: '50px',}}>
+                              {/* <div style={{  height: '50px',}}>
                                    {colibri}
-                              </div>
-                              <Box sx={style_hello_container} >
+                              </div> */}
+                              {/* <Box sx={style_hello_container} >
                                    {hello}
-                              </Box>
+                              </Box> */}
                               <Box sx={card_veselin} >
                                    <Veselin color={state.strongText} />
                               </Box>
                               <Box sx={style_typing_container}>
                                    {typing}
                               </Box>
+                              <div style={{  height: '50px'}}>
+                                   {colibri}
+                              </div>
                          </Box>
                     </Card>
                </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, Animate } from 'framer-motion'
 import { Stack, IconButton, Typography, Toolbar, AppBar, Box, Hidden } from '@mui/material'
 import LightModeIcon from '@mui/icons-material/LightMode'
@@ -14,9 +14,15 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 export default function MenuAppBar({
      state, theme, setTheme, Y_position, scrollDirection, min_width_600px, currentBrowser }) {
 
-     const { strongText, thirdLettersColor, hrColorMain, AppBackgroundColor, animationTransition, secLettersColor } = state
+     const {
+          strongText, thirdLettersColor, hrColorMain,
+          AppBackgroundColor, animationTransition, secLettersColor } = state
 
 
+     const renderCounter = useRef(0)
+     renderCounter.current = renderCounter.current + 1
+
+     
      const [appBarIsVisible, setAppBarIsVisible] = useState(false)
      const [marker, setMarker] = useState(false)
 
@@ -90,7 +96,6 @@ export default function MenuAppBar({
 
      return (
           <Box>
-
                <AppBar style={AppBarStyle} position='fixed'>
                     <div>
                          <Toolbar
@@ -101,7 +106,7 @@ export default function MenuAppBar({
                          >
                               <Hidden smDown>
                                    <Typography style={titleStyle} sx={{ flexGrow: 1 }}>
-                                        Veselin Trayanov
+                                        Veselin Trayanov  {renderCounter.current}
                                    </Typography>
                               </Hidden>
                               <Stack
@@ -143,26 +148,26 @@ export default function MenuAppBar({
                                         <GitHubIcon />
                                    </IconButton>
                                    <IconButton
-                                      
-                                   
+
+
                                         onClick={() => handleThemeChange()}
-                                        aria-label='theme icon' style={{...iconsStyle, ...{color: thirdLettersColor}}}
+                                        aria-label='theme icon' style={{ ...iconsStyle, ...{ color: thirdLettersColor } }}
                                    >
-                                   <motion.div
-                                   style={{
-                                        position: 'relative',
-                                        top: 2
-                                   }}
-                                        initial={{ opacity: 0 }}
-                                        animate={{opacity: 1}}
-                                        transition={{ delay: 6.5, duration: 0.4, ease: 'linear' }}
-                                   >
+                                        <motion.div
+                                             style={{
+                                                  position: 'relative',
+                                                  top: 2
+                                             }}
+                                             initial={{ opacity: 0 }}
+                                             animate={{ opacity: 1 }}
+                                             transition={{ delay: 6.5, duration: 0.4, ease: 'linear' }}
+                                        >
                                              {theme === 'light'
                                                   ? <DarkModeIcon />
                                                   : <LightModeIcon />
                                              }
-                                   </motion.div>
-                                        </IconButton>
+                                        </motion.div>
+                                   </IconButton>
                               </Stack>
                          </Toolbar>
                     </div>
