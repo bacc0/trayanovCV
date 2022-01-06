@@ -128,14 +128,16 @@ export default function HomePage({
           display: 'flex',
           justifyContent: 'flex-end',
           overflow: 'hidden',
-          height: 272,
+          // height: 272,
+          height: 294,
           top: 0,
           position: `absolute`,
           width: '100%',
           backgroundColor: AppBackgroundColor,
           background: gradient,
           opacity: backgroundOpacity,
-          transition: `opacity 4s linear`
+          transition: `opacity 4s linear`,
+          // backgroundColor:'tan'
      }
 
      const styleBackAnimation = {
@@ -144,6 +146,7 @@ export default function HomePage({
           animation: `rotate 40s linear infinite`,
           opacity: opacityBG,
           transition: `opacity 4s linear`,
+         
      }
 
      const backAnimation = (

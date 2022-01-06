@@ -77,8 +77,8 @@ export default function MenuAppBar({ state, min_width_600px }) {
           minHeight: '30px', 
           minWidth: '300px',
           position: 'absolute',
-          top: 138,
-          ml: '0px'
+          top: 149,
+          ml: '10px'
      }
      const style_typing = {
           color: state.strongText,
@@ -134,8 +134,8 @@ export default function MenuAppBar({ state, min_width_600px }) {
      }
 
      const card_veselin = {
-          mt: '-121px', 
-          ml:'9px',
+          mt: min_width_600px ? '-110px' : '-110px' , 
+          ml:min_width_600px ? '31px' : '11px',
           // height: '160px',
           // minWidth: '310px',
           position: 'relative'
@@ -160,12 +160,12 @@ export default function MenuAppBar({ state, min_width_600px }) {
                               <Box sx={card_veselin} >
                                    <Veselin color={state.strongText} />
                               </Box>
-                              <Box sx={style_typing_container}>
+                              {/* <Box sx={style_typing_container}>
                                    {typing}
-                              </Box>
-                              <div style={{  height: '50px'}}>
+                              </Box> */}
+                              {/* <div style={{  height: '50px'}}>
                                    {colibri}
-                              </div>
+                              </div> */}
                          </Box>
                     </Card>
                </div>

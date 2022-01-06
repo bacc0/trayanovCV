@@ -18,7 +18,7 @@ export default function _CombineSections({
      const stylesPage = {
 
           sectionsContainer: {
-               // backgroundColor: 'beige',
+               // backgroundColor: 'tan',
                width: '100%',
                display: 'flex',
                justifyContent: 'center',
@@ -27,7 +27,7 @@ export default function _CombineSections({
                // backgroundColor: '#44444422',
                width: min_width_600px ? measurements.pageContainerWidth : '80%',
                maxWidth: min_width_600px ? measurements.pageContainerWidth : 380,
-               padding: `60px 0 48px`,
+               padding: `56px 0 48px`,
           },
           sectionsBody: {
                // backgroundColor: '#44444422',
