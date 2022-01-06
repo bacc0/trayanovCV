@@ -10,60 +10,57 @@ import { motion } from 'framer-motion'
 export default function _CombineSections({
      state, theme, min_width_600px, animationTransition, Y_position }) {
 
-          const measurements = {
-               pageContainerWidth: 526,
-               sectionWidth: 230,
-          }
+     const measurements = {
+          pageContainerWidth: 526,
+          sectionWidth: 230,
+     }
 
-          const stylesPage = {
-               
+     const stylesPage = {
 
-           sectionsContainer : {
+          sectionsContainer: {
+               // backgroundColor: 'beige',
                width: '100%',
                display: 'flex',
                justifyContent: 'center',
-               // backgroundColor: 'beige',
           },
-           titleContainer : {
+          titleContainer: {
+               // backgroundColor: '#44444422',
                width: min_width_600px ? measurements.pageContainerWidth : '80%',
                maxWidth: min_width_600px ? measurements.pageContainerWidth : 300,
                padding: `60px 0 48px`,
-               // backgroundColor: '#44444422',
-     
           },
-           sectionsBody : {
+          sectionsBody: {
                // backgroundColor: '#44444422',
                width: min_width_600px ? measurements.pageContainerWidth : '100%',
                maxWidth: min_width_600px ? measurements.pageContainerWidth : 300,
                display: min_width_600px ? 'flex' : 'block',
                justifyContent: min_width_600px ? 'space-between' : 'center',
-               height: 'auto'
+               height: 'auto',
           },
-           sections : {
+          sections: {
                //  backgroundColor: '#44444411',
                width: min_width_600px ? measurements.sectionWidth : '100%',
-     
           }
+     }
 
-}
 
-          
 
 
      return (
           <motion.div
                initial={{ opacity: 0., y: 30 }}
-               animate={{ opacity: 1,  y: 0 }}
+               animate={{ opacity: 1, y: 0 }}
                transition={{ delay: 0.2, duration: 0.25, ease: 'easeInOut' }}
           >
                <Box
                     sx={{
                          fontSize: min_width_600px ? 12 : 17,
                          lineHeight: min_width_600px ? 1.7 : 1.9,
-                         fontWeight: min_width_600px ? 100 : 300,
+                         fontWeight: min_width_600px ? 300 : 300,
+                         color: state.strongText
                     }}
                >
-                  
+
                     <Experience
                          state={state}
                          min_width_600px={min_width_600px}
@@ -94,7 +91,6 @@ export default function _CombineSections({
 
                     <Footer
                          state={state}
-                         // min_width_600px={min_width_600px}
                          stylesPage={stylesPage}
                     />
                </Box>

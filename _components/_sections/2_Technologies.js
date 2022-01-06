@@ -5,7 +5,7 @@ import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 export default function Technologies({ state, min_width_600px, stylesPage, measurements }) {
 
      const { sectionsContainer, titleContainer, sectionsBody, sections } = stylesPage
-     const { bodyColor, backgroundColor, backgroundColor_2 } = state
+     const { bodyColor, backgroundColor, backgroundColor_2, strongText } = state
 
      const theme = useTheme()
 
@@ -52,7 +52,7 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
      }
      const leftSection = (
           <Card sx={L_R_cardsStyle}>
-               <CardContent sx={{ p: 0, mt: 1.8, mb: -3.3, color: bodyColor }}>
+               <CardContent sx={{ p: 0, mt: 1.8, mb: -3.3, color: strongText }}>
 
                     {/* <Box sx={{ height: theme.spacing(1.7) }} /> */}
                     <Typography variant="p">ReactJS<br /></Typography>
@@ -72,7 +72,7 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
      )
      const rightSection = (
           <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.9 : -0.3 } }}>
-               <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
+               <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
                <Typography variant="p">Framer Motion<br /></Typography>
                <Box sx={{ height: theme.spacing(1.7) }} />
 

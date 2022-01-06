@@ -56,7 +56,7 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
      const groundbits = (period, contact, mail) => {
           return (
                <Card sx={L_R_cardsStyle}>
-                    <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
+                    <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
                          <Typography variant="h5" sx={{ mt: 1.7, color: thirdLettersColor, letterSpacing: 1 }} >
                               React Developer
@@ -102,7 +102,7 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
 
      const amdocs = (
           <Card sx={L_R_cardsStyle}>
-               <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
+               <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
                     <Typography variant="h5" sx={{ mt: 1.7, color: thirdLettersColor, letterSpacing: 1 }} >
                          React Developer
                     </Typography>

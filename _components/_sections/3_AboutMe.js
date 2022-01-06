@@ -5,7 +5,7 @@ import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 export default function AboutMe({ state, min_width_600px, stylesPage, measurements }) {
 
      const { sectionsContainer, titleContainer, sectionsBody, sections } = stylesPage
-     const { thirdLettersColor, bodyColor, backgroundColor } = state
+     const { thirdLettersColor, bodyColor, backgroundColor, strongText} = state
 
 
      const theme = useTheme()
@@ -57,7 +57,7 @@ export default function AboutMe({ state, min_width_600px, stylesPage, measuremen
 
      const leftSection = (
           <Card sx={L_R_cardsStyle}>
-               <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
+               <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
                     <Typography variant="h5" sx={{ mt: 1.7, color: thirdLettersColor, letterSpacing: 1 }} >
                          Skills
@@ -91,7 +91,7 @@ export default function AboutMe({ state, min_width_600px, stylesPage, measuremen
 
      const rightSection = (
           <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 2.2 : -2 } }}>
-               <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
+               <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
                     <Box sx={{ height: theme.spacing(1.7) }} />
 
