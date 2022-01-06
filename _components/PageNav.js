@@ -77,12 +77,12 @@ export default function MenuAppBar({ state, min_width_600px }) {
           minHeight: '30px', 
           minWidth: '300px',
           position: 'absolute',
-          top: 137,
+          top: 131,
           ml: '0px'
      }
      const style_typing = {
           color: state.strongText,
-          fontSize: 22,
+          fontSize: 19,
           letterSpacing: 1.3,
      }
 
@@ -121,7 +121,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
      }
 
      const card_veselin = {
-          mt: '-95px', 
+          mt: '-96px', 
           ml:'-5px',
           height: '160px',
           minWidth: '310px',
