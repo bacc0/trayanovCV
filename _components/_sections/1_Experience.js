@@ -33,6 +33,8 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
 
      const img = (
           <Box sx={{ mt: theme.spacing(min_width_600px ? -0.8 : -2.4), mb: theme.spacing(0.3) }}>
+               {p_spacing}
+               {p_spacing}
                <Img_handle_inview
                     src={'./exp.svg'}
                     min_width_600px={min_width_600px}
@@ -82,7 +84,7 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
                          {
                               contact && (
                                    <>
-                                   {p_spacing}
+                                        {p_spacing}
                                         <Typography variant="p" sx={period_style}>
                                              {contact}
                                              <br />
@@ -106,7 +108,7 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
                <CardContent
                     sx={{
                          p: 0,
-                         mt: min_width_600px ? '0px' : '29px',
+                         mt: min_width_600px ? '0px' : '30px',
                          mb: min_width_600px ? '-3px' : '-7px',
                          color: strongText
                     }}
@@ -151,14 +153,15 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
                          animate={{ opacity: 1, y: 0 }}
                          transition={{ delay: 0.25, duration: 0.25, ease: 'easeInOut' }}
                     >
-                         
+
                          <Box style={sectionsBody}>
                               <Box style={sections}>
-                              
+
                                    {groundbits('Dec 2021 – Present', 'Ricard Rosson', 'ricard@iacos.net')}
                               </Box>
 
                               <Box style={sections} >
+
                                    <Box sx={{ height: theme.spacing(min_width_600px ? 0 : 2.4) }} />
                                    {amdocs}
                                    <Box sx={{ height: theme.spacing(2.4) }} />

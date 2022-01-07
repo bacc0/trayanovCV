@@ -1,87 +1,23 @@
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
-import { useTheme } from '@mui/material/styles'
-import * as React from 'react'
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent'
-import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
+import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 
 
-export default function Kkk({ state, min_width_600px }) {
+import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
+import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp'
+import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import GitHubIcon from '@mui/icons-material/GitHub'
 
 
-     const {
-          strongText, animationTransition, hrColorMain, secLettersColor,
-          thirdLettersColor, bodyColor, backgroundColor } = state
 
-     const sectionsContainer = {
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          // backgroundColor: 'beige',
-          borderTop: `0.3px solid ${secLettersColor}55`,
-     }
+export default function Technologies({ state, min_width_600px, stylesPage, measurements, p_spacing }) {
 
-     const titleContainer = {
-          width: min_width_600px ? 484 : '80%',
-          maxWidth: min_width_600px ? 484 : 300,
-          padding: `50px 0 66px`,
-          // borderTop: `1.3px solid ${secLettersColor}55`,
-          // borderBottom: `1.3px solid ${secLettersColor}55`,
-     }
+     const { sectionsContainer, titleContainer, sectionsBody, sections, h3_Style, borderBottomStyle } = stylesPage
+     const { footerColor, backgroundColor, backgroundColor_2, strongText } = state
 
-     const sectionsBody = {
-          // height: '50px',
-          // backgroundColor: '#44444422',
-          width: min_width_600px ? 484 : '100%',
-          maxWidth: min_width_600px ? 484 : 300,
-
-          display: min_width_600px ? 'flex' : 'block',
-
-          justifyContent: min_width_600px ? 'space-between' : 'center',
-
-          height: 'auto'
-     }
-     const sections = {
-          width: min_width_600px ? 210 : '100%',
-
-     }
      const theme = useTheme()
 
-     const cardTitle = (
-          <Card
-               sx={{
-                    m: 0,
-                    pb: 3,
-                    width: 'auto',
-                    height: 1,
-                    boxShadow: 0,
-                    borderLeft: 0,
-                    backgroundColor: "transparent"
-               }}
-          >
-               <Box sx={{
-                    borderBottom: 1.3,
-                    width: min_width_600px ? 210 : '100%',
-                    color: backgroundColor,
 
-               }}
-               >
-                    <Typography variant="h4" sx={{ letterSpacing: 2 }}>
-                         About me
-                    </Typography>
-               </Box>
-          </Card>
-     )
-
-     const img = (
-          <Box sx={{ mt: theme.spacing(-1), mb: theme.spacing(min_width_600px ? 0.7 : 1.5) }}>
-               <Img_handle_inview
-                    src={'./me.svg'}
-                    min_width_600px={min_width_600px}
-               />
-          </Box>
-     )
 
      const L_R_cardsStyle = {
           m: 0,
@@ -91,122 +27,113 @@ export default function Kkk({ state, min_width_600px }) {
           backgroundColor: "transparent"
      }
 
+
+
+
+
+     const hrefStyle = {
+          color: state.footerTextColor,
+          textDecoration: 'none',
+          display: 'flex',
+     }
+
+     const iconContainerStyle = {
+          // backgroundColor: 'tan',
+          display: 'flex',
+          justifyContent: 'flex-start'
+     }
+
+     const iconStyle = {
+          // backgroundColor: '#55555555',
+          marginLeft: 0,
+          marginTop: min_width_600px ? 0 : 4,
+          paddingRight: 10,
+     }
+
+
      const leftSection = (
           <Card sx={L_R_cardsStyle}>
-               <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
+               <CardContent sx={{ p: 0, mt: 1.8, mb: -3.3, color: strongText }}>
 
-                    <Typography variant="h5" sx={{ mt: 1.7, color: thirdLettersColor, letterSpacing: 1 }} >
-                         Skills
-                    </Typography>
-                   
-                    
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                    <a style={hrefStyle} href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'}>
+                         <div style={iconContainerStyle}>
+                              <div style={iconStyle}>
+                                   <LinkedInIcon fontSize='small' />
+                              </div>
+                         </div>
+                         LinkedIn
+                    </a>
+                    {p_spacing}
 
-                    <Typography variant="p">
-                         I’m very good on planning and organising my work, so my tasks will always be done on time in necessary standard.
-                         <br />
-                    </Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                    <a style={hrefStyle} href={`mailto: bacco23@gmail.com`}>
+                         <div style={iconContainerStyle}>
+                              <div style={iconStyle}>
+                                   <LocalPostOfficeSharpIcon fontSize='small' />
+                              </div>
+                         </div>
+                         bacco23@gmail.com
+                    </a>
+                    {p_spacing}
 
-                    <Typography variant="p">
-                         I’m happy working on my own, but I have also like to work as part of the team.
-                         <br />
-                    </Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
-
-                    <Typography variant="p">
-                         I'm very positive, creative, flexible and responsible.
-
-                         <br />
-                    </Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                    <a style={hrefStyle} href={`tel: 00447590010066`}>
+                         <div style={iconContainerStyle}>
+                              <div style={iconStyle}>
+                                   <PhoneEnabledSharpIcon fontSize='small' />
+                              </div>
+                         </div>
+                         +44 (0) 7590 010066
+                    </a>
+                    {p_spacing}
 
                </CardContent>
           </Card>
      )
 
+
      const rightSection = (
-          <Card sx={{...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.7 : -2 }}}>
-               <CardContent sx={{ p: 0, mb: -3.3, color: bodyColor }}>
-
-                    <Box sx={{ height: theme.spacing(1.7) }} />
-                    
-
-                    <Typography variant="p">
-                         Experience working with dynamic content.
-                         <br />
-                    </Typography>
-
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+          <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.8 : -2.5 } }}>
+               <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
 
-                    <Typography variant="p">
-                         Problem Solving Skills. Attention to Detail.
-                         <br />
-                    </Typography>
 
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                    <a style={hrefStyle} href={'https://github.com/bacc0'}>
+                         <div style={iconContainerStyle}>
+                              <div style={iconStyle}>
+                                   <GitHubIcon fontSize='small' />
+                              </div>
+                         </div>
+                         GitHub
+                    </a>
+                    {p_spacing}
 
-
-                    <Typography variant="p">
-                         Good understanding working with APIs (RESTful services).
-                         <br />
-                    </Typography>
-
-                    <Box sx={{ height: theme.spacing(1.7) }} />
-
-                    <Box sx={{ height: theme.spacing(1.7) }} />
-                    <Typography variant="p">
-                         I’m very focusin my work
-                         <br />
-                    </Typography>
-
-
-                    <Typography variant="p">
-                         Developing with ReactJS single page JavaScript Applications.
-                         <br />
-                    </Typography>
-
-                    <Box sx={{ height: theme.spacing(1.7) }} />
-
-                    <Typography variant="p">
-                         Web developer able to build an application from the ground up, from concept, navigation, working with data and programming to UX.
-                         <br />
-                    </Typography>
-
-                    <Box sx={{ height: theme.spacing(1.7) }} />
-
-                    <Typography variant="p">
-                         Skilled at writing well designed, efficient code using current best practices in Web development.
-                         <br />
-                    </Typography>
-
-                    <Box sx={{ height: theme.spacing(1.7) }} />
-
+                    <a style={hrefStyle} href={'https://www.google.com/maps/@51.4764334,-0.1572618,16.21z'}>
+                         <div style={iconContainerStyle}>
+                              <div style={iconStyle}>
+                                   <LocationOnSharpIcon fontSize='small' />
+                              </div>
+                         </div>
+                         Battersea, London, UK
+                    </a>
+                    {p_spacing}
                </CardContent>
           </Card>
      )
 
 
      return (
-          <div style={sectionsContainer}>
+          <div style={{ ...sectionsContainer, ...{ backgroundColor: footerColor } }}>
                <div style={titleContainer}>
-                    <div>{cardTitle}</div>
-                    <div style={sectionsBody}>
+
+                    <Box style={sectionsBody}>
                          <div style={sections}>
-                              {img}
+
                               {leftSection}
-
                          </div>
-
                          <div style={sections}>
                               <Box sx={{ height: theme.spacing(min_width_600px ? 0 : 2.4) }} />
                               {rightSection}
-                              <Box sx={{ height: theme.spacing(2.4) }} />
-
-
                          </div>
-                    </div>
+                    </Box>
                </div>
           </div>
      )

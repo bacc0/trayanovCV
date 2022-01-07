@@ -4,7 +4,7 @@ import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 
 export default function AboutMe({ state, min_width_600px, stylesPage, measurements, p_spacing }) {
 
-     const { sectionsContainer, titleContainer, sectionsBody, sections, h3_Style, h4_Style, borderBottomStyle  } = stylesPage
+     const { sectionsContainer, titleContainer, sectionsBody, sections, h3_Style, h4_Style, borderBottomStyle } = stylesPage
      const { thirdLettersColor, backgroundColor, strongText } = state
 
 
@@ -150,7 +150,11 @@ export default function AboutMe({ state, min_width_600px, stylesPage, measuremen
                     <div>{cardTitle}</div>
                     <div style={sectionsBody}>
                          <div style={sections}>
+                              {p_spacing}
+                              {p_spacing}
                               {img}
+                              {p_spacing}
+                              {p_spacing}
                               {leftSection}
 
                          </div>

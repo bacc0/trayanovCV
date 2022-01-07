@@ -50,19 +50,18 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
 
                     {/*{p_spacing} */}
                     <Typography variant="p">ReactJS<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
                     <Typography variant="p">Hook<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
                     <Typography variant="p">NextJS<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
                     <Typography variant="p">Javascript<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
                     <Typography variant="p">MUI Material UI<br /></Typography>
-                   {p_spacing}
-                    <Typography variant="p">SASS<br /></Typography>
                     {p_spacing}
-                    <Typography variant="p">CSS<br /></Typography>
+                    <Typography variant="p">CSS SASS<br /></Typography>
                     {p_spacing}
+                   
                     <Typography variant="p">HTML<br /></Typography>
 
 
@@ -72,47 +71,47 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
      const rightSection = (
           <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.9 : -0.3 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
-               <Typography variant="p">Framer Motion<br /></Typography>
-              {p_spacing}
+                    <Typography variant="p">Framer Motion<br /></Typography>
+                    {p_spacing}
 
                     <Typography variant="p">SVG's animations<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
 
                     <Typography variant="p">Shapes shifter<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
 
                     <Typography variant="p">Illustrator Adobe <br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
 
                     <Typography variant="p">Graphic Autodesk <br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
 
                     <Typography variant="p">GIMP<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
 
                     <Typography variant="p">Photoshop Adobe<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
 
                     <Typography variant="p">Typescript<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
 
                     <Typography variant="p">NodeJS<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
 
                     <Typography variant="p">Express<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
 
                     <Typography variant="p">Git<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
 
-                   <Typography variant="p">Github Bitbucket<br /></Typography>
-                   {p_spacing}
+                    <Typography variant="p">Github Bitbucket<br /></Typography>
+                    {p_spacing}
 
                     <Typography variant="p">Sourcetree<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
 
                     <Typography variant="p">Jira<br /></Typography>
-                   {p_spacing}
+                    {p_spacing}
 
 
 
@@ -124,12 +123,16 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
 
 
      return (
-          <div style={{...sectionsContainer, ...{  backgroundColor: backgroundColor_2 }}}>
+          <div style={{ ...sectionsContainer, ...{ backgroundColor: backgroundColor_2 } }}>
                <div style={titleContainer}>
                     <div>{cardTitle}</div>
                     <Box style={sectionsBody}>
                          <div style={sections}>
+                              {p_spacing}
+                              {p_spacing}
                               {img}
+                              {p_spacing}
+                              {p_spacing}
                               {leftSection}
                          </div>
                          <div style={sections}>

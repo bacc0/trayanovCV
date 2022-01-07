@@ -74,7 +74,7 @@ export default function _CombineSections({
                fontSize: min_width_600px ? 12 : 16,
           },
           borderBottomStyle : {
-               borderBottom: 1.5,
+               borderBottom: 0.8,
                width: min_width_600px ? measurements.sectionWidth : '100%',
                color: state.strongText,
           }
@@ -130,9 +130,23 @@ export default function _CombineSections({
                     />
                     <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
 
+                    {/* <Kkk
+                         state={state}
+                         theme={theme}
+                         min_width_600px={min_width_600px}
+                         animationTransition={animationTransition}
+                         stylesPage={stylesPage}
+                         measurements={measurements}
+                         p_spacing={p_spacing}
+                    /> */}
                     <Footer
                          state={state}
+                         theme={theme}
+                         min_width_600px={min_width_600px}
+                         animationTransition={animationTransition}
                          stylesPage={stylesPage}
+                         measurements={measurements}
+                         p_spacing={p_spacing}
                     />
                </Box>
           </motion.div>
