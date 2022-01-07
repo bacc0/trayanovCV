@@ -38,7 +38,7 @@ export default ({ src, min_width_600px, threshold = 0.45, width }) => {
           display: 'flex',
           justifyContent: min_width_600px ? 'flex-start' : 'center',
           opacity,
-          transition: `opacity 777ms ease`,
+          transition: `opacity 2000ms ease`,
           height: min_width_600px ? 180 : 240
      }
 
