@@ -20,7 +20,7 @@ export default function MenuAppBar({ state }) {
      }
 
      const style_typing = {
-          color: state.strongText,
+          color: state.bodyColor,
           fontSize: 19,
           fontWeight: 400,
           letterSpacing: 1.3,

@@ -60,8 +60,8 @@ export default ({ color }) => {
                >
                     <g id="a_lines">
                          <motion.path
-                              initial={{ pathLength: 0 }}
-                              animate={{ pathLength: 1 }}
+                              initial={{  opacity: 0,pathLength: 0 }}
+                              animate={{  opacity: 0,pathLength: 1 }}
                               transition={transitionStrokeLines}
                               d="M163.527,131.384 L8.611,131.608 L8.478,71.977"
                               fill-opacity="0"
@@ -69,8 +69,8 @@ export default ({ color }) => {
                               strokeWidth={strokeWidthLines}
                          />
                          <motion.path
-                              initial={{ pathLength: 0 }}
-                              animate={{ pathLength: 1 }}
+                              initial={{  opacity: 0,pathLength: 0 }}
+                              animate={{  opacity: 0,pathLength: 1 }}
                               transition={transitionStrokeLines}
                               d="M63.087,3.091 L217.389,2.872 L217.315,62.809"
                               fill-opacity="0"
@@ -99,8 +99,8 @@ export default ({ color }) => {
                     </motion.g>
 
                     <motion.g
-                         initial={{ scale: 0.8, y: 2 }}  // x=?
-                         animate={{ scale: 0.9, y: 2 }}
+                         initial={{ scale: 0.8, y: 2 }}  
+                         animate={{ scale: 0.95, y: 2 }}   //  animate={{ scale: 0.9, y: 2 }} 
                          transition={{ delay: 2.16, duration: .25, type: "tween", stiffness: 400 }}
                     >
                          <motion.g
