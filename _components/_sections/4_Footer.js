@@ -122,8 +122,8 @@ export default function Technologies({ state, min_width_600px, stylesPage, p_spa
                     ...sectionsContainer,
                     ...{
                          backgroundColor: footerColor,
-                         paddingTop: 5,
-                         paddingBottom: 13,
+                         paddingTop: 0,
+                         paddingBottom:5
                     }
                }}
           >

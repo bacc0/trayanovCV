@@ -140,6 +140,7 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
                               {rightSection}
                          </div>
                     </Box>
+               {p_spacing}
                </div>
           </div>
      )
