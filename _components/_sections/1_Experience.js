@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 export default function Experience({ state, min_width_600px, stylesPage, measurements, p_spacing }) {
 
      const { sectionsContainer, titleContainer, sectionsBody, sections,
-          h3_Style, h4_Style, h5_Style, period_style } = stylesPage
+          h3_Style, h4_Style, h5_Style, period_style, borderBottomStyle } = stylesPage
      const { strongText, backgroundColor } = state
 
      const theme = useTheme()
@@ -23,12 +23,7 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
                     backgroundColor: "transparent"
                }}
           >
-               <Box sx={{
-                    borderBottom: 1.5,
-                    width: min_width_600px ? measurements.sectionWidth : '100%',
-                    color: backgroundColor,
-               }}
-               >
+               <Box sx={borderBottomStyle}>
                     <Typography variant="h3" sx={h3_Style}>
                          Experience
                     </Typography>

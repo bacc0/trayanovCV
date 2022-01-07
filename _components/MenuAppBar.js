@@ -39,7 +39,7 @@ export default function MenuAppBar({
                if (marker) {
                     setAppBarIsVisible(true)
                } else {
-                    setTimeout(() => { setAppBarIsVisible(true) }, 5555)
+                    setTimeout(() => { setAppBarIsVisible(true) }, 6500)
                     setMarker(true)
                }
           } else {

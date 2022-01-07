@@ -47,6 +47,7 @@ export default function _CombineSections({
 
 
           h3_Style: {
+               color: state.strongText,
                letterSpacing: 2,
                fontSize: min_width_600px ? 28 : 40,
                fontWeight: min_width_600px ? 600 : 600
@@ -72,6 +73,11 @@ export default function _CombineSections({
                color: state.strongText,
                fontSize: min_width_600px ? 12 : 16,
           },
+          borderBottomStyle : {
+               borderBottom: 1.5,
+               width: min_width_600px ? measurements.sectionWidth : '100%',
+               color: state.strongText,
+          }
 
      }
 
