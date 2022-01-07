@@ -80,8 +80,8 @@ export default ({ color }) => {
                     </g>
 
                     <motion.g id="a_hello"
-                         initial={{ opacity: 0, scale: 1.5, x: 0 }}
-                         animate={{ opacity: 1, scale: 1, x: 0 }}
+                         initial={{ opacity: 0, scale: 1.5,  y: -3 }}
+                         animate={{ opacity: 1, scale: 1,  y: -3 }}
                          transition={{ delay: 0.2, duration: 0.25 }}
                     >
 
