@@ -59,7 +59,12 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
                    {p_spacing}
                     <Typography variant="p">MUI Material UI<br /></Typography>
                    {p_spacing}
-                    <Typography variant="p">CSS SASS HTML<br /></Typography>
+                    <Typography variant="p">SASS<br /></Typography>
+                    {p_spacing}
+                    <Typography variant="p">CSS<br /></Typography>
+                    {p_spacing}
+                    <Typography variant="p">HTML<br /></Typography>
+
 
                </CardContent>
           </Card>
@@ -97,7 +102,10 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
                     <Typography variant="p">Express<br /></Typography>
                    {p_spacing}
 
-                    <Typography variant="p">Git Github Bitbucket<br /></Typography>
+                    <Typography variant="p">Git<br /></Typography>
+                   {p_spacing}
+
+                   <Typography variant="p">Github Bitbucket<br /></Typography>
                    {p_spacing}
 
                     <Typography variant="p">Sourcetree<br /></Typography>
