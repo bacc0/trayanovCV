@@ -154,7 +154,7 @@ export default function HomePage({
                <div style={styleBackAnimation}>
                     <Image
                          src={'/react_logo.svg'}
-                         alt={'background image'}
+                         // alt={'background image'}
                          width={min_width_600px ? 600 : 500}
                          height={min_width_600px ? 600 : 500}
                     />
