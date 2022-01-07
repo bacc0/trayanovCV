@@ -2,9 +2,9 @@ import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 
 
-export default function Technologies({ state, min_width_600px, stylesPage, measurements }) {
+export default function Technologies({ state, min_width_600px, stylesPage, measurements, p_spacing }) {
 
-     const { sectionsContainer, titleContainer, sectionsBody, sections } = stylesPage
+     const { sectionsContainer, titleContainer, sectionsBody, sections, h3_Style } = stylesPage
      const { bodyColor, backgroundColor, backgroundColor_2, strongText } = state
 
      const theme = useTheme()
@@ -28,7 +28,7 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
 
                }}
                >
-                    <Typography variant="h4" sx={{ letterSpacing: 2 }} >
+                    <Typography variant="h3" sx={h3_Style}>
                          Tech stack
                     </Typography>
                </Box>
@@ -54,17 +54,17 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
           <Card sx={L_R_cardsStyle}>
                <CardContent sx={{ p: 0, mt: 1.8, mb: -3.3, color: strongText }}>
 
-                    {/* <Box sx={{ height: theme.spacing(1.7) }} /> */}
+                    {/*{p_spacing} */}
                     <Typography variant="p">ReactJS<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
                     <Typography variant="p">Hook<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
                     <Typography variant="p">NextJS<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
                     <Typography variant="p">Javascript<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
                     <Typography variant="p">MUI Material UI<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
                     <Typography variant="p">CSS SASS HTML<br /></Typography>
 
                </CardContent>
@@ -74,43 +74,43 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
           <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.9 : -0.3 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
                <Typography variant="p">Framer Motion<br /></Typography>
-               <Box sx={{ height: theme.spacing(1.7) }} />
+              {p_spacing}
 
                     <Typography variant="p">SVG's animations<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
 
                     <Typography variant="p">Shapes shifter<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
 
                     <Typography variant="p">Illustrator Adobe <br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
 
                     <Typography variant="p">Graphic Autodesk <br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
 
                     <Typography variant="p">GIMP<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
 
                     <Typography variant="p">Photoshop Adobe<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
 
                     <Typography variant="p">Typescript<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
 
                     <Typography variant="p">NodeJS<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
 
                     <Typography variant="p">Express<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
 
                     <Typography variant="p">Git Github Bitbucket<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
 
                     <Typography variant="p">Sourcetree<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
 
                     <Typography variant="p">Jira<br /></Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                   {p_spacing}
 
 
 

@@ -19,8 +19,8 @@ export default ({ color }) => {
 
      const style_colibri = {
 
-          top: 110,
-          right: 260,
+          top: 120,
+          right: 250,
           margin: 'auto',
           width: '81px',
           height: '50px',
@@ -46,9 +46,9 @@ export default ({ color }) => {
      return (
           <div
                style={{
-                    padding: `0 0 34px 0`,
                     // backgroundColor: 'tan',
                     width: 280,
+                    padding: `0 0 34px 0`,
                     paddingBottom: 36
                }}
           >

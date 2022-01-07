@@ -3,10 +3,11 @@ import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { motion } from 'framer-motion'
 
 
-export default function Experience({ state, min_width_600px, stylesPage, measurements }) {
+export default function Experience({ state, min_width_600px, stylesPage, measurements, p_spacing }) {
 
-     const { sectionsContainer, titleContainer, sectionsBody, sections } = stylesPage
-     const { strongText, thirdLettersColor, bodyColor, backgroundColor } = state
+     const { sectionsContainer, titleContainer, sectionsBody, sections,
+          h3_Style, h4_Style, h5_Style, period_style } = stylesPage
+     const { strongText, backgroundColor } = state
 
      const theme = useTheme()
 
@@ -28,7 +29,7 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
                     color: backgroundColor,
                }}
                >
-                    <Typography variant="h4" sx={{ letterSpacing: 2 }}>
+                    <Typography variant="h3" sx={h3_Style}>
                          Experience
                     </Typography>
                </Box>
@@ -53,36 +54,41 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
           backgroundColor: "transparent"
      }
 
+     // const p_spacing = ( <Box sx={{ height: theme.spacing(1.7) }} />)
+
+
+
      const groundbits = (period, contact, mail) => {
           return (
                <Card sx={L_R_cardsStyle}>
                     <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
-                         <Typography variant="h5" sx={{ mt: 1.7, color: thirdLettersColor, letterSpacing: 1 }} >
+                         <Typography variant="h4" sx={h4_Style}>
                               React Developer
                          </Typography>
-                         <Typography sx={{ mt: 0.5, mb: 3.24, color: thirdLettersColor, letterSpacing: 0.62 }} >
+                         <Typography variant="h5" sx={h5_Style}>
                               Groundbits Ltd
                          </Typography>
-                         <Typography variant="p" sx={{ fontWeight: 'bold', color: strongText }}>
+                         <Typography variant="p" sx={period_style}>
                               {period}
                               <br />
                          </Typography>
-                         <Box sx={{ height: theme.spacing(1.7) }} />
+                         {p_spacing}
                          <Typography variant="p">
                               Developing a Website Builder.
                               <br />
                          </Typography>
-                         <Box sx={{ height: theme.spacing(1.7) }} />
+                         {p_spacing}
                          <Typography variant="p" >
                               Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation.
                               <br />
                          </Typography>
-                         <Box sx={{ height: theme.spacing(1.7) }} />
+                         {p_spacing}
                          {
                               contact && (
                                    <>
-                                        <Typography variant="p" sx={{ fontWeight: 'bold', color: strongText }}>
+                                   {p_spacing}
+                                        <Typography variant="p" sx={period_style}>
                                              {contact}
                                              <br />
                                         </Typography>
@@ -102,29 +108,36 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
 
      const amdocs = (
           <Card sx={L_R_cardsStyle}>
-               <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
-                    <Typography variant="h5" sx={{ mt: 1.7, color: thirdLettersColor, letterSpacing: 1 }} >
+               <CardContent
+                    sx={{
+                         p: 0,
+                         mt: min_width_600px ? '0px' : '29px',
+                         mb: min_width_600px ? '-3px' : '-7px',
+                         color: strongText
+                    }}
+               >
+                    <Typography variant="h4" sx={h4_Style}>
                          React Developer
                     </Typography>
-                    <Typography sx={{ mt: 0.5, mb: 3.24, color: thirdLettersColor, letterSpacing: 0.62 }} >
+                    <Typography variant="h5" sx={h5_Style}>
                          Amdocs via Appgr8
                     </Typography>
                     <Typography variant="p" sx={{ fontWeight: 'bold', color: strongText }}>
                          July 2021 - Nov 2021
                          <br />
                     </Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                    {p_spacing}
                     <Typography variant="p">
                          Building a new application for the mobile network operator.
                          <br />
                     </Typography>
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                    {p_spacing}
                     <Typography variant="p" >
                          Using REACT, MATERIAL UI, TYPESCRIPT, SOURCETREE, BITBUCKET ect.
                          <br />
                     </Typography>
 
-                    <Box sx={{ height: theme.spacing(1.7) }} />
+                    {p_spacing}
                     <Typography variant="p" >
                          For the software development the company used AGILE with the SCRUM framework and JIRA.
                          <br />
@@ -135,7 +148,7 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
 
 
      return (
-          <div style={{...sectionsContainer, ...{marginTop: 23}}}>
+          <div style={{ ...sectionsContainer, ...{ marginTop: 23 } }}>
                <div style={titleContainer}>
                     <div>{cardTitle}</div>
                     <motion.div
@@ -143,8 +156,10 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
                          animate={{ opacity: 1, y: 0 }}
                          transition={{ delay: 0.25, duration: 0.25, ease: 'easeInOut' }}
                     >
+                         
                          <Box style={sectionsBody}>
                               <Box style={sections}>
+                              
                                    {groundbits('Dec 2021 – Present', 'Ricard Rosson', 'ricard@iacos.net')}
                               </Box>
 

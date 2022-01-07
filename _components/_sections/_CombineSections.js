@@ -13,7 +13,10 @@ export default function _CombineSections({
      const measurements = {
           pageContainerWidth: 526,
           sectionWidth: 230,
+
      }
+
+     const p_spacing = (<Box sx={{ height: '11px' }} />)
 
      const stylesPage = {
 
@@ -40,7 +43,36 @@ export default function _CombineSections({
           sections: {
                //  backgroundColor: '#44444411',
                width: min_width_600px ? measurements.sectionWidth : '100%',
-          }
+          },
+
+
+          h3_Style: {
+               letterSpacing: 2,
+               fontSize: min_width_600px ? 28 : 40,
+               fontWeight: min_width_600px ? 600 : 600
+          },
+          h4_Style: {
+               mt: 1.7,
+               color: state.thirdLettersColor,
+               letterSpacing: 1,
+               fontWeight: min_width_600px ? 600 : 600,
+               fontSize: min_width_600px ? 17 : 25
+          },
+          h5_Style: {
+
+               mt: 0.6,
+               mb: 3.24,
+               color: state.thirdLettersColor,
+               letterSpacing: 0.62,
+               fontWeight: min_width_600px ? 600 : 600,
+               fontSize: min_width_600px ? 12 : 16,
+          },
+          period_style: {
+               fontWeight: 'bold',
+               color: state.strongText,
+               fontSize: min_width_600px ? 12 : 16,
+          },
+
      }
 
 
@@ -66,6 +98,7 @@ export default function _CombineSections({
                          min_width_600px={min_width_600px}
                          stylesPage={stylesPage}
                          measurements={measurements}
+                         p_spacing={p_spacing}
                     />
 
                     <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
@@ -77,6 +110,7 @@ export default function _CombineSections({
                          animationTransition={animationTransition}
                          stylesPage={stylesPage}
                          measurements={measurements}
+                         p_spacing={p_spacing}
                     />
                     <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
 
@@ -86,6 +120,7 @@ export default function _CombineSections({
                          animationTransition={animationTransition}
                          stylesPage={stylesPage}
                          measurements={measurements}
+                         p_spacing={p_spacing}
                     />
                     <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
 
