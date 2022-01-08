@@ -24,7 +24,7 @@ export default function AboutMe({ state, min_width_600px, stylesPage, measuremen
                }}
           >
                <Box sx={borderBottomStyle}>
-                    <Typography variant="h3" sx={h3_Style}>
+                    <Typography variant="h3" sx={h3_Style} gutterBottom={true}>
                          About me
                     </Typography>
                </Box>
@@ -150,11 +150,9 @@ export default function AboutMe({ state, min_width_600px, stylesPage, measuremen
                     <div>{cardTitle}</div>
                     <div style={sectionsBody}>
                          <div style={sections}>
-                              {p_spacing}
-                              {p_spacing}
+                              <Box sx={{ height: min_width_600px ? 23 : 31 }} />
                               {img}
-                              {p_spacing}
-                              {p_spacing}
+                              <Box sx={{ height: min_width_600px ? 40 : 25 }} />
                               {leftSection}
 
                          </div>

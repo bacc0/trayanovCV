@@ -24,7 +24,7 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
                }}
           >
                <Box sx={borderBottomStyle}>
-                    <Typography variant="h3" sx={h3_Style}>
+                    <Typography variant="h3" sx={h3_Style} gutterBottom={true}>
                          Experience
                     </Typography>
                </Box>
@@ -32,15 +32,16 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
      )
 
      const img = (
-          <Box sx={{ mt: theme.spacing(min_width_600px ? -0.8 : -2.4), mb: theme.spacing(0.3) }}>
-               {p_spacing}
-               {p_spacing}
+          <>
+               <Box sx={{ mt: '-4px', height: min_width_600px ? 19 : 0 }} />
+
                <Img_handle_inview
                     src={'./exp.svg'}
                     min_width_600px={min_width_600px}
                     width={measurements.sectionWidth}
                />
-          </Box>
+               <Box sx={{ height: min_width_600px ? 0 : 3 }} />
+          </>
      )
 
      const L_R_cardsStyle = {

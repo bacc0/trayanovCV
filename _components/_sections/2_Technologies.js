@@ -22,7 +22,7 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
                }}
           >
                <Box sx={borderBottomStyle}>
-                    <Typography variant="h3" sx={h3_Style}>
+                    <Typography variant="h3" sx={h3_Style} gutterBottom={true}>
                          Tech stack
                     </Typography>
                </Box>
@@ -61,16 +61,10 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
                     {p_spacing}
                     <Typography variant="p">CSS SASS<br /></Typography>
                     {p_spacing}
-                   
+
                     <Typography variant="p">HTML<br /></Typography>
+                    {p_spacing}
 
-
-               </CardContent>
-          </Card>
-     )
-     const rightSection = (
-          <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.9 : -0.3 } }}>
-               <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
                     <Typography variant="p">Framer Motion<br /></Typography>
                     {p_spacing}
 
@@ -91,6 +85,14 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
 
                     <Typography variant="p">Photoshop Adobe<br /></Typography>
                     {p_spacing}
+
+               </CardContent>
+          </Card>
+     )
+     const rightSection = (
+          <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.9 : -0.3 } }}>
+               <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
+
 
                     <Typography variant="p">Typescript<br /></Typography>
                     {p_spacing}
@@ -128,19 +130,24 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
                     <div>{cardTitle}</div>
                     <Box style={sectionsBody}>
                          <div style={sections}>
-                              {p_spacing}
+                              {/* {p_spacing}
                               {p_spacing}
                               {img}
                               {p_spacing}
-                              {p_spacing}
+                              {p_spacing} */}
                               {leftSection}
                          </div>
                          <div style={sections}>
-                              <Box sx={{ height: theme.spacing(min_width_600px ? 0 : 2.4) }} />
+                              {/* {p_spacing} */}
+                              <Box sx={{ height: min_width_600px ? 0 : 28 }} />
+                              {img}
+                              <Box sx={{ height: min_width_600px ? 36 : 35 }} />
+                          
+                             
                               {rightSection}
                          </div>
                     </Box>
-               {p_spacing}
+                    {p_spacing}
                </div>
           </div>
      )
