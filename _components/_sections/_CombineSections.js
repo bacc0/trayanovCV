@@ -157,6 +157,8 @@ export default function _CombineSections({
                          p_spacing={p_spacing}
                     />
                </Box>
+               <div style={{ borderTop: `0.3px solid ${state.footerColor}` }} />
+
           </motion.div>
      )
 }

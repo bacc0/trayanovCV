@@ -107,6 +107,7 @@ export default function HomePage({
           backgroundColor: AppBackgroundColor,
           // background: `radial-gradient(circle closest-side, #7026A5, #040F1B)`,
           color: bodyColor,
+          // borderBottom: '1px solid lime',
           transition: `background-color ${animationTransition} ease, 
                                   color ${animationTransition} ease`,
      }
