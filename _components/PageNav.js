@@ -20,24 +20,25 @@ export default function MenuAppBar({ state }) {
      }
 
      const [visStart, setVisStart] = React.useState(false)
-     const [scale, setScale] = React.useState(`scale(1.25)`)
+     const [scale, setScale] = React.useState(`scale(1)`)
      
 
      if (!visStart) {
           setInterval(() => {
                setVisStart(true)
-               setInterval(() => {
-
-                    setScale(`scale(1)`)
-                 
-               }, 3500)
+               setInterval(() => { setScale(`scale(0.85)`) }, 3500)
           }, 2350)
      }
      const style_typing = {
           color: state.backgroundColor,
-          fontSize: 19,
+          
+          fontSize: 24,
           fontWeight: 400,
           letterSpacing: 1.3,
+          mt: '4px',
+          ml: '-16px',
+
+
      }
 
      const typing = (
