@@ -121,7 +121,7 @@ export default function HomePage({
           }, 2500);
      }, []);
 
-     const gradient = `linear-gradient( #11111102 ,#11111104 ,#11111107, transparent ,transparent, transparent, transparent, transparent, #11111104, #11111107)`
+     const gradient = `linear-gradient( transparent ,transparent ,transparent, transparent ,transparent, transparent, transparent, transparent, #11111105, #11111107)`
 
      
      const styleBackAnimationContainer = {
