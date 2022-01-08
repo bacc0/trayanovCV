@@ -82,9 +82,9 @@ export default function _CombineSections({
 
      }
 
-     const [h3_scale, set_h3_scale] = React.useState(`scale(0.9)`)
+     const [h3_scale, set_h3_scale] = React.useState(`scale(0.95)`)
 
-     if (h3_scale === `scale(0.9)`) {
+     if (h3_scale === `scale(0.95)`) {
           setInterval(() => {
                set_h3_scale(`scale(1)`)
           }, 5800)
