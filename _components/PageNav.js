@@ -21,7 +21,7 @@ export default function MenuAppBar({ state }) {
 
      const [visStart, setVisStart] = React.useState(false)
      const [scale, setScale] = React.useState(`scale(1.25)`)
-     const [colorScale, setColorScale] = React.useState(state.strongText)
+     
 
      if (!visStart) {
           setInterval(() => {
@@ -29,12 +29,12 @@ export default function MenuAppBar({ state }) {
                setInterval(() => {
 
                     setScale(`scale(1)`)
-                    setColorScale(state.bodyColor)
+                 
                }, 3500)
           }, 2350)
      }
      const style_typing = {
-          color: colorScale,
+          color: state.backgroundColor,
           fontSize: 19,
           fontWeight: 400,
           letterSpacing: 1.3,
