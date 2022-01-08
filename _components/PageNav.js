@@ -54,7 +54,7 @@ export default function MenuAppBar({ state }) {
      const cardTitle = (
           <Card sx={card_style_container}>
                <Box>
-                    <Veselin color={state.strongText} />
+                    <Veselin color={state.bodyColor} /> // state.strongText
                </Box>
                <Box sx={style_typing_container}>
                     {typing}
