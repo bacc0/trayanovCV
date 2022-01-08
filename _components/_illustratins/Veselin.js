@@ -67,31 +67,12 @@ export default ({ color }) => {
                     width={size} height={size} viewBox='0, 0, 250, 100'
 
                >
-                    <g id="a_lines">
-                         <motion.path
-                              initial={{ opacity: 0, pathLength: 0 }}
-                              animate={{ opacity: 0, pathLength: 1 }}
-                              transition={transitionStrokeLines}
-                              d="M163.527,131.384 L8.611,131.608 L8.478,71.977"
-                              fill-opacity="0"
-                              stroke={color}
-                              strokeWidth={strokeWidthLines}
-                         />
-                         <motion.path
-                              initial={{ opacity: 0, pathLength: 0 }}
-                              animate={{ opacity: 0, pathLength: 1 }}
-                              transition={transitionStrokeLines}
-                              d="M63.087,3.091 L217.389,2.872 L217.315,62.809"
-                              fill-opacity="0"
-                              stroke={color}
-                              strokeWidth={strokeWidthLines}
-                         />
-                    </g>
+ 
 
 
                     <motion.g
-                         initial={{ opacity: 0, scale: 1.5, y: -3 }}
-                         animate={{ opacity: 1, scale: 1.00, y: -3 }}
+                         initial={{ opacity: 0, scale: 1.5, y: 0 }}
+                         animate={{ opacity: 1, scale: 1.00, y: 0 }}
                          transition={{ delay: 0.2, duration: 0.25 }}
                     >
 
@@ -109,8 +90,8 @@ export default ({ color }) => {
                     </motion.g>
 
                     <motion.g
-                         initial={{ scale:1.05, y: 0 }}
-                         animate={{ scale: 0.92, y: 0 }}   //   animate={{ scale: 0.95, y: 2 }} 
+                         initial={{ scale:1.05, y: 0.5 }}
+                         animate={{ scale: 0.92, y: 0.5 }}   //   animate={{ scale: 0.95, y: 2 }} 
                          transition={{ delay: 2.16, duration: 0.25, type: "tween", stiffness: 400 }}
                     >
 
