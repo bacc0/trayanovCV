@@ -2,14 +2,16 @@ import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { motion } from 'framer-motion'
 
-
-export default function Experience({ state, min_width_600px, stylesPage, measurements, p_spacing }) {
+export default function Experience({ state, min_width_600px, stylesPage, measurements, p_spacing, h3_scale }) {
 
      const { sectionsContainer, titleContainer, sectionsBody, sections,
           h3_Style, h4_Style, h5_Style, period_style, borderBottomStyle } = stylesPage
      const { strongText, backgroundColor } = state
 
      const theme = useTheme()
+
+
+     
 
      const cardTitle = (
           <Card
@@ -24,9 +26,14 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
                }}
           >
                <Box sx={borderBottomStyle}>
-                    <Typography variant="h3" sx={h3_Style} gutterBottom={true}>
-                         Experience
-                    </Typography>
+                    <div style={{ 
+                         transform: h3_scale, 
+                         transition: `transform 200ms linear`
+                          }} >
+                         <Typography variant="h3" sx={h3_Style} gutterBottom={true}>
+                              Experience
+                         </Typography>
+                    </div>
                </Box>
           </Card>
      )

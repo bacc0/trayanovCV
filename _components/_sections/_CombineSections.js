@@ -5,6 +5,7 @@ import Footer from './4_Footer'
 import Kkk from './Kkk'
 import Box from '@mui/material/Box'
 import { motion } from 'framer-motion'
+import * as React from 'react'
 
 
 export default function _CombineSections({
@@ -81,7 +82,13 @@ export default function _CombineSections({
 
      }
 
+     const [h3_scale, set_h3_cale] = React.useState(`scale(0.93)`)
 
+     if (h3_scale === `scale(0.93)`) {
+          setInterval(() => {
+               set_h3_cale(`scale(1)`)
+          }, 5800)
+     }
 
 
      return (
@@ -105,6 +112,7 @@ export default function _CombineSections({
                          stylesPage={stylesPage}
                          measurements={measurements}
                          p_spacing={p_spacing}
+                         h3_scale={h3_scale}
                     />
 
                     <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
