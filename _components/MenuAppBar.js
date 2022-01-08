@@ -98,13 +98,14 @@ export default function MenuAppBar({
      const iconsStackStyle_Right = {
           display: 'flex',
           justifyContent: min_width_600px ? 'flex-end' : 'center',
-
-          width: '16%',
+          // backgroundColor: 'tan',
+          width: min_width_600px ? 200 : '16%',
      }
      const themeText = {
           marginTop: 8.5,
-          fontSize: 11,
-          color: thirdLettersColor
+          fontSize: 9,
+          color: thirdLettersColor,
+          fontWeight: 300
      }
 
 
@@ -170,7 +171,7 @@ export default function MenuAppBar({
                                    <span style={iconsStackStyle_Right}>
                                         <Hidden smDown>
                                              <div style={themeText}>
-                                                  theme
+                                                  go {theme === 'light' ? 'Dark' : 'Light'} mode
                                              </div>
                                         </Hidden>
                                         <IconButton
