@@ -28,7 +28,9 @@ export default function MenuAppBar({ state }) {
 
      const [vis, setVis] = React.useState(false)
 
-     setInterval(() => { setVis(true) }, 3200);
+     // setInterval(() => { setVis(true) }, 3200);
+     setInterval(() => { setVis(true) }, 2350)
+
 
      const typing = (
           <Typography variant='h3' sx={style_typing}>

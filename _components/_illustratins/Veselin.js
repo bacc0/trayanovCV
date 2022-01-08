@@ -109,10 +109,14 @@ export default ({ color }) => {
                     </motion.g>
 
                     <motion.g
-                         initial={{ scale: 0.8, y: 0 }}
+                         initial={{ scale:1.05, y: 0 }}
                          animate={{ scale: 0.92, y: 0 }}   //   animate={{ scale: 0.95, y: 2 }} 
                          transition={{ delay: 2.16, duration: 0.25, type: "tween", stiffness: 400 }}
                     >
+
+
+
+
                          <motion.g
                               initial={{ opacity: 0 }}  // x=?
                               animate={{ opacity: 1 }}
