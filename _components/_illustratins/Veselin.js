@@ -95,8 +95,6 @@ export default ({ color, min_width_600px }) => {
                     paddingBottom: 36,
                     // background: '#555555333',
                     // background: 'red',
-                    
-                    
                }}
           >
                {colibri}
@@ -348,7 +346,7 @@ export default ({ color, min_width_600px }) => {
                </svg>
 
           
-               <div style={{minHeight: min_width_600px ? 22 : 32 }} >
+               <div style={{minHeight: min_width_600px ? 25 : 35 }} >
                          {typing}
                     </div>
           </div>

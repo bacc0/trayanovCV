@@ -19,37 +19,6 @@ export default function MenuAppBar({ state, min_width_600px }) {
           left: 40
      }
 
-     // const [visStart, setVisStart] = React.useState(false)
-     // const [scale, setScale] = React.useState(`scale(1)`)
-     
-
-     // if (!visStart) {
-     //      setInterval(() => {
-     //           setVisStart(true)
-     //           setInterval(() => { setScale(`scale(0.85)`) }, 3500)
-     //      }, 2350)
-     // }
-
-     // const style_typing = {
-     //      color: state.backgroundColor,
-          
-     //      fontSize: 24,
-     //      fontWeight: 400,
-     //      letterSpacing: 1.3,
-     //      mt: '4px',
-     //      ml: '-16px',
-     // }
-
-     // const typing = (
-
-     //      <Typography variant='h3' sx={style_typing}>
-     //           {visStart && (<div>
-     //                {typeWriter(['... end ', 'front end developer'])}
-     //           </div>)}
-     //      </Typography>
-
-     // )
-
      const card_style_container = {
           position: 'relative',
           top: 14,
