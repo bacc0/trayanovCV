@@ -70,11 +70,14 @@ export default function MenuAppBar({
           position: 'fixed',
           top: appBarIsVisible ? 0 : -150,
           transition: `top ${scrollDirection === 'up' ? '800ms' : '600ms'} linear`,
+          // backgroundColor: 'tan',
+          height: 65
      }
 
      const underAppBar = {
           height: 55,
           transition: `background-color 350ms linear`,
+       
      }
      const titleStyle = {
           fontSize: 12,
@@ -124,7 +127,9 @@ export default function MenuAppBar({
                          <Toolbar
                               style={{
                                    maxWidth: min_width_600px ? 546 : 398,
-                                   margin: '0 auto'
+                                   margin: '0 auto',
+                                   height: 65,
+                                   // backgroundColor: 'lime',
                               }}
                          >
                               {/* <div>{renderCounter.current}</div> */}

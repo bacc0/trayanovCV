@@ -1,8 +1,11 @@
-import { Fragment, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import { motion } from 'framer-motion'
 import Script from 'next/script'
+import { typeWriter } from '../_sections/helpers/TypeWriter'
+import Typography from '@mui/material/Typography'
+import { minHeight } from '@mui/system'
 
-export default ({ color }) => {
+export default ({ color, min_width_600px }) => {
 
 
      const fill = color
@@ -51,13 +54,49 @@ export default ({ color }) => {
           </motion.div>
      )
 
+     const [visStart, setVisStart] = useState(false)
+     const [scale, setScale] = useState(`scale(1)`)
+     
+
+     if (!visStart) {
+          setInterval(() => {
+               setVisStart(true)
+               setInterval(() => { setScale(`scale(0.85)`) }, 3500)
+          }, 2350)
+     }
+
+     const style_typing = {
+          color: color,
+          
+          fontSize: 19,
+          fontWeight: 400,
+          letterSpacing: 1.3,
+          position: 'relative',
+          top: -82,
+          left:  53
+     }
+
+     const typing = (
+
+          <Typography variant='h3' sx={style_typing}>
+               {visStart && (<div>
+                    {typeWriter(['... end ', 'front end developer'])}
+               </div>)}
+          </Typography>
+
+     )
 
      return (
           <div
                style={{
                     width: 300,
-                    padding: `0 0 34px 0`,
+                
+                    padding: 0,
                     paddingBottom: 36,
+                    // background: '#555555333',
+                    // background: 'red',
+                    
+                    
                }}
           >
                {colibri}
@@ -67,8 +106,8 @@ export default ({ color }) => {
                     style={{ paddingLeft: 11 }}
                >
                     <motion.g
-                         initial={{ opacity: 0, scale:  1.5, y: 0, x: 16 }}
-                         animate={{ opacity: 1, scale: 1.00, y: 1, x: 16 }}
+                         initial={{ opacity: 0, scale:  1.5, y: -7, x: 16 }}
+                         animate={{ opacity: 1, scale: 1.00, y: -7, x: 16 }}
                          transition={{ delay: 0.2, duration: 0.25 }}
                     >
                          <g>
@@ -93,8 +132,8 @@ export default ({ color }) => {
                     </motion.g>
 
                     <motion.g
-                         initial={{ scale: 1.05, y: 15, x: 2 }}
-                         animate={{ scale: 0.82, y: 13, x: 2  }}   //   animate={{ scale: 0.95, y: 2 }} 
+                         initial={{ scale: 1.05, y: 0, x: 0 }}
+                         animate={{ scale: 0.82, y: 4, x: 0  }}   //   animate={{ scale: 0.95, y: 2 }} 
                          transition={{ delay: 2.16, duration: 0.25, type: "tween", stiffness: 400 }}
                     >
                          <motion.g
@@ -307,6 +346,11 @@ export default ({ color }) => {
                          </motion.g>
                     </motion.g>
                </svg>
+
+          
+               <div style={{minHeight: min_width_600px ? 22 : 32 }} >
+                         {typing}
+                    </div>
           </div>
      )
 }

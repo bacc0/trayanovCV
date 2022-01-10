@@ -153,7 +153,7 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
 
 
      return (
-          <div style={{ ...sectionsContainer, ...{ marginTop: 23 } }}>
+          <div style={{ ...sectionsContainer, ...{ marginTop: min_width_600px ? 23 : 0} }}>
                <div style={titleContainer}>
                     <div>{cardTitle}</div>
                     <motion.div
