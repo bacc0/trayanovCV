@@ -114,7 +114,7 @@ export default function HomePage({
      const navRoot = {
           width: '100%',
           // height: 216,
-          height: min_width_600px ? 216 : '77vw',
+          height: min_width_600px ? 216 : '100vw',
           // borderBottom: `2px solid purple`,
           // backgroundColor: 'tan'
      }
@@ -144,7 +144,7 @@ export default function HomePage({
           justifyContent: 'flex-end',
           overflow: 'hidden',
           // height: 294,
-          height: min_width_600px ? 294 : `calc(77vw + 55px)`,
+          height: min_width_600px ? 294 : `calc(100vw + 55px)`,
           top: 0,
           position: `absolute`,
           width: '100%',
@@ -152,11 +152,11 @@ export default function HomePage({
           background: gradient,
           opacity: backgroundOpacity,
           transition: `opacity 4s linear`,
-          // backgroundColor:'#23423455'
+          backgroundColor: min_width_600px ? 'transparent' : '#9f9f9f0f'
      }
 
      const styleBackAnimation = {
-          top: min_width_600px ? 25 : '47vw',
+          top: min_width_600px ? 25 : '60vw',
           position: `absolute`,
           animation: `rotate 40s linear infinite`,
           opacity: opacityBG,
