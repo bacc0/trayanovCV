@@ -76,7 +76,8 @@ export default function MenuAppBar({
 
      const underAppBar = {
           height: 55,
-          transition: `background-color 350ms linear`,
+          // transition: `background-color 150ms linear`,
+          backgroundColor: state.primeLettersColor
        
      }
      const titleStyle = {
