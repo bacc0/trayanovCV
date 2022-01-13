@@ -56,7 +56,7 @@ export default ({ color, min_width_600px }) => {
 
      const [visStart, setVisStart] = useState(false)
      const [scale, setScale] = useState(`scale(1)`)
-     
+
 
      if (!visStart) {
           setInterval(() => {
@@ -67,13 +67,13 @@ export default ({ color, min_width_600px }) => {
 
      const style_typing = {
           color: color,
-          
+
           fontSize: 19,
           fontWeight: 400,
           letterSpacing: 1.3,
           position: 'relative',
           top: -82,
-          left:  53
+          left: 53
      }
 
      const typing = (
@@ -90,7 +90,7 @@ export default ({ color, min_width_600px }) => {
           <div
                style={{
                     width: 300,
-                
+
                     padding: 0,
                     paddingBottom: 36,
                     // background: '#555555333',
@@ -104,7 +104,7 @@ export default ({ color, min_width_600px }) => {
                     style={{ paddingLeft: 11 }}
                >
                     <motion.g
-                         initial={{ opacity: 0, scale:  1.5, y: -7, x: 16 }}
+                         initial={{ opacity: 0, scale: 1.5, y: -7, x: 16 }}
                          animate={{ opacity: 1, scale: 1.00, y: -7, x: 16 }}
                          transition={{ delay: 0.2, duration: 0.25 }}
                     >
@@ -131,7 +131,7 @@ export default ({ color, min_width_600px }) => {
 
                     <motion.g
                          initial={{ scale: 1.05, y: 0, x: 0 }}
-                         animate={{ scale: 0.82, y: 4, x: 0  }}   //   animate={{ scale: 0.95, y: 2 }} 
+                         animate={{ scale: 0.82, y: 4, x: 0 }}   //   animate={{ scale: 0.95, y: 2 }} 
                          transition={{ delay: 2.16, duration: 0.25, type: "tween", stiffness: 400 }}
                     >
                          <motion.g
@@ -155,7 +155,7 @@ export default ({ color, min_width_600px }) => {
                                         <motion.path
                                              initial={{ pathLength: 0 }}
                                              animate={{ pathLength: 1 }}
-                                             transition={{...transitionStroke, ...{duration: 2}}}
+                                             transition={{ ...transitionStroke, ...{ duration: 2 } }}
                                              stroke={color}
                                              strokeWidth={strokeWidth}
                                              fill-opacity="0"
@@ -173,7 +173,7 @@ export default ({ color, min_width_600px }) => {
                                         <motion.path
                                              initial={{ pathLength: 0 }}
                                              animate={{ pathLength: 1 }}
-                                             transition={{...transitionStroke, ...{duration: 2}}}
+                                             transition={{ ...transitionStroke, ...{ duration: 2 } }}
                                              stroke={color}
                                              strokeWidth={strokeWidth}
                                              fill-opacity="0"
@@ -182,7 +182,7 @@ export default ({ color, min_width_600px }) => {
                                         <motion.path
                                              initial={{ pathLength: 0 }}
                                              animate={{ pathLength: 1 }}
-                                             transition={{...transitionStroke, ...{duration: 2.5}}}
+                                             transition={{ ...transitionStroke, ...{ duration: 2.5 } }}
                                              stroke={color}
                                              strokeWidth={strokeWidth}
                                              fill-opacity="0"
@@ -191,7 +191,7 @@ export default ({ color, min_width_600px }) => {
                                         <motion.path
                                              initial={{ pathLength: 0 }}
                                              animate={{ pathLength: 1 }}
-                                             transition={{...transitionStroke, ...{duration: 2}}}
+                                             transition={{ ...transitionStroke, ...{ duration: 2 } }}
                                              stroke={color}
                                              strokeWidth={strokeWidth}
                                              fill-opacity="0"
@@ -200,7 +200,7 @@ export default ({ color, min_width_600px }) => {
                                         <motion.path
                                              initial={{ pathLength: 0 }}
                                              animate={{ pathLength: 1 }}
-                                             transition={{...transitionStroke, ...{duration: 2}}}
+                                             transition={{ ...transitionStroke, ...{ duration: 2 } }}
                                              stroke={color}
                                              strokeWidth={strokeWidth}
                                              fill-opacity="0"
@@ -345,10 +345,10 @@ export default ({ color, min_width_600px }) => {
                     </motion.g>
                </svg>
 
-          
-               <div style={{minHeight: min_width_600px ? 25 : 35 }} >
-                         {typing}
-                    </div>
+
+               <div style={{ minHeight: min_width_600px ? 25 : 35 }} >
+                    {typing}
+               </div>
           </div>
      )
 }

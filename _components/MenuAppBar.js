@@ -174,11 +174,11 @@ export default function MenuAppBar({
                                         </IconButton>
                                    </span>
                                    <span style={iconsStackStyle_Right}>
-                                        <Hidden smDown>
+                                        {/* <Hidden smDown>
                                              <div style={themeText}>
                                                   go {theme === 'light' ? 'Dark' : 'Light'} mode
                                              </div>
-                                        </Hidden>
+                                        </Hidden> */}
                                         <IconButton
                                              onClick={() => handleThemeChange()}
                                              aria-label='theme icon'
