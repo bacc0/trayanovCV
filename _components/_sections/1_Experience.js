@@ -6,7 +6,7 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
 
      const { sectionsContainer, titleContainer, sectionsBody, sections,
           h3_Style, h4_Style, h5_Style, period_style, borderBottomStyle } = stylesPage
-     const { strongText, backgroundColor } = state
+     const { strongText } = state
 
      const theme = useTheme()
 
@@ -58,9 +58,6 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
           borderLeft: 0,
           backgroundColor: "transparent"
      }
-
-     // const p_spacing = ( <Box sx={{ height: theme.spacing(1.7) }} />)
-
 
 
      const groundbits = (period, contact, mail) => {

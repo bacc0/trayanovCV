@@ -38,11 +38,7 @@ export default function HomePage({
      }
      const [state, setState] = useState(INITIAL_STATE)
 
-     const [onAnimationEnd, setOnAnimationEnd] = useState(false)
-
      const min_width_600px = useMediaQuery('(min-width:600px)')
-     const logo_W_H = 230
-     const strokeWidth = min_width_600px ? 1.2 : 1.5
 
      const backgroundNav_1_light = `url('backgroundNav_1_light.svg') `
      const backgroundNav_1_dark = `url('backgroundNav_1_dark.svg')`
@@ -52,6 +48,23 @@ export default function HomePage({
 
      const [backgroundNav_2, setBackgroundNav_2] = useState(`url('backgroundClear.svg')`)
      const [backgroundNav_3, setBackgroundNav_3] = useState(`url('backgroundClear.svg')`)
+
+     const [opacityBG, setOpacityBG] = useState(0)
+     const [backgroundOpacity, setBackgroundOpacity] = useState(0)
+
+     const { AppBackgroundColor, bodyColor } = state
+
+     const animationTransition = '0ms'
+
+     const gradient = `linear-gradient( transparent ,transparent ,transparent, transparent ,transparent, transparent, transparent, transparent, #11111105, #11111107)`
+
+
+     useEffect(() => {
+          setInterval(() => {
+               setOpacityBG(1)
+               setBackgroundOpacity(1)
+          }, 2500);
+     }, [])
 
      setTimeout(() => {
           setBackgroundNav_2(`url('backgroundNav_2.svg')`)
@@ -68,7 +81,6 @@ export default function HomePage({
           })
      }, [backgroundNav_2, backgroundNav_3]);
 
-     const animationTransition = '0ms'
 
      useEffect(() => {
 
@@ -101,72 +113,54 @@ export default function HomePage({
 
      }, [theme]);
 
-     const { AppBackgroundColor, bodyColor, thirdLettersColor } = state
 
-     const pageRoot = {
-          backgroundColor: AppBackgroundColor,
-          // background: `radial-gradient(circle closest-side, #7026A5, #040F1B)`,
-          color: bodyColor,
-          transition: `background-color ${animationTransition} ease, 
+     const style = {
+
+          pageRoot: {
+               backgroundColor: AppBackgroundColor,
+               // background: `radial-gradient(circle closest-side, #7026A5, #040F1B)`,
+               color: bodyColor,
+               transition: `background-color ${animationTransition} ease, 
                                   color ${animationTransition} ease`,
+          },
+          navRoot: {
+               width: '100%',
+               height: min_width_600px ? 216 : '100vw',
+          },
+          nav: {
+               height: '100%',
+               margin: '0 auto',
+               display: 'flex',
+               alignItems: 'flex-end',
+               justifyContent: 'center',
+          },
+          backAnimationContainer: {
+               display: 'flex',
+               justifyContent: 'flex-end',
+               overflow: 'hidden',
+               height: min_width_600px ? 294 : `calc(100vw + 55px)`,
+               top: 0,
+               position: `absolute`,
+               width: '100%',
+               backgroundColor: AppBackgroundColor,
+               background: gradient,
+               opacity: backgroundOpacity,
+               transition: `opacity 4s linear`,
+               backgroundColor: min_width_600px ? 'transparent' : '#9f9f9f0f'
+          },
+          backAnimation: {
+               top: min_width_600px ? 25 : '60vw',
+               position: `absolute`,
+               animation: `rotate 40s linear infinite`,
+               opacity: opacityBG,
+               transition: `opacity 4s linear`,
+          }
      }
 
-     const navRoot = {
-          width: '100%',
-          // height: 216,
-          height: min_width_600px ? 216 : '100vw',
-          // borderBottom: `2px solid purple`,
-          // backgroundColor: 'tan'
-     }
-     const nav = {
-          height: '100%',
-          margin: '0 auto',
-          display: 'flex',
-          alignItems: 'flex-end',
-          justifyContent: 'center',
-     }
-
-     const [opacityBG, setOpacityBG] = useState(0);
-     const [backgroundOpacity, setBackgroundOpacity] = useState(0);
-
-     useEffect(() => {
-          setInterval(() => {
-               setOpacityBG(1)
-               setBackgroundOpacity(1)
-          }, 2500);
-     }, []);
-
-     const gradient = `linear-gradient( transparent ,transparent ,transparent, transparent ,transparent, transparent, transparent, transparent, #11111105, #11111107)`
-
-
-     const styleBackAnimationContainer = {
-          display: 'flex',
-          justifyContent: 'flex-end',
-          overflow: 'hidden',
-          // height: 294,
-          height: min_width_600px ? 294 : `calc(100vw + 55px)`,
-          top: 0,
-          position: `absolute`,
-          width: '100%',
-          backgroundColor: AppBackgroundColor,
-          background: gradient,
-          opacity: backgroundOpacity,
-          transition: `opacity 4s linear`,
-          backgroundColor: min_width_600px ? 'transparent' : '#9f9f9f0f'
-     }
-
-     const styleBackAnimation = {
-          top: min_width_600px ? 25 : '60vw',
-          position: `absolute`,
-          animation: `rotate 40s linear infinite`,
-          opacity: opacityBG,
-          transition: `opacity 4s linear`,
-
-     }
 
      const backAnimation = (
-          <div style={styleBackAnimationContainer}>
-               <div style={styleBackAnimation}>
+          <div style={style.backAnimationContainer}>
+               <div style={style.backAnimation}>
                     <Image
                          src={'/react_logo.svg'}
                          // alt={'background image'}
@@ -179,21 +173,8 @@ export default function HomePage({
      )
 
 
-
-     const styleProgressBar = {
-          position: 'sticky',
-          top: 0,
-          zIndex: 2000,
-          width: `${Number((Y_position * 100)).toFixed(0)}%`,
-          maxWidth: '100%',
-          // borderBottom: `1px solid ${state.secLettersColor}`,
-     }
-
-
-
      return (
           <div >
-               {/* <div style={styleProgressBar} /> */}
                <MenuAppBar
                     state={state}
                     theme={theme}
@@ -204,15 +185,11 @@ export default function HomePage({
                     min_width_600px={min_width_600px}
                />
                {backAnimation}
-               <div style={pageRoot} >
-                    <div style={navRoot}>
-                         <div style={nav}>
+               <div style={style.pageRoot} >
+                    <div style={style.navRoot}>
+                         <div style={style.nav}>
                               <PageNav
                                    state={state}
-                                   // logo_W_H={logo_W_H}
-                                   // strokeWidth={strokeWidth}
-                                   // setOnAnimationEnd={setOnAnimationEnd}
-                                   // animationTransition={animationTransition}
                                    min_width_600px={min_width_600px}
                               />
                          </div>
@@ -224,7 +201,6 @@ export default function HomePage({
                          Y_position={Y_position}
                          scrollDirection={scrollDirection}
                          min_width_600px={min_width_600px}
-                         onAnimationEnd={onAnimationEnd}
                          animationTransition={animationTransition}
                     />
                </div>

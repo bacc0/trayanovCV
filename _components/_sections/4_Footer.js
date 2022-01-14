@@ -17,8 +17,6 @@ export default function Technologies({ state, min_width_600px, stylesPage, p_spa
 
      const theme = useTheme()
 
-
-
      const L_R_cardsStyle = {
           m: 0,
           maxWidth: '100%',
@@ -34,13 +32,11 @@ export default function Technologies({ state, min_width_600px, stylesPage, p_spa
      }
 
      const iconContainerStyle = {
-          // backgroundColor: 'tan',
           display: 'flex',
           justifyContent: 'flex-start'
      }
 
      const iconStyle = {
-          // backgroundColor: '#55555555',
           marginLeft: 0,
           marginTop: min_width_600px ? 0 : 4,
           paddingRight:  min_width_600px ? 10 : 20,

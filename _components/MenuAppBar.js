@@ -14,24 +14,16 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 export default function MenuAppBar({
      state, theme, setTheme, Y_position, scrollDirection, min_width_600px, currentBrowser }) {
 
+
      const {
           strongText, thirdLettersColor, hrColorMain,
           AppBackgroundColor, animationTransition, secLettersColor } = state
 
-
      const renderCounter = useRef(0)
      renderCounter.current = renderCounter.current + 1
 
-
      const [appBarIsVisible, setAppBarIsVisible] = useState(false)
      const [marker, setMarker] = useState(false)
-
-
-     // setTimeout(() => {
-     //      setHeightAppBar(55)
-
-     // }, 2200)
-
 
      useEffect(() => {
           if (Y_position < 0.035) {
@@ -70,13 +62,11 @@ export default function MenuAppBar({
           position: 'fixed',
           top: appBarIsVisible ? 0 : -150,
           transition: `top ${scrollDirection === 'up' ? '800ms' : '600ms'} linear`,
-          // backgroundColor: 'tan',
           height: 65
      }
 
      const underAppBar = {
           height: 55,
-          // transition: `background-color 150ms linear`,
           backgroundColor: state.primeLettersColor
        
      }
@@ -112,8 +102,6 @@ export default function MenuAppBar({
           fontWeight: 300
      }
 
-
-
      const iconsStyle = {
           color: strongText,
           width: 40, height: 40,
@@ -130,10 +118,8 @@ export default function MenuAppBar({
                                    maxWidth: min_width_600px ? 546 : 398,
                                    margin: '0 auto',
                                    height: 65,
-                                   // backgroundColor: 'lime',
                               }}
                          >
-                              {/* <div>{renderCounter.current}</div> */}
                               <Stack
                                    direction='row'
                                    spacing={1}
@@ -175,11 +161,6 @@ export default function MenuAppBar({
                                         </IconButton>
                                    </span>
                                    <span style={iconsStackStyle_Right}>
-                                        {/* <Hidden smDown>
-                                             <div style={themeText}>
-                                                  go {theme === 'light' ? 'Dark' : 'Light'} mode
-                                             </div>
-                                        </Hidden> */}
                                         <IconButton
                                              onClick={() => handleThemeChange()}
                                              aria-label='theme icon'

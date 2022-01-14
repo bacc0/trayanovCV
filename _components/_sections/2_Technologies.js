@@ -5,7 +5,7 @@ import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 export default function Technologies({ state, min_width_600px, stylesPage, measurements, p_spacing }) {
 
      const { sectionsContainer, titleContainer, sectionsBody, sections, h3_Style, borderBottomStyle } = stylesPage
-     const { bodyColor, backgroundColor, backgroundColor_2, strongText } = state
+     const {  backgroundColor_2, strongText } = state
 
      const theme = useTheme()
 
@@ -125,20 +125,12 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
                     <div>{cardTitle}</div>
                     <Box style={sectionsBody}>
                          <div style={sections}>
-                              {/* {p_spacing}
-                              {p_spacing}
-                              {img}
-                              {p_spacing}
-                              {p_spacing} */}
                               {leftSection}
                          </div>
                          <div style={sections}>
-                              {/* {p_spacing} */}
                               <Box sx={{ height: min_width_600px ? 0 : 28 }} />
                               {img}
                               <Box sx={{ height: min_width_600px ? 36 : 35 }} />
-                          
-                             
                               {rightSection}
                          </div>
                     </Box>
