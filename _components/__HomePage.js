@@ -2,12 +2,14 @@ import { useMediaQuery } from '@mui/material'
 import CombineSections from './_sections/_CombineSections'
 import MenuAppBar from './MenuAppBar'
 import PageNav from './PageNav'
-import { useState, useEffect, Fragment } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
+
 
 
 export default function HomePage({
      currentBrowser, theme, setTheme, Y_position, scrollDirection }) {
+
 
      const color_1 = '#FFFFFF'
      const color_2 = '#FAFAFA' // F2F2F2
@@ -52,12 +54,12 @@ export default function HomePage({
      const [opacityBG, setOpacityBG] = useState(0)
      const [backgroundOpacity, setBackgroundOpacity] = useState(0)
 
+
      const { AppBackgroundColor, bodyColor } = state
 
      const animationTransition = '0ms'
 
      const gradient = `linear-gradient( transparent ,transparent ,transparent, transparent ,transparent, transparent, transparent, transparent, #11111105, #11111107)`
-
 
      useEffect(() => {
           setInterval(() => {
@@ -142,11 +144,13 @@ export default function HomePage({
                top: 0,
                position: `absolute`,
                width: '100%',
-               backgroundColor: AppBackgroundColor,
+
                background: gradient,
                opacity: backgroundOpacity,
                transition: `opacity 4s linear`,
-               backgroundColor: min_width_600px ? 'transparent' : '#9f9f9f0f'
+               backgroundColor: min_width_600px ? 'transparent' : '#9f9f9f0f',
+
+
           },
           backAnimation: {
                top: min_width_600px ? 25 : '60vw',
@@ -163,7 +167,6 @@ export default function HomePage({
                <div style={style.backAnimation}>
                     <Image
                          src={'/react_logo.svg'}
-                         // alt={'background image'}
                          width={min_width_600px ? 600 : 500}
                          height={min_width_600px ? 600 : 500}
                     />
