@@ -74,16 +74,16 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
                     <Typography variant="p">Shapes shifter<br /></Typography>
                     {p_spacing}
 
-                    <Typography variant="p">Illustrator Adobe <br /></Typography>
-                    {p_spacing}
-
-                    <Typography variant="p">Graphic Autodesk <br /></Typography>
-                    {p_spacing}
-
                     <Typography variant="p">GIMP<br /></Typography>
                     {p_spacing}
 
                     <Typography variant="p">Photoshop Adobe<br /></Typography>
+                    {p_spacing}
+
+                    <Typography variant="p">Illustrator Adobe <br /></Typography>
+                    {p_spacing}
+
+                    <Typography variant="p">Graphic Autodesk <br /></Typography>
                     {p_spacing}
 
                </CardContent>
@@ -103,21 +103,16 @@ export default function Technologies({ state, min_width_600px, stylesPage, measu
                     <Typography variant="p">Express<br /></Typography>
                     {p_spacing}
 
-                    <Typography variant="p">Git<br /></Typography>
-                    {p_spacing}
-
-                    <Typography variant="p">Github Bitbucket<br /></Typography>
-                    {p_spacing}
-
-                    <Typography variant="p">Sourcetree<br /></Typography>
+                    <Typography variant="p"> Agile Scrum <br /></Typography>
                     {p_spacing}
 
                     <Typography variant="p">Jira<br /></Typography>
                     {p_spacing}
 
+                    <Typography variant="p">Git Github Bitbucket<br /></Typography>
+                    {p_spacing}
 
-
-
+                    <Typography variant="p"> Sourcetree<br /></Typography>
 
                </CardContent>
           </Card>
