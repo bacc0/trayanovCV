@@ -6,7 +6,7 @@ export default function MenuAppBar({ state }) {
 
 
      const style = {
-           typing_container : {
+          typing_container: {
                minHeight: 100,
                minHeight: '30px',
                minWidth: '300px',
@@ -14,7 +14,7 @@ export default function MenuAppBar({ state }) {
                top: 149,
                left: 40
           },
-           card_container : {
+          card_container: {
                position: 'relative',
                top: 14,
                height: '100%',
@@ -24,7 +24,7 @@ export default function MenuAppBar({ state }) {
                boxShadow: 0,
           }
      }
-     
+
 
      const cardTitle = (
           <Card sx={style.card_container}>

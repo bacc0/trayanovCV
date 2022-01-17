@@ -15,15 +15,19 @@ import { Y_PositionActions } from '../store/PositionY'
 import { min_width_600px_Actions } from '../store/minWidth'
 import { windowSizeActions } from '../store/windowSize'
 
+import { motion, AnimatePresence } from "framer-motion"
+import { useScrollDirection } from 'react-use-scroll-direction'
+
 
 export default function Home() {
+
 
 
      const dispatch = useDispatch();
 
      const theme = useSelector(state => state.themeReducer.color)
 
-     const positionY = useSelector(state => state.Y_PositionSliceReducer.Y)
+     const positionY = useSelector(state => state.Y_PositionSliceReducer.value)
 
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
 
@@ -33,6 +37,7 @@ export default function Home() {
           dispatch(min_width_600px_Actions.MIN_WIDTH(tempMediaQuery))
      }, [tempMediaQuery]);
 
+     const scrollDirection = useSelector(state => state.scrollDirectionReducer.value)
      // ---------------------------------    scroll to the top on reload
 
      useEffect(() => {
@@ -66,43 +71,57 @@ export default function Home() {
      // ---------------------------------    Detect window scrolling Directions (UP DOWN)
 
 
-     useEffect(() => {
-          var scrollableElement = document.body
-          scrollableElement.addEventListener('wheel', checkScrollDirection)
-          function checkScrollDirection(event) {
+     // useEffect(() => {
+     //      var scrollableElement = document.body
+     //      scrollableElement.addEventListener('wheel', checkScrollDirection)
+     //      function checkScrollDirection(event) {
 
-               if (checkScrollDirectionIsUp(event)) {
-                    dispatch(scrollDirectionActions.DOWN())
-               }
-               else {
-                    dispatch(scrollDirectionActions.UP())
-               }
-          }
-          function checkScrollDirectionIsUp(event) {
+     //           if (checkScrollDirectionIsUp(event)) {
+     //                dispatch(scrollDirectionActions.DOWN())
+     //           }
+     //           else {
+     //                dispatch(scrollDirectionActions.UP())
+     //           }
+     //      }
+     //      function checkScrollDirectionIsUp(event) {
 
-               if (event.wheelDelta) return event.wheelDelta > 0
-               return event.deltaY < 0
-          }
-     }, [])
+     //           if (event.wheelDelta) return event.wheelDelta > 0
+     //           return event.deltaY < 0
+     //      }
+     // }, [])
 
      // ---------------------------------    Mobile Detect window scrolling Directions (UP DOWN)
 
+     // let oldValue = 0
+     // let newValue = 0
 
-     let oldValue = 0
-     let newValue = 0
+     // useEffect(() => {
+     //      window.addEventListener('scroll', (e) => {
+     //           newValue = window.pageYOffset;
+     //           if (oldValue < newValue) {
+     //                dispatch(scrollDirectionActions.DOWN())
+
+     //           } else if (oldValue > newValue) {
+     //                dispatch(scrollDirectionActions.UP())
+     //           }
+     //           oldValue = newValue;
+     //      })
+     // }, [])
+
+// ---------------------------------    NEW! Detect window scrolling Directions (UP DOWN)
+     const { isScrollingUp, isScrollingDown } = useScrollDirection()
+     // const [isUp, setIsUp] = useState('up');
 
      useEffect(() => {
-          window.addEventListener('scroll', (e) => {
-               newValue = window.pageYOffset;
-               if (oldValue < newValue) {
-                    dispatch(scrollDirectionActions.DOWN())
-
-               } else if (oldValue > newValue) {
-                    dispatch(scrollDirectionActions.UP())
-               }
-               oldValue = newValue;
-          })
-     }, [])
+          if (isScrollingUp) {
+               // setIsUp('up')
+               dispatch(scrollDirectionActions.DOWN())
+          }
+          if (isScrollingDown) {
+               // setIsUp('down')
+               dispatch(scrollDirectionActions.UP())
+          }
+     }, [isScrollingUp, isScrollingDown]);
 
      useEffect(() => {
           if (positionY === 0) {
@@ -129,7 +148,7 @@ export default function Home() {
           currentBrowser = 'firefox'
      }
 
-     // --------------------------------- --------------------------------- 
+     // ------------------------------------------------------------------ 
 
 
      const color_1 = '#FFFFFF'
@@ -246,6 +265,7 @@ export default function Home() {
           navRoot: {
                width: '100%',
                height: min_width_600px ? 216 : '100vw',
+
           },
           nav: {
                height: '100%',
@@ -253,6 +273,7 @@ export default function Home() {
                display: 'flex',
                alignItems: 'flex-end',
                justifyContent: 'center',
+
           },
           backAnimationContainer: {
                display: 'flex',
@@ -303,14 +324,23 @@ export default function Home() {
           </div>
      )
 
+
+    
+
+     
+
      return (
-          <div >
-               <MenuAppBar
-                    state={state}
-                    currentBrowser={currentBrowser}
-               />
+          <div>
+           
+                         <MenuAppBar
+
+                              state={state}
+                              currentBrowser={currentBrowser}
+                         />
+          
                {backAnimation}
                <div style={style.pageRoot} >
+
                     <div style={style.navRoot}>
                          <div style={style.nav}>
                               <PageNav state={state} />

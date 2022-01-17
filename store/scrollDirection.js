@@ -3,13 +3,13 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const scrollDirectionSlice = createSlice({
      name: 'scroll-direction',
-     initialState: { direction: 'down' },
+     initialState: { value: 'down' },
      reducers: {
           UP(state) {
-               state.direction = 'up'
+               state.value = 'up'
           },
           DOWN(state) {
-               state.direction = 'down'
+               state.value = 'down'
           },
      }
 })

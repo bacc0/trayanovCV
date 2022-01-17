@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { motion, Animate } from 'framer-motion'
-import { Stack, IconButton, Typography, Toolbar, AppBar, Box, Hidden } from '@mui/material'
+import { Stack, IconButton, Typography, Toolbar, AppBar, Box } from '@mui/material'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
@@ -16,12 +15,10 @@ export default function MenuAppBar({
 
      const dispatch = useDispatch();
 
-     const scrollDirection = useSelector(state => state.scrollDirectionReducer.direction)
-     const positionY = useSelector(state => state.Y_PositionSliceReducer.Y)
+     const scrollDirection = useSelector(state => state.scrollDirectionReducer.value)
+     const positionY = useSelector(state => state.Y_PositionSliceReducer.value)
      const theme = useSelector(state => state.themeReducer.color)
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
-
-
 
 
      const {
@@ -73,6 +70,7 @@ export default function MenuAppBar({
 
      const AppBarStyle = {
           backgroundColor: currentBrowser !== 'firefox' ? `${AppBackgroundColor}cc` : `${AppBackgroundColor}fa`,
+          // backgroundColor: `transparent`,
 
           '-webkit-backdrop-filter': `blur(10px)`,
           ' backdrop-filter': `blur(10px)`,
@@ -81,23 +79,24 @@ export default function MenuAppBar({
           borderBottom: `0.3px solid ${secLettersColor}55`,
           fontSize: 10,
           position: 'fixed',
-          top: appBarIsVisible ? 0 : -150,
-          transition: `top ${transitionDirection === 'up' ? '400ms' : '200ms'} linear`,
-          'transition-delay': '1s',
-          height: 65
+          top: appBarIsVisible ? 0 : -200,
+          transition: `top ${transitionDirection === 'up' ? '600ms' : '600ms'} linear`,
+          // 'transition-delay': '1s',
+          height: 66,
+
+
+          transform: appBarIsVisible ? `scaleY(1)`: `scaleY(0.1)`,
+          top: appBarIsVisible ? -1 : -200,
+          transition: `top 800ms linear,
+                       transform 1000ms linear`,
      }
 
      const underAppBar = {
-          height: 55,
+          height: 65,
           backgroundColor: state.primeLettersColor
 
      }
-     const titleStyle = {
-          fontSize: 12,
-          letterSpacing: 1.2,
-          fontWeight: '100',
-          color: secLettersColor
-     }
+     
      const iconsStackStyle = {
           display: 'flex',
           justifyContent: min_width_600px ? 'space-between' : 'center',
@@ -117,12 +116,7 @@ export default function MenuAppBar({
           // backgroundColor: 'tan',
           width: min_width_600px ? 200 : '16%',
      }
-     const themeText = {
-          marginTop: 8.5,
-          fontSize: 9,
-          color: thirdLettersColor,
-          fontWeight: 300
-     }
+    
 
      const iconsStyle = {
           color: strongText,

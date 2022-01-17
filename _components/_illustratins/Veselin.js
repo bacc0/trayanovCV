@@ -81,9 +81,11 @@ export default ({ color }) => {
      const typing = (
 
           <Typography variant='h3' sx={style_typing}>
-               {visStart && (<div>
-                    {typeWriter(['... end ', 'front end developer'])}
-               </div>)}
+               {visStart && (
+                    <div>
+                         {typeWriter(['... end ', 'front end developer'])}
+                    </div>
+               )}
           </Typography>
 
      )

@@ -25,6 +25,7 @@
     "react-intersection-observer": "^8.33.1",
     "react-redux": "^7.2.6",
     "react-simple-typewriter": "^3.0.1",
+    "react-use-scroll-direction": "^0.1.0",
     "react-window-size-hooks": "^1.0.3",
     "redux": "^4.1.2",
     "typewriter-effect": "^2.18.2"
