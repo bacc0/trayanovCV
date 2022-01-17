@@ -79,16 +79,18 @@ export default function MenuAppBar({
           borderBottom: `0.3px solid ${secLettersColor}55`,
           fontSize: 10,
           position: 'fixed',
-          top: appBarIsVisible ? 0 : -200,
-          transition: `top ${transitionDirection === 'up' ? '600ms' : '600ms'} linear`,
+          // top: appBarIsVisible ? 0 : -200,
+          // transition: `top ${transitionDirection === 'up' ? '600ms' : '600ms'} linear`,
           // 'transition-delay': '1s',
-          height: 66,
+          height: 75,
+          paddingTop: 5,
 
 
-          transform: appBarIsVisible ? `scaleY(1)`: `scaleY(0.1)`,
+          transform: appBarIsVisible ? `scaleY(1)`: `scaleY(0.5)`,
           top: appBarIsVisible ? -1 : -200,
           transition: `top 800ms linear,
                        transform 1000ms linear`,
+          'transition-delay': `0.01s, 0.05s`
      }
 
      const underAppBar = {
