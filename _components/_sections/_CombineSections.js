@@ -6,10 +6,12 @@ import Kkk from './Kkk'
 import Box from '@mui/material/Box'
 import { motion } from 'framer-motion'
 import * as React from 'react'
+import { useSelector } from 'react-redux'
+
+export default function _CombineSections({ state, animationTransition }) {
 
 
-export default function _CombineSections({
-     state, theme, min_width_600px, animationTransition, Y_position }) {
+ const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
 
      const measurements = {
           pageContainerWidth: 526,
@@ -118,8 +120,6 @@ export default function _CombineSections({
                     <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
 
                     <Technologies
-                         theme={theme}
-                         min_width_600px={min_width_600px}
                          state={state}
                          animationTransition={animationTransition}
                          stylesPage={stylesPage}
@@ -130,7 +130,6 @@ export default function _CombineSections({
 
                     <AboutMe
                          state={state}
-                         min_width_600px={min_width_600px}
                          animationTransition={animationTransition}
                          stylesPage={stylesPage}
                          measurements={measurements}
@@ -138,19 +137,8 @@ export default function _CombineSections({
                     />
                     <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
 
-                    {/* <Kkk
-                         state={state}
-                         theme={theme}
-                         min_width_600px={min_width_600px}
-                         animationTransition={animationTransition}
-                         stylesPage={stylesPage}
-                         measurements={measurements}
-                         p_spacing={p_spacing}
-                    /> */}
                     <Footer
                          state={state}
-                         theme={theme}
-                         min_width_600px={min_width_600px}
                          animationTransition={animationTransition}
                          stylesPage={stylesPage}
                          measurements={measurements}

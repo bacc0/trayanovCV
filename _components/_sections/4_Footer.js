@@ -1,16 +1,18 @@
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 
-
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
 import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp'
 import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
+import { useSelector } from 'react-redux'
 
 
+export default function Technologies({ state, stylesPage, p_spacing }) {
 
-export default function Technologies({ state, min_width_600px, stylesPage, p_spacing }) {
+
+      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
 
      const { sectionsContainer, titleContainer, sectionsBody, sections, } = stylesPage
      const { footerColor,strongText } = state

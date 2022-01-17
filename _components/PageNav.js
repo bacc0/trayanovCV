@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Box, Card } from '@mui/material'
 import Veselin from './_illustratins/Veselin'
 
-export default function MenuAppBar({ state, min_width_600px }) {
+export default function MenuAppBar({ state }) {
 
 
      const style = {
@@ -29,7 +29,7 @@ export default function MenuAppBar({ state, min_width_600px }) {
      const cardTitle = (
           <Card sx={style.card_container}>
                <Box>
-                    <Veselin color={state.bodyColor} min_width_600px={min_width_600px} />
+                    <Veselin color={state.bodyColor} />
                </Box>
                <Box sx={style.typing_container}>
                </Box>

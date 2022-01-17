@@ -8,13 +8,20 @@ import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp'
 import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
-import { useSelector } from 'react-redux'
 
-
+import { useSelector, useDispatch } from 'react-redux'
+import { themeActions } from '../store/themeState'
 export default function MenuAppBar({
-     state, theme, setTheme, Y_position, min_width_600px, currentBrowser }) {
+     state, currentBrowser }) {
 
-     const scrollDirection = useSelector(state => state.scrollDirectionReducer.scrollDirection)
+     const dispatch = useDispatch();
+
+     const scrollDirection = useSelector(state => state.scrollDirectionReducer.direction)
+     const positionY = useSelector(state => state.Y_PositionSliceReducer.Y)
+     const theme = useSelector(state => state.themeReducer.color)
+     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+
+
 
 
      const {
@@ -28,7 +35,7 @@ export default function MenuAppBar({
      const [marker, setMarker] = useState(false)
 
      useEffect(() => {
-          if (Y_position < 0.035) {
+          if (positionY < 0.035) {
 
                if (marker) {
                     setAppBarIsVisible(true)
@@ -45,10 +52,10 @@ export default function MenuAppBar({
                     appBarIsVisible !== true ? setAppBarIsVisible(true) : null
                }
           }
-     }, [Y_position]);
+     }, [positionY]);
 
      const handleThemeChange = () => {
-          setTheme(theme === 'light' ? 'dark' : 'light')
+          dispatch(themeActions.TOGGLE_THEME())
      }
      const [transitionDirection, setTransitionDirection] = useState('down');
 
@@ -146,7 +153,7 @@ export default function MenuAppBar({
                                         >
                                              <LinkedInIcon />
                                         </IconButton>
-
+{/* {positionY} */}
                                         <IconButton
                                              href={`tel: 00447590010066`}
                                              aria-label='Phone Icon' style={iconsStyle}
@@ -175,7 +182,8 @@ export default function MenuAppBar({
                                              <GitHubIcon />
                                         </IconButton>
                                    </span>
-                                   {/*  { scrollDirection }   */}
+                                   {/*  { min ? 'yes': 'no' }   */}
+
 
                                    <span style={iconsStackStyle_Right}>
                                         <IconButton

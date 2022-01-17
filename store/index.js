@@ -1,45 +1,26 @@
-import { createStore } from 'redux';
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 
-const initialState = { scrollDirection: 'down' }
+import scrollDirectionSlice from './scrollDirection'
+import Y_PositionSlice from './PositionY'
+import themeSlice from './themeState'
+import windowSlice from './windowSize'
+import min_width_600px from './minWidth'
 
-const scrollDirectionSlice = createSlice({
-     name: 'scroll-direction',
-     initialState: initialState,
-     reducers: {
-          UP(state) {
-               state.scrollDirection ='up'
-          },
-          DOWN(state) {
-               state.scrollDirection = 'down'
-          },
-          // TEST(state, action) {
-          //      state.scrollDirection = action.payload
-          // },
-     }
-})
+
+
+
 
 const store = configureStore({
-     reducer: {scrollDirectionReducer: scrollDirectionSlice.reducer}
+     reducer: {
+          scrollDirectionReducer: scrollDirectionSlice.reducer,
+          Y_PositionSliceReducer: Y_PositionSlice.reducer,
+          themeReducer: themeSlice.reducer,
+          windowSizeReducer: windowSlice.reducer,
+          min_width_600px_Reducer: min_width_600px.reducer,
+     }
 });
 
 
 
-// const scrollDirectionReducer = (state = initialState, action) => {
-
-//      if (action.type === 'UP') {
-//           return { scrollDirection: 'up' }
-//      };
-//      if (action.type === 'DOWN') {
-//           return { scrollDirection: 'down' }
-//      };
-
-//      return state;
-// }
-
-
-
-
-export const scrollDirectionActions = scrollDirectionSlice.actions;
 
 export default store;

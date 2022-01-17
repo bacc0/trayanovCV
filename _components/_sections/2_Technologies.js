@@ -1,11 +1,13 @@
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
+import { useSelector } from 'react-redux'
+
+export default function Technologies({ state, stylesPage, measurements, p_spacing }) {
 
 
-export default function Technologies({ state, min_width_600px, stylesPage, measurements, p_spacing }) {
-
+     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
      const { sectionsContainer, titleContainer, sectionsBody, sections, h3_Style, borderBottomStyle } = stylesPage
-     const {  backgroundColor_2, strongText } = state
+     const { backgroundColor_2, strongText } = state
 
      const theme = useTheme()
 

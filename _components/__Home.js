@@ -9,29 +9,41 @@ import { useViewportScroll } from 'framer-motion'
 import { detect } from 'detect-browser'
 import { useWindowSize } from 'react-window-size-hooks'
 
+import { useDispatch, useSelector } from 'react-redux'
+import { scrollDirectionActions } from '../store/scrollDirection'
+import { Y_PositionActions } from '../store/PositionY'
+import { min_width_600px_Actions } from '../store/minWidth'
+import { windowSizeActions } from '../store/windowSize'
 
-import { useDispatch } from 'react-redux'
-import { scrollDirectionActions } from '../store/index'
-
-// var temp = 0
 
 export default function Home() {
+
+
+     const dispatch = useDispatch();
+
+     const theme = useSelector(state => state.themeReducer.color)
+
+     const positionY = useSelector(state => state.Y_PositionSliceReducer.Y)
+
+     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+
+     const tempMediaQuery = useMediaQuery('(min-width:600px)')
+     useEffect(() => {
+          console.log(min_width_600px)
+          dispatch(min_width_600px_Actions.MIN_WIDTH(tempMediaQuery))
+     }, [tempMediaQuery]);
+
+     // ---------------------------------    scroll to the top on reload
+
+     useEffect(() => {
+          window.scrollTo(0, 0)
+     }, [])
+
+     // ---------------------------------    Detect window Size
 
      var tempWindowWidth = 0
      var tempWindowHeight = 0
 
-     // const [scrollDirection, setScrollDirection] = useState('down')
-
-     const [W_screenSize, set_W_screenSize] = useState(tempWindowWidth)
-     const [H_screenSize, set_H_screenSize] = useState(tempWindowHeight)
-     const [theme, setTheme] = useState('light')
-     const { scrollYProgress } = useViewportScroll(0)
-     const [Y_position, set_Y_position] = useState(0)
-     // const [currentBrowser, setCurrentBrowser] = useState(0)
-     // let currentBrowser = ''
-     const [currentBrowser, setCurrentBrowser] = useState('')
-
-     // ---------------------------------    Detect window Size
      if (typeof window !== 'undefined') {
           var win = window,
                doc = document,
@@ -41,9 +53,17 @@ export default function Home() {
                tempWindowHeight = win.innerHeight || docElem.clientHeight || body.clientHeight;
      }
 
-     // ---------------------------------    Detect window scrolling Directions (UP DOWN)
+     // ---------------------------------    Detect Browser Size ++
 
-     const dispatch = useDispatch();
+
+     const { width, height } = useWindowSize()
+
+     useEffect(() => {
+          dispatch(windowSizeActions.GET_WINDOW_WIDTH(window.innerWidth))
+          dispatch(windowSizeActions.GET_WINDOW_HEIGHT(window.innerHeight))
+     }, [width, height]);
+
+     // ---------------------------------    Detect window scrolling Directions (UP DOWN)
 
 
      useEffect(() => {
@@ -52,14 +72,9 @@ export default function Home() {
           function checkScrollDirection(event) {
 
                if (checkScrollDirectionIsUp(event)) {
-                    // setScrollDirection('down')
-                    // dispatch({ type: 'DOWN' })
                     dispatch(scrollDirectionActions.DOWN())
-                    // dispatch(scrollDirectionActions.TEST('mid'))
                }
                else {
-                    // setScrollDirection('up')
-                    // dispatch({ type: 'UP' })
                     dispatch(scrollDirectionActions.UP())
                }
           }
@@ -68,12 +83,10 @@ export default function Home() {
                if (event.wheelDelta) return event.wheelDelta > 0
                return event.deltaY < 0
           }
-
-
      }, [])
 
-
      // ---------------------------------    Mobile Detect window scrolling Directions (UP DOWN)
+
 
      let oldValue = 0
      let newValue = 0
@@ -82,77 +95,41 @@ export default function Home() {
           window.addEventListener('scroll', (e) => {
                newValue = window.pageYOffset;
                if (oldValue < newValue) {
-                    // setScrollDirection('up')
-                    // dispatch({ type: 'UP' })
                     dispatch(scrollDirectionActions.DOWN())
 
                } else if (oldValue > newValue) {
-                    // setScrollDirection('down')
-                    // dispatch({ type: 'DOWN' })
                     dispatch(scrollDirectionActions.UP())
                }
                oldValue = newValue;
           })
-
      }, [])
 
      useEffect(() => {
-          if (Y_position === 0) {
-
-               // setScrollDirection('down')
-               // dispatch({ type: 'DOWN' })
+          if (positionY === 0) {
                dispatch(scrollDirectionActions.DOWN())
           }
-     }, [Y_position])
-
-
-
+     }, [positionY])
 
      //-------------------   Detect window scrolling position (0-100)
 
+
+     const { scrollYProgress } = useViewportScroll(0)
+
      useEffect(() => {
-
-          scrollYProgress.onChange((v) => (set_Y_position(v)))
-
-          
+          scrollYProgress.onChange((v) => (dispatch(Y_PositionActions.UPDATE_Y_POSITION(v))))
      }, [scrollYProgress])
 
-     // useEffect(() => {
-     //      console.log(Y_position)
-     // }, [Y_position]);
-
-
      // ---------------------------------    Detect Browser Name
+
+
      const browser = detect()
 
-
+     let currentBrowser;
      if (browser.name === 'firefox') {
           currentBrowser = 'firefox'
-          // setCurrentBrowser('firefox')
      }
 
-     // ---------------------------------    Detect Browser Size
-
-     // if (typeof window !== 'undefined') {
-     //      window.addEventListener('resize', () => {
-
-     //           set_W_screenSize(window.innerWidth)
-     //           set_H_screenSize(window.innerHeight)
-     //      })
-     // }
-
-     const { width, height } = useWindowSize()
-
-     useEffect(() => {
-          set_W_screenSize(window.innerWidth)
-          set_H_screenSize(window.innerHeight)
-     }, [width, height]);
-
-     // ---------------------------------    scroll to the top on reload
-
-     useEffect(() => {
-          window.scrollTo(0, 0)
-     }, [])
+     // --------------------------------- --------------------------------- 
 
 
      const color_1 = '#FFFFFF'
@@ -183,8 +160,6 @@ export default function Home() {
           backgroundNav_mobile: ``
      }
      const [state, setState] = useState(INITIAL_STATE)
-
-     const min_width_600px = useMediaQuery('(min-width:600px)')
 
      const backgroundNav_1_light = `url('backgroundNav_1_light.svg') `
      const backgroundNav_1_dark = `url('backgroundNav_1_dark.svg')`
@@ -291,8 +266,6 @@ export default function Home() {
                background: gradient,
                opacity: backgroundOpacity,
                transition: `opacity 4s linear`,
-               // backgroundColor: min_width_600px ? 'transparent' : '#9f9f9f0f',
-
 
 
                ['@media screen and (min-width:800px)']: {
@@ -326,39 +299,26 @@ export default function Home() {
                          width={min_width_600px ? 600 : 500}
                          height={min_width_600px ? 600 : 500}
                     />
-
                </div>
           </div>
      )
-
 
      return (
           <div >
                <MenuAppBar
                     state={state}
-                    theme={theme}
-                    setTheme={setTheme}
-                    Y_position={Y_position}
                     currentBrowser={currentBrowser}
-                    // scrollDirection={scrollDirection}
-                    min_width_600px={min_width_600px}
                />
                {backAnimation}
                <div style={style.pageRoot} >
                     <div style={style.navRoot}>
                          <div style={style.nav}>
-                              <PageNav
-                                   state={state}
-                                   min_width_600px={min_width_600px}
-                              />
+                              <PageNav state={state} />
                          </div>
                     </div>
 
                     <CombineSections
                          state={state}
-                         theme={theme}
-                         Y_position={Y_position}
-                         min_width_600px={min_width_600px}
                          animationTransition={animationTransition}
                     />
                </div>

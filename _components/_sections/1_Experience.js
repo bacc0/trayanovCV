@@ -1,8 +1,13 @@
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { motion } from 'framer-motion'
+import { useSelector } from 'react-redux'
 
-export default function Experience({ state, min_width_600px, stylesPage, measurements, p_spacing, h3_scale }) {
+
+export default function Experience({ state, stylesPage, measurements, p_spacing, h3_scale }) {
+
+
+     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
 
      const { sectionsContainer, titleContainer, sectionsBody, sections,
           h3_Style, h4_Style, h5_Style, period_style, borderBottomStyle } = stylesPage
@@ -11,7 +16,7 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
      const theme = useTheme()
 
 
-     
+
 
      const cardTitle = (
           <Card
@@ -26,10 +31,10 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
                }}
           >
                <Box sx={borderBottomStyle}>
-                    <div style={{ 
-                         transform: h3_scale, 
+                    <div style={{
+                         transform: h3_scale,
                          transition: `transform 200ms linear`
-                          }} >
+                    }} >
                          <Typography variant="h3" sx={h3_Style} gutterBottom={true}>
                               Experience
                          </Typography>
@@ -150,7 +155,7 @@ export default function Experience({ state, min_width_600px, stylesPage, measure
 
 
      return (
-          <div style={{ ...sectionsContainer, ...{ marginTop: min_width_600px ? 23 : 0} }}>
+          <div style={{ ...sectionsContainer, ...{ marginTop: min_width_600px ? 23 : 0 } }}>
                <div style={titleContainer}>
                     <div>{cardTitle}</div>
                     <motion.div

@@ -4,9 +4,11 @@ import Script from 'next/script'
 import { typeWriter } from '../_sections/helpers/TypeWriter'
 import Typography from '@mui/material/Typography'
 import { minHeight } from '@mui/system'
+import { useSelector } from 'react-redux'
 
-export default ({ color, min_width_600px }) => {
+export default ({ color }) => {
 
+     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
 
      const fill = color
      const stroke = color
