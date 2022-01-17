@@ -1,14 +1,158 @@
-import { useMediaQuery, createStyles } from '@mui/material'
+import { useMediaQuery } from '@mui/material'
 import CombineSections from './_sections/_CombineSections'
 import MenuAppBar from './MenuAppBar'
 import PageNav from './PageNav'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
+import { useViewportScroll } from 'framer-motion'
+import { detect } from 'detect-browser'
+import { useWindowSize } from 'react-window-size-hooks'
 
 
-export default function HomePage({
-     currentBrowser, theme, setTheme, Y_position, scrollDirection }) {
+import { useDispatch } from 'react-redux'
+import { scrollDirectionActions } from '../store/index'
+
+// var temp = 0
+
+export default function Home() {
+
+     var tempWindowWidth = 0
+     var tempWindowHeight = 0
+
+     // const [scrollDirection, setScrollDirection] = useState('down')
+
+     const [W_screenSize, set_W_screenSize] = useState(tempWindowWidth)
+     const [H_screenSize, set_H_screenSize] = useState(tempWindowHeight)
+     const [theme, setTheme] = useState('light')
+     const { scrollYProgress } = useViewportScroll(0)
+     const [Y_position, set_Y_position] = useState(0)
+     // const [currentBrowser, setCurrentBrowser] = useState(0)
+     // let currentBrowser = ''
+     const [currentBrowser, setCurrentBrowser] = useState('')
+
+     // ---------------------------------    Detect window Size
+     if (typeof window !== 'undefined') {
+          var win = window,
+               doc = document,
+               docElem = doc.documentElement,
+               body = doc.getElementsByTagName('body')[0],
+               tempWindowWidth = win.innerWidth || docElem.clientWidth || body.clientWidth,
+               tempWindowHeight = win.innerHeight || docElem.clientHeight || body.clientHeight;
+     }
+
+     // ---------------------------------    Detect window scrolling Directions (UP DOWN)
+
+     const dispatch = useDispatch();
+
+
+     useEffect(() => {
+          var scrollableElement = document.body
+          scrollableElement.addEventListener('wheel', checkScrollDirection)
+          function checkScrollDirection(event) {
+
+               if (checkScrollDirectionIsUp(event)) {
+                    // setScrollDirection('down')
+                    // dispatch({ type: 'DOWN' })
+                    dispatch(scrollDirectionActions.DOWN())
+                    // dispatch(scrollDirectionActions.TEST('mid'))
+               }
+               else {
+                    // setScrollDirection('up')
+                    // dispatch({ type: 'UP' })
+                    dispatch(scrollDirectionActions.UP())
+               }
+          }
+          function checkScrollDirectionIsUp(event) {
+
+               if (event.wheelDelta) return event.wheelDelta > 0
+               return event.deltaY < 0
+          }
+
+
+     }, [])
+
+
+     // ---------------------------------    Mobile Detect window scrolling Directions (UP DOWN)
+
+     let oldValue = 0
+     let newValue = 0
+
+     useEffect(() => {
+          window.addEventListener('scroll', (e) => {
+               newValue = window.pageYOffset;
+               if (oldValue < newValue) {
+                    // setScrollDirection('up')
+                    // dispatch({ type: 'UP' })
+                    dispatch(scrollDirectionActions.DOWN())
+
+               } else if (oldValue > newValue) {
+                    // setScrollDirection('down')
+                    // dispatch({ type: 'DOWN' })
+                    dispatch(scrollDirectionActions.UP())
+               }
+               oldValue = newValue;
+          })
+
+     }, [])
+
+     useEffect(() => {
+          if (Y_position === 0) {
+
+               // setScrollDirection('down')
+               // dispatch({ type: 'DOWN' })
+               dispatch(scrollDirectionActions.DOWN())
+          }
+     }, [Y_position])
+
+
+
+
+     //-------------------   Detect window scrolling position (0-100)
+
+     useEffect(() => {
+
+          scrollYProgress.onChange((v) => (set_Y_position(v)))
+
+          
+     }, [scrollYProgress])
+
+     // useEffect(() => {
+     //      console.log(Y_position)
+     // }, [Y_position]);
+
+
+     // ---------------------------------    Detect Browser Name
+     const browser = detect()
+
+
+     if (browser.name === 'firefox') {
+          currentBrowser = 'firefox'
+          // setCurrentBrowser('firefox')
+     }
+
+     // ---------------------------------    Detect Browser Size
+
+     // if (typeof window !== 'undefined') {
+     //      window.addEventListener('resize', () => {
+
+     //           set_W_screenSize(window.innerWidth)
+     //           set_H_screenSize(window.innerHeight)
+     //      })
+     // }
+
+     const { width, height } = useWindowSize()
+
+     useEffect(() => {
+          set_W_screenSize(window.innerWidth)
+          set_H_screenSize(window.innerHeight)
+     }, [width, height]);
+
+     // ---------------------------------    scroll to the top on reload
+
+     useEffect(() => {
+          window.scrollTo(0, 0)
+     }, [])
 
 
      const color_1 = '#FFFFFF'
@@ -83,7 +227,6 @@ export default function HomePage({
           })
      }, [backgroundNav_2, backgroundNav_3]);
 
-
      useEffect(() => {
 
           setState({
@@ -150,7 +293,7 @@ export default function HomePage({
                transition: `opacity 4s linear`,
                // backgroundColor: min_width_600px ? 'transparent' : '#9f9f9f0f',
 
-              
+
 
                ['@media screen and (min-width:800px)']: {
                     backgroundColor: 'blue',
@@ -197,7 +340,7 @@ export default function HomePage({
                     setTheme={setTheme}
                     Y_position={Y_position}
                     currentBrowser={currentBrowser}
-                    scrollDirection={scrollDirection}
+                    // scrollDirection={scrollDirection}
                     min_width_600px={min_width_600px}
                />
                {backAnimation}
@@ -215,7 +358,6 @@ export default function HomePage({
                          state={state}
                          theme={theme}
                          Y_position={Y_position}
-                         scrollDirection={scrollDirection}
                          min_width_600px={min_width_600px}
                          animationTransition={animationTransition}
                     />

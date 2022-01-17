@@ -8,11 +8,13 @@ import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp'
 import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
-
+import { useSelector } from 'react-redux'
 
 
 export default function MenuAppBar({
-     state, theme, setTheme, Y_position, scrollDirection, min_width_600px, currentBrowser }) {
+     state, theme, setTheme, Y_position, min_width_600px, currentBrowser }) {
+
+     const scrollDirection = useSelector(state => state.scrollDirectionReducer.scrollDirection)
 
 
      const {
@@ -48,6 +50,18 @@ export default function MenuAppBar({
      const handleThemeChange = () => {
           setTheme(theme === 'light' ? 'dark' : 'light')
      }
+     const [transitionDirection, setTransitionDirection] = useState('down');
+
+     useEffect(() => {
+
+          setInterval(() => {
+               if (transitionDirection !== scrollDirection) {
+
+                    setTransitionDirection(scrollDirection)
+               }
+          }, 1400);
+
+     }, [scrollDirection]);
 
 
      const AppBarStyle = {
@@ -61,14 +75,15 @@ export default function MenuAppBar({
           fontSize: 10,
           position: 'fixed',
           top: appBarIsVisible ? 0 : -150,
-          transition: `top ${scrollDirection === 'up' ? '800ms' : '600ms'} linear`,
+          transition: `top ${transitionDirection === 'up' ? '400ms' : '200ms'} linear`,
+          'transition-delay': '1s',
           height: 65
      }
 
      const underAppBar = {
           height: 55,
           backgroundColor: state.primeLettersColor
-       
+
      }
      const titleStyle = {
           fontSize: 12,
@@ -160,6 +175,8 @@ export default function MenuAppBar({
                                              <GitHubIcon />
                                         </IconButton>
                                    </span>
+                                   {/*  { scrollDirection }   */}
+
                                    <span style={iconsStackStyle_Right}>
                                         <IconButton
                                              onClick={() => handleThemeChange()}
