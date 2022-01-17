@@ -1,4 +1,4 @@
-import { useMediaQuery } from '@mui/material'
+import { useMediaQuery, createStyles } from '@mui/material'
 import CombineSections from './_sections/_CombineSections'
 import MenuAppBar from './MenuAppBar'
 import PageNav from './PageNav'
@@ -148,10 +148,23 @@ export default function HomePage({
                background: gradient,
                opacity: backgroundOpacity,
                transition: `opacity 4s linear`,
-               backgroundColor: min_width_600px ? 'transparent' : '#9f9f9f0f',
+               // backgroundColor: min_width_600px ? 'transparent' : '#9f9f9f0f',
 
+              
+
+               ['@media screen and (min-width:800px)']: {
+                    backgroundColor: 'blue',
+               },
+               ['@media screen and (min-width: 700px) and (max-width: 800px)']: {
+                    backgroundColor: 'red',
+               },
+               ['@media screen and (min-width: 500px) and (max-width: 700px)']: {
+                    backgroundColor: 'tan',
+               },
 
           },
+
+
           backAnimation: {
                top: min_width_600px ? 25 : '60vw',
                position: `absolute`,
