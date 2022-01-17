@@ -7,12 +7,13 @@ import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp'
 import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
-
 import { useSelector, useDispatch } from 'react-redux'
 import { themeActions } from '../store/themeState'
-export default function MenuAppBar({
-     state, currentBrowser }) {
 
+
+export default function MenuAppBar({ state, currentBrowser }) {
+
+     
      const dispatch = useDispatch();
 
      const scrollDirection = useSelector(state => state.scrollDirectionReducer.value)
@@ -85,17 +86,19 @@ export default function MenuAppBar({
           height: 75,
           paddingTop: 5,
 
-
-          transform: appBarIsVisible ? `scaleY(1)`: `scaleY(0.5)`,
+          transform: `scaleY(${appBarIsVisible ? 1 : 0.75})`,
           top: appBarIsVisible ? -1 : -200,
           transition: `top 800ms linear,
                        transform 1000ms linear`,
-          'transition-delay': `0.01s, 0.05s`
+          'transition-delay': `0.01s, 
+                               0.05s`
      }
 
      const underAppBar = {
           height: 65,
-          backgroundColor: state.primeLettersColor
+          backgroundColor: state.primeLettersColor,
+          
+          backgroundColor: 'transparent',
 
      }
      

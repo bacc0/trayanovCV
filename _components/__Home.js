@@ -1,4 +1,4 @@
-import { useMediaQuery } from '@mui/material'
+import { Paper, useMediaQuery } from '@mui/material'
 import CombineSections from './_sections/_CombineSections'
 import MenuAppBar from './MenuAppBar'
 import PageNav from './PageNav'
@@ -17,6 +17,7 @@ import { windowSizeActions } from '../store/windowSize'
 
 import { motion, AnimatePresence } from "framer-motion"
 import { useScrollDirection } from 'react-use-scroll-direction'
+
 
 
 export default function Home() {
@@ -108,7 +109,7 @@ export default function Home() {
      //      })
      // }, [])
 
-// ---------------------------------    NEW! Detect window scrolling Directions (UP DOWN)
+     // ---------------------------------    NEW! Detect window scrolling Directions (UP DOWN)
      const { isScrollingUp, isScrollingDown } = useScrollDirection()
      // const [isUp, setIsUp] = useState('up');
 
@@ -159,6 +160,7 @@ export default function Home() {
      const color_6 = '#8D30FE'
      const color_7 = '#CF68FE'
 
+
      const INITIAL_STATE = {
           primeLettersColor: color_1,
           secLettersColor: color_3,
@@ -191,8 +193,7 @@ export default function Home() {
 
      const [opacityBG, setOpacityBG] = useState(0)
      const [backgroundOpacity, setBackgroundOpacity] = useState(0)
-
-
+     
      const { AppBackgroundColor, bodyColor } = state
 
      const animationTransition = '0ms'
@@ -325,20 +326,19 @@ export default function Home() {
      )
 
 
-    
 
-     
+
+
 
      return (
-          <div>
-           
-                         <MenuAppBar
 
-                              state={state}
-                              currentBrowser={currentBrowser}
-                         />
-          
-               {backAnimation}
+          <Paper style={{ background: AppBackgroundColor }}>
+               <MenuAppBar
+                    state={state}
+                    currentBrowser={currentBrowser}
+               />
+
+               { backAnimation }
                <div style={style.pageRoot} >
 
                     <div style={style.navRoot}>
@@ -352,7 +352,7 @@ export default function Home() {
                          animationTransition={animationTransition}
                     />
                </div>
-          </div >
+          </Paper >
      )
 }
 

@@ -7,8 +7,11 @@ export default function App() {
 
      return (
           <section className='pages-wrapper'>
+
                <Provider store={store}>
-                    < Home  />
+                 
+                         < Home />
+                   
                </Provider>
           </section>
      )
