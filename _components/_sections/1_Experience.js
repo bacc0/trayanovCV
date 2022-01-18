@@ -2,7 +2,8 @@ import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { motion } from 'framer-motion'
 import { useSelector } from 'react-redux'
-
+// import styles from './style/1_Experience.module.scss';
+import styles from './style/1_Experience.module.css';
 
 export default function Experience({ state, stylesPage, measurements, p_spacing, h3_scale }) {
 
@@ -67,7 +68,9 @@ export default function Experience({ state, stylesPage, measurements, p_spacing,
 
      const groundbits = (period, contact, mail) => {
           return (
-               <Card sx={L_R_cardsStyle}>
+               <Card sx={L_R_cardsStyle} 
+                    // className={styles.test_class}🐯
+               >
                     <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
                          <Typography variant="h4" sx={h4_Style}>

@@ -71,7 +71,7 @@ export default function MenuAppBar({ state, currentBrowser }) {
 
      const AppBarStyle = {
           backgroundColor: currentBrowser !== 'firefox' ? `${AppBackgroundColor}cc` : `${AppBackgroundColor}fa`,
-          // backgroundColor: `transparent`,
+          // backgroundColor: `#FFFFFF`,
 
           '-webkit-backdrop-filter': `blur(10px)`,
           ' backdrop-filter': `blur(10px)`,
@@ -95,7 +95,7 @@ export default function MenuAppBar({ state, currentBrowser }) {
      }
 
      const underAppBar = {
-          height: 65,
+          height: min_width_600px ? 70 : 60,
           backgroundColor: state.primeLettersColor,
           
           backgroundColor: 'transparent',
