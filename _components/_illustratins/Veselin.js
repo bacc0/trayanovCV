@@ -14,7 +14,7 @@ export default ({ color }) => {
      const stroke = color
      const strokeWidth = 0.75
 
-     const strokeWidth_extra = 2
+     const strokeWidth_extra = 3
 
 
 
@@ -25,7 +25,8 @@ export default ({ color }) => {
 
 
      const transitionFill = { delay: 2, duration: 0.3 }
-     const transition_stroke_extra = { delay: 2.1, duration: 0.3 }
+     // const transition_stroke_extra = { delay: 2.1, duration: 0.3 }
+     const transition_stroke_extra = { delay: 2.35, duration: 0.05 }
 
      const size = 310
 

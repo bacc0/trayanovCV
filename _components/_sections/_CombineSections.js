@@ -88,7 +88,7 @@ export default function _CombineSections({ state, animationTransition }) {
      if (h3_scale === `scale(0.95)`) {
           setInterval(() => {
                set_h3_scale(`scale(1)`)
-          }, 5800)
+          }, 6600)
      }
 
 
