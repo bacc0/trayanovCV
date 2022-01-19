@@ -135,7 +135,7 @@ export default ({ color }) => {
                     </motion.g>
 
                     <motion.g
-                         initial={{ scale: 1.00, y: 20, x: 0 }}
+                         initial={{ scale: 1.00, y: 0, x: 0 }}
                          animate={{ scale: 0.82, y: 4, x: 0 }}   //   animate={{ scale: 0.95, y: 2 }} 
                          transition={{ delay: 2.16, duration: 0.25, type: "tween", stiffness: 400 }}
                     >
