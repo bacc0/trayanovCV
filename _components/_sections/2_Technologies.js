@@ -2,7 +2,7 @@ import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { useSelector } from 'react-redux'
 
-export default function Technologies({ stylesPage, measurements, p_spacing }) {
+export default function Technologies({ stylesPage, p_spacing }) {
 
      const { sectionsContainer, titleContainer, sectionsBody, sections, h3_Style, borderBottomStyle } = stylesPage
 
@@ -37,7 +37,7 @@ export default function Technologies({ stylesPage, measurements, p_spacing }) {
                <Img_handle_inview
                     src={'./tech.svg'}
                     min_width_600px={min_width_600px}
-                    width={measurements.sectionWidth}
+                    width={230}
                />
           </Box>
      )

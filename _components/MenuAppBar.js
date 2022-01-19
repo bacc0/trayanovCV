@@ -23,7 +23,7 @@ export default function MenuAppBar({  currentBrowser }) {
 
      const {
           strongText, thirdLettersColor, hrColorMain, primeLettersColor,
-          AppBackgroundColor, animationTransition, secLettersColor } = colors
+          AppBackgroundColor, secLettersColor } = colors
 
      const renderCounter = useRef(0)
      renderCounter.current = renderCounter.current + 1
@@ -79,9 +79,6 @@ export default function MenuAppBar({  currentBrowser }) {
           borderBottom: `0.3px solid ${secLettersColor}55`,
           fontSize: 10,
           position: 'fixed',
-          // top: appBarIsVisible ? 0 : -200,
-          // transition: `top ${transitionDirection === 'up' ? '600ms' : '600ms'} linear`,
-          // 'transition-delay': '1s',
           height: 75,
           paddingTop: 5,
 
@@ -96,9 +93,7 @@ export default function MenuAppBar({  currentBrowser }) {
      const underAppBar = {
           height: min_width_600px ? 70 : 60,
           backgroundColor: primeLettersColor,
-
           backgroundColor: 'transparent',
-
      }
 
      const iconsStackStyle = {
@@ -112,20 +107,16 @@ export default function MenuAppBar({  currentBrowser }) {
           justifyContent: 'space-between',
           width: min_width_600px ? 249 : '83%',
           paddingRight: '2.6%',
-          // backgroundColor: 'tan'
      }
      const iconsStackStyle_Right = {
           display: 'flex',
           justifyContent: min_width_600px ? 'flex-end' : 'center',
-          // backgroundColor: 'tan',
           width: min_width_600px ? 200 : '16%',
      }
-
-
      const iconsStyle = {
           color: strongText,
           width: 40, height: 40,
-          transition: `color ${animationTransition} ease`,
+          transition: `color 500ms ease`,
      }
 
 

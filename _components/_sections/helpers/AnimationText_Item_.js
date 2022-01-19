@@ -12,7 +12,7 @@ export const AnimationText_Item = ( is_Ref_Visible, delay, html ) => {
                               animate={{ scale: 1, y: 0, opacity: 1 }}
                               transition={{ type: 'spring', ease: 'anticipate', duration: 0.9, delay: delay }}
                          >
-                              {html}
+                              { html }
                          </motion.div>
                     </motion.div>
                )}

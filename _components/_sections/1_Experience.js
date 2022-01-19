@@ -1,11 +1,12 @@
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import { useSelector } from 'react-redux'
 // import styles from './style/1_Experience.module.scss';
 import styles from './style/1_Experience.module.css';
 
-export default function Experience({ stylesPage, measurements, p_spacing, h3_scale }) {
+export default function Experience({ stylesPage, p_spacing }) {
 
      const { sectionsContainer, titleContainer, sectionsBody, sections,
           h3_Style, h4_Style, h5_Style, period_style, borderBottomStyle } = stylesPage
@@ -15,6 +16,14 @@ export default function Experience({ stylesPage, measurements, p_spacing, h3_sca
      const { strongText } = colors
 
      const theme = useTheme()
+
+     const [h3_scale, set_h3_scale] = useState(`scale(0.95)`)
+
+     if (h3_scale === `scale(0.95)`) {
+          setInterval(() => {
+               set_h3_scale(`scale(1)`)
+          }, 6000)
+     }
 
      const cardTitle = (
           <Card
@@ -48,7 +57,8 @@ export default function Experience({ stylesPage, measurements, p_spacing, h3_sca
                <Img_handle_inview
                     src={'./exp.svg'}
                     min_width_600px={min_width_600px}
-                    width={measurements.sectionWidth}
+                    width={230}
+                    
                />
                <Box sx={{ height: min_width_600px ? 0 : 3 }} />
           </>

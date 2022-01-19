@@ -2,14 +2,14 @@ import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { useSelector } from 'react-redux'
 
-export default function AboutMe({ stylesPage, measurements, p_spacing }) {
+export default function AboutMe({ stylesPage, p_spacing }) {
 
      const { sectionsContainer, titleContainer, sectionsBody, sections, h3_Style, h4_Style, borderBottomStyle } = stylesPage
 
       const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
       const colors = useSelector(state => state.appColorsReducer.value)
 
-     const { thirdLettersColor, backgroundColor, strongText } = colors
+     const { strongText } = colors
 
 
      const theme = useTheme()
@@ -39,7 +39,7 @@ export default function AboutMe({ stylesPage, measurements, p_spacing }) {
                <Img_handle_inview
                     src={'./me.svg'}
                     min_width_600px={min_width_600px}
-                    width={measurements.sectionWidth}
+                    width={230}
                />
           </Box>
      )

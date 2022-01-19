@@ -17,8 +17,6 @@ export default function _CombineSections() {
      const { strongText, thirdLettersColor, separationsColor, footerColor } = colors
 
      const measurements = {
-          pageContainerWidth: 526,
-          sectionWidth: 230,
      }
 
      const p_spacing = (<Box sx={{ height: '11px' }} />)
@@ -33,21 +31,21 @@ export default function _CombineSections() {
           },
           titleContainer: {
                // backgroundColor: '#44444422',
-               width: min_width_600px ? measurements.pageContainerWidth : '80%',
-               maxWidth: min_width_600px ? measurements.pageContainerWidth : 380,
+               width: min_width_600px ? 526 : '80%',
+               maxWidth: min_width_600px ? 526 : 380,
                padding: `56px 0 48px`,
           },
           sectionsBody: {
                // backgroundColor: '#44444422',
-               width: min_width_600px ? measurements.pageContainerWidth : '100%',
-               maxWidth: min_width_600px ? measurements.pageContainerWidth : 300,
+               width: min_width_600px ? 526 : '100%',
+               maxWidth: min_width_600px ? 526 : 300,
                display: min_width_600px ? 'flex' : 'block',
                justifyContent: min_width_600px ? 'space-between' : 'center',
                height: 'auto',
           },
           sections: {
                //  backgroundColor: '#44444411',
-               width: min_width_600px ? measurements.sectionWidth : '100%',
+               width: min_width_600px ? 230 : '100%',
           },
 
           h3_Style: {
@@ -79,19 +77,12 @@ export default function _CombineSections() {
           },
           borderBottomStyle: {
                borderBottom: 0.8,
-               width: min_width_600px ? measurements.sectionWidth : '100%',
+               width: min_width_600px ? 230 : '100%',
                color: strongText,
           }
-
      }
 
-     const [h3_scale, set_h3_scale] = React.useState(`scale(0.95)`)
-
-     if (h3_scale === `scale(0.95)`) {
-          setInterval(() => {
-               set_h3_scale(`scale(1)`)
-          }, 6600)
-     }
+     
 
 
      return (
@@ -111,30 +102,25 @@ export default function _CombineSections() {
 
                     <Experience
                          stylesPage={stylesPage}
-                         measurements={measurements}
                          p_spacing={p_spacing}
-                         h3_scale={h3_scale}
                     />
 
                     <div style={{ borderTop: `0.3px solid ${separationsColor}` }} />
 
                     <Technologies
                          stylesPage={stylesPage}
-                         measurements={measurements}
                          p_spacing={p_spacing}
                     />
                     <div style={{ borderTop: `0.3px solid ${ separationsColor}` }} />
 
                     <AboutMe
                          stylesPage={stylesPage}
-                         measurements={measurements}
                          p_spacing={p_spacing}
                     />
                     <div style={{ borderTop: `0.3px solid ${ separationsColor}` }} />
 
                     <Footer
                          stylesPage={stylesPage}
-                         measurements={measurements}
                          p_spacing={p_spacing}
                     />
                </Box>

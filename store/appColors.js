@@ -2,12 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const color_1 = '#FFFFFF'
 const color_2 = '#FAFAFA' // F2F2F2
-const color_3 = '#636189'  // #3F3D56
+const color_3 = '#636189'  
 const color_4 = '#3F3D56' //#040F1B
 const color_5 = '#2F2E41'
 const color_6 = '#8D30FE'
 const color_7 = '#CF68FE'
-
 
 const initialState = {
      hrColor: color_2,
