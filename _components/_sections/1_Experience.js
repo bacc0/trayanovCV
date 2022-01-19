@@ -4,16 +4,16 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 // import styles from './style/1_Experience.module.scss';
-import styles from './style/1_Experience.module.css';
+// import styles from './style/1_Experience.module.css';
+import styles from './_CombineSections.module.scss';
 
-export default function Experience({ stylesPage, p_spacing }) {
 
-     const { sectionsContainer, titleContainer, sectionsBody, sections,
-          h3_Style, h4_Style, h5_Style, period_style, borderBottomStyle } = stylesPage
+export default function Experience({ L_R_cardsStyle, p_spacing, cardStyle }) {
+
 
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
      const colors = useSelector(state => state.appColorsReducer.value)
-     const { strongText } = colors
+     const { strongText, thirdLettersColor } = colors
 
      const theme = useTheme()
 
@@ -27,22 +27,15 @@ export default function Experience({ stylesPage, p_spacing }) {
 
      const cardTitle = (
           <Card
-               sx={{
-                    m: 0,
-                    pb: 3,
-                    width: 'auto',
-                    height: 1,
-                    boxShadow: 0,
-                    borderLeft: 0,
-                    backgroundColor: "transparent"
-               }}
+               sx={ cardStyle }
           >
-               <Box sx={borderBottomStyle}>
+               <Box className={styles.borderBottomStyle} style={{ color: strongText }}>
                     <div style={{
                          transform: h3_scale,
-                         transition: `transform 200ms linear`
+                         transition: `transform 200ms linear`,
+
                     }} >
-                         <Typography variant="h3" sx={h3_Style} gutterBottom={true}>
+                         <Typography className={styles.h3_Style} variant="h3" style={{ color: strongText }} gutterBottom={true}>
                               Experience
                          </Typography>
                     </div>
@@ -58,35 +51,35 @@ export default function Experience({ stylesPage, p_spacing }) {
                     src={'./exp.svg'}
                     min_width_600px={min_width_600px}
                     width={230}
-                    
+
                />
                <Box sx={{ height: min_width_600px ? 0 : 3 }} />
           </>
      )
 
-     const L_R_cardsStyle = {
-          m: 0,
-          maxWidth: '100%',
-          boxShadow: 0,
-          borderLeft: 0,
-          backgroundColor: "transparent"
-     }
-
-
      const groundbits = (period, contact, mail) => {
           return (
                <Card sx={L_R_cardsStyle} 
-                    // className={styles.test_class}🐯
+               // className={styles.test_class}🐯
                >
                     <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
-                         <Typography variant="h4" sx={h4_Style}>
+                         <Typography
+                              className={styles.h4_Style} variant="h4"
+                              style={{ mt: 1.7, color: thirdLettersColor }}
+                         >
                               React Developer
                          </Typography>
-                         <Typography variant="h5" sx={h5_Style}>
+                         <Typography className={styles.h5_Style} variant="h5"
+                              style={{
+                                   mt: 0.6,
+                                   mb: 3.24,
+                                   color: thirdLettersColor,
+                              }}
+                         >
                               Groundbits Ltd
                          </Typography>
-                         <Typography variant="p" sx={period_style}>
+                         <Typography className={styles.period_style} variant="p" style={{ color: strongText }}>
                               {period}
                               <br />
                          </Typography>
@@ -105,7 +98,10 @@ export default function Experience({ stylesPage, p_spacing }) {
                               contact && (
                                    <>
                                         {p_spacing}
-                                        <Typography variant="p" sx={period_style}>
+                                        <Typography className={styles.period_style}
+                                             variant="p"
+                                             style={{ color: strongText }}
+                                        >
                                              {contact}
                                              <br />
                                         </Typography>
@@ -133,10 +129,16 @@ export default function Experience({ stylesPage, p_spacing }) {
                          color: strongText
                     }}
                >
-                    <Typography variant="h4" sx={h4_Style}>
+                    <Typography className={styles.h4_Style} variant="h4" style={{ mt: 1.7, color: thirdLettersColor }}>
                          React Developer
                     </Typography>
-                    <Typography variant="h5" sx={h5_Style}>
+                    <Typography className={styles.h5_Style} variant="h5"
+                         style={{
+                              mt: 0.6,
+                              mb: 3.24,
+                              color: thirdLettersColor,
+                         }}
+                    >
                          Amdocs via Appgr8
                     </Typography>
                     <Typography variant="p" sx={{ fontWeight: 'bold', color: strongText }}>
@@ -165,8 +167,10 @@ export default function Experience({ stylesPage, p_spacing }) {
 
 
      return (
-          <div style={{ ...sectionsContainer, ...{ marginTop: min_width_600px ? 23 : 0 } }}>
-               <div style={titleContainer}>
+          <div className={styles.sectionsContainer}
+               style={{ marginTop: min_width_600px ? 23 : 0 }}
+          >
+               <div className={styles.titleContainer}>
                     <div>{cardTitle}</div>
                     <motion.div
                          initial={{ opacity: 1, y: 5 }}
@@ -174,13 +178,13 @@ export default function Experience({ stylesPage, p_spacing }) {
                          transition={{ delay: 0.25, duration: 0.25, ease: 'easeInOut' }}
                     >
 
-                         <Box style={sectionsBody}>
-                              <Box style={sections}>
+                         <Box className={styles.sectionsBody}>
+                              <Box className={styles.sections}>
 
                                    {groundbits('Dec 2021 – Present', 'Ricard Rosson', 'ricard@iacos.net')}
                               </Box>
 
-                              <Box style={sections} >
+                              <Box className={styles.sections}>
 
                                    <Box sx={{ height: theme.spacing(min_width_600px ? 0 : 2.4) }} />
                                    {amdocs}

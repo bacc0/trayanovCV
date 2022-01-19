@@ -1,34 +1,25 @@
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { useSelector } from 'react-redux'
+import styles from './_CombineSections.module.scss';
 
-export default function AboutMe({ stylesPage, p_spacing }) {
 
-     const { sectionsContainer, titleContainer, sectionsBody, sections, h3_Style, h4_Style, borderBottomStyle } = stylesPage
+export default function AboutMe({ L_R_cardsStyle, p_spacing, cardStyle }) {
 
-      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
-      const colors = useSelector(state => state.appColorsReducer.value)
+     
+     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+     const colors = useSelector(state => state.appColorsReducer.value)
 
-     const { strongText } = colors
-
+     const { strongText, thirdLettersColor } = colors
 
      const theme = useTheme()
 
      const cardTitle = (
-          <Card
-               sx={{
-                    m: 0,
-                    mb: min_width_600px ? -2 : -3.7,
-                    pb: 3,
-                    width: 'auto',
-                    height: 1,
-                    boxShadow: 0,
-                    borderLeft: 0,
-                    backgroundColor: "transparent"
-               }}
-          >
-               <Box sx={borderBottomStyle}>
-                    <Typography variant="h3" sx={h3_Style} gutterBottom={true}>
+          <Card sx={{ ...cardStyle, ...{ mb: min_width_600px ? -2 : -3.7 } }} >
+               <Box className={styles.borderBottomStyle} style={{ color: strongText }}>
+                    <Typography className={styles.h3_Style} variant="h3"
+                         style={{ color: strongText }} gutterBottom={true}
+                    >
                          About me
                     </Typography>
                </Box>
@@ -44,22 +35,13 @@ export default function AboutMe({ stylesPage, p_spacing }) {
           </Box>
      )
 
-     const L_R_cardsStyle = {
-          m: 0,
-          maxWidth: '100%',
-          boxShadow: 0,
-          borderLeft: 0,
-          backgroundColor: "transparent"
-     }
-
      const leftSection = (
           <Card sx={L_R_cardsStyle}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
-                    <Typography variant="h4" sx={h4_Style}>
+                    <Typography className={styles.h4_Style} variant="h4" style={{ mt: 1.7, color: thirdLettersColor }}>
                          Skills
                     </Typography>
-
 
                     {p_spacing}
 
@@ -67,12 +49,14 @@ export default function AboutMe({ stylesPage, p_spacing }) {
                          I’m very good on planning and organising my work, so my tasks will always be done on time in necessary standard.
                          <br />
                     </Typography>
+
                     {p_spacing}
 
                     <Typography variant="p">
                          I’m happy working on my own, but I have also like to work as part of the team.
                          <br />
                     </Typography>
+
                     {p_spacing}
 
                     <Typography variant="p">
@@ -80,6 +64,7 @@ export default function AboutMe({ stylesPage, p_spacing }) {
 
                          <br />
                     </Typography>
+
                     {p_spacing}
 
                </CardContent>
@@ -92,14 +77,12 @@ export default function AboutMe({ stylesPage, p_spacing }) {
 
                     {p_spacing}
 
-
                     <Typography variant="p">
                          Experience working with dynamic content.
                          <br />
                     </Typography>
 
                     {p_spacing}
-
 
                     <Typography variant="p">
                          Problem Solving Skills. Attention to Detail.
@@ -108,19 +91,17 @@ export default function AboutMe({ stylesPage, p_spacing }) {
 
                     {p_spacing}
 
-
                     <Typography variant="p">
                          Good understanding working with APIs (RESTful services).
                          <br />
                     </Typography>
 
-
                     {p_spacing}
+
                     <Typography variant="p">
                          I’m very focusin my work
                          <br />
                     </Typography>
-
 
                     <Typography variant="p">
                          Developing with ReactJS single page JavaScript Applications.
@@ -149,24 +130,21 @@ export default function AboutMe({ stylesPage, p_spacing }) {
 
 
      return (
-          <div style={sectionsContainer}>
-               <div style={titleContainer}>
+          <div className={styles.sectionsContainer}>
+               <div className={styles.titleContainer}>
                     <div>{cardTitle}</div>
-                    <div style={sectionsBody}>
-                         <div style={sections}>
+                    <div className={styles.sectionsBody}>
+                         <div className={styles.sections}>
                               <Box sx={{ height: min_width_600px ? 23 : 31 }} />
                               {img}
                               <Box sx={{ height: min_width_600px ? 40 : 25 }} />
                               {leftSection}
-
                          </div>
 
-                         <div style={sections}>
+                         <div className={styles.sections}>
                               <Box sx={{ height: theme.spacing(min_width_600px ? 0 : 2.4) }} />
                               {rightSection}
                               <Box sx={{ height: theme.spacing(2.4) }} />
-
-
                          </div>
                     </div>
                </div>

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAC;EACP,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,OAAiB;CAEtC",
-    "sources": [
-        "1_Experience.module.scss"
-    ],
-    "names": [],
-    "file": "1_Experience.module.css"
-}

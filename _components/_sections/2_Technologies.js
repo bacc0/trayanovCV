@@ -1,10 +1,11 @@
 import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { useSelector } from 'react-redux'
+import styles from './_CombineSections.module.scss';
 
-export default function Technologies({ stylesPage, p_spacing }) {
 
-     const { sectionsContainer, titleContainer, sectionsBody, sections, h3_Style, borderBottomStyle } = stylesPage
+export default function Technologies({ L_R_cardsStyle, p_spacing, cardStyle }) {
+
 
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
      const colors = useSelector(state => state.appColorsReducer.value)
@@ -15,18 +16,10 @@ export default function Technologies({ stylesPage, p_spacing }) {
 
      const cardTitle = (
           <Card
-               sx={{
-                    m: 0,
-                    pb: 3,
-                    width: 'auto',
-                    height: 1,
-                    boxShadow: 0,
-                    borderLeft: 0,
-                    backgroundColor: "transparent"
-               }}
+               sx={ cardStyle }
           >
-               <Box sx={borderBottomStyle}>
-                    <Typography variant="h3" sx={h3_Style} gutterBottom={true}>
+               <Box className={styles.borderBottomStyle} style={{color: strongText}}>
+                    <Typography className={styles.h3_Style} variant="h3" style={{color: strongText}} gutterBottom={true}>
                          Tech stack
                     </Typography>
                </Box>
@@ -41,18 +34,11 @@ export default function Technologies({ stylesPage, p_spacing }) {
                />
           </Box>
      )
-     const L_R_cardsStyle = {
-          m: 0,
-          maxWidth: '100%',
-          boxShadow: 0,
-          borderLeft: 0,
-          backgroundColor: "transparent"
-     }
+   
      const leftSection = (
           <Card sx={L_R_cardsStyle}>
                <CardContent sx={{ p: 0, mt: 1.8, mb: -3.3, color: strongText }}>
 
-                    {/*{p_spacing} */}
                     <Typography variant="p">ReactJS<br /></Typography>
                     {p_spacing}
                     <Typography variant="p">Hook<br /></Typography>
@@ -65,28 +51,20 @@ export default function Technologies({ stylesPage, p_spacing }) {
                     {p_spacing}
                     <Typography variant="p">CSS SASS<br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p">HTML<br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p">Framer Motion<br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p">SVG's animations<br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p">Shapes shifter<br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p">GIMP<br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p">Photoshop Adobe<br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p">Illustrator Adobe <br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p">Graphic Autodesk <br /></Typography>
                     {p_spacing}
 
@@ -97,25 +75,18 @@ export default function Technologies({ stylesPage, p_spacing }) {
           <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.9 : -0.3 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
-
                     <Typography variant="p">Typescript<br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p">NodeJS<br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p">Express<br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p"> Agile Scrum <br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p">Jira<br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p">Git Github Bitbucket<br /></Typography>
                     {p_spacing}
-
                     <Typography variant="p"> Sourcetree<br /></Typography>
 
                </CardContent>
@@ -124,14 +95,14 @@ export default function Technologies({ stylesPage, p_spacing }) {
 
 
      return (
-          <div style={{ ...sectionsContainer, ...{ backgroundColor: backgroundColor_2 } }}>
-               <div style={titleContainer}>
+          <div className={styles.sectionsContainer} style={{ backgroundColor: backgroundColor_2  }}>
+               <div className={styles.titleContainer}>
                     <div>{cardTitle}</div>
-                    <Box style={sectionsBody}>
-                         <div style={sections}>
+                    <Box className={styles.sectionsBody}>
+                         <div className={styles.sections}>
                               {leftSection}
                          </div>
-                         <div style={sections}>
+                         <div className={styles.sections}>
                               <Box sx={{ height: min_width_600px ? 0 : 28 }} />
                               {img}
                               <Box sx={{ height: min_width_600px ? 36 : 35 }} />

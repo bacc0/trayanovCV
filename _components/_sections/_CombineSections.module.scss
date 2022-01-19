@@ -1,0 +1,127 @@
+.root_combine_sections {
+
+     .sectionsContainer {
+
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          .titleContainer {
+               padding: 56px 0 48px;
+               width: 80%;
+               max-width: 380px;
+
+               .sectionsBody {
+                    width: 100%;
+                    max-width: 300px;
+                    display: block;
+                    justify-content: center;
+
+                    .sections {
+                         width: 100%;
+                    }
+               }
+          }
+     }
+
+     @media only screen and (min-width: 601px) {
+
+          .sectionsContainer {
+
+               .titleContainer {
+                    width: 526px;
+                    max-width: 526px;
+
+                    .sectionsBody {
+                         width: 526px;
+                         max-width: 526px;
+                         display: flex;
+                         justify-content: space-between;
+
+                         .sections {
+                              width: 230px;
+                         }
+                    }
+               }
+          }
+     }
+
+
+
+
+     .h3_Style {
+
+          letter-spacing: 2px;
+          font-size: 40px;
+          font-weight: 600px;
+     }
+     .h4_Style {
+          letter-spacing: 1px;
+          font-weight: 600px;
+          font-size: 25px;
+     }
+     .h5_Style {
+          letter-spacing: 0.62px;
+          font-weight: 600px;
+          font-size: 16px;
+     }
+     .period_style {
+          font-weight: bold;
+          font-size: 16px;
+     }
+     .borderBottomStyle {
+          border-bottom: 0.8px;
+          width: 100%;
+     }
+
+     @media only screen and (min-width: 601px) {
+
+          .h3_Style {
+               font-size: 28px;
+          }
+          .h4_Style {
+               font-size: 17px
+          }
+          .h5_Style {
+               font-size: 12px;
+          }
+          .period_style {
+               font-size: 12px;
+          }
+          .borderBottomStyle {
+               width: 230px;
+          }
+     }
+
+     
+
+
+     .footer_Container {
+
+          padding-top: 0;
+          padding-bottom: 5px;
+
+          .hrefStyle {
+
+               text-decoration: none;
+               display: flex;
+          }
+          .icons_container {
+
+               display: flex;
+               justify-content: flex-start;
+
+               .icons {
+                    margin-left: 0;
+                    margin-top: 4px;
+                    padding-right: 20px;
+               }
+               @media only screen and (min-width: 601px) {
+                    .icons {
+                         margin-top: 0px;
+                         padding-right: 10px;
+                    }
+               }
+          }
+     }
+}
