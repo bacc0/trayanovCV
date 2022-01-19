@@ -7,15 +7,18 @@ import { motion } from 'framer-motion'
 import * as React from 'react'
 import { useSelector } from 'react-redux'
 
-export default function _CombineSections({ state, animationTransition }) {
+
+export default function _CombineSections() {
 
 
- const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+     const colors = useSelector(state => state.appColorsReducer.value)
+
+     const { strongText, thirdLettersColor, separationsColor, footerColor } = colors
 
      const measurements = {
           pageContainerWidth: 526,
           sectionWidth: 230,
-
      }
 
      const p_spacing = (<Box sx={{ height: '11px' }} />)
@@ -47,16 +50,15 @@ export default function _CombineSections({ state, animationTransition }) {
                width: min_width_600px ? measurements.sectionWidth : '100%',
           },
 
-
           h3_Style: {
-               color: state.strongText,
+               color: strongText,
                letterSpacing: 2,
                fontSize: min_width_600px ? 28 : 40,
                fontWeight: min_width_600px ? 600 : 600
           },
           h4_Style: {
                mt: 1.7,
-               color: state.thirdLettersColor,
+               color: thirdLettersColor,
                letterSpacing: 1,
                fontWeight: min_width_600px ? 600 : 600,
                fontSize: min_width_600px ? 17 : 25
@@ -65,20 +67,20 @@ export default function _CombineSections({ state, animationTransition }) {
 
                mt: 0.6,
                mb: 3.24,
-               color: state.thirdLettersColor,
+               color: thirdLettersColor,
                letterSpacing: 0.62,
                fontWeight: min_width_600px ? 600 : 600,
                fontSize: min_width_600px ? 12 : 16,
           },
           period_style: {
                fontWeight: 'bold',
-               color: state.strongText,
+               color: strongText,
                fontSize: min_width_600px ? 12 : 16,
           },
-          borderBottomStyle : {
+          borderBottomStyle: {
                borderBottom: 0.8,
                width: min_width_600px ? measurements.sectionWidth : '100%',
-               color: state.strongText,
+               color: strongText,
           }
 
      }
@@ -103,48 +105,40 @@ export default function _CombineSections({ state, animationTransition }) {
                          fontSize: min_width_600px ? 12 : 17,
                          lineHeight: min_width_600px ? 1.7 : 1.9,
                          fontWeight: min_width_600px ? 300 : 300,
-                         color: state.strongText
+                         color: strongText
                     }}
                >
 
                     <Experience
-                         state={state}
-                         min_width_600px={min_width_600px}
                          stylesPage={stylesPage}
                          measurements={measurements}
                          p_spacing={p_spacing}
                          h3_scale={h3_scale}
                     />
 
-                    <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
+                    <div style={{ borderTop: `0.3px solid ${separationsColor}` }} />
 
                     <Technologies
-                         state={state}
-                         animationTransition={animationTransition}
                          stylesPage={stylesPage}
                          measurements={measurements}
                          p_spacing={p_spacing}
                     />
-                    <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
+                    <div style={{ borderTop: `0.3px solid ${ separationsColor}` }} />
 
                     <AboutMe
-                         state={state}
-                         animationTransition={animationTransition}
                          stylesPage={stylesPage}
                          measurements={measurements}
                          p_spacing={p_spacing}
                     />
-                    <div style={{ borderTop: `0.3px solid ${state.separationsColor}` }} />
+                    <div style={{ borderTop: `0.3px solid ${ separationsColor}` }} />
 
                     <Footer
-                         state={state}
-                         animationTransition={animationTransition}
                          stylesPage={stylesPage}
                          measurements={measurements}
                          p_spacing={p_spacing}
                     />
                </Box>
-               <div style={{ borderTop: `0.3px solid ${state.footerColor}` }} />
+               <div style={{ borderTop: `0.3px solid ${footerColor}` }} />
 
           </motion.div>
      )

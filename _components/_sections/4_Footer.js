@@ -9,13 +9,14 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import { useSelector } from 'react-redux'
 
 
-export default function Technologies({ state, stylesPage, p_spacing }) {
-
-
-      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+export default function Technologies({ stylesPage, p_spacing }) {
 
      const { sectionsContainer, titleContainer, sectionsBody, sections, } = stylesPage
-     const { footerColor,strongText } = state
+
+      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+      const colors = useSelector(state => state.appColorsReducer.value)
+
+     const { footerColor, strongText, footerTextColor } = colors
 
      const theme = useTheme()
 
@@ -28,7 +29,7 @@ export default function Technologies({ state, stylesPage, p_spacing }) {
      }
 
      const hrefStyle = {
-          color: state.footerTextColor,
+          color: footerTextColor,
           textDecoration: 'none',
           display: 'flex',
      }

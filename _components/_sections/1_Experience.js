@@ -5,19 +5,16 @@ import { useSelector } from 'react-redux'
 // import styles from './style/1_Experience.module.scss';
 import styles from './style/1_Experience.module.css';
 
-export default function Experience({ state, stylesPage, measurements, p_spacing, h3_scale }) {
-
-
-     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+export default function Experience({ stylesPage, measurements, p_spacing, h3_scale }) {
 
      const { sectionsContainer, titleContainer, sectionsBody, sections,
           h3_Style, h4_Style, h5_Style, period_style, borderBottomStyle } = stylesPage
-     const { strongText } = state
+
+     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+     const colors = useSelector(state => state.appColorsReducer.value)
+     const { strongText } = colors
 
      const theme = useTheme()
-
-
-
 
      const cardTitle = (
           <Card

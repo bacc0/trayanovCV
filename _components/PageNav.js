@@ -1,9 +1,13 @@
 import * as React from 'react'
 import { Box, Card } from '@mui/material'
 import Veselin from './_illustratins/Veselin'
+import { useSelector } from 'react-redux'
 
-export default function MenuAppBar({ state }) {
 
+export default function MenuAppBar() {
+
+
+     const colors = useSelector(state => state.appColorsReducer.value)
 
      const style = {
           typing_container: {
@@ -29,7 +33,7 @@ export default function MenuAppBar({ state }) {
      const cardTitle = (
           <Card sx={style.card_container}>
                <Box>
-                    <Veselin color={state.bodyColor} />
+                    <Veselin color={colors.bodyColor} />
                </Box>
                <Box sx={style.typing_container}>
                </Box>

@@ -2,13 +2,14 @@ import Img_handle_inview from '../_illustratins/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { useSelector } from 'react-redux'
 
-export default function AboutMe({ state, stylesPage, measurements, p_spacing }) {
-
-
-      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+export default function AboutMe({ stylesPage, measurements, p_spacing }) {
 
      const { sectionsContainer, titleContainer, sectionsBody, sections, h3_Style, h4_Style, borderBottomStyle } = stylesPage
-     const { thirdLettersColor, backgroundColor, strongText } = state
+
+      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+      const colors = useSelector(state => state.appColorsReducer.value)
+
+     const { thirdLettersColor, backgroundColor, strongText } = colors
 
 
      const theme = useTheme()

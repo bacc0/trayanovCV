@@ -7,24 +7,23 @@ import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp'
 import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
+
 import { useSelector, useDispatch } from 'react-redux'
 import { themeActions } from '../store/themeState'
 
+export default function MenuAppBar({  currentBrowser }) {
 
-export default function MenuAppBar({ state, currentBrowser }) {
-
-     
      const dispatch = useDispatch();
 
      const scrollDirection = useSelector(state => state.scrollDirectionReducer.value)
      const positionY = useSelector(state => state.Y_PositionSliceReducer.value)
      const theme = useSelector(state => state.themeReducer.color)
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
-
+     const colors = useSelector(state => state.appColorsReducer.value)
 
      const {
-          strongText, thirdLettersColor, hrColorMain,
-          AppBackgroundColor, animationTransition, secLettersColor } = state
+          strongText, thirdLettersColor, hrColorMain, primeLettersColor,
+          AppBackgroundColor, animationTransition, secLettersColor } = colors
 
      const renderCounter = useRef(0)
      renderCounter.current = renderCounter.current + 1
@@ -96,12 +95,12 @@ export default function MenuAppBar({ state, currentBrowser }) {
 
      const underAppBar = {
           height: min_width_600px ? 70 : 60,
-          backgroundColor: state.primeLettersColor,
-          
+          backgroundColor: primeLettersColor,
+
           backgroundColor: 'transparent',
 
      }
-     
+
      const iconsStackStyle = {
           display: 'flex',
           justifyContent: min_width_600px ? 'space-between' : 'center',
@@ -121,7 +120,7 @@ export default function MenuAppBar({ state, currentBrowser }) {
           // backgroundColor: 'tan',
           width: min_width_600px ? 200 : '16%',
      }
-    
+
 
      const iconsStyle = {
           color: strongText,
@@ -152,7 +151,7 @@ export default function MenuAppBar({ state, currentBrowser }) {
                                         >
                                              <LinkedInIcon />
                                         </IconButton>
-{/* {positionY} */}
+                                        {/* {positionY} */}
                                         <IconButton
                                              href={`tel: 00447590010066`}
                                              aria-label='Phone Icon' style={iconsStyle}
