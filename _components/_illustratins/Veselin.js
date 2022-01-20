@@ -30,8 +30,6 @@ export default ({ color }) => {
 
      const size = 310
 
-
-
      const style_colibri = {
 
           top: 120,
