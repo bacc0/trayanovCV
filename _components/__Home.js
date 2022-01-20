@@ -5,6 +5,7 @@ import PageNav from './PageNav'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
+
 import { useViewportScroll } from 'framer-motion'
 import { detect } from 'detect-browser'
 import { useWindowSize } from 'react-window-size-hooks'
