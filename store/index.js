@@ -7,7 +7,6 @@ import scrollDirectionSlice from './scrollDirection'
 import themeSlice from './themeState'
 import windowSlice from './windowSize'
 
-
 const store = configureStore({
      reducer: {
           appColorsReducer: appColorsSlice.reducer,
