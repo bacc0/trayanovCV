@@ -13,7 +13,7 @@ import { useScrollDirection } from 'react-use-scroll-direction'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { scrollDirectionActions } from '../store/scrollDirection'
-import { Y_PositionActions } from '../store/positionY'
+import { Y_PositionActions } from '../store/PositionY'
 import { min_width_600px_Actions } from '../store/minWidth'
 import { windowSizeActions } from '../store/windowSize'
 import { appColorsActions } from '../store/appColors'
