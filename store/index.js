@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import appColorsSlice from './appColors'
 import min_width_600px from './minWidth'
-import Y_PositionSlice from './positionY'
+import Y_PositionSlice from './PositionY'
 import scrollDirectionSlice from './scrollDirection'
 import themeSlice from './themeState'
 import windowSlice from './windowSize'
