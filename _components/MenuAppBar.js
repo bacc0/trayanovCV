@@ -87,7 +87,7 @@ export default function MenuAppBar({ currentBrowser }) {
 
           transition: `top 400ms linear,
                  transform ${scrollDirection === 'up' ? 400 : 0}ms linear`,
-          'transition-delay': `1.2s `
+          'transition-delay': `1.2s`
      }
 
      const ToolbarStyle = {
@@ -103,6 +103,7 @@ export default function MenuAppBar({ currentBrowser }) {
                     ? 1
                     : min_width_600px ? 0.62 : 0.38})`,
           transition: `transform 300ms ease-in`,
+          'transition-delay': appBarIsVisible ? `0.09s` : `0s`
      }
 
      const underAppBar = {
