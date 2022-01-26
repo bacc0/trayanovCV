@@ -82,21 +82,27 @@ export default function MenuAppBar({ currentBrowser }) {
           height: 75,
           paddingTop: 5,
 
-          // top: appBarIsVisible ? -1 : -200,
-          // transform: `scaleY(${appBarIsVisible ? 1 : 0.75})`,
-          top: appBarIsVisible ? -1 : -60,
+          top: appBarIsVisible ? -1 : -80,
+          transform: `scaleY(${appBarIsVisible ? 1 : 0.8})`,
 
-          transform: `scaleY(${appBarIsVisible ? 1 : -0.6}) scaleX(${appBarIsVisible ? 1 : 0.2})`,
+          transition: `top 400ms linear,
+                 transform ${scrollDirection === 'up' ? 400 : 0}ms linear`,
+          'transition-delay': `1.2s `
+     }
 
-          transition: `top ${scrollDirection === 'up' ? 350 : 330}ms ease-out,
-                 transform ${scrollDirection === 'up' ? 300 : 0}ms ease-in`,
-                         'transition-delay': `0.01s, 
-                              0.05s`
+     const ToolbarStyle = {
+          maxWidth: min_width_600px ? 546 : 398,
+          margin: '0 auto',
+          height: 65,
 
-          // transition: `top 800ms linear,
-          //              transform 1000ms linear`,
-          // 'transition-delay': `0.01s, 
-          //                      0.05s`
+          transform:
+               `scaleY(${appBarIsVisible
+                    ? 1
+                    : min_width_600px ? 0.62 : 0.38}) 
+                scaleX(${appBarIsVisible
+                    ? 1
+                    : min_width_600px ? 0.62 : 0.38})`,
+          transition: `transform 300ms ease-in`,
      }
 
      const underAppBar = {
@@ -133,13 +139,7 @@ export default function MenuAppBar({ currentBrowser }) {
           <Box>
                <AppBar style={AppBarStyle} position='fixed'>
                     <div>
-                         <Toolbar
-                              style={{
-                                   maxWidth: min_width_600px ? 546 : 398,
-                                   margin: '0 auto',
-                                   height: 65,
-                              }}
-                         >
+                         <Toolbar style={ToolbarStyle}>
                               <Stack
                                    direction='row'
                                    spacing={1}
