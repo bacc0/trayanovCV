@@ -11,7 +11,7 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import { useSelector, useDispatch } from 'react-redux'
 import { themeActions } from '../store/themeState'
 
-export default function MenuAppBar({  currentBrowser }) {
+export default function MenuAppBar({ currentBrowser }) {
 
      const dispatch = useDispatch();
 
@@ -82,12 +82,21 @@ export default function MenuAppBar({  currentBrowser }) {
           height: 75,
           paddingTop: 5,
 
-          transform: `scaleY(${appBarIsVisible ? 1 : 0.75})`,
-          top: appBarIsVisible ? -1 : -200,
-          transition: `top 800ms linear,
-                       transform 1000ms linear`,
-          'transition-delay': `0.01s, 
-                               0.05s`
+          // top: appBarIsVisible ? -1 : -200,
+          // transform: `scaleY(${appBarIsVisible ? 1 : 0.75})`,
+          top: appBarIsVisible ? -1 : -60,
+
+          transform: `scaleY(${appBarIsVisible ? 1 : -0.6}) scaleX(${appBarIsVisible ? 1 : 0.2})`,
+
+          transition: `top ${scrollDirection === 'up' ? 350 : 330}ms ease-out,
+                 transform ${scrollDirection === 'up' ? 300 : 0}ms ease-in`,
+                         'transition-delay': `0.01s, 
+                              0.05s`
+
+          // transition: `top 800ms linear,
+          //              transform 1000ms linear`,
+          // 'transition-delay': `0.01s, 
+          //                      0.05s`
      }
 
      const underAppBar = {
