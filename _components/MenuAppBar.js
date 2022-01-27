@@ -82,7 +82,7 @@ export default function MenuAppBar({ currentBrowser }) {
           height: 75,
           paddingTop: 5,
 
-          top: appBarIsVisible ? -1 : -80,
+          top: appBarIsVisible ? -1 : -82,
           transform: `scaleY(${appBarIsVisible ? 1 : 0.8})`,
 
           transition: `top 400ms linear,
