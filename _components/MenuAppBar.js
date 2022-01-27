@@ -85,8 +85,8 @@ export default function MenuAppBar({ currentBrowser }) {
           top: appBarIsVisible ? -1 : -82,
           transform: `scaleY(${appBarIsVisible ? 1 : 0.8})`,
 
-          transition: `top 400ms linear,
-                 transform ${scrollDirection === 'up' ? 400 : 0}ms linear`,
+          transition: `top 330ms linear,
+                 transform ${scrollDirection === 'up' ? 330 : 0}ms linear`,
           'transition-delay': `1.2s`
      }
 
@@ -102,7 +102,7 @@ export default function MenuAppBar({ currentBrowser }) {
                 scaleX(${appBarIsVisible
                     ? 1
                     : min_width_600px ? 0.62 : 0.38})`,
-          transition: `transform 300ms ease-in`,
+          transition: `transform 230ms ease-in`,
           'transition-delay': appBarIsVisible ? `0.09s` : `0s`
      }
 
