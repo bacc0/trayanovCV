@@ -1,0 +1,55 @@
+.home_root {
+     
+     .back_Animation_Container {
+          display: flex;
+          justify-content: flex-end;
+          overflow: hidden;
+          top: 0;
+          position: absolute;
+          width: 100%;
+          transition: opacity 4s linear;
+          height: calc(100vw + 55px);
+
+          .back_Animation {
+               position: absolute;
+               animation: rotate 40s linear infinite;
+               transition: opacity 4s linear;
+               top: 60vw;
+          }
+     }
+
+     .page_Root {
+          transition: background-color 0ms ease, color 0ms ease;
+
+          .nav_Root {
+               width: 100%;
+               height: 100vw;
+
+               .nav {
+                    height: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+               }
+          }
+     }
+
+
+     @media only screen and (min-width: 601px) {
+
+          .back_Animation_Container {
+               height: 294px;
+
+               .back_Animation {
+                    top: 25px;
+               }
+          }
+
+          .page_Root {
+               .nav_Root {
+                    height: 216px;
+               }
+          }
+     }
+}

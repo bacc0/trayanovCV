@@ -18,6 +18,7 @@ import { min_width_600px_Actions } from '../store/minWidth'
 import { windowSizeActions } from '../store/windowSize'
 import { appColorsActions } from '../store/appColors'
 
+import styles from './__Home.module.scss';
 
 
 export default function Home() {
@@ -30,12 +31,12 @@ export default function Home() {
      const positionY = useSelector(state => state.Y_PositionSliceReducer.value)
 
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
-     
+
      const colors = useSelector(state => state.appColorsReducer.value)
      const { AppBackgroundColor, bodyColor } = colors
 
      console.log('🦊 Background', colors.AppBackgroundColor)
-     
+
      const tempMediaQuery = useMediaQuery('(min-width:600px)')
 
      useEffect(() => {
@@ -113,7 +114,7 @@ export default function Home() {
      // }, [])
 
      // ---------------------------------    NEW! Detect window scrolling Directions (UP DOWN)
-    
+
      const { isScrollingUp, isScrollingDown } = useScrollDirection()
 
      useEffect(() => {
@@ -170,45 +171,51 @@ export default function Home() {
                backgroundColor: AppBackgroundColor,
                // background: `radial-gradient(circle closest-side, #7026A5, #040F1B)`,
                color: bodyColor,
-               transition: `background-color 0ms ease, 
-                            color 0ms ease`,
+               // transition: `background-color 0ms ease, 
+               //              color 0ms ease`,
           },
           navRoot: {
-               width: '100%',
-               height: min_width_600px ? 216 : '100vw',
+               // width: '100%',
+               // height: min_width_600px ? 216 : '100vw',
           },
           nav: {
-               height: '100%',
-               margin: '0 auto',
-               display: 'flex',
-               alignItems: 'flex-end',
-               justifyContent: 'center',
+               // height: '100%',
+               // margin: '0 auto',
+               // display: 'flex',
+               // alignItems: 'flex-end',
+               // justifyContent: 'center',
           },
           backAnimationContainer: {
-               display: 'flex',
-               justifyContent: 'flex-end',
-               overflow: 'hidden',
-               height: min_width_600px ? 294 : `calc(100vw + 55px)`,
-               top: 0,
-               position: `absolute`,
-               width: '100%',
+               // display: 'flex',
+               // justifyContent: 'flex-end',
+               // overflow: 'hidden',
+               // top: 0,
+               // position: `absolute`,
+               // width: '100%',
+               // transition: `opacity 4s linear`,
                background: gradient,
                opacity: opacityBG,
-               transition: `opacity 4s linear`,
+               height: min_width_600px ? 294 : `calc(100vw + 55px)`,
           },
 
           backAnimation: {
-               top: min_width_600px ? 25 : '60vw',
-               position: `absolute`,
-               animation: `rotate 40s linear infinite`,
+               // position: `absolute`,
+               // animation: `rotate 40s linear infinite`,
+               // transition: `opacity 4s linear`,
+               // top: min_width_600px ? 25 : '60vw',
                opacity: opacityBG,
-               transition: `opacity 4s linear`,
           }
      }
 
      const backAnimation = (
-          <div style={style.backAnimationContainer}>
-               <div style={style.backAnimation}>
+          <div
+               style={style.backAnimationContainer}
+               className={styles.back_Animation_Container}
+          >
+               <div
+                    style={style.backAnimation}
+                    className={styles.back_Animation}
+               >
                     <Image
                          src={'/react_logo.svg'}
                          width={min_width_600px ? 600 : 500}
@@ -220,12 +227,24 @@ export default function Home() {
 
 
      return (
-          <Paper style={{ background: AppBackgroundColor }}>
+          <Paper style={{ background: AppBackgroundColor }} className={styles.home_root}>
                <MenuAppBar currentBrowser={currentBrowser} />
-               { backAnimation }
-               <div style={style.pageRoot} >
-                    <div style={style.navRoot}>
-                         <div style={style.nav}>
+               {backAnimation}
+
+
+
+               <div
+                    style={style.pageRoot}
+                    className={styles.page_Root}
+               >
+                    <div
+                         style={style.navRoot}
+                         className={styles.nav_Root}
+                    >
+                         <div
+                              style={style.nav}
+                              className={styles.nav}
+                         >
                               <PageNav />
                          </div>
                     </div>

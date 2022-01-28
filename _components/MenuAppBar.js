@@ -11,6 +11,8 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import { useSelector, useDispatch } from 'react-redux'
 import { themeActions } from '../store/themeState'
 
+import styles from './MenuAppBar.module.scss';
+
 export default function MenuAppBar({ currentBrowser }) {
 
      const dispatch = useDispatch();
@@ -70,30 +72,27 @@ export default function MenuAppBar({ currentBrowser }) {
 
      const AppBarStyle = {
           backgroundColor: currentBrowser !== 'firefox' ? `${AppBackgroundColor}cc` : `${AppBackgroundColor}fa`,
-          // backgroundColor: `#FFFFFF`,
+          color: hrColorMain,
+          borderBottom: `0.3px solid ${secLettersColor}55`,
+          top: appBarIsVisible ? -1 : -82,
+          transform: `scaleY(${appBarIsVisible ? 1 : 0.8})`,
 
           '-webkit-backdrop-filter': `blur(10px)`,
           ' backdrop-filter': `blur(10px)`,
-          color: hrColorMain,
           boxShadow: '0 0 0',
-          borderBottom: `0.3px solid ${secLettersColor}55`,
           fontSize: 10,
           position: 'fixed',
           height: 75,
           paddingTop: 5,
-
-          top: appBarIsVisible ? -1 : -82,
-          transform: `scaleY(${appBarIsVisible ? 1 : 0.8})`,
-
           transition: `top 330ms linear,
                  transform ${scrollDirection === 'up' ? 330 : 0}ms linear`,
           'transition-delay': `1.2s`
      }
 
      const ToolbarStyle = {
-          maxWidth: min_width_600px ? 546 : 398,
           margin: '0 auto',
           height: 65,
+          maxWidth: min_width_600px ? 546 : 398,
 
           transform:
                `scaleY(${appBarIsVisible
@@ -111,13 +110,11 @@ export default function MenuAppBar({ currentBrowser }) {
           backgroundColor: primeLettersColor,
           backgroundColor: 'transparent',
      }
-
      const iconsStackStyle = {
           display: 'flex',
           justifyContent: min_width_600px ? 'space-between' : 'center',
           width: '100%',
      }
-
      const iconsStackStyle_Left = {
           display: 'flex',
           justifyContent: 'space-between',
