@@ -146,16 +146,13 @@ export default function MenuAppBar({ currentBrowser }) {
           <Box>
                <style jsx global>
 				{`
-                         @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) 
-                         {
-                              .App_Bar_Style {
-                                  background-color: ${AppBackgroundColor}cc; 
-                                  -webkit-backdrop-filter: blur(10px);
-                                  backdrop-filter: blur(10px);
-                              }
+                         .App_Bar_Style {
+                              background-color: ${AppBackgroundColor}cc; 
+                              -webkit-backdrop-filter: blur(10px);
+                              backdrop-filter: blur(10px);
                          }
-                         @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) 
-                         {
+                       
+                         @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
                               .App_Bar_Style {
                                   background-color: ${AppBackgroundColor}
                               }
