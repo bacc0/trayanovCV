@@ -71,14 +71,23 @@ export default function MenuAppBar({ currentBrowser }) {
 
 
      const AppBarStyle = {
-          backgroundColor: currentBrowser !== 'firefox' ? `${AppBackgroundColor}cc` : `${AppBackgroundColor}fa`,
+          // backgroundColor: currentBrowser !== 'firefox'
+          //      ? `${AppBackgroundColor}cc`
+          //      : `${AppBackgroundColor}fa`,
           color: hrColorMain,
           borderBottom: `0.3px solid ${secLettersColor}55`,
           top: appBarIsVisible ? -1 : -82,
           transform: `scaleY(${appBarIsVisible ? 1 : 0.8})`,
 
-          '-webkit-backdrop-filter': `blur(10px)`,
-          ' backdrop-filter': `blur(10px)`,
+          // '-webkit-backdrop-filter': `blur(10px)`,
+          // ' backdrop-filter': `blur(10px)`,
+
+          '@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none)': {
+               // background-color: #ffffff;
+               '-webkit-backdrop-filter': 'blur(10px)',
+               'backdrop-filter': 'blur(10px)'
+          },
+
           boxShadow: '0 0 0',
           fontSize: 10,
           position: 'fixed',
@@ -135,8 +144,29 @@ export default function MenuAppBar({ currentBrowser }) {
 
      return (
           <Box>
-               <AppBar style={AppBarStyle} position='fixed'>
-                    <div>
+               <style jsx global>
+				{`
+                         @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) 
+                         {
+                              .App_Bar_Style {
+                                  background-color: ${AppBackgroundColor}cc; 
+                                  -webkit-backdrop-filter: blur(10px);
+                                  backdrop-filter: blur(10px);
+                              }
+                         }
+                         @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) 
+                         {
+                              .App_Bar_Style {
+                                  background-color: ${AppBackgroundColor}
+                              }
+                         }
+				`}
+			</style>
+
+             
+
+               <AppBar style={AppBarStyle} className='App_Bar_Style' position='fixed'>
+                    <div >
                          <Toolbar style={ToolbarStyle}>
                               <Stack
                                    direction='row'

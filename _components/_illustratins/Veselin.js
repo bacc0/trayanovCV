@@ -10,23 +10,23 @@ export default ({ color }) => {
 
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
 
-     const fill = color
-     const stroke = color
+     // const fill = color
+     // const stroke = color
      const strokeWidth = 0.75
 
-     const strokeWidth_extra = 3
+     const strokeWidth_extra = 2
 
 
 
      const transitionStroke = { delay: 0.2, duration: 3 }
-     const strokeWidthLines = 1.2
+     // const strokeWidthLines = 1.2
 
-     const transitionStrokeLines = { delay: 6.8, duration: 0.9 }
+     // const transitionStrokeLines = { delay: 6.8, duration: 0.9 }
 
 
      const transitionFill = { delay: 2, duration: 0.3 }
      // const transition_stroke_extra = { delay: 2.1, duration: 0.3 }
-     const transition_stroke_extra = { delay: 2.35, duration: 0.05 }
+     const transition_stroke_extra = { delay: 2.35, duration: 1.05 }
 
      const size = 310
 
@@ -131,6 +131,8 @@ export default ({ color }) => {
                          </g>
 
                     </motion.g>
+
+
 
                     <motion.g
                          initial={{ scale: 1.00, y: 0, x: 0 }}

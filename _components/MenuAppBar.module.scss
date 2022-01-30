@@ -1,0 +1,29 @@
+// @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+//      .App_Bar_Style {
+//           -webkit-backdrop-filter: blur(10px);
+//           backdrop-filter: blur(10px);
+//           background-color: #FFFFFF33;
+//      }
+// }
+
+// /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+// @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+//      .App_Bar_Style {
+//           background-color: #ff1616;
+
+//      }
+// }
+
+.App_Bar_Style {
+     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+          // background-color: #ffffff;
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+     }
+
+     // /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+     @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+          background-color: #ff1616;
+
+     }
+}
