@@ -165,7 +165,7 @@ export default function Home() {
           dispatch(appColorsActions.UPDATE_APP_COLORS(theme))
      }, [theme]);
 
-     const style = {
+     const styleLocal = {
 
           pageRoot: {
                backgroundColor: AppBackgroundColor,
@@ -200,7 +200,7 @@ export default function Home() {
 
           backAnimation: {
                // position: `absolute`,
-               // animation: `rotate 40s linear infinite`,
+               animation: `rotate 40s linear infinite`,
                // transition: `opacity 4s linear`,
                // top: min_width_600px ? 25 : '60vw',
                opacity: opacityBG,
@@ -209,11 +209,11 @@ export default function Home() {
 
      const backAnimation = (
           <div
-               style={style.backAnimationContainer}
+               style={styleLocal.backAnimationContainer}
                className={styles.back_Animation_Container}
           >
                <div
-                    style={style.backAnimation}
+                    style={styleLocal.backAnimation}
                     className={styles.back_Animation}
                >
                     <Image
@@ -234,15 +234,15 @@ export default function Home() {
 
 
                <div
-                    style={style.pageRoot}
+                    style={styleLocal.pageRoot}
                     className={styles.page_Root}
                >
                     <div
-                         style={style.navRoot}
+                         style={styleLocal.navRoot}
                          className={styles.nav_Root}
                     >
                          <div
-                              style={style.nav}
+                              style={styleLocal.nav}
                               className={styles.nav}
                          >
                               <PageNav />
