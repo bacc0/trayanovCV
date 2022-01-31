@@ -97,7 +97,7 @@ const MenuAppBar = () => {
           height: 75,
           paddingTop: 5,
           transition: `top 330ms linear, transform ${scrollDirection === 'up' ? 330 : 0}ms linear`,
-          'transition-delay': `1.2s`
+          transitionDelay: `1.2s`
      }
 
      const ToolbarStyle = {
@@ -109,7 +109,7 @@ const MenuAppBar = () => {
                `scaleY(${appBarIsVisible ? 1 : 0.62}) 
                 scaleX(${appBarIsVisible ? 1 : 0.62})`,
           transition: `transform 230ms ease-in`,
-          'transition-delay': appBarIsVisible ? `0.09s` : `0s`
+          transitionDelay: appBarIsVisible ? `0.09s` : `0s`
      }
 
      const underAppBar = {
