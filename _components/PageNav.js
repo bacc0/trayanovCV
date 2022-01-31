@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 import styles from './PageNav.module.scss';
 
 
-export default function MenuAppBar() {
+const PageNav = () => {
 
 
      const colors = useSelector(state => state.appColorsReducer.value)
@@ -45,4 +45,5 @@ export default function MenuAppBar() {
      return cardTitle
 }
 
+export default React.memo(PageNav);
 

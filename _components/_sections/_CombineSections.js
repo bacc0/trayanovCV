@@ -8,7 +8,7 @@ import * as React from 'react'
 import { useSelector } from 'react-redux'
 import styles from './_CombineSections.module.scss';
 
-export default function _CombineSections() {
+const _CombineSections = () => {
 
 
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
@@ -147,3 +147,5 @@ export default function _CombineSections() {
           </motion.div>
      )
 }
+
+export default  React.memo(_CombineSections)

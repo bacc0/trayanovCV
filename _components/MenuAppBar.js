@@ -13,7 +13,7 @@ import { themeActions } from '../store/themeState'
 
 import styles from './MenuAppBar.module.scss';
 
-export default function MenuAppBar() {
+const MenuAppBar = () => {
 
      const dispatch = useDispatch();
 
@@ -23,7 +23,7 @@ export default function MenuAppBar() {
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
      const colors = useSelector(state => state.appColorsReducer.value)
      const currentBrowser = useSelector(state => state.currentBrowserReducer.value)
-     console.log('currentBrowser', currentBrowser)
+     // console.log('currentBrowser', currentBrowser)
      const {
           strongText, thirdLettersColor, hrColorMain, primeLettersColor,
           AppBackgroundColor, secLettersColor } = colors
@@ -106,12 +106,8 @@ export default function MenuAppBar() {
           maxWidth: min_width_600px ? 546 : 398,
 
           transform:
-               `scaleY(${appBarIsVisible
-                    ? 1
-                    : min_width_600px ? 0.62 : 0.38}) 
-                scaleX(${appBarIsVisible
-                    ? 1
-                    : min_width_600px ? 0.62 : 0.38})`,
+               `scaleY(${appBarIsVisible ? 1 : 0.62}) 
+                scaleX(${appBarIsVisible ? 1 : 0.62})`,
           transition: `transform 230ms ease-in`,
           'transition-delay': appBarIsVisible ? `0.09s` : `0s`
      }
@@ -231,4 +227,4 @@ export default function MenuAppBar() {
      )
 }
 
-
+export default MenuAppBar
