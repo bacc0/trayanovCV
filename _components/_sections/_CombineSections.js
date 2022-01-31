@@ -148,4 +148,4 @@ const _CombineSections = () => {
      )
 }
 
-export default  React.memo(_CombineSections)
+export default _CombineSections

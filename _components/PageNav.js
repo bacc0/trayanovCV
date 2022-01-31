@@ -45,5 +45,5 @@ const PageNav = () => {
      return cardTitle
 }
 
-export default React.memo(PageNav);
+export default PageNav
 

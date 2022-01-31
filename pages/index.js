@@ -1,17 +1,14 @@
 import { Provider } from 'react-redux'
-import Home from '../_components/__Home'
+import Application from '../_components/__Application'
 import store from '../store/index'
 
 
-export default function App() {
+export default function Main() {
 
      return (
           <section className='pages-wrapper'>
-
                <Provider store={store}>
-                 
-                         < Home />
-                   
+                    <Application />
                </Provider>
           </section>
      )
