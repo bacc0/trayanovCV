@@ -13,7 +13,7 @@ import { themeActions } from '../store/themeState'
 
 import styles from './MenuAppBar.module.scss';
 
-export default function MenuAppBar({ currentBrowser }) {
+export default function MenuAppBar() {
 
      const dispatch = useDispatch();
 
@@ -22,7 +22,8 @@ export default function MenuAppBar({ currentBrowser }) {
      const theme = useSelector(state => state.themeReducer.color)
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
      const colors = useSelector(state => state.appColorsReducer.value)
-
+     const currentBrowser = useSelector(state => state.currentBrowserReducer.value)
+     
      const {
           strongText, thirdLettersColor, hrColorMain, primeLettersColor,
           AppBackgroundColor, secLettersColor } = colors
@@ -73,7 +74,7 @@ export default function MenuAppBar({ currentBrowser }) {
      const AppBarStyle = {
           backgroundColor: currentBrowser !== 'firefox'
                ? `${AppBackgroundColor}cc`
-               : `${AppBackgroundColor}fa`,
+               : `${AppBackgroundColor}fd`,
           color: hrColorMain,
           borderBottom: `0.3px solid ${secLettersColor}55`,
           top: appBarIsVisible ? -1 : -82,
@@ -82,14 +83,12 @@ export default function MenuAppBar({ currentBrowser }) {
           // '-webkit-backdrop-filter': `blur(10px)`,
           // ' backdrop-filter': `blur(10px)`,
 
-
           boxShadow: '0 0 0',
           fontSize: 10,
           position: 'fixed',
           height: 75,
           paddingTop: 5,
-          transition: `top 330ms linear,
-                 transform ${scrollDirection === 'up' ? 330 : 0}ms linear`,
+          transition: `top 330ms linear, transform ${scrollDirection === 'up' ? 330 : 0}ms linear`,
           'transition-delay': `1.2s`
      }
 
@@ -142,15 +141,9 @@ export default function MenuAppBar({ currentBrowser }) {
                <style jsx global>
 				{`
                          .App_Bar_Style {
-                              background-color: ${AppBackgroundColor}cc; 
+                            
                               -webkit-backdrop-filter: blur(10px);
                               backdrop-filter: blur(10px);
-                         }
-                       
-                         @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-                              .App_Bar_Style {
-                                  background-color: ${AppBackgroundColor}
-                              }
                          }
 				`}
 			</style>

@@ -11,12 +11,15 @@ import { detect } from 'detect-browser'
 import { useWindowSize } from 'react-window-size-hooks'
 import { useScrollDirection } from 'react-use-scroll-direction'
 
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector, useStore } from 'react-redux'
 import { scrollDirectionActions } from '../store/scrollDirection'
 import { Y_PositionActions } from '../store/PositionY'
 import { min_width_600px_Actions } from '../store/minWidth'
 import { windowSizeActions } from '../store/windowSize'
 import { appColorsActions } from '../store/appColors'
+
+import { CurrentBrowserActions } from '../store/CurrentBrowser'
+
 
 import styles from './__Home.module.scss';
 
@@ -40,7 +43,6 @@ export default function Home() {
      const tempMediaQuery = useMediaQuery('(min-width:600px)')
 
      useEffect(() => {
-
           dispatch(min_width_600px_Actions.MIN_WIDTH(tempMediaQuery))
      }, [tempMediaQuery]);
 
@@ -144,10 +146,9 @@ export default function Home() {
 
      const browser = detect()
 
-     let currentBrowser;
-     if (browser.name === 'firefox') {
-          currentBrowser = 'firefox'
-     }
+
+
+     dispatch(CurrentBrowserActions.UPDATE_CURRENT_BROWSER(browser.name))
 
      // ------------------------------------------------------------------ 
 
@@ -228,11 +229,8 @@ export default function Home() {
 
      return (
           <Paper style={{ background: AppBackgroundColor }} className={styles.home_root}>
-               <MenuAppBar currentBrowser={currentBrowser} />
+               <MenuAppBar />
                {backAnimation}
-
-
-
                <div
                     style={styleLocal.pageRoot}
                     className={styles.page_Root}

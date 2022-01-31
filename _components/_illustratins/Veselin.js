@@ -47,7 +47,7 @@ export default ({ color }) => {
                animate={{ opacity: 1, scale: 0.8, x: 0, y: 0 }}
                transition={{ delay: 0.2, duration: 0.25 }}
           >
-               <div id='colibri_hype_container' class='HYPE_document' style={style_colibri} />
+               <div id='colibri_hype_container' className='HYPE_document' style={style_colibri} />
                <Script
                     src='colibri.hyperesources/colibri_hype_generated_script.js?23464'
                     strategy='afterInteractive'

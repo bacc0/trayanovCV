@@ -33,7 +33,7 @@ export default ({ state, logo_W_H, strokeWidth, setOnAnimationEnd }) => {
                     {/* --------------------    ad generated folder to PUBLIC folder             ---------------     */}
 
                     <div id='colibri_hype_container'
-                         class='HYPE_document'
+                         className='HYPE_document'
                          style={{
                               // backgroundColor:'lime',
                               position: 'relative',

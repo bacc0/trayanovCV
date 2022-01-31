@@ -6,6 +6,7 @@ import Y_PositionSlice from './PositionY'
 import scrollDirectionSlice from './scrollDirection'
 import themeSlice from './themeState'
 import windowSlice from './windowSize'
+import CurrentBrowserSlice from './CurrentBrowser'
 
 const store = configureStore({
      reducer: {
@@ -15,6 +16,7 @@ const store = configureStore({
           scrollDirectionReducer: scrollDirectionSlice.reducer,
           themeReducer: themeSlice.reducer,
           windowSizeReducer: windowSlice.reducer,
+          currentBrowserReducer: CurrentBrowserSlice.reducer,
      }
 });
 
