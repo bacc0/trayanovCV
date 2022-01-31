@@ -23,7 +23,7 @@ export default function MenuAppBar() {
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
      const colors = useSelector(state => state.appColorsReducer.value)
      const currentBrowser = useSelector(state => state.currentBrowserReducer.value)
-     
+     console.log('currentBrowser', currentBrowser)
      const {
           strongText, thirdLettersColor, hrColorMain, primeLettersColor,
           AppBackgroundColor, secLettersColor } = colors
@@ -70,11 +70,19 @@ export default function MenuAppBar() {
 
      }, [scrollDirection]);
 
+     const [navBackgroundColor, setNavBackgroundColor] = useState(`${AppBackgroundColor}fd`);
+
+     useEffect(() => {
+          setNavBackgroundColor(
+               currentBrowser === 'firefox'
+                    ? `${AppBackgroundColor}fe`
+                    : `${AppBackgroundColor}cc`
+          )
+     }, [currentBrowser, AppBackgroundColor]);
+
 
      const AppBarStyle = {
-          backgroundColor: currentBrowser !== 'firefox'
-               ? `${AppBackgroundColor}cc`
-               : `${AppBackgroundColor}fd`,
+          backgroundColor: navBackgroundColor,
           color: hrColorMain,
           borderBottom: `0.3px solid ${secLettersColor}55`,
           top: appBarIsVisible ? -1 : -82,
@@ -139,16 +147,22 @@ export default function MenuAppBar() {
      return (
           <Box>
                <style jsx global>
-				{`
+                    {`
                          .App_Bar_Style {
-                            
+                              background-color: ${AppBackgroundColor}cc; 
                               -webkit-backdrop-filter: blur(10px);
                               backdrop-filter: blur(10px);
                          }
+                       
+                         @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+                              .App_Bar_Style {
+                                  background-color: ${AppBackgroundColor}
+                              }
+                         }
 				`}
-			</style>
+               </style>
 
-             
+
 
                <AppBar style={AppBarStyle} className='App_Bar_Style' position='fixed'>
                     <div >

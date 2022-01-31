@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const CurrentBrowserSlice = createSlice({
      name: 'Y-position',
-     initialState: { value: '' },
+     initialState: { value: 'firefox' },
      reducers: {
           UPDATE_CURRENT_BROWSER(state, action) {
                state.value = action.payload

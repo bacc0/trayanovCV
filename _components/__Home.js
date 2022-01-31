@@ -38,7 +38,7 @@ export default function Home() {
      const colors = useSelector(state => state.appColorsReducer.value)
      const { AppBackgroundColor, bodyColor } = colors
 
-     console.log('🦊 Background', colors.AppBackgroundColor)
+     // console.log('🦊 Background', colors.AppBackgroundColor)
 
      const tempMediaQuery = useMediaQuery('(min-width:600px)')
 
@@ -146,9 +146,13 @@ export default function Home() {
 
      const browser = detect()
 
-
-
-     dispatch(CurrentBrowserActions.UPDATE_CURRENT_BROWSER(browser.name))
+     
+     if (browser.name === 'firefox') {
+          dispatch(CurrentBrowserActions.UPDATE_CURRENT_BROWSER('firefox'))
+     }
+     else {
+          dispatch(CurrentBrowserActions.UPDATE_CURRENT_BROWSER(browser.name))
+     }
 
      // ------------------------------------------------------------------ 
 
@@ -231,6 +235,9 @@ export default function Home() {
           <Paper style={{ background: AppBackgroundColor }} className={styles.home_root}>
                <MenuAppBar />
                {backAnimation}
+
+
+
                <div
                     style={styleLocal.pageRoot}
                     className={styles.page_Root}
