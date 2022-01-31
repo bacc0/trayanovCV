@@ -71,9 +71,9 @@ export default function MenuAppBar({ currentBrowser }) {
 
 
      const AppBarStyle = {
-          // backgroundColor: currentBrowser !== 'firefox'
-          //      ? `${AppBackgroundColor}cc`
-          //      : `${AppBackgroundColor}fa`,
+          backgroundColor: currentBrowser !== 'firefox'
+               ? `${AppBackgroundColor}cc`
+               : `${AppBackgroundColor}fa`,
           color: hrColorMain,
           borderBottom: `0.3px solid ${secLettersColor}55`,
           top: appBarIsVisible ? -1 : -82,
@@ -82,11 +82,6 @@ export default function MenuAppBar({ currentBrowser }) {
           // '-webkit-backdrop-filter': `blur(10px)`,
           // ' backdrop-filter': `blur(10px)`,
 
-          '@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none)': {
-               // background-color: #ffffff;
-               '-webkit-backdrop-filter': 'blur(10px)',
-               'backdrop-filter': 'blur(10px)'
-          },
 
           boxShadow: '0 0 0',
           fontSize: 10,
