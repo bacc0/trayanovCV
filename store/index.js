@@ -8,17 +8,18 @@ import themeSlice from './themeState'
 import windowSlice from './windowSize'
 import CurrentBrowserSlice from './CurrentBrowser'
 
-const store = configureStore({
-     reducer: {
-          appColorsReducer: appColorsSlice.reducer,
-          min_width_600px_Reducer: min_width_600px.reducer,
-          Y_PositionSliceReducer: Y_PositionSlice.reducer,
-          scrollDirectionReducer: scrollDirectionSlice.reducer,
-          themeReducer: themeSlice.reducer,
-          windowSizeReducer: windowSlice.reducer,
-          currentBrowserReducer: CurrentBrowserSlice.reducer,
-     }
-});
+const reducers = {
+     appColorsReducer: appColorsSlice.reducer,
+     min_width_600px_Reducer: min_width_600px.reducer,
+     Y_PositionSliceReducer: Y_PositionSlice.reducer,
+     scrollDirectionReducer: scrollDirectionSlice.reducer,
+     themeReducer: themeSlice.reducer,
+     windowSizeReducer: windowSlice.reducer,
+     currentBrowserReducer: CurrentBrowserSlice.reducer,
+}
+
+
+const store = configureStore({ reducer: reducers })
 
 
 export default store;
