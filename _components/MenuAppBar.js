@@ -18,7 +18,7 @@ const MenuAppBar = () => {
      const dispatch = useDispatch();
 
      const scrollDirection = useSelector(state => state.scrollDirectionReducer.value)
-     const positionY = useSelector(state => state.Y_PositionSliceReducer.value)
+     const positionY = useSelector(state => state.scrollDirectionReducer.value)
      const theme = useSelector(state => state.themeReducer.color)
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
      const colors = useSelector(state => state.appColorsReducer.value)

@@ -11,7 +11,7 @@ import CurrentBrowserSlice from './CurrentBrowser'
 const reducers = {
      appColorsReducer: appColorsSlice.reducer,
      min_width_600px_Reducer: min_width_600px.reducer,
-     Y_PositionSliceReducer: Y_PositionSlice.reducer,
+     Y_PositionReducer: Y_PositionSlice.reducer,
      scrollDirectionReducer: scrollDirectionSlice.reducer,
      themeReducer: themeSlice.reducer,
      windowSizeReducer: windowSlice.reducer,

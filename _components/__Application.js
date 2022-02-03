@@ -20,7 +20,8 @@ export default function Home() {
 
      const dispatch = useDispatch();
      const theme = useSelector(state => state.themeReducer.color)
-     const positionY = useSelector(state => state.Y_PositionSliceReducer.value)
+     const positionY = useSelector(state => state.scrollDirectionReducer.value)
+     
      const tempMediaQuery = useMediaQuery('(min-width:600px)')
 
      useEffect(() => {

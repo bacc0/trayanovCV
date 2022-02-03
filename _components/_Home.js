@@ -24,6 +24,7 @@ const Home = () => {
 
 
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+     const positionY = useSelector(state => state.Y_PositionReducer.value)
 
      const colors = useSelector(state => state.appColorsReducer.value)
      const { AppBackgroundColor, bodyColor } = colors
@@ -83,6 +84,13 @@ const Home = () => {
                // transition: `opacity 4s linear`,
                // top: min_width_600px ? 25 : '60vw',
                opacity: opacityBG,
+          },
+          CombineSectionsUpper: {
+               background: AppBackgroundColor,
+               top: 8 + -(positionY * 200).toFixed(0),
+               position: 'relative',
+               clear: 'both',
+               height: 65
           }
      }
 
@@ -127,7 +135,11 @@ const Home = () => {
                               <PageNav />
                          </div>
                     </div>
-                    <CombineSections />
+                    <div style={styleLocal.CombineSectionsUpper}>
+                    </div>
+                    <div style={{ marginTop: -65 }}>
+                         <CombineSections />
+                    </div>
                </div>
           </Paper>
      )

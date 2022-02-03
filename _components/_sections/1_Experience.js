@@ -10,7 +10,6 @@ import styles from './_CombineSections.module.scss';
 
 export default function Experience({ L_R_cardsStyle, p_spacing, cardStyle }) {
 
-
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
      const colors = useSelector(state => state.appColorsReducer.value)
      const { strongText, thirdLettersColor } = colors

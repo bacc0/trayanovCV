@@ -13,7 +13,7 @@ const _CombineSections = () => {
 
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
      const colors = useSelector(state => state.appColorsReducer.value)
-     const { strongText, thirdLettersColor, separationsColor, footerColor } = colors
+     const { strongText, AppBackgroundColor, separationsColor, footerColor } = colors
 
      const p_spacing = (<Box sx={{ height: '11px' }} />)
 
@@ -148,4 +148,4 @@ const _CombineSections = () => {
      )
 }
 
-export default _CombineSections
+export default React.memo(_CombineSections)
