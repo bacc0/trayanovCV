@@ -87,10 +87,16 @@ const Home = () => {
           },
           CombineSectionsUpper: {
                background: AppBackgroundColor,
-               top: 8 + -(positionY * 200).toFixed(0),
+               // background: 'red',
+               top: 8 + -(positionY * (min_width_600px ? 200 : 800)).toFixed(0),
                position: 'relative',
                clear: 'both',
-               height: 65
+               height: min_width_600px ? 65 : 200
+          },
+          CombineSectionsContainer :{ 
+               marginTop: min_width_600px ? -65 : -200 ,
+               position: 'relative',
+               zIndex: 200
           }
      }
 
@@ -137,7 +143,7 @@ const Home = () => {
                     </div>
                     <div style={styleLocal.CombineSectionsUpper}>
                     </div>
-                    <div style={{ marginTop: -65 }}>
+                    <div style={styleLocal.CombineSectionsContainer}>
                          <CombineSections />
                     </div>
                </div>
