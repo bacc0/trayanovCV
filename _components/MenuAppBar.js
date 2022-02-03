@@ -18,7 +18,8 @@ const MenuAppBar = () => {
      const dispatch = useDispatch();
 
      const scrollDirection = useSelector(state => state.scrollDirectionReducer.value)
-     const positionY = useSelector(state => state.scrollDirectionReducer.value)
+     // const positionY = useSelector(state => state.scrollDirectionReducer.value)
+     const positionY = useSelector(state => state.Y_PositionReducer.value)
      const theme = useSelector(state => state.themeReducer.color)
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
      const colors = useSelector(state => state.appColorsReducer.value)
@@ -40,7 +41,7 @@ const MenuAppBar = () => {
                if (marker) {
                     setAppBarIsVisible(true)
                } else {
-                    setTimeout(() => { setAppBarIsVisible(true) }, 5400) //6200
+                    setTimeout(() => { setAppBarIsVisible(true) }, 4700) //6200
                     setMarker(true)
                }
           } else {
@@ -48,8 +49,9 @@ const MenuAppBar = () => {
                if (scrollDirection === 'up') {
                     appBarIsVisible !== false ? setAppBarIsVisible(false) : null
                }
-               if (scrollDirection === 'down') {
+               if (scrollDirection === 'down' ) {
                     appBarIsVisible !== true ? setAppBarIsVisible(true) : null
+                    console.log('kkk')
                }
           }
      }, [positionY]);
