@@ -12,19 +12,19 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { appColorsActions } from '../store/appColors'
 
-
 import styles from './_Home.module.scss';
 
 const Home = () => {
 
 
-     const dispatch = useDispatch();
+     const dispatch = useDispatch()
 
      const theme = useSelector(state => state.themeReducer.color)
 
 
      const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
      const positionY = useSelector(state => state.Y_PositionReducer.value)
+     const scrollDirection = useSelector(state => state.scrollDirectionReducer.value)
 
      const colors = useSelector(state => state.appColorsReducer.value)
      const { AppBackgroundColor, bodyColor } = colors
@@ -57,6 +57,23 @@ const Home = () => {
           navRoot: {
                // width: '100%',
                // height: min_width_600px ? 216 : '100vw',
+               position: 'relative',
+               top: -4
+               // top: +(positionY * (min_width_600px ? 500 : 800)).toFixed(0),
+
+               // transform:
+                   
+
+               //       `scaleY(${scrollDirection === 'down' 
+               //       ? 1
+               //       : 0.62}) 
+               //       scaleX(${scrollDirection === 'down' 
+               //       ? 1 
+               //       : 0.62})`,
+
+               //      transition: `transform 300ms linear`,
+                    // transitionDelay: `1.2s`
+
           },
           nav: {
                // height: '100%',
@@ -64,6 +81,7 @@ const Home = () => {
                // display: 'flex',
                // alignItems: 'flex-end',
                // justifyContent: 'center',
+
           },
           backAnimationContainer: {
                // display: 'flex',
@@ -76,6 +94,7 @@ const Home = () => {
                background: gradient,
                opacity: opacityBG,
                height: min_width_600px ? 294 : `calc(100vw + 55px)`,
+
           },
 
           backAnimation: {
@@ -84,6 +103,9 @@ const Home = () => {
                // transition: `opacity 4s linear`,
                // top: min_width_600px ? 25 : '60vw',
                opacity: opacityBG,
+               // position: 'relative',
+               // top: -100
+
           },
           CombineSectionsUpper: {
                background: AppBackgroundColor,
@@ -93,10 +115,14 @@ const Home = () => {
                clear: 'both',
                height: min_width_600px ? 65 : 200
           },
-          CombineSectionsContainer :{ 
-               marginTop: min_width_600px ? -65 : -200 ,
+          CombineSectionsContainer: {
+               // marginTop: min_width_600px ? -65 : -200 ,
                position: 'relative',
-               zIndex: 200
+               top: min_width_600px ? -14 : -8,
+               zIndex: 200,
+               backgroundColor: AppBackgroundColor,
+
+               // backgroundColor:'tan'
           }
      }
 
@@ -117,6 +143,11 @@ const Home = () => {
                </div>
           </div>
      )
+
+     useEffect(() => {
+
+          console.log(positionY)
+     }, [positionY]);
 
 
      return (
@@ -141,8 +172,8 @@ const Home = () => {
                               <PageNav />
                          </div>
                     </div>
-                    <div style={styleLocal.CombineSectionsUpper}>
-                    </div>
+                    {/* <div style={styleLocal.CombineSectionsUpper}>
+                    </div> */}
                     <div style={styleLocal.CombineSectionsContainer}>
                          <CombineSections />
                     </div>

@@ -51,7 +51,6 @@ const MenuAppBar = () => {
                }
                if (scrollDirection === 'down' ) {
                     appBarIsVisible !== true ? setAppBarIsVisible(true) : null
-                    console.log('kkk')
                }
           }
      }, [positionY]);
