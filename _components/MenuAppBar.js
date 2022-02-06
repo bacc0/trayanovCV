@@ -11,6 +11,8 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import { useSelector, useDispatch } from 'react-redux'
 import { themeActions } from '../store/themeState'
 
+//    import BackdropFilter from "react-backdrop-filter"
+//    https://www.npmjs.com/package/react-backdrop-filter/v/1.2.2
 import styles from './MenuAppBar.module.scss';
 
 const MenuAppBar = () => {

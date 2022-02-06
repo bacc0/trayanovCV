@@ -23,7 +23,7 @@
 
      // /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
      @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-          background-color: #ff1616;
+          // background-color: #ff1616;
 
      }
 }
