@@ -1,4 +1,4 @@
-import Img_handle_inview from '../_illustratins/Img_handle_inview'
+import Img_handle_inview from '../_illustration/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { useSelector } from 'react-redux'
 import styles from './_CombineSections.module.scss';
@@ -16,10 +16,10 @@ export default function Technologies({ L_R_cardsStyle, p_spacing, cardStyle }) {
 
      const cardTitle = (
           <Card
-               sx={ cardStyle }
+               sx={cardStyle}
           >
-               <Box className={styles.borderBottomStyle} style={{color: strongText}}>
-                    <Typography className={styles.h3_Style} variant="h3" style={{color: strongText}} gutterBottom={true}>
+               <Box className={styles.borderBottomStyle} style={{ color: strongText }}>
+                    <Typography className={styles.h3_Style} variant="h3" style={{ color: strongText }} gutterBottom={true}>
                          Tech stack
                     </Typography>
                </Box>
@@ -34,7 +34,7 @@ export default function Technologies({ L_R_cardsStyle, p_spacing, cardStyle }) {
                />
           </Box>
      )
-   
+
      const leftSection = (
           <Card sx={L_R_cardsStyle}>
                <CardContent sx={{ p: 0, mt: 1.8, mb: -3.3, color: strongText }}>
@@ -95,7 +95,7 @@ export default function Technologies({ L_R_cardsStyle, p_spacing, cardStyle }) {
 
 
      return (
-          <div className={styles.sectionsContainer} style={{ backgroundColor: backgroundColor_2  }}>
+          <div className={styles.sectionsContainer} style={{ backgroundColor: backgroundColor_2 }}>
                <div className={styles.titleContainer}>
                     <div>{cardTitle}</div>
                     <Box className={styles.sectionsBody}>

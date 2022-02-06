@@ -1,4 +1,4 @@
-import Img_handle_inview from '../_illustratins/Img_handle_inview'
+import Img_handle_inview from '../_illustration/Img_handle_inview'
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
@@ -26,7 +26,7 @@ export default function Experience({ L_R_cardsStyle, p_spacing, cardStyle }) {
 
      const cardTitle = (
           <Card
-               sx={ cardStyle }
+               sx={cardStyle}
           >
                <Box className={styles.borderBottomStyle} style={{ color: strongText }}>
                     <div style={{
@@ -58,7 +58,7 @@ export default function Experience({ L_R_cardsStyle, p_spacing, cardStyle }) {
 
      const groundbits = (period, contact, mail) => {
           return (
-               <Card sx={L_R_cardsStyle} 
+               <Card sx={L_R_cardsStyle}
                // className={styles.test_class}🐯
                >
                     <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>

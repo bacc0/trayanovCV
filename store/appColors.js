@@ -51,6 +51,5 @@ const appColorsSlice = createSlice({
 })
 
 export const appColorsActions = appColorsSlice.actions;
-
 export default appColorsSlice
 

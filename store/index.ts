@@ -18,8 +18,8 @@ const reducers = {
      currentBrowserReducer: CurrentBrowserSlice.reducer,
 }
 
-
 const store = configureStore({ reducer: reducers })
 
+export type TState = ReturnType<typeof store.getState>
 
 export default store;
