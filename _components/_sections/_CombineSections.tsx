@@ -29,8 +29,8 @@ interface ICardStyle {
 
 export interface IProps {
      p_spacing: JSX.Element;
-     cardStyle: ICardStyle;
      L_R_cardsStyle?: IL_R_cardsStyle;
+     cardStyle: ICardStyle;
 };
 
 
