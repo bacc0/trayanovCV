@@ -100,12 +100,10 @@ const MenuAppBar: React.FC<{}> = () => {
      const [transitionDirection, setTransitionDirection] = useState<string>('down');
 
      useEffect(() => {
-
           setInterval(() => {
                if (transitionDirection !== scrollDirection) {
-
                     setTransitionDirection(scrollDirection);
-               }
+               };
           }, 1400);
 
      }, [scrollDirection]);
@@ -250,7 +248,7 @@ const MenuAppBar: React.FC<{}> = () => {
                     </div>
                </AppBar>
                <div style={underAppBar} />
-          </Box >
+          </Box>
      )
 };
 

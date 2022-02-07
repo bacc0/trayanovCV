@@ -16,7 +16,6 @@ import { windowSizeActions } from '../store/windowSize';
 import { Y_PositionActions } from '../store/PositionY';
 
 
-
 const Home: React.FC<{}> = (): JSX.Element => {
 
 
@@ -133,7 +132,7 @@ const Home: React.FC<{}> = (): JSX.Element => {
           dispatch(CurrentBrowserActions.UPDATE_CURRENT_BROWSER('firefox'))
      } else {
           dispatch(CurrentBrowserActions.UPDATE_CURRENT_BROWSER(browser.name))
-     }
+     };
 
      // ------------------------------------------------------------------ 
 

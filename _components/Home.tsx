@@ -12,7 +12,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Dispatch } from 'redux';
 import { useEffect, useState } from 'react';
 
-
 interface IStyleLocal  {
      pageRoot: {
           backgroundColor: string;
