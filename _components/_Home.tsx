@@ -7,7 +7,7 @@ import styles from './_Home.module.scss';
 import { appColorsActions } from '../store/appColors';
 import { IColors } from '../store/appColors';
 import { Paper } from '@mui/material';
-import { TState } from '../store/index';
+import { TState } from '../store/hooks';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dispatch } from 'redux';
 import { useEffect, useState } from 'react';

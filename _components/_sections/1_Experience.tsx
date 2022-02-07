@@ -5,7 +5,7 @@ import { IProps } from './_CombineSections';
 import { IColors } from '../../store/appColors';
 import { motion } from 'framer-motion';
 import { Theme } from '@mui/material/styles';
-import { TState } from '../../store/index';
+import { TState } from '../../store/hooks';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 

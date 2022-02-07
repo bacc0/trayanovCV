@@ -2,8 +2,8 @@ import React, { Fragment, useState } from 'react';
 import Script from 'next/script';
 import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion';
-import { TState } from '../../store/index';
-import { typeWriter } from '../_sections/helpers/TypeWriter';
+import { TState } from '../../store/hooks';
+import  typeWriter  from '../_sections/helpers/TypeWriter';
 import { useSelector } from 'react-redux';
 
 interface Props {
@@ -73,6 +73,7 @@ const Veselin: React.FC<Props> = ({ color }) => {
           top: -82,
           left: 53
      };
+
 
      const typing: JSX.Element = (
           <Typography variant='h3'

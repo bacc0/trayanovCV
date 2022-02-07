@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { IProps } from './_CombineSections';
 import { IColors } from '../../store/appColors';
 import { Theme } from '@mui/material/styles';
-import { TState } from '../../store/index';
+import { TState } from '../../store/hooks';
 import styles from './_CombineSections.module.scss';
 
 

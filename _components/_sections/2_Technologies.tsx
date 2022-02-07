@@ -4,7 +4,7 @@ import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { IProps } from './_CombineSections';
 import { IColors } from '../../store/appColors';
 import { Theme } from '@mui/material/styles';
-import { TState } from '../../store/index';
+import { TState } from '../../store/hooks';
 import { useSelector } from 'react-redux';
 
 

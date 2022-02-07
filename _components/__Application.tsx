@@ -4,7 +4,7 @@ import { CurrentBrowserActions } from '../store/CurrentBrowser';
 import { detect } from 'detect-browser';
 import { min_width_600px_Actions } from '../store/minWidth';
 import { scrollDirectionActions } from '../store/scrollDirection';
-import { TState } from '../store/index';
+import { TState } from '../store/hooks';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dispatch } from 'redux';
 import { useEffect } from 'react';
@@ -14,6 +14,7 @@ import { useViewportScroll } from 'framer-motion';
 import { useWindowSize } from 'react-window-size-hooks';
 import { windowSizeActions } from '../store/windowSize';
 import { Y_PositionActions } from '../store/PositionY';
+
 
 
 const Home: React.FC<{}> = (): JSX.Element => {

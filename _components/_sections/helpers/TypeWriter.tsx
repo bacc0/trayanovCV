@@ -1,7 +1,15 @@
-import { Typewriter } from 'react-simple-typewriter'
-import { motion } from 'framer-motion'
+import { Typewriter } from 'react-simple-typewriter';
+import { motion } from 'framer-motion';
+import { TypewriterProps } from '../../../node_modules/react-simple-typewriter/dist/Hooks/useTypewriter';
 
-export const typeWriter = (sentence, typeSpeed = 75) => {
+interface ITypeWriter {
+     (sentence: string[], typeSpeed?: number): JSX.Element;
+};
+
+
+const typeWriter: ITypeWriter = (sentence, typeSpeed = 75) => {
+     
+     
      return (
 
           <motion.div
@@ -14,10 +22,12 @@ export const typeWriter = (sentence, typeSpeed = 75) => {
                     loop={1}
                     cursor
                     cursorStyle='_'
-                    typeSpeed={90}
+                    typeSpeed={typeSpeed}
                     deleteSpeed={40}
                     delaySpeed={200}
                />
           </motion.div>
      )
-}
+};
+
+export default typeWriter;

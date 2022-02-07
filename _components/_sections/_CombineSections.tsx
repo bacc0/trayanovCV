@@ -6,7 +6,7 @@ import Footer from './4_Footer';
 import styles from './_CombineSections.module.scss';
 import Technologies from './2_Technologies';
 import { motion } from 'framer-motion';
-import { TState } from '../../store/index';
+import { TState } from '../../store/hooks';
 import { useSelector } from 'react-redux';
 import { IColors } from '../../store/appColors';
 
@@ -42,7 +42,7 @@ const _CombineSections: React.FC<{}> = (): JSX.Element => {
      const { strongText, separationsColor, footerColor }:
           { strongText: string, separationsColor: string, footerColor: string } = colors;
 
-     const p_spacing: JSX.Element = (<Box sx={{ height: '11px' }} />)
+     const p_spacing: JSX.Element = (<Box sx={{ height: '11px' }} />);
 
      const L_R_cardsStyle: IL_R_cardsStyle = {
           m: 0,

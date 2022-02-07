@@ -2,7 +2,7 @@ import * as React from 'react';
 import styles from './PageNav.module.scss';
 import Veselin from './_illustration/Veselin';
 import { Box, Card } from '@mui/material';
-import { TState } from '../store/index';
+import { TState } from '../store/hooks';
 import { useSelector } from 'react-redux';
 import { IColors } from '../store/appColors';
 // interface IPageNav {

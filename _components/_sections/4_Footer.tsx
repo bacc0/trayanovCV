@@ -8,7 +8,7 @@ import { Card, CardContent, Box, useTheme } from '@mui/material';
 import { Theme } from '@mui/material/styles';
 import { IProps } from './_CombineSections';
 import { IColors } from '../../store/appColors';
-import { TState } from '../../store/index';
+import { TState } from '../../store/hooks';
 import { useSelector } from 'react-redux';
 
 

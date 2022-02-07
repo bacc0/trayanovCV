@@ -8,7 +8,7 @@ import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp';
 import { AppBar, Box, IconButton, Stack, Toolbar } from '@mui/material';
 import { IColors } from '../store/appColors';
 import { themeActions } from '../store/themeState';
-import { TState } from '../store/index';
+import { TState } from '../store/hooks';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dispatch } from 'redux';
 import { useEffect, useRef, useState } from 'react';

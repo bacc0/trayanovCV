@@ -20,6 +20,6 @@ const reducers = {
 
 const store = configureStore({ reducer: reducers });
 
-export type TState = ReturnType<typeof store.getState>;
+// export type TState = ReturnType<typeof store.getState>;
 
 export default store;
