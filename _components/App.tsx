@@ -1,4 +1,4 @@
-import _Home from './Home';
+import _Home from './main/Home';
 import { appColorsActions } from '../store/appColors';
 import { CurrentBrowserActions } from '../store/CurrentBrowser';
 import { detect } from 'detect-browser';

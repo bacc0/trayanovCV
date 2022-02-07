@@ -1,13 +1,13 @@
 import * as React from 'react';
-import CombineSections from './sections/_CombineSections';
+import CombineSections from '../sections/_CombineSections';
 import Image from 'next/image';
 import MenuAppBar from './MenuAppBar';
 import PageNav from './PageNav';
 import styles from './Home.module.scss';
-import { appColorsActions } from '../store/appColors';
-import { IColors } from '../store/appColors';
+import { appColorsActions } from '../../store/appColors';
+import { IColors } from '../../store/appColors';
 import { Paper } from '@mui/material';
-import { TState } from '../store/hooks';
+import { TState } from '../../store/hooks';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dispatch } from 'redux';
 import { useEffect, useState } from 'react';
