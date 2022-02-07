@@ -5,10 +5,13 @@ import MenuAppBar from './MenuAppBar';
 import PageNav from './PageNav';
 import styles from './_Home.module.scss';
 import { appColorsActions } from '../store/appColors';
+import { IColors } from '../store/appColors';
 import { Paper } from '@mui/material';
 import { TState } from '../store/index';
 import { useDispatch, useSelector } from 'react-redux';
+import { Dispatch } from 'redux';
 import { useEffect, useState } from 'react';
+
 
 interface IStyleLocal  {
      pageRoot: {
@@ -37,22 +40,20 @@ interface IStyleLocal  {
 };
 
 
-
 const Home: React.FC<{}> = () => {
 
-     const dispatch = useDispatch();
 
-     const theme = useSelector((state: TState) => state.themeReducer.color);
+     const dispatch: Dispatch<any> = useDispatch();
 
-     const min_width_600px = useSelector((state: TState) => state.min_width_600px_Reducer.value);
+     const theme: string = useSelector((state: TState) => state.themeReducer.color);
+     const min_width_600px: boolean = useSelector((state: TState) => state.min_width_600px_Reducer.value);
+     const positionY: number = useSelector((state: TState) => state.Y_PositionReducer.value);
+     const colors: IColors = useSelector((state: TState) => state.appColorsReducer.value);
 
-     const positionY = useSelector((state: TState) => state.Y_PositionReducer.value);
+     const { AppBackgroundColor, bodyColor }:
+           { AppBackgroundColor: string, bodyColor: string } = colors;
 
-     const colors = useSelector((state: TState) => state.appColorsReducer.value);
-     
-     const { AppBackgroundColor, bodyColor } = colors;
-
-     const [opacityBG, setOpacityBG] = useState(0);
+     const [opacityBG, setOpacityBG] = useState<number>(0);
 
      const gradient: string = `linear-gradient( transparent ,transparent ,transparent, transparent ,transparent, transparent, transparent, transparent, #11111105, #11111107)`;
 

@@ -5,11 +5,14 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp';
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
 import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp';
+import { AppBar, Box, IconButton, Stack, Toolbar } from '@mui/material';
+import { IColors } from '../store/appColors';
 import { themeActions } from '../store/themeState';
 import { TState } from '../store/index';
 import { useDispatch, useSelector } from 'react-redux';
+import { Dispatch } from 'redux';
 import { useEffect, useRef, useState } from 'react';
-import { Box, Stack, AppBar, Toolbar, IconButton } from '@mui/material';
+
 
 interface IHandleThemeChange {
      (): void;
@@ -53,22 +56,18 @@ interface IIconsStyle {
 const MenuAppBar: React.FC<{}> = () => {
 
 
-     const dispatch = useDispatch();
+     const dispatch: Dispatch<any> = useDispatch();
 
-     const scrollDirection = useSelector((state: TState) => state.scrollDirectionReducer.value);
+     const scrollDirection: string = useSelector((state: TState) => state.scrollDirectionReducer.value);
+     const positionY: number = useSelector((state: TState) => state.Y_PositionReducer.value);
+     const theme: string = useSelector((state: TState) => state.themeReducer.color);
+     const min_width_600px: boolean = useSelector((state: TState) => state.min_width_600px_Reducer.value);
+     const colors: IColors = useSelector((state: TState) => state.appColorsReducer.value);
+     const currentBrowser: string = useSelector((state: TState) => state.currentBrowserReducer.value);
 
-     const positionY = useSelector((state: TState) => state.Y_PositionReducer.value);
-
-     const theme = useSelector((state: TState) => state.themeReducer.color);
-
-     const min_width_600px = useSelector((state: TState) => state.min_width_600px_Reducer.value);
-
-     const colors = useSelector((state: TState) => state.appColorsReducer.value);
-
-     const currentBrowser = useSelector((state: TState) => state.currentBrowserReducer.value);
-
-     const { strongText, thirdLettersColor,
-             hrColorMain, AppBackgroundColor, secLettersColor } = colors;
+     const { strongText, thirdLettersColor, hrColorMain, AppBackgroundColor, secLettersColor }:
+     { strongText: string, thirdLettersColor: string,
+          hrColorMain: string, AppBackgroundColor: string, secLettersColor: string } = colors;
 
      const renderCounter = useRef(0);
      renderCounter.current = renderCounter.current + 1;
@@ -82,8 +81,8 @@ const MenuAppBar: React.FC<{}> = () => {
                if (marker) {
                     setAppBarIsVisible(true)
                } else {
-                    setTimeout(() => { setAppBarIsVisible(true) }, 4700) //6200
-                    setMarker(true)
+                    setTimeout(() => { setAppBarIsVisible(true) }, 4700);
+                    setMarker(true);
                }
           } else {
 
@@ -106,7 +105,7 @@ const MenuAppBar: React.FC<{}> = () => {
           setInterval(() => {
                if (transitionDirection !== scrollDirection) {
 
-                    setTransitionDirection(scrollDirection)
+                    setTransitionDirection(scrollDirection);
                }
           }, 1400);
 
@@ -135,13 +134,13 @@ const MenuAppBar: React.FC<{}> = () => {
           borderBottom: `0.3px solid ${secLettersColor}55`,
           transitionDelay: `1.2s`,
           backgroundColor: navBackgroundColor,
+
      } as React.CSSProperties;
 
      const ToolbarStyle: IToolbarStyle = {
           margin: '0 auto',
           height: 65,
           maxWidth: min_width_600px ? 546 : 398,
-
           transform:
                `scaleY(${appBarIsVisible ? 1 : 0.62}) 
                 scaleX(${appBarIsVisible ? 1 : 0.62})`,
@@ -254,6 +253,6 @@ const MenuAppBar: React.FC<{}> = () => {
                <div style={underAppBar} />
           </Box >
      )
-}
+};
 
 export default MenuAppBar

@@ -1,30 +1,41 @@
-import Img_handle_inview from '../_illustration/Img_handle_inview'
-import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import { useSelector } from 'react-redux'
-// import styles from './style/1_Experience.module.scss';
-// import styles from './style/1_Experience.module.css';
+import Img_handle_inview from '../_illustration/Img_handle_inview';
 import styles from './_CombineSections.module.scss';
+import { Box, Card, CardContent, Typography, useTheme } from '@mui/material';
+import { ICardStyle, IL_R_cardsStyle } from './_CombineSections';
+import { IColors } from '../../store/appColors';
+import { motion } from 'framer-motion';
+import { Theme } from '@mui/material/styles';
+import { TState } from '../../store/index';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
+
+interface Props {
+     L_R_cardsStyle: IL_R_cardsStyle;
+     p_spacing: JSX.Element;
+     cardStyle: ICardStyle;
+};
 
 
-export default function Experience({ L_R_cardsStyle, p_spacing, cardStyle }) {
+const Experience: React.FC<Props> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => {
 
-     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
-     const colors = useSelector(state => state.appColorsReducer.value)
-     const { strongText, thirdLettersColor } = colors
 
-     const theme = useTheme()
+     const min_width_600px: boolean = useSelector((state: TState) => state.min_width_600px_Reducer.value);
+     const colors: IColors = useSelector((state: TState) => state.appColorsReducer.value);
+    
+     const { strongText, thirdLettersColor }:
+           { strongText: string, thirdLettersColor: string } = colors;
 
-     const [h3_scale, set_h3_scale] = useState(`scale(0.95)`)
+     const theme: Theme = useTheme();
+
+     const [h3_scale, set_h3_scale] = useState<string>(`scale(0.95)`);
 
      if (h3_scale === `scale(0.95)`) {
           setInterval(() => {
                set_h3_scale(`scale(1)`)
           }, 6000)
-     }
+     };
 
-     const cardTitle = (
+     const cardTitle: JSX.Element = (
           <Card
                sx={cardStyle}
           >
@@ -40,9 +51,9 @@ export default function Experience({ L_R_cardsStyle, p_spacing, cardStyle }) {
                     </div>
                </Box>
           </Card>
-     )
+     );
 
-     const img = (
+     const img: JSX.Element = (
           <>
                <Box sx={{ mt: '-4px', height: min_width_600px ? 19 : 0 }} />
 
@@ -54,41 +65,46 @@ export default function Experience({ L_R_cardsStyle, p_spacing, cardStyle }) {
                />
                <Box sx={{ height: min_width_600px ? 0 : 3 }} />
           </>
-     )
+     );
 
-     const groundbits = (period, contact, mail) => {
+     const h4_Style = { mt: 1.7, color: thirdLettersColor };
+     const h5_Style = { mt: 0.6, mb: 3.24, color: thirdLettersColor };
+
+     interface IGroundbits {
+          ( period: string, contact?: string, mail?: string ): JSX.Element;
+     };
+
+     const groundbits: IGroundbits = (period, contact, mail) => {
           return (
-               <Card sx={L_R_cardsStyle}
-               // className={styles.test_class}🐯
-               >
+               <Card sx={L_R_cardsStyle}>
                     <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
                          <Typography
                               className={styles.h4_Style} variant="h4"
-                              style={{ mt: 1.7, color: thirdLettersColor }}
+                              style={h4_Style}
                          >
                               React Developer
                          </Typography>
                          <Typography className={styles.h5_Style} variant="h5"
-                              style={{
-                                   mt: 0.6,
-                                   mb: 3.24,
-                                   color: thirdLettersColor,
-                              }}
+                              style={h5_Style}
                          >
                               Groundbits Ltd
                          </Typography>
-                         <Typography className={styles.period_style} variant="p" style={{ color: strongText }}>
+                         <p className={styles.period_style} style={{ color: strongText }}>
                               {period}
                               <br />
-                         </Typography>
+                         </p>
                          {p_spacing}
-                         <Typography variant="p">
+                         <Typography // @ts-ignore 
+                              variant="p"
+                         >
                               Developing a Website Builder.
                               <br />
                          </Typography>
                          {p_spacing}
-                         <Typography variant="p" >
+                         <Typography // @ts-ignore 
+                              variant="p"
+                         >
                               Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation.
                               <br />
                          </Typography>
@@ -97,7 +113,7 @@ export default function Experience({ L_R_cardsStyle, p_spacing, cardStyle }) {
                               contact && (
                                    <>
                                         {p_spacing}
-                                        <Typography className={styles.period_style}
+                                        <Typography className={styles.period_style} // @ts-ignore 
                                              variant="p"
                                              style={{ color: strongText }}
                                         >
@@ -105,7 +121,9 @@ export default function Experience({ L_R_cardsStyle, p_spacing, cardStyle }) {
                                              <br />
                                         </Typography>
                                         <Box sx={{ height: theme.spacing(0.35) }} />
-                                        <Typography variant="p"  >
+                                        <Typography  // @ts-ignore 
+                                             variant="p"
+                                        >
                                              {mail}
                                         </Typography>
                                         <Box sx={{ height: theme.spacing(min_width_600px ? 2.3 : 4.1) }} />
@@ -116,9 +134,9 @@ export default function Experience({ L_R_cardsStyle, p_spacing, cardStyle }) {
                     </CardContent>
                </Card>
           )
-     }
+     };
 
-     const amdocs = (
+     const amdocs: JSX.Element = (
           <Card sx={L_R_cardsStyle}>
                <CardContent
                     sx={{
@@ -128,42 +146,41 @@ export default function Experience({ L_R_cardsStyle, p_spacing, cardStyle }) {
                          color: strongText
                     }}
                >
-                    <Typography className={styles.h4_Style} variant="h4" style={{ mt: 1.7, color: thirdLettersColor }}>
+                    <Typography className={styles.h4_Style} variant="h4" style={h4_Style}>
                          React Developer
                     </Typography>
-                    <Typography className={styles.h5_Style} variant="h5"
-                         style={{
-                              mt: 0.6,
-                              mb: 3.24,
-                              color: thirdLettersColor,
-                         }}
-                    >
+                    <Typography className={styles.h5_Style} variant="h5" style={h5_Style}>
                          Amdocs via Appgr8
                     </Typography>
-                    <Typography variant="p" sx={{ fontWeight: 'bold', color: strongText }}>
+                    <p style={{ fontWeight: 'bold', color: strongText }}>
                          July 2021 - Nov 2021
                          <br />
-                    </Typography>
+                    </p>
                     {p_spacing}
-                    <Typography variant="p">
+                    <Typography  // @ts-ignore 
+                         variant="p"
+                    >
                          Building a new application for the mobile network operator.
                          <br />
                     </Typography>
                     {p_spacing}
-                    <Typography variant="p" >
+                    <Typography  // @ts-ignore 
+                         variant="p"
+                    >
                          Using REACT, MATERIAL UI, TYPESCRIPT, SOURCETREE, BITBUCKET ect.
                          <br />
                     </Typography>
 
                     {p_spacing}
-                    <Typography variant="p" >
+                    <Typography // @ts-ignore 
+                         variant="p"
+                    >
                          For the software development the company used AGILE with the SCRUM framework and JIRA.
                          <br />
                     </Typography>
                </CardContent>
           </Card>
      )
-
 
      return (
           <div className={styles.sectionsContainer}
@@ -195,5 +212,6 @@ export default function Experience({ L_R_cardsStyle, p_spacing, cardStyle }) {
                </div>
           </div>
      )
-}
+};
 
+export default Experience;

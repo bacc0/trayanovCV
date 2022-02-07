@@ -1,31 +1,42 @@
-import { Card, CardContent, Box, useTheme } from '@mui/material'
-
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp';
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
-import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp'
-import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import { useSelector } from 'react-redux'
+import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp';
 import styles from './_CombineSections.module.scss';
+import { Card, CardContent, Box, useTheme } from '@mui/material';
+import { Theme } from '@mui/material/styles';
+import { ICardStyle } from './_CombineSections';
+import { IColors } from '../../store/appColors';
+import { TState } from '../../store/index';
+import { useSelector } from 'react-redux';
+
+interface Props {
+     p_spacing: JSX.Element;
+     cardStyle: ICardStyle;
+};
 
 
-export default function Technologies({ cardStyle, p_spacing }) {
+const Footer: React.FC<Props> = ({ cardStyle, p_spacing }) => {
 
 
-     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
-     const colors = useSelector(state => state.appColorsReducer.value)
+     const min_width_600px: boolean = useSelector((state: TState) => state.min_width_600px_Reducer.value);
+     const colors: IColors = useSelector((state: TState) => state.appColorsReducer.value);
+     
+     const { footerColor, strongText, footerTextColor }: 
+           { footerColor: string, strongText: string, footerTextColor: string } = colors;
 
-     const { footerColor, strongText, footerTextColor } = colors
+     const theme: Theme = useTheme();
 
-     const theme = useTheme()
+     
 
-     const hrefStyle = { color: footerTextColor }
+     const hrefStyle: { color: string } = { color: footerTextColor };
 
-     const leftSection = (
+     const leftSection: JSX.Element = (
           <Card sx={cardStyle}>
                <CardContent sx={{ p: 0, mt: 1.8, mb: -3.3, color: strongText }}>
-                    <a className={styles.hrefStyle} style={hrefStyle} 
-                    href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'}
+                    <a className={styles.hrefStyle} style={hrefStyle}
+                         href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'}
                     >
                          <div className={styles.icons_container}>
                               <div className={styles.icons}>
@@ -61,13 +72,12 @@ export default function Technologies({ cardStyle, p_spacing }) {
 
                </CardContent>
           </Card>
-     )
+     );
 
-
-     const rightSection = (
+     const rightSection: JSX.Element = (
           <Card sx={{ ...cardStyle, ...{ mt: min_width_600px ? 1.8 : -5.3 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
-                    <a className={styles.hrefStyle}  style={hrefStyle} href={'https://github.com/bacc0'}>
+                    <a className={styles.hrefStyle} style={hrefStyle} href={'https://github.com/bacc0'}>
                          <div className={styles.icons_container}>
                               <div className={styles.icons}>
                                    <GitHubIcon fontSize='small' />
@@ -78,7 +88,7 @@ export default function Technologies({ cardStyle, p_spacing }) {
 
                     {p_spacing}
 
-                    <a   className={styles.hrefStyle} style={hrefStyle}
+                    <a className={styles.hrefStyle} style={hrefStyle}
                          href={'https://www.google.com/maps/@51.4764334,-0.1572618,16.21z'}
                     >
                          <div className={styles.icons_container}>
@@ -90,10 +100,10 @@ export default function Technologies({ cardStyle, p_spacing }) {
                     </a>
 
                     {p_spacing}
-                    
+
                </CardContent>
           </Card>
-     )
+     );
 
 
      return (
@@ -113,5 +123,9 @@ export default function Technologies({ cardStyle, p_spacing }) {
                </div>
           </div>
      )
-}
+};
+
+export default Footer;
+
+
 

@@ -6,6 +6,7 @@ import { min_width_600px_Actions } from '../store/minWidth';
 import { scrollDirectionActions } from '../store/scrollDirection';
 import { TState } from '../store/index';
 import { useDispatch, useSelector } from 'react-redux';
+import { Dispatch } from 'redux';
 import { useEffect } from 'react';
 import { useMediaQuery } from '@mui/material';
 import { useScrollDirection } from 'react-use-scroll-direction';
@@ -18,9 +19,9 @@ import { Y_PositionActions } from '../store/PositionY';
 const Home: React.FC<{}> = (): JSX.Element => {
 
 
-     const dispatch = useDispatch();
-     const theme = useSelector((state: TState) => state.themeReducer.color)
-     const positionY = useSelector((state: TState) => state.Y_PositionReducer.value)
+     const dispatch: Dispatch<any> = useDispatch();
+     const theme: string = useSelector((state: TState) => state.themeReducer.color);
+     const positionY: number = useSelector((state: TState) => state.Y_PositionReducer.value);
      
      const tempMediaQuery: boolean = useMediaQuery('(min-width:600px)');
 
@@ -32,7 +33,7 @@ const Home: React.FC<{}> = (): JSX.Element => {
 
      useEffect(() => {
           window.scrollTo(0, 0)
-     }, [])
+     }, []);
 
      // ---------------------------------    Detect window Size
 
