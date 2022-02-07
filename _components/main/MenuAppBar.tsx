@@ -4,6 +4,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp';
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
+import styles from './MenuAppBar.module.scss';
 import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp';
 import { AppBar, Box, IconButton, Stack, Toolbar } from '@mui/material';
 import { IColors } from '../../store/appColors';
@@ -19,7 +20,6 @@ interface IHandleThemeChange {
 };
 interface IToolbarStyle {
      margin: string;
-     height: number;
      maxWidth: number;
      transform: string;
      transition: string;
@@ -30,25 +30,18 @@ interface IUnderAppBar {
      backgroundColor: string;
 };
 interface IIconsStackStyle {
-     display: string;
      justifyContent: string;
-     width: string;
 };
 interface IIconsStackStyle_Left {
-     display: string;
-     justifyContent: string;
      width: string | number;
      paddingRight: string;
 };
 interface IIconsStackStyle_Right {
-     display: string;
      justifyContent: string;
      width: string | number;
 };
 interface IIconsStyle {
      color: string;
-     width: number;
-     height: number;
      transition: string;
 };
 
@@ -66,8 +59,10 @@ const MenuAppBar: React.FC<{}> = () => {
      const currentBrowser: string = useSelector((state: TState) => state.currentBrowserReducer.value);
 
      const { strongText, thirdLettersColor, hrColorMain, AppBackgroundColor, secLettersColor }:
-     { strongText: string, thirdLettersColor: string,
-          hrColorMain: string, AppBackgroundColor: string, secLettersColor: string } = colors;
+          {
+               strongText: string, thirdLettersColor: string,
+               hrColorMain: string, AppBackgroundColor: string, secLettersColor: string
+          } = colors;
 
      const renderCounter = useRef<number>(0);
      renderCounter.current = renderCounter.current + 1;
@@ -121,13 +116,9 @@ const MenuAppBar: React.FC<{}> = () => {
      const AppBarStyle = {
           top: appBarIsVisible ? -1 : -82,
           color: hrColorMain,
-          height: 75,
-          fontSize: 10,
-          position: 'fixed',
           boxShadow: '0 0 0',
           transform: `scaleY(${appBarIsVisible ? 1 : 0.8})`,
           transition: `top 330ms linear, transform ${scrollDirection === 'up' ? 330 : 0}ms linear`,
-          paddingTop: 5,
           borderBottom: `0.3px solid ${secLettersColor}55`,
           transitionDelay: `1.2s`,
           backgroundColor: navBackgroundColor,
@@ -136,7 +127,6 @@ const MenuAppBar: React.FC<{}> = () => {
 
      const ToolbarStyle: IToolbarStyle = {
           margin: '0 auto',
-          height: 65,
           maxWidth: min_width_600px ? 546 : 398,
           transform:
                `scaleY(${appBarIsVisible ? 1 : 0.62}) 
@@ -149,24 +139,18 @@ const MenuAppBar: React.FC<{}> = () => {
           backgroundColor: 'transparent',
      };
      const iconsStackStyle: IIconsStackStyle = {
-          display: 'flex',
           justifyContent: min_width_600px ? 'space-between' : 'center',
-          width: '100%',
      };
      const iconsStackStyle_Left: IIconsStackStyle_Left = {
-          display: 'flex',
-          justifyContent: 'space-between',
           width: min_width_600px ? 249 : '83%',
           paddingRight: '2.6%',
      };
      const iconsStackStyle_Right: IIconsStackStyle_Right = {
-          display: 'flex',
           justifyContent: min_width_600px ? 'flex-end' : 'center',
           width: min_width_600px ? 200 : '16%',
      };
      const iconsStyle: IIconsStyle = {
           color: strongText,
-          width: 40, height: 40,
           transition: `color 500ms ease`,
      };
 
@@ -189,17 +173,24 @@ const MenuAppBar: React.FC<{}> = () => {
 				`}
                </style>
 
-               <AppBar style={AppBarStyle} className='App_Bar_Style' position='fixed'>
+               <AppBar style={AppBarStyle} position='fixed'
+                    className={`App_Bar_Style ${styles.App_Bar_Style_external}`}
+               >
                     <div >
-                         <Toolbar style={ToolbarStyle}>
+                         <Toolbar style={ToolbarStyle} className={styles.Toolbar_Style} >
                               <Stack
                                    direction='row'
                                    spacing={1}
                                    style={iconsStackStyle}
+                                   className={styles.icons_StackStyle}
                               >
-                                   <span style={iconsStackStyle_Left} >
+                                   <span style={iconsStackStyle_Left}
+                                        className={styles.icons_StackStyle_Left}
+                                   >
                                         <IconButton
-                                             href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'} aria-label='LinkedIn Icon' style={iconsStyle}
+                                             href={'https://www.linkedin.com/in/veselin-trayanov-219506171/'} aria-label='LinkedIn Icon'
+                                             style={iconsStyle}
+                                             className={styles.icons_Style}
                                         >
                                              <LinkedInIcon />
                                         </IconButton>
@@ -231,7 +222,9 @@ const MenuAppBar: React.FC<{}> = () => {
                                              <GitHubIcon />
                                         </IconButton>
                                    </span>
-                                   <span style={iconsStackStyle_Right}>
+                                   <span style={iconsStackStyle_Right}
+                                        className={styles.icons_StackStyle_Right}
+                                   >
                                         <IconButton
                                              onClick={() => handleThemeChange()}
                                              aria-label='theme icon'

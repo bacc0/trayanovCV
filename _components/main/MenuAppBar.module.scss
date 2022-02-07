@@ -1,0 +1,27 @@
+.App_Bar_Style_external {
+     height: 75px;
+     font-size: 10px;
+     padding-top: 5px;
+     position: fixed;
+
+     .Toolbar_Style {
+          height: 65px;
+
+          .icons_StackStyle {
+               display: flex;
+               width: 100%;
+
+               .icons_StackStyle_Left {
+                    display: flex;
+                    justify-content: space-between;
+               }
+               .icons_StackStyle_Right {
+                    display: flex;
+               }
+          }
+     }
+}
+.icons_Style {
+     width: 40px;
+     height: 40px;
+}
