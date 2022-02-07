@@ -10,22 +10,28 @@ import { TState } from '../../store/index';
 import { useSelector } from 'react-redux';
 import { IColors } from '../../store/appColors';
 
-export interface IL_R_cardsStyle {
+interface IL_R_cardsStyle {
      m: number;
      maxWidth: string;
      boxShadow: number;
      borderLeft: number;
      backgroundColor: string;
- };
- export interface ICardStyle {
-          m: number;
-          pb: number;
-          width: string;
-          height: number;
-          boxShadow: number;
-          borderLeft: number;
-          backgroundColor: string;
-      };
+};
+interface ICardStyle {
+     m: number;
+     pb: number;
+     width: string;
+     height: number;
+     boxShadow: number;
+     borderLeft: number;
+     backgroundColor: string;
+};
+
+export interface IProps {
+     p_spacing: JSX.Element;
+     cardStyle: ICardStyle;
+     L_R_cardsStyle?: IL_R_cardsStyle;
+};
 
 
 const _CombineSections: React.FC<{}> = (): JSX.Element => {
@@ -34,7 +40,7 @@ const _CombineSections: React.FC<{}> = (): JSX.Element => {
      const min_width_600px: boolean = useSelector((state: TState) => state.min_width_600px_Reducer.value);
      const colors: IColors = useSelector((state: TState) => state.appColorsReducer.value);
      const { strongText, separationsColor, footerColor }:
-           { strongText: string, separationsColor: string, footerColor: string } = colors;
+          { strongText: string, separationsColor: string, footerColor: string } = colors;
 
      const p_spacing: JSX.Element = (<Box sx={{ height: '11px' }} />)
 

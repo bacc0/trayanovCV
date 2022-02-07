@@ -69,7 +69,7 @@ const MenuAppBar: React.FC<{}> = () => {
      { strongText: string, thirdLettersColor: string,
           hrColorMain: string, AppBackgroundColor: string, secLettersColor: string } = colors;
 
-     const renderCounter = useRef(0);
+     const renderCounter = useRef<number>(0);
      renderCounter.current = renderCounter.current + 1;
 
      const [appBarIsVisible, setAppBarIsVisible] = useState<boolean>(false);
@@ -77,7 +77,6 @@ const MenuAppBar: React.FC<{}> = () => {
 
      useEffect(() => {
           if (positionY < 0.035) {
-
                if (marker) {
                     setAppBarIsVisible(true)
                } else {

@@ -6,18 +6,13 @@ import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp';
 import styles from './_CombineSections.module.scss';
 import { Card, CardContent, Box, useTheme } from '@mui/material';
 import { Theme } from '@mui/material/styles';
-import { ICardStyle } from './_CombineSections';
+import { IProps } from './_CombineSections';
 import { IColors } from '../../store/appColors';
 import { TState } from '../../store/index';
 import { useSelector } from 'react-redux';
 
-interface Props {
-     p_spacing: JSX.Element;
-     cardStyle: ICardStyle;
-};
 
-
-const Footer: React.FC<Props> = ({ cardStyle, p_spacing }) => {
+const Footer: React.FC<IProps> = ({ cardStyle, p_spacing }) => {
 
 
      const min_width_600px: boolean = useSelector((state: TState) => state.min_width_600px_Reducer.value);

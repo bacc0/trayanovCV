@@ -1,7 +1,7 @@
 import Img_handle_inview from '../_illustration/Img_handle_inview';
 import styles from './_CombineSections.module.scss';
 import { Box, Card, CardContent, Typography, useTheme } from '@mui/material';
-import { ICardStyle, IL_R_cardsStyle } from './_CombineSections';
+import { IProps } from './_CombineSections';
 import { IColors } from '../../store/appColors';
 import { motion } from 'framer-motion';
 import { Theme } from '@mui/material/styles';
@@ -9,14 +9,8 @@ import { TState } from '../../store/index';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 
-interface Props {
-     L_R_cardsStyle: IL_R_cardsStyle;
-     p_spacing: JSX.Element;
-     cardStyle: ICardStyle;
-};
 
-
-const Experience: React.FC<Props> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => {
+const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => {
 
 
      const min_width_600px: boolean = useSelector((state: TState) => state.min_width_600px_Reducer.value);
