@@ -1,8 +1,8 @@
 ## https://veselin.vercel.app
 
 ![app](https://user-images.githubusercontent.com/37631578/152828918-e8949703-0ed6-4915-abe9-a9472f324ab6.png)
-![tsscss1n2](https://user-images.githubusercontent.com/37631578/152831192-10c23fd4-506b-441a-bd49-1234132fbd39.png)
 
+![newts](https://user-images.githubusercontent.com/37631578/152852410-3e2df8d4-0cbf-4996-adf0-03f1280d4383.png)
 
 
 ## https://veselin.vercel.app
