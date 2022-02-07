@@ -15,17 +15,17 @@ import { windowSizeActions } from '../store/windowSize';
 import { Y_PositionActions } from '../store/PositionY';
 
 
-const Home: React.FC<{}> = () => {
+const Home: React.FC<{}> = (): JSX.Element => {
 
 
      const dispatch = useDispatch();
      const theme = useSelector((state: TState) => state.themeReducer.color)
      const positionY = useSelector((state: TState) => state.Y_PositionReducer.value)
      
-     const tempMediaQuery = useMediaQuery('(min-width:600px)')
+     const tempMediaQuery: boolean = useMediaQuery('(min-width:600px)');
 
      useEffect(() => {
-          dispatch(min_width_600px_Actions.MIN_WIDTH(tempMediaQuery))
+          dispatch(min_width_600px_Actions.MIN_WIDTH(tempMediaQuery));
      }, [tempMediaQuery]);
 
      // ---------------------------------    scroll to the top on reload
@@ -50,7 +50,7 @@ const Home: React.FC<{}> = () => {
 
      // ---------------------------------    Detect Browser Size ++
 
-     const { width, height } = useWindowSize()
+     const { width, height } = useWindowSize();
 
      useEffect(() => {
           dispatch(windowSizeActions.GET_WINDOW_WIDTH(window.innerWidth))
@@ -58,7 +58,6 @@ const Home: React.FC<{}> = () => {
      }, [width, height]);
 
      // ---------------------------------    Detect window scrolling Directions (UP DOWN)
-
 
      // useEffect(() => {
      //      var scrollableElement = document.body
@@ -99,7 +98,7 @@ const Home: React.FC<{}> = () => {
 
      // ---------------------------------    NEW! Detect window scrolling Directions (UP DOWN)
 
-     const { isScrollingUp, isScrollingDown } = useScrollDirection()
+     const { isScrollingUp, isScrollingDown } = useScrollDirection();
 
      useEffect(() => {
           if (isScrollingUp) {
@@ -114,7 +113,7 @@ const Home: React.FC<{}> = () => {
           if (positionY === 0) {
                dispatch(scrollDirectionActions.DOWN())
           }
-     }, [positionY])
+     }, [positionY]);
 
      //-------------------   Detect window scrolling position (0-100)
 
@@ -122,17 +121,15 @@ const Home: React.FC<{}> = () => {
 
      useEffect(() => {
           scrollYProgress.onChange((v) => (dispatch(Y_PositionActions.UPDATE_Y_POSITION(v))))
-     }, [scrollYProgress])
+     }, [scrollYProgress]);
 
      // ---------------------------------    Detect Browser Name
 
-     const browser = detect()
-
+     const browser = detect();
      
-     if (browser.name === 'firefox') {
+     if  (browser.name === 'firefox') {
           dispatch(CurrentBrowserActions.UPDATE_CURRENT_BROWSER('firefox'))
-     }
-     else {
+     } else {
           dispatch(CurrentBrowserActions.UPDATE_CURRENT_BROWSER(browser.name))
      }
 
@@ -142,9 +139,9 @@ const Home: React.FC<{}> = () => {
           dispatch(appColorsActions.UPDATE_APP_COLORS(theme))
      }, [theme]);
 
-
      return <_Home />
 }
+
 
 export default Home;
 

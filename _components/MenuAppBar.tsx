@@ -1,41 +1,80 @@
-import { useState, useEffect, useRef } from 'react'
-import { Stack, IconButton, Typography, Toolbar, AppBar, Box } from '@mui/material'
-import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp';
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
-import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp'
-import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import GitHubIcon from '@mui/icons-material/GitHub'
+import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp';
+import { themeActions } from '../store/themeState';
+import { TState } from '../store/index';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useRef, useState } from 'react';
+import { Box, Stack, AppBar, Toolbar, IconButton } from '@mui/material';
 
-import { useSelector, useDispatch } from 'react-redux'
-import { themeActions } from '../store/themeState'
+interface IHandleThemeChange {
+     (): void;
+};
+interface IToolbarStyle {
+     margin: string;
+     height: number;
+     maxWidth: number;
+     transform: string;
+     transition: string;
+     transitionDelay: string;
+};
+interface IUnderAppBar {
+     height: number;
+     backgroundColor: string;
+};
+interface IIconsStackStyle {
+     display: string;
+     justifyContent: string;
+     width: string;
+};
+interface IIconsStackStyle_Left {
+     display: string;
+     justifyContent: string;
+     width: string | number;
+     paddingRight: string;
+};
+interface IIconsStackStyle_Right {
+     display: string;
+     justifyContent: string;
+     width: string | number;
+};
+interface IIconsStyle {
+     color: string;
+     width: number;
+     height: number;
+     transition: string;
+};
 
-//    import BackdropFilter from "react-backdrop-filter"
-//    https://www.npmjs.com/package/react-backdrop-filter/v/1.2.2
-import styles from './MenuAppBar.module.scss';
 
-const MenuAppBar = () => {
+const MenuAppBar: React.FC<{}> = () => {
+
 
      const dispatch = useDispatch();
 
-     const scrollDirection = useSelector(state => state.scrollDirectionReducer.value)
-     // const positionY = useSelector(state => state.scrollDirectionReducer.value)
-     const positionY = useSelector(state => state.Y_PositionReducer.value)
-     const theme = useSelector(state => state.themeReducer.color)
-     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
-     const colors = useSelector(state => state.appColorsReducer.value)
-     const currentBrowser = useSelector(state => state.currentBrowserReducer.value)
-     // console.log('currentBrowser', currentBrowser)
-     const {
-          strongText, thirdLettersColor, hrColorMain, primeLettersColor,
-          AppBackgroundColor, secLettersColor } = colors
+     const scrollDirection = useSelector((state: TState) => state.scrollDirectionReducer.value);
 
-     const renderCounter = useRef(0)
-     renderCounter.current = renderCounter.current + 1
+     const positionY = useSelector((state: TState) => state.Y_PositionReducer.value);
 
-     const [appBarIsVisible, setAppBarIsVisible] = useState(false)
-     const [marker, setMarker] = useState(false)
+     const theme = useSelector((state: TState) => state.themeReducer.color);
+
+     const min_width_600px = useSelector((state: TState) => state.min_width_600px_Reducer.value);
+
+     const colors = useSelector((state: TState) => state.appColorsReducer.value);
+
+     const currentBrowser = useSelector((state: TState) => state.currentBrowserReducer.value);
+
+     const { strongText, thirdLettersColor,
+             hrColorMain, AppBackgroundColor, secLettersColor } = colors;
+
+     const renderCounter = useRef(0);
+     renderCounter.current = renderCounter.current + 1;
+
+     const [appBarIsVisible, setAppBarIsVisible] = useState<boolean>(false);
+     const [marker, setMarker] = useState<boolean>(false);
 
      useEffect(() => {
           if (positionY < 0.035) {
@@ -49,18 +88,18 @@ const MenuAppBar = () => {
           } else {
 
                if (scrollDirection === 'up') {
-                    appBarIsVisible !== false ? setAppBarIsVisible(false) : null
+                    appBarIsVisible !== false ? setAppBarIsVisible(false) : null;
                }
-               if (scrollDirection === 'down' ) {
-                    appBarIsVisible !== true ? setAppBarIsVisible(true) : null
+               if (scrollDirection === 'down') {
+                    appBarIsVisible !== true ? setAppBarIsVisible(true) : null;
                }
           }
      }, [positionY]);
 
-     const handleThemeChange = () => {
-          dispatch(themeActions.TOGGLE_THEME())
-     }
-     const [transitionDirection, setTransitionDirection] = useState('down');
+     const handleThemeChange: IHandleThemeChange = () => {
+          dispatch(themeActions.TOGGLE_THEME());
+     };
+     const [transitionDirection, setTransitionDirection] = useState<string>('down');
 
      useEffect(() => {
 
@@ -73,7 +112,7 @@ const MenuAppBar = () => {
 
      }, [scrollDirection]);
 
-     const [navBackgroundColor, setNavBackgroundColor] = useState(`${AppBackgroundColor}fd`);
+     const [navBackgroundColor, setNavBackgroundColor] = useState<string>(`${AppBackgroundColor}fd`);
 
      useEffect(() => {
           setNavBackgroundColor(
@@ -83,27 +122,22 @@ const MenuAppBar = () => {
           )
      }, [currentBrowser, AppBackgroundColor]);
 
-
      const AppBarStyle = {
-          backgroundColor: navBackgroundColor,
-          color: hrColorMain,
-          borderBottom: `0.3px solid ${secLettersColor}55`,
           top: appBarIsVisible ? -1 : -82,
-          transform: `scaleY(${appBarIsVisible ? 1 : 0.8})`,
-
-          // '-webkit-backdrop-filter': `blur(10px)`,
-          // ' backdrop-filter': `blur(10px)`,
-
-          boxShadow: '0 0 0',
+          color: hrColorMain,
+          height: 75,
           fontSize: 10,
           position: 'fixed',
-          height: 75,
-          paddingTop: 5,
+          boxShadow: '0 0 0',
+          transform: `scaleY(${appBarIsVisible ? 1 : 0.8})`,
           transition: `top 330ms linear, transform ${scrollDirection === 'up' ? 330 : 0}ms linear`,
-          transitionDelay: `1.2s`
-     }
+          paddingTop: 5,
+          borderBottom: `0.3px solid ${secLettersColor}55`,
+          transitionDelay: `1.2s`,
+          backgroundColor: navBackgroundColor,
+     } as React.CSSProperties;
 
-     const ToolbarStyle = {
+     const ToolbarStyle: IToolbarStyle = {
           margin: '0 auto',
           height: 65,
           maxWidth: min_width_600px ? 546 : 398,
@@ -113,34 +147,32 @@ const MenuAppBar = () => {
                 scaleX(${appBarIsVisible ? 1 : 0.62})`,
           transition: `transform 230ms ease-in`,
           transitionDelay: appBarIsVisible ? `0.09s` : `0s`
-     }
-
-     const underAppBar = {
+     };
+     const underAppBar: IUnderAppBar = {
           height: min_width_600px ? 70 : 60,
-          backgroundColor: primeLettersColor,
           backgroundColor: 'transparent',
-     }
-     const iconsStackStyle = {
+     };
+     const iconsStackStyle: IIconsStackStyle = {
           display: 'flex',
           justifyContent: min_width_600px ? 'space-between' : 'center',
           width: '100%',
-     }
-     const iconsStackStyle_Left = {
+     };
+     const iconsStackStyle_Left: IIconsStackStyle_Left = {
           display: 'flex',
           justifyContent: 'space-between',
           width: min_width_600px ? 249 : '83%',
           paddingRight: '2.6%',
-     }
-     const iconsStackStyle_Right = {
+     };
+     const iconsStackStyle_Right: IIconsStackStyle_Right = {
           display: 'flex',
           justifyContent: min_width_600px ? 'flex-end' : 'center',
           width: min_width_600px ? 200 : '16%',
-     }
-     const iconsStyle = {
+     };
+     const iconsStyle: IIconsStyle = {
           color: strongText,
           width: 40, height: 40,
           transition: `color 500ms ease`,
-     }
+     };
 
 
      return (
@@ -161,8 +193,6 @@ const MenuAppBar = () => {
 				`}
                </style>
 
-
-
                <AppBar style={AppBarStyle} className='App_Bar_Style' position='fixed'>
                     <div >
                          <Toolbar style={ToolbarStyle}>
@@ -177,7 +207,6 @@ const MenuAppBar = () => {
                                         >
                                              <LinkedInIcon />
                                         </IconButton>
-                                        {/* {positionY} */}
                                         <IconButton
                                              href={`tel: 00447590010066`}
                                              aria-label='Phone Icon' style={iconsStyle}
@@ -206,9 +235,6 @@ const MenuAppBar = () => {
                                              <GitHubIcon />
                                         </IconButton>
                                    </span>
-                                   {/*  { min ? 'yes': 'no' }   */}
-
-
                                    <span style={iconsStackStyle_Right}>
                                         <IconButton
                                              onClick={() => handleThemeChange()}

@@ -32,7 +32,6 @@ interface IStyleLocal  {
           height: number;
      };
      CombineSectionsContainer: {
-          // top: number;
           backgroundColor:string;
      };
 };
@@ -90,7 +89,6 @@ const Home: React.FC<{}> = () => {
                height: min_width_600px ? 65 : 200
           },
           CombineSectionsContainer: {
-               // top: min_width_600px ? -14 : -8,
                backgroundColor: AppBackgroundColor,
           }
      };
