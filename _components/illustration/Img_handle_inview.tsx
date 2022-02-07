@@ -17,8 +17,8 @@ interface IStylePicture {
 };
 
 
-const ImgHandleInview: React.FC<IImgHandleInview> =
-     ({ src, min_width_600px, threshold = 0.5, width }): JSX.Element => {
+const ImgHandleInview: React.FC<IImgHandleInview> 
+          = ({ src, min_width_600px, threshold = 0.5, width }): JSX.Element => {
 
 
           const [opacity, setOpacity] = useState<number>(0);

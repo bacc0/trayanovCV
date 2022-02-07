@@ -1,9 +1,9 @@
 import * as React from 'react';
-import CombineSections from './_sections/_CombineSections';
+import CombineSections from './sections/_CombineSections';
 import Image from 'next/image';
 import MenuAppBar from './MenuAppBar';
 import PageNav from './PageNav';
-import styles from './_Home.module.scss';
+import styles from './Home.module.scss';
 import { appColorsActions } from '../store/appColors';
 import { IColors } from '../store/appColors';
 import { Paper } from '@mui/material';

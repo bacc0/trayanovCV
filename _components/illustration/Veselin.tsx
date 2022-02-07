@@ -3,7 +3,7 @@ import Script from 'next/script';
 import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion';
 import { TState } from '../../store/hooks';
-import  typeWriter  from '../_sections/helpers/TypeWriter';
+import  typeWriter  from '../sections/helpers/TypeWriter';
 import { useSelector } from 'react-redux';
 
 interface Props {

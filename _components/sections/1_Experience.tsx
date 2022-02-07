@@ -1,4 +1,4 @@
-import Img_handle_inview from '../_illustration/Img_handle_inview';
+import Img_handle_inview from '../illustration/Img_handle_inview';
 import styles from './_CombineSections.module.scss';
 import { Box, Card, CardContent, Typography, useTheme } from '@mui/material';
 import { IProps } from './_CombineSections';
