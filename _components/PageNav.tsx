@@ -1,15 +1,13 @@
 import * as React from 'react';
-import { Box, Card } from '@mui/material';
-import Veselin from './_illustration/Veselin';
-import { useSelector } from 'react-redux';
-import { TState } from '../store/index';
-
 import styles from './PageNav.module.scss';
+import Veselin from './_illustration/Veselin';
+import { Box, Card } from '@mui/material';
+import { TState } from '../store/index';
+import { useSelector } from 'react-redux';
 
-
-interface IPageNav {
-     () : JSX.Element;
-};
+// interface IPageNav {
+//      (): JSX.Element;
+// };
 
 interface IStyle  {
      card_container: {
@@ -18,8 +16,7 @@ interface IStyle  {
      }
 };
 
-
-const PageNav: IPageNav = () => {
+const PageNav: React.FC<{}> = () => {
 
 
      const colors = useSelector((state: TState) => state.appColorsReducer.value);
@@ -36,8 +33,7 @@ const PageNav: IPageNav = () => {
                <Box>
                     <Veselin color={colors.bodyColor} />
                </Box>
-               <Box className={styles.typing_container}>
-               </Box>
+               <Box className={styles.typing_container} />
           </Card>
      );
 

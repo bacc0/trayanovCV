@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-
 const windowSlice = createSlice({
      name: 'window-size',
      initialState: { width: 0, height: 0 },
@@ -12,9 +11,9 @@ const windowSlice = createSlice({
                state.height = action.payload
           }
      }
-})
+});
 
 export const windowSizeActions = windowSlice.actions;
 
-export default windowSlice
+export default windowSlice;
 

@@ -1,37 +1,35 @@
-import React, { Fragment, useState } from 'react'
-import { motion } from 'framer-motion'
-import Script from 'next/script'
-import { typeWriter } from '../_sections/helpers/TypeWriter'
-import Typography from '@mui/material/Typography'
-import { minHeight } from '@mui/system'
-import { useSelector } from 'react-redux'
+import React, { Fragment, useState } from 'react';
+import Script from 'next/script';
+import Typography from '@mui/material/Typography';
+import { motion } from 'framer-motion';
+import { TState } from '../../store/index';
+import { typeWriter } from '../_sections/helpers/TypeWriter';
+import { useSelector } from 'react-redux';
 
-export default ({ color }) => {
+interface Props {
+     color: string;
+};
 
-     const min_width_600px = useSelector(state => state.min_width_600px_Reducer.value)
+const Veselin: React.FC<Props> = ({ color }) => {
+     // const Veselin: React.FC<Props> = ({ color }: Props): JSX.Element => {
+     // const Veselin: React.FC<{ color: string }> = ({ color }) => {
+     // const Veselin  = ({ color }: Props ): JSX.Element => {
 
-     // const fill = color
-     // const stroke = color
-     const strokeWidth = 0.75
+     const min_width_600px = useSelector((state: TState) => state.min_width_600px_Reducer.value)
 
-     const strokeWidth_extra = 2
+     const strokeWidth = 0.75;
 
+     const strokeWidth_extra = 2;
 
+     const transitionStroke = { delay: 0.2, duration: 3 };
 
-     const transitionStroke = { delay: 0.2, duration: 3 }
-     // const strokeWidthLines = 1.2
+     const transitionFill = { delay: 2, duration: 0.3 };
 
-     // const transitionStrokeLines = { delay: 6.8, duration: 0.9 }
+     const transition_stroke_extra = { delay: 2.35, duration: 1.05 };
 
-
-     const transitionFill = { delay: 2, duration: 0.3 }
-     // const transition_stroke_extra = { delay: 2.1, duration: 0.3 }
-     const transition_stroke_extra = { delay: 2.35, duration: 1.05 }
-
-     const size = 310
+     const size = 310;
 
      const style_colibri = {
-
           top: 120,
           right: 250,
           margin: 'auto',
@@ -39,47 +37,48 @@ export default ({ color }) => {
           height: '50px',
           overflow: 'hidden',
           position: 'absolute',
-     }
+     };
 
-     const colibri = (
+     const colibri: JSX.Element = (
           <motion.div
                initial={{ opacity: 0, scale: 0.9, x: 11, y: -11 }}
                animate={{ opacity: 1, scale: 0.8, x: 0, y: 0 }}
                transition={{ delay: 0.2, duration: 0.25 }}
           >
-               <div id='colibri_hype_container' className='HYPE_document' style={style_colibri} />
+
+               <div id='colibri_hype_container' className='HYPE_document'
+                    // @ts-ignore 
+                    style={style_colibri} />
                <Script
                     src='colibri.hyperesources/colibri_hype_generated_script.js?23464'
                     strategy='afterInteractive'
                />
           </motion.div>
-     )
+     );
 
-     const [visStart, setVisStart] = useState(false)
-     const [scale, setScale] = useState(`scale(1)`)
-
+     const [visStart, setVisStart] = useState<boolean>(false);
 
      if (!visStart) {
           setInterval(() => {
                setVisStart(true)
-               setInterval(() => { setScale(`scale(0.85)`) }, 3500)
           }, 2350)
-     }
+     };
 
      const style_typing = {
           color: color,
-
           fontSize: 19,
           fontWeight: 400,
           letterSpacing: 1.3,
           position: 'relative',
           top: -82,
           left: 53
-     }
+     };
 
-     const typing = (
-
-          <Typography variant='h3' sx={style_typing}>
+     const typing: JSX.Element = (
+          <Typography variant='h3'
+               // @ts-ignore
+               sx={style_typing}
+          >
                {visStart && (
                     <div>
                          {typeWriter(['... end ', 'front end developer'])}
@@ -87,17 +86,14 @@ export default ({ color }) => {
                )}
           </Typography>
 
-     )
+     );
 
      return (
           <div
                style={{
                     width: 300,
-
                     padding: 0,
                     paddingBottom: 36,
-                    // background: '#555555333',
-                    // background: 'red',
                }}
           >
                {colibri}
@@ -133,11 +129,14 @@ export default ({ color }) => {
                     </motion.g>
 
 
-
                     <motion.g
                          initial={{ scale: 1.00, y: 0, x: 0 }}
                          animate={{ scale: 0.82, y: 4, x: 0 }}   //   animate={{ scale: 0.95, y: 2 }} 
-                         transition={{ delay: 2.16, duration: 0.25, type: "tween", stiffness: 400 }}
+                         transition={{
+                              delay: 2.16, duration: 0.25, type: "tween",
+                              // @ts-ignore
+                              stiffness: 400
+                         }}
                     >
                          <motion.g
                               initial={{ opacity: 0 }}  // x=?
@@ -153,7 +152,7 @@ export default ({ color }) => {
                                              transition={transitionStroke}
                                              stroke={color}
                                              strokeWidth={strokeWidth}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M55.834,88.402 Q51.352,88.402 47.606,86.057 Q43.86,83.712 41.739,79.622 Q39.617,75.532 39.617,70.544 L39.617,69.047 Q39.617,64.06 41.67,59.903 Q43.723,55.745 47.315,53.417 Q50.907,51.09 55.149,51.09 Q61.342,51.09 65.276,55.379 Q69.211,59.67 69.211,66.653 L69.211,68.549 L41.465,68.549 L41.465,70.511 Q41.465,74.9 43.364,78.642 Q45.262,82.383 48.598,84.511 Q51.934,86.64 55.834,86.64 Q59.563,86.64 62.18,85.425 Q64.797,84.212 66.815,81.685 L68.115,82.582 Q63.976,88.402 55.834,88.402 z M55.149,52.886 Q49.744,52.886 45.981,56.793 Q42.217,60.701 41.567,66.753 L67.363,66.753 L67.363,66.32 Q67.363,62.663 65.772,59.52 Q64.182,56.377 61.393,54.632 Q58.605,52.886 55.149,52.886 z" />
 
 
@@ -163,7 +162,7 @@ export default ({ color }) => {
                                              transition={{ ...transitionStroke, ...{ duration: 2 } }}
                                              stroke={color}
                                              strokeWidth={strokeWidth}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M104.626,78.925 Q104.626,72.373 93.131,70.012 Q86.221,68.582 83.518,66.338 Q80.815,64.092 80.815,60.168 Q80.815,56.211 84.254,53.65 Q87.692,51.09 93.2,51.09 Q99.187,51.09 102.813,53.866 Q106.44,56.643 106.44,61.365 L104.559,61.365 Q104.559,57.74 101.411,55.313 Q98.263,52.886 93.2,52.886 Q88.342,52.886 85.502,54.948 Q82.663,57.009 82.663,60.102 Q82.663,62.529 83.723,63.91 Q84.784,65.289 87.179,66.403 Q89.573,67.518 94.158,68.549 Q98.742,69.58 101.411,70.977 Q104.08,72.373 105.276,74.285 Q106.474,76.197 106.474,78.957 Q106.474,83.214 102.882,85.808 Q99.289,88.402 93.474,88.402 Q87.247,88.402 83.433,85.658 Q79.617,82.914 79.617,78.591 L81.465,78.591 Q81.739,82.383 84.904,84.494 Q88.068,86.606 93.474,86.606 Q98.434,86.606 101.53,84.362 Q104.626,82.116 104.626,78.925 z" />
 
                                         <motion.path
@@ -172,7 +171,7 @@ export default ({ color }) => {
                                              transition={transitionStroke}
                                              stroke={color}
                                              strokeWidth={strokeWidth}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M133.953,88.402 Q129.471,88.402 125.725,86.057 Q121.979,83.712 119.857,79.622 Q117.736,75.532 117.736,70.544 L117.736,69.047 Q117.736,64.06 119.79,59.903 Q121.842,55.745 125.434,53.417 Q129.027,51.09 133.269,51.09 Q139.461,51.09 143.395,55.379 Q147.33,59.67 147.33,66.653 L147.33,68.549 L119.584,68.549 L119.584,70.511 Q119.584,74.9 121.482,78.642 Q123.381,82.383 126.717,84.511 Q130.052,86.64 133.953,86.64 Q137.682,86.64 140.299,85.425 Q142.916,84.212 144.935,81.685 L146.235,82.582 Q142.095,88.402 133.953,88.402 z M133.269,52.886 Q127.863,52.886 124.1,56.793 Q120.336,60.701 119.686,66.753 L145.482,66.753 L145.482,66.32 Q145.482,62.663 143.891,59.52 Q142.301,56.377 139.512,54.632 Q136.724,52.886 133.269,52.886 z" />
 
                                         <motion.path
@@ -181,7 +180,7 @@ export default ({ color }) => {
                                              transition={{ ...transitionStroke, ...{ duration: 2 } }}
                                              stroke={color}
                                              strokeWidth={strokeWidth}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M162.219,87.737 L160.371,87.737 L160.371,36.657 L162.219,36.657 z" />
 
                                         <motion.path
@@ -190,7 +189,7 @@ export default ({ color }) => {
                                              transition={{ ...transitionStroke, ...{ duration: 2.5 } }}
                                              stroke={color}
                                              strokeWidth={strokeWidth}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M181.625,87.737 L179.778,87.737 L179.778,51.755 L181.625,51.755 z M178.82,40.514 Q178.82,39.75 179.367,39.201 Q179.915,38.653 180.702,38.653 Q181.488,38.653 182.053,39.201 Q182.617,39.75 182.617,40.514 Q182.617,41.279 182.053,41.812 Q181.488,42.344 180.702,42.344 Q179.915,42.344 179.367,41.812 Q178.82,41.279 178.82,40.514 z" />
 
                                         <motion.path
@@ -199,7 +198,7 @@ export default ({ color }) => {
                                              transition={{ ...transitionStroke, ...{ duration: 2 } }}
                                              stroke={color}
                                              strokeWidth={strokeWidth}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M199.594,60.135 Q201.406,55.945 204.931,53.518 Q208.454,51.09 212.731,51.09 Q218.684,51.09 221.574,54.365 Q224.465,57.641 224.5,64.259 L224.5,87.737 L222.652,87.737 L222.652,64.192 Q222.618,58.406 220.223,55.629 Q217.828,52.852 212.628,52.852 Q207.839,52.852 204.331,56.161 Q200.825,59.47 199.594,64.691 L199.594,87.737 L197.746,87.737 L197.746,51.755 L199.594,51.755 z" />
 
                                         <motion.path
@@ -208,7 +207,7 @@ export default ({ color }) => {
                                              transition={{ ...transitionStroke, ...{ duration: 2 } }}
                                              stroke={color}
                                              strokeWidth={strokeWidth}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M31.599,52.992 L17.425,88.402 L15.641,88.402 L1.5,52.992 L3.453,52.992 L16.55,85.588 L29.635,52.992 L31.599,52.992 z" />
 
 
@@ -285,7 +284,7 @@ export default ({ color }) => {
                                              transition={transition_stroke_extra}
                                              stroke={color}
                                              strokeWidth={strokeWidth_extra}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M55.834,88.402 Q51.352,88.402 47.606,86.057 Q43.86,83.712 41.739,79.622 Q39.617,75.532 39.617,70.544 L39.617,69.047 Q39.617,64.06 41.67,59.903 Q43.723,55.745 47.315,53.417 Q50.907,51.09 55.149,51.09 Q61.342,51.09 65.276,55.379 Q69.211,59.67 69.211,66.653 L69.211,68.549 L41.465,68.549 L41.465,70.511 Q41.465,74.9 43.364,78.642 Q45.262,82.383 48.598,84.511 Q51.934,86.64 55.834,86.64 Q59.563,86.64 62.18,85.425 Q64.797,84.212 66.815,81.685 L68.115,82.582 Q63.976,88.402 55.834,88.402 z M55.149,52.886 Q49.744,52.886 45.981,56.793 Q42.217,60.701 41.567,66.753 L67.363,66.753 L67.363,66.32 Q67.363,62.663 65.772,59.52 Q64.182,56.377 61.393,54.632 Q58.605,52.886 55.149,52.886 z" />
 
 
@@ -295,7 +294,7 @@ export default ({ color }) => {
                                              transition={transition_stroke_extra}
                                              stroke={color}
                                              strokeWidth={strokeWidth_extra}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M104.626,78.925 Q104.626,72.373 93.131,70.012 Q86.221,68.582 83.518,66.338 Q80.815,64.092 80.815,60.168 Q80.815,56.211 84.254,53.65 Q87.692,51.09 93.2,51.09 Q99.187,51.09 102.813,53.866 Q106.44,56.643 106.44,61.365 L104.559,61.365 Q104.559,57.74 101.411,55.313 Q98.263,52.886 93.2,52.886 Q88.342,52.886 85.502,54.948 Q82.663,57.009 82.663,60.102 Q82.663,62.529 83.723,63.91 Q84.784,65.289 87.179,66.403 Q89.573,67.518 94.158,68.549 Q98.742,69.58 101.411,70.977 Q104.08,72.373 105.276,74.285 Q106.474,76.197 106.474,78.957 Q106.474,83.214 102.882,85.808 Q99.289,88.402 93.474,88.402 Q87.247,88.402 83.433,85.658 Q79.617,82.914 79.617,78.591 L81.465,78.591 Q81.739,82.383 84.904,84.494 Q88.068,86.606 93.474,86.606 Q98.434,86.606 101.53,84.362 Q104.626,82.116 104.626,78.925 z" />
 
                                         <motion.path
@@ -304,7 +303,7 @@ export default ({ color }) => {
                                              transition={transition_stroke_extra}
                                              stroke={color}
                                              strokeWidth={strokeWidth_extra}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M133.953,88.402 Q129.471,88.402 125.725,86.057 Q121.979,83.712 119.857,79.622 Q117.736,75.532 117.736,70.544 L117.736,69.047 Q117.736,64.06 119.79,59.903 Q121.842,55.745 125.434,53.417 Q129.027,51.09 133.269,51.09 Q139.461,51.09 143.395,55.379 Q147.33,59.67 147.33,66.653 L147.33,68.549 L119.584,68.549 L119.584,70.511 Q119.584,74.9 121.482,78.642 Q123.381,82.383 126.717,84.511 Q130.052,86.64 133.953,86.64 Q137.682,86.64 140.299,85.425 Q142.916,84.212 144.935,81.685 L146.235,82.582 Q142.095,88.402 133.953,88.402 z M133.269,52.886 Q127.863,52.886 124.1,56.793 Q120.336,60.701 119.686,66.753 L145.482,66.753 L145.482,66.32 Q145.482,62.663 143.891,59.52 Q142.301,56.377 139.512,54.632 Q136.724,52.886 133.269,52.886 z" />
 
                                         <motion.path
@@ -313,7 +312,7 @@ export default ({ color }) => {
                                              transition={transition_stroke_extra}
                                              stroke={color}
                                              strokeWidth={strokeWidth_extra}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M162.219,87.737 L160.371,87.737 L160.371,36.657 L162.219,36.657 z" />
 
                                         <motion.path
@@ -322,7 +321,7 @@ export default ({ color }) => {
                                              transition={transition_stroke_extra}
                                              stroke={color}
                                              strokeWidth={strokeWidth_extra}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M181.625,87.737 L179.778,87.737 L179.778,51.755 L181.625,51.755 z M178.82,40.514 Q178.82,39.75 179.367,39.201 Q179.915,38.653 180.702,38.653 Q181.488,38.653 182.053,39.201 Q182.617,39.75 182.617,40.514 Q182.617,41.279 182.053,41.812 Q181.488,42.344 180.702,42.344 Q179.915,42.344 179.367,41.812 Q178.82,41.279 178.82,40.514 z" />
 
                                         <motion.path
@@ -331,7 +330,7 @@ export default ({ color }) => {
                                              transition={transition_stroke_extra}
                                              stroke={color}
                                              strokeWidth={strokeWidth_extra}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M199.594,60.135 Q201.406,55.945 204.931,53.518 Q208.454,51.09 212.731,51.09 Q218.684,51.09 221.574,54.365 Q224.465,57.641 224.5,64.259 L224.5,87.737 L222.652,87.737 L222.652,64.192 Q222.618,58.406 220.223,55.629 Q217.828,52.852 212.628,52.852 Q207.839,52.852 204.331,56.161 Q200.825,59.47 199.594,64.691 L199.594,87.737 L197.746,87.737 L197.746,51.755 L199.594,51.755 z" />
 
                                         <motion.path
@@ -340,7 +339,7 @@ export default ({ color }) => {
                                              transition={transition_stroke_extra}
                                              stroke={color}
                                              strokeWidth={strokeWidth_extra}
-                                             fill-opacity="0"
+                                             fillOpacity="0"
                                              d="M31.599,52.992 L17.425,88.402 L15.641,88.402 L1.5,52.992 L3.453,52.992 L16.55,85.588 L29.635,52.992 L31.599,52.992 z" />
 
                                    </g>
@@ -350,10 +349,11 @@ export default ({ color }) => {
                     </motion.g>
                </svg>
 
-
                <div style={{ minHeight: min_width_600px ? 25 : 35 }} >
                     {typing}
                </div>
           </div>
      )
-}
+};
+
+export default Veselin;

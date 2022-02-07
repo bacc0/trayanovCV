@@ -1,26 +1,26 @@
-import _Home from './_Home'
-import { useMediaQuery } from '@mui/material'
-import { useEffect } from 'react'
-import { useViewportScroll } from 'framer-motion'
-import { detect } from 'detect-browser'
-import { useWindowSize } from 'react-window-size-hooks'
-import { useScrollDirection } from 'react-use-scroll-direction'
+import _Home from './_Home';
+import { appColorsActions } from '../store/appColors';
+import { CurrentBrowserActions } from '../store/CurrentBrowser';
+import { detect } from 'detect-browser';
+import { min_width_600px_Actions } from '../store/minWidth';
+import { scrollDirectionActions } from '../store/scrollDirection';
+import { TState } from '../store/index';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useMediaQuery } from '@mui/material';
+import { useScrollDirection } from 'react-use-scroll-direction';
+import { useViewportScroll } from 'framer-motion';
+import { useWindowSize } from 'react-window-size-hooks';
+import { windowSizeActions } from '../store/windowSize';
+import { Y_PositionActions } from '../store/PositionY';
 
-import { useDispatch, useSelector } from 'react-redux'
-import { scrollDirectionActions } from '../store/scrollDirection'
-import { Y_PositionActions } from '../store/PositionY'
-import { min_width_600px_Actions } from '../store/minWidth'
-import { windowSizeActions } from '../store/windowSize'
-import { appColorsActions } from '../store/appColors'
-import { CurrentBrowserActions } from '../store/CurrentBrowser'
 
-
-export default function Home() {
+const Home: React.FC<{}> = () => {
 
 
      const dispatch = useDispatch();
-     const theme = useSelector(state => state.themeReducer.color)
-     const positionY = useSelector(state => state.scrollDirectionReducer.value)
+     const theme = useSelector((state: TState) => state.themeReducer.color)
+     const positionY = useSelector((state: TState) => state.Y_PositionReducer.value)
      
      const tempMediaQuery = useMediaQuery('(min-width:600px)')
 
@@ -118,7 +118,7 @@ export default function Home() {
 
      //-------------------   Detect window scrolling position (0-100)
 
-     const { scrollYProgress } = useViewportScroll(0)
+     const { scrollYProgress } = useViewportScroll();//0
 
      useEffect(() => {
           scrollYProgress.onChange((v) => (dispatch(Y_PositionActions.UPDATE_Y_POSITION(v))))
@@ -145,4 +145,7 @@ export default function Home() {
 
      return <_Home />
 }
+
+export default Home;
+
 

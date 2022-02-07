@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-
 const CurrentBrowserSlice = createSlice({
      name: 'Y-position',
      initialState: { value: 'firefox' },
@@ -9,10 +8,10 @@ const CurrentBrowserSlice = createSlice({
                state.value = action.payload
           }
      }
-})
+});
 
 
 export const CurrentBrowserActions = CurrentBrowserSlice.actions;
 
-export default CurrentBrowserSlice
+export default CurrentBrowserSlice;
 

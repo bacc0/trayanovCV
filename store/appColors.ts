@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const color_1 = '#FFFFFF'
-const color_2 = '#FAFAFA' // F2F2F2
-const color_3 = '#636189'  
-const color_4 = '#3F3D56' //#040F1B
-const color_5 = '#2F2E41'
-const color_6 = '#8D30FE'
-const color_7 = '#CF68FE'
+const color_1 = '#FFFFFF';
+const color_2 = '#FAFAFA'; // F2F2F2
+const color_3 = '#636189';  
+const color_4 = '#3F3D56'; //#040F1B
+const color_5 = '#2F2E41';
+const color_6 = '#8D30FE';
+const color_7 = '#CF68FE';
 
 const initialState = {
      hrColor: color_2,
@@ -23,7 +23,7 @@ const initialState = {
      thirdLettersColor: color_6,
      backgroundColor_2: color_2,
      AppBackgroundColor: color_1,
-}
+};
 
 const appColorsSlice = createSlice({
      name: 'app-colors',
@@ -48,8 +48,9 @@ const appColorsSlice = createSlice({
                }
           }
      }
-})
+});
 
 export const appColorsActions = appColorsSlice.actions;
-export default appColorsSlice
+
+export default appColorsSlice;
 
