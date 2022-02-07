@@ -1,8 +1,8 @@
 ## https://veselin.vercel.app
 
-<img width="289" alt="Screenshot 2022-02-07 at 16 10 51" src="https://user-images.githubusercontent.com/37631578/152826797-3350e7d5-9038-4a11-b3b9-06db1d158128.png">
-<img width="290" alt="Screenshot 2022-02-07 at 16 11 03" src="https://user-images.githubusercontent.com/37631578/152826813-035adb35-10a7-4fb8-9b7b-d13dfc25ec2b.png">
+![app](https://user-images.githubusercontent.com/37631578/152828918-e8949703-0ed6-4915-abe9-a9472f324ab6.png)
 
+![tsscss](https://user-images.githubusercontent.com/37631578/152829874-ab7d2f20-df30-410a-bcfd-ec6809196fee.png)
 
 
 ## https://veselin.vercel.app
