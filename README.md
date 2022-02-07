@@ -2,7 +2,7 @@
 
 ![app](https://user-images.githubusercontent.com/37631578/152828918-e8949703-0ed6-4915-abe9-a9472f324ab6.png)
 
-![tsscss1](https://user-images.githubusercontent.com/37631578/152830368-15abaa69-441f-43b7-9c68-97199363f8f4.png)
+![tsscss1n](https://user-images.githubusercontent.com/37631578/152830988-19624e64-541d-4547-9cac-d6e0869af51c.png)
 
 
 ## https://veselin.vercel.app
