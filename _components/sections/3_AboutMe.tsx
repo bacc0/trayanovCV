@@ -1,11 +1,11 @@
 import Img_handle_inview from '../illustration/Img_handle_inview';
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material';
+import styles from './sectionsStyles.module.scss';
 import { useSelector } from 'react-redux';
 import { IProps } from './_CombineSections';
 import { IColors } from '../../store/appColors';
 import { Theme } from '@mui/material/styles';
 import { TState } from '../../store/hooks';
-import styles from './_CombineSections.module.scss';
 
 
 const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => {

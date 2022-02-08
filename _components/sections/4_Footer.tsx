@@ -3,7 +3,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LocalPostOfficeSharpIcon from '@mui/icons-material/LocalPostOfficeSharp';
 import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
 import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp';
-import styles from './_CombineSections.module.scss';
+import styles from './sectionsStyles.module.scss';
 import { Card, CardContent, Box, useTheme } from '@mui/material';
 import { Theme } from '@mui/material/styles';
 import { IProps } from './_CombineSections';

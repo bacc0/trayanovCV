@@ -1,5 +1,5 @@
 import Img_handle_inview from '../illustration/Img_handle_inview';
-import styles from './_CombineSections.module.scss';
+import styles from './sectionsStyles.module.scss';
 import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 import { IProps } from './_CombineSections';
 import { IColors } from '../../store/appColors';
@@ -15,7 +15,7 @@ const Technologies: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }
      const colors: IColors = useSelector((state: TState) => state.appColorsReducer.value);
 
      const { backgroundColor_2, strongText }:
-           { backgroundColor_2: string, strongText: string } = colors;
+          { backgroundColor_2: string, strongText: string } = colors;
 
      const theme: Theme = useTheme();
 
@@ -37,51 +37,52 @@ const Technologies: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }
                />
           </Box>
      );
-     const leftSection : JSX.Element= (
+     const leftSection: JSX.Element = (
           <Card sx={L_R_cardsStyle}>
                <CardContent sx={{ p: 0, mt: 1.8, mb: -3.3, color: strongText }}>
 
                     <Typography // @ts-ignore 
-                               variant="p">ReactJS<br /></Typography>
+                         variant="p">ReactJS<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">Hook<br /></Typography>
+                         variant="p">Hook<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">NextJS<br /></Typography>
+                         variant="p">NextJS<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">Javascript<br /></Typography>
+                         variant="p">Redux<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">MUI Material UI<br /></Typography>
+                         variant="p">Javascript<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">CSS SASS<br /></Typography>
+                         variant="p">MUI Material UI<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">HTML<br /></Typography>
+                         variant="p">HTML CSS SASS<br /></Typography>
+                    {p_spacing}
+                   
+                    <Typography // @ts-ignore 
+                         variant="p">Framer Motion<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">Framer Motion<br /></Typography>
+                         variant="p">SVG's animations<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">SVG's animations<br /></Typography>
+                         variant="p">Shapes shifter<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">Shapes shifter<br /></Typography>
+                         variant="p">GIMP<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">GIMP<br /></Typography>
+                         variant="p">Photoshop Adobe<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">Photoshop Adobe<br /></Typography>
+                         variant="p">Illustrator Adobe <br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">Illustrator Adobe <br /></Typography>
-                    {p_spacing}
-                    <Typography // @ts-ignore 
-                               variant="p">Graphic Autodesk <br /></Typography>
+                         variant="p">Graphic Autodesk <br /></Typography>
                     {p_spacing}
 
                </CardContent>
@@ -92,25 +93,25 @@ const Technologies: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
                     <Typography // @ts-ignore 
-                               variant="p">Typescript<br /></Typography>
+                         variant="p">Typescript<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">NodeJS<br /></Typography>
+                         variant="p">NodeJS<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">Express<br /></Typography>
+                         variant="p">Express<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p"> Agile Scrum <br /></Typography>
+                         variant="p"> Agile Scrum <br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">Jira<br /></Typography>
+                         variant="p">Jira<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p">Git Github Bitbucket<br /></Typography>
+                         variant="p">Git Github Bitbucket<br /></Typography>
                     {p_spacing}
                     <Typography // @ts-ignore 
-                               variant="p"> Sourcetree<br /></Typography>
+                         variant="p"> Sourcetree<br /></Typography>
 
                </CardContent>
           </Card>

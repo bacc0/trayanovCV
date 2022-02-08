@@ -3,7 +3,7 @@ import AboutMe from './3_AboutMe';
 import Box from '@mui/material/Box';
 import Experience from './1_Experience';
 import Footer from './4_Footer';
-import styles from './_CombineSections.module.scss';
+import styles from './sectionsStyles.module.scss';
 import Technologies from './2_Technologies';
 import { motion } from 'framer-motion';
 import { TState } from '../../store/hooks';

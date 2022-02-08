@@ -1,5 +1,5 @@
 import Img_handle_inview from '../illustration/Img_handle_inview';
-import styles from './_CombineSections.module.scss';
+import styles from './sectionsStyles.module.scss';
 import { Box, Card, CardContent, Typography, useTheme } from '@mui/material';
 import { IProps } from './_CombineSections';
 import { IColors } from '../../store/appColors';
