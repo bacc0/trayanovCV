@@ -83,16 +83,12 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
                               <br />
                          </p>
                          {p_spacing}
-                         <Typography // @ts-ignore 
-                              variant="p"
-                         >
+                         <Typography variant="p">
                               Developing a Website Builder.
                               <br />
                          </Typography>
                          {p_spacing}
-                         <Typography // @ts-ignore 
-                              variant="p"
-                         >
+                         <Typography variant="p">
                               Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation.
                               <br />
                          </Typography>
@@ -101,16 +97,14 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
                               contact && (
                                    <>
                                         {p_spacing}
-                                        <Typography className={styles.period_style} // @ts-ignore 
-                                             variant="p"
+                                        <Typography className={styles.period_style} variant="p"
                                              style={{ color: strongText }}
                                         >
                                              {contact}
                                              <br />
                                         </Typography>
                                         <Box sx={{ height: theme.spacing(0.35) }} />
-                                        <Typography  // @ts-ignore 
-                                             variant="p"
+                                        <Typography  variant="p"
                                         >
                                              {mail}
                                         </Typography>
@@ -145,23 +139,20 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
                          <br />
                     </p>
                     {p_spacing}
-                    <Typography  // @ts-ignore 
-                         variant="p" 
+                    <Typography variant="p" 
                     >
                          Building a new application for the mobile network operator.
                          <br />
                     </Typography>
                     {p_spacing}
-                    <Typography  // @ts-ignore 
-                         variant="p"
+                    <Typography variant="p"
                     >
                          Using REACT, MATERIAL UI, TYPESCRIPT, SOURCETREE, BITBUCKET ect.
                          <br />
                     </Typography>
 
                     {p_spacing}
-                    <Typography // @ts-ignore 
-                         variant="p"
+                    <Typography variant="p"
                     >
                          For the software development the company used AGILE with the SCRUM framework and JIRA.
                          <br />

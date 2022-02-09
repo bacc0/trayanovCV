@@ -49,24 +49,21 @@ const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => 
 
                     {p_spacing}
 
-                    <Typography // @ts-ignore 
-                               variant="p">
+                    <Typography variant="p">
                          I’m very good on planning and organising my work, so my tasks will always be done on time in necessary standard.
                          <br />
                     </Typography>
 
                     {p_spacing}
 
-                    <Typography // @ts-ignore 
-                               variant="p">
+                    <Typography variant="p">
                          I’m happy working on my own, but I have also like to work as part of the team.
                          <br />
                     </Typography>
 
                     {p_spacing}
 
-                    <Typography // @ts-ignore 
-                               variant="p">
+                    <Typography variant="p">
                          I'm very positive, creative, flexible and responsible.
 
                          <br />
@@ -84,54 +81,47 @@ const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => 
 
                     {p_spacing}
 
-                    <Typography // @ts-ignore 
-                               variant="p">
+                    <Typography variant="p">
                          Experience working with dynamic content.
                          <br />
                     </Typography>
 
                     {p_spacing}
 
-                    <Typography // @ts-ignore 
-                               variant="p">
+                    <Typography variant="p">
                          Problem Solving Skills. Attention to Detail.
                          <br />
                     </Typography>
 
                     {p_spacing}
 
-                    <Typography // @ts-ignore 
-                               variant="p">
+                    <Typography variant="p">
                          Good understanding working with APIs (RESTful services).
                          <br />
                     </Typography>
 
                     {p_spacing}
 
-                    <Typography // @ts-ignore 
-                               variant="p">
+                    <Typography variant="p">
                          I’m very focusin my work
                          <br />
                     </Typography>
 
-                    <Typography // @ts-ignore 
-                               variant="p">
+                    <Typography variant="p">
                          Developing with ReactJS single page JavaScript Applications.
                          <br />
                     </Typography>
 
                     {p_spacing}
 
-                    <Typography // @ts-ignore 
-                               variant="p">
+                    <Typography variant="p">
                          Web developer able to build an application from the ground up, from concept, navigation, working with data and programming to UX.
                          <br />
                     </Typography>
 
                     {p_spacing}
 
-                    <Typography // @ts-ignore 
-                               variant="p">
+                    <Typography variant="p">
                          Skilled at writing well designed, efficient code using current best practices in Web development.
                          <br />
                     </Typography>
