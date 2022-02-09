@@ -1,25 +1,22 @@
 import Img_handle_inview from '../illustration/Img_handle_inview';
-import { Card, CardContent, Typography, Box, useTheme } from '@mui/material';
+import { Card, CardContent, Typography, Box, useTheme, Theme } from '@mui/material';
 import styles from './sectionsStyles.module.scss';
 import { useSelector } from 'react-redux';
 import { IProps } from './_CombineSections';
-import { IColors } from '../../store/appColors';
-import { Theme } from '@mui/material/styles';
 import { TState } from '../../store/hooks';
 
 
 const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => {
 
 
-     const min_width_600px: boolean = useSelector((state: TState) => state.min_width_600px_Reducer.value);
-     const colors: IColors = useSelector((state: TState) => state.appColorsReducer.value);
+     const min_width_600px = useSelector((state: TState) => state.min_width_600px_Reducer.value);
+     const colors = useSelector((state: TState) => state.appColorsReducer.value);
 
-     const { strongText, thirdLettersColor }: 
-           { strongText: string, thirdLettersColor: string } = colors;
+     const { strongText, thirdLettersColor } = colors;
 
      const theme: Theme = useTheme();
 
-     const cardTitle: JSX.Element = (
+     const cardTitle = (
           <Card sx={{ ...cardStyle, ...{ mb: min_width_600px ? -2 : -3.7 } }} >
                <Box className={styles.borderBottomStyle} style={{ color: strongText }}>
                     <Typography className={styles.h3_Style} variant="h3"
@@ -30,7 +27,7 @@ const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => 
                </Box>
           </Card>
      );
-     const img: JSX.Element = (
+     const img = (
           <Box sx={{ mt: theme.spacing(-1), mb: theme.spacing(min_width_600px ? 0.7 : 1.5) }}>
                <Img_handle_inview
                     src={'./me.svg'}
@@ -42,7 +39,7 @@ const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => 
 
      const h4_Style = { mt: 1.7, color: thirdLettersColor };
 
-     const leftSection: JSX.Element = (
+     const leftSection = (
           <Card sx={L_R_cardsStyle}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
@@ -81,7 +78,7 @@ const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => 
           </Card>
      );
 
-     const rightSection: JSX.Element = (
+     const rightSection = (
           <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 2.2 : -2 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 

@@ -1,6 +1,6 @@
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
-import { TypewriterProps } from 'react-simple-typewriter/dist/Hooks/useTypewriter';
+
 
 interface ITypeWriter {
      (sentence: string[], typeSpeed?: number): JSX.Element;

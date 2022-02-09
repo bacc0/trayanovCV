@@ -8,7 +8,6 @@ import Technologies from './2_Technologies';
 import { motion } from 'framer-motion';
 import { TState } from '../../store/hooks';
 import { useSelector } from 'react-redux';
-import { IColors } from '../../store/appColors';
 
 interface IL_R_cardsStyle {
      m: number;
@@ -34,15 +33,14 @@ export interface IProps {
 };
 
 
-const _CombineSections: React.FC<{}> = (): JSX.Element => {
+const _CombineSections: React.FC = () => {
 
 
-     const min_width_600px: boolean = useSelector((state: TState) => state.min_width_600px_Reducer.value);
-     const colors: IColors = useSelector((state: TState) => state.appColorsReducer.value);
-     const { strongText, separationsColor, footerColor }:
-          { strongText: string, separationsColor: string, footerColor: string } = colors;
+     const min_width_600px = useSelector((state: TState) => state.min_width_600px_Reducer.value);
+     const colors = useSelector((state: TState) => state.appColorsReducer.value);
+     const { strongText, separationsColor, footerColor } = colors;
 
-     const p_spacing: JSX.Element = (<Box sx={{ height: '11px' }} />);
+     const p_spacing = (<Box sx={{ height: '11px' }} />);
 
      const L_R_cardsStyle: IL_R_cardsStyle = {
           m: 0,

@@ -4,29 +4,21 @@ import Veselin from '../illustration/Veselin';
 import { Box, Card } from '@mui/material';
 import { TState } from '../../store/hooks';
 import { useSelector } from 'react-redux';
-import { IColors } from '../../store/appColors';
-
-interface IStyle  {
-     card_container: {
-         background: string;
-         boxShadow: number;
-     }
-};
 
 
-const PageNav: React.FC<{}> = () => {
+const PageNav: React.FC = () => {
 
 
-     const colors: IColors = useSelector((state: TState) => state.appColorsReducer.value);
+     const colors = useSelector((state: TState) => state.appColorsReducer.value);
     
-     const style: IStyle = {
+     const style = {
           card_container: {
                background: 'transparent',
                boxShadow: 0,
           }
      };
 
-     const cardTitle: JSX.Element = (
+     const cardTitle = (
           <Card sx={style.card_container} className={styles.card_container}>
                <Box>
                     <Veselin color={colors.bodyColor} />

@@ -6,9 +6,11 @@ import { TState } from '../../store/hooks';
 import  typeWriter  from '../sections/helpers/TypeWriter';
 import { useSelector } from 'react-redux';
 
+
 interface Props {
      color: string;
 };
+
 
 const Veselin: React.FC<Props> = ({ color }) => {
      // const Veselin: React.FC<Props> = ({ color }: Props): JSX.Element => {
@@ -36,27 +38,25 @@ const Veselin: React.FC<Props> = ({ color }) => {
           width: '81px',
           height: '50px',
           overflow: 'hidden',
-          position: 'absolute',
+          position: 'absolute' 
      };
 
-     const colibri: JSX.Element = (
+     const colibri = (
           <motion.div
                initial={{ opacity: 0, scale: 0.9, x: 11, y: -11 }}
                animate={{ opacity: 1, scale: 0.8, x: 0, y: 0 }}
                transition={{ delay: 0.2, duration: 0.25 }}
           >
 
-               <div id='colibri_hype_container' className='HYPE_document'
-                    // @ts-ignore 
-                    style={style_colibri} />
+               <div id='colibri_hype_container' className='HYPE_document' style={style_colibri as React.CSSProperties} />
                <Script
                     src='colibri.hyperesources/colibri_hype_generated_script.js?23464'
                     strategy='afterInteractive'
                />
           </motion.div>
-     );
 
-     const [visStart, setVisStart] = useState<boolean>(false);
+);
+     const [visStart, setVisStart] = useState(false);
 
      if (!visStart) {
           setInterval(() => {
@@ -71,15 +71,12 @@ const Veselin: React.FC<Props> = ({ color }) => {
           letterSpacing: 1.3,
           position: 'relative',
           top: -82,
-          left: 53
-     };
+          left: 53 
+     } ;
 
 
-     const typing: JSX.Element = (
-          <Typography variant='h3'
-               // @ts-ignore
-               sx={style_typing}
-          >
+     const typing = (
+          <Typography variant='h3' sx={style_typing as React.CSSProperties}>
                {visStart && (
                     <div>
                          {typeWriter(['... end ', 'front end developer'])}

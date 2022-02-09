@@ -1,10 +1,8 @@
 import Img_handle_inview from '../illustration/Img_handle_inview';
 import styles from './sectionsStyles.module.scss';
-import { Box, Card, CardContent, Typography, useTheme } from '@mui/material';
+import { Box, Card, CardContent, Typography, useTheme, Theme } from '@mui/material';
 import { IProps } from './_CombineSections';
-import { IColors } from '../../store/appColors';
 import { motion } from 'framer-motion';
-import { Theme } from '@mui/material/styles';
 import { TState } from '../../store/hooks';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
@@ -13,15 +11,14 @@ import { useState } from 'react';
 const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => {
 
 
-     const min_width_600px: boolean = useSelector((state: TState) => state.min_width_600px_Reducer.value);
-     const colors: IColors = useSelector((state: TState) => state.appColorsReducer.value);
+     const min_width_600px = useSelector((state: TState) => state.min_width_600px_Reducer.value);
+     const colors = useSelector((state: TState) => state.appColorsReducer.value);
     
-     const { strongText, thirdLettersColor }:
-           { strongText: string, thirdLettersColor: string } = colors;
+     const { strongText, thirdLettersColor } = colors;
 
      const theme: Theme = useTheme();
 
-     const [h3_scale, set_h3_scale] = useState<string>(`scale(0.95)`);
+     const [h3_scale, set_h3_scale] = useState(`scale(0.95)`);
 
      if (h3_scale === `scale(0.95)`) {
           setInterval(() => {
@@ -29,15 +26,12 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
           }, 6000)
      };
 
-     const cardTitle: JSX.Element = (
-          <Card
-               sx={cardStyle}
-          >
+     const cardTitle = (
+          <Card sx={cardStyle}>
                <Box className={styles.borderBottomStyle} style={{ color: strongText }}>
                     <div style={{
                          transform: h3_scale,
                          transition: `transform 200ms linear`,
-
                     }} >
                          <Typography className={styles.h3_Style} variant="h3" style={{ color: strongText }} gutterBottom={true}>
                               Experience
@@ -47,7 +41,7 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
           </Card>
      );
 
-     const img: JSX.Element = (
+     const img = (
           <>
                <Box sx={{ mt: '-4px', height: min_width_600px ? 19 : 0 }} />
 
@@ -130,7 +124,7 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
           )
      };
 
-     const amdocs: JSX.Element = (
+     const amdocs = (
           <Card sx={L_R_cardsStyle}>
                <CardContent
                     sx={{
@@ -152,7 +146,7 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
                     </p>
                     {p_spacing}
                     <Typography  // @ts-ignore 
-                         variant="p"
+                         variant="p" 
                     >
                          Building a new application for the mobile network operator.
                          <br />

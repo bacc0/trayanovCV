@@ -8,24 +8,8 @@ const color_5 = '#2F2E41';
 const color_6 = '#8D30FE';
 const color_7 = '#CF68FE';
 
-export interface IColors {
-     hrColor: string;
-     bodyColor: string;
-     strongText: string;
-     footerColor: string;
-     hrColorMain: string;
-     thirdLogoColor: string;
-     secLettersColor: string;
-     footerTextColor: string;
-     backgroundColor: string;
-     separationsColor: string;
-     primeLettersColor: string;
-     thirdLettersColor: string;
-     backgroundColor_2: string;
-     AppBackgroundColor: string;
-};
 
-const initialState: IColors = {
+const initialState = {
      hrColor: color_2,
      bodyColor: color_5,
      strongText: color_3,

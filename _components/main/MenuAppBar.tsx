@@ -7,43 +7,11 @@ import LocationOnSharpIcon from '@mui/icons-material/LocationOnSharp';
 import styles from './MenuAppBar.module.scss';
 import PhoneEnabledSharpIcon from '@mui/icons-material/PhoneEnabledSharp';
 import { AppBar, Box, IconButton, Stack, Toolbar } from '@mui/material';
-import { IColors } from '../../store/appColors';
 import { themeActions } from '../../store/themeState';
 import { TState } from '../../store/hooks';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dispatch } from 'redux';
 import { useEffect, useRef, useState } from 'react';
-
-
-interface IHandleThemeChange {
-     (): void;
-};
-interface IToolbarStyle {
-     margin: string;
-     maxWidth: number;
-     transform: string;
-     transition: string;
-     transitionDelay: string;
-};
-interface IUnderAppBar {
-     height: number;
-     backgroundColor: string;
-};
-interface IIconsStackStyle {
-     justifyContent: string;
-};
-interface IIconsStackStyle_Left {
-     width: string | number;
-     paddingRight: string;
-};
-interface IIconsStackStyle_Right {
-     justifyContent: string;
-     width: string | number;
-};
-interface IIconsStyle {
-     color: string;
-     transition: string;
-};
 
 
 const MenuAppBar: React.FC<{}> = () => {
@@ -52,23 +20,19 @@ const MenuAppBar: React.FC<{}> = () => {
      const dispatch: Dispatch<any> = useDispatch();
 
      const scrollDirection: string = useSelector((state: TState) => state.scrollDirectionReducer.value);
-     const positionY: number = useSelector((state: TState) => state.Y_PositionReducer.value);
-     const theme: string = useSelector((state: TState) => state.themeReducer.color);
-     const min_width_600px: boolean = useSelector((state: TState) => state.min_width_600px_Reducer.value);
-     const colors: IColors = useSelector((state: TState) => state.appColorsReducer.value);
-     const currentBrowser: string = useSelector((state: TState) => state.currentBrowserReducer.value);
+     const positionY = useSelector((state: TState) => state.Y_PositionReducer.value);
+     const theme = useSelector((state: TState) => state.themeReducer.color);
+     const min_width_600px  = useSelector((state: TState) => state.min_width_600px_Reducer.value);
+     const colors = useSelector((state: TState) => state.appColorsReducer.value);
+     const currentBrowser = useSelector((state: TState) => state.currentBrowserReducer.value);
 
-     const { strongText, thirdLettersColor, hrColorMain, AppBackgroundColor, secLettersColor }:
-          {
-               strongText: string, thirdLettersColor: string,
-               hrColorMain: string, AppBackgroundColor: string, secLettersColor: string
-          } = colors;
+     const { strongText, thirdLettersColor, hrColorMain, AppBackgroundColor, secLettersColor } = colors;
 
-     const renderCounter = useRef<number>(0);
+     const renderCounter = useRef(0);
      renderCounter.current = renderCounter.current + 1;
 
-     const [appBarIsVisible, setAppBarIsVisible] = useState<boolean>(false);
-     const [marker, setMarker] = useState<boolean>(false);
+     const [appBarIsVisible, setAppBarIsVisible] = useState(false);
+     const [marker, setMarker] = useState(false);
 
      useEffect(() => {
           if (positionY < 0.035) {
@@ -89,10 +53,10 @@ const MenuAppBar: React.FC<{}> = () => {
           }
      }, [positionY]);
 
-     const handleThemeChange: IHandleThemeChange = () => {
+     const handleThemeChange = () => {
           dispatch(themeActions.TOGGLE_THEME());
      };
-     const [transitionDirection, setTransitionDirection] = useState<string>('down');
+     const [transitionDirection, setTransitionDirection] = useState('down');
 
      useEffect(() => {
           setInterval(() => {
@@ -103,7 +67,7 @@ const MenuAppBar: React.FC<{}> = () => {
 
      }, [scrollDirection]);
 
-     const [navBackgroundColor, setNavBackgroundColor] = useState<string>(`${AppBackgroundColor}fd`);
+     const [navBackgroundColor, setNavBackgroundColor] = useState(`${AppBackgroundColor}fd`);
 
      useEffect(() => {
           setNavBackgroundColor(
@@ -125,7 +89,7 @@ const MenuAppBar: React.FC<{}> = () => {
 
      } as React.CSSProperties;
 
-     const ToolbarStyle: IToolbarStyle = {
+     const ToolbarStyle = {
           margin: '0 auto',
           maxWidth: min_width_600px ? 546 : 398,
           transform:
@@ -134,22 +98,22 @@ const MenuAppBar: React.FC<{}> = () => {
           transition: `transform 230ms ease-in`,
           transitionDelay: appBarIsVisible ? `0.09s` : `0s`
      };
-     const underAppBar: IUnderAppBar = {
+     const underAppBar = {
           height: min_width_600px ? 70 : 60,
           backgroundColor: 'transparent',
      };
-     const iconsStackStyle: IIconsStackStyle = {
+     const iconsStackStyle = {
           justifyContent: min_width_600px ? 'space-between' : 'center',
      };
-     const iconsStackStyle_Left: IIconsStackStyle_Left = {
+     const iconsStackStyle_Left = {
           width: min_width_600px ? 249 : '83%',
           paddingRight: '2.6%',
      };
-     const iconsStackStyle_Right: IIconsStackStyle_Right = {
+     const iconsStackStyle_Right = {
           justifyContent: min_width_600px ? 'flex-end' : 'center',
           width: min_width_600px ? 200 : '16%',
      };
-     const iconsStyle: IIconsStyle = {
+     const iconsStyle = {
           color: strongText,
           transition: `color 500ms ease`,
      };

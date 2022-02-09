@@ -16,7 +16,7 @@ import { windowSizeActions } from '../store/windowSize';
 import { Y_PositionActions } from '../store/PositionY';
 
 
-const Home: React.FC<{}> = (): JSX.Element => {
+const Home: React.FC = () => {
 
 
      const dispatch: Dispatch<any> = useDispatch();
