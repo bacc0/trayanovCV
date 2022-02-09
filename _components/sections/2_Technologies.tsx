@@ -5,6 +5,9 @@ import { IProps } from './_CombineSections';
 import { TState } from '../../store/hooks';
 import { useSelector } from 'react-redux';
 
+const techs = ['ReactJS', 'Hook', 'NextJS', 'Redux', 'Javascript', 'MUI Material UI', 'HTML CSS SASS', 'Framer Motion', `SVG's animations`, 'Shapes shifter', 'GIMP', 'Photoshop Adobe', 'Illustrator Adobe', 'Graphic Autodesk', 'Typescript', 'NodeJS', 'Express', 'Agile Scrum', 'Jira', 'Git Github Bitbucket', 'Sourcetree'];
+const midOfArr =  (techs.length - 7 ) / 2;
+
 
 const Technologies: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => {
 
@@ -12,7 +15,7 @@ const Technologies: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }
      const min_width_600px = useSelector((state: TState) => state.min_width_600px_Reducer.value);
      const colors = useSelector((state: TState) => state.appColorsReducer.value);
 
-     const { backgroundColor_2, strongText }= colors;
+     const { backgroundColor_2, strongText } = colors;
 
      const theme: Theme = useTheme();
 
@@ -37,61 +40,31 @@ const Technologies: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }
      const leftSection = (
           <Card sx={L_R_cardsStyle}>
                <CardContent sx={{ p: 0, mt: 1.8, mb: -3.3, color: strongText }}>
-
-                    <Typography variant="p">ReactJS<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">Hook<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">NextJS<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">Redux<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">Javascript<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">MUI Material UI<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">HTML CSS SASS<br /></Typography>
-                    {p_spacing}
-                   
-                    <Typography variant="p">Framer Motion<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">SVG's animations<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">Shapes shifter<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">GIMP<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">Photoshop Adobe<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">Illustrator Adobe <br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">Graphic Autodesk <br /></Typography>
-                    {p_spacing}
-
+                    {techs.map((tech, i) => (
+                         midOfArr + 7 > i && (
+                              <>
+                                   <Typography variant="p" key={i}>{tech}<br /></Typography>
+                                   {p_spacing}
+                              </>
+                         )
+                    ))}
                </CardContent>
           </Card>
-     )
+     );
      const rightSection = (
           <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.9 : -0.3 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
-
-                    <Typography variant="p">Typescript<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">NodeJS<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">Express<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p"> Agile Scrum <br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">Jira<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p">Git Github Bitbucket<br /></Typography>
-                    {p_spacing}
-                    <Typography variant="p"> Sourcetree<br /></Typography>
-
+               {techs.map((tech, i) => (
+                         midOfArr + 7 <= i && (
+                              <>
+                                   <Typography variant="p" key={i}>{tech}<br /></Typography>
+                                   {p_spacing}
+                              </>
+                         )
+                    ))}
                </CardContent>
           </Card>
-     )
+     );
 
 
      return (

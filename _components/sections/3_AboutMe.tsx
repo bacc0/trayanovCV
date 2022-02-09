@@ -5,7 +5,29 @@ import { useSelector } from 'react-redux';
 import { IProps } from './_CombineSections';
 import { TState } from '../../store/hooks';
 
+const aboutMe = [
+     `I’m very good on planning and organising my work, so my tasks will always be done on time in necessary standard.`,
 
+     `I’m happy working on my own, but I have also like to work as part of the team.`,
+
+     `I'm very positive, creative, flexible and responsible.`,
+
+     `Experience working with dynamic content.`,
+
+     `Problem Solving Skills. Attention to Detail.`,
+
+     `Good understanding working with APIs (RESTful services).`,
+
+     `I’m very focus in my work.`,
+
+     ` Able to build an application from concept to the UX.`,
+
+     `Skilled at writing well designed, efficient code using current best practices in Web development.`
+];
+
+const midOfArr = (aboutMe.length - 5) / 2;
+
+console.log(midOfArr)
 const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => {
 
 
@@ -42,35 +64,19 @@ const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => 
      const leftSection = (
           <Card sx={L_R_cardsStyle}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
-
                     <Typography className={styles.h4_Style} variant="h4" style={h4_Style}>
                          Skills
                     </Typography>
-
                     {p_spacing}
 
-                    <Typography variant="p">
-                         I’m very good on planning and organising my work, so my tasks will always be done on time in necessary standard.
-                         <br />
-                    </Typography>
-
-                    {p_spacing}
-
-                    <Typography variant="p">
-                         I’m happy working on my own, but I have also like to work as part of the team.
-                         <br />
-                    </Typography>
-
-                    {p_spacing}
-
-                    <Typography variant="p">
-                         I'm very positive, creative, flexible and responsible.
-
-                         <br />
-                    </Typography>
-
-                    {p_spacing}
-
+                    {aboutMe.map((tech, i) => (
+                         midOfArr > i && (
+                              <>
+                                   <Typography variant="p" key={i}>{tech}<br /></Typography>
+                                   {p_spacing}
+                              </>
+                         )
+                    ))}
                </CardContent>
           </Card>
      );
@@ -78,56 +84,14 @@ const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => 
      const rightSection = (
           <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 2.2 : -2 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
-
-                    {p_spacing}
-
-                    <Typography variant="p">
-                         Experience working with dynamic content.
-                         <br />
-                    </Typography>
-
-                    {p_spacing}
-
-                    <Typography variant="p">
-                         Problem Solving Skills. Attention to Detail.
-                         <br />
-                    </Typography>
-
-                    {p_spacing}
-
-                    <Typography variant="p">
-                         Good understanding working with APIs (RESTful services).
-                         <br />
-                    </Typography>
-
-                    {p_spacing}
-
-                    <Typography variant="p">
-                         I’m very focusin my work
-                         <br />
-                    </Typography>
-
-                    <Typography variant="p">
-                         Developing with ReactJS single page JavaScript Applications.
-                         <br />
-                    </Typography>
-
-                    {p_spacing}
-
-                    <Typography variant="p">
-                         Web developer able to build an application from the ground up, from concept, navigation, working with data and programming to UX.
-                         <br />
-                    </Typography>
-
-                    {p_spacing}
-
-                    <Typography variant="p">
-                         Skilled at writing well designed, efficient code using current best practices in Web development.
-                         <br />
-                    </Typography>
-
-                    {p_spacing}
-
+                    {aboutMe.map((tech, i) => (
+                         midOfArr <= i && (
+                              <>
+                                   <Typography variant="p" key={i}>{tech}<br /></Typography>
+                                   {p_spacing}
+                              </>
+                         )
+                    ))}
                </CardContent>
           </Card>
      );
