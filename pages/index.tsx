@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from '../store/index';
 
 import { ThemeProvider } from '@mui/material/styles';
-import theme from '../_theme';
+import theme from '../MUI.theme';
 
 
 const Main: React.VFC = () => {  //    VFC === VoidFunctionComponent 
