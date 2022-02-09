@@ -8,9 +8,10 @@ import { TState } from '../../store/hooks';
 const aboutMe = [
      `I’m very good on planning and organising my work, so my tasks will always be done on time in necessary standard.`,
 
+     `I'm very positive, creative, flexible and responsible.`,
+     
      `I’m happy working on my own, but I have also like to work as part of the team.`,
 
-     `I'm very positive, creative, flexible and responsible.`,
 
      `Experience working with dynamic content.`,
 
