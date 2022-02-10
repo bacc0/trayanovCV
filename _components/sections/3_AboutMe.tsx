@@ -4,31 +4,12 @@ import styles from './sectionsStyles.module.scss';
 import { useSelector } from 'react-redux';
 import { IProps } from './_CombineSections';
 import { TState } from '../../store/hooks';
-
-const aboutMe = [
-     `I’m very good on planning and organising my work, so my tasks will always be done on time in necessary standard.`,
-
-     `I'm very positive, creative, flexible and responsible.`,
-     
-     `I’m happy working on my own, but I have also like to work as part of the team.`,
+import json from './data.json';
 
 
-     `Experience working with dynamic content.`,
+const mid_aboutMeDescription = Number(((json.data.aboutMeDescription.length - 5) / 2).toFixed(0));
 
-     `Problem Solving Skills. Attention to Detail.`,
 
-     `Good understanding working with APIs (RESTful services).`,
-
-     `I’m very focus in my work.`,
-
-     ` Able to build an application from concept to the UX.`,
-
-     `Skilled at writing well designed, efficient code using current best practices in Web development.`
-];
-
-const midOfArr = (aboutMe.length - 5) / 2;
-
-console.log(midOfArr)
 const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => {
 
 
@@ -70,12 +51,15 @@ const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => 
                     </Typography>
                     {p_spacing}
 
-                    {aboutMe.map((tech, i) => (
-                         midOfArr > i && (
-                              <>
-                                   <Typography variant="p" key={i}>{tech}<br /></Typography>
+                    {json.data.aboutMeDescription.map((tech, i) => (
+                         mid_aboutMeDescription > i && (
+                              <div key={i}>
+                                   <Typography variant="p">
+                                        {tech}
+                                        <br />
+                                   </Typography>
                                    {p_spacing}
-                              </>
+                              </div>
                          )
                     ))}
                </CardContent>
@@ -85,12 +69,15 @@ const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => 
      const rightSection = (
           <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 2.2 : -2 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
-                    {aboutMe.map((tech, i) => (
-                         midOfArr <= i && (
-                              <>
-                                   <Typography variant="p" key={i}>{tech}<br /></Typography>
+                    {json.data.aboutMeDescription.map((tech, i) => (
+                         mid_aboutMeDescription <= i && (
+                              <div key={i}>
+                                   <Typography variant="p">
+                                        {tech}
+                                        <br />
+                                   </Typography>
                                    {p_spacing}
-                              </>
+                              </div>
                          )
                     ))}
                </CardContent>

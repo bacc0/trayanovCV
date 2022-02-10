@@ -1,0 +1,75 @@
+{
+	"data": {
+		"contactInfo": {
+			"name": "Ricard Rosson",
+			"mail": "ricard@iacos.net"
+		},
+		"experienceDescription": {
+               "0": {
+				"position": "React Developer",
+				"company": "Groundbits Ltd",
+				"period": "Jan 2020 – Jan 2021",
+				"description": [
+					"Developing a Website Builder.",
+					"Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation."
+				]
+			},
+			"1": {
+				"position": "React Developer",
+				"company": "Amdocs via Appgr8",
+				"period": "July 2021 - Nov 2021",
+				"description": [
+					"Building a new application for the mobile network operator.",
+					"Using REACT, MATERIAL UI, TYPESCRIPT, SOURCETREE, BITBUCKET ect.",
+					"For the software development the company used AGILE with the SCRUM framework and JIRA."
+				]
+			},
+               "2": {
+				"position": "React Developer",
+				"company": "Groundbits Ltd",
+				"period": "Dec 2021 – ",
+				"description": [
+					"Developing a Website Builder.",
+					"Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation."
+				]
+			}
+		},
+		"techStackDescription": [
+			"ReactJS",
+			"Hook",
+			"NextJS",
+			"Redux",
+			"Javascript",
+			"MUI Material UI",
+			"HTML CSS SASS",
+			"Framer Motion",
+
+			"SVG's animations",
+			"Shapes shifter",
+			"GIMP",
+			"Photoshop Adobe",
+			"Illustrator Adobe",
+			"Graphic Autodesk",
+
+			"Typescript",
+			"NodeJS",
+			"Express",
+			"Agile Scrum",
+			"Jira",
+			"Git Github Bitbucket",
+			"Sourcetree"
+		],
+		"aboutMeDescription": [
+			"I’m very good on planning and organising my work, so my tasks will always be done on time in necessary standard.",
+			"I'm very positive, creative, flexible and responsible.",
+
+			"I’m happy working on my own, but I have also like to work as part of the team.",
+			"Experience working with dynamic content.",
+			"Problem Solving Skills. Attention to Detail.",
+			"Good understanding working with APIs (RESTful services).",
+			"I’m very focus in my work.",
+			" Able to build an application from concept to the UX.",
+			"Skilled at writing well designed, efficient code using current best practices in Web development."
+		]
+	}
+}

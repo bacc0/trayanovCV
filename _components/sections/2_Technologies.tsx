@@ -4,9 +4,10 @@ import { Card, CardContent, Typography, Box, useTheme, Theme } from '@mui/materi
 import { IProps } from './_CombineSections';
 import { TState } from '../../store/hooks';
 import { useSelector } from 'react-redux';
+import json from './data.json';
 
-const techs = ['ReactJS', 'Hook', 'NextJS', 'Redux', 'Javascript', 'MUI Material UI', 'HTML CSS SASS', 'Framer Motion', `SVG's animations`, 'Shapes shifter', 'GIMP', 'Photoshop Adobe', 'Illustrator Adobe', 'Graphic Autodesk', 'Typescript', 'NodeJS', 'Express', 'Agile Scrum', 'Jira', 'Git Github Bitbucket', 'Sourcetree'];
-const midOfArr =  (techs.length - 7 ) / 2;
+
+const mid_techStackDescription = Number(((json.data.techStackDescription.length - 7) / 2).toFixed(0));
 
 
 const Technologies: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => {
@@ -40,12 +41,15 @@ const Technologies: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }
      const leftSection = (
           <Card sx={L_R_cardsStyle}>
                <CardContent sx={{ p: 0, mt: 1.8, mb: -3.3, color: strongText }}>
-                    {techs.map((tech, i) => (
-                         midOfArr + 7 > i && (
-                              <>
-                                   <Typography variant="p" key={i}>{tech}<br /></Typography>
+                    {json.data.techStackDescription.map((tech, i) => (
+                         mid_techStackDescription + 7 > i && (
+                              <div key={i}>
+                                   <Typography variant="p">
+                                        {tech}
+                                        <br />
+                                   </Typography>
                                    {p_spacing}
-                              </>
+                              </div>
                          )
                     ))}
                </CardContent>
@@ -54,12 +58,15 @@ const Technologies: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }
      const rightSection = (
           <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.9 : -0.3 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
-               {techs.map((tech, i) => (
-                         midOfArr + 7 <= i && (
-                              <>
-                                   <Typography variant="p" key={i}>{tech}<br /></Typography>
+               {json.data.techStackDescription.map((tech, i) => (
+                         mid_techStackDescription + 7 <= i && (
+                              <div key={i}>
+                                   <Typography variant="p">
+                                        {tech}
+                                        <br />
+                                   </Typography>
                                    {p_spacing}
-                              </>
+                              </div>
                          )
                     ))}
                </CardContent>

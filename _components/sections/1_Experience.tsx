@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { TState } from '../../store/hooks';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+import json from './data.json';
 
 
 const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => {
@@ -13,7 +14,7 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
 
      const min_width_600px = useSelector((state: TState) => state.min_width_600px_Reducer.value);
      const colors = useSelector((state: TState) => state.appColorsReducer.value);
-    
+
      const { strongText, thirdLettersColor } = colors;
 
      const theme: Theme = useTheme();
@@ -41,15 +42,13 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
           </Card>
      );
 
-     const img = (
+     const image = (
           <>
                <Box sx={{ mt: '-4px', height: min_width_600px ? 19 : 0 }} />
-
                <Img_handle_inview
                     src={'./exp.svg'}
                     min_width_600px={min_width_600px}
                     width={230}
-
                />
                <Box sx={{ height: min_width_600px ? 0 : 3 }} />
           </>
@@ -58,108 +57,71 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
      const h4_Style = { mt: 1.7, color: thirdLettersColor };
      const h5_Style = { mt: 0.6, mb: 3.24, color: thirdLettersColor };
 
-     interface IGroundbits {
-          ( period: string, contact?: string, mail?: string ): JSX.Element;
-     };
+     const contactInfo_picture = (
+          <Card sx={L_R_cardsStyle}>
+               <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
+                    <Typography className={styles.period_style} variant="p"
+                         style={{ color: strongText }}
+                    >
+                         {json.data.contactInfo.name}
+                         <br />
+                    </Typography>
+                    <Box sx={{ height: theme.spacing(0.35) }} />
+                    <Typography variant="p">
+                         {json.data.contactInfo.mail}
+                    </Typography>
+                    <Box sx={{ height: theme.spacing(min_width_600px ? 2.3 : 4.1) }} />
+                    {image}
+               </CardContent>
+          </Card >
+     );
 
-     const groundbits: IGroundbits = (period, contact, mail) => {
+     const monthNames = [
+          "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+     ];
+     const currentMonth = monthNames[new Date().getMonth()];
+     const currentYear = new Date().getFullYear();
+
+     const displayCard = (period: string) => {
           return (
                <Card sx={L_R_cardsStyle}>
-                    <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
 
-                         <Typography
-                              className={styles.h4_Style} variant="h4"
-                              style={h4_Style}
-                         >
-                              React Developer
+                    <CardContent
+                         sx={{
+                              p: 0,
+                              mt: min_width_600px ? '0px' : '30px',
+                              mb: min_width_600px ? '-3px' : '-7px',
+                              color: strongText
+                         }}
+                    >
+                         <Typography className={styles.h4_Style} variant="h4" style={h4_Style}>
+                              {json.data.experienceDescription[period].position}
                          </Typography>
-                         <Typography className={styles.h5_Style} variant="h5"
-                              style={h5_Style}
-                         >
-                              Groundbits Ltd
+                         <Typography className={styles.h5_Style} variant="h5" style={h5_Style}>
+                              {json.data.experienceDescription[period].company}
                          </Typography>
-                         <p className={styles.period_style} style={{ color: strongText }}>
-                              {period}
+                         <p style={{ fontWeight: 'bold', color: strongText }}>
+                              {json.data.experienceDescription[period].period}
+                              {period === '2' && currentMonth} {' '}
+                              {period === '2' && currentYear}
                               <br />
                          </p>
-                         {p_spacing}
-                         <Typography variant="p">
-                              Developing a Website Builder.
-                              <br />
-                         </Typography>
-                         {p_spacing}
-                         <Typography variant="p">
-                              Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation.
-                              <br />
-                         </Typography>
-                         {p_spacing}
-                         {
-                              contact && (
-                                   <>
-                                        {p_spacing}
-                                        <Typography className={styles.period_style} variant="p"
-                                             style={{ color: strongText }}
-                                        >
-                                             {contact}
+                         {json.data.experienceDescription[period]
+                              .description.map((paragraph: string, i: number) => (
+                                   <div key={i}>
+                                        <Typography variant="p">
+                                             {paragraph}
                                              <br />
                                         </Typography>
-                                        <Box sx={{ height: theme.spacing(0.35) }} />
-                                        <Typography  variant="p"
-                                        >
-                                             {mail}
-                                        </Typography>
-                                        <Box sx={{ height: theme.spacing(min_width_600px ? 2.3 : 4.1) }} />
-                                        {img}
-                                   </>
-                              )
-                         }
+                                        {p_spacing}
+                                   </div>
+                              ))}
                     </CardContent>
-               </Card>
+               </Card >
           )
      };
 
-     const amdocs = (
-          <Card sx={L_R_cardsStyle}>
-               <CardContent
-                    sx={{
-                         p: 0,
-                         mt: min_width_600px ? '0px' : '30px',
-                         mb: min_width_600px ? '-3px' : '-7px',
-                         color: strongText
-                    }}
-               >
-                    <Typography className={styles.h4_Style} variant="h4" style={h4_Style}>
-                         React Developer
-                    </Typography>
-                    <Typography className={styles.h5_Style} variant="h5" style={h5_Style}>
-                         Amdocs via Appgr8
-                    </Typography>
-                    <p style={{ fontWeight: 'bold', color: strongText }}>
-                         July 2021 - Nov 2021
-                         <br />
-                    </p>
-                    {p_spacing}
-                    <Typography variant="p" 
-                    >
-                         Building a new application for the mobile network operator.
-                         <br />
-                    </Typography>
-                    {p_spacing}
-                    <Typography variant="p"
-                    >
-                         Using REACT, MATERIAL UI, TYPESCRIPT, SOURCETREE, BITBUCKET ect.
-                         <br />
-                    </Typography>
-
-                    {p_spacing}
-                    <Typography variant="p"
-                    >
-                         For the software development the company used AGILE with the SCRUM framework and JIRA.
-                         <br />
-                    </Typography>
-               </CardContent>
-          </Card>
-     )
 
      return (
           <div className={styles.sectionsContainer}
@@ -172,19 +134,16 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
                          animate={{ opacity: 1, y: 0 }}
                          transition={{ delay: 0.25, duration: 0.25, ease: 'easeInOut' }}
                     >
-
                          <Box className={styles.sectionsBody}>
                               <Box className={styles.sections}>
-
-                                   {groundbits('Dec 2021 – Present', 'Ricard Rosson', 'ricard@iacos.net')}
+                                   {displayCard('2')}
+                                   {contactInfo_picture}
                               </Box>
-
                               <Box className={styles.sections}>
-
                                    <Box sx={{ height: theme.spacing(min_width_600px ? 0 : 2.4) }} />
-                                   {amdocs}
+                                   {displayCard('1')}
                                    <Box sx={{ height: theme.spacing(2.4) }} />
-                                   {groundbits('Jan 2020 – Jan 2021')}
+                                   {displayCard('0')}
                               </Box>
                          </Box>
                     </motion.div>

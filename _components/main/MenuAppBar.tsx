@@ -84,7 +84,7 @@ const MenuAppBar: React.FC<{}> = () => {
           transform: `scaleY(${appBarIsVisible ? 1 : 0.8})`,
           transition: `top 330ms linear, transform ${scrollDirection === 'up' ? 330 : 0}ms linear`,
           borderBottom: `0.3px solid ${secLettersColor}55`,
-          transitionDelay: `1.2s`,
+          // transitionDelay: `1.2s`,
           backgroundColor: navBackgroundColor,
 
      } as React.CSSProperties;
@@ -96,7 +96,7 @@ const MenuAppBar: React.FC<{}> = () => {
                `scaleY(${appBarIsVisible ? 1 : 0.62}) 
                 scaleX(${appBarIsVisible ? 1 : 0.62})`,
           transition: `transform 230ms ease-in`,
-          transitionDelay: appBarIsVisible ? `0.09s` : `0s`
+          // transitionDelay: appBarIsVisible ? `0.09s` : `0s`
      };
      const underAppBar = {
           height: min_width_600px ? 70 : 60,
@@ -209,4 +209,4 @@ const MenuAppBar: React.FC<{}> = () => {
      )
 };
 
-export default MenuAppBar
+export default MenuAppBar;
