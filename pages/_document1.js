@@ -7,7 +7,6 @@ class MyDocument extends Document {
           return { ...initialProps }
      }
 
-     
      render() {
           return (
                <Html>
@@ -21,4 +20,4 @@ class MyDocument extends Document {
      }
 }
 
-export default MyDocument
+export default MyDocument;

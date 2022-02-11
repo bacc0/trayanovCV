@@ -6,7 +6,6 @@ import { IProps } from './_CombineSections';
 import { TState } from '../../store/hooks';
 import json from './data.json';
 
-
 const mid_aboutMeDescription = Number(((json.data.aboutMeDescription.length - 5) / 2).toFixed(0));
 
 
@@ -107,6 +106,7 @@ const AboutMe: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) => 
           </div>
      )
 };
+
 
 export default AboutMe;
 

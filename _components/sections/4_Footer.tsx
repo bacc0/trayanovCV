@@ -116,6 +116,7 @@ const Footer: React.FC<IProps> = ({ cardStyle, p_spacing }) => {
      )
 };
 
+
 export default Footer;
 
 

@@ -76,17 +76,13 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
           </Card >
      );
 
-     const monthNames = [
-          "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-     ];
+     const monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
      const currentMonth = monthNames[new Date().getMonth()];
      const currentYear = new Date().getFullYear();
 
      const displayCard = (period: string) => {
           return (
                <Card sx={L_R_cardsStyle}>
-
                     <CardContent
                          sx={{
                               p: 0,
@@ -151,5 +147,6 @@ const Experience: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }) 
           </div>
      )
 };
+
 
 export default Experience;

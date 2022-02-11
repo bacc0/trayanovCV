@@ -5,7 +5,7 @@ import { IProps } from './_CombineSections';
 import { TState } from '../../store/hooks';
 import { useSelector } from 'react-redux';
 import json from './data.json';
-
+import { VpnLockTwoTone } from '@mui/icons-material';
 
 const mid_techStackDescription = Number(((json.data.techStackDescription.length - 7) / 2).toFixed(0));
 
@@ -55,6 +55,7 @@ const Technologies: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }
                </CardContent>
           </Card>
      );
+     
      const rightSection = (
           <Card sx={{ ...L_R_cardsStyle, ...{ mt: min_width_600px ? 1.9 : -0.3 } }}>
                <CardContent sx={{ p: 0, mb: -3.3, color: strongText }}>
@@ -94,6 +95,7 @@ const Technologies: React.FC<IProps> = ({ L_R_cardsStyle, p_spacing, cardStyle }
           </div>
      )
 };
+
 
 export default Technologies;
 
