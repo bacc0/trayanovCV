@@ -4,8 +4,8 @@
       "name": "Ricard Rosson",
       "mail": "ricard@iacos.net"
     },
-    "experienceDescription": {
-      "0": {
+    "experienceDescription": [
+      {
         "position": "React Developer",
         "company": "Groundbits Ltd",
         "period": "Jan 2020 – Jan 2021",
@@ -14,7 +14,7 @@
           "Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation."
         ]
       },
-      "1": {
+      {
         "position": "React Developer",
         "company": "Amdocs via Appgr8",
         "period": "July 2021 - Nov 2021",
@@ -24,7 +24,7 @@
           "For the software development the company used AGILE with the SCRUM framework and JIRA."
         ]
       },
-      "2": {
+      {
         "position": "React Developer",
         "company": "Groundbits Ltd",
         "period": "Dec 2021 – ",
@@ -33,7 +33,7 @@
           "Using REACT with NEXTJS, for styling MATERIAL UI (MUI), STRAPI for contains management system (CMS), for animation FRAMER MOTION and directly SVG’s manipulation."
         ]
       }
-    },
+    ],
     "techStackDescription": [
       "ReactJS",
       "Hook",
