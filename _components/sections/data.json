@@ -1,10 +1,10 @@
 {
   "data": {
-    "contact": {
+    "contactInfo": {
       "name": "Ricard Rosson",
       "mail": "ricard@iacos.net"
     },
-    "contactInfo": {
+    "contact": {
       "name": "Ricard Rosson",
       "mail": "ricard@iacos.net"
     },
@@ -69,7 +69,15 @@
       "Experienced in writing clean, efficient, and maintainable code following modern web development best practices.",
       "Proficient in working with dynamic content, RESTful APIs, and complex web services.",
       "Strong problem-solving mindset with high attention to detail and a focus on quality.",
-      "Thrive both independently and as a collaborative team player in fast-paced environments"
+      "Thrive both independently and as a collaborative team player in fast-paced environments."
     ]
+  },
+  "contactInfo": {
+    "name": "Ricard Rosson",
+    "mail": "ricard@iacos.net"
+  },
+  "contact": {
+    "name": "Ricard Rosson",
+    "mail": "ricard@iacos.net"
   }
 }
